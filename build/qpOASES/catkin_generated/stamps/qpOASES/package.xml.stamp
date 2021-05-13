@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<package format ="2">
+    <name>qpOASES</name>
+    <version>3.2.1</version>
+    <description>
+       A ros wrapper for the C++ 3rd party library qpOASES
+    </description>
+    <license>LGPL v2.1</license>
+    <author>Alexander BUchner</author>
+    <maintainer email="georg.bartels@cs.uni-bremen.de">Gerog Bartels</maintainer>
+    <buildtool_depend>catkin</buildtool_depend>
+</package>

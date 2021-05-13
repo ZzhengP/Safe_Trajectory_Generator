@@ -1,0 +1,6 @@
+qpOASES-3.2.1
+/home/zheng/catkin_ws/devel/.private/qpOASES/cmake.lock /home/zheng/catkin_ws/devel/./cmake.lock
+/home/zheng/catkin_ws/devel/.private/qpOASES/lib/libqpOASES.so /home/zheng/catkin_ws/devel/lib/libqpOASES.so
+/home/zheng/catkin_ws/devel/.private/qpOASES/lib/pkgconfig/qpOASES.pc /home/zheng/catkin_ws/devel/lib/pkgconfig/qpOASES.pc
+/home/zheng/catkin_ws/devel/.private/qpOASES/share/qpOASES/cmake/qpOASESConfig.cmake /home/zheng/catkin_ws/devel/share/qpOASES/cmake/qpOASESConfig.cmake
+/home/zheng/catkin_ws/devel/.private/qpOASES/share/qpOASES/cmake/qpOASESConfig-version.cmake /home/zheng/catkin_ws/devel/share/qpOASES/cmake/qpOASESConfig-version.cmake

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller" xmlns:xacro="http://ros.org/wiki/xacro" name="panda_arm_gazebo">
+ <xacro:macro name="panda_arm_gazebo" params="arm_id:='panda'">
+      <gazebo reference="support">
+         <material>Gazebo/DarkGrey</material>
+         <mu1>0.2</mu1>
+         <mu2>0.2</mu2>
+         <selfCollide>true</selfCollide>
+      </gazebo>
+      
+      <!-- Board -->
+      <gazebo reference="board">
+         <material>Gazebo/Wood</material>
+         <mu1>0.2</mu1>
+         <mu2>0.2</mu2>
+         <selfCollide>true</selfCollide>
+      </gazebo>
+
+      <!-- Link0 -->
+      <gazebo reference="${arm_id}_link0">
+         <material>Gazebo/Grey</material>
+         <mu1>0.2</mu1>
+         <mu2>0.2</mu2>
+      </gazebo>
+      <!-- Link1 -->
+      <gazebo reference="${arm_id}_link1">
+         <material>Gazebo/White</material>
+         <mu1>0.2</mu1>
+         <mu2>0.2</mu2>
+      </gazebo>
+      <!-- Link2 -->
+      <gazebo reference="${arm_id}_link2">
+         <material>Gazebo/White</material>
+         <mu1>0.2</mu1>
+         <mu2>0.2</mu2>
+      </gazebo>
+      <!-- Link3 -->
+      <gazebo reference="${arm_id}_link3">
+         <material>Gazebo/White</material>
+         <mu1>0.2</mu1>
+         <mu2>0.2</mu2>
+      </gazebo>
+      <!-- Link4 -->
+      <gazebo reference="${arm_id}_link4">
+         <material>Gazebo/White</material>
+         <mu1>0.2</mu1>
+         <mu2>0.2</mu2>
+      </gazebo>
+      <!-- Link5 -->
+      <gazebo reference="${arm_id}_link5">
+         <material>Gazebo/White</material>
+         <mu1>0.2</mu1>
+         <mu2>0.2</mu2>
+      </gazebo>
+      <!-- Link6 -->
+      <gazebo reference="${arm_id}_link6">
+         <material>Gazebo/White</material>
+         <mu1>0.2</mu1>
+         <mu2>0.2</mu2>
+      </gazebo>
+      <!-- Link7 -->
+      <gazebo reference="${arm_id}_link7">
+         <material>Gazebo/Grey</material>
+         <mu1>0.2</mu1>
+         <mu2>0.2</mu2>
+      </gazebo>
+
+
+
+      <transmission name="${arm_id}_tran_1">
+         <type>transmission_interface/SimpleTransmission</type>
+         <joint name="${arm_id}_joint1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+         </joint>
+         <actuator name="${arm_id}_motor_1">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+         </actuator>
+      </transmission>
+      <transmission name="${arm_id}_tran_2">
+         <type>transmission_interface/SimpleTransmission</type>
+         <joint name="${arm_id}_joint2">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+         </joint>
+         <actuator name="${arm_id}_motor_2">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+         </actuator>
+      </transmission>
+      <transmission name="${arm_id}_tran_3">
+         <type>transmission_interface/SimpleTransmission</type>
+         <joint name="${arm_id}_joint3">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+         </joint>
+         <actuator name="${arm_id}_motor_3">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+         </actuator>
+      </transmission>
+      <transmission name="${arm_id}_tran_4">
+         <type>transmission_interface/SimpleTransmission</type>
+         <joint name="${arm_id}_joint4">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+         </joint>
+         <actuator name="${arm_id}_motor_4">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+         </actuator>
+      </transmission>
+      <transmission name="${arm_id}_tran_5">
+         <type>transmission_interface/SimpleTransmission</type>
+         <joint name="${arm_id}_joint5">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+         </joint>
+         <actuator name="${arm_id}_motor_5">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+         </actuator>
+      </transmission>
+      <transmission name="${arm_id}_tran_6">
+         <type>transmission_interface/SimpleTransmission</type>
+         <joint name="${arm_id}_joint6">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+         </joint>
+         <actuator name="${arm_id}_motor_6">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+         </actuator>
+      </transmission>
+      <transmission name="${arm_id}_tran_7">
+         <type>transmission_interface/SimpleTransmission</type>
+         <joint name="${arm_id}_joint7">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+         </joint>
+         <actuator name="${arm_id}_motor_7">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+         </actuator>
+      </transmission>
+</xacro:macro>
+</robot>

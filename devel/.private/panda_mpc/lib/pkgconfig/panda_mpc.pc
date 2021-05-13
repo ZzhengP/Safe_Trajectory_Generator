@@ -1,0 +1,8 @@
+prefix=/home/zheng/catkin_ws/devel/.private/panda_mpc
+
+Name: panda_mpc
+Description: Description of panda_mpc
+Version: 0.0.0
+Cflags: -I/home/zheng/catkin_ws/devel/.private/panda_mpc/include -I/home/zheng/catkin_ws/src/panda_mpc/include -I/home/zheng/libfranka/include
+Libs: -L${prefix}/lib -lpanda_mpc /home/zheng/libfranka/build/libfranka.so.0.8.0
+Requires: controller_interface dynamic_reconfigure eigen_conversions franka_hw franka_gripper geometry_msgs hardware_interface tf tf_conversions message_runtime pluginlib realtime_tools roscpp

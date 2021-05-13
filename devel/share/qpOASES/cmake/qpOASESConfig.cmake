@@ -1,0 +1,1 @@
+/home/zheng/catkin_ws/devel/.private/qpOASES/share/qpOASES/cmake/qpOASESConfig.cmake

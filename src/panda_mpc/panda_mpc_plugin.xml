@@ -1,0 +1,7 @@
+<library path="lib/panda_mpc">
+    <class name="panda_mpc/PandaMPCController" type="velocity_qp::PandaMPCController" base_class_type="controller_interface::ControllerBase">
+        <description>
+            A model predictive controller for panda robot
+        </description>
+    </class>
+</library>

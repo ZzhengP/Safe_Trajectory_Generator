@@ -1,0 +1,8 @@
+prefix=/home/zheng/catkin_ws/devel/.private/qpOASES
+
+Name: qpOASES
+Description: Description of qpOASES
+Version: 3.2.1
+Cflags: -I/home/zheng/catkin_ws/src/qpOASES-3.2.1/include
+Libs: -L${prefix}/lib -lqpOASES
+Requires: 
