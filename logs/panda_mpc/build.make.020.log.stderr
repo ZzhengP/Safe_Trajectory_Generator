@@ -1,0 +1,9 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:[m[K In member function ‘[01m[Kvirtual void panda_mpc::PandaController::update(const ros::Time&, const ros::Duration&)[m[K’:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:147:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Controller::Controller[m[K’ has no member named ‘[01m[Kupdate[m[K’; did you mean ‘[01m[KUpdate[m[K’?
+     joint_command_ = qp.[01;31m[Kupdate[m[K(q_,qd_,period);
+                         [01;31m[K^~~~~~[m[K
+                         [32m[KUpdate[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

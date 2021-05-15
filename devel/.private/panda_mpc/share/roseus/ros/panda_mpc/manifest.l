@@ -11,6 +11,7 @@
 (ros::load-ros-package "dynamic_reconfigure")
 (ros::load-ros-package "franka_gripper")
 (ros::load-ros-package "franka_msgs")
+(ros::load-ros-package "gazebo_msgs")
 (ros::load-ros-package "geometry_msgs")
 (ros::load-ros-package "map_msgs")
 (ros::load-ros-package "moveit_msgs")

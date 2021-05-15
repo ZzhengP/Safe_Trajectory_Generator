@@ -1,0 +1,8 @@
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:[m[K In member function '[01m[Kbool Controller::Controller::getRosParam(const string&, const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:97:38:[m[K [01;31m[Kerror: [m[Kassignment of read-only location '[01m[K((const Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, 1>, 0>*)((const Eigen::DenseBase<Eigen::Matrix<double, -1, 1> >*)(& param_data)))->Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, 1>, 0>::operator()(((Eigen::Index)i))[m[K'
+           param_data(i) = std_param[i[01;31m[K][m[K;
+                                      [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

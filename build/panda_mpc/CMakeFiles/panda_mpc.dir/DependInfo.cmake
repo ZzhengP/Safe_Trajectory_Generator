@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/controller.cpp.o"
+  "/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o"
   "/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
@@ -22,6 +23,17 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/zheng/catkin_ws/devel/.private/panda_mpc/include"
   "/home/zheng/catkin_ws/src/panda_mpc/include"
+  "/home/zheng/catkin_ws/devel/.private/panda_traj/include"
+  "/home/zheng/catkin_ws/devel/.private/franka_msgs/include"
+  "/home/zheng/catkin_ws/devel/.private/franka_gripper/include"
+  "/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"
+  "/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"
+  "/home/zheng/catkin_ws/src/panda_traj/include"
+  "/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"
+  "/opt/ros/melodic/include"
+  "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
+  "/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"
+  "/usr/include/eigen3"
   "/home/zheng/libfranka/include"
   "/usr/include/gazebo-9"
   "/usr/include/bullet"
@@ -35,15 +47,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/ignition/msgs1"
   "/usr/include/ignition/common1"
   "/usr/include/ignition/fuel_tools1"
-  "/home/zheng/catkin_ws/devel/.private/franka_msgs/include"
-  "/home/zheng/catkin_ws/devel/.private/franka_gripper/include"
-  "/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"
-  "/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"
-  "/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"
-  "/opt/ros/melodic/include"
-  "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
-  "/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"
-  "/usr/include/eigen3"
   "/usr/include/uuid"
   "/usr/include/x86_64-linux-gnu"
   )

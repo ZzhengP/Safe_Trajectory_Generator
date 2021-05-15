@@ -36,65 +36,41 @@
  */
 
 
-
+#include <memory>
 #include <qpOASES.hpp>
 #include "robot/panda_controller.h"
+#include <trac_ik/trac_ik.hpp>
+#include <kdl/chainiksolverpos_nr_jl.hpp>
+#include <kdl/chainfksolverpos_recursive.hpp>
+#include <kdl/chainfksolvervel_recursive.hpp>
+#include <kdl/chain.hpp>
+#include <kdl/frames_io.hpp>
+#include <kdl/jacobian.hpp>
+#include <kdl/chainjnttojacsolver.hpp>
+#include <kdl/jntspaceinertiamatrix.hpp>
+#include <ros/node_handle.h>
 
 /** Example for qpOASES main function using the QProblem class. */
-int main( )
+int main(int argc, char** argv )
 {
-    USING_NAMESPACE_QPOASES
+    ros::init(argc,argv, "test");
+    ros::NodeHandle node_handle;
 
-    /* Setup data of first QP. */
-    real_t H[2*2] = { 1.0, 0.0, 0.0, 0.5 };
-    real_t A[1*2] = { 1.0, 1.0 };
-    real_t g[2] = { 1.5, 1.0 };
-    real_t lb[2] = { 0.5, -2.0 };
-    real_t ub[2] = { 5.0, 2.0 };
-    real_t lbA[1] = { -1.0 };
-    real_t ubA[1] = { 2.0 };
+    KDL::Chain chain ; /*! Robot kdl chain */
+    KDL::JntArray ll ; /*! Joint lower limit */
+    KDL::JntArray ul ; /*! Joint upper limit */
 
-    /* Setup data of second QP. */
-    real_t g_new[2] = { 1.0, 1.5 };
-    real_t lb_new[2] = { 0.0, -1.0 };
-    real_t ub_new[2] = { 5.0, -0.5 };
-    real_t lbA_new[1] = { -2.0 };
-    real_t ubA_new[1] = { 1.0 };
-
-
-    /* Setting up QProblem object. */
-    QProblem example( 2,1 );
-
-    Options options;
-    example.setOptions( options );
-
-    /* Solve first QP. */
-    int_t nWSR = 10;
-    example.init( H,g,A,lb,ub,lbA,ubA, nWSR );
-
-    /* Get and print solution of first QP. */
-    real_t xOpt[2];
-    real_t yOpt[2+1];
-    example.getPrimalSolution( xOpt );
-    example.getDualSolution( yOpt );
-    printf( "\nxOpt = [ %e, %e ];  yOpt = [ %e, %e, %e ];  objVal = %e\n\n",
-            xOpt[0],xOpt[1],yOpt[0],yOpt[1],yOpt[2],example.getObjVal() );
-
-    /* Solve second QP. */
-    nWSR = 10;
-    example.hotstart( g_new,lb_new,ub_new,lbA_new,ubA_new, nWSR );
-
-    /* Get and print solution of second QP. */
-    example.getPrimalSolution( xOpt );
-    example.getDualSolution( yOpt );
-    printf( "\nxOpt = [ %e, %e ];  yOpt = [ %e, %e, %e ];  objVal = %e\n\n",
-            xOpt[0],xOpt[1],yOpt[0],yOpt[1],yOpt[2],example.getObjVal() );
-
-    example.printOptions();
-    /*example.printProperties();*/
-
-    /*getGlobalMessageHandler()->listAllMessages();*/
-
+    double timeout;
+    node_handle.param("timeout", timeout, 0.005);
+    std::string urdf_param;
+    node_handle.param("urdf_param", urdf_param, std::string("/robot_description"));
+    double eps = 1e-5;
+    // Initialize the KDL Chain
+    TRAC_IK::TRAC_IK trancik_solver("panda_link0", "panda_link8", urdf_param, timeout, eps);
+    bool valid = trancik_solver.getKDLChain(chain);
+    if (valid){
+        ROS_INFO_STREAM("get kdl chain from urdf");
+    }
     std::cout << "test include task " << std::endl;
     return 0;
 }

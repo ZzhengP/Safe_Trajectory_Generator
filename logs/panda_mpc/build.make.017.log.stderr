@@ -1,0 +1,29 @@
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1:0[m[K:
+/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp: In instantiation of '[01m[Kbool Controller::Controller::getRosParam(const string&, const T&) [with T = double; std::__cxx11::string = std::__cxx11::basic_string<char>][m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:184:77:[m[K   required from here
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:71:24:[m[K [01;31m[Kerror: [m[Kbinding reference of type '[01m[Kdouble&[m[K' to '[01m[Kconst double[m[K' discards qualifiers
+     if(![01;31m[Kros::param::get(param_name, param_data)[m[K)
+         [01;31m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:54:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:38[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/param.h:181:18:[m[K [01;36m[Knote: [m[K  initializing argument 2 of '[01m[Kbool ros::param::get(const string&, double&)[m[K'
+ ROSCPP_DECL bool [01;36m[Kget[m[K(const std::string& key, double& d);
+                  [01;36m[K^~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1:0[m[K:
+/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp: In instantiation of '[01m[Kbool Controller::Controller::getRosParam(const string&, const T&) [with T = std::__cxx11::basic_string<char>; std::__cxx11::string = std::__cxx11::basic_string<char>][m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:185:53:[m[K   required from here
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:71:24:[m[K [01;31m[Kerror: [m[Kbinding reference of type '[01m[Kstd::__cxx11::string& {aka std::__cxx11::basic_string<char>&}[m[K' to '[01m[Kconst std::__cxx11::basic_string<char>[m[K' discards qualifiers
+     if(![01;31m[Kros::param::get(param_name, param_data)[m[K)
+         [01;31m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/ros.h:54:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:38[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/param.h:172:18:[m[K [01;36m[Knote: [m[K  initializing argument 2 of '[01m[Kbool ros::param::get(const string&, std::__cxx11::string&)[m[K'
+ ROSCPP_DECL bool [01;36m[Kget[m[K(const std::string& key, std::string& s);
+                  [01;36m[K^~~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

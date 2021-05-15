@@ -1,8 +1,8 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "panda_mpc: 1 messages, 0 services")
+message(STATUS "panda_mpc: 1 messages, 1 services")
 
-set(MSG_I_FLAGS "-Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg")
+set(MSG_I_FLAGS "-Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,9 +17,14 @@ add_custom_target(panda_mpc_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg" NAME_WE)
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg" NAME_WE)
 add_custom_target(_panda_mpc_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "panda_mpc" "/home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "panda_mpc" "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg" "sensor_msgs/JointState:geometry_msgs/Vector3:geometry_msgs/Twist:std_msgs/Header"
+)
+
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv" NAME_WE)
+add_custom_target(_panda_mpc_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "panda_mpc" "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv" "geometry_msgs/Twist:geometry_msgs/Vector3"
 )
 
 #
@@ -29,13 +34,19 @@ add_custom_target(_panda_mpc_generate_messages_check_deps_${_filename}
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(panda_mpc
-  "/home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg"
+  "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg"
   "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/melodic/share/sensor_msgs/cmake/../msg/JointState.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/panda_mpc
 )
 
 ### Generating Services
+_generate_srv_cpp(panda_mpc
+  "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/panda_mpc
+)
 
 ### Generating Module File
 _generate_module_cpp(panda_mpc
@@ -49,7 +60,9 @@ add_custom_target(panda_mpc_generate_messages_cpp
 add_dependencies(panda_mpc_generate_messages panda_mpc_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg" NAME_WE)
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg" NAME_WE)
+add_dependencies(panda_mpc_generate_messages_cpp _panda_mpc_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv" NAME_WE)
 add_dependencies(panda_mpc_generate_messages_cpp _panda_mpc_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -62,13 +75,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS panda_mpc_generate_messages_cpp)
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(panda_mpc
-  "/home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg"
+  "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg"
   "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/melodic/share/sensor_msgs/cmake/../msg/JointState.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/panda_mpc
 )
 
 ### Generating Services
+_generate_srv_eus(panda_mpc
+  "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/panda_mpc
+)
 
 ### Generating Module File
 _generate_module_eus(panda_mpc
@@ -82,7 +101,9 @@ add_custom_target(panda_mpc_generate_messages_eus
 add_dependencies(panda_mpc_generate_messages panda_mpc_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg" NAME_WE)
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg" NAME_WE)
+add_dependencies(panda_mpc_generate_messages_eus _panda_mpc_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv" NAME_WE)
 add_dependencies(panda_mpc_generate_messages_eus _panda_mpc_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -95,13 +116,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS panda_mpc_generate_messages_eus)
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(panda_mpc
-  "/home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg"
+  "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg"
   "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/melodic/share/sensor_msgs/cmake/../msg/JointState.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/panda_mpc
 )
 
 ### Generating Services
+_generate_srv_lisp(panda_mpc
+  "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/panda_mpc
+)
 
 ### Generating Module File
 _generate_module_lisp(panda_mpc
@@ -115,7 +142,9 @@ add_custom_target(panda_mpc_generate_messages_lisp
 add_dependencies(panda_mpc_generate_messages panda_mpc_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg" NAME_WE)
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg" NAME_WE)
+add_dependencies(panda_mpc_generate_messages_lisp _panda_mpc_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv" NAME_WE)
 add_dependencies(panda_mpc_generate_messages_lisp _panda_mpc_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -128,13 +157,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS panda_mpc_generate_messages_lisp)
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(panda_mpc
-  "/home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg"
+  "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg"
   "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/melodic/share/sensor_msgs/cmake/../msg/JointState.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/panda_mpc
 )
 
 ### Generating Services
+_generate_srv_nodejs(panda_mpc
+  "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/panda_mpc
+)
 
 ### Generating Module File
 _generate_module_nodejs(panda_mpc
@@ -148,7 +183,9 @@ add_custom_target(panda_mpc_generate_messages_nodejs
 add_dependencies(panda_mpc_generate_messages panda_mpc_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg" NAME_WE)
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg" NAME_WE)
+add_dependencies(panda_mpc_generate_messages_nodejs _panda_mpc_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv" NAME_WE)
 add_dependencies(panda_mpc_generate_messages_nodejs _panda_mpc_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -161,13 +198,19 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS panda_mpc_generate_messages_nodejs)
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(panda_mpc
-  "/home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg"
+  "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg"
   "${MSG_I_FLAGS}"
-  ""
+  "/opt/ros/melodic/share/sensor_msgs/cmake/../msg/JointState.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/panda_mpc
 )
 
 ### Generating Services
+_generate_srv_py(panda_mpc
+  "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/panda_mpc
+)
 
 ### Generating Module File
 _generate_module_py(panda_mpc
@@ -181,7 +224,9 @@ add_custom_target(panda_mpc_generate_messages_py
 add_dependencies(panda_mpc_generate_messages panda_mpc_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg" NAME_WE)
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg" NAME_WE)
+add_dependencies(panda_mpc_generate_messages_py _panda_mpc_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv" NAME_WE)
 add_dependencies(panda_mpc_generate_messages_py _panda_mpc_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -200,6 +245,15 @@ if(gencpp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/pa
     DESTINATION ${gencpp_INSTALL_DIR}
   )
 endif()
+if(TARGET std_msgs_generate_messages_cpp)
+  add_dependencies(panda_mpc_generate_messages_cpp std_msgs_generate_messages_cpp)
+endif()
+if(TARGET geometry_msgs_generate_messages_cpp)
+  add_dependencies(panda_mpc_generate_messages_cpp geometry_msgs_generate_messages_cpp)
+endif()
+if(TARGET sensor_msgs_generate_messages_cpp)
+  add_dependencies(panda_mpc_generate_messages_cpp sensor_msgs_generate_messages_cpp)
+endif()
 
 if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/panda_mpc)
   # install generated code
@@ -207,6 +261,15 @@ if(geneus_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/pa
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/panda_mpc
     DESTINATION ${geneus_INSTALL_DIR}
   )
+endif()
+if(TARGET std_msgs_generate_messages_eus)
+  add_dependencies(panda_mpc_generate_messages_eus std_msgs_generate_messages_eus)
+endif()
+if(TARGET geometry_msgs_generate_messages_eus)
+  add_dependencies(panda_mpc_generate_messages_eus geometry_msgs_generate_messages_eus)
+endif()
+if(TARGET sensor_msgs_generate_messages_eus)
+  add_dependencies(panda_mpc_generate_messages_eus sensor_msgs_generate_messages_eus)
 endif()
 
 if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/panda_mpc)
@@ -216,6 +279,15 @@ if(genlisp_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/
     DESTINATION ${genlisp_INSTALL_DIR}
   )
 endif()
+if(TARGET std_msgs_generate_messages_lisp)
+  add_dependencies(panda_mpc_generate_messages_lisp std_msgs_generate_messages_lisp)
+endif()
+if(TARGET geometry_msgs_generate_messages_lisp)
+  add_dependencies(panda_mpc_generate_messages_lisp geometry_msgs_generate_messages_lisp)
+endif()
+if(TARGET sensor_msgs_generate_messages_lisp)
+  add_dependencies(panda_mpc_generate_messages_lisp sensor_msgs_generate_messages_lisp)
+endif()
 
 if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/panda_mpc)
   # install generated code
@@ -223,6 +295,15 @@ if(gennodejs_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_D
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/panda_mpc
     DESTINATION ${gennodejs_INSTALL_DIR}
   )
+endif()
+if(TARGET std_msgs_generate_messages_nodejs)
+  add_dependencies(panda_mpc_generate_messages_nodejs std_msgs_generate_messages_nodejs)
+endif()
+if(TARGET geometry_msgs_generate_messages_nodejs)
+  add_dependencies(panda_mpc_generate_messages_nodejs geometry_msgs_generate_messages_nodejs)
+endif()
+if(TARGET sensor_msgs_generate_messages_nodejs)
+  add_dependencies(panda_mpc_generate_messages_nodejs sensor_msgs_generate_messages_nodejs)
 endif()
 
 if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/panda_mpc)
@@ -232,4 +313,13 @@ if(genpy_INSTALL_DIR AND EXISTS ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/pand
     DIRECTORY ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/panda_mpc
     DESTINATION ${genpy_INSTALL_DIR}
   )
+endif()
+if(TARGET std_msgs_generate_messages_py)
+  add_dependencies(panda_mpc_generate_messages_py std_msgs_generate_messages_py)
+endif()
+if(TARGET geometry_msgs_generate_messages_py)
+  add_dependencies(panda_mpc_generate_messages_py geometry_msgs_generate_messages_py)
+endif()
+if(TARGET sensor_msgs_generate_messages_py)
+  add_dependencies(panda_mpc_generate_messages_py sensor_msgs_generate_messages_py)
 endif()

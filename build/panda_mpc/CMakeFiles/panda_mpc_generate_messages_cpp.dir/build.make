@@ -53,17 +53,32 @@ CMAKE_BINARY_DIR = /home/zheng/catkin_ws/build/panda_mpc
 # Include the progress variables for this target.
 include CMakeFiles/panda_mpc_generate_messages_cpp.dir/progress.make
 
-CMakeFiles/panda_mpc_generate_messages_cpp: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/JointTorqueComparison.h
+CMakeFiles/panda_mpc_generate_messages_cpp: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/PandaRunMsg.h
+CMakeFiles/panda_mpc_generate_messages_cpp: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UI.h
 
 
-/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/JointTorqueComparison.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/JointTorqueComparison.h: /home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg
-/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/JointTorqueComparison.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from panda_mpc/JointTorqueComparison.msg"
-	cd /home/zheng/catkin_ws/src/panda_mpc && /home/zheng/catkin_ws/build/panda_mpc/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg -Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg -p panda_mpc -o /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/PandaRunMsg.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/PandaRunMsg.h: /home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/PandaRunMsg.h: /opt/ros/melodic/share/sensor_msgs/msg/JointState.msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/PandaRunMsg.h: /opt/ros/melodic/share/geometry_msgs/msg/Vector3.msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/PandaRunMsg.h: /opt/ros/melodic/share/geometry_msgs/msg/Twist.msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/PandaRunMsg.h: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/PandaRunMsg.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from panda_mpc/PandaRunMsg.msg"
+	cd /home/zheng/catkin_ws/src/panda_mpc && /home/zheng/catkin_ws/build/panda_mpc/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg -Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -p panda_mpc -o /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc -e /opt/ros/melodic/share/gencpp/cmake/..
+
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UI.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UI.h: /home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UI.h: /opt/ros/melodic/share/geometry_msgs/msg/Twist.msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UI.h: /opt/ros/melodic/share/geometry_msgs/msg/Vector3.msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UI.h: /opt/ros/melodic/share/gencpp/msg.h.template
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UI.h: /opt/ros/melodic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from panda_mpc/UI.srv"
+	cd /home/zheng/catkin_ws/src/panda_mpc && /home/zheng/catkin_ws/build/panda_mpc/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv -Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -p panda_mpc -o /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc -e /opt/ros/melodic/share/gencpp/cmake/..
 
 panda_mpc_generate_messages_cpp: CMakeFiles/panda_mpc_generate_messages_cpp
-panda_mpc_generate_messages_cpp: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/JointTorqueComparison.h
+panda_mpc_generate_messages_cpp: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/PandaRunMsg.h
+panda_mpc_generate_messages_cpp: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UI.h
 panda_mpc_generate_messages_cpp: CMakeFiles/panda_mpc_generate_messages_cpp.dir/build.make
 
 .PHONY : panda_mpc_generate_messages_cpp

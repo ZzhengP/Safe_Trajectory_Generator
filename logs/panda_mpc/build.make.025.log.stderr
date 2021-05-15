@@ -1,0 +1,35 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:56:26:[m[K [01;35m[Kwarning: [m[Kmissing terminating " character
+     if (control_level == [01;35m[K"[m[Kposition)
+                          [01;35m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:56:26:[m[K [01;31m[Kerror: [m[Kmissing terminating " character
+     if (control_level == [01;31m[K"position)[m[K
+                          [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:[m[K In member function ‘[01m[Kvirtual bool panda_mpc::PandaMPCController::init(hardware_interface::RobotHW*, ros::NodeHandle&)[m[K’:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:56:9:[m[K [01;35m[Kwarning: [m[Kinit-statement in selection statements only available with -std=c++1z or -std=gnu++1z
+     if ([01;35m[Kcontrol_level[m[K == "position)
+         [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:57:5:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K{[m[K’ token
+     [01;31m[K{[m[K
+     [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:75:5:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kelse[m[K’
+     [01;31m[Kelse[m[K if ( control_level == "torque")
+     [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:75:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kelse[m[K’
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:101:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_init[m[K’ was not declared in this scope
+     [01;31m[Kq_init[m[K.resize(7);
+     [01;31m[K^~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:101:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kinit[m[K’
+     [01;36m[Kq_init[m[K.resize(7);
+     [01;36m[K^~~~~~[m[K
+     [32m[Kinit[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:102:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kqd_init[m[K’ was not declared in this scope
+     [01;31m[Kqd_init[m[K.resize(7);
+     [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:102:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kinit[m[K’
+     [01;36m[Kqd_init[m[K.resize(7);
+     [01;36m[K^~~~~~~[m[K
+     [32m[Kinit[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

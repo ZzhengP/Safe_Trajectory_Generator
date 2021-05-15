@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>panda_traj</name>
+  <version>0.0.0</version>
+  <description>The panda_traj package</description>
+
+  <maintainer email="lucas.joseph@inria.fr">Lucas Joseph</maintainer>
+
+
+
+  <license>TODO</license> 
+
+  <build_depend>roscpp</build_depend>
+  <exec_depend>roscpp</exec_depend>
+  
+  <build_depend>kdl_conversions</build_depend>
+  <exec_depend>kdl_conversions</exec_depend>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>message_generation</depend>
+  <depend>geometry_msgs</depend>
+  
+  <depend>nav_msgs</depend>
+  <depend>std_msgs</depend>
+  
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- Other tools can request additional information be placed here -->
+
+  </export>
+</package>

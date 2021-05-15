@@ -1,0 +1,10 @@
+(cl:defpackage panda_traj-srv
+  (:use )
+  (:export
+   "UPDATETRAJECTORY"
+   "<UPDATETRAJECTORY-REQUEST>"
+   "UPDATETRAJECTORY-REQUEST"
+   "<UPDATETRAJECTORY-RESPONSE>"
+   "UPDATETRAJECTORY-RESPONSE"
+  ))
+

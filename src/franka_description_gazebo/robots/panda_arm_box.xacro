@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro" xmlns:controller="http://playerstage.sourceforge.net/gazebo/xmlschema/#controller"   name="panda" >
   <xacro:property name="M_PI" value="3.1415926535897931" />
-  <xacro:macro name="panda_arm" params="arm_id:='panda' description_pkg:='franka_description' connected_to:='' xyz:='0 0 0' rpy:='0 0 0' gazebo_plugin:=''">
+  <xacro:macro name="panda_arm" params="arm_id:='panda' description_pkg:='franka_description_gazebo' connected_to:='' xyz:='0 0 0' rpy:='0 0 0' gazebo_plugin:=''">
     <xacro:unless value="${not connected_to}">
       <joint name="${arm_id}_joint_${connected_to}" type="fixed">
         <parent link="${connected_to}"/>

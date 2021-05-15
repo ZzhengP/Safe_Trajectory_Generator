@@ -1,0 +1,8 @@
+CMakeFiles/qptest.dir/qptest.cpp.o: In function `main':
+/home/zheng/catkin_ws/src/panda_mpc/examples/qptest.cpp:69: undefined reference to `TRAC_IK::TRAC_IK::TRAC_IK(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, double, double, TRAC_IK::SolveType)'
+/home/zheng/catkin_ws/src/panda_mpc/examples/qptest.cpp:69: undefined reference to `TRAC_IK::TRAC_IK::~TRAC_IK()'
+/home/zheng/catkin_ws/src/panda_mpc/examples/qptest.cpp:69: undefined reference to `TRAC_IK::TRAC_IK::~TRAC_IK()'
+collect2: error: ld returned 1 exit status
+make[2]: *** [/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest] Error 1
+make[1]: *** [examples/CMakeFiles/qptest.dir/all] Error 2
+make: *** [all] Error 2

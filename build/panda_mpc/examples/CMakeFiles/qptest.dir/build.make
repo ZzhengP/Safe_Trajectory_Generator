@@ -94,6 +94,9 @@ qptest_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /opt/ros/melodic/lib/libgazebo_ros_paths_plugin.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /home/zheng/catkin_ws/devel/.private/qpOASES/lib/libqpOASES.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /opt/ros/melodic/lib/libeigen_conversions.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /home/zheng/catkin_ws/devel/.private/panda_traj/lib/libpanda_traj.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /opt/ros/melodic/lib/libtrac_ik.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /opt/ros/melodic/lib/libkdl_parser.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /home/zheng/catkin_ws/devel/.private/franka_hw/lib/libfranka_hw.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /home/zheng/catkin_ws/devel/.private/franka_hw/lib/libfranka_control_services.so
@@ -175,6 +178,9 @@ qptest_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /usr/lib/x86_64-linux-gnu/libOgreMain.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /home/zheng/catkin_ws/devel/.private/qpOASES/lib/libqpOASES.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /opt/ros/melodic/lib/libeigen_conversions.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /home/zheng/catkin_ws/devel/.private/panda_traj/lib/libpanda_traj.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /opt/ros/melodic/lib/libtrac_ik.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /opt/ros/melodic/lib/libkdl_parser.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /home/zheng/catkin_ws/devel/.private/franka_hw/lib/libfranka_hw.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /home/zheng/catkin_ws/devel/.private/franka_hw/lib/libfranka_control_services.so
@@ -225,6 +231,9 @@ qptest_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /home/zheng/catkin_ws/devel/.private/qpOASES/lib/libqpOASES.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /opt/ros/melodic/lib/libeigen_conversions.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /home/zheng/catkin_ws/devel/.private/panda_traj/lib/libpanda_traj.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /opt/ros/melodic/lib/libtrac_ik.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /opt/ros/melodic/lib/libkdl_parser.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /home/zheng/catkin_ws/devel/.private/franka_hw/lib/libfranka_hw.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest: /home/zheng/catkin_ws/devel/.private/franka_hw/lib/libfranka_control_services.so

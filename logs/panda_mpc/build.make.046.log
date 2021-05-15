@@ -1,0 +1,33 @@
+[  0%] Built target sensor_msgs_generate_messages_py
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target panda_mpc[0m
+[  0%] Built target std_msgs_generate_messages_eus
+[ 20%] Built target panda_mpc_gencfg
+[ 20%] Built target std_msgs_generate_messages_py
+[ 20%] Built target std_msgs_generate_messages_lisp
+[ 20%] Built target _panda_mpc_generate_messages_check_deps_PandaRunMsg
+[ 20%] Built target sensor_msgs_generate_messages_lisp
+[ 20%] Built target _panda_mpc_generate_messages_check_deps_UI
+[ 20%] Built target geometry_msgs_generate_messages_lisp
+[ 20%] Built target geometry_msgs_generate_messages_py
+[ 20%] Built target geometry_msgs_generate_messages_nodejs
+[ 20%] Built target geometry_msgs_generate_messages_cpp
+[ 20%] Built target std_msgs_generate_messages_nodejs
+[ 20%] Built target sensor_msgs_generate_messages_cpp
+[ 33%] Built target panda_mpc_generate_messages_eus
+[ 33%] Built target sensor_msgs_generate_messages_nodejs
+[ 33%] Built target std_msgs_generate_messages_cpp
+[ 50%] Built target panda_mpc_generate_messages_py
+[ 58%] Built target panda_mpc_generate_messages_nodejs
+[ 66%] Built target panda_mpc_generate_messages_lisp
+[ 75%] Built target panda_mpc_generate_messages_cpp
+[ 79%] [32mBuilding CXX object CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o[0m
+[ 79%] Built target panda_mpc_generate_messages
+[ 83%] [32mBuilding CXX object CMakeFiles/panda_mpc.dir/src/controller.cpp.o[0m
+[ 87%] [32mBuilding CXX object CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o[0m
+[ 91%] [32m[1mLinking CXX shared library /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so[0m
+[ 91%] Built target panda_mpc
+[ 95%] [32mBuilding CXX object examples/CMakeFiles/qptest.dir/qptest.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest[0m
+[100%] Built target qptest

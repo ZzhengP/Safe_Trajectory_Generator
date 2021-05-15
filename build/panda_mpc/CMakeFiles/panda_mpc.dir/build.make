@@ -81,9 +81,33 @@ CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o.provides: CMakeFiles/panda_m
 CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o.provides.build: CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o
 
 
+CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o: CMakeFiles/panda_mpc.dir/flags.make
+CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o -c /home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp
+
+CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp > CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.i
+
+CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp -o CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.s
+
+CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o.requires:
+
+.PHONY : CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o.requires
+
+CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o.provides: CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o.requires
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o.provides.build
+.PHONY : CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o.provides
+
+CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o.provides.build: CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o
+
+
 CMakeFiles/panda_mpc.dir/src/controller.cpp.o: CMakeFiles/panda_mpc.dir/flags.make
 CMakeFiles/panda_mpc.dir/src/controller.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/panda_mpc.dir/src/controller.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/panda_mpc.dir/src/controller.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/panda_mpc.dir/src/controller.cpp.o -c /home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp
 
 CMakeFiles/panda_mpc.dir/src/controller.cpp.i: cmake_force
@@ -108,18 +132,23 @@ CMakeFiles/panda_mpc.dir/src/controller.cpp.o.provides.build: CMakeFiles/panda_m
 # Object files for target panda_mpc
 panda_mpc_OBJECTS = \
 "CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o" \
+"CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o" \
 "CMakeFiles/panda_mpc.dir/src/controller.cpp.o"
 
 # External object files for target panda_mpc
 panda_mpc_EXTERNAL_OBJECTS =
 
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/controller.cpp.o
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/build.make
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libgazebo_ros_api_plugin.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libgazebo_ros_paths_plugin.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/qpOASES/lib/libqpOASES.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libeigen_conversions.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/panda_traj/lib/libpanda_traj.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtrac_ik.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libkdl_parser.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/franka_hw/lib/libfranka_hw.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/franka_hw/lib/libfranka_control_services.so
@@ -169,6 +198,7 @@ panda_mpc_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libpthread.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/qpOASES/lib/libqpOASES.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/libfranka/build/libfranka.so.0.8.0
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libSimTKsimbody.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libSimTKmath.so
@@ -219,6 +249,9 @@ panda_mpc_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libignition-fuel_tools1.so.1.0.0
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/qpOASES/lib/libqpOASES.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libeigen_conversions.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/panda_traj/lib/libpanda_traj.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtrac_ik.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libkdl_parser.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/franka_hw/lib/libfranka_hw.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/franka_hw/lib/libfranka_control_services.so
@@ -302,7 +335,7 @@ panda_mpc_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libavutil.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libavutil.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/panda_mpc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -311,6 +344,7 @@ CMakeFiles/panda_mpc.dir/build: /home/zheng/catkin_ws/devel/.private/panda_mpc/l
 .PHONY : CMakeFiles/panda_mpc.dir/build
 
 CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o.requires
+CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o.requires
 CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/controller.cpp.o.requires
 
 .PHONY : CMakeFiles/panda_mpc.dir/requires

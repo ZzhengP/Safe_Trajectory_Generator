@@ -14,7 +14,9 @@ find_package(catkin REQUIRED COMPONENTS
   gazebo_ros
   qpOASES
   eigen_conversions
-
+  panda_traj
+  message_runtime
+  trac_ik_lib
   ## Franka part
         controller_interface
         dynamic_reconfigure
@@ -32,12 +34,24 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(Eigen3 REQUIRED)
 find_package(Franka 0.7.0 REQUIRED)
 find_package(gazebo REQUIRED)
+find_package(Boost REQUIRED COMPONENTS date_time)
+link_directories(${GAZEBO_LIBRARY_DIRS})
 
-add_message_files(FILES
-        JointTorqueComparison.msg
-        )
+add_message_files(
+  FILES
+  PandaRunMsg.msg
+)
 
-generate_messages()
+add_service_files(
+  FILES
+  UI.srv
+)
+
+generate_messages(
+    DEPENDENCIES
+    std_msgs
+    geometry_msgs
+    sensor_msgs)
 
 generate_dynamic_reconfigure_options(
         cfg/compliance_param.cfg
@@ -68,7 +82,7 @@ catkin_package(
         DEPENDS Franka
 )
 
-#include_directories(${qpOASES_INCLUDE_DIRS})
+include_directories(include ${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS} ${EIGEN3_INCLUDE_DIRS} ${GAZEBO_INCLUDE_DIRS} )
 #link_directories(${qpOASES_LIBRARY_DIRS})
 
 ## System dependencies are found with CMake's conventions
@@ -83,6 +97,7 @@ catkin_package(
 
 add_library(panda_mpc
             src/panda_simulation.cpp
+            src/panda_controller.cpp
             src/controller.cpp)
 
 target_include_directories(panda_mpc SYSTEM PUBLIC include
@@ -93,6 +108,7 @@ target_include_directories(panda_mpc SYSTEM PUBLIC include
 
 target_link_libraries(panda_mpc PUBLIC ${catkin_LIBRARIES}
                                        ${qpOASES_LIBRARIES}
+                                       ${Boost_LIBRARIES}
                                        ${Franka_LIBRARIES}
                                        ${GAZEBO_LIBRARIES} )
 

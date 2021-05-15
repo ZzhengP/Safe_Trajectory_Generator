@@ -5,7 +5,7 @@
 		<Option title="panda_mpc"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\src\;CMake Files\..\..\..\..\..\usr\src\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googlemock\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\cmake\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\gazebo\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\simbody\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\sdformat\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-math4\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-cmake0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-cmake0\cmake0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-transport4\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-msgs1\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-common1\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-fuel_tools1\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\jsoncpp\;CMake Files\..\..\..\..\..\usr\share\;CMake Files\..\..\..\..\..\usr\share\OGRE\;CMake Files\..\..\..\..\..\usr\share\OGRE\cmake\;CMake Files\..\..\..\..\..\usr\share\OGRE\cmake\modules\;CMake Files\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\opt\ros\melodic\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\em\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\cpp_common\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\cpp_common\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_runtime\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_runtime\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_serialization\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_traits\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rostime\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rostime\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\xmlrpcpp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospy\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospy\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_ros\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_ros\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roslib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roslib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospack\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospack\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_srvs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_srvs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_filters\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_filters\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\sensor_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_ros\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_ros\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genmsg\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genmsg\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gencpp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gencpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geneus\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geneus\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genlisp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genlisp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gennodejs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gennodejs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genpy\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genpy\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_generation\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_generation\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_py\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_py\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\dynamic_reconfigure\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\dynamic_reconfigure\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\trajectory_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\trajectory_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\eigen_conversions\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\eigen_conversions\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\controller_interface\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\controller_interface\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\hardware_interface\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\hardware_interface\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\combined_robot_hw\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\combined_robot_hw\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\pluginlib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\pluginlib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\class_loader\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\class_loader\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\joint_limits_interface\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\joint_limits_interface\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\urdf\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\urdf\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole_bridge\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole_bridge\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\control_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\control_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf_conversions\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf_conversions\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_conversions\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_conversions\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\realtime_tools\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\realtime_tools\cmake\;CMake Files\..\..\..\libfranka\;CMake Files\..\..\..\libfranka\build\;CMake Files\..\..\build\;CMake Files\..\..\build\panda_mpc\;CMake Files\..\..\build\panda_mpc\catkin\;CMake Files\..\..\build\panda_mpc\catkin\catkin_generated\;CMake Files\..\..\build\panda_mpc\catkin\catkin_generated\version\;CMake Files\..\..\build\panda_mpc\catkin_generated\;CMake Files\..\..\build\panda_mpc\catkin_generated\installspace\;CMake Files\..\..\build\panda_mpc\cmake\;CMake Files\..\..\devel\;CMake Files\..\..\devel\share\;CMake Files\..\..\devel\share\qpOASES\;CMake Files\..\..\devel\share\qpOASES\cmake\;CMake Files\..\..\devel\share\franka_hw\;CMake Files\..\..\devel\share\franka_hw\cmake\;CMake Files\..\..\devel\share\franka_msgs\;CMake Files\..\..\devel\share\franka_msgs\cmake\;CMake Files\..\..\devel\share\franka_gripper\;CMake Files\..\..\devel\share\franka_gripper\cmake\;CMake Files\..\..\devel\.private\;CMake Files\..\..\devel\.private\panda_mpc\;CMake Files\..\..\devel\.private\panda_mpc\share\;CMake Files\..\..\devel\.private\panda_mpc\share\panda_mpc\;CMake Files\..\..\devel\.private\panda_mpc\share\panda_mpc\cmake\;CMake Files\examples\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\src\;CMake Files\..\..\..\..\..\usr\src\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googlemock\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\cmake\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\gazebo\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\simbody\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\sdformat\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-math4\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-cmake0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-cmake0\cmake0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-transport4\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-msgs1\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-common1\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-fuel_tools1\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\jsoncpp\;CMake Files\..\..\..\..\..\usr\share\;CMake Files\..\..\..\..\..\usr\share\OGRE\;CMake Files\..\..\..\..\..\usr\share\OGRE\cmake\;CMake Files\..\..\..\..\..\usr\share\OGRE\cmake\modules\;CMake Files\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\opt\ros\melodic\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\em\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\cpp_common\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\cpp_common\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_runtime\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_runtime\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_serialization\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_traits\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rostime\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rostime\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\xmlrpcpp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospy\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospy\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_ros\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_ros\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roslib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roslib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospack\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospack\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_srvs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_srvs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_filters\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_filters\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\sensor_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_ros\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_ros\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genmsg\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genmsg\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gencpp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gencpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geneus\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geneus\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genlisp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genlisp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gennodejs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gennodejs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genpy\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genpy\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_generation\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_generation\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_py\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_py\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\dynamic_reconfigure\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\dynamic_reconfigure\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\trajectory_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\trajectory_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\eigen_conversions\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\eigen_conversions\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\nav_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\nav_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\trac_ik_lib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\trac_ik_lib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_parser\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_parser\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\urdf\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\urdf\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\pluginlib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\pluginlib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\class_loader\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\class_loader\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole_bridge\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole_bridge\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\controller_interface\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\controller_interface\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\hardware_interface\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\hardware_interface\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\combined_robot_hw\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\combined_robot_hw\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\joint_limits_interface\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\joint_limits_interface\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\control_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\control_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf_conversions\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf_conversions\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_conversions\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_conversions\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\realtime_tools\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\realtime_tools\cmake\;CMake Files\..\..\..\libfranka\;CMake Files\..\..\..\libfranka\build\;CMake Files\..\..\build\;CMake Files\..\..\build\panda_mpc\;CMake Files\..\..\build\panda_mpc\catkin\;CMake Files\..\..\build\panda_mpc\catkin\catkin_generated\;CMake Files\..\..\build\panda_mpc\catkin\catkin_generated\version\;CMake Files\..\..\build\panda_mpc\catkin_generated\;CMake Files\..\..\build\panda_mpc\catkin_generated\installspace\;CMake Files\..\..\build\panda_mpc\cmake\;CMake Files\..\..\devel\;CMake Files\..\..\devel\share\;CMake Files\..\..\devel\share\qpOASES\;CMake Files\..\..\devel\share\qpOASES\cmake\;CMake Files\..\..\devel\share\panda_traj\;CMake Files\..\..\devel\share\panda_traj\cmake\;CMake Files\..\..\devel\share\franka_hw\;CMake Files\..\..\devel\share\franka_hw\cmake\;CMake Files\..\..\devel\share\franka_msgs\;CMake Files\..\..\devel\share\franka_msgs\cmake\;CMake Files\..\..\devel\share\franka_gripper\;CMake Files\..\..\devel\share\franka_gripper\cmake\;CMake Files\..\..\devel\.private\;CMake Files\..\..\devel\.private\panda_mpc\;CMake Files\..\..\devel\.private\panda_mpc\share\;CMake Files\..\..\devel\.private\panda_mpc\share\panda_mpc\;CMake Files\..\..\devel\.private\panda_mpc\share\panda_mpc\cmake\;CMake Files\examples\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
@@ -57,16 +57,6 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test">
-				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 test"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="panda_mpc">
 				<Option output="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
@@ -81,6 +71,17 @@
 					<Add option="-DLIBBULLET_VERSION_GT_282"/>
 					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_mpc/include"/>
 					<Add directory="/home/zheng/catkin_ws/src/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/zheng/libfranka/include"/>
 					<Add directory="/usr/include/gazebo-9"/>
 					<Add directory="/usr/include/bullet"/>
@@ -94,15 +95,6 @@
 					<Add directory="/usr/include/ignition/msgs1"/>
 					<Add directory="/usr/include/ignition/common1"/>
 					<Add directory="/usr/include/ignition/fuel_tools1"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/include/uuid"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include/c++/7"/>
@@ -134,6 +126,17 @@
 					<Add option="-DLIBBULLET_VERSION_GT_282"/>
 					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_mpc/include"/>
 					<Add directory="/home/zheng/catkin_ws/src/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/zheng/libfranka/include"/>
 					<Add directory="/usr/include/gazebo-9"/>
 					<Add directory="/usr/include/bullet"/>
@@ -147,15 +150,6 @@
 					<Add directory="/usr/include/ignition/msgs1"/>
 					<Add directory="/usr/include/ignition/common1"/>
 					<Add directory="/usr/include/ignition/fuel_tools1"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/include/uuid"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include/c++/7"/>
@@ -203,16 +197,6 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="panda_mpc_generate_messages_nodejs">
-				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 panda_mpc_generate_messages_nodejs"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="panda_mpc_generate_messages_lisp">
 				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
 				<Option type="4"/>
@@ -233,11 +217,21 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="_panda_mpc_generate_messages_check_deps_JointTorqueComparison">
+			<Target title="panda_mpc_generate_messages_nodejs">
 				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 _panda_mpc_generate_messages_check_deps_JointTorqueComparison"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 panda_mpc_generate_messages_nodejs"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="_panda_mpc_generate_messages_check_deps_UI">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 _panda_mpc_generate_messages_check_deps_UI"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
@@ -313,6 +307,76 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="franka_gripper_generate_messages_cpp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 franka_gripper_generate_messages_cpp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="franka_msgs_generate_messages_nodejs">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 franka_msgs_generate_messages_nodejs"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="franka_msgs_generate_messages_lisp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 franka_msgs_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="franka_msgs_generate_messages_eus">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 franka_msgs_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="nav_msgs_generate_messages_nodejs">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 nav_msgs_generate_messages_nodejs"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="nav_msgs_generate_messages_lisp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 nav_msgs_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="std_srvs_generate_messages_py">
 				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
 				<Option type="4"/>
@@ -338,26 +402,6 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 geometry_msgs_generate_messages_py"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="franka_gripper_generate_messages_lisp">
-				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 franka_gripper_generate_messages_lisp"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="sensor_msgs_generate_messages_lisp">
-				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 sensor_msgs_generate_messages_lisp"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
@@ -703,6 +747,16 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="_panda_mpc_generate_messages_check_deps_PandaRunMsg">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 _panda_mpc_generate_messages_check_deps_PandaRunMsg"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="gazebo_msgs_generate_messages_nodejs">
 				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
 				<Option type="4"/>
@@ -738,6 +792,46 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 rosgraph_msgs_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="panda_mpc_gencpp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 panda_mpc_gencpp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="franka_msgs_generate_messages_py">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 franka_msgs_generate_messages_py"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dynamic_reconfigure_generate_messages_cpp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 dynamic_reconfigure_generate_messages_cpp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tf_generate_messages_py">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 tf_generate_messages_py"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
@@ -913,6 +1007,36 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="panda_traj_generate_messages_lisp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 panda_traj_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="panda_traj_generate_messages_eus">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 panda_traj_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="panda_traj_generate_messages_nodejs">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 panda_traj_generate_messages_nodejs"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="franka_gripper_generate_messages_eus">
 				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
 				<Option type="4"/>
@@ -943,11 +1067,31 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="nav_msgs_generate_messages_eus">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 nav_msgs_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="tf2_msgs_generate_messages_eus">
 				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 tf2_msgs_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="panda_traj_generate_messages_cpp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 panda_traj_generate_messages_cpp"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
@@ -968,6 +1112,26 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 tf2_msgs_generate_messages_py"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="franka_msgs_generate_messages_cpp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 franka_msgs_generate_messages_cpp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="tf2_msgs_generate_messages_nodejs">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 tf2_msgs_generate_messages_nodejs"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1023,6 +1187,16 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="nav_msgs_generate_messages_py">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 nav_msgs_generate_messages_py"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="tf2_msgs_generate_messages_lisp">
 				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
 				<Option type="4"/>
@@ -1048,6 +1222,46 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 gazebo_msgs_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="franka_gripper_generate_messages_lisp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 franka_gripper_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="sensor_msgs_generate_messages_lisp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 sensor_msgs_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="panda_traj_generate_messages_py">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 panda_traj_generate_messages_py"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="nav_msgs_generate_messages_cpp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 nav_msgs_generate_messages_cpp"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1088,106 +1302,6 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 trajectory_msgs_generate_messages_nodejs"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="tf2_msgs_generate_messages_nodejs">
-				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 tf2_msgs_generate_messages_nodejs"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="franka_msgs_generate_messages_cpp">
-				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 franka_msgs_generate_messages_cpp"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="franka_msgs_generate_messages_eus">
-				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 franka_msgs_generate_messages_eus"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="franka_msgs_generate_messages_lisp">
-				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 franka_msgs_generate_messages_lisp"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="franka_msgs_generate_messages_nodejs">
-				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 franka_msgs_generate_messages_nodejs"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="panda_mpc_gencpp">
-				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 panda_mpc_gencpp"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="dynamic_reconfigure_generate_messages_cpp">
-				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 dynamic_reconfigure_generate_messages_cpp"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="tf_generate_messages_py">
-				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 tf_generate_messages_py"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="franka_msgs_generate_messages_py">
-				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 franka_msgs_generate_messages_py"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="franka_gripper_generate_messages_cpp">
-				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 franka_gripper_generate_messages_cpp"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1423,6 +1537,17 @@
 					<Add option="-DLIBBULLET_VERSION_GT_282"/>
 					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_mpc/include"/>
 					<Add directory="/home/zheng/catkin_ws/src/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/zheng/libfranka/include"/>
 					<Add directory="/usr/include/gazebo-9"/>
 					<Add directory="/usr/include/bullet"/>
@@ -1436,15 +1561,6 @@
 					<Add directory="/usr/include/ignition/msgs1"/>
 					<Add directory="/usr/include/ignition/common1"/>
 					<Add directory="/usr/include/ignition/fuel_tools1"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/include/uuid"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include/c++/7"/>
@@ -1476,6 +1592,17 @@
 					<Add option="-DLIBBULLET_VERSION_GT_282"/>
 					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_mpc/include"/>
 					<Add directory="/home/zheng/catkin_ws/src/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/zheng/libfranka/include"/>
 					<Add directory="/usr/include/gazebo-9"/>
 					<Add directory="/usr/include/bullet"/>
@@ -1489,15 +1616,6 @@
 					<Add directory="/usr/include/ignition/msgs1"/>
 					<Add directory="/usr/include/ignition/common1"/>
 					<Add directory="/usr/include/ignition/fuel_tools1"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
-					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/usr/include/uuid"/>
 					<Add directory="/usr/include/x86_64-linux-gnu"/>
 					<Add directory="/usr/include/c++/7"/>
@@ -1520,6 +1638,9 @@
 			<Option target="qptest"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp">
+			<Option target="panda_mpc"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp">
@@ -1972,6 +2093,9 @@
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/std_msgs/cmake/std_msgs-msg-extras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_msgs\cmake\"/>
 		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/std_msgs/cmake/std_msgs-msg-paths.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_msgs\cmake\"/>
+		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/std_msgs/cmake/std_msgsConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_msgs\cmake\"/>
 		</Unit>
@@ -2017,6 +2141,9 @@
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/geometry_msgs/cmake/geometry_msgs-msg-extras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\cmake\"/>
 		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/geometry_msgs/cmake/geometry_msgs-msg-paths.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\cmake\"/>
+		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/geometry_msgs/cmake/geometry_msgsConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\cmake\"/>
 		</Unit>
@@ -2048,6 +2175,9 @@
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_filters\cmake\"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/sensor_msgs/cmake/sensor_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\sensor_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/sensor_msgs/cmake/sensor_msgs-msg-paths.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\sensor_msgs\cmake\"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/sensor_msgs/cmake/sensor_msgsConfig-version.cmake">
@@ -2227,6 +2357,54 @@
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/eigen_conversions/cmake/eigen_conversionsConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\eigen_conversions\cmake\"/>
 		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/nav_msgs/cmake/nav_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\nav_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/nav_msgs/cmake/nav_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\nav_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/nav_msgs/cmake/nav_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\nav_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/trac_ik_lib/cmake/trac_ik_libConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\trac_ik_lib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/trac_ik_lib/cmake/trac_ik_libConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\trac_ik_lib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/kdl_parser/cmake/kdl_parserConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_parser\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/kdl_parser/cmake/kdl_parserConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_parser\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/urdf/cmake/urdfConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\urdf\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/urdf/cmake/urdfConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\urdf\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/pluginlib/cmake/pluginlibConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\pluginlib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/pluginlib/cmake/pluginlibConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\pluginlib\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/class_loader/cmake/class_loader-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\class_loader\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/class_loader/cmake/class_loaderConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\class_loader\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/class_loader/cmake/class_loaderConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\class_loader\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/rosconsole_bridge/cmake/rosconsole_bridgeConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole_bridge\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/rosconsole_bridge/cmake/rosconsole_bridgeConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole_bridge\cmake\"/>
+		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/controller_interface/cmake/controller_interfaceConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\controller_interface\cmake\"/>
 		</Unit>
@@ -2245,38 +2423,11 @@
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/combined_robot_hw/cmake/combined_robot_hwConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\combined_robot_hw\cmake\"/>
 		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/pluginlib/cmake/pluginlibConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\pluginlib\cmake\"/>
-		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/pluginlib/cmake/pluginlibConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\pluginlib\cmake\"/>
-		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/class_loader/cmake/class_loader-extras.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\class_loader\cmake\"/>
-		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/class_loader/cmake/class_loaderConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\class_loader\cmake\"/>
-		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/class_loader/cmake/class_loaderConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\class_loader\cmake\"/>
-		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/joint_limits_interface/cmake/joint_limits_interfaceConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\joint_limits_interface\cmake\"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/joint_limits_interface/cmake/joint_limits_interfaceConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\joint_limits_interface\cmake\"/>
-		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/urdf/cmake/urdfConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\urdf\cmake\"/>
-		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/urdf/cmake/urdfConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\urdf\cmake\"/>
-		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/rosconsole_bridge/cmake/rosconsole_bridgeConfig-version.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole_bridge\cmake\"/>
-		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/rosconsole_bridge/cmake/rosconsole_bridgeConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole_bridge\cmake\"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/control_msgs/cmake/control_msgs-msg-extras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\control_msgs\cmake\"/>
@@ -2340,6 +2491,15 @@
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../devel/share/qpOASES/cmake/qpOASESConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\devel\share\qpOASES\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../devel/share/panda_traj/cmake/panda_traj-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\panda_traj\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../devel/share/panda_traj/cmake/panda_trajConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\panda_traj\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../devel/share/panda_traj/cmake/panda_trajConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\devel\share\panda_traj\cmake\"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../devel/share/franka_hw/cmake/franka_hwConfig-version.cmake">
 			<Option virtualFolder="CMake Files\..\..\devel\share\franka_hw\cmake\"/>

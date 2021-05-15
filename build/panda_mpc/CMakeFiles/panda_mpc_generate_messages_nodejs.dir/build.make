@@ -53,16 +53,29 @@ CMAKE_BINARY_DIR = /home/zheng/catkin_ws/build/panda_mpc
 # Include the progress variables for this target.
 include CMakeFiles/panda_mpc_generate_messages_nodejs.dir/progress.make
 
-CMakeFiles/panda_mpc_generate_messages_nodejs: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/JointTorqueComparison.js
+CMakeFiles/panda_mpc_generate_messages_nodejs: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/PandaRunMsg.js
+CMakeFiles/panda_mpc_generate_messages_nodejs: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/srv/UI.js
 
 
-/home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/JointTorqueComparison.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
-/home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/JointTorqueComparison.js: /home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from panda_mpc/JointTorqueComparison.msg"
-	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/zheng/catkin_ws/src/panda_mpc/msg/JointTorqueComparison.msg -Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg -p panda_mpc -o /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/PandaRunMsg.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/PandaRunMsg.js: /home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/PandaRunMsg.js: /opt/ros/melodic/share/sensor_msgs/msg/JointState.msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/PandaRunMsg.js: /opt/ros/melodic/share/geometry_msgs/msg/Vector3.msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/PandaRunMsg.js: /opt/ros/melodic/share/geometry_msgs/msg/Twist.msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/PandaRunMsg.js: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from panda_mpc/PandaRunMsg.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg -Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -p panda_mpc -o /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg
+
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/srv/UI.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/srv/UI.js: /home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/srv/UI.js: /opt/ros/melodic/share/geometry_msgs/msg/Twist.msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/srv/UI.js: /opt/ros/melodic/share/geometry_msgs/msg/Vector3.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from panda_mpc/UI.srv"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv -Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -p panda_mpc -o /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/srv
 
 panda_mpc_generate_messages_nodejs: CMakeFiles/panda_mpc_generate_messages_nodejs
-panda_mpc_generate_messages_nodejs: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/JointTorqueComparison.js
+panda_mpc_generate_messages_nodejs: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/PandaRunMsg.js
+panda_mpc_generate_messages_nodejs: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/srv/UI.js
 panda_mpc_generate_messages_nodejs: CMakeFiles/panda_mpc_generate_messages_nodejs.dir/build.make
 
 .PHONY : panda_mpc_generate_messages_nodejs

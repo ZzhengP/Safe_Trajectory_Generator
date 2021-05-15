@@ -1,1 +1,1 @@
-set(ORDERED_PATHS "/home/zheng/catkin_ws/devel/.private/qpOASES/lib;/home/zheng/catkin_ws/devel/.private/franka_hw/lib;/home/zheng/catkin_ws/devel/.private/franka_gripper/lib;/opt/ros/melodic/lib")
+set(ORDERED_PATHS "/home/zheng/catkin_ws/devel/.private/qpOASES/lib;/home/zheng/catkin_ws/devel/.private/panda_traj/lib;/home/zheng/catkin_ws/devel/.private/franka_hw/lib;/home/zheng/catkin_ws/devel/.private/franka_gripper/lib;/opt/ros/melodic/lib")
