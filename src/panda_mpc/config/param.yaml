@@ -1,5 +1,5 @@
 panda_mpc:
-    type: panda_mpc/PandaController
+    type: panda_mpc/PandaMPCController
     arm_id: panda
     joint_names:
         - panda_joint1
@@ -9,7 +9,7 @@ panda_mpc:
         - panda_joint5
         - panda_joint6
         - panda_joint7
-    control_level : position
+    control_level : velocity
     p_gains_: [10, 10, 10, 10, 10, 10]
     d_gains_: [0.0 ,0.0, 0.0, 0.0, 0.0, 0.0]
     p_gains_qd_: [5, 5, 5, 5, 5, 5, 5]

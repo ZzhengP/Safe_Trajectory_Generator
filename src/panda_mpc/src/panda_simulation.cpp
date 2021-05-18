@@ -30,6 +30,7 @@ namespace gazebo
 
         joints_.clear();
         actuated_joint_names_.clear();
+        ROS_WARN_STREAM("panda_simulation.cpp");
         for(auto joint : model->GetJoints() )
         {
             // Provide feedback to get the internal torque
@@ -111,9 +112,9 @@ namespace gazebo
         if (!node_handle.getParam("/panda_mpc/control_level", control_level)) {
             ROS_ERROR_STREAM("Could not read parameter control_level");
         }
-        if (control_level == "position")
+        if (control_level == "velocity")
         {
-             ROS_WARN_STREAM("position controlled robot");
+             ROS_WARN_STREAM("velocity controlled robot");
         }
         else if (control_level == "torque")
         {
@@ -315,7 +316,7 @@ namespace gazebo
         gravity_vector_[1] = g[1];
         gravity_vector_[2] = g[2];
 
-        if (control_level == "position")
+        if (control_level == "velocity")
         {
             for(int i=0 ; i < ndof_ ; ++i)
                 joints_[i]->SetVelocity(0, joint_command_[i]);

@@ -53,7 +53,7 @@ bool PandaMPCController::init(hardware_interface::RobotHW* robot_hardware, ros::
             return false;
     }
 
-    if (control_level == "position")
+    if (control_level == "velocity")
     {
         velocity_joint_interface_ = robot_hardware->get<hardware_interface::VelocityJointInterface>();
         if (velocity_joint_interface_ == nullptr) {
@@ -147,7 +147,7 @@ void PandaMPCController::update(const ros::Time&, const ros::Duration& period) {
     joint_command_ = qp.Update(q_,qd_,period);
 
 
-    if (control_level == "position")
+    if (control_level == "velocity")
     {
         for (size_t i = 0; i < 7; ++i)
         {

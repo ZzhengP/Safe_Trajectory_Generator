@@ -13,51 +13,60 @@
     <arg name="gui" default="false"/>
     <arg name="robot_ns" default="/"/>
 
+    <group unless="$(arg sim)">
+        <include file="$(find franka_control)/launch/franka_control.launch">
+            <arg name="robot_ip" value ="$(arg robot_ip)"/>
+            <arg name="load_gripper" value="$(arg load_gripper)" />
+        </include>
+        <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="panda_mpc" />
+    </group>
 
 
     <!-- Include for visualizing in RVIZ -->
 
 
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find panda_mpc)/launch/robot.rviz"/>
-    <!-- Load the URDF into the ROS parameter Server -->
-    <param name="robot_description" command="
-        $(find xacro)/xacro '$(find franka_description_gazebo)/robots/panda_arm.urdf.xacro' gazebo_plugin:=$(arg gazebo_plugin)"/>
 
-    <!--remap from="/panda_mpc/joint_states" to="/joint_states"/-->
+    <group if="$(arg sim)">
 
-    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
+        <node name="killgazebo" pkg="panda_mpc" type="killgazebo" output="screen" />
+        <!-- Load the URDF into the ROS parameter Server -->
+        <param name="robot_description" command="
+                     $(find xacro)/xacro '$(find franka_description_gazebo)/robots/panda_arm.urdf.xacro' gazebo_plugin:=$(arg gazebo_plugin)"/>
+
+        <!--remap from="/panda_mpc/joint_states" to="/joint_states"/-->
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
             <remap from="/joint_states" to="/panda_mpc/joint_states"/> <!-- be careful about the joint's name: rviz for robot_model use /joint_states, bout in panda_simulation the node publish /panda_mpc/joint_states -->
             <rosparam param="publish_frequency">100</rosparam>
-    </node>
+        </node>
 
-    <rosparam param="init_joint_positions">
-        panda_joint4: -1.57
-        panda_joint6: 1.57
-    </rosparam>
+        <rosparam param="init_joint_positions">
+            panda_joint4: -1.57
+            panda_joint6: 1.57
+        </rosparam>
 
+        <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched-->
+        <include file="$(find gazebo_ros)/launch/empty_world.launch">
+            <arg name="world_name" value="$(find franka_description_gazebo)/worlds/panda_world.world"/>
+            <arg name="gui" value="$(arg gui)"/>
+            <arg name="paused" value="$(arg paused)"/>
+            <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+        </include>
+
+
+        <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+        <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen"
+                    args="-param robot_description
+                    -urdf
+                    -model panda"/>
+
+        </group>
     <!--node pkg="joint_state_publisher" type="joint_state_publisher" output="screen" name="joint_state_publisher">
                 <param name="publish_default_velocities" value="false"/>
         <param name="publish_default_efforts" value="false"/>
         <param name="rate" value="100"/>
 
     </node-->
-
-    <node name="killgazebo" pkg="panda_mpc" type="killgazebo" output="screen" />
-
-    <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched-->
-    <include file="$(find gazebo_ros)/launch/empty_world.launch">
-        <arg name="world_name" value="$(find franka_description_gazebo)/worlds/panda_world.world"/>
-        <arg name="gui" value="$(arg gui)"/>
-        <arg name="paused" value="$(arg paused)"/>
-        <arg name="use_sim_time" value="$(arg use_sim_time)"/>
-    </include>
-
-    <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
-    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" output="screen"
-          args="-param robot_description
-                -urdf
-                -model panda"/>
-
 
     <!-- Load joint controller configurations from YAML file to parameters server -->
     <!--rosparam file="$(find panda_mpc)/config/panda_mpc.yaml" command="load"/-->

@@ -7,6 +7,7 @@ using namespace std;
 namespace Controller{
 bool Controller::Init(ros::NodeHandle& node_handle,const Eigen::VectorXd& q_init, const Eigen::VectorXd& qd_init)
 {
+    ROS_WARN_STREAM ("Controller.cpp ");
     ROS_WARN("Using panda MPC controller !!! ");
 
     //--------------------------------------
