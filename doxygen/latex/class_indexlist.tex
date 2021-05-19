@@ -1,0 +1,394 @@
+\hypertarget{class_indexlist}{}\section{Indexlist Class Reference}
+\label{class_indexlist}\index{Indexlist@{Indexlist}}
+
+
+Stores and manages index lists.  
+
+
+
+
+{\ttfamily \#include $<$Indexlist.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_indexlist_ae8912418954f7d3988b45e61ae3e1792}{Indexlist} ()
+\item 
+\hyperlink{class_indexlist_aa8c9a7435650a1f0d6690fa14ff033dc}{Indexlist} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} n)
+\item 
+\hyperlink{class_indexlist_ad9e5f23de8e6689e64bb47fa94d54af3}{Indexlist} (const \hyperlink{class_indexlist}{Indexlist} \&rhs)
+\item 
+\hyperlink{class_indexlist_a25da3346974b3749f54355fc040c6450}{$\sim$\+Indexlist} ()
+\item 
+\hyperlink{class_indexlist}{Indexlist} \& \hyperlink{class_indexlist_a3f2085c6aed278494e5314691d155a93}{operator=} (const \hyperlink{class_indexlist}{Indexlist} \&rhs)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_indexlist_ab835188e0e58ae5fd081fbb16a9f859c}{init} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} n=0)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_indexlist_adbf88e12d610ba437fb4438d4a8af74f}{get\+Number\+Array} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$$\ast$const numberarray) const
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_indexlist_a406fb27db70906d4794df30616e281b6}{get\+I\+Sort\+Array} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$$\ast$const i\+Sort\+Array) const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_indexlist_a1534c1bd558955279083bd44ff9cfc91}{get\+Index} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} givennumber) const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_indexlist_a235bdb572a10884ec08b99be0fcc235a}{get\+Number} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} physicalindex) const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_indexlist_a2655f6990ec0500c482c1ca78ec853fa}{get\+Length} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_indexlist_ade762938b1843833510ab86f2bcd73cf}{get\+Last\+Number} () const
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_indexlist_a6774029ad3f8b1a1f9b2dd33fea9fcf8}{add\+Number} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} addnumber)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_indexlist_a16777f1e0828b13243b32142f1f7a1ce}{remove\+Number} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} removenumber)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_indexlist_a8affe558d7e73de524978b9d153a17f4}{swap\+Numbers} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} number1, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} number2)
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_indexlist_a83ec064b8e0dff5171d60324520cda88}{is\+Member} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \+\_\+number) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_indexlist_a34e0b17923cc67a03f9aeb011261bb89}{clear} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_indexlist_a9ffa9399d56190092586fe3f366aab87}{copy} (const \hyperlink{class_indexlist}{Indexlist} \&rhs)
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_indexlist_a32388283a23256266616946d3c683ec7}{find\+Insert} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} i) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$ \hyperlink{class_indexlist_aebc85737bcca22d4e38a40b89f3d517a}{number}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$ \hyperlink{class_indexlist_a7cb0be705b2f365bd0e2a02726159625}{i\+Sort}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_indexlist_a615eead1528a5af66d40e5392f39b4b3}{length}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_indexlist_ac5fcce8e0f9c81e2b437b00144413dcd}{first}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_indexlist_a7c84090f4263d521f0c5ec586fdd83ad}{last}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_indexlist_af35ad1bcce6117b36f7247c248e322c4}{lastusedindex}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_indexlist_ad648cebc248309f0be3c6f3647cd944c}{physicallength}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_indexlist_a429f2ee49f7ee672b5fcbd858afcd972}\label{class_indexlist_a429f2ee49f7ee672b5fcbd858afcd972}} 
+class {\bfseries Dense\+Matrix}
+\item 
+\mbox{\Hypertarget{class_indexlist_a5beabcf69cba4b4f91d6b8b3aaae3d72}\label{class_indexlist_a5beabcf69cba4b4f91d6b8b3aaae3d72}} 
+class {\bfseries Sym\+Dense\+Mat}
+\item 
+\mbox{\Hypertarget{class_indexlist_a240abf68603784c3dcc4761f8bc41ad6}\label{class_indexlist_a240abf68603784c3dcc4761f8bc41ad6}} 
+class {\bfseries Sparse\+Matrix}
+\item 
+\mbox{\Hypertarget{class_indexlist_a68f9c6f33847742616d4c74f06881475}\label{class_indexlist_a68f9c6f33847742616d4c74f06881475}} 
+class {\bfseries Sparse\+Matrix\+Row}
+\item 
+\mbox{\Hypertarget{class_indexlist_a769cc6bc95fb8501b74eb4eee3bb275b}\label{class_indexlist_a769cc6bc95fb8501b74eb4eee3bb275b}} 
+class {\bfseries Sym\+Sparse\+Mat}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Stores and manages index lists. 
+
+This class manages index lists of active/inactive bounds/constraints.
+
+\begin{DoxyAuthor}{Author}
+Hans Joachim Ferreau 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2007-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_indexlist_ae8912418954f7d3988b45e61ae3e1792}\label{class_indexlist_ae8912418954f7d3988b45e61ae3e1792}} 
+\index{Indexlist@{Indexlist}!Indexlist@{Indexlist}}
+\index{Indexlist@{Indexlist}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{Indexlist()}{Indexlist()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_afd127fcb3c8f47975e9fa0ec2bacde52}{B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} Indexlist\+::\+Indexlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_indexlist_aa8c9a7435650a1f0d6690fa14ff033dc}\label{class_indexlist_aa8c9a7435650a1f0d6690fa14ff033dc}} 
+\index{Indexlist@{Indexlist}!Indexlist@{Indexlist}}
+\index{Indexlist@{Indexlist}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{Indexlist()}{Indexlist()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Indexlist\+::\+Indexlist (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{n }\end{DoxyParamCaption})}
+
+Constructor which takes the desired physical length of the index list. 
+\begin{DoxyParams}{Parameters}
+{\em n} & Physical length of index list. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_indexlist_ad9e5f23de8e6689e64bb47fa94d54af3}\label{class_indexlist_ad9e5f23de8e6689e64bb47fa94d54af3}} 
+\index{Indexlist@{Indexlist}!Indexlist@{Indexlist}}
+\index{Indexlist@{Indexlist}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{Indexlist()}{Indexlist()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Indexlist\+::\+Indexlist (\begin{DoxyParamCaption}\item[{const \hyperlink{class_indexlist}{Indexlist} \&}]{rhs }\end{DoxyParamCaption})}
+
+Copy constructor (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_indexlist_a25da3346974b3749f54355fc040c6450}\label{class_indexlist_a25da3346974b3749f54355fc040c6450}} 
+\index{Indexlist@{Indexlist}!````~Indexlist@{$\sim$\+Indexlist}}
+\index{````~Indexlist@{$\sim$\+Indexlist}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{$\sim$\+Indexlist()}{~Indexlist()}}
+{\footnotesize\ttfamily Indexlist\+::$\sim$\+Indexlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_indexlist_a6774029ad3f8b1a1f9b2dd33fea9fcf8}\label{class_indexlist_a6774029ad3f8b1a1f9b2dd33fea9fcf8}} 
+\index{Indexlist@{Indexlist}!add\+Number@{add\+Number}}
+\index{add\+Number@{add\+Number}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{add\+Number()}{addNumber()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Indexlist\+::add\+Number (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{addnumber }\end{DoxyParamCaption})}
+
+Adds number to index list. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+L\+I\+S\+T\+\_\+\+M\+U\+S\+T\+\_\+\+B\+E\+\_\+\+R\+E\+O\+R\+D\+E\+RD ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+L\+I\+S\+T\+\_\+\+E\+X\+C\+E\+E\+D\+S\+\_\+\+M\+A\+X\+\_\+\+L\+E\+N\+G\+TH 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em addnumber} & Number to be added. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_indexlist_a34e0b17923cc67a03f9aeb011261bb89}\label{class_indexlist_a34e0b17923cc67a03f9aeb011261bb89}} 
+\index{Indexlist@{Indexlist}!clear@{clear}}
+\index{clear@{clear}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Indexlist\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Frees all allocated memory. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_indexlist_a9ffa9399d56190092586fe3f366aab87}\label{class_indexlist_a9ffa9399d56190092586fe3f366aab87}} 
+\index{Indexlist@{Indexlist}!copy@{copy}}
+\index{copy@{copy}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Indexlist\+::copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_indexlist}{Indexlist} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Copies all members from given rhs object. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_indexlist_a32388283a23256266616946d3c683ec7}\label{class_indexlist_a32388283a23256266616946d3c683ec7}} 
+\index{Indexlist@{Indexlist}!find\+Insert@{find\+Insert}}
+\index{find\+Insert@{find\+Insert}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{find\+Insert()}{findInsert()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Indexlist\+::find\+Insert (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Find first index j between -\/1 and length in sorted list of indices i\+Sort such that numbers\mbox{[}i\+Sort\mbox{[}j\mbox{]}\mbox{]} $<$= i $<$ numbers\mbox{[}i\+Sort\mbox{[}j+1\mbox{]}\mbox{]}. Uses bisection. \begin{DoxyReturn}{Returns}
+j. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_indexlist_a1534c1bd558955279083bd44ff9cfc91}\label{class_indexlist_a1534c1bd558955279083bd44ff9cfc91}} 
+\index{Indexlist@{Indexlist}!get\+Index@{get\+Index}}
+\index{get\+Index@{get\+Index}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{get\+Index()}{getIndex()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Indexlist\+::get\+Index (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{givennumber }\end{DoxyParamCaption}) const}
+
+Determines the index within the index list at which a given number is stored. \begin{DoxyReturn}{Returns}
+$>$= 0\+: Index of given number. ~\newline
+ -\/1\+: Number not found. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em givennumber} & Number whose index shall be determined. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_indexlist_a406fb27db70906d4794df30616e281b6}\label{class_indexlist_a406fb27db70906d4794df30616e281b6}} 
+\index{Indexlist@{Indexlist}!get\+I\+Sort\+Array@{get\+I\+Sort\+Array}}
+\index{get\+I\+Sort\+Array@{get\+I\+Sort\+Array}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{get\+I\+Sort\+Array()}{getISortArray()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Indexlist\+::get\+I\+Sort\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$$\ast$const}]{i\+Sort\+Array }\end{DoxyParamCaption}) const}
+
+Creates an array of all numbers within the index set in correct order. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+L\+I\+S\+T\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em i\+Sort\+Array} & Output\+: i\+Sort Array. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_indexlist_ade762938b1843833510ab86f2bcd73cf}\label{class_indexlist_ade762938b1843833510ab86f2bcd73cf}} 
+\index{Indexlist@{Indexlist}!get\+Last\+Number@{get\+Last\+Number}}
+\index{get\+Last\+Number@{get\+Last\+Number}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{get\+Last\+Number()}{getLastNumber()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Indexlist\+::get\+Last\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns last number within the index list. \begin{DoxyReturn}{Returns}
+Last number within the index list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_indexlist_a2655f6990ec0500c482c1ca78ec853fa}\label{class_indexlist_a2655f6990ec0500c482c1ca78ec853fa}} 
+\index{Indexlist@{Indexlist}!get\+Length@{get\+Length}}
+\index{get\+Length@{get\+Length}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{get\+Length()}{getLength()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Indexlist\+::get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the current length of the index list. \begin{DoxyReturn}{Returns}
+Current length of the index list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_indexlist_a235bdb572a10884ec08b99be0fcc235a}\label{class_indexlist_a235bdb572a10884ec08b99be0fcc235a}} 
+\index{Indexlist@{Indexlist}!get\+Number@{get\+Number}}
+\index{get\+Number@{get\+Number}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{get\+Number()}{getNumber()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_afd127fcb3c8f47975e9fa0ec2bacde52}{B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Indexlist\+::get\+Number (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{physicalindex }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number stored at a given physical index. \begin{DoxyReturn}{Returns}
+$>$= 0\+: Number stored at given physical index. ~\newline
+ -\/\+R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+L\+I\+S\+T\+\_\+\+O\+U\+T\+O\+F\+B\+O\+U\+N\+DS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em physicalindex} & Physical index of the number to be returned. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_indexlist_adbf88e12d610ba437fb4438d4a8af74f}\label{class_indexlist_adbf88e12d610ba437fb4438d4a8af74f}} 
+\index{Indexlist@{Indexlist}!get\+Number\+Array@{get\+Number\+Array}}
+\index{get\+Number\+Array@{get\+Number\+Array}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{get\+Number\+Array()}{getNumberArray()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Indexlist\+::get\+Number\+Array (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$$\ast$const}]{numberarray }\end{DoxyParamCaption}) const}
+
+Creates an array of all numbers within the index set in correct order. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+L\+I\+S\+T\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em numberarray} & Output\+: Array of numbers (N\+U\+LL on error). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_indexlist_ab835188e0e58ae5fd081fbb16a9f859c}\label{class_indexlist_ab835188e0e58ae5fd081fbb16a9f859c}} 
+\index{Indexlist@{Indexlist}!init@{init}}
+\index{init@{init}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Indexlist\+::init (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{n = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Initialises index list of desired physical length. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Physical length of index list. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_indexlist_a83ec064b8e0dff5171d60324520cda88}\label{class_indexlist_a83ec064b8e0dff5171d60324520cda88}} 
+\index{Indexlist@{Indexlist}!is\+Member@{is\+Member}}
+\index{is\+Member@{is\+Member}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{is\+Member()}{isMember()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Indexlist\+::is\+Member (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{\+\_\+number }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Determines if a given number is contained in the index set. \begin{DoxyReturn}{Returns}
+B\+T\+\_\+\+T\+R\+UE iff number is contain in the index set 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+number} & Number to be tested for membership. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_indexlist_a3f2085c6aed278494e5314691d155a93}\label{class_indexlist_a3f2085c6aed278494e5314691d155a93}} 
+\index{Indexlist@{Indexlist}!operator=@{operator=}}
+\index{operator=@{operator=}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_indexlist}{Indexlist} \& Indexlist\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_indexlist}{Indexlist} \&}]{rhs }\end{DoxyParamCaption})}
+
+Assingment operator (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_indexlist_a16777f1e0828b13243b32142f1f7a1ce}\label{class_indexlist_a16777f1e0828b13243b32142f1f7a1ce}} 
+\index{Indexlist@{Indexlist}!remove\+Number@{remove\+Number}}
+\index{remove\+Number@{remove\+Number}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{remove\+Number()}{removeNumber()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Indexlist\+::remove\+Number (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{removenumber }\end{DoxyParamCaption})}
+
+Removes number from index list. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em removenumber} & Number to be removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_indexlist_a8affe558d7e73de524978b9d153a17f4}\label{class_indexlist_a8affe558d7e73de524978b9d153a17f4}} 
+\index{Indexlist@{Indexlist}!swap\+Numbers@{swap\+Numbers}}
+\index{swap\+Numbers@{swap\+Numbers}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{swap\+Numbers()}{swapNumbers()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Indexlist\+::swap\+Numbers (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{number1,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{number2 }\end{DoxyParamCaption})}
+
+Swaps two numbers within index list. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em number1} & First number for swapping. \\
+\hline
+{\em number2} & Second number for swapping. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_indexlist_ac5fcce8e0f9c81e2b437b00144413dcd}\label{class_indexlist_ac5fcce8e0f9c81e2b437b00144413dcd}} 
+\index{Indexlist@{Indexlist}!first@{first}}
+\index{first@{first}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{first}{first}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Indexlist\+::first\hspace{0.3cm}{\ttfamily [protected]}}
+
+Physical index of first element. \mbox{\Hypertarget{class_indexlist_a7cb0be705b2f365bd0e2a02726159625}\label{class_indexlist_a7cb0be705b2f365bd0e2a02726159625}} 
+\index{Indexlist@{Indexlist}!i\+Sort@{i\+Sort}}
+\index{i\+Sort@{i\+Sort}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{i\+Sort}{iSort}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}$\ast$ Indexlist\+::i\+Sort\hspace{0.3cm}{\ttfamily [protected]}}
+
+Index list to sort vector {\itshape number} \mbox{\Hypertarget{class_indexlist_a7c84090f4263d521f0c5ec586fdd83ad}\label{class_indexlist_a7c84090f4263d521f0c5ec586fdd83ad}} 
+\index{Indexlist@{Indexlist}!last@{last}}
+\index{last@{last}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{last}{last}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Indexlist\+::last\hspace{0.3cm}{\ttfamily [protected]}}
+
+Physical index of last element. \mbox{\Hypertarget{class_indexlist_af35ad1bcce6117b36f7247c248e322c4}\label{class_indexlist_af35ad1bcce6117b36f7247c248e322c4}} 
+\index{Indexlist@{Indexlist}!lastusedindex@{lastusedindex}}
+\index{lastusedindex@{lastusedindex}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{lastusedindex}{lastusedindex}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Indexlist\+::lastusedindex\hspace{0.3cm}{\ttfamily [protected]}}
+
+Physical index of last entry in index list. \mbox{\Hypertarget{class_indexlist_a615eead1528a5af66d40e5392f39b4b3}\label{class_indexlist_a615eead1528a5af66d40e5392f39b4b3}} 
+\index{Indexlist@{Indexlist}!length@{length}}
+\index{length@{length}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Indexlist\+::length\hspace{0.3cm}{\ttfamily [protected]}}
+
+Length of index list. \mbox{\Hypertarget{class_indexlist_aebc85737bcca22d4e38a40b89f3d517a}\label{class_indexlist_aebc85737bcca22d4e38a40b89f3d517a}} 
+\index{Indexlist@{Indexlist}!number@{number}}
+\index{number@{number}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{number}{number}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}$\ast$ Indexlist\+::number\hspace{0.3cm}{\ttfamily [protected]}}
+
+Array to store numbers of constraints or bounds. \mbox{\Hypertarget{class_indexlist_ad648cebc248309f0be3c6f3647cd944c}\label{class_indexlist_ad648cebc248309f0be3c6f3647cd944c}} 
+\index{Indexlist@{Indexlist}!physicallength@{physicallength}}
+\index{physicallength@{physicallength}!Indexlist@{Indexlist}}
+\subsubsection{\texorpdfstring{physicallength}{physicallength}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Indexlist\+::physicallength\hspace{0.3cm}{\ttfamily [protected]}}
+
+Physical length of index list. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_indexlist_8hpp}{Indexlist.\+hpp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_indexlist_8ipp}{Indexlist.\+ipp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/src/\hyperlink{_indexlist_8cpp}{Indexlist.\+cpp}\end{DoxyCompactItemize}

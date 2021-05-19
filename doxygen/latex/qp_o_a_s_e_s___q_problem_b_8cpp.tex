@@ -1,0 +1,90 @@
+\hypertarget{qp_o_a_s_e_s___q_problem_b_8cpp}{}\section{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.2.1/interfaces/simulink/qp\+O\+A\+S\+E\+S\+\_\+\+Q\+ProblemB.cpp File Reference}
+\label{qp_o_a_s_e_s___q_problem_b_8cpp}\index{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/interfaces/simulink/qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/interfaces/simulink/qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$qp\+O\+A\+S\+E\+S.\+hpp$>$}\newline
+{\ttfamily \#include \char`\"{}qp\+O\+A\+S\+E\+S\+\_\+simulink\+\_\+utils.\+cpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}simstruc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cg\+\_\+sfun.\+h\char`\"{}}\newline
+Include dependency graph for qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{qp_o_a_s_e_s___q_problem_b_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{qp_o_a_s_e_s___q_problem_b_8cpp_a0f61df833e166c743295eebf43f0b142}{S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+N\+A\+ME}~qp\+O\+A\+S\+E\+S\+\_\+\+Q\+ProblemB
+\item 
+\#define \hyperlink{qp_o_a_s_e_s___q_problem_b_8cpp_a9a4ab27953070e39249f3fad28e93749}{S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+L\+E\+V\+EL}~2
+\item 
+\#define \hyperlink{qp_o_a_s_e_s___q_problem_b_8cpp_ac032abbf580c891fb0c11e63e9bc668a}{M\+D\+L\+\_\+\+S\+T\+A\+RT}
+\item 
+\#define \hyperlink{qp_o_a_s_e_s___q_problem_b_8cpp_ae618f8c17d20fd1fc416eb5aaca274c6}{S\+A\+M\+P\+L\+I\+N\+G\+T\+I\+ME}~-\/1
+\item 
+\#define \hyperlink{qp_o_a_s_e_s___q_problem_b_8cpp_ab559b6bb26aeb10ecdf5654acc204535}{N\+C\+O\+N\+T\+R\+O\+L\+I\+N\+P\+U\+TS}~2
+\item 
+\#define \hyperlink{qp_o_a_s_e_s___q_problem_b_8cpp_a9e60f3e57fde2b9b1c7fe2eab7334add}{M\+A\+X\+I\+T\+ER}~100
+\item 
+\#define \hyperlink{qp_o_a_s_e_s___q_problem_b_8cpp_a5fd2f086073042e41d6de15ca4d4ec85}{H\+E\+S\+S\+I\+A\+N\+T\+Y\+PE}~\hyperlink{_types_8hpp_a604cad5cda14e378ce4a77ab28ee9fd9a3479cf4e632ae731d4da9bf57a9f8907}{H\+S\+T\+\_\+\+U\+N\+K\+N\+O\+WN}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Hans Joachim Ferreau (thanks to Aude Perrin) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2007-\/2017
+\end{DoxyDate}
+Interface for Simulink(\+R) that enables to call qp\+O\+A\+S\+ES as a S function (variant for simply bounded Q\+Ps with fixed matrices). 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{qp_o_a_s_e_s___q_problem_b_8cpp_a5fd2f086073042e41d6de15ca4d4ec85}\label{qp_o_a_s_e_s___q_problem_b_8cpp_a5fd2f086073042e41d6de15ca4d4ec85}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}!H\+E\+S\+S\+I\+A\+N\+T\+Y\+PE@{H\+E\+S\+S\+I\+A\+N\+T\+Y\+PE}}
+\index{H\+E\+S\+S\+I\+A\+N\+T\+Y\+PE@{H\+E\+S\+S\+I\+A\+N\+T\+Y\+PE}!qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}}
+\subsubsection{\texorpdfstring{H\+E\+S\+S\+I\+A\+N\+T\+Y\+PE}{HESSIANTYPE}}
+{\footnotesize\ttfamily \#define H\+E\+S\+S\+I\+A\+N\+T\+Y\+PE~\hyperlink{_types_8hpp_a604cad5cda14e378ce4a77ab28ee9fd9a3479cf4e632ae731d4da9bf57a9f8907}{H\+S\+T\+\_\+\+U\+N\+K\+N\+O\+WN}}
+
+Hessian type, see documentation of \hyperlink{class_q_problem_b}{Q\+ProblemB} class constructor. \mbox{\Hypertarget{qp_o_a_s_e_s___q_problem_b_8cpp_a9e60f3e57fde2b9b1c7fe2eab7334add}\label{qp_o_a_s_e_s___q_problem_b_8cpp_a9e60f3e57fde2b9b1c7fe2eab7334add}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}!M\+A\+X\+I\+T\+ER@{M\+A\+X\+I\+T\+ER}}
+\index{M\+A\+X\+I\+T\+ER@{M\+A\+X\+I\+T\+ER}!qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+I\+T\+ER}{MAXITER}}
+{\footnotesize\ttfamily \#define M\+A\+X\+I\+T\+ER~100}
+
+Maximum number of iteration. \mbox{\Hypertarget{qp_o_a_s_e_s___q_problem_b_8cpp_ac032abbf580c891fb0c11e63e9bc668a}\label{qp_o_a_s_e_s___q_problem_b_8cpp_ac032abbf580c891fb0c11e63e9bc668a}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}!M\+D\+L\+\_\+\+S\+T\+A\+RT@{M\+D\+L\+\_\+\+S\+T\+A\+RT}}
+\index{M\+D\+L\+\_\+\+S\+T\+A\+RT@{M\+D\+L\+\_\+\+S\+T\+A\+RT}!qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}}
+\subsubsection{\texorpdfstring{M\+D\+L\+\_\+\+S\+T\+A\+RT}{MDL\_START}}
+{\footnotesize\ttfamily \#define M\+D\+L\+\_\+\+S\+T\+A\+RT}
+
+Activate call to mdl\+Start. \mbox{\Hypertarget{qp_o_a_s_e_s___q_problem_b_8cpp_ab559b6bb26aeb10ecdf5654acc204535}\label{qp_o_a_s_e_s___q_problem_b_8cpp_ab559b6bb26aeb10ecdf5654acc204535}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}!N\+C\+O\+N\+T\+R\+O\+L\+I\+N\+P\+U\+TS@{N\+C\+O\+N\+T\+R\+O\+L\+I\+N\+P\+U\+TS}}
+\index{N\+C\+O\+N\+T\+R\+O\+L\+I\+N\+P\+U\+TS@{N\+C\+O\+N\+T\+R\+O\+L\+I\+N\+P\+U\+TS}!qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}}
+\subsubsection{\texorpdfstring{N\+C\+O\+N\+T\+R\+O\+L\+I\+N\+P\+U\+TS}{NCONTROLINPUTS}}
+{\footnotesize\ttfamily \#define N\+C\+O\+N\+T\+R\+O\+L\+I\+N\+P\+U\+TS~2}
+
+Number of control inputs. \mbox{\Hypertarget{qp_o_a_s_e_s___q_problem_b_8cpp_a9a4ab27953070e39249f3fad28e93749}\label{qp_o_a_s_e_s___q_problem_b_8cpp_a9a4ab27953070e39249f3fad28e93749}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}!S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+L\+E\+V\+EL@{S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+L\+E\+V\+EL}}
+\index{S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+L\+E\+V\+EL@{S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+L\+E\+V\+EL}!qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}}
+\subsubsection{\texorpdfstring{S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+L\+E\+V\+EL}{S\_FUNCTION\_LEVEL}}
+{\footnotesize\ttfamily \#define S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+L\+E\+V\+EL~2}
+
+S function level. \mbox{\Hypertarget{qp_o_a_s_e_s___q_problem_b_8cpp_a0f61df833e166c743295eebf43f0b142}\label{qp_o_a_s_e_s___q_problem_b_8cpp_a0f61df833e166c743295eebf43f0b142}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}!S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+N\+A\+ME@{S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+N\+A\+ME}}
+\index{S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+N\+A\+ME@{S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+N\+A\+ME}!qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}}
+\subsubsection{\texorpdfstring{S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+N\+A\+ME}{S\_FUNCTION\_NAME}}
+{\footnotesize\ttfamily \#define S\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+\_\+\+N\+A\+ME~qp\+O\+A\+S\+E\+S\+\_\+\+Q\+ProblemB}
+
+Name of the S function. \mbox{\Hypertarget{qp_o_a_s_e_s___q_problem_b_8cpp_ae618f8c17d20fd1fc416eb5aaca274c6}\label{qp_o_a_s_e_s___q_problem_b_8cpp_ae618f8c17d20fd1fc416eb5aaca274c6}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}!S\+A\+M\+P\+L\+I\+N\+G\+T\+I\+ME@{S\+A\+M\+P\+L\+I\+N\+G\+T\+I\+ME}}
+\index{S\+A\+M\+P\+L\+I\+N\+G\+T\+I\+ME@{S\+A\+M\+P\+L\+I\+N\+G\+T\+I\+ME}!qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp@{qp\+O\+A\+S\+E\+S\+\_\+\+Q\+Problem\+B.\+cpp}}
+\subsubsection{\texorpdfstring{S\+A\+M\+P\+L\+I\+N\+G\+T\+I\+ME}{SAMPLINGTIME}}
+{\footnotesize\ttfamily \#define S\+A\+M\+P\+L\+I\+N\+G\+T\+I\+ME~-\/1}
+
+Sampling time. 

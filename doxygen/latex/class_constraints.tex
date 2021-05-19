@@ -1,0 +1,457 @@
+\hypertarget{class_constraints}{}\section{Constraints Class Reference}
+\label{class_constraints}\index{Constraints@{Constraints}}
+
+
+Manages working sets of constraints.  
+
+
+
+
+{\ttfamily \#include $<$Constraints.\+hpp$>$}
+
+
+
+Inheritance diagram for Constraints\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=147pt]{class_constraints__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Constraints\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{class_constraints__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_constraints_a9c677de63278cf243c9a9d9afcfd0877}{Constraints} ()
+\item 
+\hyperlink{class_constraints_ae89609d265bd2b331b23f44ee8de4ce7}{Constraints} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \+\_\+n)
+\item 
+\hyperlink{class_constraints_aeb433ff1018134588275911c6acf0f8e}{Constraints} (const \hyperlink{class_constraints}{Constraints} \&rhs)
+\item 
+virtual \hyperlink{class_constraints_a61f155a69191e07c32a4a1e9e60067e9}{$\sim$\+Constraints} ()
+\item 
+\hyperlink{class_constraints}{Constraints} \& \hyperlink{class_constraints_add013b3e2480cf830eef39123e7afd6e}{operator=} (const \hyperlink{class_constraints}{Constraints} \&rhs)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_constraints_abb4139ecad1739efe85bcb03b22f282d}{init} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \+\_\+n=0)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_constraints_ad0d79440b823d59f69459823bee03f7c}{setup\+Constraint} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} number, \hyperlink{_types_8hpp_a70a6a40d261a015ead8d43aa589383a4}{Subject\+To\+Status} \+\_\+status)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_constraints_ac49c5bae8433f8c6623e55088f33d226}{setup\+All\+Inactive} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_constraints_a0bc777ba851991829a569edcc444d004}{setup\+All\+Lower} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_constraints_a883220c48c6ae8d5ff0ef056547f288b}{setup\+All\+Upper} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_constraints_a8f3aa6b120aa8e3e2f18a905b4ef84d5}{move\+Active\+To\+Inactive} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} number)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_constraints_a14d3a95b65c59f935ac8967265aa71a9}{move\+Inactive\+To\+Active} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} number, \hyperlink{_types_8hpp_a70a6a40d261a015ead8d43aa589383a4}{Subject\+To\+Status} \+\_\+status)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_constraints_a2d92efd44ce48f4b4ac04c21c5fda6e6}{flip\+Fixed} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} number)
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_constraints_a448e9210dcbdc9a191914f4b7dc2759e}{get\+NC} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_constraints_add16d415a735969692ae1cd9606cb371}{get\+N\+EC} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_constraints_a9b3c5b78fb7b89cfdca2934522707984}{get\+N\+IC} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_constraints_a007ece0d52cfc75f429eb7d79f4c8f2a}{get\+N\+UC} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_constraints_a6a006b2ffc150038ef194172f097accf}{get\+N\+AC} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_constraints_a6839696f0f7796713028ece97ae00fd8}{get\+N\+I\+AC} () const
+\item 
+\hyperlink{class_indexlist}{Indexlist} $\ast$ \hyperlink{class_constraints_ad72b2d0ba9bf79297ed39642e2d18c77}{get\+Active} ()
+\item 
+\hyperlink{class_indexlist}{Indexlist} $\ast$ \hyperlink{class_constraints_a38d7f83123a7a277fde92bf493776a72}{get\+Inactive} ()
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_constraints_a7605104071cb0396a8c426bfce82c49f}{shift} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} offset)
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_constraints_a13958ee91f93760c0cb9d5a47de846f2}{rotate} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} offset)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_constraints_abf7172e93fd13af99c76ec8f822b921e}{print} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_constraints_a945b4c8e40f28c3a2a56c8aabe3a6d5d}{clear} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_constraints_aecbc863137db2de818bbd8c365027d2b}{copy} (const \hyperlink{class_constraints}{Constraints} \&rhs)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_constraints_aeeee62fed6ea53444f370f6d4e3596d6}{setup\+All} (\hyperlink{_types_8hpp_a70a6a40d261a015ead8d43aa589383a4}{Subject\+To\+Status} \+\_\+status)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_indexlist}{Indexlist} \hyperlink{class_constraints_a2fdcb864fec70473725bde4667d7923a}{active}
+\item 
+\hyperlink{class_indexlist}{Indexlist} \hyperlink{class_constraints_a4679ab5910823e575bb70ccd1c08fd25}{inactive}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages working sets of constraints. 
+
+This class manages working sets of constraints by storing index sets and other status information.
+
+\begin{DoxyAuthor}{Author}
+Hans Joachim Ferreau 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2007-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_constraints_a9c677de63278cf243c9a9d9afcfd0877}\label{class_constraints_a9c677de63278cf243c9a9d9afcfd0877}} 
+\index{Constraints@{Constraints}!Constraints@{Constraints}}
+\index{Constraints@{Constraints}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{Constraints()}{Constraints()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_afd127fcb3c8f47975e9fa0ec2bacde52}{B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} Constraints\+::\+Constraints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_constraints_ae89609d265bd2b331b23f44ee8de4ce7}\label{class_constraints_ae89609d265bd2b331b23f44ee8de4ce7}} 
+\index{Constraints@{Constraints}!Constraints@{Constraints}}
+\index{Constraints@{Constraints}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{Constraints()}{Constraints()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Constraints\+::\+Constraints (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{\+\_\+n }\end{DoxyParamCaption})}
+
+Constructor which takes the number of constraints. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+n} & Number of constraints. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_constraints_aeb433ff1018134588275911c6acf0f8e}\label{class_constraints_aeb433ff1018134588275911c6acf0f8e}} 
+\index{Constraints@{Constraints}!Constraints@{Constraints}}
+\index{Constraints@{Constraints}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{Constraints()}{Constraints()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Constraints\+::\+Constraints (\begin{DoxyParamCaption}\item[{const \hyperlink{class_constraints}{Constraints} \&}]{rhs }\end{DoxyParamCaption})}
+
+Copy constructor (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_constraints_a61f155a69191e07c32a4a1e9e60067e9}\label{class_constraints_a61f155a69191e07c32a4a1e9e60067e9}} 
+\index{Constraints@{Constraints}!````~Constraints@{$\sim$\+Constraints}}
+\index{````~Constraints@{$\sim$\+Constraints}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{$\sim$\+Constraints()}{~Constraints()}}
+{\footnotesize\ttfamily Constraints\+::$\sim$\+Constraints (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_constraints_a945b4c8e40f28c3a2a56c8aabe3a6d5d}\label{class_constraints_a945b4c8e40f28c3a2a56c8aabe3a6d5d}} 
+\index{Constraints@{Constraints}!clear@{clear}}
+\index{clear@{clear}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Constraints\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Frees all allocated memory. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_constraints_aecbc863137db2de818bbd8c365027d2b}\label{class_constraints_aecbc863137db2de818bbd8c365027d2b}} 
+\index{Constraints@{Constraints}!copy@{copy}}
+\index{copy@{copy}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Constraints\+::copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_constraints}{Constraints} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Copies all members from given rhs object. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_constraints_a2d92efd44ce48f4b4ac04c21c5fda6e6}\label{class_constraints_a2d92efd44ce48f4b4ac04c21c5fda6e6}} 
+\index{Constraints@{Constraints}!flip\+Fixed@{flip\+Fixed}}
+\index{flip\+Fixed@{flip\+Fixed}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{flip\+Fixed()}{flipFixed()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Constraints\+::flip\+Fixed (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{number }\end{DoxyParamCaption})}
+
+Flip fixed constraint. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+N\+T\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+N\+DS 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_constraints_ad72b2d0ba9bf79297ed39642e2d18c77}\label{class_constraints_ad72b2d0ba9bf79297ed39642e2d18c77}} 
+\index{Constraints@{Constraints}!get\+Active@{get\+Active}}
+\index{get\+Active@{get\+Active}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{get\+Active()}{getActive()}}
+{\footnotesize\ttfamily \hyperlink{class_indexlist}{Indexlist} $\ast$ Constraints\+::get\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a pointer to active constraints index list. \begin{DoxyReturn}{Returns}
+Pointer to active constraints index list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_constraints_a38d7f83123a7a277fde92bf493776a72}\label{class_constraints_a38d7f83123a7a277fde92bf493776a72}} 
+\index{Constraints@{Constraints}!get\+Inactive@{get\+Inactive}}
+\index{get\+Inactive@{get\+Inactive}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{get\+Inactive()}{getInactive()}}
+{\footnotesize\ttfamily \hyperlink{class_indexlist}{Indexlist} $\ast$ Constraints\+::get\+Inactive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a pointer to inactive constraints index list. \begin{DoxyReturn}{Returns}
+Pointer to inactive constraints index list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_constraints_a6a006b2ffc150038ef194172f097accf}\label{class_constraints_a6a006b2ffc150038ef194172f097accf}} 
+\index{Constraints@{Constraints}!get\+N\+AC@{get\+N\+AC}}
+\index{get\+N\+AC@{get\+N\+AC}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{get\+N\+A\+C()}{getNAC()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Constraints\+::get\+N\+AC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of active constraints. \begin{DoxyReturn}{Returns}
+Number of active constraints. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_constraints_a448e9210dcbdc9a191914f4b7dc2759e}\label{class_constraints_a448e9210dcbdc9a191914f4b7dc2759e}} 
+\index{Constraints@{Constraints}!get\+NC@{get\+NC}}
+\index{get\+NC@{get\+NC}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{get\+N\+C()}{getNC()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_afd127fcb3c8f47975e9fa0ec2bacde52}{B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Constraints\+::get\+NC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of constraints. \begin{DoxyReturn}{Returns}
+Number of constraints. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_constraints_add16d415a735969692ae1cd9606cb371}\label{class_constraints_add16d415a735969692ae1cd9606cb371}} 
+\index{Constraints@{Constraints}!get\+N\+EC@{get\+N\+EC}}
+\index{get\+N\+EC@{get\+N\+EC}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{get\+N\+E\+C()}{getNEC()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Constraints\+::get\+N\+EC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of implicit equality constraints. \begin{DoxyReturn}{Returns}
+Number of implicit equality constraints. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_constraints_a6839696f0f7796713028ece97ae00fd8}\label{class_constraints_a6839696f0f7796713028ece97ae00fd8}} 
+\index{Constraints@{Constraints}!get\+N\+I\+AC@{get\+N\+I\+AC}}
+\index{get\+N\+I\+AC@{get\+N\+I\+AC}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{get\+N\+I\+A\+C()}{getNIAC()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Constraints\+::get\+N\+I\+AC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of inactive constraints. \begin{DoxyReturn}{Returns}
+Number of inactive constraints. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_constraints_a9b3c5b78fb7b89cfdca2934522707984}\label{class_constraints_a9b3c5b78fb7b89cfdca2934522707984}} 
+\index{Constraints@{Constraints}!get\+N\+IC@{get\+N\+IC}}
+\index{get\+N\+IC@{get\+N\+IC}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{get\+N\+I\+C()}{getNIC()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Constraints\+::get\+N\+IC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of \char`\"{}real\char`\"{} inequality constraints. \begin{DoxyReturn}{Returns}
+Number of \char`\"{}real\char`\"{} inequality constraints. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_constraints_a007ece0d52cfc75f429eb7d79f4c8f2a}\label{class_constraints_a007ece0d52cfc75f429eb7d79f4c8f2a}} 
+\index{Constraints@{Constraints}!get\+N\+UC@{get\+N\+UC}}
+\index{get\+N\+UC@{get\+N\+UC}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{get\+N\+U\+C()}{getNUC()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Constraints\+::get\+N\+UC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of unbounded constraints (i.\+e. without any bounds). \begin{DoxyReturn}{Returns}
+Number of unbounded constraints (i.\+e. without any bounds). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_constraints_abb4139ecad1739efe85bcb03b22f282d}\label{class_constraints_abb4139ecad1739efe85bcb03b22f282d}} 
+\index{Constraints@{Constraints}!init@{init}}
+\index{init@{init}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Constraints\+::init (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{\+\_\+n = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Initialises object with given number of constraints. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+n} & Number of constraints. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_constraints_a8f3aa6b120aa8e3e2f18a905b4ef84d5}\label{class_constraints_a8f3aa6b120aa8e3e2f18a905b4ef84d5}} 
+\index{Constraints@{Constraints}!move\+Active\+To\+Inactive@{move\+Active\+To\+Inactive}}
+\index{move\+Active\+To\+Inactive@{move\+Active\+To\+Inactive}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{move\+Active\+To\+Inactive()}{moveActiveToInactive()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Constraints\+::move\+Active\+To\+Inactive (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{number }\end{DoxyParamCaption})}
+
+Moves index of a constraint from index list of active to that of inactive constraints. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+N\+T\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Number of constraint to become inactive. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_constraints_a14d3a95b65c59f935ac8967265aa71a9}\label{class_constraints_a14d3a95b65c59f935ac8967265aa71a9}} 
+\index{Constraints@{Constraints}!move\+Inactive\+To\+Active@{move\+Inactive\+To\+Active}}
+\index{move\+Inactive\+To\+Active@{move\+Inactive\+To\+Active}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{move\+Inactive\+To\+Active()}{moveInactiveToActive()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Constraints\+::move\+Inactive\+To\+Active (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{number,  }\item[{\hyperlink{_types_8hpp_a70a6a40d261a015ead8d43aa589383a4}{Subject\+To\+Status}}]{\+\_\+status }\end{DoxyParamCaption})}
+
+Moves index of a constraint from index list of inactive to that of active constraints. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+N\+T\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Number of constraint to become active. \\
+\hline
+{\em \+\_\+status} & Status of constraint to become active. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_constraints_add013b3e2480cf830eef39123e7afd6e}\label{class_constraints_add013b3e2480cf830eef39123e7afd6e}} 
+\index{Constraints@{Constraints}!operator=@{operator=}}
+\index{operator=@{operator=}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_constraints}{Constraints} \& Constraints\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_constraints}{Constraints} \&}]{rhs }\end{DoxyParamCaption})}
+
+Assignment operator (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_constraints_abf7172e93fd13af99c76ec8f822b921e}\label{class_constraints_abf7172e93fd13af99c76ec8f822b921e}} 
+\index{Constraints@{Constraints}!print@{print}}
+\index{print@{print}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Constraints\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints information on constraints object (in particular, lists of inactive and active constraints. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+L\+I\+S\+T\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_constraints_a13958ee91f93760c0cb9d5a47de846f2}\label{class_constraints_a13958ee91f93760c0cb9d5a47de846f2}} 
+\index{Constraints@{Constraints}!rotate@{rotate}}
+\index{rotate@{rotate}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Constraints\+::rotate (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Rotates forward type and status of all constraints by a given offset. This offset has to lie within the range \mbox{[}0,n\mbox{]}. Example for offset = 2\+: ~\newline
+rotate( \{c1,c2,c3,c4,c5,c6\} ) = \{c3,c4,c5,c6,c1,c2\} \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+N\+DS ~\newline
+ R\+E\+T\+\_\+\+R\+O\+T\+A\+T\+I\+N\+G\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Rotation offset within the range \mbox{[}0,n\mbox{]}. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_subject_to_a6e3b466f01422cc7361e7a8d1f007aa6}{Subject\+To}.
+
+\mbox{\Hypertarget{class_constraints_aeeee62fed6ea53444f370f6d4e3596d6}\label{class_constraints_aeeee62fed6ea53444f370f6d4e3596d6}} 
+\index{Constraints@{Constraints}!setup\+All@{setup\+All}}
+\index{setup\+All@{setup\+All}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{setup\+All()}{setupAll()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Constraints\+::setup\+All (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_a70a6a40d261a015ead8d43aa589383a4}{Subject\+To\+Status}}]{\+\_\+status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Initially adds all numbers of new (i.\+e. not yet in the list) bounds to to the index set corresponding to the desired status; the order depends on the Suject\+To\+Type of each index. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+N\+T\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+status} & Desired initial status for all bounds. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_constraints_ac49c5bae8433f8c6623e55088f33d226}\label{class_constraints_ac49c5bae8433f8c6623e55088f33d226}} 
+\index{Constraints@{Constraints}!setup\+All\+Inactive@{setup\+All\+Inactive}}
+\index{setup\+All\+Inactive@{setup\+All\+Inactive}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{setup\+All\+Inactive()}{setupAllInactive()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Constraints\+::setup\+All\+Inactive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initially adds all enabled numbers of new (i.\+e. not yet in the list) constraints to to the index set of inactive constraints; the order depends on the Suject\+To\+Type of each index. Only disabled constraints are added to index set of disabled constraints! \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+N\+T\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_constraints_a0bc777ba851991829a569edcc444d004}\label{class_constraints_a0bc777ba851991829a569edcc444d004}} 
+\index{Constraints@{Constraints}!setup\+All\+Lower@{setup\+All\+Lower}}
+\index{setup\+All\+Lower@{setup\+All\+Lower}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{setup\+All\+Lower()}{setupAllLower()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Constraints\+::setup\+All\+Lower (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initially adds all enabled numbers of new (i.\+e. not yet in the list) constraints to to the index set of active constraints (on their lower bounds); the order depends on the Suject\+To\+Type of each index. Only disabled constraints are added to index set of disabled constraints! \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+N\+T\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_constraints_a883220c48c6ae8d5ff0ef056547f288b}\label{class_constraints_a883220c48c6ae8d5ff0ef056547f288b}} 
+\index{Constraints@{Constraints}!setup\+All\+Upper@{setup\+All\+Upper}}
+\index{setup\+All\+Upper@{setup\+All\+Upper}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{setup\+All\+Upper()}{setupAllUpper()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Constraints\+::setup\+All\+Upper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initially adds all enabled numbers of new (i.\+e. not yet in the list) constraints to to the index set of active constraints (on their upper bounds); the order depends on the Suject\+To\+Type of each index. Only disabled constraints are added to index set of disabled constraints! \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+N\+T\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_constraints_ad0d79440b823d59f69459823bee03f7c}\label{class_constraints_ad0d79440b823d59f69459823bee03f7c}} 
+\index{Constraints@{Constraints}!setup\+Constraint@{setup\+Constraint}}
+\index{setup\+Constraint@{setup\+Constraint}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{setup\+Constraint()}{setupConstraint()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Constraints\+::setup\+Constraint (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{number,  }\item[{\hyperlink{_types_8hpp_a70a6a40d261a015ead8d43aa589383a4}{Subject\+To\+Status}}]{\+\_\+status }\end{DoxyParamCaption})}
+
+Initially adds number of a new (i.\+e. not yet in the list) constraint to a given index set. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+N\+T\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+N\+DS ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Number of new constraint. \\
+\hline
+{\em \+\_\+status} & Status of new constraint. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_constraints_a7605104071cb0396a8c426bfce82c49f}\label{class_constraints_a7605104071cb0396a8c426bfce82c49f}} 
+\index{Constraints@{Constraints}!shift@{shift}}
+\index{shift@{shift}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{shift()}{shift()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Constraints\+::shift (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Shifts forward type and status of all constraints by a given offset. This offset has to lie within the range \mbox{[}0,n/2\mbox{]} and has to be an integer divisor of the total number of constraints n. Type and status of the first $<$offset$>$ constraints is thrown away, type and status of the last $<$offset$>$ constraints is doubled, e.\+g. for offset = 2\+: ~\newline
+shift( \{c1,c2,c3,c4,c5,c6\} ) = \{c3,c4,c5,c6,c5,c6\} \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+N\+DS ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS ~\newline
+ R\+E\+T\+\_\+\+S\+H\+I\+F\+T\+I\+N\+G\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Shift offset within the range \mbox{[}0,n/2\mbox{]} and integer divisor of n. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_subject_to_af584328614003c2b9e92b185c6ceedc9}{Subject\+To}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_constraints_a2fdcb864fec70473725bde4667d7923a}\label{class_constraints_a2fdcb864fec70473725bde4667d7923a}} 
+\index{Constraints@{Constraints}!active@{active}}
+\index{active@{active}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{active}{active}}
+{\footnotesize\ttfamily \hyperlink{class_indexlist}{Indexlist} Constraints\+::active\hspace{0.3cm}{\ttfamily [protected]}}
+
+Index list of active constraints. \mbox{\Hypertarget{class_constraints_a4679ab5910823e575bb70ccd1c08fd25}\label{class_constraints_a4679ab5910823e575bb70ccd1c08fd25}} 
+\index{Constraints@{Constraints}!inactive@{inactive}}
+\index{inactive@{inactive}!Constraints@{Constraints}}
+\subsubsection{\texorpdfstring{inactive}{inactive}}
+{\footnotesize\ttfamily \hyperlink{class_indexlist}{Indexlist} Constraints\+::inactive\hspace{0.3cm}{\ttfamily [protected]}}
+
+Index list of inactive constraints. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_constraints_8hpp}{Constraints.\+hpp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_constraints_8ipp}{Constraints.\+ipp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/src/\hyperlink{_constraints_8cpp}{Constraints.\+cpp}\end{DoxyCompactItemize}

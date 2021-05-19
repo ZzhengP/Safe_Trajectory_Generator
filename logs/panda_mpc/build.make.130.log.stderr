@@ -1,0 +1,25 @@
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:242:53:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for '[01m[Ktemplate<class _Tp, class _Dp> class std::unique_ptr[m[K'
+   std::unique_ptr<robotModel::robotModel::robotModel[01;31m[K>[m[K robot_dynamic_; /*! @brief robot kinematic and dynamic  */
+                                                     [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:242:53:[m[K [01;36m[Knote: [m[K  expected a type, got '[01m[K{anonymous}::robotModel::robotModel[m[K'
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:242:53:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:11[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:242:53:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for '[01m[Ktemplate<class _Tp, class _Dp> class std::unique_ptr[m[K'
+   std::unique_ptr<robotModel::robotModel::robotModel[01;31m[K>[m[K robot_dynamic_; /*! @brief robot kinematic and dynamic  */
+                                                     [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:242:53:[m[K [01;36m[Knote: [m[K  expected a type, got '[01m[K{anonymous}::robotModel::robotModel[m[K'
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:242:53:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:242:53:[m[K [01;31m[Kerror: [m[Ktype/value mismatch at argument 1 in template parameter list for '[01m[Ktemplate<class _Tp, class _Dp> class std::unique_ptr[m[K'
+   std::unique_ptr<robotModel::robotModel::robotModel[01;31m[K>[m[K robot_dynamic_; /*! @brief robot kinematic and dynamic  */
+                                                     [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:242:53:[m[K [01;36m[Knote: [m[K  expected a type, got '[01m[K{anonymous}::robotModel::robotModel[m[K'
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:242:53:[m[K [01;31m[Kerror: [m[Ktemplate argument 2 is invalid
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

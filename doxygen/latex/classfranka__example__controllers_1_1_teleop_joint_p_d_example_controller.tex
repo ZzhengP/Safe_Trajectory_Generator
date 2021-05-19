@@ -1,0 +1,81 @@
+\hypertarget{classfranka__example__controllers_1_1_teleop_joint_p_d_example_controller}{}\section{franka\+\_\+example\+\_\+controllers\+:\+:Teleop\+Joint\+P\+D\+Example\+Controller Class Reference}
+\label{classfranka__example__controllers_1_1_teleop_joint_p_d_example_controller}\index{franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller@{franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller}}
+
+
+{\ttfamily \#include $<$teleop\+\_\+joint\+\_\+pd\+\_\+example\+\_\+controller.\+h$>$}
+
+
+
+Inheritance diagram for franka\+\_\+example\+\_\+controllers\+:\+:Teleop\+Joint\+P\+D\+Example\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfranka__example__controllers_1_1_teleop_joint_p_d_example_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for franka\+\_\+example\+\_\+controllers\+:\+:Teleop\+Joint\+P\+D\+Example\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfranka__example__controllers_1_1_teleop_joint_p_d_example_controller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classfranka__example__controllers_1_1_teleop_joint_p_d_example_controller_ae70228e8a3670b6c780ac0f1a986f411}{init} (hardware\+\_\+interface\+::\+Robot\+HW $\ast$robot\+\_\+hw, ros\+::\+Node\+Handle \&node\+\_\+handle) override
+\item 
+void \hyperlink{classfranka__example__controllers_1_1_teleop_joint_p_d_example_controller_a653ab884c684dbe7bcbfec5dda4e51a0}{starting} (const ros\+::\+Time \&) override
+\item 
+void \hyperlink{classfranka__example__controllers_1_1_teleop_joint_p_d_example_controller_ab40026839a17b639a2caddd20fd8d90f}{update} (const ros\+::\+Time \&, const ros\+::\+Duration \&period) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controller class for ros\+\_\+control that allows force-\/feedback teleoperation of a follower arm from a leader arm. Smooth tracking is implemented by integrating a velocity signal, which is calculated by limiting and saturating the velocity of the leader arm and a drift compensation. The torque control of the follower arm is implemented by a simple P\+D-\/controller. The leader arm is slightly damped to reduce vibrations. Force-\/feedback is applied to the leader arm when the external forces on the follower arm exceed a configured threshold. While the leader arm is unguided (not in contact), the applied force-\/feedback will be reduced. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfranka__example__controllers_1_1_teleop_joint_p_d_example_controller_ae70228e8a3670b6c780ac0f1a986f411}\label{classfranka__example__controllers_1_1_teleop_joint_p_d_example_controller_ae70228e8a3670b6c780ac0f1a986f411}} 
+\index{franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller@{franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller}!init@{init}}
+\index{init@{init}!franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller@{franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller\+::init (\begin{DoxyParamCaption}\item[{hardware\+\_\+interface\+::\+Robot\+HW $\ast$}]{robot\+\_\+hw,  }\item[{ros\+::\+Node\+Handle \&}]{node\+\_\+handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Initializes the controller class to be ready to run.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em robot\+\_\+hw} & Pointer to a Robot\+HW class to get interfaces and resource handles. \\
+\hline
+\mbox{\tt in}  & {\em node\+\_\+handle} & Nodehandle that allows getting parameterizations from the server and starting publisher \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfranka__example__controllers_1_1_teleop_joint_p_d_example_controller_a653ab884c684dbe7bcbfec5dda4e51a0}\label{classfranka__example__controllers_1_1_teleop_joint_p_d_example_controller_a653ab884c684dbe7bcbfec5dda4e51a0}} 
+\index{franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller@{franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller}!starting@{starting}}
+\index{starting@{starting}!franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller@{franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller}}
+\subsubsection{\texorpdfstring{starting()}{starting()}}
+{\footnotesize\ttfamily void franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller\+::starting (\begin{DoxyParamCaption}\item[{const ros\+::\+Time \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Prepares the controller for the real-\/time execution. This method is executed once every time the controller is started and runs in real-\/time \mbox{\Hypertarget{classfranka__example__controllers_1_1_teleop_joint_p_d_example_controller_ab40026839a17b639a2caddd20fd8d90f}\label{classfranka__example__controllers_1_1_teleop_joint_p_d_example_controller_ab40026839a17b639a2caddd20fd8d90f}} 
+\index{franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller@{franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller}!update@{update}}
+\index{update@{update}!franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller@{franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void franka\+\_\+example\+\_\+controllers\+::\+Teleop\+Joint\+P\+D\+Example\+Controller\+::update (\begin{DoxyParamCaption}\item[{const ros\+::\+Time \&}]{,  }\item[{const ros\+::\+Duration \&}]{period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Computes the control-\/law and commands the resulting joint torques to the robots.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em period} & The control period (here 0.\+001s) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/franka\+\_\+ros/franka\+\_\+example\+\_\+controllers/include/franka\+\_\+example\+\_\+controllers/teleop\+\_\+joint\+\_\+pd\+\_\+example\+\_\+controller.\+h\item 
+/home/zheng/catkin\+\_\+ws/src/franka\+\_\+ros/franka\+\_\+example\+\_\+controllers/src/teleop\+\_\+joint\+\_\+pd\+\_\+example\+\_\+controller.\+cpp\end{DoxyCompactItemize}

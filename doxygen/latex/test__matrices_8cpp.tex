@@ -1,0 +1,143 @@
+\hypertarget{test__matrices_8cpp}{}\section{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.2.1/testing/cpp/test\+\_\+matrices.cpp File Reference}
+\label{test__matrices_8cpp}\index{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/testing/cpp/test\+\_\+matrices.\+cpp@{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/testing/cpp/test\+\_\+matrices.\+cpp}}
+{\ttfamily \#include $<$qp\+O\+A\+S\+E\+S.\+hpp$>$}\newline
+{\ttfamily \#include $<$qp\+O\+A\+S\+E\+S/\+Unit\+Testing.\+hpp$>$}\newline
+Include dependency graph for test\+\_\+matrices.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{test__matrices_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8hpp_a51ef5fc7000fda5b09a4bc7f26c817d8}{U\+S\+I\+N\+G\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} int \hyperlink{test__matrices_8cpp_a3865604e12573ce8dffca356177da801}{sum\+Of\+Squares} ()
+\item 
+int \hyperlink{test__matrices_8cpp_a05a86fb3cdd7a690ba324e60cc7c02aa}{hilbert} ()
+\item 
+int \hyperlink{test__matrices_8cpp_a525e7e7d532281012a42d798182a227c}{submatrix} ()
+\item 
+int \hyperlink{test__matrices_8cpp_ab593fe944172ee5b8164d4a05ba4feb4}{index\+Dense\+Submatrix} ()
+\item 
+int \hyperlink{test__matrices_8cpp_a020cae8da99d8bb37cb647ef5692c383}{sp\+Get\+Col} ()
+\item 
+int \hyperlink{test__matrices_8cpp_a5260ada1ce34d6ae67c0d1cb42925147}{sp\+Get\+Row} ()
+\item 
+int \hyperlink{test__matrices_8cpp_a86d57f6d1f7eef64f0d2ffc0474b19b5}{sp\+Times} ()
+\item 
+int \hyperlink{test__matrices_8cpp_a31836d816ed37c72cec0bc1a6d53a78b}{sp\+Ind\+Times} ()
+\item 
+int \hyperlink{test__matrices_8cpp_acbdbeb180b832f72f908054063a603de}{spr\+Get\+Col} ()
+\item 
+int \hyperlink{test__matrices_8cpp_a4176de8d7060256b60a6ec2edbc900da}{spr\+Get\+Row} ()
+\item 
+int \hyperlink{test__matrices_8cpp_ad50e19275ee475195c46af5b03802050}{spr\+Times} ()
+\item 
+int \hyperlink{test__matrices_8cpp_a97d37004ee5d3126d2b02f3db7570558}{spr\+Ind\+Times} ()
+\item 
+int \hyperlink{test__matrices_8cpp_a30dcab00ac05eaa28b132170732f8be8}{symmetry} ()
+\item 
+int \hyperlink{test__matrices_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Andreas Potschka, Christian Kirches, Hans Joachim Ferreau 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2010-\/2017
+\end{DoxyDate}
+Unit test for \hyperlink{class_matrix}{Matrix} classes. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{test__matrices_8cpp_a05a86fb3cdd7a690ba324e60cc7c02aa}\label{test__matrices_8cpp_a05a86fb3cdd7a690ba324e60cc7c02aa}} 
+\index{test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}!hilbert@{hilbert}}
+\index{hilbert@{hilbert}!test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}}
+\subsubsection{\texorpdfstring{hilbert()}{hilbert()}}
+{\footnotesize\ttfamily int hilbert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Compare deviations when multiplying Hilbert matrix with its inverse. \mbox{\Hypertarget{test__matrices_8cpp_ab593fe944172ee5b8164d4a05ba4feb4}\label{test__matrices_8cpp_ab593fe944172ee5b8164d4a05ba4feb4}} 
+\index{test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}!index\+Dense\+Submatrix@{index\+Dense\+Submatrix}}
+\index{index\+Dense\+Submatrix@{index\+Dense\+Submatrix}!test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}}
+\subsubsection{\texorpdfstring{index\+Dense\+Submatrix()}{indexDenseSubmatrix()}}
+{\footnotesize\ttfamily int index\+Dense\+Submatrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Compare deviations when multiplying dense sub-\/matrices via index lists. \mbox{\Hypertarget{test__matrices_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{test__matrices_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}!main@{main}}
+\index{main@{main}!test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Run various tests on matrix classes. \mbox{\Hypertarget{test__matrices_8cpp_a020cae8da99d8bb37cb647ef5692c383}\label{test__matrices_8cpp_a020cae8da99d8bb37cb647ef5692c383}} 
+\index{test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}!sp\+Get\+Col@{sp\+Get\+Col}}
+\index{sp\+Get\+Col@{sp\+Get\+Col}!test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}}
+\subsubsection{\texorpdfstring{sp\+Get\+Col()}{spGetCol()}}
+{\footnotesize\ttfamily int sp\+Get\+Col (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Obtain column of sparse matrix. \mbox{\Hypertarget{test__matrices_8cpp_a5260ada1ce34d6ae67c0d1cb42925147}\label{test__matrices_8cpp_a5260ada1ce34d6ae67c0d1cb42925147}} 
+\index{test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}!sp\+Get\+Row@{sp\+Get\+Row}}
+\index{sp\+Get\+Row@{sp\+Get\+Row}!test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}}
+\subsubsection{\texorpdfstring{sp\+Get\+Row()}{spGetRow()}}
+{\footnotesize\ttfamily int sp\+Get\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Obtain row of sparse matrix. \mbox{\Hypertarget{test__matrices_8cpp_a31836d816ed37c72cec0bc1a6d53a78b}\label{test__matrices_8cpp_a31836d816ed37c72cec0bc1a6d53a78b}} 
+\index{test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}!sp\+Ind\+Times@{sp\+Ind\+Times}}
+\index{sp\+Ind\+Times@{sp\+Ind\+Times}!test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}}
+\subsubsection{\texorpdfstring{sp\+Ind\+Times()}{spIndTimes()}}
+{\footnotesize\ttfamily int sp\+Ind\+Times (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Compare deviations when multiplying sparse matrix via index lists. \mbox{\Hypertarget{test__matrices_8cpp_acbdbeb180b832f72f908054063a603de}\label{test__matrices_8cpp_acbdbeb180b832f72f908054063a603de}} 
+\index{test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}!spr\+Get\+Col@{spr\+Get\+Col}}
+\index{spr\+Get\+Col@{spr\+Get\+Col}!test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}}
+\subsubsection{\texorpdfstring{spr\+Get\+Col()}{sprGetCol()}}
+{\footnotesize\ttfamily int spr\+Get\+Col (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Obtain column of sparse row matrix. \mbox{\Hypertarget{test__matrices_8cpp_a4176de8d7060256b60a6ec2edbc900da}\label{test__matrices_8cpp_a4176de8d7060256b60a6ec2edbc900da}} 
+\index{test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}!spr\+Get\+Row@{spr\+Get\+Row}}
+\index{spr\+Get\+Row@{spr\+Get\+Row}!test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}}
+\subsubsection{\texorpdfstring{spr\+Get\+Row()}{sprGetRow()}}
+{\footnotesize\ttfamily int spr\+Get\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Obtain row of sparse row matrix. \mbox{\Hypertarget{test__matrices_8cpp_a97d37004ee5d3126d2b02f3db7570558}\label{test__matrices_8cpp_a97d37004ee5d3126d2b02f3db7570558}} 
+\index{test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}!spr\+Ind\+Times@{spr\+Ind\+Times}}
+\index{spr\+Ind\+Times@{spr\+Ind\+Times}!test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}}
+\subsubsection{\texorpdfstring{spr\+Ind\+Times()}{sprIndTimes()}}
+{\footnotesize\ttfamily int spr\+Ind\+Times (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Compare deviations when multiplying sparse row matrix via index lists. \mbox{\Hypertarget{test__matrices_8cpp_ad50e19275ee475195c46af5b03802050}\label{test__matrices_8cpp_ad50e19275ee475195c46af5b03802050}} 
+\index{test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}!spr\+Times@{spr\+Times}}
+\index{spr\+Times@{spr\+Times}!test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}}
+\subsubsection{\texorpdfstring{spr\+Times()}{sprTimes()}}
+{\footnotesize\ttfamily int spr\+Times (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Compare deviations when multiplying sparse row matrix. \mbox{\Hypertarget{test__matrices_8cpp_a86d57f6d1f7eef64f0d2ffc0474b19b5}\label{test__matrices_8cpp_a86d57f6d1f7eef64f0d2ffc0474b19b5}} 
+\index{test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}!sp\+Times@{sp\+Times}}
+\index{sp\+Times@{sp\+Times}!test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}}
+\subsubsection{\texorpdfstring{sp\+Times()}{spTimes()}}
+{\footnotesize\ttfamily int sp\+Times (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Compare deviations when multiplying sparse matrix. \mbox{\Hypertarget{test__matrices_8cpp_a525e7e7d532281012a42d798182a227c}\label{test__matrices_8cpp_a525e7e7d532281012a42d798182a227c}} 
+\index{test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}!submatrix@{submatrix}}
+\index{submatrix@{submatrix}!test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}}
+\subsubsection{\texorpdfstring{submatrix()}{submatrix()}}
+{\footnotesize\ttfamily int submatrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Compare deviations when multiplying sub-\/matrices. \mbox{\Hypertarget{test__matrices_8cpp_a3865604e12573ce8dffca356177da801}\label{test__matrices_8cpp_a3865604e12573ce8dffca356177da801}} 
+\index{test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}!sum\+Of\+Squares@{sum\+Of\+Squares}}
+\index{sum\+Of\+Squares@{sum\+Of\+Squares}!test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}}
+\subsubsection{\texorpdfstring{sum\+Of\+Squares()}{sumOfSquares()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a51ef5fc7000fda5b09a4bc7f26c817d8}{U\+S\+I\+N\+G\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} int sum\+Of\+Squares (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Compare deviations when computing dot product. \mbox{\Hypertarget{test__matrices_8cpp_a30dcab00ac05eaa28b132170732f8be8}\label{test__matrices_8cpp_a30dcab00ac05eaa28b132170732f8be8}} 
+\index{test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}!symmetry@{symmetry}}
+\index{symmetry@{symmetry}!test\+\_\+matrices.\+cpp@{test\+\_\+matrices.\+cpp}}
+\subsubsection{\texorpdfstring{symmetry()}{symmetry()}}
+{\footnotesize\ttfamily int symmetry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Compare deviations when using bilinear multiplication with dense matrix. 

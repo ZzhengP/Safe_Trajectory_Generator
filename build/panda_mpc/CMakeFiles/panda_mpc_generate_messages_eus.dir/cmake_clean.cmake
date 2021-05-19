@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/panda_mpc_generate_messages_eus"
   "/home/zheng/catkin_ws/devel/.private/panda_mpc/share/roseus/ros/panda_mpc/msg/PandaRunMsg.l"
   "/home/zheng/catkin_ws/devel/.private/panda_mpc/share/roseus/ros/panda_mpc/srv/UI.l"
+  "/home/zheng/catkin_ws/devel/.private/panda_mpc/share/roseus/ros/panda_mpc/srv/UpdateTrajectoryNextPoint.l"
   "/home/zheng/catkin_ws/devel/.private/panda_mpc/share/roseus/ros/panda_mpc/manifest.l"
 )
 

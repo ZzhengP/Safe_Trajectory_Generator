@@ -17,6 +17,7 @@
 #include <Eigen/Dense>
 #include <panda_mpc/UI.h>
 #include <panda_mpc/PandaRunMsg.h>
+#include <panda_mpc/UpdateTrajectoryNextPoint.h>
 
 #include <qpOASES.hpp>
 #include <trac_ik/trac_ik.hpp>
@@ -33,7 +34,6 @@
 #include <geometry_msgs/PoseArray.h>
 #include <geometry_msgs/PoseStamped.h>
 #include <realtime_tools/realtime_publisher.h>
-
 
 #include <kdl_conversions/kdl_msg.h>
 #include <eigen_conversions/eigen_kdl.h>
@@ -152,8 +152,7 @@ private:
    */
    bool updateTrajectory(panda_traj::UpdateTrajectory::Request &req, panda_traj::UpdateTrajectory::Response &resp);
 
-
-
+   bool updateTrajectoryPoint(panda_mpc::UpdateTrajectoryNextPoint::Request &req, panda_mpc::UpdateTrajectoryNextPoint::Response &resp);
 
   // Publishers
   geometry_msgs::Pose X_curr_msg_, X_traj_msg_;
@@ -163,7 +162,11 @@ private:
   realtime_tools::RealtimePublisher<panda_mpc::PandaRunMsg> panda_rundata_publisher;
   realtime_tools::RealtimePublisher<geometry_msgs::PoseStamped> pose_curr_publisher_, pose_des_publisher_;
 
-  ros::ServiceServer updateUI_service, updateTraj_service;
+  // Subscribers
+  ros::Subscriber trajectory_point_subscriber_;
+
+  ros::ServiceServer updateUI_service, updateTraj_service, updateNextTraj_service_;
+
 
   /**
    * @brief Solver for inverse kinematic
@@ -241,6 +244,9 @@ private:
 
   TrajectoryGenerator trajectory; /*!< @brief TrajectoryGenerator object */
   panda_traj::TrajProperties traj_properties_; /*!< @brief Properties of the trajectory */
+
+  KDL::Frame next_pts_;
+
 };
 
 }

@@ -1,0 +1,571 @@
+\hypertarget{class_dense_matrix}{}\section{Dense\+Matrix Class Reference}
+\label{class_dense_matrix}\index{Dense\+Matrix@{Dense\+Matrix}}
+
+
+Interfaces matrix-\/vector operations tailored to general dense matrices.  
+
+
+
+
+{\ttfamily \#include $<$Matrices.\+hpp$>$}
+
+
+
+Inheritance diagram for Dense\+Matrix\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_dense_matrix__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Dense\+Matrix\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=152pt]{class_dense_matrix__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_dense_matrix_a962f1cca43a07753de96c8b9e413db06}{Dense\+Matrix} ()
+\item 
+\hyperlink{class_dense_matrix_ac3f86ff10526b05dc36e508002fede15}{Dense\+Matrix} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} m, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} n, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} lD, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$v)
+\item 
+virtual \hyperlink{class_dense_matrix_a7c920f60470d6a862624c7632fec5e4b}{$\sim$\+Dense\+Matrix} ()
+\item 
+virtual void \hyperlink{class_dense_matrix_acce63266bde8d6fd4a6c31a78c5e49e8}{free} ()
+\item 
+virtual \hyperlink{class_matrix}{Matrix} $\ast$ \hyperlink{class_dense_matrix_ac3f9cdc908b1f74c1dac8c14d0a09e7e}{duplicate} () const
+\item 
+virtual \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_dense_matrix_a16eea4106ac1875461f2e9fb4a8204f5}{diag} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} i) const
+\item 
+virtual \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_dense_matrix_ae627afd0fc9462e62530da8fae2f09aa}{is\+Diag} () const
+\item 
+virtual \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_dense_matrix_a78b402d0548c6e90aec0afeb301381c6}{get\+Norm} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} type=2) const
+\item 
+virtual \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_dense_matrix_a980d8bf632c1080fd6f67f8dfac853cc}{get\+Row\+Norm} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} r\+Num, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} type=2) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_dense_matrix_a1d3faae6ae439acdb478a6ca8a67e776}{get\+Row\+Norm} (\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$norm, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} type=2) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_dense_matrix_adcc317510b74c2e21487816ae67a3bb4}{get\+Row} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} r\+Num, const \hyperlink{class_indexlist}{Indexlist} $\ast$const icols, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} alpha, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$row) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_dense_matrix_aded4712040389051e0e0de562200ef28}{get\+Col} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} c\+Num, const \hyperlink{class_indexlist}{Indexlist} $\ast$const irows, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} alpha, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$col) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_dense_matrix_a678aa0cfc8fe238e4497e47d68d25d88}{get\+Sparse\+Submatrix} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} irows\+Length, const \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$const irows\+Number, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} icols\+Length, const \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$const icols\+Number, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} rowoffset, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} coloffset, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&num\+Nonzeros, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$irn, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$jcn, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$avals, \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} only\+\_\+lower\+\_\+triangular=\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089a85b8a20e72a8bea5dd10a6007fe3071e}{B\+T\+\_\+\+F\+A\+L\+SE}) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_dense_matrix_aaf90deee21a9d6d8bf5b6fd662b5fec6}{times} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} xN, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} alpha, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$x, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} x\+LD, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} beta, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$y, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} y\+LD) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_dense_matrix_a651b613ee42b05c8fbea27a468faa5e0}{trans\+Times} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} xN, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} alpha, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$x, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} x\+LD, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} beta, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$y, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} y\+LD) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_dense_matrix_a9c28fb04f559bd91842081460b8cbbb1}{times} (const \hyperlink{class_indexlist}{Indexlist} $\ast$const irows, const \hyperlink{class_indexlist}{Indexlist} $\ast$const icols, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} xN, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} alpha, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$x, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} x\+LD, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} beta, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$y, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} y\+LD, \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} y\+Compr=\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089a34c57965bfb07125b09326a69019f9c6}{B\+T\+\_\+\+T\+R\+UE}) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_dense_matrix_a2087b67a4239957054ba7a438d0c0d38}{trans\+Times} (const \hyperlink{class_indexlist}{Indexlist} $\ast$const irows, const \hyperlink{class_indexlist}{Indexlist} $\ast$const icols, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} xN, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} alpha, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$x, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} x\+LD, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} beta, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$y, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} y\+LD) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_dense_matrix_ac901971278139a1413ff75d6106aa43b}{add\+To\+Diag} (\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} alpha)
+\item 
+virtual \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ \hyperlink{class_dense_matrix_abde94ef6ed541004e664a655a4bd2e3e}{full} () const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_dense_matrix_a248f137d9f0f1cd385d9c73a847bf88e}{print} (const char $\ast$name=0) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_dense_matrix_a7f2d13f52bfac45dcf25a1db64569317}{write\+To\+File} (F\+I\+LE $\ast$output\+\_\+file, const char $\ast$prefix) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_dense_matrix_a683ce6b9b1c1b77256eddd9b678a4fab}{n\+Rows}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_dense_matrix_a00810a0c8d40c606c6eea0bfaccbb656}{n\+Cols}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_dense_matrix_aef0770dde876311b257607ce5aeba74d}{lea\+Dim}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ \hyperlink{class_dense_matrix_a7de2a860c753fae01ba92b2d204d71bd}{val}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interfaces matrix-\/vector operations tailored to general dense matrices. 
+
+Dense matrix class (row major format).
+
+\begin{DoxyAuthor}{Author}
+Andreas Potschka, Christian Kirches, Hans Joachim Ferreau 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2011-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_dense_matrix_a962f1cca43a07753de96c8b9e413db06}\label{class_dense_matrix_a962f1cca43a07753de96c8b9e413db06}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!Dense\+Matrix@{Dense\+Matrix}}
+\index{Dense\+Matrix@{Dense\+Matrix}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{Dense\+Matrix()}{DenseMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Dense\+Matrix\+::\+Dense\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor. \mbox{\Hypertarget{class_dense_matrix_ac3f86ff10526b05dc36e508002fede15}\label{class_dense_matrix_ac3f86ff10526b05dc36e508002fede15}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!Dense\+Matrix@{Dense\+Matrix}}
+\index{Dense\+Matrix@{Dense\+Matrix}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{Dense\+Matrix()}{DenseMatrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Dense\+Matrix\+::\+Dense\+Matrix (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{m,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{n,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{lD,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor from vector of values. Caution\+: Data pointer must be valid throughout lifetime 
+\begin{DoxyParams}{Parameters}
+{\em m} & Number of rows. \\
+\hline
+{\em n} & Number of columns. \\
+\hline
+{\em lD} & Leading dimension. \\
+\hline
+{\em v} & Values. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_dense_matrix_a7c920f60470d6a862624c7632fec5e4b}\label{class_dense_matrix_a7c920f60470d6a862624c7632fec5e4b}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!````~Dense\+Matrix@{$\sim$\+Dense\+Matrix}}
+\index{````~Dense\+Matrix@{$\sim$\+Dense\+Matrix}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{$\sim$\+Dense\+Matrix()}{~DenseMatrix()}}
+{\footnotesize\ttfamily Dense\+Matrix\+::$\sim$\+Dense\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_dense_matrix_ac901971278139a1413ff75d6106aa43b}\label{class_dense_matrix_ac901971278139a1413ff75d6106aa43b}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!add\+To\+Diag@{add\+To\+Diag}}
+\index{add\+To\+Diag@{add\+To\+Diag}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{add\+To\+Diag()}{addToDiag()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Dense\+Matrix\+::add\+To\+Diag (\begin{DoxyParamCaption}\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Adds given offset to diagonal of matrix. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+N\+O\+\_\+\+D\+I\+A\+G\+O\+N\+A\+L\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em alpha} & Diagonal offset. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a7ee8d1b4ef0d5d5fb34342ea1889382f}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_a16eea4106ac1875461f2e9fb4a8204f5}\label{class_dense_matrix_a16eea4106ac1875461f2e9fb4a8204f5}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!diag@{diag}}
+\index{diag@{diag}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{diag()}{diag()}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Dense\+Matrix\+::diag (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns i-\/th diagonal entry. \begin{DoxyReturn}{Returns}
+i-\/th diagonal entry 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Index. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a8d76d428884fdb7a3deade8cad3c4b0a}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_ac3f9cdc908b1f74c1dac8c14d0a09e7e}\label{class_dense_matrix_ac3f9cdc908b1f74c1dac8c14d0a09e7e}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!duplicate@{duplicate}}
+\index{duplicate@{duplicate}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{duplicate()}{duplicate()}}
+{\footnotesize\ttfamily \hyperlink{class_matrix}{Matrix} $\ast$ Dense\+Matrix\+::duplicate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns a deep-\/copy of the \hyperlink{class_matrix}{Matrix} object. \begin{DoxyReturn}{Returns}
+Deep-\/copy of \hyperlink{class_matrix}{Matrix} object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_matrix_abf41d80f7392e9d63e9b2fa4b822d3b9}{Matrix}.
+
+
+
+Reimplemented in \hyperlink{class_sym_dense_mat_a432a0e30f0440983d32d225759ac9936}{Sym\+Dense\+Mat}.
+
+\mbox{\Hypertarget{class_dense_matrix_acce63266bde8d6fd4a6c31a78c5e49e8}\label{class_dense_matrix_acce63266bde8d6fd4a6c31a78c5e49e8}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!free@{free}}
+\index{free@{free}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily void Dense\+Matrix\+::free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Frees all internal memory. 
+
+Implements \hyperlink{class_matrix_ae13ca77389c2eae7b3eba79cb9fefecb}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_abde94ef6ed541004e664a655a4bd2e3e}\label{class_dense_matrix_abde94ef6ed541004e664a655a4bd2e3e}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!full@{full}}
+\index{full@{full}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{full()}{full()}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ Dense\+Matrix\+::full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Allocates and creates dense matrix array in row major format.
+
+Note\+: Calling function has to free allocated memory!
+
+\begin{DoxyReturn}{Returns}
+Pointer to matrix array. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_matrix_ac53a5bbb05c6a928af17e0d88220ff63}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_aded4712040389051e0e0de562200ef28}\label{class_dense_matrix_aded4712040389051e0e0de562200ef28}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!get\+Col@{get\+Col}}
+\index{get\+Col@{get\+Col}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Col()}{getCol()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Dense\+Matrix\+::get\+Col (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{c\+Num,  }\item[{const \hyperlink{class_indexlist}{Indexlist} $\ast$const}]{irows,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{alpha,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve indexed entries of matrix column multiplied by alpha. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em c\+Num} & Column number. \\
+\hline
+{\em irows} & Index list specifying rows. \\
+\hline
+{\em alpha} & Scalar factor. \\
+\hline
+{\em col} & Output column vector. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a719d13204e07de9c017cc68909b6db42}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_a78b402d0548c6e90aec0afeb301381c6}\label{class_dense_matrix_a78b402d0548c6e90aec0afeb301381c6}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!get\+Norm@{get\+Norm}}
+\index{get\+Norm@{get\+Norm}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Norm()}{getNorm()}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Dense\+Matrix\+::get\+Norm (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{type = {\ttfamily 2} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the N-\/norm of the matrix \begin{DoxyReturn}{Returns}
+N-\/norm of the matrix 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Norm type, 1\+: one-\/norm, 2\+: Euclidean norm. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a8d906c25118e71467aba6434612504b2}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_adcc317510b74c2e21487816ae67a3bb4}\label{class_dense_matrix_adcc317510b74c2e21487816ae67a3bb4}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!get\+Row@{get\+Row}}
+\index{get\+Row@{get\+Row}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Row()}{getRow()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Dense\+Matrix\+::get\+Row (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{r\+Num,  }\item[{const \hyperlink{class_indexlist}{Indexlist} $\ast$const}]{icols,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{alpha,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{row }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve indexed entries of matrix row multiplied by alpha. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Num} & Row number. \\
+\hline
+{\em icols} & Index list specifying columns. \\
+\hline
+{\em alpha} & Scalar factor. \\
+\hline
+{\em row} & Output row vector. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a7d7820b8b02f4abcf82330596b317ad6}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_a980d8bf632c1080fd6f67f8dfac853cc}\label{class_dense_matrix_a980d8bf632c1080fd6f67f8dfac853cc}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!get\+Row\+Norm@{get\+Row\+Norm}}
+\index{get\+Row\+Norm@{get\+Row\+Norm}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Row\+Norm()}{getRowNorm()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Dense\+Matrix\+::get\+Row\+Norm (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{r\+Num,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{type = {\ttfamily 2} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the N-\/norm of a row \begin{DoxyReturn}{Returns}
+N-\/norm of row {\itshape r\+Num} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Num} & Row number. \\
+\hline
+{\em type} & Norm type, 1\+: one-\/norm, 2\+: Euclidean norm. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_ac4c0a395cd507ba0801b731765c586f7}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_a1d3faae6ae439acdb478a6ca8a67e776}\label{class_dense_matrix_a1d3faae6ae439acdb478a6ca8a67e776}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!get\+Row\+Norm@{get\+Row\+Norm}}
+\index{get\+Row\+Norm@{get\+Row\+Norm}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Row\+Norm()}{getRowNorm()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Dense\+Matrix\+::get\+Row\+Norm (\begin{DoxyParamCaption}\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{norm,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{type = {\ttfamily 2} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the N-\/norm of all rows \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em norm} & Norm of each row. \\
+\hline
+{\em type} & Norm type, 1\+: one-\/norm, 2\+: Euclidean norm. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a7809892ec8eefd5963915b56564917ed}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_a678aa0cfc8fe238e4497e47d68d25d88}\label{class_dense_matrix_a678aa0cfc8fe238e4497e47d68d25d88}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!get\+Sparse\+Submatrix@{get\+Sparse\+Submatrix}}
+\index{get\+Sparse\+Submatrix@{get\+Sparse\+Submatrix}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{get\+Sparse\+Submatrix()}{getSparseSubmatrix()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Dense\+Matrix\+::get\+Sparse\+Submatrix (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{irows\+Length,  }\item[{const \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$const}]{irows\+Number,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{icols\+Length,  }\item[{const \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$const}]{icols\+Number,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{rowoffset,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{coloffset,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&}]{num\+Nonzeros,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$}]{irn,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$}]{jcn,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{avals,  }\item[{\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type}}]{only\+\_\+lower\+\_\+triangular = {\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089a85b8a20e72a8bea5dd10a6007fe3071e}{B\+T\+\_\+\+F\+A\+L\+SE}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve entries of submatrix in Harwell-\/\+Boeing sparse format. If irn, jcn, and avals are null, this only counts the number of nonzeros. Otherwise, num\+Nonzeros containts the size of irn, jcn, and avals on entry, and the written number of entries on return. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em irows\+Length} & Number of rows. \\
+\hline
+{\em irows\+Number} & Array with row numbers. \\
+\hline
+{\em icols\+Length} & Number of columns. \\
+\hline
+{\em icols\+Number} & Array with column numbers. \\
+\hline
+{\em rowoffset} & Offset for row entries. \\
+\hline
+{\em coloffset} & Offset for row entries. \\
+\hline
+{\em num\+Nonzeros} & Number of nonzeros in submatrix. \\
+\hline
+{\em irn} & Row position of entries (as position in irows) plus rowoffset. \\
+\hline
+{\em jcn} & Column position of entries (as position in irows) plus coloffset. \\
+\hline
+{\em avals} & Numerical values of the entries. \\
+\hline
+{\em only\+\_\+lower\+\_\+triangular} & if true, only the lower triangular portion is returned. This can only be true for symmetric matrices and if irows==jcols. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_aa60ff74cb4f8eaf468d93040dcd15543}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_ae627afd0fc9462e62530da8fae2f09aa}\label{class_dense_matrix_ae627afd0fc9462e62530da8fae2f09aa}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!is\+Diag@{is\+Diag}}
+\index{is\+Diag@{is\+Diag}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{is\+Diag()}{isDiag()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Dense\+Matrix\+::is\+Diag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Checks whether matrix is square and diagonal. \begin{DoxyReturn}{Returns}
+B\+T\+\_\+\+T\+R\+UE iff matrix is square and diagonal; ~\newline
+ B\+T\+\_\+\+F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_matrix_a1f5595f0147658d9f79f92dd283dcbac}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_a248f137d9f0f1cd385d9c73a847bf88e}\label{class_dense_matrix_a248f137d9f0f1cd385d9c73a847bf88e}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!print@{print}}
+\index{print@{print}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Dense\+Matrix\+::print (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prints matrix to screen. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of matrix. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_acc4e1dc7fa487a0c2638d88236fe35f8}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_aaf90deee21a9d6d8bf5b6fd662b5fec6}\label{class_dense_matrix_aaf90deee21a9d6d8bf5b6fd662b5fec6}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!times@{times}}
+\index{times@{times}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{times()}{times()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Dense\+Matrix\+::times (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{xN,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{alpha,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{x,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{x\+LD,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{beta,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{y,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{y\+LD }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Evaluate Y=alpha$\ast$\+A$\ast$X + beta$\ast$Y. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em xN} & Number of vectors to multiply. \\
+\hline
+{\em alpha} & Scalar factor for matrix vector product. \\
+\hline
+{\em x} & Input vector to be multiplied. \\
+\hline
+{\em x\+LD} & Leading dimension of input x. \\
+\hline
+{\em beta} & Scalar factor for y. \\
+\hline
+{\em y} & Output vector of results. \\
+\hline
+{\em y\+LD} & Leading dimension of output y. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a329b638ce6ce41715b156766646b3fcc}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_a9c28fb04f559bd91842081460b8cbbb1}\label{class_dense_matrix_a9c28fb04f559bd91842081460b8cbbb1}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!times@{times}}
+\index{times@{times}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{times()}{times()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Dense\+Matrix\+::times (\begin{DoxyParamCaption}\item[{const \hyperlink{class_indexlist}{Indexlist} $\ast$const}]{irows,  }\item[{const \hyperlink{class_indexlist}{Indexlist} $\ast$const}]{icols,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{xN,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{alpha,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{x,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{x\+LD,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{beta,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{y,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{y\+LD,  }\item[{\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type}}]{y\+Compr = {\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089a34c57965bfb07125b09326a69019f9c6}{B\+T\+\_\+\+T\+R\+UE}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Evaluate matrix vector product with submatrix given by \hyperlink{class_indexlist}{Indexlist}. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em irows} & Index list specifying rows. \\
+\hline
+{\em icols} & Index list specifying columns. \\
+\hline
+{\em xN} & Number of vectors to multiply. \\
+\hline
+{\em alpha} & Scalar factor for matrix vector product. \\
+\hline
+{\em x} & Input vector to be multiplied. \\
+\hline
+{\em x\+LD} & Leading dimension of input x. \\
+\hline
+{\em beta} & Scalar factor for y. \\
+\hline
+{\em y} & Output vector of results. \\
+\hline
+{\em y\+LD} & Leading dimension of output y. \\
+\hline
+{\em y\+Compr} & Compressed storage for y. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a4b938641322f10aa9b81ea0280a9c3f6}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_a651b613ee42b05c8fbea27a468faa5e0}\label{class_dense_matrix_a651b613ee42b05c8fbea27a468faa5e0}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!trans\+Times@{trans\+Times}}
+\index{trans\+Times@{trans\+Times}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{trans\+Times()}{transTimes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Dense\+Matrix\+::trans\+Times (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{xN,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{alpha,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{x,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{x\+LD,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{beta,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{y,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{y\+LD }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Evaluate Y=alpha$\ast$A\textquotesingle{}$\ast$X + beta$\ast$Y. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em xN} & Number of vectors to multiply. \\
+\hline
+{\em alpha} & Scalar factor for matrix vector product. \\
+\hline
+{\em x} & Input vector to be multiplied. \\
+\hline
+{\em x\+LD} & Leading dimension of input x. \\
+\hline
+{\em beta} & Scalar factor for y. \\
+\hline
+{\em y} & Output vector of results. \\
+\hline
+{\em y\+LD} & Leading dimension of output y. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a9a9f697c01a067f8644e49615959a024}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_a2087b67a4239957054ba7a438d0c0d38}\label{class_dense_matrix_a2087b67a4239957054ba7a438d0c0d38}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!trans\+Times@{trans\+Times}}
+\index{trans\+Times@{trans\+Times}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{trans\+Times()}{transTimes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Dense\+Matrix\+::trans\+Times (\begin{DoxyParamCaption}\item[{const \hyperlink{class_indexlist}{Indexlist} $\ast$const}]{irows,  }\item[{const \hyperlink{class_indexlist}{Indexlist} $\ast$const}]{icols,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{xN,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{alpha,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{x,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{x\+LD,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{beta,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{y,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{y\+LD }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Evaluate matrix transpose vector product. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em irows} & Index list specifying rows. \\
+\hline
+{\em icols} & Index list specifying columns. \\
+\hline
+{\em xN} & Number of vectors to multiply. \\
+\hline
+{\em alpha} & Scalar factor for matrix vector product. \\
+\hline
+{\em x} & Input vector to be multiplied. \\
+\hline
+{\em x\+LD} & Leading dimension of input x. \\
+\hline
+{\em beta} & Scalar factor for y. \\
+\hline
+{\em y} & Output vector of results. \\
+\hline
+{\em y\+LD} & Leading dimension of output y. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a508d2700dbad49893ed6c7384088aca7}{Matrix}.
+
+\mbox{\Hypertarget{class_dense_matrix_a7f2d13f52bfac45dcf25a1db64569317}\label{class_dense_matrix_a7f2d13f52bfac45dcf25a1db64569317}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!write\+To\+File@{write\+To\+File}}
+\index{write\+To\+File@{write\+To\+File}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{write\+To\+File()}{writeToFile()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Dense\+Matrix\+::write\+To\+File (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{output\+\_\+file,  }\item[{const char $\ast$}]{prefix }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Write matrix to file. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_matrix_a1504bb1a207b6e5d3320289e4af84400}{Matrix}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_dense_matrix_aef0770dde876311b257607ce5aeba74d}\label{class_dense_matrix_aef0770dde876311b257607ce5aeba74d}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!lea\+Dim@{lea\+Dim}}
+\index{lea\+Dim@{lea\+Dim}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{lea\+Dim}{leaDim}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Dense\+Matrix\+::lea\+Dim\hspace{0.3cm}{\ttfamily [protected]}}
+
+Leading dimension. \mbox{\Hypertarget{class_dense_matrix_a00810a0c8d40c606c6eea0bfaccbb656}\label{class_dense_matrix_a00810a0c8d40c606c6eea0bfaccbb656}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!n\+Cols@{n\+Cols}}
+\index{n\+Cols@{n\+Cols}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{n\+Cols}{nCols}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Dense\+Matrix\+::n\+Cols\hspace{0.3cm}{\ttfamily [protected]}}
+
+Number of columns. \mbox{\Hypertarget{class_dense_matrix_a683ce6b9b1c1b77256eddd9b678a4fab}\label{class_dense_matrix_a683ce6b9b1c1b77256eddd9b678a4fab}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!n\+Rows@{n\+Rows}}
+\index{n\+Rows@{n\+Rows}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{n\+Rows}{nRows}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Dense\+Matrix\+::n\+Rows\hspace{0.3cm}{\ttfamily [protected]}}
+
+Number of rows. \mbox{\Hypertarget{class_dense_matrix_a7de2a860c753fae01ba92b2d204d71bd}\label{class_dense_matrix_a7de2a860c753fae01ba92b2d204d71bd}} 
+\index{Dense\+Matrix@{Dense\+Matrix}!val@{val}}
+\index{val@{val}!Dense\+Matrix@{Dense\+Matrix}}
+\subsubsection{\texorpdfstring{val}{val}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}$\ast$ Dense\+Matrix\+::val\hspace{0.3cm}{\ttfamily [protected]}}
+
+Vector of entries. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_matrices_8hpp}{Matrices.\+hpp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/src/\hyperlink{_matrices_8cpp}{Matrices.\+cpp}\end{DoxyCompactItemize}

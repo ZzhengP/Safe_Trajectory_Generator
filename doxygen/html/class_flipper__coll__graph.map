@@ -1,0 +1,6 @@
+<map id="Flipper" name="Flipper">
+<area shape="rect" id="node2" href="$class_bounds.html" title="Manages working sets of bounds (i.e. box constraints). " alt="" coords="15,109,82,136"/>
+<area shape="rect" id="node3" href="$class_subject_to.html" title="Base class for managing working sets of bounds and constraints. " alt="" coords="5,5,87,32"/>
+<area shape="rect" id="node5" href="$class_constraints.html" title="Manages working sets of constraints. " alt="" coords="107,109,196,136"/>
+<area shape="rect" id="node4" href="$class_indexlist.html" title="Stores and manages index lists. " alt="" coords="123,5,193,32"/>
+</map>

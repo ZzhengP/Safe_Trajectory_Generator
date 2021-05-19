@@ -133,7 +133,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_mpc/srv" TYPE FILE FILES "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_mpc/srv" TYPE FILE FILES
+    "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv"
+    "/home/zheng/catkin_ws/src/panda_mpc/srv/UpdateTrajectoryNextPoint.srv"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

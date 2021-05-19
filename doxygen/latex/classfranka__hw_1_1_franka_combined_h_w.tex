@@ -1,0 +1,101 @@
+\hypertarget{classfranka__hw_1_1_franka_combined_h_w}{}\section{franka\+\_\+hw\+:\+:Franka\+Combined\+HW Class Reference}
+\label{classfranka__hw_1_1_franka_combined_h_w}\index{franka\+\_\+hw\+::\+Franka\+Combined\+HW@{franka\+\_\+hw\+::\+Franka\+Combined\+HW}}
+
+
+Inheritance diagram for franka\+\_\+hw\+:\+:Franka\+Combined\+HW\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classfranka__hw_1_1_franka_combined_h_w__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for franka\+\_\+hw\+:\+:Franka\+Combined\+HW\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classfranka__hw_1_1_franka_combined_h_w__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfranka__hw_1_1_franka_combined_h_w_aee7f9b585d489d9ecebb55df696c1093}{Franka\+Combined\+HW} ()
+\item 
+bool \hyperlink{classfranka__hw_1_1_franka_combined_h_w_ae790d07b59ec430f743994b8d4119178}{init} (ros\+::\+Node\+Handle \&root\+\_\+nh, ros\+::\+Node\+Handle \&robot\+\_\+hw\+\_\+nh) override
+\item 
+void \hyperlink{classfranka__hw_1_1_franka_combined_h_w_a417e3cc255bcf435b68dfce173f8ba3e}{read} (const ros\+::\+Time \&time, const ros\+::\+Duration \&period) override
+\item 
+bool \hyperlink{classfranka__hw_1_1_franka_combined_h_w_aca9156d9a9d557288db9d1d496ff8306}{controller\+Needs\+Reset} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_combined_h_w_a179555fe1be70646ff561faca11f5c3e}\label{classfranka__hw_1_1_franka_combined_h_w_a179555fe1be70646ff561faca11f5c3e}} 
+std\+::unique\+\_\+ptr$<$ actionlib\+::\+Simple\+Action\+Server$<$ franka\+\_\+msgs\+::\+Error\+Recovery\+Action $>$ $>$ {\bfseries combined\+\_\+recovery\+\_\+action\+\_\+server\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_combined_h_w_aee7f9b585d489d9ecebb55df696c1093}\label{classfranka__hw_1_1_franka_combined_h_w_aee7f9b585d489d9ecebb55df696c1093}} 
+\index{franka\+\_\+hw\+::\+Franka\+Combined\+HW@{franka\+\_\+hw\+::\+Franka\+Combined\+HW}!Franka\+Combined\+HW@{Franka\+Combined\+HW}}
+\index{Franka\+Combined\+HW@{Franka\+Combined\+HW}!franka\+\_\+hw\+::\+Franka\+Combined\+HW@{franka\+\_\+hw\+::\+Franka\+Combined\+HW}}
+\subsubsection{\texorpdfstring{Franka\+Combined\+H\+W()}{FrankaCombinedHW()}}
+{\footnotesize\ttfamily franka\+\_\+hw\+::\+Franka\+Combined\+H\+W\+::\+Franka\+Combined\+HW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Creates an instance of Combined\+Franka\+HW. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_combined_h_w_aca9156d9a9d557288db9d1d496ff8306}\label{classfranka__hw_1_1_franka_combined_h_w_aca9156d9a9d557288db9d1d496ff8306}} 
+\index{franka\+\_\+hw\+::\+Franka\+Combined\+HW@{franka\+\_\+hw\+::\+Franka\+Combined\+HW}!controller\+Needs\+Reset@{controller\+Needs\+Reset}}
+\index{controller\+Needs\+Reset@{controller\+Needs\+Reset}!franka\+\_\+hw\+::\+Franka\+Combined\+HW@{franka\+\_\+hw\+::\+Franka\+Combined\+HW}}
+\subsubsection{\texorpdfstring{controller\+Needs\+Reset()}{controllerNeedsReset()}}
+{\footnotesize\ttfamily bool franka\+\_\+hw\+::\+Franka\+Combined\+H\+W\+::controller\+Needs\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Checks whether the controller needs to be reset.
+
+\begin{DoxyReturn}{Returns}
+True if the controllers needs to be reset, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_combined_h_w_ae790d07b59ec430f743994b8d4119178}\label{classfranka__hw_1_1_franka_combined_h_w_ae790d07b59ec430f743994b8d4119178}} 
+\index{franka\+\_\+hw\+::\+Franka\+Combined\+HW@{franka\+\_\+hw\+::\+Franka\+Combined\+HW}!init@{init}}
+\index{init@{init}!franka\+\_\+hw\+::\+Franka\+Combined\+HW@{franka\+\_\+hw\+::\+Franka\+Combined\+HW}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool franka\+\_\+hw\+::\+Franka\+Combined\+H\+W\+::init (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{root\+\_\+nh,  }\item[{ros\+::\+Node\+Handle \&}]{robot\+\_\+hw\+\_\+nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+The init function is called to initialize the Combined\+Franka\+HW from a non-\/realtime thread.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em root\+\_\+nh} & A Node\+Handle in the root of the caller namespace. \\
+\hline
+\mbox{\tt in}  & {\em robot\+\_\+hw\+\_\+nh} & A Node\+Handle in the namespace from which the Robot\+HW. should read its configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if initialization was successful. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_combined_h_w_a417e3cc255bcf435b68dfce173f8ba3e}\label{classfranka__hw_1_1_franka_combined_h_w_a417e3cc255bcf435b68dfce173f8ba3e}} 
+\index{franka\+\_\+hw\+::\+Franka\+Combined\+HW@{franka\+\_\+hw\+::\+Franka\+Combined\+HW}!read@{read}}
+\index{read@{read}!franka\+\_\+hw\+::\+Franka\+Combined\+HW@{franka\+\_\+hw\+::\+Franka\+Combined\+HW}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+Combined\+H\+W\+::read (\begin{DoxyParamCaption}\item[{const ros\+::\+Time \&}]{time,  }\item[{const ros\+::\+Duration \&}]{period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Reads data from the robot HW
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em time} & The current time. \\
+\hline
+\mbox{\tt in}  & {\em period} & The time passed since the last call to \hyperlink{classfranka__hw_1_1_franka_combined_h_w_a417e3cc255bcf435b68dfce173f8ba3e}{read}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/franka\+\_\+ros/franka\+\_\+hw/include/franka\+\_\+hw/franka\+\_\+combined\+\_\+hw.\+h\item 
+/home/zheng/catkin\+\_\+ws/src/franka\+\_\+ros/franka\+\_\+hw/src/franka\+\_\+combined\+\_\+hw.\+cpp\end{DoxyCompactItemize}

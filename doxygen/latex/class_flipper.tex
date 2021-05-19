@@ -1,0 +1,288 @@
+\hypertarget{class_flipper}{}\section{Flipper Class Reference}
+\label{class_flipper}\index{Flipper@{Flipper}}
+
+
+Auxiliary class for storing a copy of the current matrix factorisations.  
+
+
+
+
+{\ttfamily \#include $<$Flipper.\+hpp$>$}
+
+
+
+Collaboration diagram for Flipper\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{class_flipper__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_flipper_a375f713a471ba59c77da0d5bce22ccbf}{Flipper} ()
+\item 
+\hyperlink{class_flipper_ab92d2eee560f2f55631a6af9e0175bbf}{Flipper} (uint\+\_\+t \+\_\+nV, uint\+\_\+t \+\_\+nC=0)
+\item 
+\hyperlink{class_flipper_a710eaed6aa38f0206f0a57331ce0f28d}{Flipper} (const \hyperlink{class_flipper}{Flipper} \&rhs)
+\item 
+\hyperlink{class_flipper_ae498ab519584627d366565705b5655e3}{$\sim$\+Flipper} ()
+\item 
+\hyperlink{class_flipper}{Flipper} \& \hyperlink{class_flipper_ad1f1f6c3ae1e54a43eb70c9c2d7bb023}{operator=} (const \hyperlink{class_flipper}{Flipper} \&rhs)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_flipper_abca0d4bbaa4e51f4e005f891c1718c0f}{init} (uint\+\_\+t \+\_\+nV=0, uint\+\_\+t \+\_\+nC=0)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_flipper_aba5d377c7d818ede730d7990da62046e}{get} (\hyperlink{class_bounds}{Bounds} $\ast$const \+\_\+bounds, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \hyperlink{class_flipper_a8d49f4f458ba1b15de596695cd50d5aa}{R}, \hyperlink{class_constraints}{Constraints} $\ast$const \+\_\+constraints=0, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+Q=0, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+T=0) const
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_flipper_a51f18dc856dfbf43447faf263182e8c2}{set} (const \hyperlink{class_bounds}{Bounds} $\ast$const \+\_\+bounds, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+R, const \hyperlink{class_constraints}{Constraints} $\ast$const \+\_\+constraints=0, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+Q=0, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+T=0)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_flipper_a09841cd2ed9e5a18d23b5fd5bf95c211}{clear} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_flipper_a42dc33c257f037e89b65a923d6d5b093}{copy} (const \hyperlink{class_flipper}{Flipper} \&rhs)
+\item 
+uint\+\_\+t \hyperlink{class_flipper_ac936afded1963bb26dfef0c16e5c23b1}{get\+DimT} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint\+\_\+t \hyperlink{class_flipper_ab552c3e3a524753f39d3010e8c58a505}{nV}
+\item 
+uint\+\_\+t \hyperlink{class_flipper_a884a852b9295749ca360c6159033f307}{nC}
+\item 
+\hyperlink{class_bounds}{Bounds} \hyperlink{class_flipper_af6c5ae2f504cc9478ee07d824ba97801}{bounds}
+\item 
+\hyperlink{class_constraints}{Constraints} \hyperlink{class_flipper_a13587b75185673eeff26b9b1f5f9d94b}{constraints}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ \hyperlink{class_flipper_a8d49f4f458ba1b15de596695cd50d5aa}{R}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ \hyperlink{class_flipper_afae7213a4c38a150512faac9ac572ceb}{Q}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ \hyperlink{class_flipper_a5d401205baa5348982119da87a0ef4da}{T}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_flipper_a3b75e152d72d75f5b515d40a28af177c}\label{class_flipper_a3b75e152d72d75f5b515d40a28af177c}} 
+class {\bfseries Q\+ProblemB}
+\item 
+\mbox{\Hypertarget{class_flipper_a22dd8c6dfcdbb2f56b8b4bd9185322c0}\label{class_flipper_a22dd8c6dfcdbb2f56b8b4bd9185322c0}} 
+class {\bfseries Q\+Problem}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Auxiliary class for storing a copy of the current matrix factorisations. 
+
+This auxiliary class stores a copy of the current matrix factorisations. It is used by the classe \hyperlink{class_q_problem_b}{Q\+ProblemB} and \hyperlink{class_q_problem}{Q\+Problem} in case flipping bounds are enabled.
+
+\begin{DoxyAuthor}{Author}
+Hans Joachim Ferreau, Andreas Potschka, Christian Kirches 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2007-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_flipper_a375f713a471ba59c77da0d5bce22ccbf}\label{class_flipper_a375f713a471ba59c77da0d5bce22ccbf}} 
+\index{Flipper@{Flipper}!Flipper@{Flipper}}
+\index{Flipper@{Flipper}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{Flipper()}{Flipper()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_afd127fcb3c8f47975e9fa0ec2bacde52}{B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} Flipper\+::\+Flipper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_flipper_ab92d2eee560f2f55631a6af9e0175bbf}\label{class_flipper_ab92d2eee560f2f55631a6af9e0175bbf}} 
+\index{Flipper@{Flipper}!Flipper@{Flipper}}
+\index{Flipper@{Flipper}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{Flipper()}{Flipper()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Flipper\+::\+Flipper (\begin{DoxyParamCaption}\item[{uint\+\_\+t}]{\+\_\+nV,  }\item[{uint\+\_\+t}]{\+\_\+nC = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Constructor which takes the number of bounds and constraints. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+nV} & Number of bounds. \\
+\hline
+{\em \+\_\+nC} & Number of constraints. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_flipper_a710eaed6aa38f0206f0a57331ce0f28d}\label{class_flipper_a710eaed6aa38f0206f0a57331ce0f28d}} 
+\index{Flipper@{Flipper}!Flipper@{Flipper}}
+\index{Flipper@{Flipper}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{Flipper()}{Flipper()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Flipper\+::\+Flipper (\begin{DoxyParamCaption}\item[{const \hyperlink{class_flipper}{Flipper} \&}]{rhs }\end{DoxyParamCaption})}
+
+Copy constructor (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_flipper_ae498ab519584627d366565705b5655e3}\label{class_flipper_ae498ab519584627d366565705b5655e3}} 
+\index{Flipper@{Flipper}!````~Flipper@{$\sim$\+Flipper}}
+\index{````~Flipper@{$\sim$\+Flipper}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{$\sim$\+Flipper()}{~Flipper()}}
+{\footnotesize\ttfamily Flipper\+::$\sim$\+Flipper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_flipper_a09841cd2ed9e5a18d23b5fd5bf95c211}\label{class_flipper_a09841cd2ed9e5a18d23b5fd5bf95c211}} 
+\index{Flipper@{Flipper}!clear@{clear}}
+\index{clear@{clear}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Flipper\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Frees all allocated memory. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_flipper_a42dc33c257f037e89b65a923d6d5b093}\label{class_flipper_a42dc33c257f037e89b65a923d6d5b093}} 
+\index{Flipper@{Flipper}!copy@{copy}}
+\index{copy@{copy}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Flipper\+::copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_flipper}{Flipper} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Copies all members from given rhs object. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_flipper_aba5d377c7d818ede730d7990da62046e}\label{class_flipper_aba5d377c7d818ede730d7990da62046e}} 
+\index{Flipper@{Flipper}!get@{get}}
+\index{get@{get}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Flipper\+::get (\begin{DoxyParamCaption}\item[{\hyperlink{class_bounds}{Bounds} $\ast$const}]{\+\_\+bounds,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{R,  }\item[{\hyperlink{class_constraints}{Constraints} $\ast$const}]{\+\_\+constraints = {\ttfamily 0},  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+Q = {\ttfamily 0},  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+T = {\ttfamily 0} }\end{DoxyParamCaption}) const}
+
+Copies current values to non-\/null arguments (assumed to be allocated with consistent size). \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+bounds} & Pointer to new bounds. \\
+\hline
+{\em R} & New matrix R. \\
+\hline
+{\em \+\_\+constraints} & Pointer to new constraints. \\
+\hline
+{\em \+\_\+Q} & New matrix Q. \\
+\hline
+{\em \+\_\+T} & New matrix T. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_flipper_ac936afded1963bb26dfef0c16e5c23b1}\label{class_flipper_ac936afded1963bb26dfef0c16e5c23b1}} 
+\index{Flipper@{Flipper}!get\+DimT@{get\+DimT}}
+\index{get\+DimT@{get\+DimT}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{get\+Dim\+T()}{getDimT()}}
+{\footnotesize\ttfamily uint\+\_\+t Flipper\+::get\+DimT (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Returns dimension of matrix T. \begin{DoxyReturn}{Returns}
+Dimension of matrix T. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_flipper_abca0d4bbaa4e51f4e005f891c1718c0f}\label{class_flipper_abca0d4bbaa4e51f4e005f891c1718c0f}} 
+\index{Flipper@{Flipper}!init@{init}}
+\index{init@{init}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Flipper\+::init (\begin{DoxyParamCaption}\item[{uint\+\_\+t}]{\+\_\+nV = {\ttfamily 0},  }\item[{uint\+\_\+t}]{\+\_\+nC = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Initialises object with given number of bounds and constraints. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+nV} & Number of bounds. \\
+\hline
+{\em \+\_\+nC} & Number of constraints. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_flipper_ad1f1f6c3ae1e54a43eb70c9c2d7bb023}\label{class_flipper_ad1f1f6c3ae1e54a43eb70c9c2d7bb023}} 
+\index{Flipper@{Flipper}!operator=@{operator=}}
+\index{operator=@{operator=}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_flipper}{Flipper} \& Flipper\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_flipper}{Flipper} \&}]{rhs }\end{DoxyParamCaption})}
+
+Assignment operator (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_flipper_a51f18dc856dfbf43447faf263182e8c2}\label{class_flipper_a51f18dc856dfbf43447faf263182e8c2}} 
+\index{Flipper@{Flipper}!set@{set}}
+\index{set@{set}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Flipper\+::set (\begin{DoxyParamCaption}\item[{const \hyperlink{class_bounds}{Bounds} $\ast$const}]{\+\_\+bounds,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+R,  }\item[{const \hyperlink{class_constraints}{Constraints} $\ast$const}]{\+\_\+constraints = {\ttfamily 0},  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+Q = {\ttfamily 0},  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+T = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Assigns new values to non-\/null arguments. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+bounds} & Pointer to new bounds. \\
+\hline
+{\em \+\_\+R} & New matrix R. \\
+\hline
+{\em \+\_\+constraints} & Pointer to new constraints. \\
+\hline
+{\em \+\_\+Q} & New matrix Q. \\
+\hline
+{\em \+\_\+T} & New matrix T. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_flipper_af6c5ae2f504cc9478ee07d824ba97801}\label{class_flipper_af6c5ae2f504cc9478ee07d824ba97801}} 
+\index{Flipper@{Flipper}!bounds@{bounds}}
+\index{bounds@{bounds}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{bounds}{bounds}}
+{\footnotesize\ttfamily \hyperlink{class_bounds}{Bounds} Flipper\+::bounds\hspace{0.3cm}{\ttfamily [protected]}}
+
+Data structure for problem\textquotesingle{}s bounds. \mbox{\Hypertarget{class_flipper_a13587b75185673eeff26b9b1f5f9d94b}\label{class_flipper_a13587b75185673eeff26b9b1f5f9d94b}} 
+\index{Flipper@{Flipper}!constraints@{constraints}}
+\index{constraints@{constraints}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{constraints}{constraints}}
+{\footnotesize\ttfamily \hyperlink{class_constraints}{Constraints} Flipper\+::constraints\hspace{0.3cm}{\ttfamily [protected]}}
+
+Data structure for problem\textquotesingle{}s constraints. \mbox{\Hypertarget{class_flipper_a884a852b9295749ca360c6159033f307}\label{class_flipper_a884a852b9295749ca360c6159033f307}} 
+\index{Flipper@{Flipper}!nC@{nC}}
+\index{nC@{nC}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{nC}{nC}}
+{\footnotesize\ttfamily uint\+\_\+t Flipper\+::nC\hspace{0.3cm}{\ttfamily [protected]}}
+
+Number of constraints. \mbox{\Hypertarget{class_flipper_ab552c3e3a524753f39d3010e8c58a505}\label{class_flipper_ab552c3e3a524753f39d3010e8c58a505}} 
+\index{Flipper@{Flipper}!nV@{nV}}
+\index{nV@{nV}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{nV}{nV}}
+{\footnotesize\ttfamily uint\+\_\+t Flipper\+::nV\hspace{0.3cm}{\ttfamily [protected]}}
+
+Number of variables. \mbox{\Hypertarget{class_flipper_afae7213a4c38a150512faac9ac572ceb}\label{class_flipper_afae7213a4c38a150512faac9ac572ceb}} 
+\index{Flipper@{Flipper}!Q@{Q}}
+\index{Q@{Q}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{Q}{Q}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}$\ast$ Flipper\+::Q\hspace{0.3cm}{\ttfamily [protected]}}
+
+Orthonormal quadratic matrix, A = \mbox{[}0 T\mbox{]}$\ast$Q\textquotesingle{}. \mbox{\Hypertarget{class_flipper_a8d49f4f458ba1b15de596695cd50d5aa}\label{class_flipper_a8d49f4f458ba1b15de596695cd50d5aa}} 
+\index{Flipper@{Flipper}!R@{R}}
+\index{R@{R}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}$\ast$ Flipper\+::R\hspace{0.3cm}{\ttfamily [protected]}}
+
+Cholesky factor of H (i.\+e. H = R$^\wedge$\+T$\ast$R). \mbox{\Hypertarget{class_flipper_a5d401205baa5348982119da87a0ef4da}\label{class_flipper_a5d401205baa5348982119da87a0ef4da}} 
+\index{Flipper@{Flipper}!T@{T}}
+\index{T@{T}!Flipper@{Flipper}}
+\subsubsection{\texorpdfstring{T}{T}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}$\ast$ Flipper\+::T\hspace{0.3cm}{\ttfamily [protected]}}
+
+Reverse triangular matrix, A = \mbox{[}0 T\mbox{]}$\ast$Q\textquotesingle{}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_flipper_8hpp}{Flipper.\+hpp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/src/\hyperlink{_flipper_8cpp}{Flipper.\+cpp}\end{DoxyCompactItemize}

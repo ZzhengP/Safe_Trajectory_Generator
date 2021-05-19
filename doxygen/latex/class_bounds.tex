@@ -1,0 +1,478 @@
+\hypertarget{class_bounds}{}\section{Bounds Class Reference}
+\label{class_bounds}\index{Bounds@{Bounds}}
+
+
+Manages working sets of bounds (i.\+e. box constraints).  
+
+
+
+
+{\ttfamily \#include $<$Bounds.\+hpp$>$}
+
+
+
+Inheritance diagram for Bounds\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=141pt]{class_bounds__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bounds\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=212pt]{class_bounds__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_bounds_a4df99b6aeade42ade4eaf2d1a14e176a}{Bounds} ()
+\item 
+\hyperlink{class_bounds_abe2a9220884f74cbe7496075ff6baacb}{Bounds} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \+\_\+n)
+\item 
+\hyperlink{class_bounds_acc45b5ad09d22f0aa1f2594bf426f700}{Bounds} (const \hyperlink{class_bounds}{Bounds} \&rhs)
+\item 
+virtual \hyperlink{class_bounds_aed8643720e1ca9c1da0b902aec80d3c4}{$\sim$\+Bounds} ()
+\item 
+\hyperlink{class_bounds}{Bounds} \& \hyperlink{class_bounds_a394c33cd33ba7c8560121f414bececdb}{operator=} (const \hyperlink{class_bounds}{Bounds} \&rhs)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_a1ae1d7d6e084ce84420ad5086b7af4ab}{init} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \+\_\+n=0)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_ae7d4a71da1bfcb331f920d1a1695d001}{setup\+Bound} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} number, \hyperlink{_types_8hpp_a70a6a40d261a015ead8d43aa589383a4}{Subject\+To\+Status} \+\_\+status)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_ae2f0eb4f34eb9a16b7d036ce23fa7ad0}{setup\+All\+Free} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_a3e87cf95718653034b86d021f70e45ac}{setup\+All\+Lower} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_a0626b894a71f058d3eebf3ee37f6f8d2}{setup\+All\+Upper} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_a3ba36cd0625c609e01547f6412e52419}{move\+Fixed\+To\+Free} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} number)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_aab5c2198d2ad6e57fd1d7ab513f1b894}{move\+Free\+To\+Fixed} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} number, \hyperlink{_types_8hpp_a70a6a40d261a015ead8d43aa589383a4}{Subject\+To\+Status} \+\_\+status)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_a161a0615c8a76dc82c373691b4dd6eb5}{flip\+Fixed} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} number)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_a8fb8a0534a0a112e227aa073d82d56de}{swap\+Free} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} number1, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} number2)
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_bounds_a2c32c7cbab64f671ffecca74a3253d1b}{get\+NV} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_bounds_a05acda6c3a05e943824fd08933d4074a}{get\+N\+FV} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_bounds_a83878b515f0ecbf38f6cbea483711f17}{get\+N\+BV} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_bounds_a0ce0865020cd26cd38f24e1b2d692fd0}{get\+N\+UV} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_bounds_ad67174ea575c43b1dd4b9da24f3a8a2a}{get\+N\+FR} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_bounds_ae1b40d3aec87bd2ee9d03e3c0d2aeb0c}{get\+N\+FX} () const
+\item 
+\hyperlink{class_indexlist}{Indexlist} $\ast$ \hyperlink{class_bounds_abc066244b45e507c77edb14ad57a8370}{get\+Free} ()
+\item 
+\hyperlink{class_indexlist}{Indexlist} $\ast$ \hyperlink{class_bounds_a4e2397e0080e4cbc355ffcf386fda8a0}{get\+Fixed} ()
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_a05b63d074b95ae4d5fc4c7cfe11e7228}{shift} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} offset)
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_abe45f347747df4a323d1d55bc21a5914}{rotate} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} offset)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_a04ad16d13952adff7be66e8a82ab8281}{print} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_ad19e200f0cd0b476f5630d2516eb4d4c}{clear} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_abb34af9c6fbd53b591aaa65db6108bac}{copy} (const \hyperlink{class_bounds}{Bounds} \&rhs)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_bounds_ac8733669924bba05b64b3a0fb2e5c784}{setup\+All} (\hyperlink{_types_8hpp_a70a6a40d261a015ead8d43aa589383a4}{Subject\+To\+Status} \+\_\+status)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_indexlist}{Indexlist} \hyperlink{class_bounds_a0e915647e5ef1a3a48f17fea73ccf03f}{freee}
+\item 
+\hyperlink{class_indexlist}{Indexlist} \hyperlink{class_bounds_a7c4780c7710eec138bd4def344cedd69}{fixed}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages working sets of bounds (i.\+e. box constraints). 
+
+This class manages working sets of bounds (= box constraints) by storing index sets and other status information.
+
+\begin{DoxyAuthor}{Author}
+Hans Joachim Ferreau 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2007-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bounds_a4df99b6aeade42ade4eaf2d1a14e176a}\label{class_bounds_a4df99b6aeade42ade4eaf2d1a14e176a}} 
+\index{Bounds@{Bounds}!Bounds@{Bounds}}
+\index{Bounds@{Bounds}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{Bounds()}{Bounds()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_afd127fcb3c8f47975e9fa0ec2bacde52}{B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} Bounds\+::\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_bounds_abe2a9220884f74cbe7496075ff6baacb}\label{class_bounds_abe2a9220884f74cbe7496075ff6baacb}} 
+\index{Bounds@{Bounds}!Bounds@{Bounds}}
+\index{Bounds@{Bounds}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{Bounds()}{Bounds()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Bounds\+::\+Bounds (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{\+\_\+n }\end{DoxyParamCaption})}
+
+Constructor which takes the number of bounds. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+n} & Number of bounds. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bounds_acc45b5ad09d22f0aa1f2594bf426f700}\label{class_bounds_acc45b5ad09d22f0aa1f2594bf426f700}} 
+\index{Bounds@{Bounds}!Bounds@{Bounds}}
+\index{Bounds@{Bounds}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{Bounds()}{Bounds()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Bounds\+::\+Bounds (\begin{DoxyParamCaption}\item[{const \hyperlink{class_bounds}{Bounds} \&}]{rhs }\end{DoxyParamCaption})}
+
+Copy constructor (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bounds_aed8643720e1ca9c1da0b902aec80d3c4}\label{class_bounds_aed8643720e1ca9c1da0b902aec80d3c4}} 
+\index{Bounds@{Bounds}!````~Bounds@{$\sim$\+Bounds}}
+\index{````~Bounds@{$\sim$\+Bounds}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{$\sim$\+Bounds()}{~Bounds()}}
+{\footnotesize\ttfamily Bounds\+::$\sim$\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bounds_ad19e200f0cd0b476f5630d2516eb4d4c}\label{class_bounds_ad19e200f0cd0b476f5630d2516eb4d4c}} 
+\index{Bounds@{Bounds}!clear@{clear}}
+\index{clear@{clear}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Frees all allocated memory. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounds_abb34af9c6fbd53b591aaa65db6108bac}\label{class_bounds_abb34af9c6fbd53b591aaa65db6108bac}} 
+\index{Bounds@{Bounds}!copy@{copy}}
+\index{copy@{copy}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_bounds}{Bounds} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Copies all members from given rhs object. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bounds_a161a0615c8a76dc82c373691b4dd6eb5}\label{class_bounds_a161a0615c8a76dc82c373691b4dd6eb5}} 
+\index{Bounds@{Bounds}!flip\+Fixed@{flip\+Fixed}}
+\index{flip\+Fixed@{flip\+Fixed}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{flip\+Fixed()}{flipFixed()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::flip\+Fixed (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{number }\end{DoxyParamCaption})}
+
+Flip fixed bound. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+B\+O\+U\+N\+D\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+N\+DS 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounds_a4e2397e0080e4cbc355ffcf386fda8a0}\label{class_bounds_a4e2397e0080e4cbc355ffcf386fda8a0}} 
+\index{Bounds@{Bounds}!get\+Fixed@{get\+Fixed}}
+\index{get\+Fixed@{get\+Fixed}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{get\+Fixed()}{getFixed()}}
+{\footnotesize\ttfamily \hyperlink{class_indexlist}{Indexlist} $\ast$ Bounds\+::get\+Fixed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a pointer to fixed variables index list. \begin{DoxyReturn}{Returns}
+Pointer to fixed variables index list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounds_abc066244b45e507c77edb14ad57a8370}\label{class_bounds_abc066244b45e507c77edb14ad57a8370}} 
+\index{Bounds@{Bounds}!get\+Free@{get\+Free}}
+\index{get\+Free@{get\+Free}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{get\+Free()}{getFree()}}
+{\footnotesize\ttfamily \hyperlink{class_indexlist}{Indexlist} $\ast$ Bounds\+::get\+Free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a pointer to free variables index list. \begin{DoxyReturn}{Returns}
+Pointer to free variables index list. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounds_a83878b515f0ecbf38f6cbea483711f17}\label{class_bounds_a83878b515f0ecbf38f6cbea483711f17}} 
+\index{Bounds@{Bounds}!get\+N\+BV@{get\+N\+BV}}
+\index{get\+N\+BV@{get\+N\+BV}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{get\+N\+B\+V()}{getNBV()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Bounds\+::get\+N\+BV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns number of bounded (but possibly free) variables. \begin{DoxyReturn}{Returns}
+Number of bounded (but possibly free) variables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounds_ad67174ea575c43b1dd4b9da24f3a8a2a}\label{class_bounds_ad67174ea575c43b1dd4b9da24f3a8a2a}} 
+\index{Bounds@{Bounds}!get\+N\+FR@{get\+N\+FR}}
+\index{get\+N\+FR@{get\+N\+FR}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{get\+N\+F\+R()}{getNFR()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Bounds\+::get\+N\+FR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns number of free variables. \begin{DoxyReturn}{Returns}
+Number of free variables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounds_a05acda6c3a05e943824fd08933d4074a}\label{class_bounds_a05acda6c3a05e943824fd08933d4074a}} 
+\index{Bounds@{Bounds}!get\+N\+FV@{get\+N\+FV}}
+\index{get\+N\+FV@{get\+N\+FV}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{get\+N\+F\+V()}{getNFV()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Bounds\+::get\+N\+FV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns number of implicitly fixed variables. \begin{DoxyReturn}{Returns}
+Number of implicitly fixed variables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounds_ae1b40d3aec87bd2ee9d03e3c0d2aeb0c}\label{class_bounds_ae1b40d3aec87bd2ee9d03e3c0d2aeb0c}} 
+\index{Bounds@{Bounds}!get\+N\+FX@{get\+N\+FX}}
+\index{get\+N\+FX@{get\+N\+FX}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{get\+N\+F\+X()}{getNFX()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Bounds\+::get\+N\+FX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns number of fixed variables. \begin{DoxyReturn}{Returns}
+Number of fixed variables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounds_a0ce0865020cd26cd38f24e1b2d692fd0}\label{class_bounds_a0ce0865020cd26cd38f24e1b2d692fd0}} 
+\index{Bounds@{Bounds}!get\+N\+UV@{get\+N\+UV}}
+\index{get\+N\+UV@{get\+N\+UV}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{get\+N\+U\+V()}{getNUV()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Bounds\+::get\+N\+UV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns number of unbounded variables. \begin{DoxyReturn}{Returns}
+Number of unbounded variables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounds_a2c32c7cbab64f671ffecca74a3253d1b}\label{class_bounds_a2c32c7cbab64f671ffecca74a3253d1b}} 
+\index{Bounds@{Bounds}!get\+NV@{get\+NV}}
+\index{get\+NV@{get\+NV}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{get\+N\+V()}{getNV()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_afd127fcb3c8f47975e9fa0ec2bacde52}{B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Bounds\+::get\+NV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns number of variables. \begin{DoxyReturn}{Returns}
+Number of variables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounds_a1ae1d7d6e084ce84420ad5086b7af4ab}\label{class_bounds_a1ae1d7d6e084ce84420ad5086b7af4ab}} 
+\index{Bounds@{Bounds}!init@{init}}
+\index{init@{init}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::init (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{\+\_\+n = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Initialises object with given number of bounds. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+n} & Number of bounds. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bounds_a3ba36cd0625c609e01547f6412e52419}\label{class_bounds_a3ba36cd0625c609e01547f6412e52419}} 
+\index{Bounds@{Bounds}!move\+Fixed\+To\+Free@{move\+Fixed\+To\+Free}}
+\index{move\+Fixed\+To\+Free@{move\+Fixed\+To\+Free}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{move\+Fixed\+To\+Free()}{moveFixedToFree()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::move\+Fixed\+To\+Free (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{number }\end{DoxyParamCaption})}
+
+Moves index of a bound from index list of fixed to that of free bounds. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+B\+O\+U\+N\+D\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+N\+DS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Number of bound to be freed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bounds_aab5c2198d2ad6e57fd1d7ab513f1b894}\label{class_bounds_aab5c2198d2ad6e57fd1d7ab513f1b894}} 
+\index{Bounds@{Bounds}!move\+Free\+To\+Fixed@{move\+Free\+To\+Fixed}}
+\index{move\+Free\+To\+Fixed@{move\+Free\+To\+Fixed}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{move\+Free\+To\+Fixed()}{moveFreeToFixed()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::move\+Free\+To\+Fixed (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{number,  }\item[{\hyperlink{_types_8hpp_a70a6a40d261a015ead8d43aa589383a4}{Subject\+To\+Status}}]{\+\_\+status }\end{DoxyParamCaption})}
+
+Moves index of a bound from index list of free to that of fixed bounds. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+M\+O\+V\+I\+N\+G\+\_\+\+B\+O\+U\+N\+D\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+N\+DS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Number of bound to be fixed. \\
+\hline
+{\em \+\_\+status} & Status of bound to be fixed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bounds_a394c33cd33ba7c8560121f414bececdb}\label{class_bounds_a394c33cd33ba7c8560121f414bececdb}} 
+\index{Bounds@{Bounds}!operator=@{operator=}}
+\index{operator=@{operator=}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_bounds}{Bounds} \& Bounds\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_bounds}{Bounds} \&}]{rhs }\end{DoxyParamCaption})}
+
+Assignment operator (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bounds_a04ad16d13952adff7be66e8a82ab8281}\label{class_bounds_a04ad16d13952adff7be66e8a82ab8281}} 
+\index{Bounds@{Bounds}!print@{print}}
+\index{print@{print}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints information on bounds object (in particular, lists of free and fixed bounds. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+L\+I\+S\+T\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounds_abe45f347747df4a323d1d55bc21a5914}\label{class_bounds_abe45f347747df4a323d1d55bc21a5914}} 
+\index{Bounds@{Bounds}!rotate@{rotate}}
+\index{rotate@{rotate}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::rotate (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Rotates forward type and status of all bounds by a given offset. This offset has to lie within the range \mbox{[}0,n\mbox{]}. Example for offset = 2\+: ~\newline
+rotate( \{b1,b2,b3,b4,b5,b6\} ) = \{b3,b4,b5,b6,b1,b2\} \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+N\+DS ~\newline
+ R\+E\+T\+\_\+\+R\+O\+T\+A\+T\+I\+N\+G\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Rotation offset within the range \mbox{[}0,n\mbox{]}. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_subject_to_a6e3b466f01422cc7361e7a8d1f007aa6}{Subject\+To}.
+
+\mbox{\Hypertarget{class_bounds_ac8733669924bba05b64b3a0fb2e5c784}\label{class_bounds_ac8733669924bba05b64b3a0fb2e5c784}} 
+\index{Bounds@{Bounds}!setup\+All@{setup\+All}}
+\index{setup\+All@{setup\+All}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{setup\+All()}{setupAll()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::setup\+All (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_a70a6a40d261a015ead8d43aa589383a4}{Subject\+To\+Status}}]{\+\_\+status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Initially adds all numbers of new (i.\+e. not yet in the list) bounds to to the index set corresponding to the desired status; the order depends on the Suject\+To\+Type of each index. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+\_\+\+B\+O\+U\+N\+D\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+status} & Desired initial status for all bounds. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bounds_ae2f0eb4f34eb9a16b7d036ce23fa7ad0}\label{class_bounds_ae2f0eb4f34eb9a16b7d036ce23fa7ad0}} 
+\index{Bounds@{Bounds}!setup\+All\+Free@{setup\+All\+Free}}
+\index{setup\+All\+Free@{setup\+All\+Free}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{setup\+All\+Free()}{setupAllFree()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::setup\+All\+Free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initially adds all numbers of new (i.\+e. not yet in the list) bounds to to the index set of free bounds; the order depends on the Suject\+To\+Type of each index. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+\_\+\+B\+O\+U\+N\+D\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounds_a3e87cf95718653034b86d021f70e45ac}\label{class_bounds_a3e87cf95718653034b86d021f70e45ac}} 
+\index{Bounds@{Bounds}!setup\+All\+Lower@{setup\+All\+Lower}}
+\index{setup\+All\+Lower@{setup\+All\+Lower}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{setup\+All\+Lower()}{setupAllLower()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::setup\+All\+Lower (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initially adds all numbers of new (i.\+e. not yet in the list) bounds to to the index set of fixed bounds (on their lower bounds); the order depends on the Suject\+To\+Type of each index. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+\_\+\+B\+O\+U\+N\+D\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounds_a0626b894a71f058d3eebf3ee37f6f8d2}\label{class_bounds_a0626b894a71f058d3eebf3ee37f6f8d2}} 
+\index{Bounds@{Bounds}!setup\+All\+Upper@{setup\+All\+Upper}}
+\index{setup\+All\+Upper@{setup\+All\+Upper}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{setup\+All\+Upper()}{setupAllUpper()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::setup\+All\+Upper (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Initially adds all numbers of new (i.\+e. not yet in the list) bounds to to the index set of fixed bounds (on their upper bounds); the order depends on the Suject\+To\+Type of each index. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+\_\+\+B\+O\+U\+N\+D\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bounds_ae7d4a71da1bfcb331f920d1a1695d001}\label{class_bounds_ae7d4a71da1bfcb331f920d1a1695d001}} 
+\index{Bounds@{Bounds}!setup\+Bound@{setup\+Bound}}
+\index{setup\+Bound@{setup\+Bound}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{setup\+Bound()}{setupBound()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::setup\+Bound (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{number,  }\item[{\hyperlink{_types_8hpp_a70a6a40d261a015ead8d43aa589383a4}{Subject\+To\+Status}}]{\+\_\+status }\end{DoxyParamCaption})}
+
+Initially adds number of a new (i.\+e. not yet in the list) bound to given index set. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+\_\+\+B\+O\+U\+N\+D\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+N\+DS ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Number of new bound. \\
+\hline
+{\em \+\_\+status} & Status of new bound. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bounds_a05b63d074b95ae4d5fc4c7cfe11e7228}\label{class_bounds_a05b63d074b95ae4d5fc4c7cfe11e7228}} 
+\index{Bounds@{Bounds}!shift@{shift}}
+\index{shift@{shift}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{shift()}{shift()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::shift (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Shifts forward type and status of all bounds by a given offset. This offset has to lie within the range \mbox{[}0,n/2\mbox{]} and has to be an integer divisor of the total number of bounds n. Type and status of the first $<$offset$>$ bounds is thrown away, type and status of the last $<$offset$>$ bounds is doubled, e.\+g. for offset = 2\+: ~\newline
+shift( \{b1,b2,b3,b4,b5,b6\} ) = \{b3,b4,b5,b6,b5,b6\} \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+N\+DS ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS ~\newline
+ R\+E\+T\+\_\+\+S\+H\+I\+F\+T\+I\+N\+G\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & Shift offset within the range \mbox{[}0,n/2\mbox{]} and integer divisor of n. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_subject_to_af584328614003c2b9e92b185c6ceedc9}{Subject\+To}.
+
+\mbox{\Hypertarget{class_bounds_a8fb8a0534a0a112e227aa073d82d56de}\label{class_bounds_a8fb8a0534a0a112e227aa073d82d56de}} 
+\index{Bounds@{Bounds}!swap\+Free@{swap\+Free}}
+\index{swap\+Free@{swap\+Free}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{swap\+Free()}{swapFree()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Bounds\+::swap\+Free (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{number1,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{number2 }\end{DoxyParamCaption})}
+
+Swaps the indices of two free bounds within the index set. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+S\+W\+A\+P\+I\+N\+D\+E\+X\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em number1} & Number of first constraint or bound. \\
+\hline
+{\em number2} & Number of second constraint or bound. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_bounds_a7c4780c7710eec138bd4def344cedd69}\label{class_bounds_a7c4780c7710eec138bd4def344cedd69}} 
+\index{Bounds@{Bounds}!fixed@{fixed}}
+\index{fixed@{fixed}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{fixed}{fixed}}
+{\footnotesize\ttfamily \hyperlink{class_indexlist}{Indexlist} Bounds\+::fixed\hspace{0.3cm}{\ttfamily [protected]}}
+
+Index list of fixed variables. \mbox{\Hypertarget{class_bounds_a0e915647e5ef1a3a48f17fea73ccf03f}\label{class_bounds_a0e915647e5ef1a3a48f17fea73ccf03f}} 
+\index{Bounds@{Bounds}!freee@{freee}}
+\index{freee@{freee}!Bounds@{Bounds}}
+\subsubsection{\texorpdfstring{freee}{freee}}
+{\footnotesize\ttfamily \hyperlink{class_indexlist}{Indexlist} Bounds\+::freee\hspace{0.3cm}{\ttfamily [protected]}}
+
+Index list of free variables. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_bounds_8hpp}{Bounds.\+hpp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_bounds_8ipp}{Bounds.\+ipp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/src/\hyperlink{_bounds_8cpp}{Bounds.\+cpp}\end{DoxyCompactItemize}

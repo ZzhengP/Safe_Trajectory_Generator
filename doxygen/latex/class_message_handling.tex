@@ -1,0 +1,455 @@
+\hypertarget{class_message_handling}{}\section{Message\+Handling Class Reference}
+\label{class_message_handling}\index{Message\+Handling@{Message\+Handling}}
+
+
+Handles all kind of error messages, warnings and other information.  
+
+
+
+
+{\ttfamily \#include $<$Message\+Handling.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_message_handling_1_1_return_value_list}{Return\+Value\+List}
+\begin{DoxyCompactList}\small\item\em Data structure for entries in global message list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_message_handling_a58a64d6d798a87ed2f83092e28e7ee8b}{Message\+Handling} ()
+\item 
+\hyperlink{class_message_handling_af5fea91daefd158b856a091fd5dbdae4}{Message\+Handling} (F\+I\+LE $\ast$\+\_\+output\+File)
+\item 
+\hyperlink{class_message_handling_a65bf868c3aab4d7a29f9d61f235b65e4}{Message\+Handling} (\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \+\_\+error\+Visibility, \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \+\_\+warning\+Visibility, \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \+\_\+info\+Visibility)
+\item 
+\hyperlink{class_message_handling_aedfc5f9079f5dd454a13700e13e029d7}{Message\+Handling} (F\+I\+LE $\ast$\+\_\+output\+File, \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \+\_\+error\+Visibility, \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \+\_\+warning\+Visibility, \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \+\_\+info\+Visibility)
+\item 
+\hyperlink{class_message_handling_a9702e58c2dd05e674fc47ed44f92ff30}{Message\+Handling} (const \hyperlink{class_message_handling}{Message\+Handling} \&rhs)
+\item 
+\hyperlink{class_message_handling_a732439c8915c726c29833a335fb60ae7}{$\sim$\+Message\+Handling} ()
+\item 
+\hyperlink{class_message_handling}{Message\+Handling} \& \hyperlink{class_message_handling_a5bdc56ea0f2ba7d70b9c47a3403692a1}{operator=} (const \hyperlink{class_message_handling}{Message\+Handling} \&rhs)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_message_handling_a257d3209e0efcb245753be9d9f89e4cf}{throw\+Error} (\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Enumber, const char $\ast$additionaltext, const char $\ast$functionname, const char $\ast$filename, const unsigned long linenumber, \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} local\+Visibility\+Status)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_message_handling_a20916177fb0e5a55e1cc74df22e53795}{throw\+Warning} (\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Wnumber, const char $\ast$additionaltext, const char $\ast$functionname, const char $\ast$filename, const unsigned long linenumber, \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} local\+Visibility\+Status)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_message_handling_a57fafea776d1d7be7a36676a7396aabe}{throw\+Info} (\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Inumber, const char $\ast$additionaltext, const char $\ast$functionname, const char $\ast$filename, const unsigned long linenumber, \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} local\+Visibility\+Status)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_message_handling_aee146336fc1d08ae20ea00498aee471f}{reset} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_message_handling_a8b6ff3603352ace1322188f156983c44}{list\+All\+Messages} ()
+\item 
+\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \hyperlink{class_message_handling_abc5f45b51ceae367c1bb1f387e6df28b}{get\+Error\+Visibility\+Status} () const
+\item 
+\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \hyperlink{class_message_handling_abb3b7874c8c06e9ddefcc7dfa3aa739e}{get\+Warning\+Visibility\+Status} () const
+\item 
+\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \hyperlink{class_message_handling_a419e09147087d5999a73dde7ec815beb}{get\+Info\+Visibility\+Status} () const
+\item 
+F\+I\+LE $\ast$ \hyperlink{class_message_handling_a6c79ada9dcfed04df8cdda3b9368f38c}{get\+Output\+File} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_message_handling_a9b0fcad01661054a8de3c5d4c0da2c18}{get\+Error\+Count} () const
+\item 
+void \hyperlink{class_message_handling_a31f12baabf23d05c97e2da9dbd8adf6e}{set\+Error\+Visibility\+Status} (\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \+\_\+error\+Visibility)
+\item 
+void \hyperlink{class_message_handling_aaa411b35b599fe59c57b94e0eb0f2728}{set\+Warning\+Visibility\+Status} (\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \+\_\+warning\+Visibility)
+\item 
+void \hyperlink{class_message_handling_ac1f2497e237ab552f408db52e7ba6359}{set\+Info\+Visibility\+Status} (\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \+\_\+info\+Visibility)
+\item 
+void \hyperlink{class_message_handling_a91cf9df3e66b84d4fb6039b39de32390}{set\+Output\+File} (F\+I\+LE $\ast$\+\_\+output\+File)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_message_handling_a06e5c330c9684fc187222db061ba5a0e}{set\+Error\+Count} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \+\_\+error\+Count)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const char $\ast$ \hyperlink{class_message_handling_aa6107f3844b0d91478daec1301620560}{get\+Error\+Code\+Message} (const \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \+\_\+return\+Value)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_message_handling_ab7eff297de539c158ed8583f2146a352}{throw\+Message} (\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} R\+E\+Tnumber, const char $\ast$additionaltext, const char $\ast$functionname, const char $\ast$filename, const unsigned long linenumber, \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} local\+Visibility\+Status, const char $\ast$R\+E\+Tstring)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \hyperlink{class_message_handling_af75a2fd3122cc2a9793c5ad491b04325}{error\+Visibility}
+\item 
+\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \hyperlink{class_message_handling_af715e377af244418a8003b172c8bdf91}{warning\+Visibility}
+\item 
+\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} \hyperlink{class_message_handling_a6a630fa427803cf4e1e0f54d8fb14a1b}{info\+Visibility}
+\item 
+F\+I\+LE $\ast$ \hyperlink{class_message_handling_a2a40cbdfced701a18da281f7a4e910ee}{output\+File}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_message_handling_a762bbeac9042fc5ccb406bbb8b7c72d2}{error\+Count}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles all kind of error messages, warnings and other information. 
+
+This class handles all kinds of messages (errors, warnings, infos) initiated by qp\+O\+A\+S\+ES modules and stores the corresponding global preferences.
+
+\begin{DoxyAuthor}{Author}
+Hans Joachim Ferreau (thanks to Leonard Wirsching) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2007-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_message_handling_a58a64d6d798a87ed2f83092e28e7ee8b}\label{class_message_handling_a58a64d6d798a87ed2f83092e28e7ee8b}} 
+\index{Message\+Handling@{Message\+Handling}!Message\+Handling@{Message\+Handling}}
+\index{Message\+Handling@{Message\+Handling}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{Message\+Handling()}{MessageHandling()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily Message\+Handling\+::\+Message\+Handling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_message_handling_af5fea91daefd158b856a091fd5dbdae4}\label{class_message_handling_af5fea91daefd158b856a091fd5dbdae4}} 
+\index{Message\+Handling@{Message\+Handling}!Message\+Handling@{Message\+Handling}}
+\index{Message\+Handling@{Message\+Handling}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{Message\+Handling()}{MessageHandling()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily Message\+Handling\+::\+Message\+Handling (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{\+\_\+output\+File }\end{DoxyParamCaption})}
+
+Constructor which takes the desired output file. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+output\+File} & Output file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_message_handling_a65bf868c3aab4d7a29f9d61f235b65e4}\label{class_message_handling_a65bf868c3aab4d7a29f9d61f235b65e4}} 
+\index{Message\+Handling@{Message\+Handling}!Message\+Handling@{Message\+Handling}}
+\index{Message\+Handling@{Message\+Handling}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{Message\+Handling()}{MessageHandling()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily Message\+Handling\+::\+Message\+Handling (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status}}]{\+\_\+error\+Visibility,  }\item[{\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status}}]{\+\_\+warning\+Visibility,  }\item[{\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status}}]{\+\_\+info\+Visibility }\end{DoxyParamCaption})}
+
+Constructor which takes the desired visibility states. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+error\+Visibility} & Visibility status for error messages. \\
+\hline
+{\em \+\_\+warning\+Visibility} & Visibility status for warning messages. \\
+\hline
+{\em \+\_\+info\+Visibility} & Visibility status for info messages. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_message_handling_aedfc5f9079f5dd454a13700e13e029d7}\label{class_message_handling_aedfc5f9079f5dd454a13700e13e029d7}} 
+\index{Message\+Handling@{Message\+Handling}!Message\+Handling@{Message\+Handling}}
+\index{Message\+Handling@{Message\+Handling}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{Message\+Handling()}{MessageHandling()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily Message\+Handling\+::\+Message\+Handling (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{\+\_\+output\+File,  }\item[{\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status}}]{\+\_\+error\+Visibility,  }\item[{\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status}}]{\+\_\+warning\+Visibility,  }\item[{\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status}}]{\+\_\+info\+Visibility }\end{DoxyParamCaption})}
+
+Constructor which takes the desired output file and desired visibility states. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+output\+File} & Output file. \\
+\hline
+{\em \+\_\+error\+Visibility} & Visibility status for error messages. \\
+\hline
+{\em \+\_\+warning\+Visibility} & Visibility status for warning messages. \\
+\hline
+{\em \+\_\+info\+Visibility} & Visibility status for info messages. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_message_handling_a9702e58c2dd05e674fc47ed44f92ff30}\label{class_message_handling_a9702e58c2dd05e674fc47ed44f92ff30}} 
+\index{Message\+Handling@{Message\+Handling}!Message\+Handling@{Message\+Handling}}
+\index{Message\+Handling@{Message\+Handling}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{Message\+Handling()}{MessageHandling()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Message\+Handling\+::\+Message\+Handling (\begin{DoxyParamCaption}\item[{const \hyperlink{class_message_handling}{Message\+Handling} \&}]{rhs }\end{DoxyParamCaption})}
+
+Copy constructor (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_message_handling_a732439c8915c726c29833a335fb60ae7}\label{class_message_handling_a732439c8915c726c29833a335fb60ae7}} 
+\index{Message\+Handling@{Message\+Handling}!````~Message\+Handling@{$\sim$\+Message\+Handling}}
+\index{````~Message\+Handling@{$\sim$\+Message\+Handling}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{$\sim$\+Message\+Handling()}{~MessageHandling()}}
+{\footnotesize\ttfamily Message\+Handling\+::$\sim$\+Message\+Handling (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_message_handling_aa6107f3844b0d91478daec1301620560}\label{class_message_handling_aa6107f3844b0d91478daec1301620560}} 
+\index{Message\+Handling@{Message\+Handling}!get\+Error\+Code\+Message@{get\+Error\+Code\+Message}}
+\index{get\+Error\+Code\+Message@{get\+Error\+Code\+Message}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{get\+Error\+Code\+Message()}{getErrorCodeMessage()}}
+{\footnotesize\ttfamily const char $\ast$ Message\+Handling\+::get\+Error\+Code\+Message (\begin{DoxyParamCaption}\item[{const \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value}}]{\+\_\+return\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Provides message text corresponding to given {\itshape return\+Value}. \begin{DoxyReturn}{Returns}
+String containing message text. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_message_handling_a9b0fcad01661054a8de3c5d4c0da2c18}\label{class_message_handling_a9b0fcad01661054a8de3c5d4c0da2c18}} 
+\index{Message\+Handling@{Message\+Handling}!get\+Error\+Count@{get\+Error\+Count}}
+\index{get\+Error\+Count@{get\+Error\+Count}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{get\+Error\+Count()}{getErrorCount()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Message\+Handling\+::get\+Error\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns error count value. \begin{DoxyReturn}{Returns}
+Error count value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_message_handling_abc5f45b51ceae367c1bb1f387e6df28b}\label{class_message_handling_abc5f45b51ceae367c1bb1f387e6df28b}} 
+\index{Message\+Handling@{Message\+Handling}!get\+Error\+Visibility\+Status@{get\+Error\+Visibility\+Status}}
+\index{get\+Error\+Visibility\+Status@{get\+Error\+Visibility\+Status}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{get\+Error\+Visibility\+Status()}{getErrorVisibilityStatus()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_afd127fcb3c8f47975e9fa0ec2bacde52}{B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} Message\+Handling\+::get\+Error\+Visibility\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns visibility status for error messages. \begin{DoxyReturn}{Returns}
+Visibility status for error messages. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_message_handling_a419e09147087d5999a73dde7ec815beb}\label{class_message_handling_a419e09147087d5999a73dde7ec815beb}} 
+\index{Message\+Handling@{Message\+Handling}!get\+Info\+Visibility\+Status@{get\+Info\+Visibility\+Status}}
+\index{get\+Info\+Visibility\+Status@{get\+Info\+Visibility\+Status}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{get\+Info\+Visibility\+Status()}{getInfoVisibilityStatus()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} Message\+Handling\+::get\+Info\+Visibility\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns visibility status for info messages. \begin{DoxyReturn}{Returns}
+Visibility status for info messages. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_message_handling_a6c79ada9dcfed04df8cdda3b9368f38c}\label{class_message_handling_a6c79ada9dcfed04df8cdda3b9368f38c}} 
+\index{Message\+Handling@{Message\+Handling}!get\+Output\+File@{get\+Output\+File}}
+\index{get\+Output\+File@{get\+Output\+File}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{get\+Output\+File()}{getOutputFile()}}
+{\footnotesize\ttfamily F\+I\+LE $\ast$ Message\+Handling\+::get\+Output\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns pointer to output file. \begin{DoxyReturn}{Returns}
+Pointer to output file. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_message_handling_abb3b7874c8c06e9ddefcc7dfa3aa739e}\label{class_message_handling_abb3b7874c8c06e9ddefcc7dfa3aa739e}} 
+\index{Message\+Handling@{Message\+Handling}!get\+Warning\+Visibility\+Status@{get\+Warning\+Visibility\+Status}}
+\index{get\+Warning\+Visibility\+Status@{get\+Warning\+Visibility\+Status}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{get\+Warning\+Visibility\+Status()}{getWarningVisibilityStatus()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} Message\+Handling\+::get\+Warning\+Visibility\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns visibility status for warning messages. \begin{DoxyReturn}{Returns}
+Visibility status for warning messages. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_message_handling_a8b6ff3603352ace1322188f156983c44}\label{class_message_handling_a8b6ff3603352ace1322188f156983c44}} 
+\index{Message\+Handling@{Message\+Handling}!list\+All\+Messages@{list\+All\+Messages}}
+\index{list\+All\+Messages@{list\+All\+Messages}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{list\+All\+Messages()}{listAllMessages()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Message\+Handling\+::list\+All\+Messages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prints a complete list of all messages to output file. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_message_handling_a5bdc56ea0f2ba7d70b9c47a3403692a1}\label{class_message_handling_a5bdc56ea0f2ba7d70b9c47a3403692a1}} 
+\index{Message\+Handling@{Message\+Handling}!operator=@{operator=}}
+\index{operator=@{operator=}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_message_handling}{Message\+Handling} \& Message\+Handling\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_message_handling}{Message\+Handling} \&}]{rhs }\end{DoxyParamCaption})}
+
+Assignment operator (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_message_handling_aee146336fc1d08ae20ea00498aee471f}\label{class_message_handling_aee146336fc1d08ae20ea00498aee471f}} 
+\index{Message\+Handling@{Message\+Handling}!reset@{reset}}
+\index{reset@{reset}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Message\+Handling\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Resets all preferences to default values. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_message_handling_a06e5c330c9684fc187222db061ba5a0e}\label{class_message_handling_a06e5c330c9684fc187222db061ba5a0e}} 
+\index{Message\+Handling@{Message\+Handling}!set\+Error\+Count@{set\+Error\+Count}}
+\index{set\+Error\+Count@{set\+Error\+Count}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{set\+Error\+Count()}{setErrorCount()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Message\+Handling\+::set\+Error\+Count (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{\+\_\+error\+Count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Changes error count. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+NT 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+error\+Count} & New error count value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_message_handling_a31f12baabf23d05c97e2da9dbd8adf6e}\label{class_message_handling_a31f12baabf23d05c97e2da9dbd8adf6e}} 
+\index{Message\+Handling@{Message\+Handling}!set\+Error\+Visibility\+Status@{set\+Error\+Visibility\+Status}}
+\index{set\+Error\+Visibility\+Status@{set\+Error\+Visibility\+Status}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{set\+Error\+Visibility\+Status()}{setErrorVisibilityStatus()}}
+{\footnotesize\ttfamily void Message\+Handling\+::set\+Error\+Visibility\+Status (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status}}]{\+\_\+error\+Visibility }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Changes visibility status for error messages. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+error\+Visibility} & New visibility status for error messages. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_message_handling_ac1f2497e237ab552f408db52e7ba6359}\label{class_message_handling_ac1f2497e237ab552f408db52e7ba6359}} 
+\index{Message\+Handling@{Message\+Handling}!set\+Info\+Visibility\+Status@{set\+Info\+Visibility\+Status}}
+\index{set\+Info\+Visibility\+Status@{set\+Info\+Visibility\+Status}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{set\+Info\+Visibility\+Status()}{setInfoVisibilityStatus()}}
+{\footnotesize\ttfamily void Message\+Handling\+::set\+Info\+Visibility\+Status (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status}}]{\+\_\+info\+Visibility }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Changes visibility status for info messages. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+info\+Visibility} & New visibility status for info messages. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_message_handling_a91cf9df3e66b84d4fb6039b39de32390}\label{class_message_handling_a91cf9df3e66b84d4fb6039b39de32390}} 
+\index{Message\+Handling@{Message\+Handling}!set\+Output\+File@{set\+Output\+File}}
+\index{set\+Output\+File@{set\+Output\+File}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{set\+Output\+File()}{setOutputFile()}}
+{\footnotesize\ttfamily void Message\+Handling\+::set\+Output\+File (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{\+\_\+output\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Changes output file for messages. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+output\+File} & New output file for messages. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_message_handling_aaa411b35b599fe59c57b94e0eb0f2728}\label{class_message_handling_aaa411b35b599fe59c57b94e0eb0f2728}} 
+\index{Message\+Handling@{Message\+Handling}!set\+Warning\+Visibility\+Status@{set\+Warning\+Visibility\+Status}}
+\index{set\+Warning\+Visibility\+Status@{set\+Warning\+Visibility\+Status}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{set\+Warning\+Visibility\+Status()}{setWarningVisibilityStatus()}}
+{\footnotesize\ttfamily void Message\+Handling\+::set\+Warning\+Visibility\+Status (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status}}]{\+\_\+warning\+Visibility }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Changes visibility status for warning messages. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+warning\+Visibility} & New visibility status for warning messages. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_message_handling_a257d3209e0efcb245753be9d9f89e4cf}\label{class_message_handling_a257d3209e0efcb245753be9d9f89e4cf}} 
+\index{Message\+Handling@{Message\+Handling}!throw\+Error@{throw\+Error}}
+\index{throw\+Error@{throw\+Error}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{throw\+Error()}{throwError()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Message\+Handling\+::throw\+Error (\begin{DoxyParamCaption}\item[{\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value}}]{Enumber,  }\item[{const char $\ast$}]{additionaltext,  }\item[{const char $\ast$}]{functionname,  }\item[{const char $\ast$}]{filename,  }\item[{const unsigned long}]{linenumber,  }\item[{\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status}}]{local\+Visibility\+Status }\end{DoxyParamCaption})}
+
+Prints an error message(a simplified macro T\+H\+R\+O\+W\+E\+R\+R\+O\+R is also provided). ~\newline
+Errors are defined as abnormal events which cause an immediate termination of the current (sub) function. Errors of a sub function should be commented by the calling function by means of a warning message (if this error does not cause an error of the calling function, either)! \begin{DoxyReturn}{Returns}
+Error number returned by sub function call 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em Enumber} & Error number returned by sub function call. \\
+\hline
+{\em additionaltext} & Additional error text (0, if none). \\
+\hline
+{\em functionname} & Name of function which caused the error. \\
+\hline
+{\em filename} & Name of file which caused the error. \\
+\hline
+{\em linenumber} & Number of line which caused the error.\+incompatible binary file \\
+\hline
+{\em local\+Visibility\+Status} & Determines (locally) if error message can be printed to std\+File. If G\+L\+O\+B\+AL visibility status of the message is set to V\+S\+\_\+\+H\+I\+D\+D\+EN, no message is printed, anyway! \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_message_handling_a57fafea776d1d7be7a36676a7396aabe}\label{class_message_handling_a57fafea776d1d7be7a36676a7396aabe}} 
+\index{Message\+Handling@{Message\+Handling}!throw\+Info@{throw\+Info}}
+\index{throw\+Info@{throw\+Info}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{throw\+Info()}{throwInfo()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Message\+Handling\+::throw\+Info (\begin{DoxyParamCaption}\item[{\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value}}]{Inumber,  }\item[{const char $\ast$}]{additionaltext,  }\item[{const char $\ast$}]{functionname,  }\item[{const char $\ast$}]{filename,  }\item[{const unsigned long}]{linenumber,  }\item[{\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status}}]{local\+Visibility\+Status }\end{DoxyParamCaption})}
+
+Prints a info message (a simplified macro T\+H\+R\+O\+W\+I\+N\+FO is also provided). \begin{DoxyReturn}{Returns}
+Info number returned by sub function call 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em Inumber} & Info number returned by sub function call. \\
+\hline
+{\em additionaltext} & Additional warning text (0, if none). \\
+\hline
+{\em functionname} & Name of function which submitted the info. \\
+\hline
+{\em filename} & Name of file which submitted the info. \\
+\hline
+{\em linenumber} & Number of line which submitted the info. \\
+\hline
+{\em local\+Visibility\+Status} & Determines (locally) if info message can be printed to std\+File. If G\+L\+O\+B\+AL visibility status of the message is set to V\+S\+\_\+\+H\+I\+D\+D\+EN, no message is printed, anyway! \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_message_handling_ab7eff297de539c158ed8583f2146a352}\label{class_message_handling_ab7eff297de539c158ed8583f2146a352}} 
+\index{Message\+Handling@{Message\+Handling}!throw\+Message@{throw\+Message}}
+\index{throw\+Message@{throw\+Message}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{throw\+Message()}{throwMessage()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Message\+Handling\+::throw\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value}}]{R\+E\+Tnumber,  }\item[{const char $\ast$}]{additionaltext,  }\item[{const char $\ast$}]{functionname,  }\item[{const char $\ast$}]{filename,  }\item[{const unsigned long}]{linenumber,  }\item[{\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status}}]{local\+Visibility\+Status,  }\item[{const char $\ast$}]{R\+E\+Tstring }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Prints a info message to std\+File (auxiliary function). \begin{DoxyReturn}{Returns}
+Error/warning/info number returned by sub function call 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em R\+E\+Tnumber} & Error/warning/info number returned by sub function call. \\
+\hline
+{\em additionaltext} & Additional warning text (0, if none). \\
+\hline
+{\em functionname} & Name of function which caused the error/warning/info. \\
+\hline
+{\em filename} & Name of file which caused the error/warning/info. \\
+\hline
+{\em linenumber} & Number of line which caused the error/warning/info. \\
+\hline
+{\em local\+Visibility\+Status} & Determines (locally) if info message can be printed to std\+File. If G\+L\+O\+B\+AL visibility status of the message is set to V\+S\+\_\+\+H\+I\+D\+D\+EN, no message is printed, anyway! \\
+\hline
+{\em R\+E\+Tstring} & Leading string of error/warning/info message. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_message_handling_a20916177fb0e5a55e1cc74df22e53795}\label{class_message_handling_a20916177fb0e5a55e1cc74df22e53795}} 
+\index{Message\+Handling@{Message\+Handling}!throw\+Warning@{throw\+Warning}}
+\index{throw\+Warning@{throw\+Warning}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{throw\+Warning()}{throwWarning()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Message\+Handling\+::throw\+Warning (\begin{DoxyParamCaption}\item[{\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value}}]{Wnumber,  }\item[{const char $\ast$}]{additionaltext,  }\item[{const char $\ast$}]{functionname,  }\item[{const char $\ast$}]{filename,  }\item[{const unsigned long}]{linenumber,  }\item[{\hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status}}]{local\+Visibility\+Status }\end{DoxyParamCaption})}
+
+Prints a warning message (a simplified macro T\+H\+R\+O\+W\+W\+A\+R\+N\+I\+NG is also provided). Warnings are definied as abnormal events which does N\+OT cause an immediate termination of the current (sub) function. \begin{DoxyReturn}{Returns}
+Warning number returned by sub function call 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em Wnumber} & Warning number returned by sub function call. \\
+\hline
+{\em additionaltext} & Additional warning text (0, if none). \\
+\hline
+{\em functionname} & Name of function which caused the warning. \\
+\hline
+{\em filename} & Name of file which caused the warning. \\
+\hline
+{\em linenumber} & Number of line which caused the warning. \\
+\hline
+{\em local\+Visibility\+Status} & Determines (locally) if warning message can be printed to std\+File. If G\+L\+O\+B\+AL visibility status of the message is set to V\+S\+\_\+\+H\+I\+D\+D\+EN, no message is printed, anyway! \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_message_handling_a762bbeac9042fc5ccb406bbb8b7c72d2}\label{class_message_handling_a762bbeac9042fc5ccb406bbb8b7c72d2}} 
+\index{Message\+Handling@{Message\+Handling}!error\+Count@{error\+Count}}
+\index{error\+Count@{error\+Count}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{error\+Count}{errorCount}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Message\+Handling\+::error\+Count\hspace{0.3cm}{\ttfamily [protected]}}
+
+Counts number of errors (for nicer output only). \mbox{\Hypertarget{class_message_handling_af75a2fd3122cc2a9793c5ad491b04325}\label{class_message_handling_af75a2fd3122cc2a9793c5ad491b04325}} 
+\index{Message\+Handling@{Message\+Handling}!error\+Visibility@{error\+Visibility}}
+\index{error\+Visibility@{error\+Visibility}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{error\+Visibility}{errorVisibility}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} Message\+Handling\+::error\+Visibility\hspace{0.3cm}{\ttfamily [protected]}}
+
+Error messages visible? \mbox{\Hypertarget{class_message_handling_a6a630fa427803cf4e1e0f54d8fb14a1b}\label{class_message_handling_a6a630fa427803cf4e1e0f54d8fb14a1b}} 
+\index{Message\+Handling@{Message\+Handling}!info\+Visibility@{info\+Visibility}}
+\index{info\+Visibility@{info\+Visibility}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{info\+Visibility}{infoVisibility}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} Message\+Handling\+::info\+Visibility\hspace{0.3cm}{\ttfamily [protected]}}
+
+Info messages visible? \mbox{\Hypertarget{class_message_handling_a2a40cbdfced701a18da281f7a4e910ee}\label{class_message_handling_a2a40cbdfced701a18da281f7a4e910ee}} 
+\index{Message\+Handling@{Message\+Handling}!output\+File@{output\+File}}
+\index{output\+File@{output\+File}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{output\+File}{outputFile}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ Message\+Handling\+::output\+File\hspace{0.3cm}{\ttfamily [protected]}}
+
+Output file for messages. \mbox{\Hypertarget{class_message_handling_af715e377af244418a8003b172c8bdf91}\label{class_message_handling_af715e377af244418a8003b172c8bdf91}} 
+\index{Message\+Handling@{Message\+Handling}!warning\+Visibility@{warning\+Visibility}}
+\index{warning\+Visibility@{warning\+Visibility}!Message\+Handling@{Message\+Handling}}
+\subsubsection{\texorpdfstring{warning\+Visibility}{warningVisibility}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a36503475bb1fea0a7fd7087259ee63c1}{Visibility\+Status} Message\+Handling\+::warning\+Visibility\hspace{0.3cm}{\ttfamily [protected]}}
+
+Warning messages visible? 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_message_handling_8hpp}{Message\+Handling.\+hpp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_message_handling_8ipp}{Message\+Handling.\+ipp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/src/\hyperlink{_message_handling_8cpp}{Message\+Handling.\+cpp}\end{DoxyCompactItemize}

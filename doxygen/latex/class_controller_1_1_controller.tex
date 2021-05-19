@@ -1,0 +1,62 @@
+\hypertarget{class_controller_1_1_controller}{}\section{Controller\+:\+:Controller Class Reference}
+\label{class_controller_1_1_controller}\index{Controller\+::\+Controller@{Controller\+::\+Controller}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_controller_1_1_controller_acbeee640daaeb54bd343e9463d75e0d3}{Init} (ros\+::\+Node\+Handle \&nh, const Eigen\+::\+Vector\+Xd \&q\+\_\+init, const Eigen\+::\+Vector\+Xd \&qd\+\_\+init)
+\begin{DoxyCompactList}\small\item\em bool Init \end{DoxyCompactList}\item 
+Eigen\+::\+Vector\+Xd \hyperlink{class_controller_1_1_controller_a533cbaf3f33f65ca265ae59093bd85c4}{Update} (const Eigen\+::\+Vector\+Xd \&q, const Eigen\+::\+Vector\+Xd \&dq, const ros\+::\+Duration \&period)
+\begin{DoxyCompactList}\small\item\em Update for the controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_controller_1_1_controller_acbeee640daaeb54bd343e9463d75e0d3}\label{class_controller_1_1_controller_acbeee640daaeb54bd343e9463d75e0d3}} 
+\index{Controller\+::\+Controller@{Controller\+::\+Controller}!Init@{Init}}
+\index{Init@{Init}!Controller\+::\+Controller@{Controller\+::\+Controller}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily bool Controller\+::\+Controller\+::\+Init (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{nh,  }\item[{const Eigen\+::\+Vector\+Xd \&}]{q\+\_\+init,  }\item[{const Eigen\+::\+Vector\+Xd \&}]{qd\+\_\+init }\end{DoxyParamCaption})}
+
+
+
+bool Init 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nh} & ros node handle \\
+\hline
+{\em q\+\_\+init} & initial joint position \\
+\hline
+{\em qd\+\_\+init} & initial joint velocity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the controller if correctly initialized 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_controller_1_1_controller_a533cbaf3f33f65ca265ae59093bd85c4}\label{class_controller_1_1_controller_a533cbaf3f33f65ca265ae59093bd85c4}} 
+\index{Controller\+::\+Controller@{Controller\+::\+Controller}!Update@{Update}}
+\index{Update@{Update}!Controller\+::\+Controller@{Controller\+::\+Controller}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector\+Xd Controller\+::\+Controller\+::\+Update (\begin{DoxyParamCaption}\item[{const Eigen\+::\+Vector\+Xd \&}]{q,  }\item[{const Eigen\+::\+Vector\+Xd \&}]{dq,  }\item[{const ros\+::\+Duration \&}]{period }\end{DoxyParamCaption})}
+
+
+
+Update for the controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em q} & the current joint position \\
+\hline
+{\em dq} & the current joint velocity \\
+\hline
+{\em period} & the refresh rate of the control \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the desired joint position 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/panda\+\_\+mpc/include/controller/controller.\+hpp\item 
+/home/zheng/catkin\+\_\+ws/src/panda\+\_\+mpc/src/controller.\+cpp\end{DoxyCompactItemize}

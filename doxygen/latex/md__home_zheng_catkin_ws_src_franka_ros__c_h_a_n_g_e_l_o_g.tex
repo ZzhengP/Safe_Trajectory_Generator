@@ -1,0 +1,193 @@
+\subsection*{0.\+7.\+1 -\/ 2020-\/10-\/22}
+
+Requires {\ttfamily libfranka} $>$= 0.\+7.\+0
+
+
+\begin{DoxyItemize}
+\item {\ttfamily franka\+\_\+example\+\_\+controllers}\+: Added example for dual-\/arm teleoperation based on {\ttfamily franka\+\_\+combinable\+\_\+hw}.
+\item {\ttfamily franka\+\_\+gripper}\+: Made stopping on shutdown optional.
+\item {\ttfamily franka\+\_\+hw}\+: Added {\ttfamily franka\+\_\+control\+\_\+services} install instruction.
+\end{DoxyItemize}
+
+\subsection*{0.\+7.\+0 -\/ 2020-\/07-\/15}
+
+Requires {\ttfamily libfranka} $>$= 0.\+7.\+0
+
+
+\begin{DoxyItemize}
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} moved services and action from {\ttfamily franka\+\_\+control} to {\ttfamily franka\+\_\+msgs}.
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} moved Service container from {\ttfamily franka\+\_\+control} to {\ttfamily franka\+\_\+hw}.
+\item {\ttfamily franka\+\_\+example\+\_\+controllers}\+: Added example for dual-\/arm control based on {\ttfamily franka\+\_\+combinable\+\_\+hw}.
+\item {\ttfamily franka\+\_\+description} \+:
+\begin{DoxyItemize}
+\item Added an example urdf with two panda arms.
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} Updated collision volumes.
+\item Removed invalid {\ttfamily axis} for {\ttfamily joint8}.
+\end{DoxyItemize}
+\item {\ttfamily franka\+\_\+hw}\+:
+\begin{DoxyItemize}
+\item Added hardware classes to support torque-\/controlling multiple robots from one controller.
+\item Refactored Franka\+HW class to serve as base class (e.\+g. for Franka\+Combinable\+HW).
+\item Added joint limits checking to Franka\+HW which means parameterized warning prints when approaching limits.
+\item Made initial collision behavior a parameter.
+\item Added default constructor and init method to Franka\+HW.
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} moved parsing of parameters from control node to Franka\+H\+W\+::init.
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} made libfranka robot a member of Franka\+HW.
+\item Added missing return value to {\ttfamily franka\+::\+Controller\+Mode} stream operator function.
+\end{DoxyItemize}
+\item {\ttfamily franka\+\_\+control}\+:
+\begin{DoxyItemize}
+\item Added control node that can runs a {\ttfamily Franka\+Combined\+HW} to control mulitple Pandas.
+\item Publish whole {\ttfamily libfranka} {\ttfamily franka\+::\+Robot\+State} in {\ttfamily franka\+\_\+state\+\_\+controller}.
+\end{DoxyItemize}
+\item {\ttfamily franka\+\_\+example\+\_\+controllers}\+:
+\begin{DoxyItemize}
+\item Cartesian impedance example controller\+: Interpolate desired orientations with slerp and change orientation error to quaternion.
+\end{DoxyItemize}
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} Moved {\ttfamily panda\+\_\+moveit\+\_\+config} to \href{https://github.com/ros-planning/panda_moveit_config}{\tt {\ttfamily ros-\/planning}}.
+\item Added support for R\+OS Melodic Morenia.
+\item Raised minimum C\+Make version to 3.\+4 to match {\ttfamily libfranka}.
+\item Add rosparam to choose value of {\ttfamily franka\+::\+Realtime\+Config}.
+\item Fix unused parameter bugs in {\ttfamily Franka\+Model\+Handle} (\#78).
+\item Added (experimental) support for R\+OS Noetic Ninjemys.
+\end{DoxyItemize}
+
+\subsection*{0.\+6.\+0 -\/ 2018-\/08-\/08}
+
+Requires {\ttfamily libfranka} $>$= 0.\+5.\+0
+
+
+\begin{DoxyItemize}
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} Fixes for Move\+It, improving robot performance\+:
+\begin{DoxyItemize}
+\item Fixed joint velocity and acceleration limits in {\ttfamily joint\+\_\+limits.\+yaml}
+\item Use desired joint state for move group
+\end{DoxyItemize}
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} Updated joint limits in U\+R\+DF
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} Fixed velocity, acceleration and jerk limits in {\ttfamily franka\+\_\+hw}
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} Start {\ttfamily franka\+\_\+gripper\+\_\+node} when giving {\ttfamily load\+\_\+gripper\+:=true} to {\ttfamily franka\+\_\+control.\+launch}
+\item Allow to configure rate limiting, filtering and internal controller in {\ttfamily franka\+\_\+control\+\_\+node}
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} {\ttfamily Franka\+H\+W\+::\+Franka\+HW} takes additional parameters.
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} Enabled rate limiting and low-\/pass filtering by default ({\ttfamily franka\+\_\+control\+\_\+node.\+yaml})
+\item Publish desired joint state in {\ttfamily /joint\+\_\+state\+\_\+desired}
+\item Removed {\ttfamily effort\+\_\+joint\+\_\+trajectory\+\_\+controller} from {\ttfamily default\+\_\+controllers.\+yaml}
+\item Fixed a bug when switching between controllers using the same {\ttfamily libfranka} interface
+\end{DoxyItemize}
+
+\subsection*{0.\+5.\+0 -\/ 2018-\/06-\/28}
+
+Requires {\ttfamily libfranka} $>$= 0.\+4.\+0
+
+
+\begin{DoxyItemize}
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} Updated U\+R\+DF\+:
+\begin{DoxyItemize}
+\item Adjusted maximum joint velocity
+\item Updated axis 4 hard and soft limits
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\subsection*{0.\+4.\+1 -\/ 2018-\/06-\/21}
+
+Requires {\ttfamily libfranka} $>$= 0.\+3.\+0
+
+
+\begin{DoxyItemize}
+\item Added some missing includes to {\ttfamily franka\+\_\+hw}
+\item Add support for commanding elbow in Cartesian pose and Cartesian velocity interfaces
+\end{DoxyItemize}
+
+\subsection*{0.\+4.\+0 -\/ 2018-\/03-\/26}
+
+Requires {\ttfamily libfranka} $>$= 0.\+3.\+0
+
+
+\begin{DoxyItemize}
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} Removed {\ttfamily arm\+\_\+id} and default {\ttfamily robot\+\_\+ip} from launchfiles
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} Changed namespace of {\ttfamily franka\+\_\+control} controller manager
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} Changed behavior of {\ttfamily gripper\+\_\+action} for compatibility with Move\+It
+\item Changes in {\ttfamily panda\+\_\+moveit\+\_\+config}\+:
+\begin{DoxyItemize}
+\item Updated joint limits from U\+R\+DF
+\item Removed {\ttfamily home} poses
+\item Fixed fake execution
+\item Add {\ttfamily load\+\_\+gripper} argument (default\+: {\ttfamily true}) to {\ttfamily panda\+\_\+moveit.\+launch}
+\item Conditionally load controllers/\+S\+R\+D\+Fs based on {\ttfamily load\+\_\+gripper}
+\item Add gripper controller configuration (requires running {\ttfamily franka\+\_\+gripper\+\_\+node})
+\end{DoxyItemize}
+\item Added {\ttfamily mimic} tag for gripper fingers to U\+R\+DF and fixed velocity limits
+\end{DoxyItemize}
+
+\subsection*{0.\+3.\+0 -\/ 2018-\/02-\/22}
+
+Requires {\ttfamily libfranka} $>$= 0.\+3.\+0
+
+
+\begin{DoxyItemize}
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} Changed signatures in {\ttfamily \hyperlink{classfranka__hw_1_1_franka_model_handle}{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\item {\bfseries B\+R\+E\+A\+K\+I\+NG} Added epsilon parameters to {\ttfamily franka\+\_\+gripper/\+Grasp} action
+\item Added Collada meshes for Panda and Hand
+\item Added missing dependencies to {\ttfamily panda\+\_\+moveit\+\_\+config} and {\ttfamily franka\+\_\+example\+\_\+controllers}
+\item Fixed linker errors when building with {\ttfamily -\/\+D\+Franka\+\_\+\+D\+IR} while an older version of {\ttfamily ros-\/kinetic-\/libfranka} is installed
+\item Added gripper joint state publisher to {\ttfamily franka\+\_\+visualization}
+\item Moved {\ttfamily move\+\_\+to\+\_\+start.\+py} example script to {\ttfamily franka\+\_\+example\+\_\+controllers}
+\end{DoxyItemize}
+
+\subsection*{0.\+2.\+2 -\/ 2018-\/01-\/31}
+
+Requires {\ttfamily libfranka} $>$= 0.\+2.\+0
+
+
+\begin{DoxyItemize}
+\item Catkin-\/related fixes for {\ttfamily franka\+\_\+example\+\_\+controllers}
+\item Added missing {\ttfamily $<$build\+\_\+export\+\_\+depend$>$} for {\ttfamily message\+\_\+runtime}
+\end{DoxyItemize}
+
+\subsection*{0.\+2.\+1 -\/ 2018-\/01-\/30}
+
+Requires {\ttfamily libfranka} $>$= 0.\+2.\+0
+
+
+\begin{DoxyItemize}
+\item Added missing dependency to {\ttfamily franka\+\_\+example\+\_\+controllers}
+\item Lowered rotational gains for Cartesian impedance example controller
+\end{DoxyItemize}
+
+\subsection*{0.\+2.\+0 -\/ 2018-\/01-\/29}
+
+Requires {\ttfamily libfranka} $>$= 0.\+2.\+0
+
+
+\begin{DoxyItemize}
+\item Added missing run-\/time dependencies to {\ttfamily franka\+\_\+description} and {\ttfamily franka\+\_\+control}
+\item Added {\ttfamily tau\+\_\+\+J\+\_\+d}, {\ttfamily m\+\_\+ee}, {\ttfamily F\+\_\+x\+\_\+\+Cee}, {\ttfamily I\+\_\+ee}, {\ttfamily m\+\_\+total}, {\ttfamily F\+\_\+x\+\_\+\+Ctotal}, {\ttfamily I\+\_\+total}, {\ttfamily theta} and {\ttfamily dtheta} to {\ttfamily franka\+\_\+msgs/\+Franka\+State}
+\item Added new errors to {\ttfamily franka\+\_\+msgs/\+Errors}
+\item Updated and improved examples in {\ttfamily franka\+\_\+example\+\_\+controllers}
+\item Fixed includes for Eigen3 in {\ttfamily franka\+\_\+example\+\_\+controllers}
+\item Fixed gripper state publishing in {\ttfamily franka\+\_\+gripper\+\_\+node}
+\end{DoxyItemize}
+
+\subsection*{0.\+1.\+2 -\/ 2017-\/10-\/10}
+
+
+\begin{DoxyItemize}
+\item Fixed out-\/of-\/workspace build
+\end{DoxyItemize}
+
+\subsection*{0.\+1.\+1 -\/ 2017-\/10-\/09}
+
+
+\begin{DoxyItemize}
+\item Integrated {\ttfamily franka\+\_\+description} as subdirectory
+\item Fixed dependencies on libfranka
+\item Fixed R\+Viz config file paths
+\item Added missing {\ttfamily test\+\_\+depend} to {\ttfamily franka\+\_\+hw}
+\item Added missing C\+Make install rules
+\end{DoxyItemize}
+
+\subsection*{0.\+1.\+0 -\/ 2017-\/09-\/15}
+
+
+\begin{DoxyItemize}
+\item Initial release 
+\end{DoxyItemize}

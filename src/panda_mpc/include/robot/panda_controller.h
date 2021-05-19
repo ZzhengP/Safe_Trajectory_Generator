@@ -33,6 +33,7 @@ namespace panda_mpc{
 
 class PandaMPCController : public controller_interface::MultiInterfaceController<
                                                 franka_hw::FrankaModelInterface,
+                                                hardware_interface::PositionJointInterface,
                                                 hardware_interface::VelocityJointInterface,
                                                 hardware_interface::EffortJointInterface,
                                                 franka_hw::FrankaStateInterface> {
@@ -62,7 +63,9 @@ private:
     std::unique_ptr<franka_hw::FrankaModelHandle> model_handle_;
 
     hardware_interface::VelocityJointInterface* velocity_joint_interface_;
+    hardware_interface::PositionJointInterface* position_joint_interface_;
     std::vector<hardware_interface::JointHandle> velocity_joint_handles_;
+    std::vector<hardware_interface::JointHandle> position_joint_handles_;
     std::vector<hardware_interface::JointHandle> joint_handles_;
     std::string control_level;
 };

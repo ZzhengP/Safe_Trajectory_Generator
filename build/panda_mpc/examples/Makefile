@@ -56,6 +56,18 @@ CMAKE_BINARY_DIR = /home/zheng/catkin_ws/build/panda_mpc
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -78,18 +90,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -168,46 +168,46 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-examples/CMakeFiles/qptest.dir/rule:
-	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/qptest.dir/rule
-.PHONY : examples/CMakeFiles/qptest.dir/rule
+examples/CMakeFiles/trajectory_send.dir/rule:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/trajectory_send.dir/rule
+.PHONY : examples/CMakeFiles/trajectory_send.dir/rule
 
 # Convenience name for target.
-qptest: examples/CMakeFiles/qptest.dir/rule
+trajectory_send: examples/CMakeFiles/trajectory_send.dir/rule
 
-.PHONY : qptest
+.PHONY : trajectory_send
 
 # fast build rule for target.
-qptest/fast:
-	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/qptest.dir/build.make examples/CMakeFiles/qptest.dir/build
-.PHONY : qptest/fast
+trajectory_send/fast:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/trajectory_send.dir/build.make examples/CMakeFiles/trajectory_send.dir/build
+.PHONY : trajectory_send/fast
 
-qptest.o: qptest.cpp.o
+trajectory_send.o: trajectory_send.cpp.o
 
-.PHONY : qptest.o
+.PHONY : trajectory_send.o
 
 # target to build an object file
-qptest.cpp.o:
-	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/qptest.dir/build.make examples/CMakeFiles/qptest.dir/qptest.cpp.o
-.PHONY : qptest.cpp.o
+trajectory_send.cpp.o:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/trajectory_send.dir/build.make examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o
+.PHONY : trajectory_send.cpp.o
 
-qptest.i: qptest.cpp.i
+trajectory_send.i: trajectory_send.cpp.i
 
-.PHONY : qptest.i
+.PHONY : trajectory_send.i
 
 # target to preprocess a source file
-qptest.cpp.i:
-	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/qptest.dir/build.make examples/CMakeFiles/qptest.dir/qptest.cpp.i
-.PHONY : qptest.cpp.i
+trajectory_send.cpp.i:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/trajectory_send.dir/build.make examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.i
+.PHONY : trajectory_send.cpp.i
 
-qptest.s: qptest.cpp.s
+trajectory_send.s: trajectory_send.cpp.s
 
-.PHONY : qptest.s
+.PHONY : trajectory_send.s
 
 # target to generate assembly for a file
-qptest.cpp.s:
-	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/qptest.dir/build.make examples/CMakeFiles/qptest.dir/qptest.cpp.s
-.PHONY : qptest.cpp.s
+trajectory_send.cpp.s:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/trajectory_send.dir/build.make examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.s
+.PHONY : trajectory_send.cpp.s
 
 # Help Target
 help:
@@ -215,17 +215,17 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... test"
-	@echo "... install/strip"
-	@echo "... qptest"
+	@echo "... trajectory_send"
 	@echo "... list_install_components"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... install"
-	@echo "... qptest.o"
-	@echo "... qptest.i"
-	@echo "... qptest.s"
+	@echo "... trajectory_send.o"
+	@echo "... trajectory_send.i"
+	@echo "... trajectory_send.s"
 .PHONY : help
 
 

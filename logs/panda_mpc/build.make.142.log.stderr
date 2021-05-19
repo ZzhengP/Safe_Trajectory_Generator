@@ -1,0 +1,64 @@
+In file included from [01m[K/opt/ros/melodic/include/class_loader/class_loader_core.hpp:47:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/class_loader/class_loader.hpp:46[m[K,
+                 from [01m[K/opt/ros/melodic/include/pluginlib/class_list_macros.hpp:40[m[K,
+                 from [01m[K/opt/ros/melodic/include/pluginlib/class_list_macros.h:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:9[m[K:
+/opt/ros/melodic/include/class_loader/meta_object.hpp: In instantiation of '[01m[KB* class_loader::impl::MetaObject<C, B>::create() const [with C = panda_mpc::PandaMPCController; B = controller_interface::ControllerBase][m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:195:1:[m[K   required from here
+[01m[K/opt/ros/melodic/include/class_loader/meta_object.hpp:196:12:[m[K [01;31m[Kerror: [m[Kuse of deleted function '[01m[Kpanda_mpc::PandaMPCController::PandaMPCController()[m[K'
+     return [01;31m[Knew C[m[K;
+            [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:11:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:34:7:[m[K [01;36m[Knote: [m[K'[01m[Kpanda_mpc::PandaMPCController::PandaMPCController()[m[K' is implicitly deleted because the default definition would be ill-formed:
+ class [01;36m[KPandaMPCController[m[K : public controller_interface::MultiInterfaceController<
+       [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:34:7:[m[K [01;31m[Kerror: [m[Kuse of deleted function '[01m[KController::Controller::Controller()[m[K'
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:11[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:46:7:[m[K [01;36m[Knote: [m[K'[01m[KController::Controller::Controller()[m[K' is implicitly deleted because the default definition would be ill-formed:
+ class [01;36m[KController[m[K{
+       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:46:7:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[Krobot::robotModel::robotModel()[m[K'
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:11[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:35:3:[m[K [01;36m[Knote: [m[Kcandidate: robot::robotModel::robotModel(ros::NodeHandle&, const string&, const string&)
+   [01;36m[KrobotModel[m[K(ros::NodeHandle &node_handle, const std::string& root_link, const std::string& tip_link):
+   [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:35:3:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:31:7:[m[K [01;36m[Knote: [m[Kcandidate: robot::robotModel::robotModel(robot::robotModel&&)
+ class [01;36m[KrobotModel[m[K{
+       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:31:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/usr/include/gazebo-9/gazebo/common/common.hh:36:0[m[K,
+                 from [01m[K/usr/include/gazebo-9/gazebo/gazebo_core.hh:19[m[K,
+                 from [01m[K/usr/include/gazebo-9/gazebo/gazebo.hh:20[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:5[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:[m[K In function '[01m[Kgazebo::ModelPlugin* gazebo::RegisterPlugin()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:436:5:[m[K [01;31m[Kerror: [m[Kuse of deleted function '[01m[Kgazebo::PandaSimulation::PandaSimulation()[m[K'
+     [01;31m[KG[m[KZ_REGISTER_MODEL_PLUGIN(PandaSimulation)
+     [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:18:11:[m[K [01;36m[Knote: [m[K'[01m[Kgazebo::PandaSimulation::PandaSimulation()[m[K' is implicitly deleted because the default definition would be ill-formed:
+     class [01;36m[KPandaSimulation[m[K : public ModelPlugin
+           [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:18:11:[m[K [01;31m[Kerror: [m[Kuse of deleted function '[01m[KController::Controller::Controller()[m[K'
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:46:7:[m[K [01;36m[Knote: [m[K'[01m[KController::Controller::Controller()[m[K' is implicitly deleted because the default definition would be ill-formed:
+ class [01;36m[KController[m[K{
+       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:46:7:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[Krobot::robotModel::robotModel()[m[K'
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:35:3:[m[K [01;36m[Knote: [m[Kcandidate: robot::robotModel::robotModel(ros::NodeHandle&, const string&, const string&)
+   [01;36m[KrobotModel[m[K(ros::NodeHandle &node_handle, const std::string& root_link, const std::string& tip_link):
+   [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:35:3:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:31:7:[m[K [01;36m[Knote: [m[Kcandidate: robot::robotModel::robotModel(robot::robotModel&&)
+ class [01;36m[KrobotModel[m[K{
+       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:31:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

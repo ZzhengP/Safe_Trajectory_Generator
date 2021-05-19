@@ -1,0 +1,456 @@
+\hypertarget{class_options}{}\section{Options Class Reference}
+\label{class_options}\index{Options@{Options}}
+
+
+Manages all user-\/specified options for solving Q\+Ps.  
+
+
+
+
+{\ttfamily \#include $<$Options.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_options_aeaece707f540fe3efef777a934e3d273}{Options} ()
+\item 
+\hyperlink{class_options_ad9215a27608868991e0cd3e9081cb3b4}{Options} (const \hyperlink{class_options}{Options} \&rhs)
+\item 
+\hyperlink{class_options_a86ddb85b183f8b58af5481f30a42fa92}{$\sim$\+Options} ()
+\item 
+\hyperlink{class_options}{Options} \& \hyperlink{class_options_a58a8fea98a7e4c83e6692084e4227fa8}{operator=} (const \hyperlink{class_options}{Options} \&rhs)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_options_abea747512c08e02ef1148efec0fcddca}{set\+To\+Default} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_options_a9febf0968f9e848e701b996b6694db73}{set\+To\+Reliable} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_options_a3127057d81b63c2206a3a59adca44b9b}{set\+To\+M\+PC} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_options_a78bc5793ae28467496254f6b59f503c0}{set\+To\+Fast} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_options_af10ef0a01e3be1db805a3fa4aea094db}{ensure\+Consistency} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_options_afc24e794f0871176e811de2671259374}{print} () const
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8hpp_a83ff212f474e3669d8fac2d727f65de5}{Print\+Level} \hyperlink{class_options_a3c7327943ce25f36479356d33a0b0723}{print\+Level}
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_options_a8346f6e9a849cc3da7cbbede72a10196}{enable\+Ramping}
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_options_aa691471f2994643343ddcf2b697a19aa}{enable\+Far\+Bounds}
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_options_abba3f3ece76237c647b5719eae9c26f2}{enable\+Flipping\+Bounds}
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_options_adebe0981cee6bd30e7f242fa16efddb7}{enable\+Regularisation}
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_options_a043d6f962a785e05d304950d01461432}{enable\+Full\+L\+I\+Tests}
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_options_aeec0473a768989b1a2f587f51709636a}{enable\+N\+Z\+C\+Tests}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_options_a702013b2914bd8122a5dc803d1444a59}{enable\+Drift\+Correction}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_options_a6618c6e219b55ce73a037b49176bc8cb}{enable\+Cholesky\+Refactorisation}
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_options_a21c673d77ae5210038a05ca2a41bd1da}{enable\+Equalities}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_ad18a17e6fd0c84625ad44261a7f73474}{termination\+Tolerance}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_a9cc43ec93c854bd0302de1a940fda5dd}{bound\+Tolerance}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_aa23e1c8d7c64953adcc8cc2c3f03d25e}{bound\+Relaxation}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_af655ae1250e2c425b278644163cd3a61}{eps\+Num}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_a982819ac9663847af5c920416192de1b}{eps\+Den}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_a4b40320e0298e2d21720541b117f5d81}{max\+Primal\+Jump}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_a0b8e5478791cd5c003882b72a706014f}{max\+Dual\+Jump}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_ae6f01e48e40c0e90c1d081225824fa69}{initial\+Ramping}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_adf4a78f73d1efb4f645e9875e2f8be07}{final\+Ramping}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_a2ec58bd7731426a3eb260ed7a9ad481c}{initial\+Far\+Bounds}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_a5331179ac3983d3e57d7d6a80e3c8175}{grow\+Far\+Bounds}
+\item 
+\hyperlink{_types_8hpp_a70a6a40d261a015ead8d43aa589383a4}{Subject\+To\+Status} \hyperlink{class_options_af9aaafb64ae87034efa2c916eff51dca}{initial\+Status\+Bounds}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_aadb15470a12af09f0146a8b24e1a26fd}{eps\+Flipping}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_options_a82347700b27bb1af11879b42f0bef6ce}{num\+Regularisation\+Steps}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_a3521b2ae6a97e3f10f08ef8130ca7a49}{eps\+Regularisation}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_options_a4c9f296e726a52eebbb7cee034c60ad8}{num\+Refinement\+Steps}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_a8d7b0b4ab3311519b73e0c30a98e7295}{eps\+Iter\+Ref}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_af972adad4f56f124531725e1248a51e3}{eps\+L\+I\+Tests}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_a636e3942e0ad78b9c4914541a20b70d0}{eps\+N\+Z\+C\+Tests}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_options_abb00b9be9b9988884954bbe905ae317f}{rcond\+S\+Min}
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_options_a52d5f55b5fb0b5ddd52cd8069d3ce477}{enable\+Inertia\+Correction}
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_options_a471b77ce66c8b16a06e61d94af785f91}{enable\+Drop\+Infeasibles}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_options_a2298b2a19f20494aa1225316a9318e92}{drop\+Bound\+Priority}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_options_a6720a59401830e78e8ff83830fe7f571}{drop\+Eq\+Con\+Priority}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_options_a557c0f1d63e6f4c176ca0447bbf8c92d}{drop\+Ineq\+Con\+Priority}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_options_a095e22d9b8588029781094cccc01e375}{copy} (const \hyperlink{class_options}{Options} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages all user-\/specified options for solving Q\+Ps. 
+
+This class manages all user-\/specified options used for solving quadratic programs.
+
+\begin{DoxyAuthor}{Author}
+Hans Joachim Ferreau, Andreas Potschka, Christian Kirches 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2007-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_options_aeaece707f540fe3efef777a934e3d273}\label{class_options_aeaece707f540fe3efef777a934e3d273}} 
+\index{Options@{Options}!Options@{Options}}
+\index{Options@{Options}!Options@{Options}}
+\subsubsection{\texorpdfstring{Options()}{Options()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_afd127fcb3c8f47975e9fa0ec2bacde52}{B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} Options\+::\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_options_ad9215a27608868991e0cd3e9081cb3b4}\label{class_options_ad9215a27608868991e0cd3e9081cb3b4}} 
+\index{Options@{Options}!Options@{Options}}
+\index{Options@{Options}!Options@{Options}}
+\subsubsection{\texorpdfstring{Options()}{Options()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Options\+::\+Options (\begin{DoxyParamCaption}\item[{const \hyperlink{class_options}{Options} \&}]{rhs }\end{DoxyParamCaption})}
+
+Copy constructor (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_options_a86ddb85b183f8b58af5481f30a42fa92}\label{class_options_a86ddb85b183f8b58af5481f30a42fa92}} 
+\index{Options@{Options}!````~Options@{$\sim$\+Options}}
+\index{````~Options@{$\sim$\+Options}!Options@{Options}}
+\subsubsection{\texorpdfstring{$\sim$\+Options()}{~Options()}}
+{\footnotesize\ttfamily Options\+::$\sim$\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_options_a095e22d9b8588029781094cccc01e375}\label{class_options_a095e22d9b8588029781094cccc01e375}} 
+\index{Options@{Options}!copy@{copy}}
+\index{copy@{copy}!Options@{Options}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Options\+::copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_options}{Options} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Copies all members from given rhs object. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_options_af10ef0a01e3be1db805a3fa4aea094db}\label{class_options_af10ef0a01e3be1db805a3fa4aea094db}} 
+\index{Options@{Options}!ensure\+Consistency@{ensure\+Consistency}}
+\index{ensure\+Consistency@{ensure\+Consistency}!Options@{Options}}
+\subsubsection{\texorpdfstring{ensure\+Consistency()}{ensureConsistency()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Options\+::ensure\+Consistency (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Ensures that all options have consistent values by automatically adjusting inconsistent ones. Note\+: This routine cannot (and does not try to) ensure that values are set to reasonable values that make the QP solution work! \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+O\+P\+T\+I\+O\+N\+S\+\_\+\+A\+D\+J\+U\+S\+T\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_options_a58a8fea98a7e4c83e6692084e4227fa8}\label{class_options_a58a8fea98a7e4c83e6692084e4227fa8}} 
+\index{Options@{Options}!operator=@{operator=}}
+\index{operator=@{operator=}!Options@{Options}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_options}{Options} \& Options\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_options}{Options} \&}]{rhs }\end{DoxyParamCaption})}
+
+Assignment operator (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_options_afc24e794f0871176e811de2671259374}\label{class_options_afc24e794f0871176e811de2671259374}} 
+\index{Options@{Options}!print@{print}}
+\index{print@{print}!Options@{Options}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Options\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Prints values of all options. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_options_abea747512c08e02ef1148efec0fcddca}\label{class_options_abea747512c08e02ef1148efec0fcddca}} 
+\index{Options@{Options}!set\+To\+Default@{set\+To\+Default}}
+\index{set\+To\+Default@{set\+To\+Default}!Options@{Options}}
+\subsubsection{\texorpdfstring{set\+To\+Default()}{setToDefault()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Options\+::set\+To\+Default (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sets all options to default values. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_options_a78bc5793ae28467496254f6b59f503c0}\label{class_options_a78bc5793ae28467496254f6b59f503c0}} 
+\index{Options@{Options}!set\+To\+Fast@{set\+To\+Fast}}
+\index{set\+To\+Fast@{set\+To\+Fast}!Options@{Options}}
+\subsubsection{\texorpdfstring{set\+To\+Fast()}{setToFast()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Options\+::set\+To\+Fast (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Same as \hyperlink{class_options_a3127057d81b63c2206a3a59adca44b9b}{set\+To\+M\+P\+C( )}, for ensuring backwards compatibility. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_options_a3127057d81b63c2206a3a59adca44b9b}\label{class_options_a3127057d81b63c2206a3a59adca44b9b}} 
+\index{Options@{Options}!set\+To\+M\+PC@{set\+To\+M\+PC}}
+\index{set\+To\+M\+PC@{set\+To\+M\+PC}!Options@{Options}}
+\subsubsection{\texorpdfstring{set\+To\+M\+P\+C()}{setToMPC()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Options\+::set\+To\+M\+PC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sets all options to values resulting in minimum solution time. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_options_a9febf0968f9e848e701b996b6694db73}\label{class_options_a9febf0968f9e848e701b996b6694db73}} 
+\index{Options@{Options}!set\+To\+Reliable@{set\+To\+Reliable}}
+\index{set\+To\+Reliable@{set\+To\+Reliable}!Options@{Options}}
+\subsubsection{\texorpdfstring{set\+To\+Reliable()}{setToReliable()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Options\+::set\+To\+Reliable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sets all options to values resulting in maximum reliabilty. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_options_aa23e1c8d7c64953adcc8cc2c3f03d25e}\label{class_options_aa23e1c8d7c64953adcc8cc2c3f03d25e}} 
+\index{Options@{Options}!bound\+Relaxation@{bound\+Relaxation}}
+\index{bound\+Relaxation@{bound\+Relaxation}!Options@{Options}}
+\subsubsection{\texorpdfstring{bound\+Relaxation}{boundRelaxation}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::bound\+Relaxation}
+
+Offset for relaxing (constraints\textquotesingle{}) bounds at beginning of an initial homotopy. It is also as initial value for far bounds. \mbox{\Hypertarget{class_options_a9cc43ec93c854bd0302de1a940fda5dd}\label{class_options_a9cc43ec93c854bd0302de1a940fda5dd}} 
+\index{Options@{Options}!bound\+Tolerance@{bound\+Tolerance}}
+\index{bound\+Tolerance@{bound\+Tolerance}!Options@{Options}}
+\subsubsection{\texorpdfstring{bound\+Tolerance}{boundTolerance}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::bound\+Tolerance}
+
+Lower/upper (constraints\textquotesingle{}) bound tolerance (an inequality constraint whose lower and upper bounds differ by less is regarded to be an equality constraint). \mbox{\Hypertarget{class_options_a2298b2a19f20494aa1225316a9318e92}\label{class_options_a2298b2a19f20494aa1225316a9318e92}} 
+\index{Options@{Options}!drop\+Bound\+Priority@{drop\+Bound\+Priority}}
+\index{drop\+Bound\+Priority@{drop\+Bound\+Priority}!Options@{Options}}
+\subsubsection{\texorpdfstring{drop\+Bound\+Priority}{dropBoundPriority}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Options\+::drop\+Bound\+Priority}
+
+... \mbox{\Hypertarget{class_options_a6720a59401830e78e8ff83830fe7f571}\label{class_options_a6720a59401830e78e8ff83830fe7f571}} 
+\index{Options@{Options}!drop\+Eq\+Con\+Priority@{drop\+Eq\+Con\+Priority}}
+\index{drop\+Eq\+Con\+Priority@{drop\+Eq\+Con\+Priority}!Options@{Options}}
+\subsubsection{\texorpdfstring{drop\+Eq\+Con\+Priority}{dropEqConPriority}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Options\+::drop\+Eq\+Con\+Priority}
+
+... \mbox{\Hypertarget{class_options_a557c0f1d63e6f4c176ca0447bbf8c92d}\label{class_options_a557c0f1d63e6f4c176ca0447bbf8c92d}} 
+\index{Options@{Options}!drop\+Ineq\+Con\+Priority@{drop\+Ineq\+Con\+Priority}}
+\index{drop\+Ineq\+Con\+Priority@{drop\+Ineq\+Con\+Priority}!Options@{Options}}
+\subsubsection{\texorpdfstring{drop\+Ineq\+Con\+Priority}{dropIneqConPriority}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Options\+::drop\+Ineq\+Con\+Priority}
+
+... \mbox{\Hypertarget{class_options_a6618c6e219b55ce73a037b49176bc8cb}\label{class_options_a6618c6e219b55ce73a037b49176bc8cb}} 
+\index{Options@{Options}!enable\+Cholesky\+Refactorisation@{enable\+Cholesky\+Refactorisation}}
+\index{enable\+Cholesky\+Refactorisation@{enable\+Cholesky\+Refactorisation}!Options@{Options}}
+\subsubsection{\texorpdfstring{enable\+Cholesky\+Refactorisation}{enableCholeskyRefactorisation}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Options\+::enable\+Cholesky\+Refactorisation}
+
+Specifies the frequency of full refactorisation of proj. Hessian (otherwise updates). \mbox{\Hypertarget{class_options_a702013b2914bd8122a5dc803d1444a59}\label{class_options_a702013b2914bd8122a5dc803d1444a59}} 
+\index{Options@{Options}!enable\+Drift\+Correction@{enable\+Drift\+Correction}}
+\index{enable\+Drift\+Correction@{enable\+Drift\+Correction}!Options@{Options}}
+\subsubsection{\texorpdfstring{enable\+Drift\+Correction}{enableDriftCorrection}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Options\+::enable\+Drift\+Correction}
+
+Specifies the frequency of drift corrections (0 = off). \mbox{\Hypertarget{class_options_a471b77ce66c8b16a06e61d94af785f91}\label{class_options_a471b77ce66c8b16a06e61d94af785f91}} 
+\index{Options@{Options}!enable\+Drop\+Infeasibles@{enable\+Drop\+Infeasibles}}
+\index{enable\+Drop\+Infeasibles@{enable\+Drop\+Infeasibles}!Options@{Options}}
+\subsubsection{\texorpdfstring{enable\+Drop\+Infeasibles}{enableDropInfeasibles}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Options\+::enable\+Drop\+Infeasibles}
+
+... \mbox{\Hypertarget{class_options_a21c673d77ae5210038a05ca2a41bd1da}\label{class_options_a21c673d77ae5210038a05ca2a41bd1da}} 
+\index{Options@{Options}!enable\+Equalities@{enable\+Equalities}}
+\index{enable\+Equalities@{enable\+Equalities}!Options@{Options}}
+\subsubsection{\texorpdfstring{enable\+Equalities}{enableEqualities}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Options\+::enable\+Equalities}
+
+Specifies whether equalities shall be always treated as active constraints. \mbox{\Hypertarget{class_options_aa691471f2994643343ddcf2b697a19aa}\label{class_options_aa691471f2994643343ddcf2b697a19aa}} 
+\index{Options@{Options}!enable\+Far\+Bounds@{enable\+Far\+Bounds}}
+\index{enable\+Far\+Bounds@{enable\+Far\+Bounds}!Options@{Options}}
+\subsubsection{\texorpdfstring{enable\+Far\+Bounds}{enableFarBounds}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Options\+::enable\+Far\+Bounds}
+
+Specifies whether far bounds shall be used or not. \mbox{\Hypertarget{class_options_abba3f3ece76237c647b5719eae9c26f2}\label{class_options_abba3f3ece76237c647b5719eae9c26f2}} 
+\index{Options@{Options}!enable\+Flipping\+Bounds@{enable\+Flipping\+Bounds}}
+\index{enable\+Flipping\+Bounds@{enable\+Flipping\+Bounds}!Options@{Options}}
+\subsubsection{\texorpdfstring{enable\+Flipping\+Bounds}{enableFlippingBounds}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Options\+::enable\+Flipping\+Bounds}
+
+Specifies whether flipping bounds shall be used or not. \mbox{\Hypertarget{class_options_a043d6f962a785e05d304950d01461432}\label{class_options_a043d6f962a785e05d304950d01461432}} 
+\index{Options@{Options}!enable\+Full\+L\+I\+Tests@{enable\+Full\+L\+I\+Tests}}
+\index{enable\+Full\+L\+I\+Tests@{enable\+Full\+L\+I\+Tests}!Options@{Options}}
+\subsubsection{\texorpdfstring{enable\+Full\+L\+I\+Tests}{enableFullLITests}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Options\+::enable\+Full\+L\+I\+Tests}
+
+Specifies whether condition-\/hardened LI test shall be used or not. \mbox{\Hypertarget{class_options_a52d5f55b5fb0b5ddd52cd8069d3ce477}\label{class_options_a52d5f55b5fb0b5ddd52cd8069d3ce477}} 
+\index{Options@{Options}!enable\+Inertia\+Correction@{enable\+Inertia\+Correction}}
+\index{enable\+Inertia\+Correction@{enable\+Inertia\+Correction}!Options@{Options}}
+\subsubsection{\texorpdfstring{enable\+Inertia\+Correction}{enableInertiaCorrection}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Options\+::enable\+Inertia\+Correction}
+
+Specifies whether the working set should be repaired when negative curvature is discovered during hotstart. \mbox{\Hypertarget{class_options_aeec0473a768989b1a2f587f51709636a}\label{class_options_aeec0473a768989b1a2f587f51709636a}} 
+\index{Options@{Options}!enable\+N\+Z\+C\+Tests@{enable\+N\+Z\+C\+Tests}}
+\index{enable\+N\+Z\+C\+Tests@{enable\+N\+Z\+C\+Tests}!Options@{Options}}
+\subsubsection{\texorpdfstring{enable\+N\+Z\+C\+Tests}{enableNZCTests}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Options\+::enable\+N\+Z\+C\+Tests}
+
+Specifies whether nonzero curvature tests shall be used. \mbox{\Hypertarget{class_options_a8346f6e9a849cc3da7cbbede72a10196}\label{class_options_a8346f6e9a849cc3da7cbbede72a10196}} 
+\index{Options@{Options}!enable\+Ramping@{enable\+Ramping}}
+\index{enable\+Ramping@{enable\+Ramping}!Options@{Options}}
+\subsubsection{\texorpdfstring{enable\+Ramping}{enableRamping}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Options\+::enable\+Ramping}
+
+Specifies whether ramping shall be enabled or not. \mbox{\Hypertarget{class_options_adebe0981cee6bd30e7f242fa16efddb7}\label{class_options_adebe0981cee6bd30e7f242fa16efddb7}} 
+\index{Options@{Options}!enable\+Regularisation@{enable\+Regularisation}}
+\index{enable\+Regularisation@{enable\+Regularisation}!Options@{Options}}
+\subsubsection{\texorpdfstring{enable\+Regularisation}{enableRegularisation}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Options\+::enable\+Regularisation}
+
+Specifies whether Hessian matrix shall be regularised in case semi-\/definiteness is detected. \mbox{\Hypertarget{class_options_a982819ac9663847af5c920416192de1b}\label{class_options_a982819ac9663847af5c920416192de1b}} 
+\index{Options@{Options}!eps\+Den@{eps\+Den}}
+\index{eps\+Den@{eps\+Den}!Options@{Options}}
+\subsubsection{\texorpdfstring{eps\+Den}{epsDen}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::eps\+Den}
+
+Denominator tolerance for ratio tests. \mbox{\Hypertarget{class_options_aadb15470a12af09f0146a8b24e1a26fd}\label{class_options_aadb15470a12af09f0146a8b24e1a26fd}} 
+\index{Options@{Options}!eps\+Flipping@{eps\+Flipping}}
+\index{eps\+Flipping@{eps\+Flipping}!Options@{Options}}
+\subsubsection{\texorpdfstring{eps\+Flipping}{epsFlipping}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::eps\+Flipping}
+
+Tolerance of squared Cholesky diagonal factor which triggers flipping bound. \mbox{\Hypertarget{class_options_a8d7b0b4ab3311519b73e0c30a98e7295}\label{class_options_a8d7b0b4ab3311519b73e0c30a98e7295}} 
+\index{Options@{Options}!eps\+Iter\+Ref@{eps\+Iter\+Ref}}
+\index{eps\+Iter\+Ref@{eps\+Iter\+Ref}!Options@{Options}}
+\subsubsection{\texorpdfstring{eps\+Iter\+Ref}{epsIterRef}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::eps\+Iter\+Ref}
+
+Early termination tolerance for iterative refinement. \mbox{\Hypertarget{class_options_af972adad4f56f124531725e1248a51e3}\label{class_options_af972adad4f56f124531725e1248a51e3}} 
+\index{Options@{Options}!eps\+L\+I\+Tests@{eps\+L\+I\+Tests}}
+\index{eps\+L\+I\+Tests@{eps\+L\+I\+Tests}!Options@{Options}}
+\subsubsection{\texorpdfstring{eps\+L\+I\+Tests}{epsLITests}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::eps\+L\+I\+Tests}
+
+Tolerance for linear independence tests. \mbox{\Hypertarget{class_options_af655ae1250e2c425b278644163cd3a61}\label{class_options_af655ae1250e2c425b278644163cd3a61}} 
+\index{Options@{Options}!eps\+Num@{eps\+Num}}
+\index{eps\+Num@{eps\+Num}!Options@{Options}}
+\subsubsection{\texorpdfstring{eps\+Num}{epsNum}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::eps\+Num}
+
+Numerator tolerance for ratio tests. \mbox{\Hypertarget{class_options_a636e3942e0ad78b9c4914541a20b70d0}\label{class_options_a636e3942e0ad78b9c4914541a20b70d0}} 
+\index{Options@{Options}!eps\+N\+Z\+C\+Tests@{eps\+N\+Z\+C\+Tests}}
+\index{eps\+N\+Z\+C\+Tests@{eps\+N\+Z\+C\+Tests}!Options@{Options}}
+\subsubsection{\texorpdfstring{eps\+N\+Z\+C\+Tests}{epsNZCTests}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::eps\+N\+Z\+C\+Tests}
+
+Tolerance for nonzero curvature tests. \mbox{\Hypertarget{class_options_a3521b2ae6a97e3f10f08ef8130ca7a49}\label{class_options_a3521b2ae6a97e3f10f08ef8130ca7a49}} 
+\index{Options@{Options}!eps\+Regularisation@{eps\+Regularisation}}
+\index{eps\+Regularisation@{eps\+Regularisation}!Options@{Options}}
+\subsubsection{\texorpdfstring{eps\+Regularisation}{epsRegularisation}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::eps\+Regularisation}
+
+Scaling factor of identity matrix used for Hessian regularisation. \mbox{\Hypertarget{class_options_adf4a78f73d1efb4f645e9875e2f8be07}\label{class_options_adf4a78f73d1efb4f645e9875e2f8be07}} 
+\index{Options@{Options}!final\+Ramping@{final\+Ramping}}
+\index{final\+Ramping@{final\+Ramping}!Options@{Options}}
+\subsubsection{\texorpdfstring{final\+Ramping}{finalRamping}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::final\+Ramping}
+
+Final value for Ramping Strategy. \mbox{\Hypertarget{class_options_a5331179ac3983d3e57d7d6a80e3c8175}\label{class_options_a5331179ac3983d3e57d7d6a80e3c8175}} 
+\index{Options@{Options}!grow\+Far\+Bounds@{grow\+Far\+Bounds}}
+\index{grow\+Far\+Bounds@{grow\+Far\+Bounds}!Options@{Options}}
+\subsubsection{\texorpdfstring{grow\+Far\+Bounds}{growFarBounds}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::grow\+Far\+Bounds}
+
+Factor to grow Far \hyperlink{class_bounds}{Bounds}. \mbox{\Hypertarget{class_options_a2ec58bd7731426a3eb260ed7a9ad481c}\label{class_options_a2ec58bd7731426a3eb260ed7a9ad481c}} 
+\index{Options@{Options}!initial\+Far\+Bounds@{initial\+Far\+Bounds}}
+\index{initial\+Far\+Bounds@{initial\+Far\+Bounds}!Options@{Options}}
+\subsubsection{\texorpdfstring{initial\+Far\+Bounds}{initialFarBounds}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::initial\+Far\+Bounds}
+
+Initial size of Far \hyperlink{class_bounds}{Bounds}. \mbox{\Hypertarget{class_options_ae6f01e48e40c0e90c1d081225824fa69}\label{class_options_ae6f01e48e40c0e90c1d081225824fa69}} 
+\index{Options@{Options}!initial\+Ramping@{initial\+Ramping}}
+\index{initial\+Ramping@{initial\+Ramping}!Options@{Options}}
+\subsubsection{\texorpdfstring{initial\+Ramping}{initialRamping}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::initial\+Ramping}
+
+Start value for Ramping Strategy. \mbox{\Hypertarget{class_options_af9aaafb64ae87034efa2c916eff51dca}\label{class_options_af9aaafb64ae87034efa2c916eff51dca}} 
+\index{Options@{Options}!initial\+Status\+Bounds@{initial\+Status\+Bounds}}
+\index{initial\+Status\+Bounds@{initial\+Status\+Bounds}!Options@{Options}}
+\subsubsection{\texorpdfstring{initial\+Status\+Bounds}{initialStatusBounds}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a70a6a40d261a015ead8d43aa589383a4}{Subject\+To\+Status} Options\+::initial\+Status\+Bounds}
+
+Initial status of bounds at first iteration. \mbox{\Hypertarget{class_options_a0b8e5478791cd5c003882b72a706014f}\label{class_options_a0b8e5478791cd5c003882b72a706014f}} 
+\index{Options@{Options}!max\+Dual\+Jump@{max\+Dual\+Jump}}
+\index{max\+Dual\+Jump@{max\+Dual\+Jump}!Options@{Options}}
+\subsubsection{\texorpdfstring{max\+Dual\+Jump}{maxDualJump}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::max\+Dual\+Jump}
+
+Maximum allowed jump in dual variables in linear independence tests. \mbox{\Hypertarget{class_options_a4b40320e0298e2d21720541b117f5d81}\label{class_options_a4b40320e0298e2d21720541b117f5d81}} 
+\index{Options@{Options}!max\+Primal\+Jump@{max\+Primal\+Jump}}
+\index{max\+Primal\+Jump@{max\+Primal\+Jump}!Options@{Options}}
+\subsubsection{\texorpdfstring{max\+Primal\+Jump}{maxPrimalJump}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::max\+Primal\+Jump}
+
+Maximum allowed jump in primal variables in nonzero curvature tests. \mbox{\Hypertarget{class_options_a4c9f296e726a52eebbb7cee034c60ad8}\label{class_options_a4c9f296e726a52eebbb7cee034c60ad8}} 
+\index{Options@{Options}!num\+Refinement\+Steps@{num\+Refinement\+Steps}}
+\index{num\+Refinement\+Steps@{num\+Refinement\+Steps}!Options@{Options}}
+\subsubsection{\texorpdfstring{num\+Refinement\+Steps}{numRefinementSteps}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Options\+::num\+Refinement\+Steps}
+
+Maximum number of iterative refinement steps. \mbox{\Hypertarget{class_options_a82347700b27bb1af11879b42f0bef6ce}\label{class_options_a82347700b27bb1af11879b42f0bef6ce}} 
+\index{Options@{Options}!num\+Regularisation\+Steps@{num\+Regularisation\+Steps}}
+\index{num\+Regularisation\+Steps@{num\+Regularisation\+Steps}!Options@{Options}}
+\subsubsection{\texorpdfstring{num\+Regularisation\+Steps}{numRegularisationSteps}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Options\+::num\+Regularisation\+Steps}
+
+Maximum number of successive regularisation steps. \mbox{\Hypertarget{class_options_a3c7327943ce25f36479356d33a0b0723}\label{class_options_a3c7327943ce25f36479356d33a0b0723}} 
+\index{Options@{Options}!print\+Level@{print\+Level}}
+\index{print\+Level@{print\+Level}!Options@{Options}}
+\subsubsection{\texorpdfstring{print\+Level}{printLevel}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a83ff212f474e3669d8fac2d727f65de5}{Print\+Level} Options\+::print\+Level}
+
+Print level. \mbox{\Hypertarget{class_options_abb00b9be9b9988884954bbe905ae317f}\label{class_options_abb00b9be9b9988884954bbe905ae317f}} 
+\index{Options@{Options}!rcond\+S\+Min@{rcond\+S\+Min}}
+\index{rcond\+S\+Min@{rcond\+S\+Min}!Options@{Options}}
+\subsubsection{\texorpdfstring{rcond\+S\+Min}{rcondSMin}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::rcond\+S\+Min}
+
+Minimum reciprocal condition number of S before refactorization is triggered \mbox{\Hypertarget{class_options_ad18a17e6fd0c84625ad44261a7f73474}\label{class_options_ad18a17e6fd0c84625ad44261a7f73474}} 
+\index{Options@{Options}!termination\+Tolerance@{termination\+Tolerance}}
+\index{termination\+Tolerance@{termination\+Tolerance}!Options@{Options}}
+\subsubsection{\texorpdfstring{termination\+Tolerance}{terminationTolerance}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Options\+::termination\+Tolerance}
+
+Termination tolerance. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_options_8hpp}{Options.\+hpp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/src/\hyperlink{_options_8cpp}{Options.\+cpp}\end{DoxyCompactItemize}

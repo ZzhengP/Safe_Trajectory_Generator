@@ -1,0 +1,209 @@
+\hypertarget{namespacedual__arm__interactive__marker}{}\section{dual\+\_\+arm\+\_\+interactive\+\_\+marker Namespace Reference}
+\label{namespacedual__arm__interactive__marker}\index{dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespacedual__arm__interactive__marker_a4a4776e18d30b02fcd5aa69cea3e7f87}{make\+\_\+sphere} (scale=0.\+3)
+\item 
+def \hyperlink{namespacedual__arm__interactive__marker_afe5736dcfad3f21203ce12db0eaf6c87}{publish\+\_\+target\+\_\+pose} ()
+\item 
+def \hyperlink{namespacedual__arm__interactive__marker_a2b8c14b515389640fd0dfcd9f542bf73}{left\+\_\+franka\+\_\+state\+\_\+callback} (msg)
+\item 
+def \hyperlink{namespacedual__arm__interactive__marker_a45661200829d9728f63a363b7dc340c0}{right\+\_\+franka\+\_\+state\+\_\+callback} (msg)
+\item 
+def \hyperlink{namespacedual__arm__interactive__marker_ab9a8983192953298e4070e5fa215d6bd}{centering\+\_\+pose\+\_\+callback} (msg)
+\item 
+def \hyperlink{namespacedual__arm__interactive__marker_aa2f3e89c8afccb99a7aceee8024f7d6d}{reset\+\_\+marker\+\_\+pose\+\_\+blocking} ()
+\item 
+def \hyperlink{namespacedual__arm__interactive__marker_afedda6582fc6f2b0bd5c4c1e16dc9251}{process\+\_\+feedback} (feedback)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_ae1dc1823850439ceb0256e842fe101af}\label{namespacedual__arm__interactive__marker_ae1dc1823850439ceb0256e842fe101af}} 
+{\bfseries marker\+\_\+pose} = Pose\+Stamped()
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_ad58577105bcd5d623c1cc9eb2e3c72ac}\label{namespacedual__arm__interactive__marker_ad58577105bcd5d623c1cc9eb2e3c72ac}} 
+bool {\bfseries centering\+\_\+frame\+\_\+ready} = False
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a91bdb7838358a5dc012220bdda750474}\label{namespacedual__arm__interactive__marker_a91bdb7838358a5dc012220bdda750474}} 
+bool {\bfseries has\+\_\+error} = False
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_aa91188fad3c0fe29eb194de0749d679b}\label{namespacedual__arm__interactive__marker_aa91188fad3c0fe29eb194de0749d679b}} 
+bool {\bfseries left\+\_\+has\+\_\+error} = False
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a54051039c162d3e6850c7975a2798c43}\label{namespacedual__arm__interactive__marker_a54051039c162d3e6850c7975a2798c43}} 
+bool {\bfseries right\+\_\+has\+\_\+error} = False
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a1cf87b0dd85b2d2e96272ec48965cb5c}\label{namespacedual__arm__interactive__marker_a1cf87b0dd85b2d2e96272ec48965cb5c}} 
+{\bfseries pose\+\_\+pub} = None
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a5cac52437015f562072ed9f81a317214}\label{namespacedual__arm__interactive__marker_a5cac52437015f562072ed9f81a317214}} 
+{\bfseries parser} = argparse.\+Argument\+Parser(\char`\"{}dual\+\_\+panda\+\_\+interactive\+\_\+marker.\+py\char`\"{})
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a551f6886fb11c8c7022dabbaff35194e}\label{namespacedual__arm__interactive__marker_a551f6886fb11c8c7022dabbaff35194e}} 
+{\bfseries help}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_abafb62c73e0ce1d3e29223d4b249b2cd}\label{namespacedual__arm__interactive__marker_abafb62c73e0ce1d3e29223d4b249b2cd}} 
+{\bfseries required}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a870908ca0a91fc8808dfe9e398e0f8b6}\label{namespacedual__arm__interactive__marker_a870908ca0a91fc8808dfe9e398e0f8b6}} 
+{\bfseries nargs}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a6e82d86ff9b8fe95975de7900f8e2aa3}\label{namespacedual__arm__interactive__marker_a6e82d86ff9b8fe95975de7900f8e2aa3}} 
+{\bfseries args} = parser.\+parse\+\_\+args()
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_ace8a93e369537d92f17b9861d31cb885}\label{namespacedual__arm__interactive__marker_ace8a93e369537d92f17b9861d31cb885}} 
+{\bfseries left\+\_\+arm\+\_\+id} = args.\+left\+\_\+arm\+\_\+id
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a80a58bbac980f1ea20a26676176c5413}\label{namespacedual__arm__interactive__marker_a80a58bbac980f1ea20a26676176c5413}} 
+{\bfseries right\+\_\+arm\+\_\+id} = args.\+right\+\_\+arm\+\_\+id
+\item 
+{\bfseries left\+\_\+state\+\_\+sub}
+\item 
+{\bfseries right\+\_\+state\+\_\+sub}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a5eaefed5ff5ae605348f4193b53733a9}\label{namespacedual__arm__interactive__marker_a5eaefed5ff5ae605348f4193b53733a9}} 
+{\bfseries server} = Interactive\+Marker\+Server(\char`\"{}target\+\_\+pose\+\_\+marker\char`\"{})
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a2eebfc53764d8ec847c6f9e58b4a3558}\label{namespacedual__arm__interactive__marker_a2eebfc53764d8ec847c6f9e58b4a3558}} 
+{\bfseries int\+\_\+marker} = Interactive\+Marker()
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_aaa5e3e8f0a8e125d0f02f2d971d0694a}\label{namespacedual__arm__interactive__marker_aaa5e3e8f0a8e125d0f02f2d971d0694a}} 
+{\bfseries frame\+\_\+id}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_aeb3429c5c8fc1b6838571accb54813bb}\label{namespacedual__arm__interactive__marker_aeb3429c5c8fc1b6838571accb54813bb}} 
+{\bfseries scale}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a784e31cc90b2e3c4eca59faf857bbc06}\label{namespacedual__arm__interactive__marker_a784e31cc90b2e3c4eca59faf857bbc06}} 
+{\bfseries name}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a8908f0309762fc6b58438bbe9df01ac6}\label{namespacedual__arm__interactive__marker_a8908f0309762fc6b58438bbe9df01ac6}} 
+{\bfseries description}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_ad1096317d9fe655130ffd6bda9645bbd}\label{namespacedual__arm__interactive__marker_ad1096317d9fe655130ffd6bda9645bbd}} 
+{\bfseries pose}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a3ec82817bea92c3e2ce70682f3b6d2ab}\label{namespacedual__arm__interactive__marker_a3ec82817bea92c3e2ce70682f3b6d2ab}} 
+{\bfseries control} = Interactive\+Marker\+Control()
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a586f29d31b76a5c3a968627bf51129c7}\label{namespacedual__arm__interactive__marker_a586f29d31b76a5c3a968627bf51129c7}} 
+{\bfseries w}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a622e063064f4b6c5718471de259adb6d}\label{namespacedual__arm__interactive__marker_a622e063064f4b6c5718471de259adb6d}} 
+{\bfseries x}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a3f9e7d16da8f43f59095da0393541a11}\label{namespacedual__arm__interactive__marker_a3f9e7d16da8f43f59095da0393541a11}} 
+{\bfseries y}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_aee749b160baf172d0162bc67af46c52d}\label{namespacedual__arm__interactive__marker_aee749b160baf172d0162bc67af46c52d}} 
+{\bfseries z}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_abe224eacf607f80c0bb2c0f5389d5996}\label{namespacedual__arm__interactive__marker_abe224eacf607f80c0bb2c0f5389d5996}} 
+{\bfseries interaction\+\_\+mode}
+\item 
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_a0c4e88aa8a5fd1ea5f74912786ce11f3}\label{namespacedual__arm__interactive__marker_a0c4e88aa8a5fd1ea5f74912786ce11f3}} 
+{\bfseries always\+\_\+visible}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}This simple script creates an interactive marker for changing desired centering pose of
+    two the dual_panda_cartesian_impedance_example_controller. It features also resetting the
+    marker to current centering pose between the left and the right endeffector.
+\end{DoxyVerb}
+ 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_ab9a8983192953298e4070e5fa215d6bd}\label{namespacedual__arm__interactive__marker_ab9a8983192953298e4070e5fa215d6bd}} 
+\index{dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}!centering\+\_\+pose\+\_\+callback@{centering\+\_\+pose\+\_\+callback}}
+\index{centering\+\_\+pose\+\_\+callback@{centering\+\_\+pose\+\_\+callback}!dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}}
+\subsubsection{\texorpdfstring{centering\+\_\+pose\+\_\+callback()}{centering\_pose\_callback()}}
+{\footnotesize\ttfamily def dual\+\_\+arm\+\_\+interactive\+\_\+marker.\+centering\+\_\+pose\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This callback function sets the marker pose to the current centering pose from a subscribed topic.
+:return: None
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedual__arm__interactive__marker_a2b8c14b515389640fd0dfcd9f542bf73}\label{namespacedual__arm__interactive__marker_a2b8c14b515389640fd0dfcd9f542bf73}} 
+\index{dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}!left\+\_\+franka\+\_\+state\+\_\+callback@{left\+\_\+franka\+\_\+state\+\_\+callback}}
+\index{left\+\_\+franka\+\_\+state\+\_\+callback@{left\+\_\+franka\+\_\+state\+\_\+callback}!dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}}
+\subsubsection{\texorpdfstring{left\+\_\+franka\+\_\+state\+\_\+callback()}{left\_franka\_state\_callback()}}
+{\footnotesize\ttfamily def dual\+\_\+arm\+\_\+interactive\+\_\+marker.\+left\+\_\+franka\+\_\+state\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This callback function set `has_error` variable to True if the left arm is having an error.
+:param msg: FrankaState msg data
+:return:  None
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedual__arm__interactive__marker_a4a4776e18d30b02fcd5aa69cea3e7f87}\label{namespacedual__arm__interactive__marker_a4a4776e18d30b02fcd5aa69cea3e7f87}} 
+\index{dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}!make\+\_\+sphere@{make\+\_\+sphere}}
+\index{make\+\_\+sphere@{make\+\_\+sphere}!dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}}
+\subsubsection{\texorpdfstring{make\+\_\+sphere()}{make\_sphere()}}
+{\footnotesize\ttfamily def dual\+\_\+arm\+\_\+interactive\+\_\+marker.\+make\+\_\+sphere (\begin{DoxyParamCaption}\item[{}]{scale = {\ttfamily 0.3} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function returns sphere marker for 3D translational movements.
+:param scale: scales the size of the sphere
+:return: sphere marker
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedual__arm__interactive__marker_afedda6582fc6f2b0bd5c4c1e16dc9251}\label{namespacedual__arm__interactive__marker_afedda6582fc6f2b0bd5c4c1e16dc9251}} 
+\index{dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}!process\+\_\+feedback@{process\+\_\+feedback}}
+\index{process\+\_\+feedback@{process\+\_\+feedback}!dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}}
+\subsubsection{\texorpdfstring{process\+\_\+feedback()}{process\_feedback()}}
+{\footnotesize\ttfamily def dual\+\_\+arm\+\_\+interactive\+\_\+marker.\+process\+\_\+feedback (\begin{DoxyParamCaption}\item[{}]{feedback }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This callback function clips the marker_pose inside a predefined box to prevent misuse of the marker.
+:param feedback: feedback data of interactive marker
+:return: None
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedual__arm__interactive__marker_afe5736dcfad3f21203ce12db0eaf6c87}\label{namespacedual__arm__interactive__marker_afe5736dcfad3f21203ce12db0eaf6c87}} 
+\index{dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}!publish\+\_\+target\+\_\+pose@{publish\+\_\+target\+\_\+pose}}
+\index{publish\+\_\+target\+\_\+pose@{publish\+\_\+target\+\_\+pose}!dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}}
+\subsubsection{\texorpdfstring{publish\+\_\+target\+\_\+pose()}{publish\_target\_pose()}}
+{\footnotesize\ttfamily def dual\+\_\+arm\+\_\+interactive\+\_\+marker.\+publish\+\_\+target\+\_\+pose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function publishes desired centering pose which the controller will subscribe to.
+:return: None
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedual__arm__interactive__marker_aa2f3e89c8afccb99a7aceee8024f7d6d}\label{namespacedual__arm__interactive__marker_aa2f3e89c8afccb99a7aceee8024f7d6d}} 
+\index{dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}!reset\+\_\+marker\+\_\+pose\+\_\+blocking@{reset\+\_\+marker\+\_\+pose\+\_\+blocking}}
+\index{reset\+\_\+marker\+\_\+pose\+\_\+blocking@{reset\+\_\+marker\+\_\+pose\+\_\+blocking}!dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}}
+\subsubsection{\texorpdfstring{reset\+\_\+marker\+\_\+pose\+\_\+blocking()}{reset\_marker\_pose\_blocking()}}
+{\footnotesize\ttfamily def dual\+\_\+arm\+\_\+interactive\+\_\+marker.\+reset\+\_\+marker\+\_\+pose\+\_\+blocking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This function resets the marker pose to current "middle pose" of left and right arm EEs.
+:return: None
+\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacedual__arm__interactive__marker_a45661200829d9728f63a363b7dc340c0}\label{namespacedual__arm__interactive__marker_a45661200829d9728f63a363b7dc340c0}} 
+\index{dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}!right\+\_\+franka\+\_\+state\+\_\+callback@{right\+\_\+franka\+\_\+state\+\_\+callback}}
+\index{right\+\_\+franka\+\_\+state\+\_\+callback@{right\+\_\+franka\+\_\+state\+\_\+callback}!dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}}
+\subsubsection{\texorpdfstring{right\+\_\+franka\+\_\+state\+\_\+callback()}{right\_franka\_state\_callback()}}
+{\footnotesize\ttfamily def dual\+\_\+arm\+\_\+interactive\+\_\+marker.\+right\+\_\+franka\+\_\+state\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}This callback function set `has_error` variable to True if the right arm is having an error.
+:param msg: FrankaState msg data
+:return:  None
+\end{DoxyVerb}
+ 
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_ab3eaf7e9c4ecbae1e8dd0814de4cafe1}\label{namespacedual__arm__interactive__marker_ab3eaf7e9c4ecbae1e8dd0814de4cafe1}} 
+\index{dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}!left\+\_\+state\+\_\+sub@{left\+\_\+state\+\_\+sub}}
+\index{left\+\_\+state\+\_\+sub@{left\+\_\+state\+\_\+sub}!dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}}
+\subsubsection{\texorpdfstring{left\+\_\+state\+\_\+sub}{left\_state\_sub}}
+{\footnotesize\ttfamily dual\+\_\+arm\+\_\+interactive\+\_\+marker.\+left\+\_\+state\+\_\+sub}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  rospy.Subscriber(left\_arm\_id + \textcolor{stringliteral}{"\_state\_controller/franka\_states"},
+2                                  FrankaState, left\_franka\_state\_callback)
+\end{DoxyCode}
+\mbox{\Hypertarget{namespacedual__arm__interactive__marker_ab5b828c74287f71cf83aa46ffc2fc94b}\label{namespacedual__arm__interactive__marker_ab5b828c74287f71cf83aa46ffc2fc94b}} 
+\index{dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}!right\+\_\+state\+\_\+sub@{right\+\_\+state\+\_\+sub}}
+\index{right\+\_\+state\+\_\+sub@{right\+\_\+state\+\_\+sub}!dual\+\_\+arm\+\_\+interactive\+\_\+marker@{dual\+\_\+arm\+\_\+interactive\+\_\+marker}}
+\subsubsection{\texorpdfstring{right\+\_\+state\+\_\+sub}{right\_state\_sub}}
+{\footnotesize\ttfamily dual\+\_\+arm\+\_\+interactive\+\_\+marker.\+right\+\_\+state\+\_\+sub}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+1 =  rospy.Subscriber(right\_arm\_id + \textcolor{stringliteral}{"\_state\_controller/franka\_states"},
+2                                  FrankaState, right\_franka\_state\_callback)
+\end{DoxyCode}

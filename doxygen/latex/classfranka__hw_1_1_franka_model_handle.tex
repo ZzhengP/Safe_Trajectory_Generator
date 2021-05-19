@@ -1,0 +1,347 @@
+\hypertarget{classfranka__hw_1_1_franka_model_handle}{}\section{franka\+\_\+hw\+:\+:Franka\+Model\+Handle Class Reference}
+\label{classfranka__hw_1_1_franka_model_handle}\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+
+
+{\ttfamily \#include $<$franka\+\_\+model\+\_\+interface.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfranka__hw_1_1_franka_model_handle_a814fbbc91e975d22ebd6e156e52944bd}{Franka\+Model\+Handle} (const std\+::string \&name, franka\+::\+Model \&model, franka\+::\+Robot\+State \&robot\+\_\+state)
+\item 
+std\+::string \hyperlink{classfranka__hw_1_1_franka_model_handle_a88f37f3c1fe73ce7aa9460809847b416}{get\+Name} () const noexcept
+\item 
+std\+::array$<$ double, 49 $>$ \hyperlink{classfranka__hw_1_1_franka_model_handle_a252d6872afa722e55d2a9cba4ac42088}{get\+Mass} () const
+\item 
+std\+::array$<$ double, 49 $>$ \hyperlink{classfranka__hw_1_1_franka_model_handle_a72d3355fbea921d7c6fbef17062b69a6}{get\+Mass} (const std\+::array$<$ double, 7 $>$ \&q, const std\+::array$<$ double, 9 $>$ \&total\+\_\+inertia, double total\+\_\+mass, const std\+::array$<$ double, 3 $>$ \&F\+\_\+x\+\_\+\+Ctotal) const
+\item 
+std\+::array$<$ double, 7 $>$ \hyperlink{classfranka__hw_1_1_franka_model_handle_a8464b57e4652399c19c8abf2a426eebe}{get\+Coriolis} () const
+\item 
+std\+::array$<$ double, 7 $>$ \hyperlink{classfranka__hw_1_1_franka_model_handle_aa503a5006467f3fd48140a296362e1d1}{get\+Coriolis} (const std\+::array$<$ double, 7 $>$ \&q, const std\+::array$<$ double, 7 $>$ \&dq, const std\+::array$<$ double, 9 $>$ \&total\+\_\+inertia, double total\+\_\+mass, const std\+::array$<$ double, 3 $>$ \&F\+\_\+x\+\_\+\+Ctotal) const
+\item 
+std\+::array$<$ double, 7 $>$ \hyperlink{classfranka__hw_1_1_franka_model_handle_ac6ad04268fd86d0442733000025c2230}{get\+Gravity} (const std\+::array$<$ double, 3 $>$ \&gravity\+\_\+earth=\{ \{0., 0., -\/9.\+81\}\}) const
+\item 
+std\+::array$<$ double, 7 $>$ \hyperlink{classfranka__hw_1_1_franka_model_handle_a832505472a8e7bc9e12f26a57eb659f8}{get\+Gravity} (const std\+::array$<$ double, 7 $>$ \&q, double total\+\_\+mass, const std\+::array$<$ double, 3 $>$ \&F\+\_\+x\+\_\+\+Ctotal, const std\+::array$<$ double, 3 $>$ \&gravity\+\_\+earth=\{\{0., 0., -\/9.\+81\}\}) const
+\item 
+std\+::array$<$ double, 16 $>$ \hyperlink{classfranka__hw_1_1_franka_model_handle_af6617a4a3a89908c4a0aa8d25b2bfc07}{get\+Pose} (const franka\+::\+Frame \&frame) const
+\item 
+std\+::array$<$ double, 16 $>$ \hyperlink{classfranka__hw_1_1_franka_model_handle_aa5f4161223cf728ad3ca1bf48768df50}{get\+Pose} (const franka\+::\+Frame \&frame, const std\+::array$<$ double, 7 $>$ \&q, const std\+::array$<$ double, 16 $>$ \&F\+\_\+\+T\+\_\+\+EE, const std\+::array$<$ double, 16 $>$ \&E\+E\+\_\+\+T\+\_\+K) const
+\item 
+std\+::array$<$ double, 42 $>$ \hyperlink{classfranka__hw_1_1_franka_model_handle_adc7a47e0c49ab6c15be950f3a41df8c8}{get\+Body\+Jacobian} (const franka\+::\+Frame \&frame) const
+\item 
+std\+::array$<$ double, 42 $>$ \hyperlink{classfranka__hw_1_1_franka_model_handle_a1b5ba63881c0dc365590c6e116576704}{get\+Body\+Jacobian} (const franka\+::\+Frame \&frame, const std\+::array$<$ double, 7 $>$ \&q, const std\+::array$<$ double, 16 $>$ \&F\+\_\+\+T\+\_\+\+EE, const std\+::array$<$ double, 16 $>$ \&E\+E\+\_\+\+T\+\_\+K) const
+\item 
+std\+::array$<$ double, 42 $>$ \hyperlink{classfranka__hw_1_1_franka_model_handle_a09d1582af0e1a0e8dd156f612c06b7f6}{get\+Zero\+Jacobian} (const franka\+::\+Frame \&frame) const
+\item 
+std\+::array$<$ double, 42 $>$ \hyperlink{classfranka__hw_1_1_franka_model_handle_a5ce6ac6116ac3c45c923e5c2d515616c}{get\+Zero\+Jacobian} (const franka\+::\+Frame \&frame, const std\+::array$<$ double, 7 $>$ \&q, const std\+::array$<$ double, 16 $>$ \&F\+\_\+\+T\+\_\+\+EE, const std\+::array$<$ double, 16 $>$ \&E\+E\+\_\+\+T\+\_\+K) const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handle to perform calculations using the dynamic model of a robot. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_model_handle_a814fbbc91e975d22ebd6e156e52944bd}\label{classfranka__hw_1_1_franka_model_handle_a814fbbc91e975d22ebd6e156e52944bd}} 
+\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}!Franka\+Model\+Handle@{Franka\+Model\+Handle}}
+\index{Franka\+Model\+Handle@{Franka\+Model\+Handle}!franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\subsubsection{\texorpdfstring{Franka\+Model\+Handle()}{FrankaModelHandle()}}
+{\footnotesize\ttfamily franka\+\_\+hw\+::\+Franka\+Model\+Handle\+::\+Franka\+Model\+Handle (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{franka\+::\+Model \&}]{model,  }\item[{franka\+::\+Robot\+State \&}]{robot\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates an instance of a \hyperlink{classfranka__hw_1_1_franka_model_handle}{Franka\+Model\+Handle}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & The name of the model handle. \\
+\hline
+\mbox{\tt in}  & {\em model} & A reference to the franka\+::\+Model instance wrapped by this handle. \\
+\hline
+\mbox{\tt in}  & {\em robot\+\_\+state} & A reference to the current robot state. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_model_handle_adc7a47e0c49ab6c15be950f3a41df8c8}\label{classfranka__hw_1_1_franka_model_handle_adc7a47e0c49ab6c15be950f3a41df8c8}} 
+\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}!get\+Body\+Jacobian@{get\+Body\+Jacobian}}
+\index{get\+Body\+Jacobian@{get\+Body\+Jacobian}!franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\subsubsection{\texorpdfstring{get\+Body\+Jacobian()}{getBodyJacobian()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::array$<$double, 42$>$ franka\+\_\+hw\+::\+Franka\+Model\+Handle\+::get\+Body\+Jacobian (\begin{DoxyParamCaption}\item[{const franka\+::\+Frame \&}]{frame }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the 6x7 Jacobian for the given frame, relative to that frame.
+
+The Jacobian is represented as a 6x7 matrix in column-\/major format and calculated from the current robot state.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & The desired frame.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vectorized 6x7 Jacobian, column-\/major.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+franka\+::\+Model\+::body\+Jacobian 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_model_handle_a1b5ba63881c0dc365590c6e116576704}\label{classfranka__hw_1_1_franka_model_handle_a1b5ba63881c0dc365590c6e116576704}} 
+\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}!get\+Body\+Jacobian@{get\+Body\+Jacobian}}
+\index{get\+Body\+Jacobian@{get\+Body\+Jacobian}!franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\subsubsection{\texorpdfstring{get\+Body\+Jacobian()}{getBodyJacobian()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::array$<$double, 42$>$ franka\+\_\+hw\+::\+Franka\+Model\+Handle\+::get\+Body\+Jacobian (\begin{DoxyParamCaption}\item[{const franka\+::\+Frame \&}]{frame,  }\item[{const std\+::array$<$ double, 7 $>$ \&}]{q,  }\item[{const std\+::array$<$ double, 16 $>$ \&}]{F\+\_\+\+T\+\_\+\+EE,  }\item[{const std\+::array$<$ double, 16 $>$ \&}]{E\+E\+\_\+\+T\+\_\+K }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the 6x7 Jacobian for the given frame, relative to that frame.
+
+The Jacobian is represented as a 6x7 matrix in column-\/major format and calculated from the given robot state.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & The desired frame. \\
+\hline
+\mbox{\tt in}  & {\em q} & Joint position. Unit\+: $[rad]$. \\
+\hline
+\mbox{\tt in}  & {\em F\+\_\+\+T\+\_\+\+EE} & End effector in flange frame. \\
+\hline
+\mbox{\tt in}  & {\em E\+E\+\_\+\+T\+\_\+K} & Stiffness frame K in the end effector frame.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vectorized 6x7 Jacobian, column-\/major.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+franka\+::\+Model\+::body\+Jacobian 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_model_handle_a8464b57e4652399c19c8abf2a426eebe}\label{classfranka__hw_1_1_franka_model_handle_a8464b57e4652399c19c8abf2a426eebe}} 
+\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}!get\+Coriolis@{get\+Coriolis}}
+\index{get\+Coriolis@{get\+Coriolis}!franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\subsubsection{\texorpdfstring{get\+Coriolis()}{getCoriolis()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::array$<$double, 7$>$ franka\+\_\+hw\+::\+Franka\+Model\+Handle\+::get\+Coriolis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculates the Coriolis force vector (state-\/space equation) from the current robot state\+: $ c= C \times dq$, in $[Nm]$.
+
+\begin{DoxyReturn}{Returns}
+Coriolis force vector.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+franka\+::\+Model\+::coriolis 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_model_handle_aa503a5006467f3fd48140a296362e1d1}\label{classfranka__hw_1_1_franka_model_handle_aa503a5006467f3fd48140a296362e1d1}} 
+\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}!get\+Coriolis@{get\+Coriolis}}
+\index{get\+Coriolis@{get\+Coriolis}!franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\subsubsection{\texorpdfstring{get\+Coriolis()}{getCoriolis()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::array$<$double, 7$>$ franka\+\_\+hw\+::\+Franka\+Model\+Handle\+::get\+Coriolis (\begin{DoxyParamCaption}\item[{const std\+::array$<$ double, 7 $>$ \&}]{q,  }\item[{const std\+::array$<$ double, 7 $>$ \&}]{dq,  }\item[{const std\+::array$<$ double, 9 $>$ \&}]{total\+\_\+inertia,  }\item[{double}]{total\+\_\+mass,  }\item[{const std\+::array$<$ double, 3 $>$ \&}]{F\+\_\+x\+\_\+\+Ctotal }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculates the Coriolis force vector (state-\/space equation) from the given robot state\+: $ c= C \times dq$, in $[Nm]$.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em q} & Joint position. Unit\+: $[rad]$. \\
+\hline
+\mbox{\tt in}  & {\em dq} & Joint velocity. Unit\+: $[\frac{rad}{s}]$. \\
+\hline
+\mbox{\tt in}  & {\em total\+\_\+inertia} & Inertia of the attached total load including end effector, relative to center of mass, given as vectorized 3x3 column-\/major matrix. Unit\+: $[kg \times m^2]$. \\
+\hline
+\mbox{\tt in}  & {\em total\+\_\+mass} & Weight of the attached total load including end effector. Unit\+: $[kg]$. \\
+\hline
+\mbox{\tt in}  & {\em F\+\_\+x\+\_\+\+Ctotal} & Translation from flange to center of mass of the attached total load including end effector. Unit\+: $[m]$.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Coriolis force vector.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+franka\+::\+Model\+::coriolis 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_model_handle_ac6ad04268fd86d0442733000025c2230}\label{classfranka__hw_1_1_franka_model_handle_ac6ad04268fd86d0442733000025c2230}} 
+\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}!get\+Gravity@{get\+Gravity}}
+\index{get\+Gravity@{get\+Gravity}!franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\subsubsection{\texorpdfstring{get\+Gravity()}{getGravity()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::array$<$double, 7$>$ franka\+\_\+hw\+::\+Franka\+Model\+Handle\+::get\+Gravity (\begin{DoxyParamCaption}\item[{const std\+::array$<$ double, 3 $>$ \&}]{gravity\+\_\+earth = {\ttfamily \{~\{0.,~0.,~-\/9.81\}\}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculates the gravity vector from the current robot state. Unit\+: $[Nm]$.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em gravity\+\_\+earth} & Earth\textquotesingle{}s gravity vector. Unit\+: $\frac{m}{s^2}$. Default to \{0.\+0, 0.\+0, -\/9.\+81\}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Gravity vector.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+franka\+::\+Model\+::gravity 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_model_handle_a832505472a8e7bc9e12f26a57eb659f8}\label{classfranka__hw_1_1_franka_model_handle_a832505472a8e7bc9e12f26a57eb659f8}} 
+\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}!get\+Gravity@{get\+Gravity}}
+\index{get\+Gravity@{get\+Gravity}!franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\subsubsection{\texorpdfstring{get\+Gravity()}{getGravity()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::array$<$double, 7$>$ franka\+\_\+hw\+::\+Franka\+Model\+Handle\+::get\+Gravity (\begin{DoxyParamCaption}\item[{const std\+::array$<$ double, 7 $>$ \&}]{q,  }\item[{double}]{total\+\_\+mass,  }\item[{const std\+::array$<$ double, 3 $>$ \&}]{F\+\_\+x\+\_\+\+Ctotal,  }\item[{const std\+::array$<$ double, 3 $>$ \&}]{gravity\+\_\+earth = {\ttfamily \{\{0.,~0.,~-\/9.81\}\}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculates the gravity vector from the given robot state. Unit\+: $[Nm]$.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em q} & Joint position. Unit\+: $[rad]$. \\
+\hline
+\mbox{\tt in}  & {\em total\+\_\+mass} & Weight of the attached total load including end effector. Unit\+: $[kg]$. \\
+\hline
+\mbox{\tt in}  & {\em F\+\_\+x\+\_\+\+Ctotal} & Translation from flange to center of mass of the attached total load including end effector. Unit\+: $[m]$. \\
+\hline
+\mbox{\tt in}  & {\em gravity\+\_\+earth} & Earth\textquotesingle{}s gravity vector. Unit\+: $\frac{m}{s^2}$. Default to \{0.\+0, 0.\+0, -\/9.\+81\}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Gravity vector.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+franka\+::\+Model\+::gravity 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_model_handle_a252d6872afa722e55d2a9cba4ac42088}\label{classfranka__hw_1_1_franka_model_handle_a252d6872afa722e55d2a9cba4ac42088}} 
+\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}!get\+Mass@{get\+Mass}}
+\index{get\+Mass@{get\+Mass}!franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\subsubsection{\texorpdfstring{get\+Mass()}{getMass()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::array$<$double, 49$>$ franka\+\_\+hw\+::\+Franka\+Model\+Handle\+::get\+Mass (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculates the 7x7 mass matrix from the current robot state. Unit\+: $[kg \times m^2]$.
+
+\begin{DoxyReturn}{Returns}
+Vectorized 7x7 mass matrix, column-\/major.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+franka\+::\+Model\+::mass 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_model_handle_a72d3355fbea921d7c6fbef17062b69a6}\label{classfranka__hw_1_1_franka_model_handle_a72d3355fbea921d7c6fbef17062b69a6}} 
+\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}!get\+Mass@{get\+Mass}}
+\index{get\+Mass@{get\+Mass}!franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\subsubsection{\texorpdfstring{get\+Mass()}{getMass()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::array$<$double, 49$>$ franka\+\_\+hw\+::\+Franka\+Model\+Handle\+::get\+Mass (\begin{DoxyParamCaption}\item[{const std\+::array$<$ double, 7 $>$ \&}]{q,  }\item[{const std\+::array$<$ double, 9 $>$ \&}]{total\+\_\+inertia,  }\item[{double}]{total\+\_\+mass,  }\item[{const std\+::array$<$ double, 3 $>$ \&}]{F\+\_\+x\+\_\+\+Ctotal }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Calculates the 7x7 mass matrix from a given robot state. Unit\+: $[kg \times m^2]$.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em q} & Joint position. Unit\+: $[rad]$. \\
+\hline
+\mbox{\tt in}  & {\em total\+\_\+inertia} & Inertia of the attached total load including end effector, relative to center of mass, given as vectorized 3x3 column-\/major matrix. Unit\+: $[kg \times m^2]$. \\
+\hline
+\mbox{\tt in}  & {\em total\+\_\+mass} & Weight of the attached total load including end effector. Unit\+: $[kg]$. \\
+\hline
+\mbox{\tt in}  & {\em F\+\_\+x\+\_\+\+Ctotal} & Translation from flange to center of mass of the attached total load including end effector. Unit\+: $[m]$.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vectorized 7x7 mass matrix, column-\/major.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+franka\+::\+Model\+::mass 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_model_handle_a88f37f3c1fe73ce7aa9460809847b416}\label{classfranka__hw_1_1_franka_model_handle_a88f37f3c1fe73ce7aa9460809847b416}} 
+\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily std\+::string franka\+\_\+hw\+::\+Franka\+Model\+Handle\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Gets the name of the model handle.
+
+\begin{DoxyReturn}{Returns}
+Name of the model handle. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_model_handle_af6617a4a3a89908c4a0aa8d25b2bfc07}\label{classfranka__hw_1_1_franka_model_handle_af6617a4a3a89908c4a0aa8d25b2bfc07}} 
+\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}!get\+Pose@{get\+Pose}}
+\index{get\+Pose@{get\+Pose}!franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\subsubsection{\texorpdfstring{get\+Pose()}{getPose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::array$<$double, 16$>$ franka\+\_\+hw\+::\+Franka\+Model\+Handle\+::get\+Pose (\begin{DoxyParamCaption}\item[{const franka\+::\+Frame \&}]{frame }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the 4x4 pose matrix for the given frame in base frame, calculated from the current robot state.
+
+The pose is represented as a 4x4 matrix in column-\/major format.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & The desired frame.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vectorized 4x4 pose matrix, column-\/major.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+franka\+::\+Model\+::pose 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_model_handle_aa5f4161223cf728ad3ca1bf48768df50}\label{classfranka__hw_1_1_franka_model_handle_aa5f4161223cf728ad3ca1bf48768df50}} 
+\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}!get\+Pose@{get\+Pose}}
+\index{get\+Pose@{get\+Pose}!franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\subsubsection{\texorpdfstring{get\+Pose()}{getPose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::array$<$double, 16$>$ franka\+\_\+hw\+::\+Franka\+Model\+Handle\+::get\+Pose (\begin{DoxyParamCaption}\item[{const franka\+::\+Frame \&}]{frame,  }\item[{const std\+::array$<$ double, 7 $>$ \&}]{q,  }\item[{const std\+::array$<$ double, 16 $>$ \&}]{F\+\_\+\+T\+\_\+\+EE,  }\item[{const std\+::array$<$ double, 16 $>$ \&}]{E\+E\+\_\+\+T\+\_\+K }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the 4x4 pose matrix for the given frame in base frame, calculated from the given robot state.
+
+The pose is represented as a 4x4 matrix in column-\/major format.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & The desired frame. \\
+\hline
+\mbox{\tt in}  & {\em q} & Joint position. Unit\+: $[rad]$. \\
+\hline
+\mbox{\tt in}  & {\em F\+\_\+\+T\+\_\+\+EE} & End effector in flange frame. \\
+\hline
+\mbox{\tt in}  & {\em E\+E\+\_\+\+T\+\_\+K} & Stiffness frame K in the end effector frame.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vectorized 4x4 pose matrix, column-\/major.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+franka\+::\+Model\+::pose 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_model_handle_a09d1582af0e1a0e8dd156f612c06b7f6}\label{classfranka__hw_1_1_franka_model_handle_a09d1582af0e1a0e8dd156f612c06b7f6}} 
+\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}!get\+Zero\+Jacobian@{get\+Zero\+Jacobian}}
+\index{get\+Zero\+Jacobian@{get\+Zero\+Jacobian}!franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\subsubsection{\texorpdfstring{get\+Zero\+Jacobian()}{getZeroJacobian()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::array$<$double, 42$>$ franka\+\_\+hw\+::\+Franka\+Model\+Handle\+::get\+Zero\+Jacobian (\begin{DoxyParamCaption}\item[{const franka\+::\+Frame \&}]{frame }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the 6x7 Jacobian for the given joint relative to the base frame.
+
+The Jacobian is represented as a 6x7 matrix in column-\/major format and calculated from the current robot state.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & The desired frame.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vectorized 6x7 Jacobian, column-\/major.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+franka\+::\+Model\+::zero\+Jacobian 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_model_handle_a5ce6ac6116ac3c45c923e5c2d515616c}\label{classfranka__hw_1_1_franka_model_handle_a5ce6ac6116ac3c45c923e5c2d515616c}} 
+\index{franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}!get\+Zero\+Jacobian@{get\+Zero\+Jacobian}}
+\index{get\+Zero\+Jacobian@{get\+Zero\+Jacobian}!franka\+\_\+hw\+::\+Franka\+Model\+Handle@{franka\+\_\+hw\+::\+Franka\+Model\+Handle}}
+\subsubsection{\texorpdfstring{get\+Zero\+Jacobian()}{getZeroJacobian()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::array$<$double, 42$>$ franka\+\_\+hw\+::\+Franka\+Model\+Handle\+::get\+Zero\+Jacobian (\begin{DoxyParamCaption}\item[{const franka\+::\+Frame \&}]{frame,  }\item[{const std\+::array$<$ double, 7 $>$ \&}]{q,  }\item[{const std\+::array$<$ double, 16 $>$ \&}]{F\+\_\+\+T\+\_\+\+EE,  }\item[{const std\+::array$<$ double, 16 $>$ \&}]{E\+E\+\_\+\+T\+\_\+K }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Gets the 6x7 Jacobian for the given joint relative to the base frame.
+
+The Jacobian is represented as a 6x7 matrix in column-\/major format and calculated from the given robot state.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em frame} & The desired frame. \\
+\hline
+\mbox{\tt in}  & {\em q} & Joint position. Unit\+: $[rad]$. \\
+\hline
+\mbox{\tt in}  & {\em F\+\_\+\+T\+\_\+\+EE} & End effector in flange frame. \\
+\hline
+\mbox{\tt in}  & {\em E\+E\+\_\+\+T\+\_\+K} & Stiffness frame K in the end effector frame.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vectorized 6x7 Jacobian, column-\/major.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+franka\+::\+Model\+::zero\+Jacobian 
+\end{DoxySeeAlso}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/franka\+\_\+ros/franka\+\_\+hw/include/franka\+\_\+hw/franka\+\_\+model\+\_\+interface.\+h\end{DoxyCompactItemize}

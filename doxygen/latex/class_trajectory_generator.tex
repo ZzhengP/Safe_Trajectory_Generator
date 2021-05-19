@@ -1,0 +1,200 @@
+\hypertarget{class_trajectory_generator}{}\section{Trajectory\+Generator Class Reference}
+\label{class_trajectory_generator}\index{Trajectory\+Generator@{Trajectory\+Generator}}
+
+
+{\ttfamily \#include $<$panda\+\_\+traj.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_trajectory_generator_a75892c486572ad0820d2a377472c0c14}{Load} (std\+::string \&csv\+\_\+file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Load a csv file containing a desired velocity. \end{DoxyCompactList}\item 
+void \hyperlink{class_trajectory_generator_ae74c9669e7b82cbd16d717b67a67bfab}{Build} (K\+D\+L\+::\+Frame \&X\+\_\+curr, bool verbose)
+\begin{DoxyCompactList}\small\item\em Builds a loaded Cartesian space trajectory. \end{DoxyCompactList}\item 
+void \hyperlink{class_trajectory_generator_a3a2299cadddd64978bd4cf3261df2c6d}{Build\+\_\+vmax} (K\+D\+L\+::\+Frame \&X\+\_\+curr, double vmax, double amax)
+\begin{DoxyCompactList}\small\item\em Builds a loaded Cartesian space trajectory with a maximum velocity of vmax. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_trajectory_generator_acedf42df64761b53488d043eeafbf6fa}\label{class_trajectory_generator_acedf42df64761b53488d043eeafbf6fa}} 
+double \hyperlink{class_trajectory_generator_acedf42df64761b53488d043eeafbf6fa}{Duration} ()
+\begin{DoxyCompactList}\small\item\em Get the duration of the trajectory. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_trajectory_generator_a5ad2939e56c676d8643ac2410a896304}\label{class_trajectory_generator_a5ad2939e56c676d8643ac2410a896304}} 
+double \hyperlink{class_trajectory_generator_a5ad2939e56c676d8643ac2410a896304}{Reset\+Duration} ()
+\begin{DoxyCompactList}\small\item\em Get the time until reaching the first point along the trajectory. \end{DoxyCompactList}\item 
+void \hyperlink{class_trajectory_generator_a4a9bbab31d78a11ad80778ac83e8713d}{Set\+Acc\+Max} (double amax)
+\begin{DoxyCompactList}\small\item\em Set the maximum acceleration along the trajectory profile. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_trajectory_generator_abad83c273a137e0328a0f6d24cd921ef}\label{class_trajectory_generator_abad83c273a137e0328a0f6d24cd921ef}} 
+K\+D\+L\+::\+Frame \hyperlink{class_trajectory_generator_abad83c273a137e0328a0f6d24cd921ef}{Pos} ()
+\begin{DoxyCompactList}\small\item\em Get the desired Pose. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_trajectory_generator_a18d857f5252abaa40a63702799a5261b}\label{class_trajectory_generator_a18d857f5252abaa40a63702799a5261b}} 
+K\+D\+L\+::\+Twist \hyperlink{class_trajectory_generator_a18d857f5252abaa40a63702799a5261b}{Vel} ()
+\begin{DoxyCompactList}\small\item\em Get the desired Twist. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_trajectory_generator_a124d9b6a30160957b28ee7ecd4255d88}\label{class_trajectory_generator_a124d9b6a30160957b28ee7ecd4255d88}} 
+K\+D\+L\+::\+Twist \hyperlink{class_trajectory_generator_a124d9b6a30160957b28ee7ecd4255d88}{Acc} ()
+\begin{DoxyCompactList}\small\item\em Get the desired Acceleration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_trajectory_generator_a28906b3717439a0b1bdaa3ebbe93815b}\label{class_trajectory_generator_a28906b3717439a0b1bdaa3ebbe93815b}} 
+double \hyperlink{class_trajectory_generator_a28906b3717439a0b1bdaa3ebbe93815b}{Current\+Time} ()
+\begin{DoxyCompactList}\small\item\em Get the current time along the trajectory. \end{DoxyCompactList}\item 
+Eigen\+::\+Vector3d \hyperlink{class_trajectory_generator_a7414eb6da84136d29805a9c7ee6d857e}{Direction\+Of\+Motion} (double time, double dt)
+\begin{DoxyCompactList}\small\item\em Computes the direction of motion along the trajectory in dt at a given time. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_trajectory_generator_a17dbcd81cccde8323949777cd11b315e}\label{class_trajectory_generator_a17dbcd81cccde8323949777cd11b315e}} 
+panda\+\_\+traj\+::\+Publish\+Traj \hyperlink{class_trajectory_generator_a17dbcd81cccde8323949777cd11b315e}{publish\+Trajectory} ()
+\begin{DoxyCompactList}\small\item\em Publish the trajectory. \end{DoxyCompactList}\item 
+void \hyperlink{class_trajectory_generator_af27180af44e99c60c5750e8b2444098f}{update\+Trajectory} (panda\+\_\+traj\+::\+Traj\+Properties traj\+\_\+properties\+\_\+, double time\+\_\+dt\+\_\+)
+\begin{DoxyCompactList}\small\item\em Updates the Traj\+Properties msg for the time time\+\_\+dt\+\_\+. \end{DoxyCompactList}\item 
+void \hyperlink{class_trajectory_generator_aee649f0687ae2ede88f2c6bb97aac7a8}{previous} (panda\+\_\+traj\+::\+Traj\+Properties traj\+\_\+properties\+\_\+, double time\+\_\+dt\+\_\+)
+\begin{DoxyCompactList}\small\item\em Go back to the previous desired pose. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_trajectory_generator_a95febf555c35715078eab32e8d6dc414}\label{class_trajectory_generator_a95febf555c35715078eab32e8d6dc414}} 
+std\+::vector$<$ \hyperlink{struct_gripper_action}{Gripper\+Action} $>$ {\bfseries gripper\+\_\+action\+\_\+list}
+\item 
+\mbox{\Hypertarget{class_trajectory_generator_ae61e04cc3c1fca3944ab866864a726cf}\label{class_trajectory_generator_ae61e04cc3c1fca3944ab866864a726cf}} 
+std\+::vector$<$ \hyperlink{struct_line_segment}{Line\+Segment} $>$ {\bfseries polyline}
+\item 
+\mbox{\Hypertarget{class_trajectory_generator_a6a2b55f8641011402979827c3ab69329}\label{class_trajectory_generator_a6a2b55f8641011402979827c3ab69329}} 
+int {\bfseries init\+\_\+gripper\+\_\+index} = 0
+\item 
+\mbox{\Hypertarget{class_trajectory_generator_a75393b2da5bdc8ab1adfd2203c923bd2}\label{class_trajectory_generator_a75393b2da5bdc8ab1adfd2203c923bd2}} 
+double {\bfseries percent\+\_\+completion}
+\item 
+\mbox{\Hypertarget{class_trajectory_generator_a4beef63e7d87756755f4fc86e4fc70af}\label{class_trajectory_generator_a4beef63e7d87756755f4fc86e4fc70af}} 
+bool {\bfseries in\+\_\+loop} = false
+\item 
+\mbox{\Hypertarget{class_trajectory_generator_a027489beefdbc3d6458fd8c4f1d584d4}\label{class_trajectory_generator_a027489beefdbc3d6458fd8c4f1d584d4}} 
+std\+::vector$<$ K\+D\+L\+::\+Vector $>$ {\bfseries intersection\+\_\+points}
+\item 
+\mbox{\Hypertarget{class_trajectory_generator_a3e06a6ddb77aeacb3827b7bbd225ca9a}\label{class_trajectory_generator_a3e06a6ddb77aeacb3827b7bbd225ca9a}} 
+K\+D\+L\+::\+Vector {\bfseries wireloop\+\_\+point}
+\item 
+\mbox{\Hypertarget{class_trajectory_generator_a9542635f7c67d4a76c6df05987fe0f89}\label{class_trajectory_generator_a9542635f7c67d4a76c6df05987fe0f89}} 
+bool {\bfseries traj\+\_\+build\+\_\+} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Generates a Cartesian space trajectory with an underlying velocity profile 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_trajectory_generator_ae74c9669e7b82cbd16d717b67a67bfab}\label{class_trajectory_generator_ae74c9669e7b82cbd16d717b67a67bfab}} 
+\index{Trajectory\+Generator@{Trajectory\+Generator}!Build@{Build}}
+\index{Build@{Build}!Trajectory\+Generator@{Trajectory\+Generator}}
+\subsubsection{\texorpdfstring{Build()}{Build()}}
+{\footnotesize\ttfamily void Trajectory\+Generator\+::\+Build (\begin{DoxyParamCaption}\item[{K\+D\+L\+::\+Frame \&}]{X\+\_\+curr,  }\item[{bool}]{verbose }\end{DoxyParamCaption})}
+
+
+
+Builds a loaded Cartesian space trajectory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X\+\_\+curr} & The robot current pose \\
+\hline
+{\em verbose} & optional. Display some information on the trajectory if True \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_trajectory_generator_a3a2299cadddd64978bd4cf3261df2c6d}\label{class_trajectory_generator_a3a2299cadddd64978bd4cf3261df2c6d}} 
+\index{Trajectory\+Generator@{Trajectory\+Generator}!Build\+\_\+vmax@{Build\+\_\+vmax}}
+\index{Build\+\_\+vmax@{Build\+\_\+vmax}!Trajectory\+Generator@{Trajectory\+Generator}}
+\subsubsection{\texorpdfstring{Build\+\_\+vmax()}{Build\_vmax()}}
+{\footnotesize\ttfamily void Trajectory\+Generator\+::\+Build\+\_\+vmax (\begin{DoxyParamCaption}\item[{K\+D\+L\+::\+Frame \&}]{X\+\_\+curr,  }\item[{double}]{vmax,  }\item[{double}]{amax }\end{DoxyParamCaption})}
+
+
+
+Builds a loaded Cartesian space trajectory with a maximum velocity of vmax. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X\+\_\+curr} & \\
+\hline
+{\em vmax} & \\
+\hline
+{\em amax} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_trajectory_generator_a7414eb6da84136d29805a9c7ee6d857e}\label{class_trajectory_generator_a7414eb6da84136d29805a9c7ee6d857e}} 
+\index{Trajectory\+Generator@{Trajectory\+Generator}!Direction\+Of\+Motion@{Direction\+Of\+Motion}}
+\index{Direction\+Of\+Motion@{Direction\+Of\+Motion}!Trajectory\+Generator@{Trajectory\+Generator}}
+\subsubsection{\texorpdfstring{Direction\+Of\+Motion()}{DirectionOfMotion()}}
+{\footnotesize\ttfamily Eigen\+::\+Vector3d Trajectory\+Generator\+::\+Direction\+Of\+Motion (\begin{DoxyParamCaption}\item[{double}]{time,  }\item[{double}]{dt }\end{DoxyParamCaption})}
+
+
+
+Computes the direction of motion along the trajectory in dt at a given time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The current time \\
+\hline
+{\em dt} & The small time step to the next pose \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_trajectory_generator_a75892c486572ad0820d2a377472c0c14}\label{class_trajectory_generator_a75892c486572ad0820d2a377472c0c14}} 
+\index{Trajectory\+Generator@{Trajectory\+Generator}!Load@{Load}}
+\index{Load@{Load}!Trajectory\+Generator@{Trajectory\+Generator}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void Trajectory\+Generator\+::\+Load (\begin{DoxyParamCaption}\item[{std\+::string \&}]{csv\+\_\+file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Load a csv file containing a desired velocity. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X\+\_\+curr} & The robot current pose \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_trajectory_generator_aee649f0687ae2ede88f2c6bb97aac7a8}\label{class_trajectory_generator_aee649f0687ae2ede88f2c6bb97aac7a8}} 
+\index{Trajectory\+Generator@{Trajectory\+Generator}!previous@{previous}}
+\index{previous@{previous}!Trajectory\+Generator@{Trajectory\+Generator}}
+\subsubsection{\texorpdfstring{previous()}{previous()}}
+{\footnotesize\ttfamily void Trajectory\+Generator\+::previous (\begin{DoxyParamCaption}\item[{panda\+\_\+traj\+::\+Traj\+Properties}]{traj\+\_\+properties\+\_\+,  }\item[{double}]{time\+\_\+dt\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Go back to the previous desired pose. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em traj\+\_\+properties\+\_\+} & \\
+\hline
+{\em time\+\_\+dt\+\_\+} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_trajectory_generator_a4a9bbab31d78a11ad80778ac83e8713d}\label{class_trajectory_generator_a4a9bbab31d78a11ad80778ac83e8713d}} 
+\index{Trajectory\+Generator@{Trajectory\+Generator}!Set\+Acc\+Max@{Set\+Acc\+Max}}
+\index{Set\+Acc\+Max@{Set\+Acc\+Max}!Trajectory\+Generator@{Trajectory\+Generator}}
+\subsubsection{\texorpdfstring{Set\+Acc\+Max()}{SetAccMax()}}
+{\footnotesize\ttfamily void Trajectory\+Generator\+::\+Set\+Acc\+Max (\begin{DoxyParamCaption}\item[{double}]{amax }\end{DoxyParamCaption})}
+
+
+
+Set the maximum acceleration along the trajectory profile. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amax} & The new maximal acceleration \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_trajectory_generator_af27180af44e99c60c5750e8b2444098f}\label{class_trajectory_generator_af27180af44e99c60c5750e8b2444098f}} 
+\index{Trajectory\+Generator@{Trajectory\+Generator}!update\+Trajectory@{update\+Trajectory}}
+\index{update\+Trajectory@{update\+Trajectory}!Trajectory\+Generator@{Trajectory\+Generator}}
+\subsubsection{\texorpdfstring{update\+Trajectory()}{updateTrajectory()}}
+{\footnotesize\ttfamily void Trajectory\+Generator\+::update\+Trajectory (\begin{DoxyParamCaption}\item[{panda\+\_\+traj\+::\+Traj\+Properties}]{traj\+\_\+properties\+\_\+,  }\item[{double}]{time\+\_\+dt\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Updates the Traj\+Properties msg for the time time\+\_\+dt\+\_\+. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em traj\+\_\+properties\+\_\+} & \\
+\hline
+{\em time\+\_\+dt\+\_\+} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/panda\+\_\+traj/include/panda\+\_\+traj/panda\+\_\+traj.\+hpp\item 
+/home/zheng/catkin\+\_\+ws/src/panda\+\_\+traj/src/panda\+\_\+traj.\+cpp\end{DoxyCompactItemize}

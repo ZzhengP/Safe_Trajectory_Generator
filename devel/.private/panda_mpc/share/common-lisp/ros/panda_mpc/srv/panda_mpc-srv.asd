@@ -7,4 +7,6 @@
   :components ((:file "_package")
     (:file "UI" :depends-on ("_package_UI"))
     (:file "_package_UI" :depends-on ("_package"))
+    (:file "UpdateTrajectoryNextPoint" :depends-on ("_package_UpdateTrajectoryNextPoint"))
+    (:file "_package_UpdateTrajectoryNextPoint" :depends-on ("_package"))
   ))

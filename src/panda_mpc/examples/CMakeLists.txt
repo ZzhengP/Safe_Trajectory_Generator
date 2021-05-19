@@ -1,3 +1,3 @@
 
-add_executable(qptest qptest.cpp)
-target_link_libraries(qptest PRIVATE ${catkin_LIBRARIES} ${qpOASES_LIBRARIES} panda_mpc)
+add_executable(trajectory_send trajectory_send.cpp)
+target_link_libraries(trajectory_send PRIVATE ${catkin_LIBRARIES} ${qpOASES_LIBRARIES} panda_mpc)

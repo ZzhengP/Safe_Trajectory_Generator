@@ -31,7 +31,6 @@ bool Controller::Init(ros::NodeHandle& node_handle,const Eigen::VectorXd& q_init
     //--------------------------------------
     J_.resize(chain.getNrOfJoints());
     M_.resize(chain.getNrOfJoints());
-
     H_.resize(number_of_variables,number_of_variables);
     g_.resize(number_of_variables);
     lb_.resize(number_of_variables);
@@ -62,8 +61,7 @@ bool Controller::Init(ros::NodeHandle& node_handle,const Eigen::VectorXd& q_init
     //--------------------------------------
     q_in.q.data = q_init;
     q_in.qdot.data = qd_init;
-    fksolver_->JntToCart(q_in.q,X_curr_);
-
+    fksolver_->JntToCart(q_in.q, X_curr_);
     //--------------------------------------
     // BUILD TRAJECTORY
     //--------------------------------------
@@ -72,9 +70,11 @@ bool Controller::Init(ros::NodeHandle& node_handle,const Eigen::VectorXd& q_init
     std::string csv_file_name = trajectory_file;
     trajectory.Load(csv_file_name);
     trajectory.Build(X_curr_, true);
+
+    next_pts_.M= X_curr_.M ;
+    next_pts_.p[0] = 0.5, next_pts_.p[1]=0., next_pts_.p[2] = 0.4;
     ROS_DEBUG_STREAM(" Trajectory computed ");
 
-    ROS_DEBUG_STREAM(" Trajectory computed ");
 
     return true;
 }
@@ -96,9 +96,11 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
     trajectory.updateTrajectory(traj_properties_, time_dt);
     if (traj_properties_.move_)
         traj_properties_.move_ = false;
-    X_traj_ = trajectory.Pos();
-    Xd_traj_ = trajectory.Vel();
-
+//    X_traj_ = trajectory.Pos();
+//    Xd_traj_ = trajectory.Vel();
+        X_traj_ = next_pts_;
+        Xd_traj_.vel[0] = 0, Xd_traj_.vel[1] = 0.1, Xd_traj_.vel[2] = 0;
+        Xd_traj_.rot[0] = 0, Xd_traj_.rot[1] = 0, Xd_traj_.rot[2] = 0 ;
     // Proportionnal controller
     X_err_ = diff( X_curr_ , X_traj_ );
     tf::twistKDLToEigen(X_err_,x_err);
@@ -166,6 +168,98 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
 
     return joint_velocity_out_;
 }
+//Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::VectorXd& qd, const ros::Duration& period)
+//{
+//    double time_dt = period.toSec();
+
+//    //Get robot current state
+//    q_in.q.data = q;
+//    q_in.qdot.data = qd;
+
+//    // Update the model
+//    chainjacsolver_->JntToJac(q_in.q, J_);
+//    fksolver_->JntToCart(q_in.q, X_curr_);
+
+//    traj_properties_.play_traj_ = true;
+//    //Update the trajectory
+//    trajectory.updateTrajectory(traj_properties_, time_dt);
+
+//    if (traj_properties_.move_)
+//        traj_properties_.move_ = false;
+//    X_traj_ = trajectory.Pos();
+//    Xd_traj_ = trajectory.Vel();
+////    X_traj_ = next_pts_;
+////    Xd_traj_.vel[0] = 0, Xd_traj_.vel[1] = 0.1, Xd_traj_.vel[2] = 0;
+////    Xd_traj_.rot[0] = 0, Xd_traj_.rot[1] = 0, Xd_traj_.rot[2] = 0 ;
+//    // Proportionnal controller
+//    X_err_ = diff( X_curr_ , X_traj_ );
+//    tf::twistKDLToEigen(X_err_,x_err);
+//    tf::twistKDLToEigen(Xd_traj_,xd_traj_);
+//    //xd_des_ = p_gains_.cwiseProduct(x_err) + xd_traj_;
+//    xd_des_ = p_gains_.cwiseProduct(x_err) + xd_traj_;
+
+//    // Formulate QP problem such that
+//    // joint_velocity_out_ = argmin 1/2 qd^T H_ qd + qd^T g_
+//    //                         s.t     lbA_ < A_ qd << ubA_
+//    //                                     lb_ < qd < ub_
+
+//    J = J_.data;
+//    M = M_.data;
+
+//    H_ =  2.0 * regularisation_weight_ * Eigen::MatrixXd::Identity(7,7);
+//    g_ = -2.0 * regularisation_weight_ * p_gains_qd_.cwiseProduct((q_mean_ - q));
+
+//    H_ +=  2.0 *  J.transpose() * J;
+//    g_ += -2.0 *  J.transpose() * xd_des_;
+
+//    double horizon_dt = 15 * time_dt;
+
+//    ub_ = qd_max_;
+//    lb_ = qd_min_;
+
+//    A_.block(0,0,7,7) = horizon_dt * Eigen::MatrixXd::Identity(7,7);
+
+
+//    ubA_.segment(0,7) = ll.data - q;
+//    lbA_.segment(0,7) = ul.data - q;
+
+//    // number of allowed compute steps
+//    int nWSR = 1e6;
+
+//    // Let's compute !
+//    qpOASES::returnValue ret;
+//    static bool qpoases_initialized = false;
+
+//    if(!qpoases_initialized){
+//        // Initialise the problem, once it has found a solution, we can hotstart
+//        ret = qpoases_solver_->init(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(),nWSR);
+
+//        // Keep init if it didn't work
+//        if(ret == qpOASES::SUCCESSFUL_RETURN)
+//        qpoases_initialized = true;
+//    }
+//    else{
+//        // Otherwise let's reuse the previous solution to find a solution faster
+//        ret = qpoases_solver_->hotstart(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(),nWSR);
+
+//        if(ret != qpOASES::SUCCESSFUL_RETURN)
+//        qpoases_initialized = false;
+//    }
+
+//    // Zero velocity if no solution found
+//    joint_velocity_out_.setZero();
+
+//    // If successful_return get the primal solution
+//    if(ret == qpOASES::SUCCESSFUL_RETURN)
+//        qpoases_solver_->getPrimalSolution(joint_velocity_out_.data());
+//    else
+//        ROS_WARN_STREAM("QPOases failed! Sending zero velocity");
+
+//    // Publish some messages
+//    do_publishing();
+
+//    return joint_velocity_out_;
+//}
 
 void Controller::BuildTrajectory(KDL::Frame X_curr_)
 {
@@ -210,6 +304,7 @@ void Controller::init_publishers(ros::NodeHandle& node_handle){
     pose_array_publisher_.init(node_handle, "Pose_array", 1);
     path_publisher_.init(node_handle, "Ros_Path", 1);
     panda_rundata_publisher.init(node_handle, "panda_rundata", 1);
+    pose_curr_publisher_.init(node_handle,"ee_pose", 1);
 
 }
 
@@ -239,7 +334,7 @@ bool Controller::load_robot(ros::NodeHandle& node_handle)
 
     updateUI_service = node_handle.advertiseService("updateUI", &Controller::updateUI, this);
     updateTraj_service = node_handle.advertiseService("updateTrajectory", &Controller::updateTrajectory, this);
-
+    updateNextTraj_service_ = node_handle.advertiseService("/panda_mpc/next_point", &Controller::updateTrajectoryPoint,this);
     // get robot descritpion
     double timeout;
     node_handle.param("timeout", timeout, 0.005);
@@ -290,6 +385,8 @@ bool Controller::load_robot(ros::NodeHandle& node_handle)
 
     return true;
 }
+
+
 
 
 void Controller::do_publishing()
@@ -363,4 +460,26 @@ bool Controller::updateTrajectory(panda_traj::UpdateTrajectory::Request& req, pa
   return true;
 }
 
+// Subscribe to a trajectory generation topic from the next point
+bool Controller::updateTrajectoryPoint(panda_mpc::UpdateTrajectoryNextPoint::Request &req, panda_mpc::UpdateTrajectoryNextPoint::Response &resp)
+{
+
+
+  next_pts_.p[0] = req.next_point.linear.x;
+  next_pts_.p[1] = req.next_point.linear.y;
+  next_pts_.p[2] = req.next_point.linear.z;
+
+  ROS_WARN_STREAM("Receiving next point " << next_pts_.p[0]  << " " << next_pts_.p[1] << " "<< next_pts_.p[2] );
+
+ // trajectory.Load(pts, req.vel);
+ // trajectory.Build(X_curr_, true);
+ // publishTrajectory();
+  std::cout << "Received next point computing traj and publishing" << std::endl;
+
+
 }
+
+}
+
+
+

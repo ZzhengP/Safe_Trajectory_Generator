@@ -1,0 +1,819 @@
+\hypertarget{classfranka__hw_1_1_franka_h_w}{}\section{franka\+\_\+hw\+:\+:Franka\+HW Class Reference}
+\label{classfranka__hw_1_1_franka_h_w}\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+
+
+{\ttfamily \#include $<$franka\+\_\+hw.\+h$>$}
+
+
+
+Inheritance diagram for franka\+\_\+hw\+:\+:Franka\+HW\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classfranka__hw_1_1_franka_h_w__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for franka\+\_\+hw\+:\+:Franka\+HW\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfranka__hw_1_1_franka_h_w__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structfranka__hw_1_1_franka_h_w_1_1_collision_config}{Collision\+Config}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfranka__hw_1_1_franka_h_w_abca52ce19bfa28709efcfe8d0d6404b8}{Franka\+HW} ()
+\item 
+virtual bool \hyperlink{classfranka__hw_1_1_franka_h_w_a0323c9d759de8d6ab8fae4bf574e4a48}{init} (ros\+::\+Node\+Handle \&root\+\_\+nh, ros\+::\+Node\+Handle \&robot\+\_\+hw\+\_\+nh) override
+\item 
+virtual bool \hyperlink{classfranka__hw_1_1_franka_h_w_a55d479321248ff8bcf80fc73ebb95d16}{init\+Parameters} (ros\+::\+Node\+Handle \&root\+\_\+nh, ros\+::\+Node\+Handle \&robot\+\_\+hw\+\_\+nh)
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_ae2775ed9705ec3d1d3e58aea2ce21bde}{init\+R\+O\+S\+Interfaces} (ros\+::\+Node\+Handle \&robot\+\_\+hw\+\_\+nh)
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_a064557fa9f0f7cb8e7cfab27eae03eb8}{setup\+Parameter\+Callbacks} (ros\+::\+Node\+Handle \&robot\+\_\+hw\+\_\+nh)
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_abbafdee04c749eae1726dd6e76f52c0f}{control} (const std\+::function$<$ bool(const ros\+::\+Time \&, const ros\+::\+Duration \&)$>$ \&ros\+\_\+callback) const
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_ad8f348151b93a7eebc9ef45a702a29ee}{update} (const franka\+::\+Robot\+State \&robot\+\_\+state)
+\item 
+virtual bool \hyperlink{classfranka__hw_1_1_franka_h_w_a8fcc0a82b0c13cdbd1de7fea38c3ecc3}{controller\+Active} () const noexcept
+\item 
+virtual bool \hyperlink{classfranka__hw_1_1_franka_h_w_a73e581982455acacca51d81e4676e9a6}{check\+For\+Conflict} (const std\+::list$<$ hardware\+\_\+interface\+::\+Controller\+Info $>$ \&info) const override
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_ab29812769471d212a30dac6c19c12884}{do\+Switch} (const std\+::list$<$ hardware\+\_\+interface\+::\+Controller\+Info $>$ \&, const std\+::list$<$ hardware\+\_\+interface\+::\+Controller\+Info $>$ \&) override
+\item 
+virtual bool \hyperlink{classfranka__hw_1_1_franka_h_w_ab73b14d5f8481cd3cb3d670aeae2de06}{prepare\+Switch} (const std\+::list$<$ hardware\+\_\+interface\+::\+Controller\+Info $>$ \&start\+\_\+list, const std\+::list$<$ hardware\+\_\+interface\+::\+Controller\+Info $>$ \&stop\+\_\+list) override
+\item 
+virtual std\+::array$<$ double, 7 $>$ \hyperlink{classfranka__hw_1_1_franka_h_w_a80bc3da19575532ab827bc9c62f91bed}{get\+Joint\+Position\+Command} () const noexcept
+\item 
+virtual std\+::array$<$ double, 7 $>$ \hyperlink{classfranka__hw_1_1_franka_h_w_a93067ec2c8ba530188ee70f024ddf100}{get\+Joint\+Velocity\+Command} () const noexcept
+\item 
+virtual std\+::array$<$ double, 7 $>$ \hyperlink{classfranka__hw_1_1_franka_h_w_ae8063f56d7e70e0f7537fe1d522f8f2f}{get\+Joint\+Effort\+Command} () const noexcept
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_afb0f49fec764be80e4c89e29706a4936}{enforce\+Limits} (const ros\+::\+Duration \&period)
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_aaa0bc020099cb6dba41728252d0c7df4}{reset} ()
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_a120261c13cfa7f508061dd5c81d080e5}{check\+Joint\+Limits} ()
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_a8494bbab229cd16bc9bb7c994b01684d}{read} (const ros\+::\+Time \&time, const ros\+::\+Duration \&period) override
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_afcdec49ec8bb07c48ed3d77ea2cd4e46}{write} (const ros\+::\+Time \&time, const ros\+::\+Duration \&period) override
+\item 
+virtual franka\+::\+Robot \& \hyperlink{classfranka__hw_1_1_franka_h_w_ade38eaa271d71cebb8bce3635cf82169}{robot} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \hyperlink{classfranka__hw_1_1_franka_h_w_a673cc620d6acb15625f6403d96c75f4e}{command\+Has\+NaN} (const franka\+::\+Torques \&command)
+\item 
+static bool \hyperlink{classfranka__hw_1_1_franka_h_w_a32f7dda7266b381a4c779993b4d0185f}{command\+Has\+NaN} (const franka\+::\+Joint\+Positions \&command)
+\item 
+static bool \hyperlink{classfranka__hw_1_1_franka_h_w_a56bc8a84589c605327e9bbcb64809fe1}{command\+Has\+NaN} (const franka\+::\+Joint\+Velocities \&command)
+\item 
+static bool \hyperlink{classfranka__hw_1_1_franka_h_w_aeec15cdb4cd9edb0976e96c63b62f93c}{command\+Has\+NaN} (const franka\+::\+Cartesian\+Pose \&command)
+\item 
+static bool \hyperlink{classfranka__hw_1_1_franka_h_w_ac408df87375bb8cfde94f4e5bf4a16c2}{command\+Has\+NaN} (const franka\+::\+Cartesian\+Velocities \&command)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ac576bd5140a03864888c68519daa5aa4}\label{classfranka__hw_1_1_franka_h_w_ac576bd5140a03864888c68519daa5aa4}} 
+using {\bfseries Callback} = std\+::function$<$ bool(const franka\+::\+Robot\+State \&, franka\+::\+Duration)$>$
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \hyperlink{classfranka__hw_1_1_franka_h_w_a4014fbce5bae60ee693505775ecee499}{control\+Callback} (const T \&command, Callback ros\+\_\+callback, const franka\+::\+Robot\+State \&robot\+\_\+state, franka\+::\+Duration time\+\_\+step)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classfranka__hw_1_1_franka_h_w_a3a476a1de741f79695f0b64d2580e6cf}{setup\+Limit\+Interface} (joint\+\_\+limits\+\_\+interface\+::\+Joint\+Limits\+Interface$<$ T $>$ \&limit\+\_\+interface, hardware\+\_\+interface\+::\+Joint\+Command\+Interface \&command\+\_\+interface)
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_ab216faba5316b7ca1680e9af5d313216}{setup\+Joint\+State\+Interface} (franka\+::\+Robot\+State \&robot\+\_\+state)
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \hyperlink{classfranka__hw_1_1_franka_h_w_a34e707d6e834267f1ad256da5cce0713}{setup\+Joint\+Command\+Interface} (std\+::array$<$ double, 7 $>$ \&command, franka\+::\+Robot\+State \&state, bool use\+\_\+q\+\_\+d, T \&interface)
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_a4dbc96ed57e3054db31bbab11a61afec}{setup\+Franka\+State\+Interface} (franka\+::\+Robot\+State \&robot\+\_\+state)
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_a16128e9789d933e1fcb3f9fc6e336eb1}{setup\+Franka\+Cartesian\+Pose\+Interface} (franka\+::\+Cartesian\+Pose \&pose\+\_\+cartesian\+\_\+command)
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_a60e7f8225648735e054d8b022efee557}{setup\+Franka\+Cartesian\+Velocity\+Interface} (franka\+::\+Cartesian\+Velocities \&velocity\+\_\+cartesian\+\_\+command)
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_a4d738b3573b7ab159209b7e2e0d4a802}{setup\+Franka\+Model\+Interface} (franka\+::\+Robot\+State \&robot\+\_\+state)
+\item 
+virtual bool \hyperlink{classfranka__hw_1_1_franka_h_w_a910bb11c6a3b14f027ad56dcf0d983c7}{set\+Run\+Function} (const Control\+Mode \&requested\+\_\+control\+\_\+mode, bool limit\+\_\+rate, double cutoff\+\_\+frequency, franka\+::\+Controller\+Mode internal\+\_\+controller)
+\item 
+virtual void \hyperlink{classfranka__hw_1_1_franka_h_w_ad211498ff17ff1dfb9609a2fcf76d14a}{init\+Robot} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$size\+\_\+t size$>$ }\\static bool \hyperlink{classfranka__hw_1_1_franka_h_w_a6adcd4d0cf60dd255bfea0d80791fcc7}{array\+Has\+NaN} (const std\+::array$<$ double, size $>$ \&array)
+\item 
+static std\+::vector$<$ double $>$ \hyperlink{classfranka__hw_1_1_franka_h_w_a2f811d66ca087ad8ca387f7767e1df5f}{get\+Collision\+Thresholds} (const std\+::string \&name, ros\+::\+Node\+Handle \&robot\+\_\+hw\+\_\+nh, const std\+::vector$<$ double $>$ \&defaults)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_adc6ac201c82bfe71c0309cd32e361cdf}\label{classfranka__hw_1_1_franka_h_w_adc6ac201c82bfe71c0309cd32e361cdf}} 
+\hyperlink{structfranka__hw_1_1_franka_h_w_1_1_collision_config}{Collision\+Config} {\bfseries collision\+\_\+config\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a71a3f8c221792e3d833ac3d50e61a8fc}\label{classfranka__hw_1_1_franka_h_w_a71a3f8c221792e3d833ac3d50e61a8fc}} 
+hardware\+\_\+interface\+::\+Joint\+State\+Interface {\bfseries joint\+\_\+state\+\_\+interface\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a2b197ae6181a03bc25875a7e5231d6c2}\label{classfranka__hw_1_1_franka_h_w_a2b197ae6181a03bc25875a7e5231d6c2}} 
+\hyperlink{classfranka__hw_1_1_franka_state_interface}{Franka\+State\+Interface} {\bfseries franka\+\_\+state\+\_\+interface\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_aed81f869c0785e8257c9b21ce3a54f48}\label{classfranka__hw_1_1_franka_h_w_aed81f869c0785e8257c9b21ce3a54f48}} 
+hardware\+\_\+interface\+::\+Position\+Joint\+Interface {\bfseries position\+\_\+joint\+\_\+interface\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_aae00e8f592019644703aaebcc8b6d8db}\label{classfranka__hw_1_1_franka_h_w_aae00e8f592019644703aaebcc8b6d8db}} 
+hardware\+\_\+interface\+::\+Velocity\+Joint\+Interface {\bfseries velocity\+\_\+joint\+\_\+interface\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a5f695d0eb767c02397372cb5536db00c}\label{classfranka__hw_1_1_franka_h_w_a5f695d0eb767c02397372cb5536db00c}} 
+hardware\+\_\+interface\+::\+Effort\+Joint\+Interface {\bfseries effort\+\_\+joint\+\_\+interface\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a7086c73e105997fe775d873ece1a177b}\label{classfranka__hw_1_1_franka_h_w_a7086c73e105997fe775d873ece1a177b}} 
+\hyperlink{classfranka__hw_1_1_franka_pose_cartesian_interface}{Franka\+Pose\+Cartesian\+Interface} {\bfseries franka\+\_\+pose\+\_\+cartesian\+\_\+interface\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_af8d77bce759ddf1db22a22a996181ba9}\label{classfranka__hw_1_1_franka_h_w_af8d77bce759ddf1db22a22a996181ba9}} 
+\hyperlink{classfranka__hw_1_1_franka_velocity_cartesian_interface}{Franka\+Velocity\+Cartesian\+Interface} {\bfseries franka\+\_\+velocity\+\_\+cartesian\+\_\+interface\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a8480f1a38f8a01fb10670f9d300ed037}\label{classfranka__hw_1_1_franka_h_w_a8480f1a38f8a01fb10670f9d300ed037}} 
+\hyperlink{classfranka__hw_1_1_franka_model_interface}{Franka\+Model\+Interface} {\bfseries franka\+\_\+model\+\_\+interface\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a0453d8d00992ae08ddd47083a21abcc8}\label{classfranka__hw_1_1_franka_h_w_a0453d8d00992ae08ddd47083a21abcc8}} 
+joint\+\_\+limits\+\_\+interface\+::\+Position\+Joint\+Soft\+Limits\+Interface {\bfseries position\+\_\+joint\+\_\+limit\+\_\+interface\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a4e85e4440436f97a169553d281049e4e}\label{classfranka__hw_1_1_franka_h_w_a4e85e4440436f97a169553d281049e4e}} 
+joint\+\_\+limits\+\_\+interface\+::\+Velocity\+Joint\+Soft\+Limits\+Interface {\bfseries velocity\+\_\+joint\+\_\+limit\+\_\+interface\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a3545598adde92a2cd78af121bf40f24b}\label{classfranka__hw_1_1_franka_h_w_a3545598adde92a2cd78af121bf40f24b}} 
+joint\+\_\+limits\+\_\+interface\+::\+Effort\+Joint\+Soft\+Limits\+Interface {\bfseries effort\+\_\+joint\+\_\+limit\+\_\+interface\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_af2de5dd88993549670b2345fbf70c539}\label{classfranka__hw_1_1_franka_h_w_af2de5dd88993549670b2345fbf70c539}} 
+std\+::mutex {\bfseries libfranka\+\_\+state\+\_\+mutex\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a80e2b2029bc0a45bb28594435097434d}\label{classfranka__hw_1_1_franka_h_w_a80e2b2029bc0a45bb28594435097434d}} 
+std\+::mutex {\bfseries ros\+\_\+state\+\_\+mutex\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_afe80f4d54e4f6aa47534ebbcb2382ecb}\label{classfranka__hw_1_1_franka_h_w_afe80f4d54e4f6aa47534ebbcb2382ecb}} 
+franka\+::\+Robot\+State {\bfseries robot\+\_\+state\+\_\+libfranka\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_aa87c69ba0fb5281e2bbe1ad819fb02b5}\label{classfranka__hw_1_1_franka_h_w_aa87c69ba0fb5281e2bbe1ad819fb02b5}} 
+franka\+::\+Robot\+State {\bfseries robot\+\_\+state\+\_\+ros\+\_\+} \{\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a01434e76a69afa29f009de2aacd5a0c0}\label{classfranka__hw_1_1_franka_h_w_a01434e76a69afa29f009de2aacd5a0c0}} 
+std\+::mutex {\bfseries libfranka\+\_\+cmd\+\_\+mutex\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a7fe1fb5677162020a5a68dbf33dcf2a8}\label{classfranka__hw_1_1_franka_h_w_a7fe1fb5677162020a5a68dbf33dcf2a8}} 
+franka\+::\+Joint\+Positions {\bfseries position\+\_\+joint\+\_\+command\+\_\+libfranka\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a97615d220402aec7723b2a0edeb52043}\label{classfranka__hw_1_1_franka_h_w_a97615d220402aec7723b2a0edeb52043}} 
+franka\+::\+Joint\+Velocities {\bfseries velocity\+\_\+joint\+\_\+command\+\_\+libfranka\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ab481fa379d12af7339a2fc84a5351090}\label{classfranka__hw_1_1_franka_h_w_ab481fa379d12af7339a2fc84a5351090}} 
+franka\+::\+Torques {\bfseries effort\+\_\+joint\+\_\+command\+\_\+libfranka\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a4bcf6ae0cb54478065f7bdb4cebc3684}\label{classfranka__hw_1_1_franka_h_w_a4bcf6ae0cb54478065f7bdb4cebc3684}} 
+franka\+::\+Cartesian\+Pose {\bfseries pose\+\_\+cartesian\+\_\+command\+\_\+libfranka\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a000ca0dd3d505f095fa9ee17967b7563}\label{classfranka__hw_1_1_franka_h_w_a000ca0dd3d505f095fa9ee17967b7563}} 
+franka\+::\+Cartesian\+Velocities {\bfseries velocity\+\_\+cartesian\+\_\+command\+\_\+libfranka\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_aa23bd816eecbd232ca2df39dc5e3f8b4}\label{classfranka__hw_1_1_franka_h_w_aa23bd816eecbd232ca2df39dc5e3f8b4}} 
+std\+::mutex {\bfseries ros\+\_\+cmd\+\_\+mutex\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a1d65810b55198d9691b25bf3c6ecbc00}\label{classfranka__hw_1_1_franka_h_w_a1d65810b55198d9691b25bf3c6ecbc00}} 
+franka\+::\+Joint\+Positions {\bfseries position\+\_\+joint\+\_\+command\+\_\+ros\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a2ce1c75e2e75aa476df6e239b9092b11}\label{classfranka__hw_1_1_franka_h_w_a2ce1c75e2e75aa476df6e239b9092b11}} 
+franka\+::\+Joint\+Velocities {\bfseries velocity\+\_\+joint\+\_\+command\+\_\+ros\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_abcd805f67e92fb88bd8b218f65a7c911}\label{classfranka__hw_1_1_franka_h_w_abcd805f67e92fb88bd8b218f65a7c911}} 
+franka\+::\+Torques {\bfseries effort\+\_\+joint\+\_\+command\+\_\+ros\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a9d5962dbb07400fffe3a93aa51a6ba74}\label{classfranka__hw_1_1_franka_h_w_a9d5962dbb07400fffe3a93aa51a6ba74}} 
+franka\+::\+Cartesian\+Pose {\bfseries pose\+\_\+cartesian\+\_\+command\+\_\+ros\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ac84657c0511e75821c08a6ea51b51a86}\label{classfranka__hw_1_1_franka_h_w_ac84657c0511e75821c08a6ea51b51a86}} 
+franka\+::\+Cartesian\+Velocities {\bfseries velocity\+\_\+cartesian\+\_\+command\+\_\+ros\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ad92d666e7ded9c9c24db7418d0fedb88}\label{classfranka__hw_1_1_franka_h_w_ad92d666e7ded9c9c24db7418d0fedb88}} 
+std\+::unique\+\_\+ptr$<$ franka\+::\+Robot $>$ {\bfseries robot\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a3f4f13a4df9617f50df10ae4e4d6c536}\label{classfranka__hw_1_1_franka_h_w_a3f4f13a4df9617f50df10ae4e4d6c536}} 
+std\+::unique\+\_\+ptr$<$ franka\+::\+Model $>$ {\bfseries model\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a209e8f3424efe0fd05725be609d7205a}\label{classfranka__hw_1_1_franka_h_w_a209e8f3424efe0fd05725be609d7205a}} 
+std\+::array$<$ std\+::string, 7 $>$ {\bfseries joint\+\_\+names\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a97b5be24f33b2253a637d74ebdd66fa0}\label{classfranka__hw_1_1_franka_h_w_a97b5be24f33b2253a637d74ebdd66fa0}} 
+std\+::string {\bfseries arm\+\_\+id\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a88a3373d4deb835fd0a825c14c31b073}\label{classfranka__hw_1_1_franka_h_w_a88a3373d4deb835fd0a825c14c31b073}} 
+std\+::string {\bfseries robot\+\_\+ip\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ae6965976c623e2ea3c460611d113858b}\label{classfranka__hw_1_1_franka_h_w_ae6965976c623e2ea3c460611d113858b}} 
+urdf\+::\+Model {\bfseries urdf\+\_\+model\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a3881414ad06c12e6f747c7054fbc1092}\label{classfranka__hw_1_1_franka_h_w_a3881414ad06c12e6f747c7054fbc1092}} 
+double {\bfseries joint\+\_\+limit\+\_\+warning\+\_\+threshold\+\_\+} \{0.\+1\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a193b40f1d42ff3f1b805bbef4a9c2749}\label{classfranka__hw_1_1_franka_h_w_a193b40f1d42ff3f1b805bbef4a9c2749}} 
+franka\+::\+Realtime\+Config {\bfseries realtime\+\_\+config\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a08acb4bfdbe78711dc466e74ee56a61d}\label{classfranka__hw_1_1_franka_h_w_a08acb4bfdbe78711dc466e74ee56a61d}} 
+bool {\bfseries initialized\+\_\+} \{false\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_aa207ee4ba133fdb1b3887c9639b47b40}\label{classfranka__hw_1_1_franka_h_w_aa207ee4ba133fdb1b3887c9639b47b40}} 
+std\+::atomic\+\_\+bool {\bfseries controller\+\_\+active\+\_\+} \{false\}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a4eb4ed0043449742cadefa5809d9c6f0}\label{classfranka__hw_1_1_franka_h_w_a4eb4ed0043449742cadefa5809d9c6f0}} 
+Control\+Mode {\bfseries current\+\_\+control\+\_\+mode\+\_\+} = Control\+Mode\+::\+None
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a0e2aab0e386f9ed57345cd56f02643ac}\label{classfranka__hw_1_1_franka_h_w_a0e2aab0e386f9ed57345cd56f02643ac}} 
+std\+::function$<$ franka\+::\+Controller\+Mode()$>$ {\bfseries get\+\_\+internal\+\_\+controller\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a0d26d3a30e63e83e19cad138a9811fc7}\label{classfranka__hw_1_1_franka_h_w_a0d26d3a30e63e83e19cad138a9811fc7}} 
+std\+::function$<$ bool()$>$ {\bfseries get\+\_\+limit\+\_\+rate\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ada3ea355cd85b06247ee9def60485240}\label{classfranka__hw_1_1_franka_h_w_ada3ea355cd85b06247ee9def60485240}} 
+std\+::function$<$ double()$>$ {\bfseries get\+\_\+cutoff\+\_\+frequency\+\_\+}
+\item 
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ab53d17aecdb62936defdcde99e9b88b8}\label{classfranka__hw_1_1_franka_h_w_ab53d17aecdb62936defdcde99e9b88b8}} 
+std\+::function$<$ void(franka\+::\+Robot \&, Callback)$>$ {\bfseries run\+\_\+function\+\_\+}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class wraps the functionality of libfranka for controlling Panda robots into the ros\+\_\+control framework. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_abca52ce19bfa28709efcfe8d0d6404b8}\label{classfranka__hw_1_1_franka_h_w_abca52ce19bfa28709efcfe8d0d6404b8}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!Franka\+HW@{Franka\+HW}}
+\index{Franka\+HW@{Franka\+HW}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{Franka\+H\+W()}{FrankaHW()}}
+{\footnotesize\ttfamily franka\+\_\+hw\+::\+Franka\+H\+W\+::\+Franka\+HW (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. Note\+: Be sure to call the \hyperlink{classfranka__hw_1_1_franka_h_w_a0323c9d759de8d6ab8fae4bf574e4a48}{init()} method before operation. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a6adcd4d0cf60dd255bfea0d80791fcc7}\label{classfranka__hw_1_1_franka_h_w_a6adcd4d0cf60dd255bfea0d80791fcc7}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!array\+Has\+NaN@{array\+Has\+NaN}}
+\index{array\+Has\+NaN@{array\+Has\+NaN}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{array\+Has\+Na\+N()}{arrayHasNaN()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t size$>$ \\
+static bool franka\+\_\+hw\+::\+Franka\+H\+W\+::array\+Has\+NaN (\begin{DoxyParamCaption}\item[{const std\+::array$<$ double, size $>$ \&}]{array }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+Checks whether an array of doubles contains NaN values.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em command} & array The array to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the array contains NaN values, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a73e581982455acacca51d81e4676e9a6}\label{classfranka__hw_1_1_franka_h_w_a73e581982455acacca51d81e4676e9a6}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!check\+For\+Conflict@{check\+For\+Conflict}}
+\index{check\+For\+Conflict@{check\+For\+Conflict}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{check\+For\+Conflict()}{checkForConflict()}}
+{\footnotesize\ttfamily bool franka\+\_\+hw\+::\+Franka\+H\+W\+::check\+For\+Conflict (\begin{DoxyParamCaption}\item[{const std\+::list$<$ hardware\+\_\+interface\+::\+Controller\+Info $>$ \&}]{info }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Checks whether a requested controller can be run, based on the resources and interfaces it claims.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em info} & Controllers to be running at the same time.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True in case of a conflict, false in case of valid controllers. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classfranka__hw_1_1_franka_combinable_h_w_aa2a84c1da5161ddb38e33f112c8850a7}{franka\+\_\+hw\+::\+Franka\+Combinable\+HW}.
+
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a120261c13cfa7f508061dd5c81d080e5}\label{classfranka__hw_1_1_franka_h_w_a120261c13cfa7f508061dd5c81d080e5}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!check\+Joint\+Limits@{check\+Joint\+Limits}}
+\index{check\+Joint\+Limits@{check\+Joint\+Limits}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{check\+Joint\+Limits()}{checkJointLimits()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::check\+Joint\+Limits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Checks the proximity of each joint to its joint position limits and prints a warning whenever a joint is close to a limit. \mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a673cc620d6acb15625f6403d96c75f4e}\label{classfranka__hw_1_1_franka_h_w_a673cc620d6acb15625f6403d96c75f4e}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!command\+Has\+NaN@{command\+Has\+NaN}}
+\index{command\+Has\+NaN@{command\+Has\+NaN}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{command\+Has\+Na\+N()}{commandHasNaN()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily bool franka\+\_\+hw\+::\+Franka\+H\+W\+::command\+Has\+NaN (\begin{DoxyParamCaption}\item[{const franka\+::\+Torques \&}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks a command for NaN values.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em command} & The command to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the command contains NaN, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a32f7dda7266b381a4c779993b4d0185f}\label{classfranka__hw_1_1_franka_h_w_a32f7dda7266b381a4c779993b4d0185f}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!command\+Has\+NaN@{command\+Has\+NaN}}
+\index{command\+Has\+NaN@{command\+Has\+NaN}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{command\+Has\+Na\+N()}{commandHasNaN()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily bool franka\+\_\+hw\+::\+Franka\+H\+W\+::command\+Has\+NaN (\begin{DoxyParamCaption}\item[{const franka\+::\+Joint\+Positions \&}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks a command for NaN values.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em command} & The command to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the command contains NaN, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a56bc8a84589c605327e9bbcb64809fe1}\label{classfranka__hw_1_1_franka_h_w_a56bc8a84589c605327e9bbcb64809fe1}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!command\+Has\+NaN@{command\+Has\+NaN}}
+\index{command\+Has\+NaN@{command\+Has\+NaN}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{command\+Has\+Na\+N()}{commandHasNaN()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily bool franka\+\_\+hw\+::\+Franka\+H\+W\+::command\+Has\+NaN (\begin{DoxyParamCaption}\item[{const franka\+::\+Joint\+Velocities \&}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks a command for NaN values.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em command} & The command to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the command contains NaN, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_aeec15cdb4cd9edb0976e96c63b62f93c}\label{classfranka__hw_1_1_franka_h_w_aeec15cdb4cd9edb0976e96c63b62f93c}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!command\+Has\+NaN@{command\+Has\+NaN}}
+\index{command\+Has\+NaN@{command\+Has\+NaN}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{command\+Has\+Na\+N()}{commandHasNaN()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily bool franka\+\_\+hw\+::\+Franka\+H\+W\+::command\+Has\+NaN (\begin{DoxyParamCaption}\item[{const franka\+::\+Cartesian\+Pose \&}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks a command for NaN values.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em command} & The command to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the command contains NaN, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ac408df87375bb8cfde94f4e5bf4a16c2}\label{classfranka__hw_1_1_franka_h_w_ac408df87375bb8cfde94f4e5bf4a16c2}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!command\+Has\+NaN@{command\+Has\+NaN}}
+\index{command\+Has\+NaN@{command\+Has\+NaN}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{command\+Has\+Na\+N()}{commandHasNaN()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily bool franka\+\_\+hw\+::\+Franka\+H\+W\+::command\+Has\+NaN (\begin{DoxyParamCaption}\item[{const franka\+::\+Cartesian\+Velocities \&}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Checks a command for NaN values.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em command} & The command to check.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the command contains NaN, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_abbafdee04c749eae1726dd6e76f52c0f}\label{classfranka__hw_1_1_franka_h_w_abbafdee04c749eae1726dd6e76f52c0f}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!control@{control}}
+\index{control@{control}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{control()}{control()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::control (\begin{DoxyParamCaption}\item[{const std\+::function$<$ bool(const ros\+::\+Time \&, const ros\+::\+Duration \&)$>$ \&}]{ros\+\_\+callback }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Runs the currently active controller in a realtime loop.
+
+If no controller is active, the function immediately exits. When running a controller, the function only exits when ros\+\_\+callback returns false.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em ros\+\_\+callback} & A callback function that is executed at each time step and runs all R\+O\+S-\/side functionality of the hardware. Execution is stopped if it returns false.\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em franka\+::\+Control\+Exception} & if an error related to torque control or motion generation occurred. \\
+\hline
+{\em franka\+::\+Invalid\+Operation\+Exception} & if a conflicting operation is already running. \\
+\hline
+{\em franka\+::\+Network\+Exception} & if the connection is lost, e.\+g. after a timeout. \\
+\hline
+{\em franka\+::\+Realtime\+Exception} & if realtime priority cannot be set for the current thread. \\
+\hline
+\end{DoxyExceptions}
+
+
+Reimplemented in \hyperlink{classfranka__hw_1_1_franka_combinable_h_w_a07855d935d7063930be9aa140d0895f8}{franka\+\_\+hw\+::\+Franka\+Combinable\+HW}.
+
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a4014fbce5bae60ee693505775ecee499}\label{classfranka__hw_1_1_franka_h_w_a4014fbce5bae60ee693505775ecee499}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!control\+Callback@{control\+Callback}}
+\index{control\+Callback@{control\+Callback}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{control\+Callback()}{controlCallback()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T franka\+\_\+hw\+::\+Franka\+H\+W\+::control\+Callback (\begin{DoxyParamCaption}\item[{const T \&}]{command,  }\item[{Callback}]{ros\+\_\+callback,  }\item[{const franka\+::\+Robot\+State \&}]{robot\+\_\+state,  }\item[{franka\+::\+Duration}]{time\+\_\+step }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Callback for the libfranka control loop. This method is designed to incorporate a second callback named ros\+\_\+callback that will be called on each iteration of the callback.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em command} & The datafield containing the command to send to the robot. \\
+\hline
+\mbox{\tt in}  & {\em ros\+\_\+callback} & An additional callback that is executed every time step. \\
+\hline
+\mbox{\tt in}  & {\em robot\+\_\+state} & The current robot state to compute commands with. \\
+\hline
+\mbox{\tt in}  & {\em time\+\_\+step} & Time since last call to the callback. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & When a command contains NaN values.\\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+The command to be sent to the robot via libfranka. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a8fcc0a82b0c13cdbd1de7fea38c3ecc3}\label{classfranka__hw_1_1_franka_h_w_a8fcc0a82b0c13cdbd1de7fea38c3ecc3}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!controller\+Active@{controller\+Active}}
+\index{controller\+Active@{controller\+Active}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{controller\+Active()}{controllerActive()}}
+{\footnotesize\ttfamily bool franka\+\_\+hw\+::\+Franka\+H\+W\+::controller\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+Indicates whether there is an active controller.
+
+\begin{DoxyReturn}{Returns}
+True if a controller is currently active, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ab29812769471d212a30dac6c19c12884}\label{classfranka__hw_1_1_franka_h_w_ab29812769471d212a30dac6c19c12884}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!do\+Switch@{do\+Switch}}
+\index{do\+Switch@{do\+Switch}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{do\+Switch()}{doSwitch()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::do\+Switch (\begin{DoxyParamCaption}\item[{const std\+::list$<$ hardware\+\_\+interface\+::\+Controller\+Info $>$ \&}]{,  }\item[{const std\+::list$<$ hardware\+\_\+interface\+::\+Controller\+Info $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Performs controller switching (real-\/time capable). \mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_afb0f49fec764be80e4c89e29706a4936}\label{classfranka__hw_1_1_franka_h_w_afb0f49fec764be80e4c89e29706a4936}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!enforce\+Limits@{enforce\+Limits}}
+\index{enforce\+Limits@{enforce\+Limits}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{enforce\+Limits()}{enforceLimits()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::enforce\+Limits (\begin{DoxyParamCaption}\item[{const ros\+::\+Duration \&}]{period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Enforces limits on position, velocity, and torque level.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em period} & The duration of the current cycle. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a2f811d66ca087ad8ca387f7767e1df5f}\label{classfranka__hw_1_1_franka_h_w_a2f811d66ca087ad8ca387f7767e1df5f}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!get\+Collision\+Thresholds@{get\+Collision\+Thresholds}}
+\index{get\+Collision\+Thresholds@{get\+Collision\+Thresholds}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{get\+Collision\+Thresholds()}{getCollisionThresholds()}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ franka\+\_\+hw\+::\+Franka\+H\+W\+::get\+Collision\+Thresholds (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{ros\+::\+Node\+Handle \&}]{robot\+\_\+hw\+\_\+nh,  }\item[{const std\+::vector$<$ double $>$ \&}]{defaults }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+Parses a set of collision thresholds from the parameter server. The methods returns the default values if no parameter was found or the size of the array did not match the defaults dimension.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & The name of the parameter to look for. \\
+\hline
+\mbox{\tt in}  & {\em robot\+\_\+hw\+\_\+nh} & A node handle in the namespace of the robot hardware. \\
+\hline
+\mbox{\tt in}  & {\em defaults} & A set of default values that also specify the size the parameter must have to be valid. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A set parsed parameters if valid parameters where found, the default values otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ae8063f56d7e70e0f7537fe1d522f8f2f}\label{classfranka__hw_1_1_franka_h_w_ae8063f56d7e70e0f7537fe1d522f8f2f}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!get\+Joint\+Effort\+Command@{get\+Joint\+Effort\+Command}}
+\index{get\+Joint\+Effort\+Command@{get\+Joint\+Effort\+Command}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{get\+Joint\+Effort\+Command()}{getJointEffortCommand()}}
+{\footnotesize\ttfamily std\+::array$<$ double, 7 $>$ franka\+\_\+hw\+::\+Franka\+H\+W\+::get\+Joint\+Effort\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+Gets the current joint torque command.
+
+\begin{DoxyReturn}{Returns}
+The current joint torque command. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a80bc3da19575532ab827bc9c62f91bed}\label{classfranka__hw_1_1_franka_h_w_a80bc3da19575532ab827bc9c62f91bed}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!get\+Joint\+Position\+Command@{get\+Joint\+Position\+Command}}
+\index{get\+Joint\+Position\+Command@{get\+Joint\+Position\+Command}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{get\+Joint\+Position\+Command()}{getJointPositionCommand()}}
+{\footnotesize\ttfamily std\+::array$<$ double, 7 $>$ franka\+\_\+hw\+::\+Franka\+H\+W\+::get\+Joint\+Position\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+Gets the current joint position command.
+
+\begin{DoxyReturn}{Returns}
+The current joint position command. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a93067ec2c8ba530188ee70f024ddf100}\label{classfranka__hw_1_1_franka_h_w_a93067ec2c8ba530188ee70f024ddf100}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!get\+Joint\+Velocity\+Command@{get\+Joint\+Velocity\+Command}}
+\index{get\+Joint\+Velocity\+Command@{get\+Joint\+Velocity\+Command}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{get\+Joint\+Velocity\+Command()}{getJointVelocityCommand()}}
+{\footnotesize\ttfamily std\+::array$<$ double, 7 $>$ franka\+\_\+hw\+::\+Franka\+H\+W\+::get\+Joint\+Velocity\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+Gets the current joint velocity command.
+
+\begin{DoxyReturn}{Returns}
+The current joint velocity command. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a0323c9d759de8d6ab8fae4bf574e4a48}\label{classfranka__hw_1_1_franka_h_w_a0323c9d759de8d6ab8fae4bf574e4a48}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!init@{init}}
+\index{init@{init}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool franka\+\_\+hw\+::\+Franka\+H\+W\+::init (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{root\+\_\+nh,  }\item[{ros\+::\+Node\+Handle \&}]{robot\+\_\+hw\+\_\+nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initializes the \hyperlink{classfranka__hw_1_1_franka_h_w}{Franka\+HW} class to be fully operational. This involves parsing required configurations from the R\+OS parameter server, connecting to the robot and setting up interfaces for the ros\+\_\+control framework.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em root\+\_\+nh} & A node handle in the root namespace of the control node. \\
+\hline
+\mbox{\tt in}  & {\em robot\+\_\+hw\+\_\+nh} & A node handle in the namespace of the robot hardware.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a55d479321248ff8bcf80fc73ebb95d16}\label{classfranka__hw_1_1_franka_h_w_a55d479321248ff8bcf80fc73ebb95d16}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!init\+Parameters@{init\+Parameters}}
+\index{init\+Parameters@{init\+Parameters}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{init\+Parameters()}{initParameters()}}
+{\footnotesize\ttfamily bool franka\+\_\+hw\+::\+Franka\+H\+W\+::init\+Parameters (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{root\+\_\+nh,  }\item[{ros\+::\+Node\+Handle \&}]{robot\+\_\+hw\+\_\+nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Reads the parameterization of the hardware class from the R\+OS parameter server (e.\+g. arm\+\_\+id, robot\+\_\+ip joint\+\_\+names etc.)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em root\+\_\+nh} & A node handle in the root namespace of the control node. \\
+\hline
+\mbox{\tt in}  & {\em robot\+\_\+hw\+\_\+nh} & A node handle in the namespace of the robot hardware.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ad211498ff17ff1dfb9609a2fcf76d14a}\label{classfranka__hw_1_1_franka_h_w_ad211498ff17ff1dfb9609a2fcf76d14a}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!init\+Robot@{init\+Robot}}
+\index{init\+Robot@{init\+Robot}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{init\+Robot()}{initRobot()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::init\+Robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Uses the robot\+\_\+ip\+\_\+ to connect to the robot via libfranka and loads the libfranka model. \mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ae2775ed9705ec3d1d3e58aea2ce21bde}\label{classfranka__hw_1_1_franka_h_w_ae2775ed9705ec3d1d3e58aea2ce21bde}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!init\+R\+O\+S\+Interfaces@{init\+R\+O\+S\+Interfaces}}
+\index{init\+R\+O\+S\+Interfaces@{init\+R\+O\+S\+Interfaces}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{init\+R\+O\+S\+Interfaces()}{initROSInterfaces()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::init\+R\+O\+S\+Interfaces (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{robot\+\_\+hw\+\_\+nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initializes the class in terms of ros\+\_\+control interfaces. Note\+: You have to call init\+Parameters beforehand. Use the complete initialization routine \hyperlink{classfranka__hw_1_1_franka_h_w_a0323c9d759de8d6ab8fae4bf574e4a48}{init()} method to control robots.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em robot\+\_\+hw\+\_\+nh} & A node handle in the namespace of the robot hardware. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{classfranka__hw_1_1_franka_combinable_h_w_a1e89406fc542ad7fb45ff0c1402c61c3}{franka\+\_\+hw\+::\+Franka\+Combinable\+HW}.
+
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ab73b14d5f8481cd3cb3d670aeae2de06}\label{classfranka__hw_1_1_franka_h_w_ab73b14d5f8481cd3cb3d670aeae2de06}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!prepare\+Switch@{prepare\+Switch}}
+\index{prepare\+Switch@{prepare\+Switch}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{prepare\+Switch()}{prepareSwitch()}}
+{\footnotesize\ttfamily bool franka\+\_\+hw\+::\+Franka\+H\+W\+::prepare\+Switch (\begin{DoxyParamCaption}\item[{const std\+::list$<$ hardware\+\_\+interface\+::\+Controller\+Info $>$ \&}]{start\+\_\+list,  }\item[{const std\+::list$<$ hardware\+\_\+interface\+::\+Controller\+Info $>$ \&}]{stop\+\_\+list }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Prepares switching between controllers (not real-\/time capable).
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em start\+\_\+list} & Controllers requested to be started. \\
+\hline
+\mbox{\tt in}  & {\em stop\+\_\+list} & Controllers requested to be stopped.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the preparation has been successful, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a8494bbab229cd16bc9bb7c994b01684d}\label{classfranka__hw_1_1_franka_h_w_a8494bbab229cd16bc9bb7c994b01684d}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!read@{read}}
+\index{read@{read}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::read (\begin{DoxyParamCaption}\item[{const ros\+::\+Time \&}]{time,  }\item[{const ros\+::\+Duration \&}]{period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Reads data from the franka robot.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em time} & The current time. \\
+\hline
+\mbox{\tt in}  & {\em period} & The time passed since the last call to \hyperlink{classfranka__hw_1_1_franka_h_w_a8494bbab229cd16bc9bb7c994b01684d}{read}. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classfranka__hw_1_1_franka_combinable_h_w_a44e3093eb876aef71423c4f5142c7ed8}{franka\+\_\+hw\+::\+Franka\+Combinable\+HW}.
+
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_aaa0bc020099cb6dba41728252d0c7df4}\label{classfranka__hw_1_1_franka_h_w_aaa0bc020099cb6dba41728252d0c7df4}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!reset@{reset}}
+\index{reset@{reset}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Resets the limit interfaces. \mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ade38eaa271d71cebb8bce3635cf82169}\label{classfranka__hw_1_1_franka_h_w_ade38eaa271d71cebb8bce3635cf82169}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!robot@{robot}}
+\index{robot@{robot}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{robot()}{robot()}}
+{\footnotesize\ttfamily franka\+::\+Robot \& franka\+\_\+hw\+::\+Franka\+H\+W\+::robot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Getter for the libfranka robot instance. \mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a910bb11c6a3b14f027ad56dcf0d983c7}\label{classfranka__hw_1_1_franka_h_w_a910bb11c6a3b14f027ad56dcf0d983c7}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!set\+Run\+Function@{set\+Run\+Function}}
+\index{set\+Run\+Function@{set\+Run\+Function}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{set\+Run\+Function()}{setRunFunction()}}
+{\footnotesize\ttfamily bool franka\+\_\+hw\+::\+Franka\+H\+W\+::set\+Run\+Function (\begin{DoxyParamCaption}\item[{const Control\+Mode \&}]{requested\+\_\+control\+\_\+mode,  }\item[{bool}]{limit\+\_\+rate,  }\item[{double}]{cutoff\+\_\+frequency,  }\item[{franka\+::\+Controller\+Mode}]{internal\+\_\+controller }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Configures the run function which is used as libfranka control callback based on the requested control mode.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em requested\+\_\+control\+\_\+mode} & The control mode to configure (e.\+g. torque/position/velocity etc.) \\
+\hline
+\mbox{\tt in}  & {\em limit\+\_\+rate} & Flag to enable/disable rate limiting to smoothen the commands. \\
+\hline
+\mbox{\tt in}  & {\em cutoff\+\_\+frequency} & The cutoff frequency applied for command smoothing. \\
+\hline
+\mbox{\tt in}  & {\em internal\+\_\+controller} & The internal controller to use when using position or velocity modes.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if successful, false otherwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a16128e9789d933e1fcb3f9fc6e336eb1}\label{classfranka__hw_1_1_franka_h_w_a16128e9789d933e1fcb3f9fc6e336eb1}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!setup\+Franka\+Cartesian\+Pose\+Interface@{setup\+Franka\+Cartesian\+Pose\+Interface}}
+\index{setup\+Franka\+Cartesian\+Pose\+Interface@{setup\+Franka\+Cartesian\+Pose\+Interface}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{setup\+Franka\+Cartesian\+Pose\+Interface()}{setupFrankaCartesianPoseInterface()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::setup\+Franka\+Cartesian\+Pose\+Interface (\begin{DoxyParamCaption}\item[{franka\+::\+Cartesian\+Pose \&}]{pose\+\_\+cartesian\+\_\+command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Configures and registers the command interface for Cartesian poses in ros\+\_\+control.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em pose\+\_\+cartesian\+\_\+command} & The data field holding the command to execute. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a60e7f8225648735e054d8b022efee557}\label{classfranka__hw_1_1_franka_h_w_a60e7f8225648735e054d8b022efee557}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!setup\+Franka\+Cartesian\+Velocity\+Interface@{setup\+Franka\+Cartesian\+Velocity\+Interface}}
+\index{setup\+Franka\+Cartesian\+Velocity\+Interface@{setup\+Franka\+Cartesian\+Velocity\+Interface}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{setup\+Franka\+Cartesian\+Velocity\+Interface()}{setupFrankaCartesianVelocityInterface()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::setup\+Franka\+Cartesian\+Velocity\+Interface (\begin{DoxyParamCaption}\item[{franka\+::\+Cartesian\+Velocities \&}]{velocity\+\_\+cartesian\+\_\+command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Configures and registers the command interface for Cartesian velocities in ros\+\_\+control.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em velocity\+\_\+cartesian\+\_\+command} & The data field holding the command to execute. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a4d738b3573b7ab159209b7e2e0d4a802}\label{classfranka__hw_1_1_franka_h_w_a4d738b3573b7ab159209b7e2e0d4a802}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!setup\+Franka\+Model\+Interface@{setup\+Franka\+Model\+Interface}}
+\index{setup\+Franka\+Model\+Interface@{setup\+Franka\+Model\+Interface}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{setup\+Franka\+Model\+Interface()}{setupFrankaModelInterface()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::setup\+Franka\+Model\+Interface (\begin{DoxyParamCaption}\item[{franka\+::\+Robot\+State \&}]{robot\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Configures and registers the model interface offering kinematics and dynamics in ros\+\_\+control.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em robot\+\_\+state} & A reference to the data field storing the current robot state. This state is used to evaluate model qunatities (by default) at the current state. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a4dbc96ed57e3054db31bbab11a61afec}\label{classfranka__hw_1_1_franka_h_w_a4dbc96ed57e3054db31bbab11a61afec}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!setup\+Franka\+State\+Interface@{setup\+Franka\+State\+Interface}}
+\index{setup\+Franka\+State\+Interface@{setup\+Franka\+State\+Interface}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{setup\+Franka\+State\+Interface()}{setupFrankaStateInterface()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::setup\+Franka\+State\+Interface (\begin{DoxyParamCaption}\item[{franka\+::\+Robot\+State \&}]{robot\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Configures and registers the state interface offering the full franka\+::\+Robot\+State in ros\+\_\+control.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em robot\+\_\+state} & The data field holding the updated robot state. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a34e707d6e834267f1ad256da5cce0713}\label{classfranka__hw_1_1_franka_h_w_a34e707d6e834267f1ad256da5cce0713}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!setup\+Joint\+Command\+Interface@{setup\+Joint\+Command\+Interface}}
+\index{setup\+Joint\+Command\+Interface@{setup\+Joint\+Command\+Interface}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{setup\+Joint\+Command\+Interface()}{setupJointCommandInterface()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void franka\+\_\+hw\+::\+Franka\+H\+W\+::setup\+Joint\+Command\+Interface (\begin{DoxyParamCaption}\item[{std\+::array$<$ double, 7 $>$ \&}]{command,  }\item[{franka\+::\+Robot\+State \&}]{state,  }\item[{bool}]{use\+\_\+q\+\_\+d,  }\item[{T \&}]{interface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Configures and registers a joint command interface for positions velocities or efforts in ros\+\_\+control.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em command} & The data field holding the command to execute. \\
+\hline
+\mbox{\tt in}  & {\em state} & The data field holding the updated robot state. \\
+\hline
+\mbox{\tt in}  & {\em use\+\_\+q\+\_\+d} & Flag to configure using desired values as joint\+\_\+states. \\
+\hline
+\mbox{\tt out}  & {\em interface} & The command interface to configure. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ab216faba5316b7ca1680e9af5d313216}\label{classfranka__hw_1_1_franka_h_w_ab216faba5316b7ca1680e9af5d313216}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!setup\+Joint\+State\+Interface@{setup\+Joint\+State\+Interface}}
+\index{setup\+Joint\+State\+Interface@{setup\+Joint\+State\+Interface}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{setup\+Joint\+State\+Interface()}{setupJointStateInterface()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::setup\+Joint\+State\+Interface (\begin{DoxyParamCaption}\item[{franka\+::\+Robot\+State \&}]{robot\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Configures and registers the joint state interface in ros\+\_\+control.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em robot\+\_\+state} & The data field holding the updated robot state. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a3a476a1de741f79695f0b64d2580e6cf}\label{classfranka__hw_1_1_franka_h_w_a3a476a1de741f79695f0b64d2580e6cf}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!setup\+Limit\+Interface@{setup\+Limit\+Interface}}
+\index{setup\+Limit\+Interface@{setup\+Limit\+Interface}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{setup\+Limit\+Interface()}{setupLimitInterface()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void franka\+\_\+hw\+::\+Franka\+H\+W\+::setup\+Limit\+Interface (\begin{DoxyParamCaption}\item[{joint\+\_\+limits\+\_\+interface\+::\+Joint\+Limits\+Interface$<$ T $>$ \&}]{limit\+\_\+interface,  }\item[{hardware\+\_\+interface\+::\+Joint\+Command\+Interface \&}]{command\+\_\+interface }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Configures a limit interface to enforce limits on effort, velocity or position level on joint commands.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em limit\+\_\+interface} & The limit interface to set up. \\
+\hline
+\mbox{\tt out}  & {\em command\+\_\+interface} & The command interface to hook the limit interface to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_a064557fa9f0f7cb8e7cfab27eae03eb8}\label{classfranka__hw_1_1_franka_h_w_a064557fa9f0f7cb8e7cfab27eae03eb8}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!setup\+Parameter\+Callbacks@{setup\+Parameter\+Callbacks}}
+\index{setup\+Parameter\+Callbacks@{setup\+Parameter\+Callbacks}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{setup\+Parameter\+Callbacks()}{setupParameterCallbacks()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::setup\+Parameter\+Callbacks (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{robot\+\_\+hw\+\_\+nh }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Initializes the callbacks for on-\/the-\/fly reading the parameters for rate limiting, internal controllers and cutoff frequency.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em robot\+\_\+hw\+\_\+nh} & A node handle in the namespace of the robot hardware. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_ad8f348151b93a7eebc9ef45a702a29ee}\label{classfranka__hw_1_1_franka_h_w_ad8f348151b93a7eebc9ef45a702a29ee}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!update@{update}}
+\index{update@{update}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::update (\begin{DoxyParamCaption}\item[{const franka\+::\+Robot\+State \&}]{robot\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Updates the controller interfaces from the given robot state.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em robot\+\_\+state} & Current robot state. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_h_w_afcdec49ec8bb07c48ed3d77ea2cd4e46}\label{classfranka__hw_1_1_franka_h_w_afcdec49ec8bb07c48ed3d77ea2cd4e46}} 
+\index{franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}!write@{write}}
+\index{write@{write}!franka\+\_\+hw\+::\+Franka\+HW@{franka\+\_\+hw\+::\+Franka\+HW}}
+\subsubsection{\texorpdfstring{write()}{write()}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+H\+W\+::write (\begin{DoxyParamCaption}\item[{const ros\+::\+Time \&}]{time,  }\item[{const ros\+::\+Duration \&}]{period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Writes data to the franka robot.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em time} & The current time. \\
+\hline
+\mbox{\tt in}  & {\em period} & The time passed since the last call to \hyperlink{classfranka__hw_1_1_franka_h_w_afcdec49ec8bb07c48ed3d77ea2cd4e46}{write}. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classfranka__hw_1_1_franka_combinable_h_w_ab96f9d6af06fbd7569d8a059d1bfbdd4}{franka\+\_\+hw\+::\+Franka\+Combinable\+HW}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/franka\+\_\+ros/franka\+\_\+hw/include/franka\+\_\+hw/franka\+\_\+hw.\+h\item 
+/home/zheng/catkin\+\_\+ws/src/franka\+\_\+ros/franka\+\_\+hw/src/franka\+\_\+hw.\+cpp\end{DoxyCompactItemize}

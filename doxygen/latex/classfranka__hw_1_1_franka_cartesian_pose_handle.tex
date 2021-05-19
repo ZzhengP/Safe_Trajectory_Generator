@@ -1,0 +1,107 @@
+\hypertarget{classfranka__hw_1_1_franka_cartesian_pose_handle}{}\section{franka\+\_\+hw\+:\+:Franka\+Cartesian\+Pose\+Handle Class Reference}
+\label{classfranka__hw_1_1_franka_cartesian_pose_handle}\index{franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle@{franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle}}
+
+
+{\ttfamily \#include $<$franka\+\_\+cartesian\+\_\+command\+\_\+interface.\+h$>$}
+
+
+
+Inheritance diagram for franka\+\_\+hw\+:\+:Franka\+Cartesian\+Pose\+Handle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classfranka__hw_1_1_franka_cartesian_pose_handle__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for franka\+\_\+hw\+:\+:Franka\+Cartesian\+Pose\+Handle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classfranka__hw_1_1_franka_cartesian_pose_handle__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfranka__hw_1_1_franka_cartesian_pose_handle_a98190bd982c26fdf1d90fbec701ffb06}{Franka\+Cartesian\+Pose\+Handle} (const \hyperlink{classfranka__hw_1_1_franka_state_handle}{Franka\+State\+Handle} \&franka\+\_\+state\+\_\+handle, std\+::array$<$ double, 16 $>$ \&command, std\+::array$<$ double, 2 $>$ \&elbow)
+\item 
+void \hyperlink{classfranka__hw_1_1_franka_cartesian_pose_handle_a37b091755da28b088892e79c984e0634}{set\+Command} (const std\+::array$<$ double, 16 $>$ \&command) noexcept
+\item 
+void \hyperlink{classfranka__hw_1_1_franka_cartesian_pose_handle_a0a10bbd38414170da45412dc803cb428}{set\+Command} (const std\+::array$<$ double, 16 $>$ \&command, const std\+::array$<$ double, 2 $>$ \&elbow) noexcept
+\item 
+const std\+::array$<$ double, 16 $>$ \& \hyperlink{classfranka__hw_1_1_franka_cartesian_pose_handle_a844b5a45c8a54f6930c23d0161fdc30d}{get\+Command} () const noexcept
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handle to read and command a Cartesian pose. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_cartesian_pose_handle_a98190bd982c26fdf1d90fbec701ffb06}\label{classfranka__hw_1_1_franka_cartesian_pose_handle_a98190bd982c26fdf1d90fbec701ffb06}} 
+\index{franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle@{franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle}!Franka\+Cartesian\+Pose\+Handle@{Franka\+Cartesian\+Pose\+Handle}}
+\index{Franka\+Cartesian\+Pose\+Handle@{Franka\+Cartesian\+Pose\+Handle}!franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle@{franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle}}
+\subsubsection{\texorpdfstring{Franka\+Cartesian\+Pose\+Handle()}{FrankaCartesianPoseHandle()}}
+{\footnotesize\ttfamily franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle\+::\+Franka\+Cartesian\+Pose\+Handle (\begin{DoxyParamCaption}\item[{const \hyperlink{classfranka__hw_1_1_franka_state_handle}{Franka\+State\+Handle} \&}]{franka\+\_\+state\+\_\+handle,  }\item[{std\+::array$<$ double, 16 $>$ \&}]{command,  }\item[{std\+::array$<$ double, 2 $>$ \&}]{elbow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates an instance of a \hyperlink{classfranka__hw_1_1_franka_cartesian_pose_handle}{Franka\+Cartesian\+Pose\+Handle}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em franka\+\_\+state\+\_\+handle} & Robot state handle. \\
+\hline
+\mbox{\tt in}  & {\em command} & A reference to the Cartesian pose command wrapped by this handle. \\
+\hline
+\mbox{\tt in}  & {\em elbow} & A reference to the elbow wrapped by this handle. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_cartesian_pose_handle_a844b5a45c8a54f6930c23d0161fdc30d}\label{classfranka__hw_1_1_franka_cartesian_pose_handle_a844b5a45c8a54f6930c23d0161fdc30d}} 
+\index{franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle@{franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle}!get\+Command@{get\+Command}}
+\index{get\+Command@{get\+Command}!franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle@{franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle}}
+\subsubsection{\texorpdfstring{get\+Command()}{getCommand()}}
+{\footnotesize\ttfamily const std\+::array$<$double, 16$>$\& franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle\+::get\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Gets the current command.
+
+\begin{DoxyReturn}{Returns}
+Current command. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_cartesian_pose_handle_a37b091755da28b088892e79c984e0634}\label{classfranka__hw_1_1_franka_cartesian_pose_handle_a37b091755da28b088892e79c984e0634}} 
+\index{franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle@{franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle}!set\+Command@{set\+Command}}
+\index{set\+Command@{set\+Command}!franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle@{franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle}}
+\subsubsection{\texorpdfstring{set\+Command()}{setCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle\+::set\+Command (\begin{DoxyParamCaption}\item[{const std\+::array$<$ double, 16 $>$ \&}]{command }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Sets the given command.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em command} & Command to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_cartesian_pose_handle_a0a10bbd38414170da45412dc803cb428}\label{classfranka__hw_1_1_franka_cartesian_pose_handle_a0a10bbd38414170da45412dc803cb428}} 
+\index{franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle@{franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle}!set\+Command@{set\+Command}}
+\index{set\+Command@{set\+Command}!franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle@{franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle}}
+\subsubsection{\texorpdfstring{set\+Command()}{setCommand()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void franka\+\_\+hw\+::\+Franka\+Cartesian\+Pose\+Handle\+::set\+Command (\begin{DoxyParamCaption}\item[{const std\+::array$<$ double, 16 $>$ \&}]{command,  }\item[{const std\+::array$<$ double, 2 $>$ \&}]{elbow }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Sets the given command.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em command} & Command to set. \\
+\hline
+\mbox{\tt in}  & {\em elbow} & Elbow to set. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/franka\+\_\+ros/franka\+\_\+hw/include/franka\+\_\+hw/franka\+\_\+cartesian\+\_\+command\+\_\+interface.\+h\end{DoxyCompactItemize}

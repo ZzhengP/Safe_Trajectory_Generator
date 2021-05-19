@@ -1,0 +1,5 @@
+<map id="SymmetricMatrix" name="SymmetricMatrix">
+<area shape="rect" id="node3" href="$class_sym_dense_mat.html" title="Interfaces matrix&#45;vector operations tailored to symmetric dense matrices. " alt="" coords="5,155,115,181"/>
+<area shape="rect" id="node4" href="$class_sym_sparse_mat.html" title="Interfaces matrix&#45;vector operations tailored to symmetric sparse matrices. " alt="" coords="139,155,251,181"/>
+<area shape="rect" id="node2" href="$class_matrix.html" title="Abstract base class for interfacing tailored matrix&#45;vector operations. " alt="" coords="97,5,156,32"/>
+</map>

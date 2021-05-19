@@ -1,0 +1,597 @@
+\hypertarget{class_sparse_matrix_row}{}\section{Sparse\+Matrix\+Row Class Reference}
+\label{class_sparse_matrix_row}\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+
+
+Interfaces matrix-\/vector operations tailored to general sparse matrices.  
+
+
+
+
+{\ttfamily \#include $<$Matrices.\+hpp$>$}
+
+
+
+Inheritance diagram for Sparse\+Matrix\+Row\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_sparse_matrix_row__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Sparse\+Matrix\+Row\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=175pt]{class_sparse_matrix_row__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sparse_matrix_row_ad61dd7c9a0b5f00126f2c17cb325bfa4}{Sparse\+Matrix\+Row} ()
+\item 
+\hyperlink{class_sparse_matrix_row_a7a83a792ccf2cb68b0d660cad9f52322}{Sparse\+Matrix\+Row} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} nr, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} nc, \hyperlink{_types_8hpp_aa5432b00c9081e2d62d7f38c32e4ed80}{sparse\+\_\+int\+\_\+t} $\ast$r, \hyperlink{_types_8hpp_aa5432b00c9081e2d62d7f38c32e4ed80}{sparse\+\_\+int\+\_\+t} $\ast$c, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$v)
+\item 
+\hyperlink{class_sparse_matrix_row_a998eef85d2cbe8d4c3856c043388c38d}{Sparse\+Matrix\+Row} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} nr, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} nc, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} ld, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const v)
+\item 
+virtual \hyperlink{class_sparse_matrix_row_a40b6466c07a504d2232bac57b00338d5}{$\sim$\+Sparse\+Matrix\+Row} ()
+\item 
+virtual void \hyperlink{class_sparse_matrix_row_a5295955ae17b29db89b8fc2607bab8c8}{free} ()
+\item 
+virtual \hyperlink{class_matrix}{Matrix} $\ast$ \hyperlink{class_sparse_matrix_row_a2a74a4b97da1de2e8bd59ddd342afbba}{duplicate} () const
+\item 
+virtual \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_sparse_matrix_row_a1a7b95bc5e229f7f295ddbe95f57f67f}{diag} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} i) const
+\item 
+virtual \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_sparse_matrix_row_a4e79919435999fbec85be5d9f66be503}{is\+Diag} () const
+\item 
+virtual \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_sparse_matrix_row_a5300df119c3edc15b1e96fd57a4907ec}{get\+Norm} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} type=2) const
+\item 
+virtual \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_sparse_matrix_row_a7124d79271aec2f02b47a119b26e86d9}{get\+Row\+Norm} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} r\+Num, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} type=2) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_matrix_row_ab4ee9b14df2b9272aa2dbedccf53efc3}{get\+Row\+Norm} (\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$norm, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} type=2) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_matrix_row_a9eb9e38229e6bb38d46b61636ac11790}{get\+Row} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} r\+Num, const \hyperlink{class_indexlist}{Indexlist} $\ast$const icols, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} alpha, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$row) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_matrix_row_aaacf7bd37dd3c4644256ce6635026856}{get\+Col} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} c\+Num, const \hyperlink{class_indexlist}{Indexlist} $\ast$const irows, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} alpha, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$col) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_matrix_row_aeb9063b8d66c518856e62b566ee48498}{get\+Sparse\+Submatrix} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} irows\+Length, const \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$const irows\+Number, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} icols\+Length, const \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$const icols\+Number, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} rowoffset, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} coloffset, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&num\+Nonzeros, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$irn, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$jcn, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$avals, \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} only\+\_\+lower\+\_\+triangular=\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089a85b8a20e72a8bea5dd10a6007fe3071e}{B\+T\+\_\+\+F\+A\+L\+SE}) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_matrix_row_af3b6548008bb5921a205f19ca95c05d9}{times} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} xN, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} alpha, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$x, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} x\+LD, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} beta, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$y, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} y\+LD) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_matrix_row_a051c4775602ed5f8bcbf6ce72f152583}{trans\+Times} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} xN, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} alpha, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$x, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} x\+LD, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} beta, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$y, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} y\+LD) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_matrix_row_ad175fdf0c1bc012a8ab0d760e914f4ac}{times} (const \hyperlink{class_indexlist}{Indexlist} $\ast$const irows, const \hyperlink{class_indexlist}{Indexlist} $\ast$const icols, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} xN, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} alpha, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$x, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} x\+LD, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} beta, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$y, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} y\+LD, \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} y\+Compr=\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089a34c57965bfb07125b09326a69019f9c6}{B\+T\+\_\+\+T\+R\+UE}) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_matrix_row_ab06b8d77a5dc1368ebab56a80d782d60}{trans\+Times} (const \hyperlink{class_indexlist}{Indexlist} $\ast$const irows, const \hyperlink{class_indexlist}{Indexlist} $\ast$const icols, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} xN, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} alpha, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$x, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} x\+LD, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} beta, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$y, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} y\+LD) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_matrix_row_a6feb397255c49e09d2cb25b2b5bef57d}{add\+To\+Diag} (\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} alpha)
+\item 
+\hyperlink{_types_8hpp_aa5432b00c9081e2d62d7f38c32e4ed80}{sparse\+\_\+int\+\_\+t} $\ast$ \hyperlink{class_sparse_matrix_row_a3e72a351698454ba063f3b0814f919c8}{create\+Diag\+Info} ()
+\item 
+virtual \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ \hyperlink{class_sparse_matrix_row_ae074d0a3c434867b07552401e9b3174d}{full} () const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_matrix_row_a471469c7fc2240bd379b8a3aa64634a9}{print} (const char $\ast$name=0) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_matrix_row_ab9f4e7e9bbbc8ddd52d55c97a4dad3ff}{write\+To\+File} (F\+I\+LE $\ast$output\+\_\+file, const char $\ast$prefix) const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_sparse_matrix_row_af443a2e2deccc57576c1cb3ad64a8755}{n\+Rows}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_sparse_matrix_row_a7918a50ad51b4d9adadcbfcd64ea5a91}{n\+Cols}
+\item 
+\hyperlink{_types_8hpp_aa5432b00c9081e2d62d7f38c32e4ed80}{sparse\+\_\+int\+\_\+t} $\ast$ \hyperlink{class_sparse_matrix_row_a899e34180345977c83769223b3152bcc}{jr}
+\item 
+\hyperlink{_types_8hpp_aa5432b00c9081e2d62d7f38c32e4ed80}{sparse\+\_\+int\+\_\+t} $\ast$ \hyperlink{class_sparse_matrix_row_a46dd9b0b5138ecd2deb37415d170c6b5}{ic}
+\item 
+\hyperlink{_types_8hpp_aa5432b00c9081e2d62d7f38c32e4ed80}{sparse\+\_\+int\+\_\+t} $\ast$ \hyperlink{class_sparse_matrix_row_a8d71f4ae6afa7bd4ac153f9b11019a7a}{jd}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ \hyperlink{class_sparse_matrix_row_a2cec7a8738e87414eaf6ebdf1056b3ab}{val}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interfaces matrix-\/vector operations tailored to general sparse matrices. 
+
+Sparse matrix class (row compressed format).
+
+\begin{DoxyAuthor}{Author}
+Andreas Potschka, Christian Kirches, Hans Joachim Ferreau 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2011-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sparse_matrix_row_ad61dd7c9a0b5f00126f2c17cb325bfa4}\label{class_sparse_matrix_row_ad61dd7c9a0b5f00126f2c17cb325bfa4}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{Sparse\+Matrix\+Row()}{SparseMatrixRow()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Sparse\+Matrix\+Row\+::\+Sparse\+Matrix\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_sparse_matrix_row_a7a83a792ccf2cb68b0d660cad9f52322}\label{class_sparse_matrix_row_a7a83a792ccf2cb68b0d660cad9f52322}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{Sparse\+Matrix\+Row()}{SparseMatrixRow()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Sparse\+Matrix\+Row\+::\+Sparse\+Matrix\+Row (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{nr,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{nc,  }\item[{\hyperlink{_types_8hpp_aa5432b00c9081e2d62d7f38c32e4ed80}{sparse\+\_\+int\+\_\+t} $\ast$}]{r,  }\item[{\hyperlink{_types_8hpp_aa5432b00c9081e2d62d7f38c32e4ed80}{sparse\+\_\+int\+\_\+t} $\ast$}]{c,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{v }\end{DoxyParamCaption})}
+
+Constructor with arguments. 
+\begin{DoxyParams}{Parameters}
+{\em nr} & Number of rows. \\
+\hline
+{\em nc} & Number of columns. \\
+\hline
+{\em r} & Indices to first entry of rows (n\+Rows+1). \\
+\hline
+{\em c} & Column indices (length). \\
+\hline
+{\em v} & Vector of entries (length). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sparse_matrix_row_a998eef85d2cbe8d4c3856c043388c38d}\label{class_sparse_matrix_row_a998eef85d2cbe8d4c3856c043388c38d}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{Sparse\+Matrix\+Row()}{SparseMatrixRow()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Sparse\+Matrix\+Row\+::\+Sparse\+Matrix\+Row (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{nr,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{nc,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{ld,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{v }\end{DoxyParamCaption})}
+
+Constructor from dense matrix. 
+\begin{DoxyParams}{Parameters}
+{\em nr} & Number of rows. \\
+\hline
+{\em nc} & Number of columns. \\
+\hline
+{\em ld} & Leading dimension. \\
+\hline
+{\em v} & Row major stored matrix elements. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sparse_matrix_row_a40b6466c07a504d2232bac57b00338d5}\label{class_sparse_matrix_row_a40b6466c07a504d2232bac57b00338d5}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!````~Sparse\+Matrix\+Row@{$\sim$\+Sparse\+Matrix\+Row}}
+\index{````~Sparse\+Matrix\+Row@{$\sim$\+Sparse\+Matrix\+Row}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{$\sim$\+Sparse\+Matrix\+Row()}{~SparseMatrixRow()}}
+{\footnotesize\ttfamily Sparse\+Matrix\+Row\+::$\sim$\+Sparse\+Matrix\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sparse_matrix_row_a6feb397255c49e09d2cb25b2b5bef57d}\label{class_sparse_matrix_row_a6feb397255c49e09d2cb25b2b5bef57d}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!add\+To\+Diag@{add\+To\+Diag}}
+\index{add\+To\+Diag@{add\+To\+Diag}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{add\+To\+Diag()}{addToDiag()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Matrix\+Row\+::add\+To\+Diag (\begin{DoxyParamCaption}\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{alpha }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Adds given offset to diagonal of matrix. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+N\+O\+\_\+\+D\+I\+A\+G\+O\+N\+A\+L\+\_\+\+A\+V\+A\+I\+L\+A\+B\+LE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em alpha} & Diagonal offset. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a7ee8d1b4ef0d5d5fb34342ea1889382f}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_a3e72a351698454ba063f3b0814f919c8}\label{class_sparse_matrix_row_a3e72a351698454ba063f3b0814f919c8}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!create\+Diag\+Info@{create\+Diag\+Info}}
+\index{create\+Diag\+Info@{create\+Diag\+Info}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{create\+Diag\+Info()}{createDiagInfo()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_aa5432b00c9081e2d62d7f38c32e4ed80}{sparse\+\_\+int\+\_\+t} $\ast$ Sparse\+Matrix\+Row\+::create\+Diag\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Create jd field from ir and jc. \begin{DoxyReturn}{Returns}
+Pointer to jd. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sparse_matrix_row_a1a7b95bc5e229f7f295ddbe95f57f67f}\label{class_sparse_matrix_row_a1a7b95bc5e229f7f295ddbe95f57f67f}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!diag@{diag}}
+\index{diag@{diag}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{diag()}{diag()}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Sparse\+Matrix\+Row\+::diag (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{i }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns i-\/th diagonal entry. \begin{DoxyReturn}{Returns}
+i-\/th diagonal entry (or I\+N\+F\+TY if diagonal does not exist) 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Index. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a8d76d428884fdb7a3deade8cad3c4b0a}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_a2a74a4b97da1de2e8bd59ddd342afbba}\label{class_sparse_matrix_row_a2a74a4b97da1de2e8bd59ddd342afbba}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!duplicate@{duplicate}}
+\index{duplicate@{duplicate}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{duplicate()}{duplicate()}}
+{\footnotesize\ttfamily \hyperlink{class_matrix}{Matrix} $\ast$ Sparse\+Matrix\+Row\+::duplicate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns a deep-\/copy of the \hyperlink{class_matrix}{Matrix} object. \begin{DoxyReturn}{Returns}
+Deep-\/copy of \hyperlink{class_matrix}{Matrix} object 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_matrix_abf41d80f7392e9d63e9b2fa4b822d3b9}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_a5295955ae17b29db89b8fc2607bab8c8}\label{class_sparse_matrix_row_a5295955ae17b29db89b8fc2607bab8c8}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!free@{free}}
+\index{free@{free}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{free()}{free()}}
+{\footnotesize\ttfamily void Sparse\+Matrix\+Row\+::free (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Frees all internal memory. 
+
+Implements \hyperlink{class_matrix_ae13ca77389c2eae7b3eba79cb9fefecb}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_ae074d0a3c434867b07552401e9b3174d}\label{class_sparse_matrix_row_ae074d0a3c434867b07552401e9b3174d}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!full@{full}}
+\index{full@{full}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{full()}{full()}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ Sparse\+Matrix\+Row\+::full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Allocates and creates dense matrix array in row major format.
+
+Note\+: Calling function has to free allocated memory!
+
+\begin{DoxyReturn}{Returns}
+Pointer to matrix array. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_matrix_ac53a5bbb05c6a928af17e0d88220ff63}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_aaacf7bd37dd3c4644256ce6635026856}\label{class_sparse_matrix_row_aaacf7bd37dd3c4644256ce6635026856}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!get\+Col@{get\+Col}}
+\index{get\+Col@{get\+Col}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{get\+Col()}{getCol()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Matrix\+Row\+::get\+Col (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{c\+Num,  }\item[{const \hyperlink{class_indexlist}{Indexlist} $\ast$const}]{irows,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{alpha,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{col }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve indexed entries of matrix column multiplied by alpha. 
+\begin{DoxyParams}{Parameters}
+{\em c\+Num} & Column number. \\
+\hline
+{\em irows} & Index list specifying rows. \\
+\hline
+{\em alpha} & Scalar factor. \\
+\hline
+{\em col} & Output column vector. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a719d13204e07de9c017cc68909b6db42}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_a5300df119c3edc15b1e96fd57a4907ec}\label{class_sparse_matrix_row_a5300df119c3edc15b1e96fd57a4907ec}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!get\+Norm@{get\+Norm}}
+\index{get\+Norm@{get\+Norm}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{get\+Norm()}{getNorm()}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Sparse\+Matrix\+Row\+::get\+Norm (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{type = {\ttfamily 2} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the N-\/norm of the matrix \begin{DoxyReturn}{Returns}
+N-\/norm of the matrix 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em type} & Norm type, 1\+: one-\/norm, 2\+: Euclidean norm. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a8d906c25118e71467aba6434612504b2}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_a9eb9e38229e6bb38d46b61636ac11790}\label{class_sparse_matrix_row_a9eb9e38229e6bb38d46b61636ac11790}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!get\+Row@{get\+Row}}
+\index{get\+Row@{get\+Row}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{get\+Row()}{getRow()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Matrix\+Row\+::get\+Row (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{r\+Num,  }\item[{const \hyperlink{class_indexlist}{Indexlist} $\ast$const}]{icols,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{alpha,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{row }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve indexed entries of matrix row multiplied by alpha. 
+\begin{DoxyParams}{Parameters}
+{\em r\+Num} & Row number. \\
+\hline
+{\em icols} & Index list specifying columns. \\
+\hline
+{\em alpha} & Scalar factor. \\
+\hline
+{\em row} & Output row vector. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a7d7820b8b02f4abcf82330596b317ad6}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_a7124d79271aec2f02b47a119b26e86d9}\label{class_sparse_matrix_row_a7124d79271aec2f02b47a119b26e86d9}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!get\+Row\+Norm@{get\+Row\+Norm}}
+\index{get\+Row\+Norm@{get\+Row\+Norm}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{get\+Row\+Norm()}{getRowNorm()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Sparse\+Matrix\+Row\+::get\+Row\+Norm (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{r\+Num,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{type = {\ttfamily 2} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the N-\/norm of a row \begin{DoxyReturn}{Returns}
+N-\/norm of row {\itshape r\+Num} 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em r\+Num} & Row number. \\
+\hline
+{\em type} & Norm type, 1\+: one-\/norm, 2\+: Euclidean norm. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_ac4c0a395cd507ba0801b731765c586f7}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_ab4ee9b14df2b9272aa2dbedccf53efc3}\label{class_sparse_matrix_row_ab4ee9b14df2b9272aa2dbedccf53efc3}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!get\+Row\+Norm@{get\+Row\+Norm}}
+\index{get\+Row\+Norm@{get\+Row\+Norm}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{get\+Row\+Norm()}{getRowNorm()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Matrix\+Row\+::get\+Row\+Norm (\begin{DoxyParamCaption}\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{norm,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{type = {\ttfamily 2} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Get the N-\/norm of all rows \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em norm} & Norm of each row. \\
+\hline
+{\em type} & Norm type, 1\+: one-\/norm, 2\+: Euclidean norm. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a7809892ec8eefd5963915b56564917ed}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_aeb9063b8d66c518856e62b566ee48498}\label{class_sparse_matrix_row_aeb9063b8d66c518856e62b566ee48498}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!get\+Sparse\+Submatrix@{get\+Sparse\+Submatrix}}
+\index{get\+Sparse\+Submatrix@{get\+Sparse\+Submatrix}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{get\+Sparse\+Submatrix()}{getSparseSubmatrix()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Matrix\+Row\+::get\+Sparse\+Submatrix (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{irows\+Length,  }\item[{const \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$const}]{irows\+Number,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{icols\+Length,  }\item[{const \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$const}]{icols\+Number,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{rowoffset,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{coloffset,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&}]{num\+Nonzeros,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$}]{irn,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$}]{jcn,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{avals,  }\item[{\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type}}]{only\+\_\+lower\+\_\+triangular = {\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089a85b8a20e72a8bea5dd10a6007fe3071e}{B\+T\+\_\+\+F\+A\+L\+SE}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Retrieve entries of submatrix in Harwell-\/\+Boeing sparse format. If irn, jcn, and avals are null, this only counts the number of nonzeros. Otherwise, num\+Nonzeros containts the size of irn, jcn, and avals on entry, and the written number of entries on return. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em irows\+Length} & Number of rows. \\
+\hline
+{\em irows\+Number} & Array with row numbers. \\
+\hline
+{\em icols\+Length} & Number of columns. \\
+\hline
+{\em icols\+Number} & Array with column numbers. \\
+\hline
+{\em rowoffset} & Offset for row entries. \\
+\hline
+{\em coloffset} & Offset for row entries. \\
+\hline
+{\em num\+Nonzeros} & Number of nonzeros in submatrix. \\
+\hline
+{\em irn} & Row position of entries (as position in irows) plus rowoffset. \\
+\hline
+{\em jcn} & Column position of entries (as position in irows) plus coloffset. \\
+\hline
+{\em avals} & Numerical values of the entries. \\
+\hline
+{\em only\+\_\+lower\+\_\+triangular} & if true, only the lower triangular portion is returned. This can only be true for symmetric matrices and if irows==jcols. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_aa60ff74cb4f8eaf468d93040dcd15543}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_a4e79919435999fbec85be5d9f66be503}\label{class_sparse_matrix_row_a4e79919435999fbec85be5d9f66be503}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!is\+Diag@{is\+Diag}}
+\index{is\+Diag@{is\+Diag}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{is\+Diag()}{isDiag()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Sparse\+Matrix\+Row\+::is\+Diag (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Checks whether matrix is square and diagonal. \begin{DoxyReturn}{Returns}
+B\+T\+\_\+\+T\+R\+UE iff matrix is square and diagonal; ~\newline
+ B\+T\+\_\+\+F\+A\+L\+SE otherwise. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_matrix_a1f5595f0147658d9f79f92dd283dcbac}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_a471469c7fc2240bd379b8a3aa64634a9}\label{class_sparse_matrix_row_a471469c7fc2240bd379b8a3aa64634a9}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!print@{print}}
+\index{print@{print}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Matrix\+Row\+::print (\begin{DoxyParamCaption}\item[{const char $\ast$}]{name = {\ttfamily 0} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prints matrix to screen. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of matrix. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_acc4e1dc7fa487a0c2638d88236fe35f8}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_af3b6548008bb5921a205f19ca95c05d9}\label{class_sparse_matrix_row_af3b6548008bb5921a205f19ca95c05d9}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!times@{times}}
+\index{times@{times}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{times()}{times()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Matrix\+Row\+::times (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{xN,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{alpha,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{x,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{x\+LD,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{beta,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{y,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{y\+LD }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Evaluate Y=alpha$\ast$\+A$\ast$X + beta$\ast$Y. 
+\begin{DoxyParams}{Parameters}
+{\em xN} & Number of vectors to multiply. \\
+\hline
+{\em alpha} & Scalar factor for matrix vector product. \\
+\hline
+{\em x} & Input vector to be multiplied. \\
+\hline
+{\em x\+LD} & Leading dimension of input x. \\
+\hline
+{\em beta} & Scalar factor for y. \\
+\hline
+{\em y} & Output vector of results. \\
+\hline
+{\em y\+LD} & Leading dimension of output y. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a329b638ce6ce41715b156766646b3fcc}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_ad175fdf0c1bc012a8ab0d760e914f4ac}\label{class_sparse_matrix_row_ad175fdf0c1bc012a8ab0d760e914f4ac}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!times@{times}}
+\index{times@{times}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{times()}{times()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Matrix\+Row\+::times (\begin{DoxyParamCaption}\item[{const \hyperlink{class_indexlist}{Indexlist} $\ast$const}]{irows,  }\item[{const \hyperlink{class_indexlist}{Indexlist} $\ast$const}]{icols,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{xN,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{alpha,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{x,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{x\+LD,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{beta,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{y,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{y\+LD,  }\item[{\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type}}]{y\+Compr = {\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089a34c57965bfb07125b09326a69019f9c6}{B\+T\+\_\+\+T\+R\+UE}} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Evaluate matrix vector product with submatrix given by \hyperlink{class_indexlist}{Indexlist}. 
+\begin{DoxyParams}{Parameters}
+{\em irows} & Index list specifying rows. \\
+\hline
+{\em icols} & Index list specifying columns. \\
+\hline
+{\em xN} & Number of vectors to multiply. \\
+\hline
+{\em alpha} & Scalar factor for matrix vector product. \\
+\hline
+{\em x} & Input vector to be multiplied. \\
+\hline
+{\em x\+LD} & Leading dimension of input x. \\
+\hline
+{\em beta} & Scalar factor for y. \\
+\hline
+{\em y} & Output vector of results. \\
+\hline
+{\em y\+LD} & Leading dimension of output y. \\
+\hline
+{\em y\+Compr} & Compressed storage for y. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a4b938641322f10aa9b81ea0280a9c3f6}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_a051c4775602ed5f8bcbf6ce72f152583}\label{class_sparse_matrix_row_a051c4775602ed5f8bcbf6ce72f152583}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!trans\+Times@{trans\+Times}}
+\index{trans\+Times@{trans\+Times}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{trans\+Times()}{transTimes()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Matrix\+Row\+::trans\+Times (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{xN,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{alpha,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{x,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{x\+LD,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{beta,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{y,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{y\+LD }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Evaluate Y=alpha$\ast$A\textquotesingle{}$\ast$X + beta$\ast$Y. 
+\begin{DoxyParams}{Parameters}
+{\em xN} & Number of vectors to multiply. \\
+\hline
+{\em alpha} & Scalar factor for matrix vector product. \\
+\hline
+{\em x} & Input vector to be multiplied. \\
+\hline
+{\em x\+LD} & Leading dimension of input x. \\
+\hline
+{\em beta} & Scalar factor for y. \\
+\hline
+{\em y} & Output vector of results. \\
+\hline
+{\em y\+LD} & Leading dimension of output y. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a9a9f697c01a067f8644e49615959a024}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_ab06b8d77a5dc1368ebab56a80d782d60}\label{class_sparse_matrix_row_ab06b8d77a5dc1368ebab56a80d782d60}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!trans\+Times@{trans\+Times}}
+\index{trans\+Times@{trans\+Times}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{trans\+Times()}{transTimes()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Matrix\+Row\+::trans\+Times (\begin{DoxyParamCaption}\item[{const \hyperlink{class_indexlist}{Indexlist} $\ast$const}]{irows,  }\item[{const \hyperlink{class_indexlist}{Indexlist} $\ast$const}]{icols,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{xN,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{alpha,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{x,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{x\+LD,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{beta,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{y,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{y\+LD }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Evaluate matrix transpose vector product. 
+\begin{DoxyParams}{Parameters}
+{\em irows} & Index list specifying rows. \\
+\hline
+{\em icols} & Index list specifying columns. \\
+\hline
+{\em xN} & Number of vectors to multiply. \\
+\hline
+{\em alpha} & Scalar factor for matrix vector product. \\
+\hline
+{\em x} & Input vector to be multiplied. \\
+\hline
+{\em x\+LD} & Leading dimension of input x. \\
+\hline
+{\em beta} & Scalar factor for y. \\
+\hline
+{\em y} & Output vector of results. \\
+\hline
+{\em y\+LD} & Leading dimension of output y. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_matrix_a508d2700dbad49893ed6c7384088aca7}{Matrix}.
+
+\mbox{\Hypertarget{class_sparse_matrix_row_ab9f4e7e9bbbc8ddd52d55c97a4dad3ff}\label{class_sparse_matrix_row_ab9f4e7e9bbbc8ddd52d55c97a4dad3ff}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!write\+To\+File@{write\+To\+File}}
+\index{write\+To\+File@{write\+To\+File}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{write\+To\+File()}{writeToFile()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Matrix\+Row\+::write\+To\+File (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{output\+\_\+file,  }\item[{const char $\ast$}]{prefix }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Write matrix to file. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_matrix_a1504bb1a207b6e5d3320289e4af84400}{Matrix}.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_sparse_matrix_row_a46dd9b0b5138ecd2deb37415d170c6b5}\label{class_sparse_matrix_row_a46dd9b0b5138ecd2deb37415d170c6b5}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!ic@{ic}}
+\index{ic@{ic}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{ic}{ic}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_aa5432b00c9081e2d62d7f38c32e4ed80}{sparse\+\_\+int\+\_\+t}$\ast$ Sparse\+Matrix\+Row\+::ic\hspace{0.3cm}{\ttfamily [protected]}}
+
+Column indices (length). \mbox{\Hypertarget{class_sparse_matrix_row_a8d71f4ae6afa7bd4ac153f9b11019a7a}\label{class_sparse_matrix_row_a8d71f4ae6afa7bd4ac153f9b11019a7a}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!jd@{jd}}
+\index{jd@{jd}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{jd}{jd}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_aa5432b00c9081e2d62d7f38c32e4ed80}{sparse\+\_\+int\+\_\+t}$\ast$ Sparse\+Matrix\+Row\+::jd\hspace{0.3cm}{\ttfamily [protected]}}
+
+Indices to first entry of upper triangle (including diagonal) (n\+Rows). \mbox{\Hypertarget{class_sparse_matrix_row_a899e34180345977c83769223b3152bcc}\label{class_sparse_matrix_row_a899e34180345977c83769223b3152bcc}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!jr@{jr}}
+\index{jr@{jr}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{jr}{jr}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_aa5432b00c9081e2d62d7f38c32e4ed80}{sparse\+\_\+int\+\_\+t}$\ast$ Sparse\+Matrix\+Row\+::jr\hspace{0.3cm}{\ttfamily [protected]}}
+
+Indices to first entry of row (n\+Rows+1). \mbox{\Hypertarget{class_sparse_matrix_row_a7918a50ad51b4d9adadcbfcd64ea5a91}\label{class_sparse_matrix_row_a7918a50ad51b4d9adadcbfcd64ea5a91}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!n\+Cols@{n\+Cols}}
+\index{n\+Cols@{n\+Cols}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{n\+Cols}{nCols}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Sparse\+Matrix\+Row\+::n\+Cols\hspace{0.3cm}{\ttfamily [protected]}}
+
+Number of columns. \mbox{\Hypertarget{class_sparse_matrix_row_af443a2e2deccc57576c1cb3ad64a8755}\label{class_sparse_matrix_row_af443a2e2deccc57576c1cb3ad64a8755}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!n\+Rows@{n\+Rows}}
+\index{n\+Rows@{n\+Rows}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{n\+Rows}{nRows}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Sparse\+Matrix\+Row\+::n\+Rows\hspace{0.3cm}{\ttfamily [protected]}}
+
+Number of rows. \mbox{\Hypertarget{class_sparse_matrix_row_a2cec7a8738e87414eaf6ebdf1056b3ab}\label{class_sparse_matrix_row_a2cec7a8738e87414eaf6ebdf1056b3ab}} 
+\index{Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}!val@{val}}
+\index{val@{val}!Sparse\+Matrix\+Row@{Sparse\+Matrix\+Row}}
+\subsubsection{\texorpdfstring{val}{val}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}$\ast$ Sparse\+Matrix\+Row\+::val\hspace{0.3cm}{\ttfamily [protected]}}
+
+Vector of entries (length). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_matrices_8hpp}{Matrices.\+hpp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/src/\hyperlink{_matrices_8cpp}{Matrices.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,16 @@
+In file included from [01m[K/opt/ros/melodic/include/ros/node_handle.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:16[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+/opt/ros/melodic/include/ros/service_client.h: In instantiation of '[01m[Kbool ros::ServiceClient::call(Service&) [with Service = geometry_msgs::Twist_<std::allocator<void> >][m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:48:38:[m[K   required from here
+[01m[K/opt/ros/melodic/include/ros/service_client.h:91:25:[m[K [01;31m[Kerror: [m[K'[01m[Kstruct geometry_msgs::Twist_<std::allocator<void> >[m[K' has no member named '[01m[Krequest[m[K'
+     return call([01;31m[Kservice.request[m[K, service.response, st::md5sum(service));
+                 [01;31m[K~~~~~~~~^~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/service_client.h:91:42:[m[K [01;31m[Kerror: [m[K'[01m[Kstruct geometry_msgs::Twist_<std::allocator<void> >[m[K' has no member named '[01m[Kresponse[m[K'
+     return call(service.request, [01;31m[Kservice.response[m[K, st::md5sum(service));
+                                  [01;31m[K~~~~~~~~^~~~~~~~[m[K
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

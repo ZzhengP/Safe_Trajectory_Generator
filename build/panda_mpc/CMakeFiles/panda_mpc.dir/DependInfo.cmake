@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/controller.cpp.o"
   "/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o"
   "/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o"
+  "/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/robot_model.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

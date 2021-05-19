@@ -1,0 +1,326 @@
+\hypertarget{structqp_o_a_s_e_s___options}{}\section{qp\+O\+A\+S\+E\+S\+\_\+\+Options Struct Reference}
+\label{structqp_o_a_s_e_s___options}\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+
+
+Manages all user-\/specified options for solving Q\+Ps.  
+
+
+
+
+{\ttfamily \#include $<$qp\+O\+A\+S\+E\+S\+\_\+wrapper.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a6088fabf0daa3ecbae52e5c51b7d34f3}{print\+Level}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a6a24b728aac71b065738858d90340c79}{enable\+Ramping}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a64852540516411412e8fa530626e7275}{enable\+Far\+Bounds}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a3b7ede46119fe9e685a7673821973c75}{enable\+Flipping\+Bounds}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a2097669172e86625febce9309c2ca9ab}{enable\+Regularisation}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a6b37fbe94a31b355a2f30a282aa97f41}{enable\+Full\+L\+I\+Tests}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a03ac2d546d482acd3c7b75d234efe10a}{enable\+N\+Z\+C\+Tests}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a1fdfa62d4afd2b098abefa1130e830cf}{enable\+Drift\+Correction}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_ad9ddd1d12f157f5c8e3c6c675df8a8e0}{enable\+Cholesky\+Refactorisation}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_ad40052e362f74d3c61bf7ff4403b3f3d}{enable\+Equalities}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a36429c6a57ce807825a7bcd2cf8c2b3b}{termination\+Tolerance}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a2f3197e8b04dc36819376951b99794dc}{bound\+Tolerance}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a9b1d54029ca9e1668eca3781989ed250}{bound\+Relaxation}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_aace4f5280fa7652ae3a94233fd5b3426}{eps\+Num}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a0c6d8b9cbfb6653d9041adf340455009}{eps\+Den}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a235bfd418102d55f6ac4ae0c2dd6d227}{max\+Primal\+Jump}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_af423b23bd65dcc7b206334117b5b27c0}{max\+Dual\+Jump}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a331e50f9a2f0a4610fa0c43844ec01c6}{initial\+Ramping}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a44fcd2e2668deed0a3c9e6833ec7c574}{final\+Ramping}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_ac3ec52186ee43ab5dd206f0a2d361b96}{initial\+Far\+Bounds}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a4b71e89367e47569a26808f26b4d088a}{grow\+Far\+Bounds}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a0c9fcb31abac747e48a5692c39fe9697}{initial\+Status\+Bounds}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a51b4830c25b9a594daa714eb9669f486}{eps\+Flipping}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_aac730a30b27bad8767eb2ac244a65e8e}{num\+Regularisation\+Steps}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_ae5d92f91af0387922a032775730de902}{eps\+Regularisation}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_ac8ddd3b9409357e32accb1fac36ed1f3}{num\+Refinement\+Steps}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a47a6866dde5839ff467c5cd1f2a46624}{eps\+Iter\+Ref}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a9d8ba7cd02fac6a0e8929c7b4f34452c}{eps\+L\+I\+Tests}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a1f9a6751236383f220f6ef59904e8145}{eps\+N\+Z\+C\+Tests}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_ad8790f167af13dcfd435cd94fcde29a5}{rcond\+S\+Min}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_ac082aee8fc37bdc229904e8575bb1d70}{enable\+Inertia\+Correction}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_a4c7f439de5c658dd3d5aa79a38519d92}{enable\+Drop\+Infeasibles}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_aa7fbe2d8d1e7a224e5e56120da09c17b}{drop\+Bound\+Priority}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_aef2d6f1515675a21d7b1f8849d44d303}{drop\+Eq\+Con\+Priority}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_adb23eb5d0193c5a7e2668205072e4c02}{drop\+Ineq\+Con\+Priority}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{structqp_o_a_s_e_s___options_ad6ffb2216fbd2078b676a1b6aeeeabb1}{print\+Residuals}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Manages all user-\/specified options for solving Q\+Ps. 
+
+This struct manages all user-\/specified options used for solving quadratic programs.
+
+\begin{DoxyAuthor}{Author}
+Hans Joachim Ferreau 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2014-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structqp_o_a_s_e_s___options_a9b1d54029ca9e1668eca3781989ed250}\label{structqp_o_a_s_e_s___options_a9b1d54029ca9e1668eca3781989ed250}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!bound\+Relaxation@{bound\+Relaxation}}
+\index{bound\+Relaxation@{bound\+Relaxation}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{bound\+Relaxation}{boundRelaxation}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::bound\+Relaxation}
+
+Offset for relaxing (constraints\textquotesingle{}) bounds at beginning of an initial homotopy. It is also as initial value for far bounds. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a2f3197e8b04dc36819376951b99794dc}\label{structqp_o_a_s_e_s___options_a2f3197e8b04dc36819376951b99794dc}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!bound\+Tolerance@{bound\+Tolerance}}
+\index{bound\+Tolerance@{bound\+Tolerance}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{bound\+Tolerance}{boundTolerance}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::bound\+Tolerance}
+
+Lower/upper (constraints\textquotesingle{}) bound tolerance (an inequality constraint whose lower and upper bounds differ by less is regarded to be an equality constraint). \mbox{\Hypertarget{structqp_o_a_s_e_s___options_aa7fbe2d8d1e7a224e5e56120da09c17b}\label{structqp_o_a_s_e_s___options_aa7fbe2d8d1e7a224e5e56120da09c17b}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!drop\+Bound\+Priority@{drop\+Bound\+Priority}}
+\index{drop\+Bound\+Priority@{drop\+Bound\+Priority}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{drop\+Bound\+Priority}{dropBoundPriority}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::drop\+Bound\+Priority}
+
+... \mbox{\Hypertarget{structqp_o_a_s_e_s___options_aef2d6f1515675a21d7b1f8849d44d303}\label{structqp_o_a_s_e_s___options_aef2d6f1515675a21d7b1f8849d44d303}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!drop\+Eq\+Con\+Priority@{drop\+Eq\+Con\+Priority}}
+\index{drop\+Eq\+Con\+Priority@{drop\+Eq\+Con\+Priority}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{drop\+Eq\+Con\+Priority}{dropEqConPriority}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::drop\+Eq\+Con\+Priority}
+
+... \mbox{\Hypertarget{structqp_o_a_s_e_s___options_adb23eb5d0193c5a7e2668205072e4c02}\label{structqp_o_a_s_e_s___options_adb23eb5d0193c5a7e2668205072e4c02}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!drop\+Ineq\+Con\+Priority@{drop\+Ineq\+Con\+Priority}}
+\index{drop\+Ineq\+Con\+Priority@{drop\+Ineq\+Con\+Priority}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{drop\+Ineq\+Con\+Priority}{dropIneqConPriority}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::drop\+Ineq\+Con\+Priority}
+
+... \mbox{\Hypertarget{structqp_o_a_s_e_s___options_ad9ddd1d12f157f5c8e3c6c675df8a8e0}\label{structqp_o_a_s_e_s___options_ad9ddd1d12f157f5c8e3c6c675df8a8e0}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!enable\+Cholesky\+Refactorisation@{enable\+Cholesky\+Refactorisation}}
+\index{enable\+Cholesky\+Refactorisation@{enable\+Cholesky\+Refactorisation}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{enable\+Cholesky\+Refactorisation}{enableCholeskyRefactorisation}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::enable\+Cholesky\+Refactorisation}
+
+Specifies the frequency of full refactorisation of proj. Hessian (otherwise updates). \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a1fdfa62d4afd2b098abefa1130e830cf}\label{structqp_o_a_s_e_s___options_a1fdfa62d4afd2b098abefa1130e830cf}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!enable\+Drift\+Correction@{enable\+Drift\+Correction}}
+\index{enable\+Drift\+Correction@{enable\+Drift\+Correction}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{enable\+Drift\+Correction}{enableDriftCorrection}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::enable\+Drift\+Correction}
+
+Specifies the frequency of drift corrections (0 = off). \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a4c7f439de5c658dd3d5aa79a38519d92}\label{structqp_o_a_s_e_s___options_a4c7f439de5c658dd3d5aa79a38519d92}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!enable\+Drop\+Infeasibles@{enable\+Drop\+Infeasibles}}
+\index{enable\+Drop\+Infeasibles@{enable\+Drop\+Infeasibles}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{enable\+Drop\+Infeasibles}{enableDropInfeasibles}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::enable\+Drop\+Infeasibles}
+
+... \mbox{\Hypertarget{structqp_o_a_s_e_s___options_ad40052e362f74d3c61bf7ff4403b3f3d}\label{structqp_o_a_s_e_s___options_ad40052e362f74d3c61bf7ff4403b3f3d}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!enable\+Equalities@{enable\+Equalities}}
+\index{enable\+Equalities@{enable\+Equalities}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{enable\+Equalities}{enableEqualities}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::enable\+Equalities}
+
+Specifies whether equalities shall be always treated as active constraints. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a64852540516411412e8fa530626e7275}\label{structqp_o_a_s_e_s___options_a64852540516411412e8fa530626e7275}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!enable\+Far\+Bounds@{enable\+Far\+Bounds}}
+\index{enable\+Far\+Bounds@{enable\+Far\+Bounds}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{enable\+Far\+Bounds}{enableFarBounds}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::enable\+Far\+Bounds}
+
+Specifies whether far bounds shall be used or not. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a3b7ede46119fe9e685a7673821973c75}\label{structqp_o_a_s_e_s___options_a3b7ede46119fe9e685a7673821973c75}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!enable\+Flipping\+Bounds@{enable\+Flipping\+Bounds}}
+\index{enable\+Flipping\+Bounds@{enable\+Flipping\+Bounds}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{enable\+Flipping\+Bounds}{enableFlippingBounds}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::enable\+Flipping\+Bounds}
+
+Specifies whether flipping bounds shall be used or not. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a6b37fbe94a31b355a2f30a282aa97f41}\label{structqp_o_a_s_e_s___options_a6b37fbe94a31b355a2f30a282aa97f41}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!enable\+Full\+L\+I\+Tests@{enable\+Full\+L\+I\+Tests}}
+\index{enable\+Full\+L\+I\+Tests@{enable\+Full\+L\+I\+Tests}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{enable\+Full\+L\+I\+Tests}{enableFullLITests}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::enable\+Full\+L\+I\+Tests}
+
+Specifies whether condition-\/hardened LI test shall be used or not. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_ac082aee8fc37bdc229904e8575bb1d70}\label{structqp_o_a_s_e_s___options_ac082aee8fc37bdc229904e8575bb1d70}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!enable\+Inertia\+Correction@{enable\+Inertia\+Correction}}
+\index{enable\+Inertia\+Correction@{enable\+Inertia\+Correction}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{enable\+Inertia\+Correction}{enableInertiaCorrection}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::enable\+Inertia\+Correction}
+
+Specifies whether the working set should be repaired when negative curvature is discovered during hotstart. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a03ac2d546d482acd3c7b75d234efe10a}\label{structqp_o_a_s_e_s___options_a03ac2d546d482acd3c7b75d234efe10a}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!enable\+N\+Z\+C\+Tests@{enable\+N\+Z\+C\+Tests}}
+\index{enable\+N\+Z\+C\+Tests@{enable\+N\+Z\+C\+Tests}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{enable\+N\+Z\+C\+Tests}{enableNZCTests}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::enable\+N\+Z\+C\+Tests}
+
+Specifies whether nonzero curvature tests shall be used. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a6a24b728aac71b065738858d90340c79}\label{structqp_o_a_s_e_s___options_a6a24b728aac71b065738858d90340c79}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!enable\+Ramping@{enable\+Ramping}}
+\index{enable\+Ramping@{enable\+Ramping}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{enable\+Ramping}{enableRamping}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::enable\+Ramping}
+
+Specifies whether ramping shall be enabled or not. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a2097669172e86625febce9309c2ca9ab}\label{structqp_o_a_s_e_s___options_a2097669172e86625febce9309c2ca9ab}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!enable\+Regularisation@{enable\+Regularisation}}
+\index{enable\+Regularisation@{enable\+Regularisation}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{enable\+Regularisation}{enableRegularisation}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::enable\+Regularisation}
+
+Specifies whether Hessian matrix shall be regularised in case semi-\/definiteness is detected. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a0c6d8b9cbfb6653d9041adf340455009}\label{structqp_o_a_s_e_s___options_a0c6d8b9cbfb6653d9041adf340455009}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!eps\+Den@{eps\+Den}}
+\index{eps\+Den@{eps\+Den}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{eps\+Den}{epsDen}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::eps\+Den}
+
+Denominator tolerance for ratio tests. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a51b4830c25b9a594daa714eb9669f486}\label{structqp_o_a_s_e_s___options_a51b4830c25b9a594daa714eb9669f486}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!eps\+Flipping@{eps\+Flipping}}
+\index{eps\+Flipping@{eps\+Flipping}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{eps\+Flipping}{epsFlipping}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::eps\+Flipping}
+
+Tolerance of squared Cholesky diagonal factor which triggers flipping bound. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a47a6866dde5839ff467c5cd1f2a46624}\label{structqp_o_a_s_e_s___options_a47a6866dde5839ff467c5cd1f2a46624}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!eps\+Iter\+Ref@{eps\+Iter\+Ref}}
+\index{eps\+Iter\+Ref@{eps\+Iter\+Ref}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{eps\+Iter\+Ref}{epsIterRef}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::eps\+Iter\+Ref}
+
+Early termination tolerance for iterative refinement. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a9d8ba7cd02fac6a0e8929c7b4f34452c}\label{structqp_o_a_s_e_s___options_a9d8ba7cd02fac6a0e8929c7b4f34452c}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!eps\+L\+I\+Tests@{eps\+L\+I\+Tests}}
+\index{eps\+L\+I\+Tests@{eps\+L\+I\+Tests}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{eps\+L\+I\+Tests}{epsLITests}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::eps\+L\+I\+Tests}
+
+Tolerance for linear independence tests. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_aace4f5280fa7652ae3a94233fd5b3426}\label{structqp_o_a_s_e_s___options_aace4f5280fa7652ae3a94233fd5b3426}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!eps\+Num@{eps\+Num}}
+\index{eps\+Num@{eps\+Num}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{eps\+Num}{epsNum}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::eps\+Num}
+
+Numerator tolerance for ratio tests. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a1f9a6751236383f220f6ef59904e8145}\label{structqp_o_a_s_e_s___options_a1f9a6751236383f220f6ef59904e8145}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!eps\+N\+Z\+C\+Tests@{eps\+N\+Z\+C\+Tests}}
+\index{eps\+N\+Z\+C\+Tests@{eps\+N\+Z\+C\+Tests}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{eps\+N\+Z\+C\+Tests}{epsNZCTests}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::eps\+N\+Z\+C\+Tests}
+
+Tolerance for nonzero curvature tests. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_ae5d92f91af0387922a032775730de902}\label{structqp_o_a_s_e_s___options_ae5d92f91af0387922a032775730de902}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!eps\+Regularisation@{eps\+Regularisation}}
+\index{eps\+Regularisation@{eps\+Regularisation}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{eps\+Regularisation}{epsRegularisation}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::eps\+Regularisation}
+
+Scaling factor of identity matrix used for Hessian regularisation. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a44fcd2e2668deed0a3c9e6833ec7c574}\label{structqp_o_a_s_e_s___options_a44fcd2e2668deed0a3c9e6833ec7c574}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!final\+Ramping@{final\+Ramping}}
+\index{final\+Ramping@{final\+Ramping}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{final\+Ramping}{finalRamping}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::final\+Ramping}
+
+Final value for Ramping Strategy. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a4b71e89367e47569a26808f26b4d088a}\label{structqp_o_a_s_e_s___options_a4b71e89367e47569a26808f26b4d088a}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!grow\+Far\+Bounds@{grow\+Far\+Bounds}}
+\index{grow\+Far\+Bounds@{grow\+Far\+Bounds}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{grow\+Far\+Bounds}{growFarBounds}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::grow\+Far\+Bounds}
+
+Factor to grow Far \hyperlink{class_bounds}{Bounds}. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_ac3ec52186ee43ab5dd206f0a2d361b96}\label{structqp_o_a_s_e_s___options_ac3ec52186ee43ab5dd206f0a2d361b96}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!initial\+Far\+Bounds@{initial\+Far\+Bounds}}
+\index{initial\+Far\+Bounds@{initial\+Far\+Bounds}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{initial\+Far\+Bounds}{initialFarBounds}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::initial\+Far\+Bounds}
+
+Initial size of Far \hyperlink{class_bounds}{Bounds}. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a331e50f9a2f0a4610fa0c43844ec01c6}\label{structqp_o_a_s_e_s___options_a331e50f9a2f0a4610fa0c43844ec01c6}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!initial\+Ramping@{initial\+Ramping}}
+\index{initial\+Ramping@{initial\+Ramping}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{initial\+Ramping}{initialRamping}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::initial\+Ramping}
+
+Start value for Ramping Strategy. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a0c9fcb31abac747e48a5692c39fe9697}\label{structqp_o_a_s_e_s___options_a0c9fcb31abac747e48a5692c39fe9697}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!initial\+Status\+Bounds@{initial\+Status\+Bounds}}
+\index{initial\+Status\+Bounds@{initial\+Status\+Bounds}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{initial\+Status\+Bounds}{initialStatusBounds}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::initial\+Status\+Bounds}
+
+Initial status of bounds at first iteration. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_af423b23bd65dcc7b206334117b5b27c0}\label{structqp_o_a_s_e_s___options_af423b23bd65dcc7b206334117b5b27c0}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!max\+Dual\+Jump@{max\+Dual\+Jump}}
+\index{max\+Dual\+Jump@{max\+Dual\+Jump}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{max\+Dual\+Jump}{maxDualJump}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::max\+Dual\+Jump}
+
+Maximum allowed jump in dual variables in linear independence tests. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a235bfd418102d55f6ac4ae0c2dd6d227}\label{structqp_o_a_s_e_s___options_a235bfd418102d55f6ac4ae0c2dd6d227}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!max\+Primal\+Jump@{max\+Primal\+Jump}}
+\index{max\+Primal\+Jump@{max\+Primal\+Jump}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{max\+Primal\+Jump}{maxPrimalJump}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::max\+Primal\+Jump}
+
+Maximum allowed jump in primal variables in nonzero curvature tests. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_ac8ddd3b9409357e32accb1fac36ed1f3}\label{structqp_o_a_s_e_s___options_ac8ddd3b9409357e32accb1fac36ed1f3}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!num\+Refinement\+Steps@{num\+Refinement\+Steps}}
+\index{num\+Refinement\+Steps@{num\+Refinement\+Steps}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{num\+Refinement\+Steps}{numRefinementSteps}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::num\+Refinement\+Steps}
+
+Maximum number of iterative refinement steps. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_aac730a30b27bad8767eb2ac244a65e8e}\label{structqp_o_a_s_e_s___options_aac730a30b27bad8767eb2ac244a65e8e}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!num\+Regularisation\+Steps@{num\+Regularisation\+Steps}}
+\index{num\+Regularisation\+Steps@{num\+Regularisation\+Steps}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{num\+Regularisation\+Steps}{numRegularisationSteps}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::num\+Regularisation\+Steps}
+
+Maximum number of successive regularisation steps. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a6088fabf0daa3ecbae52e5c51b7d34f3}\label{structqp_o_a_s_e_s___options_a6088fabf0daa3ecbae52e5c51b7d34f3}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!print\+Level@{print\+Level}}
+\index{print\+Level@{print\+Level}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{print\+Level}{printLevel}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::print\+Level}
+
+Print level. \mbox{\Hypertarget{structqp_o_a_s_e_s___options_ad6ffb2216fbd2078b676a1b6aeeeabb1}\label{structqp_o_a_s_e_s___options_ad6ffb2216fbd2078b676a1b6aeeeabb1}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!print\+Residuals@{print\+Residuals}}
+\index{print\+Residuals@{print\+Residuals}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{print\+Residuals}{printResiduals}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::print\+Residuals}
+
+If true, it will print the internal qp\+O\+A\+S\+ES residuals and other information per iteration \mbox{\Hypertarget{structqp_o_a_s_e_s___options_ad8790f167af13dcfd435cd94fcde29a5}\label{structqp_o_a_s_e_s___options_ad8790f167af13dcfd435cd94fcde29a5}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!rcond\+S\+Min@{rcond\+S\+Min}}
+\index{rcond\+S\+Min@{rcond\+S\+Min}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{rcond\+S\+Min}{rcondSMin}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::rcond\+S\+Min}
+
+Minimum reciprocal condition number of S before refactorization is triggered \mbox{\Hypertarget{structqp_o_a_s_e_s___options_a36429c6a57ce807825a7bcd2cf8c2b3b}\label{structqp_o_a_s_e_s___options_a36429c6a57ce807825a7bcd2cf8c2b3b}} 
+\index{qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}!termination\+Tolerance@{termination\+Tolerance}}
+\index{termination\+Tolerance@{termination\+Tolerance}!qp\+O\+A\+S\+E\+S\+\_\+\+Options@{qp\+O\+A\+S\+E\+S\+\_\+\+Options}}
+\subsubsection{\texorpdfstring{termination\+Tolerance}{terminationTolerance}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} qp\+O\+A\+S\+E\+S\+\_\+\+Options\+::termination\+Tolerance}
+
+Termination tolerance. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/interfaces/c/\hyperlink{qp_o_a_s_e_s__wrapper_8h}{qp\+O\+A\+S\+E\+S\+\_\+wrapper.\+h}\end{DoxyCompactItemize}

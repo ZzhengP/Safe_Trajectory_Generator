@@ -1,0 +1,1776 @@
+\hypertarget{class_q_problem_b}{}\section{Q\+ProblemB Class Reference}
+\label{class_q_problem_b}\index{Q\+ProblemB@{Q\+ProblemB}}
+
+
+Implements the online active set strategy for box-\/constrained Q\+Ps.  
+
+
+
+
+{\ttfamily \#include $<$Q\+Problem\+B.\+hpp$>$}
+
+
+
+Inheritance diagram for Q\+ProblemB\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=172pt]{class_q_problem_b__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Q\+ProblemB\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_q_problem_b__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_q_problem_b_a130f38af91d808933e0f89948a82d030}{Q\+ProblemB} ()
+\item 
+\hyperlink{class_q_problem_b_aea8e763194471ee707b3c61da23d8e62}{Q\+ProblemB} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \+\_\+nV, \hyperlink{_types_8hpp_a604cad5cda14e378ce4a77ab28ee9fd9}{Hessian\+Type} \+\_\+hessian\+Type=\hyperlink{_types_8hpp_a604cad5cda14e378ce4a77ab28ee9fd9a3479cf4e632ae731d4da9bf57a9f8907}{H\+S\+T\+\_\+\+U\+N\+K\+N\+O\+WN}, \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} alloc\+Dense\+Mats=\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089a34c57965bfb07125b09326a69019f9c6}{B\+T\+\_\+\+T\+R\+UE})
+\item 
+\hyperlink{class_q_problem_b_a370995d62be6dbeef2415b3882c00fe7}{Q\+ProblemB} (const \hyperlink{class_q_problem_b}{Q\+ProblemB} \&rhs)
+\item 
+virtual \hyperlink{class_q_problem_b_a9b7c6eb715d0d16ff8f3e7882b3982e7}{$\sim$\+Q\+ProblemB} ()
+\item 
+virtual \hyperlink{class_q_problem_b}{Q\+ProblemB} \& \hyperlink{class_q_problem_b_aefdce5618a0c88d7677b5783b6e40578}{operator=} (const \hyperlink{class_q_problem_b}{Q\+ProblemB} \&rhs)
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a975c13e1a8fbe8c3e9c4dfbce9dc9a71}{reset} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_ac64a41e4a05fe92f4786ac3eebdf0d0e}{init} (\hyperlink{class_symmetric_matrix}{Symmetric\+Matrix} $\ast$\+\_\+H, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+g, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+lb, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+ub, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&n\+W\+SR, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const cputime=0, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const x\+Opt=0, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const y\+Opt=0, const \hyperlink{class_bounds}{Bounds} $\ast$const guessed\+Bounds=0, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+R=0)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a3c871cf31cc19a045127e982ddd27e8d}{init} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+H, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+g, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+lb, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+ub, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&n\+W\+SR, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const cputime=0, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const x\+Opt=0, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const y\+Opt=0, const \hyperlink{class_bounds}{Bounds} $\ast$const guessed\+Bounds=0, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+R=0)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_ae7d6f54bb9c8198c7a592ad8ca416299}{init} (const char $\ast$const H\+\_\+file, const char $\ast$const g\+\_\+file, const char $\ast$const lb\+\_\+file, const char $\ast$const ub\+\_\+file, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&n\+W\+SR, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const cputime=0, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const x\+Opt=0, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const y\+Opt=0, const \hyperlink{class_bounds}{Bounds} $\ast$const guessed\+Bounds=0, const char $\ast$const R\+\_\+file=0)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a2ab20f136824346f73866aa2140ebe7b}{hotstart} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const g\+\_\+new, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const lb\+\_\+new, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const ub\+\_\+new, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&n\+W\+SR, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const cputime=0, const \hyperlink{class_bounds}{Bounds} $\ast$const guessed\+Bounds=0)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_ac9305bb855858f9f6e1ff7c15ff39204}{hotstart} (const char $\ast$const g\+\_\+file, const char $\ast$const lb\+\_\+file, const char $\ast$const ub\+\_\+file, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&n\+W\+SR, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const cputime=0, const \hyperlink{class_bounds}{Bounds} $\ast$const guessed\+Bounds=0)
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a29c4cdd661701580f1ebe1e78804bd43}{get\+Working\+Set} (\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$working\+Set)
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a317183ae1f862863ac5b50e0c4028227}{get\+Working\+Set\+Bounds} (\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$working\+SetB)
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_aa4b108a056ac2a35bf3938d1ca18f1cc}{get\+Working\+Set\+Constraints} (\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$working\+SetC)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_aa401ddfd0bc69a929c5c00040be93f5e}{get\+Bounds} (\hyperlink{class_bounds}{Bounds} \&\+\_\+bounds) const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_q_problem_b_a8bfcd5a9acddbe43a0574f86c6339a33}{get\+NV} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_q_problem_b_a9111a3b8cdebcec73cdec7a446c52457}{get\+N\+FR} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_q_problem_b_ace4ced063e846e210630f52ae40b32f7}{get\+N\+FX} () const
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_q_problem_b_a6ea3aaec6918af07d0db993aa365a71e}{get\+N\+FV} () const
+\item 
+virtual \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_q_problem_b_a3495286868b8a38e788700ad0e64fbc4}{get\+NZ} () const
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_q_problem_b_a067695062de64eb612ba1d0e1cfaac45}{get\+Obj\+Val} () const
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_q_problem_b_ae84a514dbacfaa501db053a4c4c6093e}{get\+Obj\+Val} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+x) const
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a979e1f541b8e894a3dfd9ec37f95458e}{get\+Primal\+Solution} (\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const x\+Opt) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_aed886c847f0f18259726d758e7d24abe}{get\+Dual\+Solution} (\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const y\+Opt) const
+\item 
+\hyperlink{_types_8hpp_a8d5ce5a92124dc0106a5720f6d9a5abd}{Q\+Problem\+Status} \hyperlink{class_q_problem_b_a85b382973fc35fa5b3e7eed6bde01379}{get\+Status} () const
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_q_problem_b_ada1bc8c33c22ccc4ce6b9ca681098e44}{is\+Initialised} () const
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_q_problem_b_a5c7b1368dde6de4c7c5858c400782044}{is\+Solved} () const
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_q_problem_b_a2a69e2654a4275e50c2e959f19de7ce3}{is\+Infeasible} () const
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_q_problem_b_a869703c445e0eb4a324da44479c2d67f}{is\+Unbounded} () const
+\item 
+\hyperlink{_types_8hpp_a604cad5cda14e378ce4a77ab28ee9fd9}{Hessian\+Type} \hyperlink{class_q_problem_b_a4658fef144420003235925f5a4683217}{get\+Hessian\+Type} () const
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a8ad9f3322852e355ac2dc4e549e495e9}{set\+Hessian\+Type} (\hyperlink{_types_8hpp_a604cad5cda14e378ce4a77ab28ee9fd9}{Hessian\+Type} \+\_\+hessian\+Type)
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_q_problem_b_abaf8197d399cfd636513ae65225c0068}{using\+Regularisation} () const
+\item 
+\hyperlink{class_options}{Options} \hyperlink{class_q_problem_b_aa8f201dd83574ca6d9c8aa7a7b6a8f4f}{get\+Options} () const
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a5401e252d34757797ce3e913644e8b2c}{set\+Options} (const \hyperlink{class_options}{Options} \&\+\_\+options)
+\item 
+\hyperlink{_types_8hpp_a83ff212f474e3669d8fac2d727f65de5}{Print\+Level} \hyperlink{class_q_problem_b_abe79cfdbf6cec0560d08bc0eaab05210}{get\+Print\+Level} () const
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a2be2208a1befa1f7fa03f3c11d91ae7b}{set\+Print\+Level} (\hyperlink{_types_8hpp_a83ff212f474e3669d8fac2d727f65de5}{Print\+Level} \+\_\+printlevel)
+\item 
+uint\+\_\+t \hyperlink{class_q_problem_b_a21b332ce4d997b428c2ecec606652777}{get\+Count} () const
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a29492d7ab426c13e0f6fa3b09de2476e}{reset\+Counter} ()
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a587077ee58951d181f89674fd9c15f7b}{print\+Properties} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_ab529435b82c728105652321a0a2d054a}{print\+Options} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a957104bb5ebd44cd9d37878c2b6e8a52}{clear} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_aeb2920c00630c6643b05c8ee10d717ac}{copy} (const \hyperlink{class_q_problem_b}{Q\+ProblemB} \&rhs)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a05462a04d6ecec9f2f3d32b868ec546b}{determine\+Hessian\+Type} ()
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a4aa7da7c8454c0e53e65f923cd5c6e21}{setup\+Subject\+To\+Type} ()
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a9b170181bd826023ce43c3df3ff463e7}{setup\+Subject\+To\+Type} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const lb\+\_\+new, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const ub\+\_\+new)
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a5f9fa59b80f990a897ba783e89dd03d3}{compute\+Cholesky} ()
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_afe7b38887f4823cecc668b99299d145b}{setup\+Initial\+Cholesky} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_aab3ae0a0bfec358313752467edbbb34f}{obtain\+Auxiliary\+Working\+Set} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const x\+Opt, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const y\+Opt, const \hyperlink{class_bounds}{Bounds} $\ast$const guessed\+Bounds, \hyperlink{class_bounds}{Bounds} $\ast$auxiliary\+Bounds) const
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_aeacf6ab948d4b29c950ae933f24555ac}{are\+Bounds\+Consistent} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \hyperlink{class_q_problem_b_a424f1b8c4badffef270a68a461671d44}{lb}, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \hyperlink{class_q_problem_b_ae7d207471df9894e89e974b252fc341e}{ub}) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_ade50089ea6cc6d43d9fad769a148b610}{backsolveR} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const b, \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} transposed, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const a) const
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_aed091d48f6b135d70fda686683e29c26}{backsolveR} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const b, \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} transposed, \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} removing\+Bound, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const a) const
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a47a5f0abd5846f48f5273def9dbfa292}{determine\+Data\+Shift} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const g\+\_\+new, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const lb\+\_\+new, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const ub\+\_\+new, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const delta\+\_\+g, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const delta\+\_\+lb, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const delta\+\_\+ub, \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \&Delta\+\_\+b\+B\+\_\+is\+Zero)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_ab785215eb0f10994203a19632b715212}{setup\+Q\+Pdata} (\hyperlink{class_symmetric_matrix}{Symmetric\+Matrix} $\ast$\+\_\+H, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+g, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+lb, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+ub)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a8c54c1a5fdbf94bba199e50a63ae06ce}{setup\+Q\+Pdata} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+H, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+g, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+lb, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const \+\_\+ub)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a6ea1dcb60fb520c18f1612b944875160}{setup\+Q\+Pdata\+From\+File} (const char $\ast$const H\+\_\+file, const char $\ast$const g\+\_\+file, const char $\ast$const lb\+\_\+file, const char $\ast$const ub\+\_\+file)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a50f4ae650239798b58979714bb35e51a}{load\+Q\+Pvectors\+From\+File} (const char $\ast$const g\+\_\+file, const char $\ast$const lb\+\_\+file, const char $\ast$const ub\+\_\+file, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const g\+\_\+new, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const lb\+\_\+new, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const ub\+\_\+new) const
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a07d0ca4a5fcac26c857f41154e4ff6e3}{set\+Infeasibility\+Flag} (\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} returnvalue, \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} do\+Throw\+Error=\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089a85b8a20e72a8bea5dd10a6007fe3071e}{B\+T\+\_\+\+F\+A\+L\+SE})
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_q_problem_b_a3d6d1ee2af466d9366ecd58444bff94d}{is\+C\+P\+Utime\+Limit\+Exceeded} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const cputime, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} starttime, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} n\+W\+SR) const
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a8377ea426acc7a7b78a0c78944ded1b4}{regularise\+Hessian} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_ac9ca851c00d04f7f052a306f0f9f74ce}{setH} (\hyperlink{class_symmetric_matrix}{Symmetric\+Matrix} $\ast$H\+\_\+new)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a5cb41e48d8508f561324a3b2c8155755}{setH} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const H\+\_\+new)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a4a907eb6c1a6ead3bf13335ce71ba069}{setG} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const g\+\_\+new)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a7d3cb375ddce99f8728a9be54207d542}{set\+LB} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const lb\+\_\+new)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a1e3a58f51f4ac880f2584580074b1608}{set\+LB} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} number, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} value)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a529829d8e9a31570bbf11c26d7c3525a}{set\+UB} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const ub\+\_\+new)
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_ad60b2cfc86789f10e1d3cf70aae4977c}{set\+UB} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} number, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} value)
+\item 
+void \hyperlink{class_q_problem_b_a86fe81c39dfa3b2d2048ba4108f4c110}{compute\+Givens} (\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} xold, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} yold, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&xnew, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&ynew, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&c, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&s) const
+\item 
+void \hyperlink{class_q_problem_b_a340df2253c15c89c3f34db472a506980}{apply\+Givens} (\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} c, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} s, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} nu, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} xold, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} yold, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&xnew, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&ynew) const
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_q_problem_b_a5cba0e68d2df5fb45cae8418d33cf89b}{get\+Relative\+Homotopy\+Length} (const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const g\+\_\+new, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const lb\+\_\+new, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const ub\+\_\+new)
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_aebf3301bb4f788933905b42341cdfa37}{perform\+Ramping} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a5f878629b9339dc4a319044a27f3cdcc}{update\+Far\+Bounds} (\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} cur\+Far\+Bound, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} n\+Ramp, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const lb\+\_\+new, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const lb\+\_\+new\+\_\+far, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const ub\+\_\+new, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const ub\+\_\+new\+\_\+far) const
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_a80ddd094317095df66a192e67273e049}{perform\+Ratio\+Test} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} n\+Idx, const \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$const idx\+List, const \hyperlink{class_subject_to}{Subject\+To} $\ast$const subject\+To, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const num, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const den, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} eps\+Num, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} eps\+Den, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&t, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&B\+C\+\_\+idx) const
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_q_problem_b_a450cd965f2fe9b98ff8bb196a4dd8892}{is\+Blocking} (\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} num, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} den, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} eps\+Num, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} eps\+Den, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&t) const
+\item 
+\hyperlink{class_sym_sparse_mat}{Sym\+Sparse\+Mat} $\ast$ \hyperlink{class_q_problem_b_a53fb5975dddabd52e3cbc1062f2faa7d}{create\+Diag\+Sparse\+Mat} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} n, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} diag\+Val=1.\+0)
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_q_problem_b_aa241e899e7019423ee5bba4edc1f4d23}{setup\+Auxiliary\+QP} (const \hyperlink{class_bounds}{Bounds} $\ast$const guessed\+Bounds)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_q_problem_b_a289ddec30e99470ebaa44aabd9f2ac7f}{free\+Hessian}
+\item 
+\hyperlink{class_symmetric_matrix}{Symmetric\+Matrix} $\ast$ \hyperlink{class_q_problem_b_a10b5660ca133fee1cedbb9636cea8431}{H}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ \hyperlink{class_q_problem_b_a3efcc81e7338d5d41c99e58a766315ba}{g}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ \hyperlink{class_q_problem_b_a424f1b8c4badffef270a68a461671d44}{lb}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ \hyperlink{class_q_problem_b_ae7d207471df9894e89e974b252fc341e}{ub}
+\item 
+\hyperlink{class_bounds}{Bounds} \hyperlink{class_q_problem_b_af0822225676e7ca195a0724a8841c4d9}{bounds}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ \hyperlink{class_q_problem_b_a8402fb9f4dbfaa9ad433457ba03751f0}{R}
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_q_problem_b_a3647c70d0d4fba3f2afe2cca4d289102}{have\+Cholesky}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ \hyperlink{class_q_problem_b_af5f392cdcebe7abe2fc827929e8cfe3b}{x}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ \hyperlink{class_q_problem_b_a3fcf4f7abdb0189fd304e6bd31431d4f}{y}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_q_problem_b_a382545a2e9cf4591bf372c9297cac294}{tau}
+\item 
+\hyperlink{_types_8hpp_a8d5ce5a92124dc0106a5720f6d9a5abd}{Q\+Problem\+Status} \hyperlink{class_q_problem_b_acc7ad0699dc78f9376ac5d5e84517b47}{status}
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_q_problem_b_acfeba7662b0bc3050ae37b857e3ea419}{infeasible}
+\item 
+\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \hyperlink{class_q_problem_b_a689fdbbb9231d84e6c653da59d069963}{unbounded}
+\item 
+\hyperlink{_types_8hpp_a604cad5cda14e378ce4a77ab28ee9fd9}{Hessian\+Type} \hyperlink{class_q_problem_b_af288e4e7320b9c47c2c95a230cedcbf4}{hessian\+Type}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_q_problem_b_af908e16b53b18ca061a7c1c894c17e8b}{reg\+Val}
+\item 
+uint\+\_\+t \hyperlink{class_q_problem_b_a4d259bca2027133955de304eac49054b}{count}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$ \hyperlink{class_q_problem_b_a06e401f5f0d6f9a9ce2caa81dc5d85b6}{delta\+\_\+x\+F\+R\+\_\+\+T\+MP}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_q_problem_b_ac26a4dc4501ff1d6249631ea24e98d4c}{ramp0}
+\item 
+\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \hyperlink{class_q_problem_b_ac3741a9c8073cbb90b2fa071f10930b6}{ramp1}
+\item 
+\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_q_problem_b_a28453afb30a33fe30b59c592586d49c2}{ramp\+Offset}
+\item 
+\hyperlink{class_options}{Options} \hyperlink{class_q_problem_b_a59d8ee93443bc8e7ce509a94ff4330e6}{options}
+\item 
+\hyperlink{class_flipper}{Flipper} \hyperlink{class_q_problem_b_afc23c08b6cdc0ca93f9c049e9a318744}{flipper}
+\item 
+\hyperlink{struct_tabular_output}{Tabular\+Output} \hyperlink{class_q_problem_b_a81466d68cbeae767710b1d804a9b65cd}{tabular\+Output}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_q_problem_b_ab55a166adacbc90da27a86b0010c81d7}\label{class_q_problem_b_ab55a166adacbc90da27a86b0010c81d7}} 
+class {\bfseries Solution\+Analysis}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Implements the online active set strategy for box-\/constrained Q\+Ps. 
+
+Class for setting up and solving quadratic programs with bounds (= box constraints) only. The main feature is the possibily to use the newly developed online active set strategy for parametric quadratic programming.
+
+\begin{DoxyAuthor}{Author}
+Hans Joachim Ferreau, Andreas Potschka, Christian Kirches 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2007-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_q_problem_b_a130f38af91d808933e0f89948a82d030}\label{class_q_problem_b_a130f38af91d808933e0f89948a82d030}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!Q\+ProblemB@{Q\+ProblemB}}
+\index{Q\+ProblemB@{Q\+ProblemB}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{Q\+Problem\+B()}{QProblemB()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_afd127fcb3c8f47975e9fa0ec2bacde52}{B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} Q\+Problem\+B\+::\+Q\+ProblemB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_q_problem_b_aea8e763194471ee707b3c61da23d8e62}\label{class_q_problem_b_aea8e763194471ee707b3c61da23d8e62}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!Q\+ProblemB@{Q\+ProblemB}}
+\index{Q\+ProblemB@{Q\+ProblemB}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{Q\+Problem\+B()}{QProblemB()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Q\+Problem\+B\+::\+Q\+ProblemB (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{\+\_\+nV,  }\item[{\hyperlink{_types_8hpp_a604cad5cda14e378ce4a77ab28ee9fd9}{Hessian\+Type}}]{\+\_\+hessian\+Type = {\ttfamily \hyperlink{_types_8hpp_a604cad5cda14e378ce4a77ab28ee9fd9a3479cf4e632ae731d4da9bf57a9f8907}{H\+S\+T\+\_\+\+U\+N\+K\+N\+O\+WN}},  }\item[{\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type}}]{alloc\+Dense\+Mats = {\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089a34c57965bfb07125b09326a69019f9c6}{B\+T\+\_\+\+T\+R\+UE}} }\end{DoxyParamCaption})}
+
+Constructor which takes the QP dimension and Hessian type information. If the Hessian is the zero (i.\+e. H\+S\+T\+\_\+\+Z\+E\+RO) or the identity matrix (i.\+e. H\+S\+T\+\_\+\+I\+D\+E\+N\+T\+I\+TY), respectively, no memory is allocated for it and a N\+U\+LL pointer can be passed for it to the \hyperlink{class_q_problem_b_ac64a41e4a05fe92f4786ac3eebdf0d0e}{init()} functions. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+nV} & Number of variables. \\
+\hline
+{\em \+\_\+hessian\+Type} & Type of Hessian matrix. \\
+\hline
+{\em alloc\+Dense\+Mats} & Enable allocation of dense matrices. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a370995d62be6dbeef2415b3882c00fe7}\label{class_q_problem_b_a370995d62be6dbeef2415b3882c00fe7}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!Q\+ProblemB@{Q\+ProblemB}}
+\index{Q\+ProblemB@{Q\+ProblemB}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{Q\+Problem\+B()}{QProblemB()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Q\+Problem\+B\+::\+Q\+ProblemB (\begin{DoxyParamCaption}\item[{const \hyperlink{class_q_problem_b}{Q\+ProblemB} \&}]{rhs }\end{DoxyParamCaption})}
+
+Copy constructor (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a9b7c6eb715d0d16ff8f3e7882b3982e7}\label{class_q_problem_b_a9b7c6eb715d0d16ff8f3e7882b3982e7}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!````~Q\+ProblemB@{$\sim$\+Q\+ProblemB}}
+\index{````~Q\+ProblemB@{$\sim$\+Q\+ProblemB}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{$\sim$\+Q\+Problem\+B()}{~QProblemB()}}
+{\footnotesize\ttfamily Q\+Problem\+B\+::$\sim$\+Q\+ProblemB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_q_problem_b_a340df2253c15c89c3f34db472a506980}\label{class_q_problem_b_a340df2253c15c89c3f34db472a506980}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!apply\+Givens@{apply\+Givens}}
+\index{apply\+Givens@{apply\+Givens}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{apply\+Givens()}{applyGivens()}}
+{\footnotesize\ttfamily void Q\+Problem\+B\+::apply\+Givens (\begin{DoxyParamCaption}\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{c,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{s,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{nu,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{xold,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{yold,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&}]{xnew,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&}]{ynew }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Applies Givens matrix determined by c and s (cf. compute\+Givens). \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Cosine entry of Givens matrix. \\
+\hline
+{\em s} & Sine entry of Givens matrix. \\
+\hline
+{\em nu} & Further factor\+: s/(1+c). \\
+\hline
+{\em xold} & \hyperlink{class_matrix}{Matrix} entry to be transformed corresponding to the normalised entry of the original matrix. \\
+\hline
+{\em yold} & \hyperlink{class_matrix}{Matrix} entry to be transformed corresponding to the annihilated entry of the original matrix. \\
+\hline
+{\em xnew} & Output\+: Transformed matrix entry corresponding to the normalised entry of the original matrix. \\
+\hline
+{\em ynew} & Output\+: Transformed matrix entry corresponding to the annihilated entry of the original matrix. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_aeacf6ab948d4b29c950ae933f24555ac}\label{class_q_problem_b_aeacf6ab948d4b29c950ae933f24555ac}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!are\+Bounds\+Consistent@{are\+Bounds\+Consistent}}
+\index{are\+Bounds\+Consistent@{are\+Bounds\+Consistent}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{are\+Bounds\+Consistent()}{areBoundsConsistent()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::are\+Bounds\+Consistent (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{lb,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{ub }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Decides if lower bounds are smaller than upper bounds
+
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+Q\+P\+\_\+\+I\+N\+F\+E\+A\+S\+I\+B\+LE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em lb} & Vector of lower bounds \\
+\hline
+{\em ub} & Vector of upper bounds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_ade50089ea6cc6d43d9fad769a148b610}\label{class_q_problem_b_ade50089ea6cc6d43d9fad769a148b610}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!backsolveR@{backsolveR}}
+\index{backsolveR@{backsolveR}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{backsolve\+R()}{backsolveR()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::backsolveR (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{b,  }\item[{\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type}}]{transposed,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Solves the system Ra = b or R$^\wedge$\+Ta = b where R is an upper triangular matrix. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+D\+I\+V\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Right hand side vector. \\
+\hline
+{\em transposed} & Indicates if the transposed system shall be solved. \\
+\hline
+{\em a} & Output\+: Solution vector \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_s_q_problem_schur_a63c65484b647bf456d41b3d9becb1e38}{S\+Q\+Problem\+Schur}.
+
+\mbox{\Hypertarget{class_q_problem_b_aed091d48f6b135d70fda686683e29c26}\label{class_q_problem_b_aed091d48f6b135d70fda686683e29c26}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!backsolveR@{backsolveR}}
+\index{backsolveR@{backsolveR}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{backsolve\+R()}{backsolveR()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::backsolveR (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{b,  }\item[{\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type}}]{transposed,  }\item[{\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type}}]{removing\+Bound,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{a }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Solves the system Ra = b or R$^\wedge$\+Ta = b where R is an upper triangular matrix. ~\newline
+Special variant for the case that this function is called from within \char`\"{}remove\+Bound()\char`\"{}. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+D\+I\+V\+\_\+\+B\+Y\+\_\+\+Z\+E\+RO 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Right hand side vector. \\
+\hline
+{\em transposed} & Indicates if the transposed system shall be solved. \\
+\hline
+{\em removing\+Bound} & Indicates if function is called from \char`\"{}remove\+Bound()\char`\"{}. \\
+\hline
+{\em a} & Output\+: Solution vector \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_s_q_problem_schur_a3ca7e562b8ea01f5fe7bcfb7582efb4c}{S\+Q\+Problem\+Schur}.
+
+\mbox{\Hypertarget{class_q_problem_b_a957104bb5ebd44cd9d37878c2b6e8a52}\label{class_q_problem_b_a957104bb5ebd44cd9d37878c2b6e8a52}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!clear@{clear}}
+\index{clear@{clear}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Frees all allocated memory. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a5f9fa59b80f990a897ba783e89dd03d3}\label{class_q_problem_b_a5f9fa59b80f990a897ba783e89dd03d3}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!compute\+Cholesky@{compute\+Cholesky}}
+\index{compute\+Cholesky@{compute\+Cholesky}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{compute\+Cholesky()}{computeCholesky()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::compute\+Cholesky (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Computes the Cholesky decomposition of the (simply projected) Hessian (i.\+e. R$^\wedge$\+T$\ast$R = Z$^\wedge$\+T$\ast$\+H$\ast$Z). It only works in the case where Z is a simple projection matrix! Note\+: If Hessian turns out not to be positive definite, the Hessian type is set to H\+S\+T\+\_\+\+S\+E\+M\+I\+D\+EF accordingly. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+H\+E\+S\+S\+I\+A\+N\+\_\+\+N\+O\+T\+\_\+\+S\+PD ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+L\+I\+S\+T\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a86fe81c39dfa3b2d2048ba4108f4c110}\label{class_q_problem_b_a86fe81c39dfa3b2d2048ba4108f4c110}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!compute\+Givens@{compute\+Givens}}
+\index{compute\+Givens@{compute\+Givens}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{compute\+Givens()}{computeGivens()}}
+{\footnotesize\ttfamily void Q\+Problem\+B\+::compute\+Givens (\begin{DoxyParamCaption}\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{xold,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{yold,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&}]{xnew,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&}]{ynew,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&}]{c,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&}]{s }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Computes parameters for the Givens matrix G for which \mbox{[}x,y\mbox{]}$\ast$G = \mbox{[}z,0\mbox{]} \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em xold} & \hyperlink{class_matrix}{Matrix} entry to be normalised. \\
+\hline
+{\em yold} & \hyperlink{class_matrix}{Matrix} entry to be annihilated. \\
+\hline
+{\em xnew} & Output\+: Normalised matrix entry. \\
+\hline
+{\em ynew} & Output\+: Annihilated matrix entry. \\
+\hline
+{\em c} & Output\+: Cosine entry of Givens matrix. \\
+\hline
+{\em s} & Output\+: Sine entry of Givens matrix. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_aeb2920c00630c6643b05c8ee10d717ac}\label{class_q_problem_b_aeb2920c00630c6643b05c8ee10d717ac}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!copy@{copy}}
+\index{copy@{copy}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_q_problem_b}{Q\+ProblemB} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Copies all members from given rhs object. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a53fb5975dddabd52e3cbc1062f2faa7d}\label{class_q_problem_b_a53fb5975dddabd52e3cbc1062f2faa7d}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!create\+Diag\+Sparse\+Mat@{create\+Diag\+Sparse\+Mat}}
+\index{create\+Diag\+Sparse\+Mat@{create\+Diag\+Sparse\+Mat}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{create\+Diag\+Sparse\+Mat()}{createDiagSparseMat()}}
+{\footnotesize\ttfamily \hyperlink{class_sym_sparse_mat}{Sym\+Sparse\+Mat} $\ast$ Q\+Problem\+B\+::create\+Diag\+Sparse\+Mat (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{n,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{diag\+Val = {\ttfamily 1.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Creates a sparse diagonal (square-\/)matrix which is a given multiple of the identity matrix. \begin{DoxyReturn}{Returns}
+Diagonal matrix ~\newline
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Row/column dimension of matrix to be created. \\
+\hline
+{\em diag\+Val} & Value of all diagonal entries. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a47a5f0abd5846f48f5273def9dbfa292}\label{class_q_problem_b_a47a5f0abd5846f48f5273def9dbfa292}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!determine\+Data\+Shift@{determine\+Data\+Shift}}
+\index{determine\+Data\+Shift@{determine\+Data\+Shift}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{determine\+Data\+Shift()}{determineDataShift()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::determine\+Data\+Shift (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{g\+\_\+new,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{lb\+\_\+new,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{ub\+\_\+new,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{delta\+\_\+g,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{delta\+\_\+lb,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{delta\+\_\+ub,  }\item[{\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} \&}]{Delta\+\_\+b\+B\+\_\+is\+Zero }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Determines step direction of the shift of the QP data. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em g\+\_\+new} & New gradient vector. \\
+\hline
+{\em lb\+\_\+new} & New lower bounds. \\
+\hline
+{\em ub\+\_\+new} & New upper bounds. \\
+\hline
+{\em delta\+\_\+g} & Output\+: Step direction of gradient vector. \\
+\hline
+{\em delta\+\_\+lb} & Output\+: Step direction of lower bounds. \\
+\hline
+{\em delta\+\_\+ub} & Output\+: Step direction of upper bounds. \\
+\hline
+{\em Delta\+\_\+b\+B\+\_\+is\+Zero} & Output\+: Indicates if active bounds are to be shifted. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a05462a04d6ecec9f2f3d32b868ec546b}\label{class_q_problem_b_a05462a04d6ecec9f2f3d32b868ec546b}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!determine\+Hessian\+Type@{determine\+Hessian\+Type}}
+\index{determine\+Hessian\+Type@{determine\+Hessian\+Type}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{determine\+Hessian\+Type()}{determineHessianType()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::determine\+Hessian\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+If Hessian type has been set by the user, nothing is done. Otherwise the Hessian type is set to H\+S\+T\+\_\+\+I\+D\+E\+N\+T\+I\+TY, H\+S\+T\+\_\+\+Z\+E\+RO, or H\+S\+T\+\_\+\+P\+O\+S\+D\+EF (default), respectively. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+H\+E\+S\+S\+I\+A\+N\+\_\+\+I\+N\+D\+E\+F\+I\+N\+I\+TE 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_aa401ddfd0bc69a929c5c00040be93f5e}\label{class_q_problem_b_aa401ddfd0bc69a929c5c00040be93f5e}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+Bounds()}{getBounds()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_afd127fcb3c8f47975e9fa0ec2bacde52}{B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::get\+Bounds (\begin{DoxyParamCaption}\item[{\hyperlink{class_bounds}{Bounds} \&}]{\+\_\+bounds }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns current bounds object of the QP (deep copy). \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+Q\+P\+O\+B\+J\+E\+C\+T\+\_\+\+N\+O\+T\+\_\+\+S\+E\+T\+UP 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+bounds} & Output\+: \hyperlink{class_bounds}{Bounds} object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a21b332ce4d997b428c2ecec606652777}\label{class_q_problem_b_a21b332ce4d997b428c2ecec606652777}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+Count@{get\+Count}}
+\index{get\+Count@{get\+Count}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+Count()}{getCount()}}
+{\footnotesize\ttfamily uint\+\_\+t Q\+Problem\+B\+::get\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the current number of QP problems solved. \begin{DoxyReturn}{Returns}
+Number of QP problems solved. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_aed886c847f0f18259726d758e7d24abe}\label{class_q_problem_b_aed886c847f0f18259726d758e7d24abe}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+Dual\+Solution@{get\+Dual\+Solution}}
+\index{get\+Dual\+Solution@{get\+Dual\+Solution}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+Dual\+Solution()}{getDualSolution()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::get\+Dual\+Solution (\begin{DoxyParamCaption}\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{y\+Opt }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the dual solution vector. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+Q\+P\+\_\+\+N\+O\+T\+\_\+\+S\+O\+L\+V\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em y\+Opt} & Output\+: Dual solution vector (if QP has been solved). \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_q_problem_ae58420046e14b4b252c6833e2bd09b09}{Q\+Problem}.
+
+\mbox{\Hypertarget{class_q_problem_b_a4658fef144420003235925f5a4683217}\label{class_q_problem_b_a4658fef144420003235925f5a4683217}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+Hessian\+Type@{get\+Hessian\+Type}}
+\index{get\+Hessian\+Type@{get\+Hessian\+Type}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+Hessian\+Type()}{getHessianType()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a604cad5cda14e378ce4a77ab28ee9fd9}{Hessian\+Type} Q\+Problem\+B\+::get\+Hessian\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns Hessian type flag (type is not determined due to this call!). \begin{DoxyReturn}{Returns}
+Hessian type. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a9111a3b8cdebcec73cdec7a446c52457}\label{class_q_problem_b_a9111a3b8cdebcec73cdec7a446c52457}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+N\+FR@{get\+N\+FR}}
+\index{get\+N\+FR@{get\+N\+FR}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+N\+F\+R()}{getNFR()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Q\+Problem\+B\+::get\+N\+FR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of free variables. \begin{DoxyReturn}{Returns}
+Number of free variables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a6ea3aaec6918af07d0db993aa365a71e}\label{class_q_problem_b_a6ea3aaec6918af07d0db993aa365a71e}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+N\+FV@{get\+N\+FV}}
+\index{get\+N\+FV@{get\+N\+FV}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+N\+F\+V()}{getNFV()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Q\+Problem\+B\+::get\+N\+FV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of implicitly fixed variables. \begin{DoxyReturn}{Returns}
+Number of implicitly fixed variables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_ace4ced063e846e210630f52ae40b32f7}\label{class_q_problem_b_ace4ced063e846e210630f52ae40b32f7}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+N\+FX@{get\+N\+FX}}
+\index{get\+N\+FX@{get\+N\+FX}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+N\+F\+X()}{getNFX()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Q\+Problem\+B\+::get\+N\+FX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of fixed variables. \begin{DoxyReturn}{Returns}
+Number of fixed variables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a8bfcd5a9acddbe43a0574f86c6339a33}\label{class_q_problem_b_a8bfcd5a9acddbe43a0574f86c6339a33}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+NV@{get\+NV}}
+\index{get\+NV@{get\+NV}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+N\+V()}{getNV()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Q\+Problem\+B\+::get\+NV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the number of variables. \begin{DoxyReturn}{Returns}
+Number of variables. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a3495286868b8a38e788700ad0e64fbc4}\label{class_q_problem_b_a3495286868b8a38e788700ad0e64fbc4}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+NZ@{get\+NZ}}
+\index{get\+NZ@{get\+NZ}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+N\+Z()}{getNZ()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Q\+Problem\+B\+::get\+NZ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the dimension of null space. \begin{DoxyReturn}{Returns}
+Dimension of null space. 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_q_problem_abc038fbdddcb04db736cdd3fab4d9a1a}{Q\+Problem}.
+
+\mbox{\Hypertarget{class_q_problem_b_a067695062de64eb612ba1d0e1cfaac45}\label{class_q_problem_b_a067695062de64eb612ba1d0e1cfaac45}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+Obj\+Val@{get\+Obj\+Val}}
+\index{get\+Obj\+Val@{get\+Obj\+Val}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+Obj\+Val()}{getObjVal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Q\+Problem\+B\+::get\+Obj\+Val (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the optimal objective function value. \begin{DoxyReturn}{Returns}
+finite value\+: Optimal objective function value (QP was solved) ~\newline
+ +infinity\+: QP was not yet solved 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_ae84a514dbacfaa501db053a4c4c6093e}\label{class_q_problem_b_ae84a514dbacfaa501db053a4c4c6093e}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+Obj\+Val@{get\+Obj\+Val}}
+\index{get\+Obj\+Val@{get\+Obj\+Val}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+Obj\+Val()}{getObjVal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Q\+Problem\+B\+::get\+Obj\+Val (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+x }\end{DoxyParamCaption}) const}
+
+Returns the objective function value at an arbitrary point x. \begin{DoxyReturn}{Returns}
+Objective function value at point x 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+x} & Point at which the objective function shall be evaluated. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_aa8f201dd83574ca6d9c8aa7a7b6a8f4f}\label{class_q_problem_b_aa8f201dd83574ca6d9c8aa7a7b6a8f4f}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+Options@{get\+Options}}
+\index{get\+Options@{get\+Options}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+Options()}{getOptions()}}
+{\footnotesize\ttfamily \hyperlink{class_options}{Options} Q\+Problem\+B\+::get\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns current options struct. \begin{DoxyReturn}{Returns}
+Current options struct. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a979e1f541b8e894a3dfd9ec37f95458e}\label{class_q_problem_b_a979e1f541b8e894a3dfd9ec37f95458e}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+Primal\+Solution@{get\+Primal\+Solution}}
+\index{get\+Primal\+Solution@{get\+Primal\+Solution}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+Primal\+Solution()}{getPrimalSolution()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::get\+Primal\+Solution (\begin{DoxyParamCaption}\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{x\+Opt }\end{DoxyParamCaption}) const}
+
+Returns the primal solution vector. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+Q\+P\+\_\+\+N\+O\+T\+\_\+\+S\+O\+L\+V\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Opt} & Output\+: Primal solution vector (if QP has been solved). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_abe79cfdbf6cec0560d08bc0eaab05210}\label{class_q_problem_b_abe79cfdbf6cec0560d08bc0eaab05210}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+Print\+Level@{get\+Print\+Level}}
+\index{get\+Print\+Level@{get\+Print\+Level}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+Print\+Level()}{getPrintLevel()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a83ff212f474e3669d8fac2d727f65de5}{Print\+Level} Q\+Problem\+B\+::get\+Print\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns the print level. \begin{DoxyReturn}{Returns}
+Print level. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a5cba0e68d2df5fb45cae8418d33cf89b}\label{class_q_problem_b_a5cba0e68d2df5fb45cae8418d33cf89b}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+Relative\+Homotopy\+Length@{get\+Relative\+Homotopy\+Length}}
+\index{get\+Relative\+Homotopy\+Length@{get\+Relative\+Homotopy\+Length}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+Relative\+Homotopy\+Length()}{getRelativeHomotopyLength()}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Q\+Problem\+B\+::get\+Relative\+Homotopy\+Length (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{g\+\_\+new,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{lb\+\_\+new,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{ub\+\_\+new }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Compute relative length of homotopy in data space for termination criterion. \begin{DoxyReturn}{Returns}
+Relative length in data space. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em g\+\_\+new} & Final gradient. \\
+\hline
+{\em lb\+\_\+new} & Final lower variable bounds. \\
+\hline
+{\em ub\+\_\+new} & Final upper variable bounds. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a85b382973fc35fa5b3e7eed6bde01379}\label{class_q_problem_b_a85b382973fc35fa5b3e7eed6bde01379}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+Status@{get\+Status}}
+\index{get\+Status@{get\+Status}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+Status()}{getStatus()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a8d5ce5a92124dc0106a5720f6d9a5abd}{Q\+Problem\+Status} Q\+Problem\+B\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns status of the solution process. \begin{DoxyReturn}{Returns}
+Status of solution process. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a29c4cdd661701580f1ebe1e78804bd43}\label{class_q_problem_b_a29c4cdd661701580f1ebe1e78804bd43}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+Working\+Set@{get\+Working\+Set}}
+\index{get\+Working\+Set@{get\+Working\+Set}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+Working\+Set()}{getWorkingSet()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::get\+Working\+Set (\begin{DoxyParamCaption}\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{working\+Set }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Writes a vector with the state of the working set \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em working\+Set} & Output\+: array containing state of the working set. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_q_problem_a133ed005f9da3dd7dc45159b1fdc9d2d}{Q\+Problem}.
+
+\mbox{\Hypertarget{class_q_problem_b_a317183ae1f862863ac5b50e0c4028227}\label{class_q_problem_b_a317183ae1f862863ac5b50e0c4028227}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+Working\+Set\+Bounds@{get\+Working\+Set\+Bounds}}
+\index{get\+Working\+Set\+Bounds@{get\+Working\+Set\+Bounds}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+Working\+Set\+Bounds()}{getWorkingSetBounds()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::get\+Working\+Set\+Bounds (\begin{DoxyParamCaption}\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{working\+SetB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Writes a vector with the state of the working set of bounds \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em working\+SetB} & Output\+: array containing state of the working set of bounds. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_q_problem_a23949497794759135cd63d2bc5dc297a}{Q\+Problem}.
+
+\mbox{\Hypertarget{class_q_problem_b_aa4b108a056ac2a35bf3938d1ca18f1cc}\label{class_q_problem_b_aa4b108a056ac2a35bf3938d1ca18f1cc}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!get\+Working\+Set\+Constraints@{get\+Working\+Set\+Constraints}}
+\index{get\+Working\+Set\+Constraints@{get\+Working\+Set\+Constraints}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{get\+Working\+Set\+Constraints()}{getWorkingSetConstraints()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::get\+Working\+Set\+Constraints (\begin{DoxyParamCaption}\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$}]{working\+SetC }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Writes a vector with the state of the working set of constraints \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em working\+SetC} & Output\+: array containing state of the working set of constraints. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_q_problem_a9aff2accd586086d0a3113eba9b73678}{Q\+Problem}.
+
+\mbox{\Hypertarget{class_q_problem_b_a2ab20f136824346f73866aa2140ebe7b}\label{class_q_problem_b_a2ab20f136824346f73866aa2140ebe7b}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!hotstart@{hotstart}}
+\index{hotstart@{hotstart}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{hotstart()}{hotstart()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::hotstart (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{g\+\_\+new,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{lb\+\_\+new,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{ub\+\_\+new,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&}]{n\+W\+SR,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{cputime = {\ttfamily 0},  }\item[{const \hyperlink{class_bounds}{Bounds} $\ast$const}]{guessed\+Bounds = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Solves an initialised QP sequence using the online active set strategy. By default, QP solution is started from previous solution. If a guess for the working set is provided, an initialised homotopy is performed.
+
+Note\+: This function internally calls solve\+Q\+P/solve\+Regularised\+QP for solving an initialised Q\+P!
+
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+M\+A\+X\+\_\+\+N\+W\+S\+R\+\_\+\+R\+E\+A\+C\+H\+ED ~\newline
+ R\+E\+T\+\_\+\+H\+O\+T\+S\+T\+A\+R\+T\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+A\+S\+\_\+\+Q\+P\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+S\+ED ~\newline
+ R\+E\+T\+\_\+\+H\+O\+T\+S\+T\+A\+R\+T\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+S\+H\+I\+F\+T\+\_\+\+D\+E\+T\+E\+R\+M\+I\+N\+A\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+S\+T\+E\+P\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+D\+E\+T\+E\+R\+M\+I\+N\+A\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+S\+T\+E\+P\+L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+T\+E\+R\+M\+I\+N\+A\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+H\+O\+M\+O\+T\+O\+P\+Y\+\_\+\+S\+T\+E\+P\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+H\+O\+T\+S\+T\+A\+R\+T\+\_\+\+S\+T\+O\+P\+P\+E\+D\+\_\+\+I\+N\+F\+E\+A\+S\+I\+B\+I\+L\+I\+TY ~\newline
+ R\+E\+T\+\_\+\+H\+O\+T\+S\+T\+A\+R\+T\+\_\+\+S\+T\+O\+P\+P\+E\+D\+\_\+\+U\+N\+B\+O\+U\+N\+D\+E\+D\+N\+E\+SS ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+\_\+\+A\+U\+X\+I\+L\+I\+A\+R\+Y\+Q\+P\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em g\+\_\+new} & Gradient of neighbouring QP to be solved. \\
+\hline
+{\em lb\+\_\+new} & Lower bounds of neighbouring QP to be solved. ~\newline
+ If no lower bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em ub\+\_\+new} & Upper bounds of neighbouring QP to be solved. ~\newline
+ If no upper bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em n\+W\+SR} & Input\+: Maximum number of working set recalculations; ~\newline
+ Output\+: Number of performed working set recalculations. \\
+\hline
+{\em cputime} & Input\+: Maximum C\+PU time allowed for QP solution. ~\newline
+ Output\+: C\+PU time spent for QP solution (or to perform n\+W\+SR iterations). \\
+\hline
+{\em guessed\+Bounds} & Optimal working set of bounds for solution (x\+Opt,y\+Opt). ~\newline
+ (If a null pointer is passed, the previous working set is kept!) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_ac9305bb855858f9f6e1ff7c15ff39204}\label{class_q_problem_b_ac9305bb855858f9f6e1ff7c15ff39204}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!hotstart@{hotstart}}
+\index{hotstart@{hotstart}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{hotstart()}{hotstart()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::hotstart (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{g\+\_\+file,  }\item[{const char $\ast$const}]{lb\+\_\+file,  }\item[{const char $\ast$const}]{ub\+\_\+file,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&}]{n\+W\+SR,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{cputime = {\ttfamily 0},  }\item[{const \hyperlink{class_bounds}{Bounds} $\ast$const}]{guessed\+Bounds = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Solves an initialised QP sequence using the online active set strategy, where QP data is read from files. By default, QP solution is started from previous solution. If a guess for the working set is provided, an initialised homotopy is performed.
+
+Note\+: This function internally calls solve\+Q\+P/solve\+Regularised\+QP for solving an initialised Q\+P!
+
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+M\+A\+X\+\_\+\+N\+W\+S\+R\+\_\+\+R\+E\+A\+C\+H\+ED ~\newline
+ R\+E\+T\+\_\+\+H\+O\+T\+S\+T\+A\+R\+T\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+A\+S\+\_\+\+Q\+P\+\_\+\+N\+O\+T\+\_\+\+I\+N\+I\+T\+I\+A\+L\+I\+S\+ED ~\newline
+ R\+E\+T\+\_\+\+H\+O\+T\+S\+T\+A\+R\+T\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+S\+H\+I\+F\+T\+\_\+\+D\+E\+T\+E\+R\+M\+I\+N\+A\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+S\+T\+E\+P\+D\+I\+R\+E\+C\+T\+I\+O\+N\+\_\+\+D\+E\+T\+E\+R\+M\+I\+N\+A\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+S\+T\+E\+P\+L\+E\+N\+G\+T\+H\+\_\+\+D\+E\+T\+E\+R\+M\+I\+N\+A\+T\+I\+O\+N\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+H\+O\+M\+O\+T\+O\+P\+Y\+\_\+\+S\+T\+E\+P\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+H\+O\+T\+S\+T\+A\+R\+T\+\_\+\+S\+T\+O\+P\+P\+E\+D\+\_\+\+I\+N\+F\+E\+A\+S\+I\+B\+I\+L\+I\+TY ~\newline
+ R\+E\+T\+\_\+\+H\+O\+T\+S\+T\+A\+R\+T\+\_\+\+S\+T\+O\+P\+P\+E\+D\+\_\+\+U\+N\+B\+O\+U\+N\+D\+E\+D\+N\+E\+SS ~\newline
+ R\+E\+T\+\_\+\+U\+N\+A\+B\+L\+E\+\_\+\+T\+O\+\_\+\+R\+E\+A\+D\+\_\+\+F\+I\+LE ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+\_\+\+A\+U\+X\+I\+L\+I\+A\+R\+Y\+Q\+P\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em g\+\_\+file} & Name of file where gradient, of neighbouring QP to be solved, is stored. \\
+\hline
+{\em lb\+\_\+file} & Name of file where lower bounds, of neighbouring QP to be solved, is stored. ~\newline
+ If no lower bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em ub\+\_\+file} & Name of file where upper bounds, of neighbouring QP to be solved, is stored. ~\newline
+ If no upper bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em n\+W\+SR} & Input\+: Maximum number of working set recalculations; ~\newline
+ Output\+: Number of performed working set recalculations. \\
+\hline
+{\em cputime} & Input\+: Maximum C\+PU time allowed for QP solution. ~\newline
+ Output\+: C\+PU time spent for QP solution (or to perform n\+W\+SR iterations). \\
+\hline
+{\em guessed\+Bounds} & Optimal working set of bounds for solution (x\+Opt,y\+Opt). ~\newline
+ (If a null pointer is passed, the previous working set is kept!) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_ac64a41e4a05fe92f4786ac3eebdf0d0e}\label{class_q_problem_b_ac64a41e4a05fe92f4786ac3eebdf0d0e}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!init@{init}}
+\index{init@{init}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::init (\begin{DoxyParamCaption}\item[{\hyperlink{class_symmetric_matrix}{Symmetric\+Matrix} $\ast$}]{\+\_\+H,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+g,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+lb,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+ub,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&}]{n\+W\+SR,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{cputime = {\ttfamily 0},  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{x\+Opt = {\ttfamily 0},  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{y\+Opt = {\ttfamily 0},  }\item[{const \hyperlink{class_bounds}{Bounds} $\ast$const}]{guessed\+Bounds = {\ttfamily 0},  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+R = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Initialises a simply bounded QP problem with given QP data and tries to solve it using at most n\+W\+SR iterations. Depending on the parameter constellation it\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item 0, 0, 0 \+: starts with x\+Opt = 0, y\+Opt = 0 and gB empty (or all implicit equality bounds), ~\newline
+
+\item x\+Opt, 0, 0 \+: starts with x\+Opt, y\+Opt = 0 and obtain gB by \char`\"{}clipping\char`\"{}, ~\newline
+
+\item 0, y\+Opt, 0 \+: starts with x\+Opt = 0, y\+Opt and obtain gB from y\+Opt != 0, ~\newline
+
+\item 0, 0, gB\+: starts with x\+Opt = 0, y\+Opt = 0 and gB, ~\newline
+
+\item x\+Opt, y\+Opt, 0 \+: starts with x\+Opt, y\+Opt and obtain gB from y\+Opt != 0, ~\newline
+
+\item x\+Opt, 0, gB\+: starts with x\+Opt, y\+Opt = 0 and gB, ~\newline
+
+\item x\+Opt, y\+Opt, gB\+: starts with x\+Opt, y\+Opt and gB (assume them to be consistent!)
+\end{DoxyEnumerate}
+
+Note\+: This function internally calls solve\+Initial\+QP for initialisation!
+
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+C\+H\+O\+L\+E\+S\+KY ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+H\+O\+T\+S\+T\+A\+RT ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+I\+N\+F\+E\+A\+S\+I\+B\+I\+L\+I\+TY ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+U\+N\+B\+O\+U\+N\+D\+E\+D\+N\+E\+SS ~\newline
+ R\+E\+T\+\_\+\+M\+A\+X\+\_\+\+N\+W\+S\+R\+\_\+\+R\+E\+A\+C\+H\+ED ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+H} & Hessian matrix (a shallow copy is made). \\
+\hline
+{\em \+\_\+g} & Gradient vector. \\
+\hline
+{\em \+\_\+lb} & Lower bounds (on variables). ~\newline
+ If no lower bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em \+\_\+ub} & Upper bounds (on variables). ~\newline
+ If no upper bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em n\+W\+SR} & Input\+: Maximum number of working set recalculations when using initial homotopy. ~\newline
+ Output\+: Number of performed working set recalculations. \\
+\hline
+{\em cputime} & Input\+: Maximum C\+PU time allowed for QP initialisation. ~\newline
+ Output\+: C\+PU time spent for QP initialisation (if pointer passed). \\
+\hline
+{\em x\+Opt} & Optimal primal solution vector. A N\+U\+LL pointer can be passed. ~\newline
+ (If a null pointer is passed, the old primal solution is kept!) \\
+\hline
+{\em y\+Opt} & Optimal dual solution vector. A N\+U\+LL pointer can be passed. ~\newline
+ (If a null pointer is passed, the old dual solution is kept!) \\
+\hline
+{\em guessed\+Bounds} & Optimal working set of bounds for solution (x\+Opt,y\+Opt). ~\newline
+ (If a null pointer is passed, all bounds are assumed inactive!) \\
+\hline
+{\em \+\_\+R} & Pre-\/computed (upper triangular) Cholesky factor of Hessian matrix. The Cholesky factor must be stored in a real\+\_\+t array of size n\+V$\ast$nV in row-\/major format. Note\+: Only used if x\+Opt/y\+Opt and gB are N\+U\+L\+L! ~\newline
+ (If a null pointer is passed, Cholesky decomposition is computed internally!) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a3c871cf31cc19a045127e982ddd27e8d}\label{class_q_problem_b_a3c871cf31cc19a045127e982ddd27e8d}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!init@{init}}
+\index{init@{init}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::init (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+H,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+g,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+lb,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+ub,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&}]{n\+W\+SR,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{cputime = {\ttfamily 0},  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{x\+Opt = {\ttfamily 0},  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{y\+Opt = {\ttfamily 0},  }\item[{const \hyperlink{class_bounds}{Bounds} $\ast$const}]{guessed\+Bounds = {\ttfamily 0},  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+R = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Initialises a simply bounded QP problem with given QP data and tries to solve it using at most n\+W\+SR iterations. Depending on the parameter constellation it\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item 0, 0, 0 \+: starts with x\+Opt = 0, y\+Opt = 0 and gB empty (or all implicit equality bounds), ~\newline
+
+\item x\+Opt, 0, 0 \+: starts with x\+Opt, y\+Opt = 0 and obtain gB by \char`\"{}clipping\char`\"{}, ~\newline
+
+\item 0, y\+Opt, 0 \+: starts with x\+Opt = 0, y\+Opt and obtain gB from y\+Opt != 0, ~\newline
+
+\item 0, 0, gB\+: starts with x\+Opt = 0, y\+Opt = 0 and gB, ~\newline
+
+\item x\+Opt, y\+Opt, 0 \+: starts with x\+Opt, y\+Opt and obtain gB from y\+Opt != 0, ~\newline
+
+\item x\+Opt, 0, gB\+: starts with x\+Opt, y\+Opt = 0 and gB, ~\newline
+
+\item x\+Opt, y\+Opt, gB\+: starts with x\+Opt, y\+Opt and gB (assume them to be consistent!)
+\end{DoxyEnumerate}
+
+Note\+: This function internally calls solve\+Initial\+QP for initialisation!
+
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+C\+H\+O\+L\+E\+S\+KY ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+H\+O\+T\+S\+T\+A\+RT ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+I\+N\+F\+E\+A\+S\+I\+B\+I\+L\+I\+TY ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+U\+N\+B\+O\+U\+N\+D\+E\+D\+N\+E\+SS ~\newline
+ R\+E\+T\+\_\+\+M\+A\+X\+\_\+\+N\+W\+S\+R\+\_\+\+R\+E\+A\+C\+H\+ED ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+H} & Hessian matrix (a shallow copy is made). ~\newline
+ If Hessian matrix is trivial, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em \+\_\+g} & Gradient vector. \\
+\hline
+{\em \+\_\+lb} & Lower bounds (on variables). ~\newline
+ If no lower bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em \+\_\+ub} & Upper bounds (on variables). ~\newline
+ If no upper bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em n\+W\+SR} & Input\+: Maximum number of working set recalculations when using initial homotopy. ~\newline
+ Output\+: Number of performed working set recalculations. \\
+\hline
+{\em cputime} & Input\+: Maximum C\+PU time allowed for QP initialisation. ~\newline
+ Output\+: C\+PU time spent for QP initialisation (if pointer passed). \\
+\hline
+{\em x\+Opt} & Optimal primal solution vector. A N\+U\+LL pointer can be passed. ~\newline
+ (If a null pointer is passed, the old primal solution is kept!) \\
+\hline
+{\em y\+Opt} & Optimal dual solution vector. A N\+U\+LL pointer can be passed. ~\newline
+ (If a null pointer is passed, the old dual solution is kept!) \\
+\hline
+{\em guessed\+Bounds} & Optimal working set of bounds for solution (x\+Opt,y\+Opt). ~\newline
+ (If a null pointer is passed, all bounds are assumed inactive!) \\
+\hline
+{\em \+\_\+R} & Pre-\/computed (upper triangular) Cholesky factor of Hessian matrix. The Cholesky factor must be stored in a real\+\_\+t array of size n\+V$\ast$nV in row-\/major format. Note\+: Only used if x\+Opt/y\+Opt and gB are N\+U\+L\+L! ~\newline
+ (If a null pointer is passed, Cholesky decomposition is computed internally!) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_ae7d6f54bb9c8198c7a592ad8ca416299}\label{class_q_problem_b_ae7d6f54bb9c8198c7a592ad8ca416299}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!init@{init}}
+\index{init@{init}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{init()}{init()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::init (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{H\+\_\+file,  }\item[{const char $\ast$const}]{g\+\_\+file,  }\item[{const char $\ast$const}]{lb\+\_\+file,  }\item[{const char $\ast$const}]{ub\+\_\+file,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&}]{n\+W\+SR,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{cputime = {\ttfamily 0},  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{x\+Opt = {\ttfamily 0},  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{y\+Opt = {\ttfamily 0},  }\item[{const \hyperlink{class_bounds}{Bounds} $\ast$const}]{guessed\+Bounds = {\ttfamily 0},  }\item[{const char $\ast$const}]{R\+\_\+file = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Initialises a simply bounded QP problem with given QP data to be read from files and solves it using at most n\+W\+SR iterations. Depending on the parameter constellation it\+: ~\newline
+
+\begin{DoxyEnumerate}
+\item 0, 0, 0 \+: starts with x\+Opt = 0, y\+Opt = 0 and gB empty (or all implicit equality bounds), ~\newline
+
+\item x\+Opt, 0, 0 \+: starts with x\+Opt, y\+Opt = 0 and obtain gB by \char`\"{}clipping\char`\"{}, ~\newline
+
+\item 0, y\+Opt, 0 \+: starts with x\+Opt = 0, y\+Opt and obtain gB from y\+Opt != 0, ~\newline
+
+\item 0, 0, gB\+: starts with x\+Opt = 0, y\+Opt = 0 and gB, ~\newline
+
+\item x\+Opt, y\+Opt, 0 \+: starts with x\+Opt, y\+Opt and obtain gB from y\+Opt != 0, ~\newline
+
+\item x\+Opt, 0, gB\+: starts with x\+Opt, y\+Opt = 0 and gB, ~\newline
+
+\item x\+Opt, y\+Opt, gB\+: starts with x\+Opt, y\+Opt and gB (assume them to be consistent!)
+\end{DoxyEnumerate}
+
+Note\+: This function internally calls solve\+Initial\+QP for initialisation!
+
+\begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+C\+H\+O\+L\+E\+S\+KY ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+H\+O\+T\+S\+T\+A\+RT ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+I\+N\+F\+E\+A\+S\+I\+B\+I\+L\+I\+TY ~\newline
+ R\+E\+T\+\_\+\+I\+N\+I\+T\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+U\+N\+B\+O\+U\+N\+D\+E\+D\+N\+E\+SS ~\newline
+ R\+E\+T\+\_\+\+M\+A\+X\+\_\+\+N\+W\+S\+R\+\_\+\+R\+E\+A\+C\+H\+ED ~\newline
+ R\+E\+T\+\_\+\+U\+N\+A\+B\+L\+E\+\_\+\+T\+O\+\_\+\+R\+E\+A\+D\+\_\+\+F\+I\+LE 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em H\+\_\+file} & Name of file where Hessian matrix is stored. ~\newline
+ If Hessian matrix is trivial, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em g\+\_\+file} & Name of file where gradient vector is stored. \\
+\hline
+{\em lb\+\_\+file} & Name of file where lower bound vector. ~\newline
+ If no lower bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em ub\+\_\+file} & Name of file where upper bound vector. ~\newline
+ If no upper bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em n\+W\+SR} & Input\+: Maximum number of working set recalculations when using initial homotopy. ~\newline
+ Output\+: Number of performed working set recalculations. \\
+\hline
+{\em cputime} & Input\+: Maximum C\+PU time allowed for QP initialisation. ~\newline
+ Output\+: C\+PU time spent for QP initialisation (if pointer passed). \\
+\hline
+{\em x\+Opt} & Optimal primal solution vector. A N\+U\+LL pointer can be passed. ~\newline
+ (If a null pointer is passed, the old primal solution is kept!) \\
+\hline
+{\em y\+Opt} & Optimal dual solution vector. A N\+U\+LL pointer can be passed. ~\newline
+ (If a null pointer is passed, the old dual solution is kept!) \\
+\hline
+{\em guessed\+Bounds} & Optimal working set of bounds for solution (x\+Opt,y\+Opt). ~\newline
+ (If a null pointer is passed, all bounds are assumed inactive!) \\
+\hline
+{\em R\+\_\+file} & Name of the file where a pre-\/computed (upper triangular) Cholesky factor of the Hessian matrix is stored. ~\newline
+ (If a null pointer is passed, Cholesky decomposition is computed internally!) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a450cd965f2fe9b98ff8bb196a4dd8892}\label{class_q_problem_b_a450cd965f2fe9b98ff8bb196a4dd8892}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!is\+Blocking@{is\+Blocking}}
+\index{is\+Blocking@{is\+Blocking}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{is\+Blocking()}{isBlocking()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Q\+Problem\+B\+::is\+Blocking (\begin{DoxyParamCaption}\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{num,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{den,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{eps\+Num,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{eps\+Den,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&}]{t }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Checks whether given ratio is blocking, i.\+e. limits the maximum step length along the homotopy path to a value lower than given one. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em num} & Numerator for performing the ratio test. \\
+\hline
+{\em den} & Denominator for performing the ratio test. \\
+\hline
+{\em eps\+Num} & Numerator tolerance. \\
+\hline
+{\em eps\+Den} & Denominator tolerance. \\
+\hline
+{\em t} & Input\+: Current maximum step length along the homotopy path, Output\+: Updated maximum possible step length along the homotopy path. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a3d6d1ee2af466d9366ecd58444bff94d}\label{class_q_problem_b_a3d6d1ee2af466d9366ecd58444bff94d}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!is\+C\+P\+Utime\+Limit\+Exceeded@{is\+C\+P\+Utime\+Limit\+Exceeded}}
+\index{is\+C\+P\+Utime\+Limit\+Exceeded@{is\+C\+P\+Utime\+Limit\+Exceeded}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{is\+C\+P\+Utime\+Limit\+Exceeded()}{isCPUtimeLimitExceeded()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Q\+Problem\+B\+::is\+C\+P\+Utime\+Limit\+Exceeded (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{cputime,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{starttime,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{n\+W\+SR }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Determines if next QP iteration can be performed within given C\+PU time limit. \begin{DoxyReturn}{Returns}
+B\+T\+\_\+\+T\+R\+UE\+: C\+PU time limit is exceeded, stop QP solution. ~\newline
+ B\+T\+\_\+\+F\+A\+L\+SE\+: Sufficient C\+PU time for next QP iteration. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em cputime} & Maximum C\+PU time allowed for QP solution. \\
+\hline
+{\em starttime} & Start time of current QP solution. \\
+\hline
+{\em n\+W\+SR} & Number of working set recalculations performed so far. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a2a69e2654a4275e50c2e959f19de7ce3}\label{class_q_problem_b_a2a69e2654a4275e50c2e959f19de7ce3}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!is\+Infeasible@{is\+Infeasible}}
+\index{is\+Infeasible@{is\+Infeasible}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{is\+Infeasible()}{isInfeasible()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Q\+Problem\+B\+::is\+Infeasible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns if the QP is infeasible. \begin{DoxyReturn}{Returns}
+B\+T\+\_\+\+T\+R\+UE\+: QP infeasible ~\newline
+ B\+T\+\_\+\+F\+A\+L\+SE\+: QP feasible (or not known to be infeasible!) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_ada1bc8c33c22ccc4ce6b9ca681098e44}\label{class_q_problem_b_ada1bc8c33c22ccc4ce6b9ca681098e44}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!is\+Initialised@{is\+Initialised}}
+\index{is\+Initialised@{is\+Initialised}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{is\+Initialised()}{isInitialised()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Q\+Problem\+B\+::is\+Initialised (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns if the \hyperlink{class_q_problem}{Q\+Problem} object is initialised. \begin{DoxyReturn}{Returns}
+B\+T\+\_\+\+T\+R\+UE\+: \hyperlink{class_q_problem_b}{Q\+ProblemB} initialised ~\newline
+ B\+T\+\_\+\+F\+A\+L\+SE\+: \hyperlink{class_q_problem_b}{Q\+ProblemB} not initialised 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a5c7b1368dde6de4c7c5858c400782044}\label{class_q_problem_b_a5c7b1368dde6de4c7c5858c400782044}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!is\+Solved@{is\+Solved}}
+\index{is\+Solved@{is\+Solved}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{is\+Solved()}{isSolved()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Q\+Problem\+B\+::is\+Solved (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns if the QP has been solved. \begin{DoxyReturn}{Returns}
+B\+T\+\_\+\+T\+R\+UE\+: \hyperlink{class_q_problem_b}{Q\+ProblemB} solved ~\newline
+ B\+T\+\_\+\+F\+A\+L\+SE\+: \hyperlink{class_q_problem_b}{Q\+ProblemB} not solved 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a869703c445e0eb4a324da44479c2d67f}\label{class_q_problem_b_a869703c445e0eb4a324da44479c2d67f}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!is\+Unbounded@{is\+Unbounded}}
+\index{is\+Unbounded@{is\+Unbounded}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{is\+Unbounded()}{isUnbounded()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Q\+Problem\+B\+::is\+Unbounded (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns if the QP is unbounded. \begin{DoxyReturn}{Returns}
+B\+T\+\_\+\+T\+R\+UE\+: QP unbounded ~\newline
+ B\+T\+\_\+\+F\+A\+L\+SE\+: QP unbounded (or not known to be unbounded!) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a50f4ae650239798b58979714bb35e51a}\label{class_q_problem_b_a50f4ae650239798b58979714bb35e51a}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!load\+Q\+Pvectors\+From\+File@{load\+Q\+Pvectors\+From\+File}}
+\index{load\+Q\+Pvectors\+From\+File@{load\+Q\+Pvectors\+From\+File}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{load\+Q\+Pvectors\+From\+File()}{loadQPvectorsFromFile()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::load\+Q\+Pvectors\+From\+File (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{g\+\_\+file,  }\item[{const char $\ast$const}]{lb\+\_\+file,  }\item[{const char $\ast$const}]{ub\+\_\+file,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{g\+\_\+new,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{lb\+\_\+new,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{ub\+\_\+new }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Loads new QP vectors from files (internal members are not affected!). \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+U\+N\+A\+B\+L\+E\+\_\+\+T\+O\+\_\+\+O\+P\+E\+N\+\_\+\+F\+I\+LE ~\newline
+ R\+E\+T\+\_\+\+U\+N\+A\+B\+L\+E\+\_\+\+T\+O\+\_\+\+R\+E\+A\+D\+\_\+\+F\+I\+LE ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em g\+\_\+file} & Name of file where gradient, of neighbouring QP to be solved, is stored. \\
+\hline
+{\em lb\+\_\+file} & Name of file where lower bounds, of neighbouring QP to be solved, is stored. ~\newline
+ If no lower bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em ub\+\_\+file} & Name of file where upper bounds, of neighbouring QP to be solved, is stored. ~\newline
+ If no upper bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em g\+\_\+new} & Output\+: Gradient of neighbouring QP to be solved. \\
+\hline
+{\em lb\+\_\+new} & Output\+: Lower bounds of neighbouring QP to be solved \\
+\hline
+{\em ub\+\_\+new} & Output\+: Upper bounds of neighbouring QP to be solved \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_aab3ae0a0bfec358313752467edbbb34f}\label{class_q_problem_b_aab3ae0a0bfec358313752467edbbb34f}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!obtain\+Auxiliary\+Working\+Set@{obtain\+Auxiliary\+Working\+Set}}
+\index{obtain\+Auxiliary\+Working\+Set@{obtain\+Auxiliary\+Working\+Set}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{obtain\+Auxiliary\+Working\+Set()}{obtainAuxiliaryWorkingSet()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::obtain\+Auxiliary\+Working\+Set (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{x\+Opt,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{y\+Opt,  }\item[{const \hyperlink{class_bounds}{Bounds} $\ast$const}]{guessed\+Bounds,  }\item[{\hyperlink{class_bounds}{Bounds} $\ast$}]{auxiliary\+Bounds }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Obtains the desired working set for the auxiliary initial QP in accordance with the user specifications \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+O\+B\+T\+A\+I\+N\+I\+N\+G\+\_\+\+W\+O\+R\+K\+I\+N\+G\+S\+E\+T\+\_\+\+F\+A\+I\+L\+ED ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Opt} & Optimal primal solution vector. If a N\+U\+LL pointer is passed, all entries are assumed to be zero. \\
+\hline
+{\em y\+Opt} & Optimal dual solution vector. If a N\+U\+LL pointer is passed, all entries are assumed to be zero. \\
+\hline
+{\em guessed\+Bounds} & Guessed working set for solution (x\+Opt,y\+Opt). \\
+\hline
+{\em auxiliary\+Bounds} & Input\+: Allocated bound object. ~\newline
+ Output\+: Working set for auxiliary QP. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_aefdce5618a0c88d7677b5783b6e40578}\label{class_q_problem_b_aefdce5618a0c88d7677b5783b6e40578}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!operator=@{operator=}}
+\index{operator=@{operator=}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_q_problem_b}{Q\+ProblemB} \& Q\+Problem\+B\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_q_problem_b}{Q\+ProblemB} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Assignment operator (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_aebf3301bb4f788933905b42341cdfa37}\label{class_q_problem_b_aebf3301bb4f788933905b42341cdfa37}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!perform\+Ramping@{perform\+Ramping}}
+\index{perform\+Ramping@{perform\+Ramping}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{perform\+Ramping()}{performRamping()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::perform\+Ramping (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Ramping Strategy to avoid ties. Modifies homotopy start without changing current active set. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_q_problem_a1905b766c096a2dded5927a9e9824b65}{Q\+Problem}.
+
+\mbox{\Hypertarget{class_q_problem_b_a80ddd094317095df66a192e67273e049}\label{class_q_problem_b_a80ddd094317095df66a192e67273e049}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!perform\+Ratio\+Test@{perform\+Ratio\+Test}}
+\index{perform\+Ratio\+Test@{perform\+Ratio\+Test}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{perform\+Ratio\+Test()}{performRatioTest()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::perform\+Ratio\+Test (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{n\+Idx,  }\item[{const \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$const}]{idx\+List,  }\item[{const \hyperlink{class_subject_to}{Subject\+To} $\ast$const}]{subject\+To,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{num,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{den,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{eps\+Num,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{eps\+Den,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} \&}]{t,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \&}]{B\+C\+\_\+idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Performs robustified ratio test yield the maximum possible step length along the homotopy path. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Idx} & Number of ratios to be checked. \\
+\hline
+{\em idx\+List} & Array containing the indices of all ratios to be checked. \\
+\hline
+{\em subject\+To} & Bound/\+Constraint object corresponding to ratios to be checked. \\
+\hline
+{\em num} & Array containing all numerators for performing the ratio test. \\
+\hline
+{\em den} & Array containing all denominators for performing the ratio test. \\
+\hline
+{\em eps\+Num} & Numerator tolerance. \\
+\hline
+{\em eps\+Den} & Denominator tolerance. \\
+\hline
+{\em t} & Output\+: Maximum possible step length along the homotopy path. \\
+\hline
+{\em B\+C\+\_\+idx} & Output\+: Index of blocking constraint. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_ab529435b82c728105652321a0a2d054a}\label{class_q_problem_b_ab529435b82c728105652321a0a2d054a}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!print\+Options@{print\+Options}}
+\index{print\+Options@{print\+Options}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{print\+Options()}{printOptions()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::print\+Options (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Prints a list of all options and their current values. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a587077ee58951d181f89674fd9c15f7b}\label{class_q_problem_b_a587077ee58951d181f89674fd9c15f7b}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!print\+Properties@{print\+Properties}}
+\index{print\+Properties@{print\+Properties}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{print\+Properties()}{printProperties()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::print\+Properties (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Prints concise list of properties of the current QP. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_q_problem_a589e2b01326f871820f24d47fa4372e8}{Q\+Problem}.
+
+\mbox{\Hypertarget{class_q_problem_b_a8377ea426acc7a7b78a0c78944ded1b4}\label{class_q_problem_b_a8377ea426acc7a7b78a0c78944ded1b4}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!regularise\+Hessian@{regularise\+Hessian}}
+\index{regularise\+Hessian@{regularise\+Hessian}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{regularise\+Hessian()}{regulariseHessian()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::regularise\+Hessian (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Regularise Hessian matrix by adding a scaled identity matrix to it. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+H\+E\+S\+S\+I\+A\+N\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+R\+E\+G\+U\+L\+A\+R\+I\+S\+ED 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a975c13e1a8fbe8c3e9c4dfbce9dc9a71}\label{class_q_problem_b_a975c13e1a8fbe8c3e9c4dfbce9dc9a71}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!reset@{reset}}
+\index{reset@{reset}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Clears all data structures of \hyperlink{class_q_problem_b}{Q\+ProblemB} except for QP data. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+R\+E\+S\+E\+T\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_q_problem_a2f752d39b6935d929b963363a314b6bd}{Q\+Problem}, and \hyperlink{class_s_q_problem_schur_afe4cfa0c10427b11515ec5a96f883284}{S\+Q\+Problem\+Schur}.
+
+\mbox{\Hypertarget{class_q_problem_b_a29492d7ab426c13e0f6fa3b09de2476e}\label{class_q_problem_b_a29492d7ab426c13e0f6fa3b09de2476e}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!reset\+Counter@{reset\+Counter}}
+\index{reset\+Counter@{reset\+Counter}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{reset\+Counter()}{resetCounter()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::reset\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Resets QP problem counter (to zero). \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_q_problem_b_a4a907eb6c1a6ead3bf13335ce71ba069}\label{class_q_problem_b_a4a907eb6c1a6ead3bf13335ce71ba069}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!setG@{setG}}
+\index{setG@{setG}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{set\+G()}{setG()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::setG (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{g\+\_\+new }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Changes gradient vector of the QP. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em g\+\_\+new} & New gradient vector (with correct dimension!). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_ac9ca851c00d04f7f052a306f0f9f74ce}\label{class_q_problem_b_ac9ca851c00d04f7f052a306f0f9f74ce}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!setH@{setH}}
+\index{setH@{setH}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{set\+H()}{setH()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::setH (\begin{DoxyParamCaption}\item[{\hyperlink{class_symmetric_matrix}{Symmetric\+Matrix} $\ast$}]{H\+\_\+new }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Sets Hessian matrix of the QP. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em H\+\_\+new} & New Hessian matrix (a shallow copy is made). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a5cb41e48d8508f561324a3b2c8155755}\label{class_q_problem_b_a5cb41e48d8508f561324a3b2c8155755}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!setH@{setH}}
+\index{setH@{setH}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{set\+H()}{setH()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::setH (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{H\+\_\+new }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Sets dense Hessian matrix of the QP. If a null pointer is passed and a) hessian\+Type is H\+S\+T\+\_\+\+I\+D\+E\+N\+T\+I\+TY, nothing is done, b) hessian\+Type is not H\+S\+T\+\_\+\+I\+D\+E\+N\+T\+I\+TY, Hessian matrix is set to zero. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em H\+\_\+new} & New dense Hessian matrix (with correct dimension!), a shallow copy is made. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a8ad9f3322852e355ac2dc4e549e495e9}\label{class_q_problem_b_a8ad9f3322852e355ac2dc4e549e495e9}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!set\+Hessian\+Type@{set\+Hessian\+Type}}
+\index{set\+Hessian\+Type@{set\+Hessian\+Type}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{set\+Hessian\+Type()}{setHessianType()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::set\+Hessian\+Type (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_a604cad5cda14e378ce4a77ab28ee9fd9}{Hessian\+Type}}]{\+\_\+hessian\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Changes the print level. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+hessian\+Type} & New Hessian type. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a07d0ca4a5fcac26c857f41154e4ff6e3}\label{class_q_problem_b_a07d0ca4a5fcac26c857f41154e4ff6e3}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!set\+Infeasibility\+Flag@{set\+Infeasibility\+Flag}}
+\index{set\+Infeasibility\+Flag@{set\+Infeasibility\+Flag}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{set\+Infeasibility\+Flag()}{setInfeasibilityFlag()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::set\+Infeasibility\+Flag (\begin{DoxyParamCaption}\item[{\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value}}]{returnvalue,  }\item[{\hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type}}]{do\+Throw\+Error = {\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089a85b8a20e72a8bea5dd10a6007fe3071e}{B\+T\+\_\+\+F\+A\+L\+SE}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sets internal infeasibility flag and throws given error in case the far bound strategy is not enabled (as QP might actually not be infeasible in this case). \begin{DoxyReturn}{Returns}
+R\+E\+T\+\_\+\+H\+O\+T\+S\+T\+A\+R\+T\+\_\+\+S\+T\+O\+P\+P\+E\+D\+\_\+\+I\+N\+F\+E\+A\+S\+I\+B\+I\+L\+I\+TY ~\newline
+ R\+E\+T\+\_\+\+E\+N\+S\+U\+R\+E\+L\+I\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+C\+Y\+C\+L\+I\+NG ~\newline
+ R\+E\+T\+\_\+\+E\+N\+S\+U\+R\+E\+L\+I\+\_\+\+F\+A\+I\+L\+E\+D\+\_\+\+N\+O\+I\+N\+D\+EX 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em returnvalue} & Returnvalue to be tunneled. \\
+\hline
+{\em do\+Throw\+Error} & Flag forcing to throw an error. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a7d3cb375ddce99f8728a9be54207d542}\label{class_q_problem_b_a7d3cb375ddce99f8728a9be54207d542}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!set\+LB@{set\+LB}}
+\index{set\+LB@{set\+LB}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{set\+L\+B()}{setLB()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::set\+LB (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{lb\+\_\+new }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Changes lower bound vector of the QP. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+Q\+P\+O\+B\+J\+E\+C\+T\+\_\+\+N\+O\+T\+\_\+\+S\+E\+T\+UP 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em lb\+\_\+new} & New lower bound vector (with correct dimension!). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a1e3a58f51f4ac880f2584580074b1608}\label{class_q_problem_b_a1e3a58f51f4ac880f2584580074b1608}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!set\+LB@{set\+LB}}
+\index{set\+LB@{set\+LB}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{set\+L\+B()}{setLB()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::set\+LB (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{number,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Changes single entry of lower bound vector of the QP. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+Q\+P\+O\+B\+J\+E\+C\+T\+\_\+\+N\+O\+T\+\_\+\+S\+E\+T\+UP ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+N\+DS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Number of entry to be changed. \\
+\hline
+{\em value} & New value for entry of lower bound vector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a5401e252d34757797ce3e913644e8b2c}\label{class_q_problem_b_a5401e252d34757797ce3e913644e8b2c}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!set\+Options@{set\+Options}}
+\index{set\+Options@{set\+Options}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{set\+Options()}{setOptions()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::set\+Options (\begin{DoxyParamCaption}\item[{const \hyperlink{class_options}{Options} \&}]{\+\_\+options }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Overrides current options with given ones. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+options} & New options. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a2be2208a1befa1f7fa03f3c11d91ae7b}\label{class_q_problem_b_a2be2208a1befa1f7fa03f3c11d91ae7b}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!set\+Print\+Level@{set\+Print\+Level}}
+\index{set\+Print\+Level@{set\+Print\+Level}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{set\+Print\+Level()}{setPrintLevel()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::set\+Print\+Level (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_a83ff212f474e3669d8fac2d727f65de5}{Print\+Level}}]{\+\_\+printlevel }\end{DoxyParamCaption})}
+
+Changes the print level. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+printlevel} & New print level. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a529829d8e9a31570bbf11c26d7c3525a}\label{class_q_problem_b_a529829d8e9a31570bbf11c26d7c3525a}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!set\+UB@{set\+UB}}
+\index{set\+UB@{set\+UB}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{set\+U\+B()}{setUB()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::set\+UB (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{ub\+\_\+new }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Changes upper bound vector of the QP. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+Q\+P\+O\+B\+J\+E\+C\+T\+\_\+\+N\+O\+T\+\_\+\+S\+E\+T\+UP 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em ub\+\_\+new} & New upper bound vector (with correct dimension!). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_ad60b2cfc86789f10e1d3cf70aae4977c}\label{class_q_problem_b_ad60b2cfc86789f10e1d3cf70aae4977c}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!set\+UB@{set\+UB}}
+\index{set\+UB@{set\+UB}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{set\+U\+B()}{setUB()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::set\+UB (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{number,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Changes single entry of upper bound vector of the QP. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+Q\+P\+O\+B\+J\+E\+C\+T\+\_\+\+N\+O\+T\+\_\+\+S\+E\+T\+UP ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+\_\+\+O\+U\+T\+\_\+\+O\+F\+\_\+\+B\+O\+U\+N\+DS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em number} & Number of entry to be changed. \\
+\hline
+{\em value} & New value for entry of upper bound vector. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_aa241e899e7019423ee5bba4edc1f4d23}\label{class_q_problem_b_aa241e899e7019423ee5bba4edc1f4d23}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!setup\+Auxiliary\+QP@{setup\+Auxiliary\+QP}}
+\index{setup\+Auxiliary\+QP@{setup\+Auxiliary\+QP}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{setup\+Auxiliary\+Q\+P()}{setupAuxiliaryQP()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::setup\+Auxiliary\+QP (\begin{DoxyParamCaption}\item[{const \hyperlink{class_bounds}{Bounds} $\ast$const}]{guessed\+Bounds }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Updates QP vectors, working sets and internal data structures in order to start from an optimal solution corresponding to initial guesses of the working set for bounds \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+\_\+\+A\+U\+X\+I\+L\+I\+A\+R\+Y\+Q\+P\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em guessed\+Bounds} & Initial guess for working set of bounds. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_afe7b38887f4823cecc668b99299d145b}\label{class_q_problem_b_afe7b38887f4823cecc668b99299d145b}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!setup\+Initial\+Cholesky@{setup\+Initial\+Cholesky}}
+\index{setup\+Initial\+Cholesky@{setup\+Initial\+Cholesky}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{setup\+Initial\+Cholesky()}{setupInitialCholesky()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::setup\+Initial\+Cholesky (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Computes initial Cholesky decomposition of the (simply projected) Hessian making use of the function \hyperlink{class_q_problem_b_a5f9fa59b80f990a897ba783e89dd03d3}{compute\+Cholesky()}. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+H\+E\+S\+S\+I\+A\+N\+\_\+\+N\+O\+T\+\_\+\+S\+PD ~\newline
+ R\+E\+T\+\_\+\+I\+N\+D\+E\+X\+L\+I\+S\+T\+\_\+\+C\+O\+R\+R\+U\+P\+T\+ED 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_q_problem_acb3d279975d00e5e459af3a7bb056658}{Q\+Problem}.
+
+\mbox{\Hypertarget{class_q_problem_b_ab785215eb0f10994203a19632b715212}\label{class_q_problem_b_ab785215eb0f10994203a19632b715212}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!setup\+Q\+Pdata@{setup\+Q\+Pdata}}
+\index{setup\+Q\+Pdata@{setup\+Q\+Pdata}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{setup\+Q\+Pdata()}{setupQPdata()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::setup\+Q\+Pdata (\begin{DoxyParamCaption}\item[{\hyperlink{class_symmetric_matrix}{Symmetric\+Matrix} $\ast$}]{\+\_\+H,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+g,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+lb,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+ub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sets up internal QP data. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+H} & Hessian matrix. \\
+\hline
+{\em \+\_\+g} & Gradient vector. \\
+\hline
+{\em \+\_\+lb} & Lower bounds (on variables). ~\newline
+ If no lower bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em \+\_\+ub} & Upper bounds (on variables). ~\newline
+ If no upper bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a8c54c1a5fdbf94bba199e50a63ae06ce}\label{class_q_problem_b_a8c54c1a5fdbf94bba199e50a63ae06ce}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!setup\+Q\+Pdata@{setup\+Q\+Pdata}}
+\index{setup\+Q\+Pdata@{setup\+Q\+Pdata}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{setup\+Q\+Pdata()}{setupQPdata()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::setup\+Q\+Pdata (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+H,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+g,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+lb,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{\+\_\+ub }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sets up internal QP data. If the current Hessian is trivial (i.\+e. H\+S\+T\+\_\+\+Z\+E\+RO or H\+S\+T\+\_\+\+I\+D\+E\+N\+T\+I\+TY) but a non-\/trivial one is given, memory for Hessian is allocated and it is set to the given one. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS ~\newline
+ R\+E\+T\+\_\+\+N\+O\+\_\+\+H\+E\+S\+S\+I\+A\+N\+\_\+\+S\+P\+E\+C\+I\+F\+I\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+H} & Hessian matrix. ~\newline
+ If Hessian matrix is trivial,a N\+U\+LL pointer can be passed. \\
+\hline
+{\em \+\_\+g} & Gradient vector. \\
+\hline
+{\em \+\_\+lb} & Lower bounds (on variables). ~\newline
+ If no lower bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em \+\_\+ub} & Upper bounds (on variables). ~\newline
+ If no upper bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a6ea1dcb60fb520c18f1612b944875160}\label{class_q_problem_b_a6ea1dcb60fb520c18f1612b944875160}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!setup\+Q\+Pdata\+From\+File@{setup\+Q\+Pdata\+From\+File}}
+\index{setup\+Q\+Pdata\+From\+File@{setup\+Q\+Pdata\+From\+File}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{setup\+Q\+Pdata\+From\+File()}{setupQPdataFromFile()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::setup\+Q\+Pdata\+From\+File (\begin{DoxyParamCaption}\item[{const char $\ast$const}]{H\+\_\+file,  }\item[{const char $\ast$const}]{g\+\_\+file,  }\item[{const char $\ast$const}]{lb\+\_\+file,  }\item[{const char $\ast$const}]{ub\+\_\+file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Sets up internal QP data by loading it from files. If the current Hessian is trivial (i.\+e. H\+S\+T\+\_\+\+Z\+E\+RO or H\+S\+T\+\_\+\+I\+D\+E\+N\+T\+I\+TY) but a non-\/trivial one is given, memory for Hessian is allocated and it is set to the given one. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+U\+N\+A\+B\+L\+E\+\_\+\+T\+O\+\_\+\+O\+P\+E\+N\+\_\+\+F\+I\+LE ~\newline
+ R\+E\+T\+\_\+\+U\+N\+A\+B\+L\+E\+\_\+\+T\+O\+\_\+\+R\+E\+A\+D\+\_\+\+F\+I\+LE ~\newline
+ R\+E\+T\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS ~\newline
+ R\+E\+T\+\_\+\+N\+O\+\_\+\+H\+E\+S\+S\+I\+A\+N\+\_\+\+S\+P\+E\+C\+I\+F\+I\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em H\+\_\+file} & Name of file where Hessian matrix, of neighbouring QP to be solved, is stored. ~\newline
+ If Hessian matrix is trivial,a N\+U\+LL pointer can be passed. \\
+\hline
+{\em g\+\_\+file} & Name of file where gradient, of neighbouring QP to be solved, is stored. \\
+\hline
+{\em lb\+\_\+file} & Name of file where lower bounds, of neighbouring QP to be solved, is stored. ~\newline
+ If no lower bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+{\em ub\+\_\+file} & Name of file where upper bounds, of neighbouring QP to be solved, is stored. ~\newline
+ If no upper bounds exist, a N\+U\+LL pointer can be passed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a4aa7da7c8454c0e53e65f923cd5c6e21}\label{class_q_problem_b_a4aa7da7c8454c0e53e65f923cd5c6e21}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!setup\+Subject\+To\+Type@{setup\+Subject\+To\+Type}}
+\index{setup\+Subject\+To\+Type@{setup\+Subject\+To\+Type}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{setup\+Subject\+To\+Type()}{setupSubjectToType()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::setup\+Subject\+To\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Determines type of existing constraints and bounds (i.\+e. implicitly fixed, unbounded etc.). \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+S\+U\+B\+J\+E\+C\+T\+T\+O\+T\+Y\+P\+E\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+
+
+Reimplemented in \hyperlink{class_q_problem_af024ebec53f988671f24ee98e71394a1}{Q\+Problem}.
+
+\mbox{\Hypertarget{class_q_problem_b_a9b170181bd826023ce43c3df3ff463e7}\label{class_q_problem_b_a9b170181bd826023ce43c3df3ff463e7}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!setup\+Subject\+To\+Type@{setup\+Subject\+To\+Type}}
+\index{setup\+Subject\+To\+Type@{setup\+Subject\+To\+Type}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{setup\+Subject\+To\+Type()}{setupSubjectToType()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::setup\+Subject\+To\+Type (\begin{DoxyParamCaption}\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{lb\+\_\+new,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{ub\+\_\+new }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Determines type of new constraints and bounds (i.\+e. implicitly fixed, unbounded etc.). \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN ~\newline
+ R\+E\+T\+\_\+\+S\+E\+T\+U\+P\+S\+U\+B\+J\+E\+C\+T\+T\+O\+T\+Y\+P\+E\+\_\+\+F\+A\+I\+L\+ED 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em lb\+\_\+new} & New lower bounds. \\
+\hline
+{\em ub\+\_\+new} & New upper bounds. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_a5f878629b9339dc4a319044a27f3cdcc}\label{class_q_problem_b_a5f878629b9339dc4a319044a27f3cdcc}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!update\+Far\+Bounds@{update\+Far\+Bounds}}
+\index{update\+Far\+Bounds@{update\+Far\+Bounds}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{update\+Far\+Bounds()}{updateFarBounds()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Q\+Problem\+B\+::update\+Far\+Bounds (\begin{DoxyParamCaption}\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}}]{cur\+Far\+Bound,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{n\+Ramp,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{lb\+\_\+new,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{lb\+\_\+new\+\_\+far,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{ub\+\_\+new,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{ub\+\_\+new\+\_\+far }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+... 
+\begin{DoxyParams}{Parameters}
+{\em cur\+Far\+Bound} & ... \\
+\hline
+{\em n\+Ramp} & ... \\
+\hline
+{\em lb\+\_\+new} & ... \\
+\hline
+{\em lb\+\_\+new\+\_\+far} & ... \\
+\hline
+{\em ub\+\_\+new} & ... \\
+\hline
+{\em ub\+\_\+new\+\_\+far} & ... \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_q_problem_b_abaf8197d399cfd636513ae65225c0068}\label{class_q_problem_b_abaf8197d399cfd636513ae65225c0068}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!using\+Regularisation@{using\+Regularisation}}
+\index{using\+Regularisation@{using\+Regularisation}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{using\+Regularisation()}{usingRegularisation()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Q\+Problem\+B\+::using\+Regularisation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns if the QP has been internally regularised. \begin{DoxyReturn}{Returns}
+B\+T\+\_\+\+T\+R\+UE\+: Hessian is internally regularised for QP solution ~\newline
+ B\+T\+\_\+\+F\+A\+L\+SE\+: No internal Hessian regularisation is used for QP solution 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_q_problem_b_af0822225676e7ca195a0724a8841c4d9}\label{class_q_problem_b_af0822225676e7ca195a0724a8841c4d9}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!bounds@{bounds}}
+\index{bounds@{bounds}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{bounds}{bounds}}
+{\footnotesize\ttfamily \hyperlink{class_bounds}{Bounds} Q\+Problem\+B\+::bounds\hspace{0.3cm}{\ttfamily [protected]}}
+
+Data structure for problem\textquotesingle{}s bounds. \mbox{\Hypertarget{class_q_problem_b_a4d259bca2027133955de304eac49054b}\label{class_q_problem_b_a4d259bca2027133955de304eac49054b}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!count@{count}}
+\index{count@{count}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily uint\+\_\+t Q\+Problem\+B\+::count\hspace{0.3cm}{\ttfamily [protected]}}
+
+Counts the number of hotstart function calls. \mbox{\Hypertarget{class_q_problem_b_a06e401f5f0d6f9a9ce2caa81dc5d85b6}\label{class_q_problem_b_a06e401f5f0d6f9a9ce2caa81dc5d85b6}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!delta\+\_\+x\+F\+R\+\_\+\+T\+MP@{delta\+\_\+x\+F\+R\+\_\+\+T\+MP}}
+\index{delta\+\_\+x\+F\+R\+\_\+\+T\+MP@{delta\+\_\+x\+F\+R\+\_\+\+T\+MP}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{delta\+\_\+x\+F\+R\+\_\+\+T\+MP}{delta\_xFR\_TMP}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}$\ast$ Q\+Problem\+B\+::delta\+\_\+x\+F\+R\+\_\+\+T\+MP\hspace{0.3cm}{\ttfamily [protected]}}
+
+Temporary for determine\+Step\+Direction \mbox{\Hypertarget{class_q_problem_b_afc23c08b6cdc0ca93f9c049e9a318744}\label{class_q_problem_b_afc23c08b6cdc0ca93f9c049e9a318744}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!flipper@{flipper}}
+\index{flipper@{flipper}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{flipper}{flipper}}
+{\footnotesize\ttfamily \hyperlink{class_flipper}{Flipper} Q\+Problem\+B\+::flipper\hspace{0.3cm}{\ttfamily [protected]}}
+
+Struct for making a temporary copy of the matrix factorisations. \mbox{\Hypertarget{class_q_problem_b_a289ddec30e99470ebaa44aabd9f2ac7f}\label{class_q_problem_b_a289ddec30e99470ebaa44aabd9f2ac7f}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!free\+Hessian@{free\+Hessian}}
+\index{free\+Hessian@{free\+Hessian}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{free\+Hessian}{freeHessian}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Q\+Problem\+B\+::free\+Hessian\hspace{0.3cm}{\ttfamily [protected]}}
+
+Flag indicating whether the Hessian matrix needs to be de-\/allocated. \mbox{\Hypertarget{class_q_problem_b_a3efcc81e7338d5d41c99e58a766315ba}\label{class_q_problem_b_a3efcc81e7338d5d41c99e58a766315ba}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!g@{g}}
+\index{g@{g}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}$\ast$ Q\+Problem\+B\+::g\hspace{0.3cm}{\ttfamily [protected]}}
+
+Gradient. \mbox{\Hypertarget{class_q_problem_b_a10b5660ca133fee1cedbb9636cea8431}\label{class_q_problem_b_a10b5660ca133fee1cedbb9636cea8431}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!H@{H}}
+\index{H@{H}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{H}{H}}
+{\footnotesize\ttfamily \hyperlink{class_symmetric_matrix}{Symmetric\+Matrix}$\ast$ Q\+Problem\+B\+::H\hspace{0.3cm}{\ttfamily [protected]}}
+
+Hessian matrix. \mbox{\Hypertarget{class_q_problem_b_a3647c70d0d4fba3f2afe2cca4d289102}\label{class_q_problem_b_a3647c70d0d4fba3f2afe2cca4d289102}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!have\+Cholesky@{have\+Cholesky}}
+\index{have\+Cholesky@{have\+Cholesky}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{have\+Cholesky}{haveCholesky}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Q\+Problem\+B\+::have\+Cholesky\hspace{0.3cm}{\ttfamily [protected]}}
+
+Flag indicating whether Cholesky decomposition has already been setup. \mbox{\Hypertarget{class_q_problem_b_af288e4e7320b9c47c2c95a230cedcbf4}\label{class_q_problem_b_af288e4e7320b9c47c2c95a230cedcbf4}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!hessian\+Type@{hessian\+Type}}
+\index{hessian\+Type@{hessian\+Type}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{hessian\+Type}{hessianType}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a604cad5cda14e378ce4a77ab28ee9fd9}{Hessian\+Type} Q\+Problem\+B\+::hessian\+Type\hspace{0.3cm}{\ttfamily [protected]}}
+
+Type of Hessian matrix. \mbox{\Hypertarget{class_q_problem_b_acfeba7662b0bc3050ae37b857e3ea419}\label{class_q_problem_b_acfeba7662b0bc3050ae37b857e3ea419}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!infeasible@{infeasible}}
+\index{infeasible@{infeasible}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{infeasible}{infeasible}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Q\+Problem\+B\+::infeasible\hspace{0.3cm}{\ttfamily [protected]}}
+
+QP infeasible? \mbox{\Hypertarget{class_q_problem_b_a424f1b8c4badffef270a68a461671d44}\label{class_q_problem_b_a424f1b8c4badffef270a68a461671d44}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!lb@{lb}}
+\index{lb@{lb}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{lb}{lb}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}$\ast$ Q\+Problem\+B\+::lb\hspace{0.3cm}{\ttfamily [protected]}}
+
+Lower bound vector (on variables). \mbox{\Hypertarget{class_q_problem_b_a59d8ee93443bc8e7ce509a94ff4330e6}\label{class_q_problem_b_a59d8ee93443bc8e7ce509a94ff4330e6}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!options@{options}}
+\index{options@{options}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{options}{options}}
+{\footnotesize\ttfamily \hyperlink{class_options}{Options} Q\+Problem\+B\+::options\hspace{0.3cm}{\ttfamily [protected]}}
+
+Struct containing all user-\/defined options for solving Q\+Ps. \mbox{\Hypertarget{class_q_problem_b_a8402fb9f4dbfaa9ad433457ba03751f0}\label{class_q_problem_b_a8402fb9f4dbfaa9ad433457ba03751f0}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!R@{R}}
+\index{R@{R}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{R}{R}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}$\ast$ Q\+Problem\+B\+::R\hspace{0.3cm}{\ttfamily [protected]}}
+
+Cholesky factor of H (i.\+e. H = R$^\wedge$\+T$\ast$R). \mbox{\Hypertarget{class_q_problem_b_ac26a4dc4501ff1d6249631ea24e98d4c}\label{class_q_problem_b_ac26a4dc4501ff1d6249631ea24e98d4c}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!ramp0@{ramp0}}
+\index{ramp0@{ramp0}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{ramp0}{ramp0}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Q\+Problem\+B\+::ramp0\hspace{0.3cm}{\ttfamily [protected]}}
+
+Start value for Ramping Strategy. \mbox{\Hypertarget{class_q_problem_b_ac3741a9c8073cbb90b2fa071f10930b6}\label{class_q_problem_b_ac3741a9c8073cbb90b2fa071f10930b6}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!ramp1@{ramp1}}
+\index{ramp1@{ramp1}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{ramp1}{ramp1}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Q\+Problem\+B\+::ramp1\hspace{0.3cm}{\ttfamily [protected]}}
+
+Final value for Ramping Strategy. \mbox{\Hypertarget{class_q_problem_b_a28453afb30a33fe30b59c592586d49c2}\label{class_q_problem_b_a28453afb30a33fe30b59c592586d49c2}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!ramp\+Offset@{ramp\+Offset}}
+\index{ramp\+Offset@{ramp\+Offset}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{ramp\+Offset}{rampOffset}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Q\+Problem\+B\+::ramp\+Offset\hspace{0.3cm}{\ttfamily [protected]}}
+
+Offset index for Ramping. \mbox{\Hypertarget{class_q_problem_b_af908e16b53b18ca061a7c1c894c17e8b}\label{class_q_problem_b_af908e16b53b18ca061a7c1c894c17e8b}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!reg\+Val@{reg\+Val}}
+\index{reg\+Val@{reg\+Val}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{reg\+Val}{regVal}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Q\+Problem\+B\+::reg\+Val\hspace{0.3cm}{\ttfamily [protected]}}
+
+Holds the offset used to regularise Hessian matrix (zero by default). \mbox{\Hypertarget{class_q_problem_b_acc7ad0699dc78f9376ac5d5e84517b47}\label{class_q_problem_b_acc7ad0699dc78f9376ac5d5e84517b47}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!status@{status}}
+\index{status@{status}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a8d5ce5a92124dc0106a5720f6d9a5abd}{Q\+Problem\+Status} Q\+Problem\+B\+::status\hspace{0.3cm}{\ttfamily [protected]}}
+
+Current status of the solution process. \mbox{\Hypertarget{class_q_problem_b_a81466d68cbeae767710b1d804a9b65cd}\label{class_q_problem_b_a81466d68cbeae767710b1d804a9b65cd}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!tabular\+Output@{tabular\+Output}}
+\index{tabular\+Output@{tabular\+Output}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{tabular\+Output}{tabularOutput}}
+{\footnotesize\ttfamily \hyperlink{struct_tabular_output}{Tabular\+Output} Q\+Problem\+B\+::tabular\+Output\hspace{0.3cm}{\ttfamily [protected]}}
+
+Struct storing information for tabular output (print\+Level == P\+L\+\_\+\+T\+A\+B\+U\+L\+AR). \mbox{\Hypertarget{class_q_problem_b_a382545a2e9cf4591bf372c9297cac294}\label{class_q_problem_b_a382545a2e9cf4591bf372c9297cac294}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!tau@{tau}}
+\index{tau@{tau}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{tau}{tau}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} Q\+Problem\+B\+::tau\hspace{0.3cm}{\ttfamily [protected]}}
+
+Last homotopy step length. \mbox{\Hypertarget{class_q_problem_b_ae7d207471df9894e89e974b252fc341e}\label{class_q_problem_b_ae7d207471df9894e89e974b252fc341e}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!ub@{ub}}
+\index{ub@{ub}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{ub}{ub}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}$\ast$ Q\+Problem\+B\+::ub\hspace{0.3cm}{\ttfamily [protected]}}
+
+Upper bound vector (on variables). \mbox{\Hypertarget{class_q_problem_b_a689fdbbb9231d84e6c653da59d069963}\label{class_q_problem_b_a689fdbbb9231d84e6c653da59d069963}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!unbounded@{unbounded}}
+\index{unbounded@{unbounded}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{unbounded}{unbounded}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089}{Boolean\+Type} Q\+Problem\+B\+::unbounded\hspace{0.3cm}{\ttfamily [protected]}}
+
+QP unbounded? \mbox{\Hypertarget{class_q_problem_b_af5f392cdcebe7abe2fc827929e8cfe3b}\label{class_q_problem_b_af5f392cdcebe7abe2fc827929e8cfe3b}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!x@{x}}
+\index{x@{x}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}$\ast$ Q\+Problem\+B\+::x\hspace{0.3cm}{\ttfamily [protected]}}
+
+Primal solution vector. \mbox{\Hypertarget{class_q_problem_b_a3fcf4f7abdb0189fd304e6bd31431d4f}\label{class_q_problem_b_a3fcf4f7abdb0189fd304e6bd31431d4f}} 
+\index{Q\+ProblemB@{Q\+ProblemB}!y@{y}}
+\index{y@{y}!Q\+ProblemB@{Q\+ProblemB}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t}$\ast$ Q\+Problem\+B\+::y\hspace{0.3cm}{\ttfamily [protected]}}
+
+Dual solution vector. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_q_problem_b_8hpp}{Q\+Problem\+B.\+hpp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_q_problem_b_8ipp}{Q\+Problem\+B.\+ipp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/src/\hyperlink{_q_problem_b_8cpp}{Q\+Problem\+B.\+cpp}\end{DoxyCompactItemize}

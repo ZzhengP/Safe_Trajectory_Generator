@@ -1,0 +1,118 @@
+\hypertarget{class_constraint_product}{}\section{Constraint\+Product Class Reference}
+\label{class_constraint_product}\index{Constraint\+Product@{Constraint\+Product}}
+
+
+Interface for specifying user-\/defined evaluations of constraint products.  
+
+
+
+
+{\ttfamily \#include $<$Constraint\+Product.\+hpp$>$}
+
+
+
+Inheritance diagram for Constraint\+Product\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_constraint_product__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_constraint_product_a0ebfb337c4d8f8a562263f29d40cb7d3}{Constraint\+Product} ()
+\item 
+\hyperlink{class_constraint_product_ac12f0cd2dfa2ad122e69435d868753cb}{Constraint\+Product} (const \hyperlink{class_constraint_product}{Constraint\+Product} \&to\+Copy)
+\item 
+virtual \hyperlink{class_constraint_product_aed57ccadc2d93bc14ead078e22912df3}{$\sim$\+Constraint\+Product} ()
+\item 
+\hyperlink{class_constraint_product}{Constraint\+Product} \& \hyperlink{class_constraint_product_a228861b89ad8f6403f307d3110862f62}{operator=} (const \hyperlink{class_constraint_product}{Constraint\+Product} \&to\+Copy)
+\item 
+virtual \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_constraint_product_a597e1001d283a43844b4bb8d45d6b9bd}{operator()} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} constr\+Index, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const x, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const constr\+Value) const =0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for specifying user-\/defined evaluations of constraint products. 
+
+A class which allows to specify a user-\/defined function for evaluating the constraint product at the current iterate to speed-\/up QP solution in case of a specially structured constraint matrix.
+
+\begin{DoxyAuthor}{Author}
+Hans Joachim Ferreau 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2009-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_constraint_product_a0ebfb337c4d8f8a562263f29d40cb7d3}\label{class_constraint_product_a0ebfb337c4d8f8a562263f29d40cb7d3}} 
+\index{Constraint\+Product@{Constraint\+Product}!Constraint\+Product@{Constraint\+Product}}
+\index{Constraint\+Product@{Constraint\+Product}!Constraint\+Product@{Constraint\+Product}}
+\subsubsection{\texorpdfstring{Constraint\+Product()}{ConstraintProduct()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Constraint\+Product\+::\+Constraint\+Product (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor. \mbox{\Hypertarget{class_constraint_product_ac12f0cd2dfa2ad122e69435d868753cb}\label{class_constraint_product_ac12f0cd2dfa2ad122e69435d868753cb}} 
+\index{Constraint\+Product@{Constraint\+Product}!Constraint\+Product@{Constraint\+Product}}
+\index{Constraint\+Product@{Constraint\+Product}!Constraint\+Product@{Constraint\+Product}}
+\subsubsection{\texorpdfstring{Constraint\+Product()}{ConstraintProduct()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Constraint\+Product\+::\+Constraint\+Product (\begin{DoxyParamCaption}\item[{const \hyperlink{class_constraint_product}{Constraint\+Product} \&}]{to\+Copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Copy constructor. 
+\begin{DoxyParams}{Parameters}
+{\em to\+Copy} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_constraint_product_aed57ccadc2d93bc14ead078e22912df3}\label{class_constraint_product_aed57ccadc2d93bc14ead078e22912df3}} 
+\index{Constraint\+Product@{Constraint\+Product}!````~Constraint\+Product@{$\sim$\+Constraint\+Product}}
+\index{````~Constraint\+Product@{$\sim$\+Constraint\+Product}!Constraint\+Product@{Constraint\+Product}}
+\subsubsection{\texorpdfstring{$\sim$\+Constraint\+Product()}{~ConstraintProduct()}}
+{\footnotesize\ttfamily virtual Constraint\+Product\+::$\sim$\+Constraint\+Product (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_constraint_product_a597e1001d283a43844b4bb8d45d6b9bd}\label{class_constraint_product_a597e1001d283a43844b4bb8d45d6b9bd}} 
+\index{Constraint\+Product@{Constraint\+Product}!operator()@{operator()}}
+\index{operator()@{operator()}!Constraint\+Product@{Constraint\+Product}}
+\subsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily virtual \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Constraint\+Product\+::operator() (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{constr\+Index,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{x,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{constr\+Value }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Evaluates the product of a given constraint with the current iterate. This function needs to be implemented in a derived class for the user-\/defined constraint product function. \begin{DoxyReturn}{Returns}
+0\+: successful ~\newline
+ otherwise\+: not successful 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em constr\+Index} & Number of constraint to be evaluated. \\
+\hline
+{\em x} & Array containing current primal iterate. \\
+\hline
+{\em constr\+Value} & Output\+: Scalar value of the evaluated constraint. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_mpc_constraint_product_af18c36ba5b5cf6c1c33b03d4bf37f8dc}{Mpc\+Constraint\+Product}, \hyperlink{class_mpc_constraint_product_af18c36ba5b5cf6c1c33b03d4bf37f8dc}{Mpc\+Constraint\+Product}, and \hyperlink{class_my_constraint_product_a6ba41714619bb87b76597503373c2c39}{My\+Constraint\+Product}.
+
+\mbox{\Hypertarget{class_constraint_product_a228861b89ad8f6403f307d3110862f62}\label{class_constraint_product_a228861b89ad8f6403f307d3110862f62}} 
+\index{Constraint\+Product@{Constraint\+Product}!operator=@{operator=}}
+\index{operator=@{operator=}!Constraint\+Product@{Constraint\+Product}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_constraint_product}{Constraint\+Product}\& Constraint\+Product\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_constraint_product}{Constraint\+Product} \&}]{to\+Copy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Assignment operator. 
+\begin{DoxyParams}{Parameters}
+{\em to\+Copy} & Rhs object. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_constraint_product_8hpp}{Constraint\+Product.\+hpp}\end{DoxyCompactItemize}

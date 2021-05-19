@@ -1,0 +1,88 @@
+\hypertarget{_unit_testing_8hpp}{}\section{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.2.1/include/qp\+O\+A\+S\+E\+S/\+Unit\+Testing.hpp File Reference}
+\label{_unit_testing_8hpp}\index{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\+Unit\+Testing.\+hpp@{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\+Unit\+Testing.\+hpp}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_unit_testing_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{_unit_testing_8hpp_abb5f56eb8c3533189ae256217a459f35}\label{_unit_testing_8hpp_abb5f56eb8c3533189ae256217a459f35}} 
+\#define {\bfseries T\+E\+S\+T\+\_\+\+T\+O\+L\+\_\+\+F\+A\+C\+T\+OR}~1
+\item 
+\#define \hyperlink{_unit_testing_8hpp_a562e15dd66cf158c98dbfec9f6afa1ae}{T\+E\+S\+T\+\_\+\+P\+A\+S\+S\+ED}~0
+\item 
+\#define \hyperlink{_unit_testing_8hpp_a8b8b91205df891e2c7837bd03795306f}{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+ED}~1
+\item 
+\#define \hyperlink{_unit_testing_8hpp_a4c7c64732e3093283c9454eec829adb6}{T\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}~99
+\item 
+\#define \hyperlink{_unit_testing_8hpp_a7b6c78bd097776c03138f05688f60fe5}{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+E\+Q\+U\+AL}(x,  y)~if ( \hyperlink{_types_8hpp_a72a7d4e5cc3a3416b55f7b41f4db8273}{R\+E\+F\+E\+R\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} \hyperlink{_utils_8ipp_a8058471e089d787ed923897c9ca0009f}{is\+Equal}( (x),(y) ) == \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089a85b8a20e72a8bea5dd10a6007fe3071e}{B\+T\+\_\+\+F\+A\+L\+SE} ) \{ return \hyperlink{_unit_testing_8hpp_a8b8b91205df891e2c7837bd03795306f}{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+ED}; \}
+\item 
+\#define \hyperlink{_unit_testing_8hpp_af22a02c8ea1585838e2eab8a973815c6}{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+N\+E\+AR}(x,  y)~if ( \hyperlink{_types_8hpp_a72a7d4e5cc3a3416b55f7b41f4db8273}{R\+E\+F\+E\+R\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} \hyperlink{_utils_8ipp_acded877469aad325a1f0d078ba9dd1b4}{get\+Abs}((x)-\/(y)) / \hyperlink{_types_8hpp_a72a7d4e5cc3a3416b55f7b41f4db8273}{R\+E\+F\+E\+R\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} \hyperlink{_utils_8ipp_a8fdffff19505aed691eeca46c8c20fe6}{get\+Max}( 1.\+0,\hyperlink{_types_8hpp_a72a7d4e5cc3a3416b55f7b41f4db8273}{R\+E\+F\+E\+R\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} \hyperlink{_utils_8ipp_acded877469aad325a1f0d078ba9dd1b4}{get\+Abs}(x) ) $>$= 1e-\/10 ) \{ return T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+E\+D; \}
+\item 
+\#define \hyperlink{_unit_testing_8hpp_a792f8a2f914b0a031dabfd6a7658ed15}{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+T\+OL}(x,  tol)~if ( (x) $>$ (tol)$\ast$(T\+E\+S\+T\+\_\+\+T\+O\+L\+\_\+\+F\+A\+C\+T\+OR) ) \{ return \hyperlink{_unit_testing_8hpp_a8b8b91205df891e2c7837bd03795306f}{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+ED}; \}
+\item 
+\#define \hyperlink{_unit_testing_8hpp_a04810ded5f1c485cc1a849ad5d20889f}{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+T\+R\+UE}(x)~if ( (x) == false ) \{ return \hyperlink{_unit_testing_8hpp_a8b8b91205df891e2c7837bd03795306f}{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+ED}; \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Hans Joachim Ferreau 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2014-\/2017
+\end{DoxyDate}
+Definition of auxiliary functions/macros for unit testing. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_unit_testing_8hpp_a7b6c78bd097776c03138f05688f60fe5}\label{_unit_testing_8hpp_a7b6c78bd097776c03138f05688f60fe5}} 
+\index{Unit\+Testing.\+hpp@{Unit\+Testing.\+hpp}!Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+E\+Q\+U\+AL@{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+E\+Q\+U\+AL}}
+\index{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+E\+Q\+U\+AL@{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+E\+Q\+U\+AL}!Unit\+Testing.\+hpp@{Unit\+Testing.\+hpp}}
+\subsubsection{\texorpdfstring{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+E\+Q\+U\+AL}{QPOASES\_TEST\_FOR\_EQUAL}}
+{\footnotesize\ttfamily \#define Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+E\+Q\+U\+AL(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~if ( \hyperlink{_types_8hpp_a72a7d4e5cc3a3416b55f7b41f4db8273}{R\+E\+F\+E\+R\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} \hyperlink{_utils_8ipp_a8058471e089d787ed923897c9ca0009f}{is\+Equal}( (x),(y) ) == \hyperlink{_types_8hpp_a20f82124c82b6f5686a7fce454ef9089a85b8a20e72a8bea5dd10a6007fe3071e}{B\+T\+\_\+\+F\+A\+L\+SE} ) \{ return \hyperlink{_unit_testing_8hpp_a8b8b91205df891e2c7837bd03795306f}{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+ED}; \}}
+
+Macro verifying that two numerical values are equal in order to pass unit test. \mbox{\Hypertarget{_unit_testing_8hpp_af22a02c8ea1585838e2eab8a973815c6}\label{_unit_testing_8hpp_af22a02c8ea1585838e2eab8a973815c6}} 
+\index{Unit\+Testing.\+hpp@{Unit\+Testing.\+hpp}!Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+N\+E\+AR@{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+N\+E\+AR}}
+\index{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+N\+E\+AR@{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+N\+E\+AR}!Unit\+Testing.\+hpp@{Unit\+Testing.\+hpp}}
+\subsubsection{\texorpdfstring{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+N\+E\+AR}{QPOASES\_TEST\_FOR\_NEAR}}
+{\footnotesize\ttfamily \#define Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+N\+E\+AR(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})~if ( \hyperlink{_types_8hpp_a72a7d4e5cc3a3416b55f7b41f4db8273}{R\+E\+F\+E\+R\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} \hyperlink{_utils_8ipp_acded877469aad325a1f0d078ba9dd1b4}{get\+Abs}((x)-\/(y)) / \hyperlink{_types_8hpp_a72a7d4e5cc3a3416b55f7b41f4db8273}{R\+E\+F\+E\+R\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} \hyperlink{_utils_8ipp_a8fdffff19505aed691eeca46c8c20fe6}{get\+Max}( 1.\+0,\hyperlink{_types_8hpp_a72a7d4e5cc3a3416b55f7b41f4db8273}{R\+E\+F\+E\+R\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} \hyperlink{_utils_8ipp_acded877469aad325a1f0d078ba9dd1b4}{get\+Abs}(x) ) $>$= 1e-\/10 ) \{ return T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+E\+D; \}}
+
+Macro verifying that two numerical values are close to each other in order to pass unit test. \mbox{\Hypertarget{_unit_testing_8hpp_a792f8a2f914b0a031dabfd6a7658ed15}\label{_unit_testing_8hpp_a792f8a2f914b0a031dabfd6a7658ed15}} 
+\index{Unit\+Testing.\+hpp@{Unit\+Testing.\+hpp}!Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+T\+OL@{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+T\+OL}}
+\index{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+T\+OL@{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+T\+OL}!Unit\+Testing.\+hpp@{Unit\+Testing.\+hpp}}
+\subsubsection{\texorpdfstring{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+T\+OL}{QPOASES\_TEST\_FOR\_TOL}}
+{\footnotesize\ttfamily \#define Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+T\+OL(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{tol }\end{DoxyParamCaption})~if ( (x) $>$ (tol)$\ast$(T\+E\+S\+T\+\_\+\+T\+O\+L\+\_\+\+F\+A\+C\+T\+OR) ) \{ return \hyperlink{_unit_testing_8hpp_a8b8b91205df891e2c7837bd03795306f}{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+ED}; \}}
+
+Macro verifying that first quantity is lower or equal than second one in order to pass unit test. \mbox{\Hypertarget{_unit_testing_8hpp_a04810ded5f1c485cc1a849ad5d20889f}\label{_unit_testing_8hpp_a04810ded5f1c485cc1a849ad5d20889f}} 
+\index{Unit\+Testing.\+hpp@{Unit\+Testing.\+hpp}!Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+T\+R\+UE@{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+T\+R\+UE}}
+\index{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+T\+R\+UE@{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+T\+R\+UE}!Unit\+Testing.\+hpp@{Unit\+Testing.\+hpp}}
+\subsubsection{\texorpdfstring{Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+T\+R\+UE}{QPOASES\_TEST\_FOR\_TRUE}}
+{\footnotesize\ttfamily \#define Q\+P\+O\+A\+S\+E\+S\+\_\+\+T\+E\+S\+T\+\_\+\+F\+O\+R\+\_\+\+T\+R\+UE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~if ( (x) == false ) \{ return \hyperlink{_unit_testing_8hpp_a8b8b91205df891e2c7837bd03795306f}{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+ED}; \}}
+
+Macro verifying that a logical expression holds in order to pass unit test. \mbox{\Hypertarget{_unit_testing_8hpp_a4c7c64732e3093283c9454eec829adb6}\label{_unit_testing_8hpp_a4c7c64732e3093283c9454eec829adb6}} 
+\index{Unit\+Testing.\+hpp@{Unit\+Testing.\+hpp}!T\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{T\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}}
+\index{T\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND@{T\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}!Unit\+Testing.\+hpp@{Unit\+Testing.\+hpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}{TEST\_DATA\_NOT\_FOUND}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+D\+A\+T\+A\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND~99}
+
+Return value for tests that could not run due to missing external data. \mbox{\Hypertarget{_unit_testing_8hpp_a8b8b91205df891e2c7837bd03795306f}\label{_unit_testing_8hpp_a8b8b91205df891e2c7837bd03795306f}} 
+\index{Unit\+Testing.\+hpp@{Unit\+Testing.\+hpp}!T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+ED@{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+ED}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+ED@{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+ED}!Unit\+Testing.\+hpp@{Unit\+Testing.\+hpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+ED}{TEST\_FAILED}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+I\+L\+ED~1}
+
+Return value for tests that failed. \mbox{\Hypertarget{_unit_testing_8hpp_a562e15dd66cf158c98dbfec9f6afa1ae}\label{_unit_testing_8hpp_a562e15dd66cf158c98dbfec9f6afa1ae}} 
+\index{Unit\+Testing.\+hpp@{Unit\+Testing.\+hpp}!T\+E\+S\+T\+\_\+\+P\+A\+S\+S\+ED@{T\+E\+S\+T\+\_\+\+P\+A\+S\+S\+ED}}
+\index{T\+E\+S\+T\+\_\+\+P\+A\+S\+S\+ED@{T\+E\+S\+T\+\_\+\+P\+A\+S\+S\+ED}!Unit\+Testing.\+hpp@{Unit\+Testing.\+hpp}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+P\+A\+S\+S\+ED}{TEST\_PASSED}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+P\+A\+S\+S\+ED~0}
+
+Return value for tests that passed. 

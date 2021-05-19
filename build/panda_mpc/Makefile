@@ -584,6 +584,19 @@ clean_test_results/fast:
 .PHONY : clean_test_results/fast
 
 #=============================================================================
+# Target rules for targets named _panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint
+
+# Build rule for target.
+_panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint
+.PHONY : _panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint
+
+# fast build rule for target.
+_panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint/fast:
+	$(MAKE) -f CMakeFiles/_panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint.dir/build.make CMakeFiles/_panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint.dir/build
+.PHONY : _panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -1676,17 +1689,17 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
-# Target rules for targets named qptest
+# Target rules for targets named trajectory_send
 
 # Build rule for target.
-qptest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 qptest
-.PHONY : qptest
+trajectory_send: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 trajectory_send
+.PHONY : trajectory_send
 
 # fast build rule for target.
-qptest/fast:
-	$(MAKE) -f examples/CMakeFiles/qptest.dir/build.make examples/CMakeFiles/qptest.dir/build
-.PHONY : qptest/fast
+trajectory_send/fast:
+	$(MAKE) -f examples/CMakeFiles/trajectory_send.dir/build.make examples/CMakeFiles/trajectory_send.dir/build
+.PHONY : trajectory_send/fast
 
 src/controller.o: src/controller.cpp.o
 
@@ -1769,6 +1782,33 @@ src/panda_simulation.cpp.s:
 	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.s
 .PHONY : src/panda_simulation.cpp.s
 
+src/robot_model.o: src/robot_model.cpp.o
+
+.PHONY : src/robot_model.o
+
+# target to build an object file
+src/robot_model.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot_model.cpp.o
+.PHONY : src/robot_model.cpp.o
+
+src/robot_model.i: src/robot_model.cpp.i
+
+.PHONY : src/robot_model.i
+
+# target to preprocess a source file
+src/robot_model.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot_model.cpp.i
+.PHONY : src/robot_model.cpp.i
+
+src/robot_model.s: src/robot_model.cpp.s
+
+.PHONY : src/robot_model.s
+
+# target to generate assembly for a file
+src/robot_model.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot_model.cpp.s
+.PHONY : src/robot_model.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1812,6 +1852,7 @@ help:
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... clean_test_results"
+	@echo "... _panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... run_tests"
 	@echo "... actionlib_msgs_generate_messages_nodejs"
@@ -1898,7 +1939,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... qptest"
+	@echo "... trajectory_send"
 	@echo "... src/controller.o"
 	@echo "... src/controller.i"
 	@echo "... src/controller.s"
@@ -1908,6 +1949,9 @@ help:
 	@echo "... src/panda_simulation.o"
 	@echo "... src/panda_simulation.i"
 	@echo "... src/panda_simulation.s"
+	@echo "... src/robot_model.o"
+	@echo "... src/robot_model.i"
+	@echo "... src/robot_model.s"
 .PHONY : help
 
 

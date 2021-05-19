@@ -1,0 +1,5 @@
+<map id="SQProblem" name="SQProblem">
+<area shape="rect" id="node4" href="$class_s_q_problem_schur.html" title="Implements the online active set strategy for QPs with varying, sparse matrices. " alt="" coords="5,229,128,256"/>
+<area shape="rect" id="node2" href="$class_q_problem.html" title="Implements the online active set strategy for QPs with general constraints. " alt="" coords="27,80,107,107"/>
+<area shape="rect" id="node3" href="$class_q_problem_b.html" title="Implements the online active set strategy for box&#45;constrained QPs. " alt="" coords="22,5,111,32"/>
+</map>

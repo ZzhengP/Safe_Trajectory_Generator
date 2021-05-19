@@ -72,6 +72,24 @@ bool PandaMPCController::init(hardware_interface::RobotHW* robot_hardware, ros::
             }
         }
     }
+    else if (control_level == "position"){
+      position_joint_interface_ = robot_hardware->get<hardware_interface::PositionJointInterface>();
+      if (position_joint_interface_ == nullptr) {
+          ROS_ERROR(
+              "JointVelocityExampleController: Error getting velocity joint interface from hardware!");
+              return false;
+      }
+       position_joint_handles_.resize(7);
+      for (size_t i = 0; i < 7; ++i) {
+          try {
+              position_joint_handles_[i] = position_joint_interface_->getHandle(joint_names[i]);
+          } catch (const hardware_interface::HardwareInterfaceException& ex) {
+              ROS_ERROR_STREAM(
+              "JointPositionExampleController: Exception getting joint handles: " << ex.what());
+              return false;
+          }
+      }
+    }
     else if ( control_level == "torque")
     {
         auto* effort_joint_interface = robot_hardware->get<hardware_interface::EffortJointInterface>();
@@ -153,6 +171,12 @@ void PandaMPCController::update(const ros::Time&, const ros::Duration& period) {
         {
             velocity_joint_handles_[i].setCommand(joint_command_(i));
         }
+    }
+    else if (control_level == "position"){
+      for (size_t i = 0; i < 7; ++i)
+      {
+          position_joint_handles_[i].setCommand(joint_command_(i));
+      }
     }
     else if (control_level == "torque")
     {

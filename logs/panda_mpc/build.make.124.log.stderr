@@ -1,0 +1,904 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[Kbool Controller::Controller::Init(ros::NodeHandle&, const VectorXd&, const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:32:5:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Jacobian robotModel::J_[m[K' is private within this context
+     [01;31m[KJ_[m[K.resize(chain.getNrOfJoints());
+     [01;31m[K^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:65:17:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Jacobian [01;36m[KJ_[m[K ; /*! Jacobian matrix */
+                 [01;36m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:32:15:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Chain robotModel::chain[m[K' is private within this context
+     J_.resize([01;31m[Kchain[m[K.getNrOfJoints());
+               [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:61:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Chain [01;36m[Kchain[m[K ; /*! Robot kdl chain */
+              [01;36m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:33:5:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntSpaceInertiaMatrix robotModel::M_[m[K' is private within this context
+     [01;31m[KM_[m[K.resize(chain.getNrOfJoints());
+     [01;31m[K^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:66:30:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntSpaceInertiaMatrix [01;36m[KM_[m[K; /*! KDL inertia matrix in joint space */
+                              [01;36m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:33:15:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Chain robotModel::chain[m[K' is private within this context
+     M_.resize([01;31m[Kchain[m[K.getNrOfJoints());
+               [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:61:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Chain [01;36m[Kchain[m[K ; /*! Robot kdl chain */
+              [01;36m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:42:5:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::VectorXd robotModel::joint_velocity_out_[m[K' is private within this context
+     [01;31m[Kjoint_velocity_out_[m[K.resize(dof);
+     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:80:19:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::VectorXd [01;36m[Kjoint_velocity_out_[m[K; /*!< @brief Results of the QP optimization */
+                   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:42:32:[m[K [01;31m[Kerror: [m[K'[01m[Kint robotModel::dof[m[K' is private within this context
+     joint_velocity_out_.resize([01;31m[Kdof[m[K);
+                                [01;31m[K^~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:86:7:[m[K [01;36m[Knote: [m[Kdeclared private here
+   int [01;36m[Kdof[m[K; /*!< @brief Number of degrees of freedom of the robot */
+       [01;36m[K^~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:63:5:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntArrayVel robotModel::q_in[m[K' is private within this context
+     [01;31m[Kq_in[m[K.q.data = q_init;
+     [01;31m[K^~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:75:20:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntArrayVel [01;36m[Kq_in[m[K; /*!< @brief KDL joint position of the robot */
+                    [01;36m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:64:5:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntArrayVel robotModel::q_in[m[K' is private within this context
+     [01;31m[Kq_in[m[K.qdot.data = qd_init;
+     [01;31m[K^~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:75:20:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntArrayVel [01;36m[Kq_in[m[K; /*!< @brief KDL joint position of the robot */
+                    [01;36m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:65:5:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::unique_ptr<KDL::ChainFkSolverPos_recursive> robotModel::fksolver_[m[K' is private within this context
+     [01;31m[Kfksolver_[m[K->JntToCart(q_in.q,X_curr_);
+     [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:56:52:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::unique_ptr<KDL::ChainFkSolverPos_recursive> [01;36m[Kfksolver_[m[K;
+                                                    [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:65:26:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntArrayVel robotModel::q_in[m[K' is private within this context
+     fksolver_->JntToCart([01;31m[Kq_in[m[K.q,X_curr_);
+                          [01;31m[K^~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:75:20:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntArrayVel [01;36m[Kq_in[m[K; /*!< @brief KDL joint position of the robot */
+                    [01;36m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:65:33:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Frame robotModel::X_curr_[m[K' is private within this context
+     fksolver_->JntToCart(q_in.q,[01;31m[KX_curr_[m[K);
+                                 [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:69:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Frame [01;36m[KX_curr_[m[K; /*!< @brief KDL current Cartesian pose of the tip_link */
+              [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:75:22:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Frame robotModel::X_curr_[m[K' is private within this context
+     trajectory.Build([01;31m[KX_curr_[m[K, true);
+                      [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:69:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Frame [01;36m[KX_curr_[m[K; /*!< @brief KDL current Cartesian pose of the tip_link */
+              [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:77:18:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Frame robotModel::X_curr_[m[K' is private within this context
+     next_pts_.M= [01;31m[KX_curr_[m[K.M ;
+                  [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:69:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Frame [01;36m[KX_curr_[m[K; /*!< @brief KDL current Cartesian pose of the tip_link */
+              [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[KEigen::VectorXd Controller::Controller::Update(const VectorXd&, const VectorXd&, const ros::Duration&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:91:5:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntArrayVel robotModel::q_in[m[K' is private within this context
+     [01;31m[Kq_in[m[K.q.data = q;
+     [01;31m[K^~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:75:20:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntArrayVel [01;36m[Kq_in[m[K; /*!< @brief KDL joint position of the robot */
+                    [01;36m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:92:5:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntArrayVel robotModel::q_in[m[K' is private within this context
+     [01;31m[Kq_in[m[K.qdot.data = qd;
+     [01;31m[K^~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:75:20:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntArrayVel [01;36m[Kq_in[m[K; /*!< @brief KDL joint position of the robot */
+                    [01;36m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:95:5:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::unique_ptr<KDL::ChainJntToJacSolver> robotModel::chainjacsolver_[m[K' is private within this context
+     [01;31m[Kchainjacsolver_[m[K->JntToJac(q_in.q,J_);
+     [01;31m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:51:45:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::unique_ptr<KDL::ChainJntToJacSolver> [01;36m[Kchainjacsolver_[m[K;
+                                             [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:95:31:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntArrayVel robotModel::q_in[m[K' is private within this context
+     chainjacsolver_->JntToJac([01;31m[Kq_in[m[K.q,J_);
+                               [01;31m[K^~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:75:20:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntArrayVel [01;36m[Kq_in[m[K; /*!< @brief KDL joint position of the robot */
+                    [01;36m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:95:38:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Jacobian robotModel::J_[m[K' is private within this context
+     chainjacsolver_->JntToJac(q_in.q,[01;31m[KJ_[m[K);
+                                      [01;31m[K^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:65:17:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Jacobian [01;36m[KJ_[m[K ; /*! Jacobian matrix */
+                 [01;36m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:96:5:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::unique_ptr<KDL::ChainFkSolverPos_recursive> robotModel::fksolver_[m[K' is private within this context
+     [01;31m[Kfksolver_[m[K->JntToCart(q_in.q,X_curr_);
+     [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:56:52:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::unique_ptr<KDL::ChainFkSolverPos_recursive> [01;36m[Kfksolver_[m[K;
+                                                    [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:96:26:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntArrayVel robotModel::q_in[m[K' is private within this context
+     fksolver_->JntToCart([01;31m[Kq_in[m[K.q,X_curr_);
+                          [01;31m[K^~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:75:20:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntArrayVel [01;36m[Kq_in[m[K; /*!< @brief KDL joint position of the robot */
+                    [01;36m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:96:33:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Frame robotModel::X_curr_[m[K' is private within this context
+     fksolver_->JntToCart(q_in.q,[01;31m[KX_curr_[m[K);
+                                 [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:69:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Frame [01;36m[KX_curr_[m[K; /*!< @brief KDL current Cartesian pose of the tip_link */
+              [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:106:5:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Frame robotModel::X_traj_[m[K' is private within this context
+     [01;31m[KX_traj_[m[K = next_pts_;
+     [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:70:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Frame [01;36m[KX_traj_[m[K; /*!< @brief KDL desired Cartesian pose of the tip_link */
+              [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:107:5:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Twist robotModel::Xd_traj_[m[K' is private within this context
+     [01;31m[KXd_traj_[m[K.vel[0] = 0, Xd_traj_.vel[1] = 0.1, Xd_traj_.vel[2] = 0;
+     [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:71:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Twist [01;36m[KXd_traj_[m[K; /*!< @brief KDL desired Cartesian velocity of the tip_link */
+              [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:107:26:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Twist robotModel::Xd_traj_[m[K' is private within this context
+     Xd_traj_.vel[0] = 0, [01;31m[KXd_traj_[m[K.vel[1] = 0.1, Xd_traj_.vel[2] = 0;
+                          [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:71:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Twist [01;36m[KXd_traj_[m[K; /*!< @brief KDL desired Cartesian velocity of the tip_link */
+              [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:107:49:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Twist robotModel::Xd_traj_[m[K' is private within this context
+     Xd_traj_.vel[0] = 0, Xd_traj_.vel[1] = 0.1, [01;31m[KXd_traj_[m[K.vel[2] = 0;
+                                                 [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:71:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Twist [01;36m[KXd_traj_[m[K; /*!< @brief KDL desired Cartesian velocity of the tip_link */
+              [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:108:5:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Twist robotModel::Xd_traj_[m[K' is private within this context
+     [01;31m[KXd_traj_[m[K.rot[0] = 0, Xd_traj_.rot[1] = 0, Xd_traj_.rot[2] = 0 ;
+     [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:71:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Twist [01;36m[KXd_traj_[m[K; /*!< @brief KDL desired Cartesian velocity of the tip_link */
+              [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:108:26:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Twist robotModel::Xd_traj_[m[K' is private within this context
+     Xd_traj_.rot[0] = 0, [01;31m[KXd_traj_[m[K.rot[1] = 0, Xd_traj_.rot[2] = 0 ;
+                          [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:71:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Twist [01;36m[KXd_traj_[m[K; /*!< @brief KDL desired Cartesian velocity of the tip_link */
+              [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:108:47:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Twist robotModel::Xd_traj_[m[K' is private within this context
+     Xd_traj_.rot[0] = 0, Xd_traj_.rot[1] = 0, [01;31m[KXd_traj_[m[K.rot[2] = 0 ;
+                                               [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:71:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Twist [01;36m[KXd_traj_[m[K; /*!< @brief KDL desired Cartesian velocity of the tip_link */
+              [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:110:5:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Twist robotModel::X_err_[m[K' is private within this context
+     [01;31m[KX_err_[m[K = diff( X_curr_ , X_traj_ );
+     [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:73:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Twist [01;36m[KX_err_[m[K; /*!< @brief KDL desired Cartesian error between the desired and current pose */
+              [01;36m[K^~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:110:20:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Frame robotModel::X_curr_[m[K' is private within this context
+     X_err_ = diff( [01;31m[KX_curr_[m[K , X_traj_ );
+                    [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:69:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Frame [01;36m[KX_curr_[m[K; /*!< @brief KDL current Cartesian pose of the tip_link */
+              [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:110:30:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Frame robotModel::X_traj_[m[K' is private within this context
+     X_err_ = diff( X_curr_ , [01;31m[KX_traj_[m[K );
+                              [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:70:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Frame [01;36m[KX_traj_[m[K; /*!< @brief KDL desired Cartesian pose of the tip_link */
+              [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:111:25:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Twist robotModel::X_err_[m[K' is private within this context
+     tf::twistKDLToEigen([01;31m[KX_err_[m[K,x_err);
+                         [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:73:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Twist [01;36m[KX_err_[m[K; /*!< @brief KDL desired Cartesian error between the desired and current pose */
+              [01;36m[K^~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:111:32:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::Matrix<double, 6, 1> robotModel::x_err[m[K' is private within this context
+     tf::twistKDLToEigen(X_err_,[01;31m[Kx_err[m[K);
+                                [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:91:29:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::Matrix<double,6,1> [01;36m[Kx_err[m[K; /*!< @brief Cartesian error between the desired and current pose in Eigen */
+                             [01;36m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:112:25:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Twist robotModel::Xd_traj_[m[K' is private within this context
+     tf::twistKDLToEigen([01;31m[KXd_traj_[m[K,xd_traj_);
+                         [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:71:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Twist [01;36m[KXd_traj_[m[K; /*!< @brief KDL desired Cartesian velocity of the tip_link */
+              [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:112:34:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::Matrix<double, 6, 1> robotModel::xd_traj_[m[K' is private within this context
+     tf::twistKDLToEigen(Xd_traj_,[01;31m[Kxd_traj_[m[K);
+                                  [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:92:29:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::Matrix<double,6,1> [01;36m[Kxd_traj_[m[K; /*!< @brief desired Cartesian velocity in Eigen */
+                             [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:114:5:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::Matrix<double, 6, 1> robotModel::xd_des_[m[K' is private within this context
+     [01;31m[Kxd_des_[m[K = p_gains_.cwiseProduct(x_err);
+     [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:82:29:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::Matrix<double,6,1> [01;36m[Kxd_des_[m[K; /*!< @brief Desired robot twist of the robot tip_link */
+                             [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:114:15:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::VectorXd robotModel::p_gains_[m[K' is private within this context
+     xd_des_ = [01;31m[Kp_gains_[m[K.cwiseProduct(x_err);
+               [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:76:19:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::VectorXd [01;36m[Kp_gains_[m[K; /*!< @brief Proportional gains of the PID controller */
+                   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:114:37:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::Matrix<double, 6, 1> robotModel::x_err[m[K' is private within this context
+     xd_des_ = p_gains_.cwiseProduct([01;31m[Kx_err[m[K);
+                                     [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:91:29:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::Matrix<double,6,1> [01;36m[Kx_err[m[K; /*!< @brief Cartesian error between the desired and current pose in Eigen */
+                             [01;36m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:121:5:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::Matrix<double, 6, 7> robotModel::J[m[K' is private within this context
+     [01;31m[KJ[m[K = J_.data;
+     [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:93:30:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::Matrix <double,6,7> [01;36m[KJ[m[K; /*!< @brief Jacobian in Eigen */
+                              [01;36m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:121:9:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Jacobian robotModel::J_[m[K' is private within this context
+     J = [01;31m[KJ_[m[K.data;
+         [01;31m[K^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:65:17:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Jacobian [01;36m[KJ_[m[K ; /*! Jacobian matrix */
+                 [01;36m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:122:5:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::Matrix<double, 7, 7, 0, 7, 7> robotModel::M[m[K' is private within this context
+     [01;31m[KM[m[K = M_.data;
+     [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:94:30:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::Matrix <double,7,7> [01;36m[KM[m[K; /*!< @brief Inertia matrix in joint space in Eigen */
+                              [01;36m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:122:9:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntSpaceInertiaMatrix robotModel::M_[m[K' is private within this context
+     M = [01;31m[KM_[m[K.data;
+         [01;31m[K^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:66:30:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntSpaceInertiaMatrix [01;36m[KM_[m[K; /*! KDL inertia matrix in joint space */
+                              [01;36m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:124:17:[m[K [01;31m[Kerror: [m[K'[01m[Kdouble robotModel::regularisation_weight_[m[K' is private within this context
+     H_ =  2.0 * [01;31m[Kregularisation_weight_[m[K * Eigen::MatrixXd::Identity(7,7);
+                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:85:10:[m[K [01;36m[Knote: [m[Kdeclared private here
+   double [01;36m[Kregularisation_weight_[m[K; /*!< @brief Regularisation weight */
+          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:125:17:[m[K [01;31m[Kerror: [m[K'[01m[Kdouble robotModel::regularisation_weight_[m[K' is private within this context
+     g_ = -2.0 * [01;31m[Kregularisation_weight_[m[K * p_gains_qd_.cwiseProduct((q_mean_ - q));
+                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:85:10:[m[K [01;36m[Knote: [m[Kdeclared private here
+   double [01;36m[Kregularisation_weight_[m[K; /*!< @brief Regularisation weight */
+          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:125:42:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::VectorXd robotModel::p_gains_qd_[m[K' is private within this context
+     g_ = -2.0 * regularisation_weight_ * [01;31m[Kp_gains_qd_[m[K.cwiseProduct((q_mean_ - q));
+                                          [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:79:19:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::VectorXd [01;36m[Kp_gains_qd_[m[K; /*!< @brief Proportional gains of the regularisation controller */
+                   [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:127:19:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::Matrix<double, 6, 7> robotModel::J[m[K' is private within this context
+     H_ +=  2.0 *  [01;31m[KJ[m[K.transpose() * J;
+                   [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:93:30:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::Matrix <double,6,7> [01;36m[KJ[m[K; /*!< @brief Jacobian in Eigen */
+                              [01;36m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:127:35:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::Matrix<double, 6, 7> robotModel::J[m[K' is private within this context
+     H_ +=  2.0 *  J.transpose() * [01;31m[KJ[m[K;
+                                   [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:93:30:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::Matrix <double,6,7> [01;36m[KJ[m[K; /*!< @brief Jacobian in Eigen */
+                              [01;36m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:128:19:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::Matrix<double, 6, 7> robotModel::J[m[K' is private within this context
+     g_ += -2.0 *  [01;31m[KJ[m[K.transpose() * xd_des_;
+                   [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:93:30:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::Matrix <double,6,7> [01;36m[KJ[m[K; /*!< @brief Jacobian in Eigen */
+                              [01;36m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:128:35:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::Matrix<double, 6, 1> robotModel::xd_des_[m[K' is private within this context
+     g_ += -2.0 *  J.transpose() * [01;31m[Kxd_des_[m[K;
+                                   [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:82:29:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::Matrix<double,6,1> [01;36m[Kxd_des_[m[K; /*!< @brief Desired robot twist of the robot tip_link */
+                             [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:136:25:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntArray robotModel::ul[m[K' is private within this context
+     ubA_.segment(0,7) = [01;31m[Kul[m[K.data - q;
+                         [01;31m[K^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:63:17:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntArray [01;36m[Kul[m[K ; /*! Joint upper limit */
+                 [01;36m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:137:25:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntArray robotModel::ll[m[K' is private within this context
+     lbA_.segment(0,7) = [01;31m[Kll[m[K.data - q;
+                         [01;31m[K^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:62:17:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntArray [01;36m[Kll[m[K ; /*! Joint lower limit */
+                 [01;36m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:163:5:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::VectorXd robotModel::joint_velocity_out_[m[K' is private within this context
+     [01;31m[Kjoint_velocity_out_[m[K.setZero();
+     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:80:19:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::VectorXd [01;36m[Kjoint_velocity_out_[m[K; /*!< @brief Results of the QP optimization */
+                   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:167:44:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::VectorXd robotModel::joint_velocity_out_[m[K' is private within this context
+         qpoases_solver_->getPrimalSolution([01;31m[Kjoint_velocity_out_[m[K.data());
+                                            [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:80:19:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::VectorXd [01;36m[Kjoint_velocity_out_[m[K; /*!< @brief Results of the QP optimization */
+                   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:174:12:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::VectorXd robotModel::joint_velocity_out_[m[K' is private within this context
+     return [01;31m[Kjoint_velocity_out_[m[K;
+            [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:80:19:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::VectorXd [01;36m[Kjoint_velocity_out_[m[K; /*!< @brief Results of the QP optimization */
+                   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[Kvoid Controller::Controller::publishTrajectory()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:190:32:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::__cxx11::string robotModel::root_link_[m[K' is private within this context
+     path_ros.header.frame_id = [01;31m[Kroot_link_[m[K;
+                                [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:88:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::string [01;36m[Kroot_link_[m[K; /*!< @brief base link of the KDL chain */
+               [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:194:34:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::__cxx11::string robotModel::root_link_[m[K' is private within this context
+     pose_array.header.frame_id = [01;31m[Kroot_link_[m[K;
+                                  [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:88:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::string [01;36m[Kroot_link_[m[K; /*!< @brief base link of the KDL chain */
+               [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:200:54:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::__cxx11::string robotModel::root_link_[m[K' is private within this context
+         pose_array_publisher_.msg_.header.frame_id = [01;31m[Kroot_link_[m[K;
+                                                      [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:88:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::string [01;36m[Kroot_link_[m[K; /*!< @brief base link of the KDL chain */
+               [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:207:48:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::__cxx11::string robotModel::root_link_[m[K' is private within this context
+         path_publisher_.msg_.header.frame_id = [01;31m[Kroot_link_[m[K;
+                                                [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:88:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::string [01;36m[Kroot_link_[m[K; /*!< @brief base link of the KDL chain */
+               [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[Kvoid Controller::Controller::load_parameters()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:230:5:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::VectorXd robotModel::p_gains_[m[K' is private within this context
+     [01;31m[Kp_gains_[m[K.resize(6);
+     [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:76:19:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::VectorXd [01;36m[Kp_gains_[m[K; /*!< @brief Proportional gains of the PID controller */
+                   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:231:39:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::VectorXd robotModel::p_gains_[m[K' is private within this context
+     getRosParam("/panda_mpc/p_gains_",[01;31m[Kp_gains_[m[K);
+                                       [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:76:19:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::VectorXd [01;36m[Kp_gains_[m[K; /*!< @brief Proportional gains of the PID controller */
+                   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:232:5:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::VectorXd robotModel::d_gains_[m[K' is private within this context
+     [01;31m[Kd_gains_[m[K.resize(6);
+     [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:78:19:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::VectorXd [01;36m[Kd_gains_[m[K; /*!< @brief Integral gains of the PID controller */
+                   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:233:39:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::VectorXd robotModel::d_gains_[m[K' is private within this context
+     getRosParam("/panda_mpc/d_gains_",[01;31m[Kd_gains_[m[K);
+                                       [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:78:19:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::VectorXd [01;36m[Kd_gains_[m[K; /*!< @brief Integral gains of the PID controller */
+                   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:234:5:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::VectorXd robotModel::p_gains_qd_[m[K' is private within this context
+     [01;31m[Kp_gains_qd_[m[K.resize(7);
+     [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:79:19:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::VectorXd [01;36m[Kp_gains_qd_[m[K; /*!< @brief Proportional gains of the regularisation controller */
+                   [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:235:42:[m[K [01;31m[Kerror: [m[K'[01m[KEigen::VectorXd robotModel::p_gains_qd_[m[K' is private within this context
+     getRosParam("/panda_mpc/p_gains_qd_",[01;31m[Kp_gains_qd_[m[K);
+                                          [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:79:19:[m[K [01;36m[Knote: [m[Kdeclared private here
+   Eigen::VectorXd [01;36m[Kp_gains_qd_[m[K; /*!< @brief Proportional gains of the regularisation controller */
+                   [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:238:53:[m[K [01;31m[Kerror: [m[K'[01m[Kdouble robotModel::regularisation_weight_[m[K' is private within this context
+     getRosParam("/panda_mpc/regularisation_weight_",[01;31m[Kregularisation_weight_[m[K);
+                                                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:85:10:[m[K [01;36m[Knote: [m[Kdeclared private here
+   double [01;36m[Kregularisation_weight_[m[K; /*!< @brief Regularisation weight */
+          [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:239:41:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::__cxx11::string robotModel::root_link_[m[K' is private within this context
+     getRosParam("/panda_mpc/root_link_",[01;31m[Kroot_link_[m[K);
+                                         [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:88:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::string [01;36m[Kroot_link_[m[K; /*!< @brief base link of the KDL chain */
+               [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:240:40:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::__cxx11::string robotModel::tip_link_[m[K' is private within this context
+     getRosParam("/panda_mpc/tip_link_",[01;31m[Ktip_link_[m[K);
+                                        [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:89:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::string [01;36m[Ktip_link_[m[K; /*!< @brief tip link of the KDL chain (usually the end effector*/
+               [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[Kbool Controller::Controller::load_robot(ros::NodeHandle&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:259:5:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::shared_ptr<TRAC_IK::TRAC_IK> robotModel::ik_solver_[m[K' is private within this context
+     [01;31m[Kik_solver_[m[K.reset(new TRAC_IK::TRAC_IK(root_link_, tip_link_, urdf_param, timeout, eps));
+     [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:45:37:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::shared_ptr<TRAC_IK::TRAC_IK> [01;36m[Kik_solver_[m[K;
+                                     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:259:43:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::__cxx11::string robotModel::root_link_[m[K' is private within this context
+     ik_solver_.reset(new TRAC_IK::TRAC_IK([01;31m[Kroot_link_[m[K, tip_link_, urdf_param, timeout, eps));
+                                           [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:88:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::string [01;36m[Kroot_link_[m[K; /*!< @brief base link of the KDL chain */
+               [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:259:55:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::__cxx11::string robotModel::tip_link_[m[K' is private within this context
+     ik_solver_.reset(new TRAC_IK::TRAC_IK(root_link_, [01;31m[Ktip_link_[m[K, urdf_param, timeout, eps));
+                                                       [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:89:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::string [01;36m[Ktip_link_[m[K; /*!< @brief tip link of the KDL chain (usually the end effector*/
+               [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:260:18:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::shared_ptr<TRAC_IK::TRAC_IK> robotModel::ik_solver_[m[K' is private within this context
+     bool valid = [01;31m[Kik_solver_[m[K->getKDLChain(chain);
+                  [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:45:37:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::shared_ptr<TRAC_IK::TRAC_IK> [01;36m[Kik_solver_[m[K;
+                                     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:260:42:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Chain robotModel::chain[m[K' is private within this context
+     bool valid = ik_solver_->getKDLChain([01;31m[Kchain[m[K);
+                                          [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:61:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Chain [01;36m[Kchain[m[K ; /*! Robot kdl chain */
+              [01;36m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:267:13:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::shared_ptr<TRAC_IK::TRAC_IK> robotModel::ik_solver_[m[K' is private within this context
+     valid = [01;31m[Kik_solver_[m[K->getKDLLimits(ll,ul);
+             [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:45:37:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::shared_ptr<TRAC_IK::TRAC_IK> [01;36m[Kik_solver_[m[K;
+                                     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:267:38:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntArray robotModel::ll[m[K' is private within this context
+     valid = ik_solver_->getKDLLimits([01;31m[Kll[m[K,ul);
+                                      [01;31m[K^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:62:17:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntArray [01;36m[Kll[m[K ; /*! Joint lower limit */
+                 [01;36m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:267:41:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntArray robotModel::ul[m[K' is private within this context
+     valid = ik_solver_->getKDLLimits(ll,[01;31m[Kul[m[K);
+                                         [01;31m[K^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:63:17:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntArray [01;36m[Kul[m[K ; /*! Joint upper limit */
+                 [01;36m[K^~[m[K
+In file included from [01m[K/usr/include/boost/assert.hpp:58:0[m[K,
+                 from [01m[K/usr/include/boost/date_time/time_facet.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/date_time/posix_time/posix_time_io.hpp:16[m[K,
+                 from [01m[K/usr/include/boost/date_time/posix_time/posix_time.hpp:31[m[K,
+                 from [01m[K/usr/include/boost/date_time/local_time/local_time.hpp:11[m[K,
+                 from [01m[K/usr/include/boost/date_time.hpp:15[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:40[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:274:12:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Chain robotModel::chain[m[K' is private within this context
+     assert([01;31m[Kc[m[Khain.getNrOfJoints() == ll.data.size());
+            [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:61:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Chain [01;36m[Kchain[m[K ; /*! Robot kdl chain */
+              [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/boost/assert.hpp:58:0[m[K,
+                 from [01m[K/usr/include/boost/date_time/time_facet.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/date_time/posix_time/posix_time_io.hpp:16[m[K,
+                 from [01m[K/usr/include/boost/date_time/posix_time/posix_time.hpp:31[m[K,
+                 from [01m[K/usr/include/boost/date_time/local_time/local_time.hpp:11[m[K,
+                 from [01m[K/usr/include/boost/date_time.hpp:15[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:40[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:274:37:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntArray robotModel::ll[m[K' is private within this context
+     assert(chain.getNrOfJoints() == [01;31m[Kl[m[Kl.data.size());
+                                     [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:62:17:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntArray [01;36m[Kll[m[K ; /*! Joint lower limit */
+                 [01;36m[K^~[m[K
+In file included from [01m[K/usr/include/boost/assert.hpp:58:0[m[K,
+                 from [01m[K/usr/include/boost/date_time/time_facet.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/date_time/posix_time/posix_time_io.hpp:16[m[K,
+                 from [01m[K/usr/include/boost/date_time/posix_time/posix_time.hpp:31[m[K,
+                 from [01m[K/usr/include/boost/date_time/local_time/local_time.hpp:11[m[K,
+                 from [01m[K/usr/include/boost/date_time.hpp:15[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:40[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:275:12:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Chain robotModel::chain[m[K' is private within this context
+     assert([01;31m[Kc[m[Khain.getNrOfJoints() == ul.data.size());
+            [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:61:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Chain [01;36m[Kchain[m[K ; /*! Robot kdl chain */
+              [01;36m[K^~~~~[m[K
+In file included from [01m[K/usr/include/boost/assert.hpp:58:0[m[K,
+                 from [01m[K/usr/include/boost/date_time/time_facet.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/date_time/posix_time/posix_time_io.hpp:16[m[K,
+                 from [01m[K/usr/include/boost/date_time/posix_time/posix_time.hpp:31[m[K,
+                 from [01m[K/usr/include/boost/date_time/local_time/local_time.hpp:11[m[K,
+                 from [01m[K/usr/include/boost/date_time.hpp:15[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:40[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:275:37:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::JntArray robotModel::ul[m[K' is private within this context
+     assert(chain.getNrOfJoints() == [01;31m[Ku[m[Kl.data.size());
+                                     [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:63:17:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::JntArray [01;36m[Kul[m[K ; /*! Joint upper limit */
+                 [01;36m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:277:8:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Chain robotModel::chain[m[K' is private within this context
+     if([01;31m[Kchain[m[K.getNrOfSegments() == 0)
+        [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:61:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Chain [01;36m[Kchain[m[K ; /*! Robot kdl chain */
+              [01;36m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/assert.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:36[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/publisher.h:32[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:32[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:280:37:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Chain robotModel::chain[m[K' is private within this context
+     ROS_INFO_STREAM("  Chain has "<<[01;31m[Kc[m[Khain.getNrOfJoints()<<" joints");
+                                     [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:61:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Chain [01;36m[Kchain[m[K ; /*! Robot kdl chain */
+              [01;36m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/assert.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:36[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/publisher.h:32[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:32[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:281:37:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Chain robotModel::chain[m[K' is private within this context
+     ROS_INFO_STREAM("  Chain has "<<[01;31m[Kc[m[Khain.getNrOfSegments()<<" segments");
+                                     [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:61:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Chain [01;36m[Kchain[m[K ; /*! Robot kdl chain */
+              [01;36m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:283:29:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Chain robotModel::chain[m[K' is private within this context
+     for(unsigned int i=0; i<[01;31m[Kchain[m[K.getNrOfSegments(); ++i)
+                             [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:61:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Chain [01;36m[Kchain[m[K ; /*! Robot kdl chain */
+              [01;36m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/assert.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:36[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/publisher.h:32[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:32[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:284:33:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Chain robotModel::chain[m[K' is private within this context
+         ROS_INFO_STREAM("    "<<[01;31m[Kc[m[Khain.getSegment(i).getName());
+                                 [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:61:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Chain [01;36m[Kchain[m[K ; /*! Robot kdl chain */
+              [01;36m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:287:5:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::unique_ptr<KDL::ChainFkSolverPos_recursive> robotModel::fksolver_[m[K' is private within this context
+     [01;31m[Kfksolver_[m[K.reset(new KDL::ChainFkSolverPos_recursive(chain)); // Forward kinematic solver for geometric purpose
+     [01;31m[K^~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:56:52:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::unique_ptr<KDL::ChainFkSolverPos_recursive> [01;36m[Kfksolver_[m[K;
+                                                    [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:287:57:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Chain robotModel::chain[m[K' is private within this context
+     fksolver_.reset(new KDL::ChainFkSolverPos_recursive([01;31m[Kchain[m[K)); // Forward kinematic solver for geometric purpose
+                                                         [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:61:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Chain [01;36m[Kchain[m[K ; /*! Robot kdl chain */
+              [01;36m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:288:5:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::unique_ptr<KDL::ChainFkSolverVel_recursive> robotModel::fkvelsolver_[m[K' is private within this context
+     [01;31m[Kfkvelsolver_[m[K.reset(new KDL::ChainFkSolverVel_recursive(chain));// Forward kinematic solver for kinematic purpose
+     [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:58:52:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::unique_ptr<KDL::ChainFkSolverVel_recursive> [01;36m[Kfkvelsolver_[m[K;
+                                                    [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:288:60:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Chain robotModel::chain[m[K' is private within this context
+     fkvelsolver_.reset(new KDL::ChainFkSolverVel_recursive([01;31m[Kchain[m[K));// Forward kinematic solver for kinematic purpose
+                                                            [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:61:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Chain [01;36m[Kchain[m[K ; /*! Robot kdl chain */
+              [01;36m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:289:5:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::unique_ptr<KDL::ChainJntToJacSolver> robotModel::chainjacsolver_[m[K' is private within this context
+     [01;31m[Kchainjacsolver_[m[K.reset(new KDL::ChainJntToJacSolver(chain));  // To get the jacobian
+     [01;31m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:51:45:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::unique_ptr<KDL::ChainJntToJacSolver> [01;36m[Kchainjacsolver_[m[K;
+                                             [01;36m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:289:56:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Chain robotModel::chain[m[K' is private within this context
+     chainjacsolver_.reset(new KDL::ChainJntToJacSolver([01;31m[Kchain[m[K));  // To get the jacobian
+                                                        [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:61:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Chain [01;36m[Kchain[m[K ; /*! Robot kdl chain */
+              [01;36m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:291:5:[m[K [01;31m[Kerror: [m[K'[01m[Kint robotModel::dof[m[K' is private within this context
+     [01;31m[Kdof[m[K = chain.getNrOfJoints();
+     [01;31m[K^~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:86:7:[m[K [01;36m[Knote: [m[Kdeclared private here
+   int [01;36m[Kdof[m[K; /*!< @brief Number of degrees of freedom of the robot */
+       [01;36m[K^~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:291:11:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Chain robotModel::chain[m[K' is private within this context
+     dof = [01;31m[Kchain[m[K.getNrOfJoints();
+           [01;31m[K^~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:61:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Chain [01;36m[Kchain[m[K ; /*! Robot kdl chain */
+              [01;36m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:292:27:[m[K [01;31m[Kerror: [m[K'[01m[Kint robotModel::dof[m[K' is private within this context
+     number_of_variables = [01;31m[Kdof[m[K;
+                           [01;31m[K^~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:86:7:[m[K [01;36m[Knote: [m[Kdeclared private here
+   int [01;36m[Kdof[m[K; /*!< @brief Number of degrees of freedom of the robot */
+       [01;36m[K^~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:293:30:[m[K [01;31m[Kerror: [m[K'[01m[Kint robotModel::dof[m[K' is private within this context
+     number_of_constraints_ = [01;31m[Kdof[m[K;
+                              [01;31m[K^~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:86:7:[m[K [01;36m[Knote: [m[Kdeclared private here
+   int [01;36m[Kdof[m[K; /*!< @brief Number of degrees of freedom of the robot */
+       [01;36m[K^~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[Kvoid Controller::Controller::do_publishing()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:307:22:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Frame robotModel::X_curr_[m[K' is private within this context
+     tf::poseKDLToMsg([01;31m[KX_curr_[m[K, X_curr_msg_);
+                      [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:69:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Frame [01;36m[KX_curr_[m[K; /*!< @brief KDL current Cartesian pose of the tip_link */
+              [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:308:22:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Frame robotModel::X_traj_[m[K' is private within this context
+     tf::poseKDLToMsg([01;31m[KX_traj_[m[K, X_traj_msg_);
+                      [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:70:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Frame [01;36m[KX_traj_[m[K; /*!< @brief KDL desired Cartesian pose of the tip_link */
+              [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:309:23:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Twist robotModel::X_err_[m[K' is private within this context
+     tf::twistKDLToMsg([01;31m[KX_err_[m[K, X_err_msg_);
+                       [01;31m[K^~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:73:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Twist [01;36m[KX_err_[m[K; /*!< @brief KDL desired Cartesian error between the desired and current pose */
+              [01;36m[K^~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:315:56:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::__cxx11::string robotModel::root_link_[m[K' is private within this context
+         panda_rundata_publisher.msg_.header.frame_id = [01;31m[Kroot_link_[m[K;
+                                                        [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:88:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::string [01;36m[Kroot_link_[m[K; /*!< @brief base link of the KDL chain */
+               [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:325:26:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Frame robotModel::X_curr_[m[K' is private within this context
+         tf::poseKDLToMsg([01;31m[KX_curr_[m[K, X_curr_msg_);
+                          [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:69:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Frame [01;36m[KX_curr_[m[K; /*!< @brief KDL current Cartesian pose of the tip_link */
+              [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:328:53:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::__cxx11::string robotModel::root_link_[m[K' is private within this context
+         pose_curr_publisher_.msg_.header.frame_id = [01;31m[Kroot_link_[m[K;
+                                                     [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:88:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::string [01;36m[Kroot_link_[m[K; /*!< @brief base link of the KDL chain */
+               [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:336:26:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Frame robotModel::X_traj_[m[K' is private within this context
+         tf::poseKDLToMsg([01;31m[KX_traj_[m[K, X_traj_msg_);
+                          [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:70:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Frame [01;36m[KX_traj_[m[K; /*!< @brief KDL desired Cartesian pose of the tip_link */
+              [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:339:52:[m[K [01;31m[Kerror: [m[K'[01m[Kstd::__cxx11::string robotModel::root_link_[m[K' is private within this context
+         pose_des_publisher_.msg_.header.frame_id = [01;31m[Kroot_link_[m[K;
+                                                    [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:88:15:[m[K [01;36m[Knote: [m[Kdeclared private here
+   std::string [01;36m[Kroot_link_[m[K; /*!< @brief base link of the KDL chain */
+               [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[Kbool Controller::Controller::updateUI(panda_mpc::UI::Request&, panda_mpc::UI::Response&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:352:25:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Frame robotModel::X_curr_[m[K' is private within this context
+         BuildTrajectory([01;31m[KX_curr_[m[K);
+                         [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:69:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Frame [01;36m[KX_curr_[m[K; /*!< @brief KDL current Cartesian pose of the tip_link */
+              [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[Kbool Controller::Controller::updateTrajectory(panda_traj::UpdateTrajectory::Request&, panda_traj::UpdateTrajectory::Response&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:368:20:[m[K [01;31m[Kerror: [m[K'[01m[KKDL::Frame robotModel::X_curr_[m[K' is private within this context
+   trajectory.Build([01;31m[KX_curr_[m[K, req.verbose);
+                    [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:69:14:[m[K [01;36m[Knote: [m[Kdeclared private here
+   KDL::Frame [01;36m[KX_curr_[m[K; /*!< @brief KDL current Cartesian pose of the tip_link */
+              [01;36m[K^~~~~~~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

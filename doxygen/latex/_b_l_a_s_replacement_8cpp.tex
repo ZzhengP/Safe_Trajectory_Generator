@@ -1,0 +1,46 @@
+\hypertarget{_b_l_a_s_replacement_8cpp}{}\section{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.2.1/src/\+B\+L\+A\+S\+Replacement.cpp File Reference}
+\label{_b_l_a_s_replacement_8cpp}\index{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/src/\+B\+L\+A\+S\+Replacement.\+cpp@{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/src/\+B\+L\+A\+S\+Replacement.\+cpp}}
+{\ttfamily \#include $<$qp\+O\+A\+S\+E\+S/\+Utils.\+hpp$>$}\newline
+Include dependency graph for B\+L\+A\+S\+Replacement.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_b_l_a_s_replacement_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_b_l_a_s_replacement_8cpp_aaa9a1e6d53a15dbcdf4948ad51783c2b}{dgemm\+\_\+} (const char $\ast$T\+R\+A\+N\+SA, const char $\ast$T\+R\+A\+N\+SB, const la\+\_\+uint\+\_\+t $\ast$M, const la\+\_\+uint\+\_\+t $\ast$N, const la\+\_\+uint\+\_\+t $\ast$K, const double $\ast$A\+L\+P\+HA, const double $\ast$A, const la\+\_\+uint\+\_\+t $\ast$L\+DA, const double $\ast$B, const la\+\_\+uint\+\_\+t $\ast$L\+DB, const double $\ast$B\+E\+TA, double $\ast$C, const la\+\_\+uint\+\_\+t $\ast$L\+DC)
+\item 
+void \hyperlink{_b_l_a_s_replacement_8cpp_a373b91b1078ef1bef3077c3407303eee}{sgemm\+\_\+} (const char $\ast$T\+R\+A\+N\+SA, const char $\ast$T\+R\+A\+N\+SB, const la\+\_\+uint\+\_\+t $\ast$M, const la\+\_\+uint\+\_\+t $\ast$N, const la\+\_\+uint\+\_\+t $\ast$K, const float $\ast$A\+L\+P\+HA, const float $\ast$A, const la\+\_\+uint\+\_\+t $\ast$L\+DA, const float $\ast$B, const la\+\_\+uint\+\_\+t $\ast$L\+DB, const float $\ast$B\+E\+TA, float $\ast$C, const la\+\_\+uint\+\_\+t $\ast$L\+DC)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Hans Joachim Ferreau, Andreas Potschka, Christian Kirches 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2007-\/2017
+\end{DoxyDate}
+B\+L\+AS Level 3 replacement routines. 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_b_l_a_s_replacement_8cpp_aaa9a1e6d53a15dbcdf4948ad51783c2b}\label{_b_l_a_s_replacement_8cpp_aaa9a1e6d53a15dbcdf4948ad51783c2b}} 
+\index{B\+L\+A\+S\+Replacement.\+cpp@{B\+L\+A\+S\+Replacement.\+cpp}!dgemm\+\_\+@{dgemm\+\_\+}}
+\index{dgemm\+\_\+@{dgemm\+\_\+}!B\+L\+A\+S\+Replacement.\+cpp@{B\+L\+A\+S\+Replacement.\+cpp}}
+\subsubsection{\texorpdfstring{dgemm\+\_\+()}{dgemm\_()}}
+{\footnotesize\ttfamily void dgemm\+\_\+ (\begin{DoxyParamCaption}\item[{const char $\ast$}]{,  }\item[{const char $\ast$}]{,  }\item[{const la\+\_\+uint\+\_\+t $\ast$}]{,  }\item[{const la\+\_\+uint\+\_\+t $\ast$}]{,  }\item[{const la\+\_\+uint\+\_\+t $\ast$}]{,  }\item[{const double $\ast$}]{,  }\item[{const double $\ast$}]{,  }\item[{const la\+\_\+uint\+\_\+t $\ast$}]{,  }\item[{const double $\ast$}]{,  }\item[{const la\+\_\+uint\+\_\+t $\ast$}]{,  }\item[{const double $\ast$}]{,  }\item[{double $\ast$}]{,  }\item[{const la\+\_\+uint\+\_\+t $\ast$}]{ }\end{DoxyParamCaption})}
+
+Performs one of the matrix-\/matrix operation in double precision. \mbox{\Hypertarget{_b_l_a_s_replacement_8cpp_a373b91b1078ef1bef3077c3407303eee}\label{_b_l_a_s_replacement_8cpp_a373b91b1078ef1bef3077c3407303eee}} 
+\index{B\+L\+A\+S\+Replacement.\+cpp@{B\+L\+A\+S\+Replacement.\+cpp}!sgemm\+\_\+@{sgemm\+\_\+}}
+\index{sgemm\+\_\+@{sgemm\+\_\+}!B\+L\+A\+S\+Replacement.\+cpp@{B\+L\+A\+S\+Replacement.\+cpp}}
+\subsubsection{\texorpdfstring{sgemm\+\_\+()}{sgemm\_()}}
+{\footnotesize\ttfamily void sgemm\+\_\+ (\begin{DoxyParamCaption}\item[{const char $\ast$}]{,  }\item[{const char $\ast$}]{,  }\item[{const la\+\_\+uint\+\_\+t $\ast$}]{,  }\item[{const la\+\_\+uint\+\_\+t $\ast$}]{,  }\item[{const la\+\_\+uint\+\_\+t $\ast$}]{,  }\item[{const float $\ast$}]{,  }\item[{const float $\ast$}]{,  }\item[{const la\+\_\+uint\+\_\+t $\ast$}]{,  }\item[{const float $\ast$}]{,  }\item[{const la\+\_\+uint\+\_\+t $\ast$}]{,  }\item[{const float $\ast$}]{,  }\item[{float $\ast$}]{,  }\item[{const la\+\_\+uint\+\_\+t $\ast$}]{ }\end{DoxyParamCaption})}
+
+Performs one of the matrix-\/matrix operation in single precision. 

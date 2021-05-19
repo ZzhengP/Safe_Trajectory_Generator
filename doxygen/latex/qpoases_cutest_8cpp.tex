@@ -1,0 +1,60 @@
+\hypertarget{qpoases_cutest_8cpp}{}\section{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.2.1/interfaces/\+C\+U\+T\+Est/qpoases\+Cutest.cpp File Reference}
+\label{qpoases_cutest_8cpp}\index{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/interfaces/\+C\+U\+T\+Est/qpoases\+Cutest.\+cpp@{/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/interfaces/\+C\+U\+T\+Est/qpoases\+Cutest.\+cpp}}
+{\ttfamily \#include $<$qp\+O\+A\+S\+E\+S.\+hpp$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$cutest.\+h$>$}\newline
+Include dependency graph for qpoases\+Cutest.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{qpoases_cutest_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{qpoases_cutest_8cpp_a0dfa6e7d5b30e528e90215bce0cc8a1a}\label{qpoases_cutest_8cpp_a0dfa6e7d5b30e528e90215bce0cc8a1a}} 
+\#define {\bfseries S\+O\+L\+V\+E\+\_\+\+D\+E\+N\+SE}~0          /$\ast$ Standard qp\+O\+A\+S\+ES, matrices passed dense $\ast$/
+\item 
+\mbox{\Hypertarget{qpoases_cutest_8cpp_aeacb968af4a27ba5e30917a2bab9d199}\label{qpoases_cutest_8cpp_aeacb968af4a27ba5e30917a2bab9d199}} 
+\#define {\bfseries S\+O\+L\+V\+E\+\_\+\+S\+P\+A\+R\+SE}~0          /$\ast$ Standard qp\+O\+A\+S\+ES, matrices passed sparse $\ast$/
+\item 
+\mbox{\Hypertarget{qpoases_cutest_8cpp_a145c4fe11d71b3d1ac2ffaf75d938425}\label{qpoases_cutest_8cpp_a145c4fe11d71b3d1ac2ffaf75d938425}} 
+\#define {\bfseries S\+O\+L\+V\+E\+\_\+\+S\+C\+H\+UR}~1          /$\ast$ Schur complement qp\+O\+A\+S\+ES $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{qpoases_cutest_8cpp_a856509c3143b86431a44e92069cb2d11}\label{qpoases_cutest_8cpp_a856509c3143b86431a44e92069cb2d11}} 
+int {\bfseries convert\+Triplet\+To\+Hbf} (int m, int n, int nnz, double $\ast$vals, int $\ast$i\+Row, int $\ast$j\+Col, double $\ast$vals\+\_\+hbf, int $\ast$i\+Row\+\_\+hbf, int $\ast$j\+Col\+\_\+hbf)
+\item 
+int \hyperlink{qpoases_cutest_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Dennis Janka 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2015-\/2017
+\end{DoxyDate}
+Solve the C\+U\+T\+Est problem in prob/ subdirectory 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{qpoases_cutest_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{qpoases_cutest_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{qpoases\+Cutest.\+cpp@{qpoases\+Cutest.\+cpp}!main@{main}}
+\index{main@{main}!qpoases\+Cutest.\+cpp@{qpoases\+Cutest.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000001}{Todo}]I have not tested this \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\hyperlink{todo__todo000002}{Todo}]should do this based on y\+Init (take care of signs of lambda) \end{DoxyRefDesc}

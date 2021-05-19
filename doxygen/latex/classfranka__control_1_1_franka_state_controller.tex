@@ -1,0 +1,88 @@
+\hypertarget{classfranka__control_1_1_franka_state_controller}{}\section{franka\+\_\+control\+:\+:Franka\+State\+Controller Class Reference}
+\label{classfranka__control_1_1_franka_state_controller}\index{franka\+\_\+control\+::\+Franka\+State\+Controller@{franka\+\_\+control\+::\+Franka\+State\+Controller}}
+
+
+{\ttfamily \#include $<$franka\+\_\+state\+\_\+controller.\+h$>$}
+
+
+
+Inheritance diagram for franka\+\_\+control\+:\+:Franka\+State\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfranka__control_1_1_franka_state_controller__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for franka\+\_\+control\+:\+:Franka\+State\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfranka__control_1_1_franka_state_controller__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfranka__control_1_1_franka_state_controller_a6207d8555975e26ed6a3cfcbb40c7397}{Franka\+State\+Controller} ()=default
+\item 
+bool \hyperlink{classfranka__control_1_1_franka_state_controller_aa8929333f04012a8b1b9049a5264e157}{init} (hardware\+\_\+interface\+::\+Robot\+HW $\ast$robot\+\_\+hardware, ros\+::\+Node\+Handle \&root\+\_\+node\+\_\+handle, ros\+::\+Node\+Handle \&controller\+\_\+node\+\_\+handle) override
+\item 
+void \hyperlink{classfranka__control_1_1_franka_state_controller_ad7a282e355860395576ff4d116bbbb7b}{update} (const ros\+::\+Time \&time, const ros\+::\+Duration \&period) override
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Controller to publish the robot state as R\+OS topics. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfranka__control_1_1_franka_state_controller_a6207d8555975e26ed6a3cfcbb40c7397}\label{classfranka__control_1_1_franka_state_controller_a6207d8555975e26ed6a3cfcbb40c7397}} 
+\index{franka\+\_\+control\+::\+Franka\+State\+Controller@{franka\+\_\+control\+::\+Franka\+State\+Controller}!Franka\+State\+Controller@{Franka\+State\+Controller}}
+\index{Franka\+State\+Controller@{Franka\+State\+Controller}!franka\+\_\+control\+::\+Franka\+State\+Controller@{franka\+\_\+control\+::\+Franka\+State\+Controller}}
+\subsubsection{\texorpdfstring{Franka\+State\+Controller()}{FrankaStateController()}}
+{\footnotesize\ttfamily franka\+\_\+control\+::\+Franka\+State\+Controller\+::\+Franka\+State\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Creates an instance of a \hyperlink{classfranka__control_1_1_franka_state_controller}{Franka\+State\+Controller}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfranka__control_1_1_franka_state_controller_aa8929333f04012a8b1b9049a5264e157}\label{classfranka__control_1_1_franka_state_controller_aa8929333f04012a8b1b9049a5264e157}} 
+\index{franka\+\_\+control\+::\+Franka\+State\+Controller@{franka\+\_\+control\+::\+Franka\+State\+Controller}!init@{init}}
+\index{init@{init}!franka\+\_\+control\+::\+Franka\+State\+Controller@{franka\+\_\+control\+::\+Franka\+State\+Controller}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool franka\+\_\+control\+::\+Franka\+State\+Controller\+::init (\begin{DoxyParamCaption}\item[{hardware\+\_\+interface\+::\+Robot\+HW $\ast$}]{robot\+\_\+hardware,  }\item[{ros\+::\+Node\+Handle \&}]{root\+\_\+node\+\_\+handle,  }\item[{ros\+::\+Node\+Handle \&}]{controller\+\_\+node\+\_\+handle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Initializes the controller with interfaces and publishers.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em robot\+\_\+hardware} & Robot\+HW instance to get a \hyperlink{classfranka__hw_1_1_franka_state_interface}{franka\+\_\+hw\+::\+Franka\+State\+Interface} from. \\
+\hline
+\mbox{\tt in}  & {\em root\+\_\+node\+\_\+handle} & Node handle in the controller\+\_\+manager namespace. \\
+\hline
+\mbox{\tt in}  & {\em controller\+\_\+node\+\_\+handle} & Node handle in the controller namespace. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classfranka__control_1_1_franka_state_controller_ad7a282e355860395576ff4d116bbbb7b}\label{classfranka__control_1_1_franka_state_controller_ad7a282e355860395576ff4d116bbbb7b}} 
+\index{franka\+\_\+control\+::\+Franka\+State\+Controller@{franka\+\_\+control\+::\+Franka\+State\+Controller}!update@{update}}
+\index{update@{update}!franka\+\_\+control\+::\+Franka\+State\+Controller@{franka\+\_\+control\+::\+Franka\+State\+Controller}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void franka\+\_\+control\+::\+Franka\+State\+Controller\+::update (\begin{DoxyParamCaption}\item[{const ros\+::\+Time \&}]{time,  }\item[{const ros\+::\+Duration \&}]{period }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Reads the current robot state from the \hyperlink{classfranka__hw_1_1_franka_state_interface}{franka\+\_\+hw\+::\+Franka\+State\+Interface} and publishes it.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em time} & Current R\+OS time. \\
+\hline
+\mbox{\tt in}  & {\em period} & Time since the last update. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/franka\+\_\+ros/franka\+\_\+control/include/franka\+\_\+control/franka\+\_\+state\+\_\+controller.\+h\item 
+/home/zheng/catkin\+\_\+ws/src/franka\+\_\+ros/franka\+\_\+control/src/franka\+\_\+state\+\_\+controller.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,190 @@
+\hypertarget{class_sparse_solver}{}\section{Sparse\+Solver Class Reference}
+\label{class_sparse_solver}\index{Sparse\+Solver@{Sparse\+Solver}}
+
+
+Base class for linear solvers that are used in a Schur-\/complement implementation in qp\+O\+A\+S\+ES.  
+
+
+
+
+{\ttfamily \#include $<$Sparse\+Solver.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_sparse_solver_a2110cd4c01cd32d500d0669f400aa62e}{Sparse\+Solver} ()
+\item 
+\hyperlink{class_sparse_solver_a4e3fe2c55996dac04f32799ab1c9dfe4}{Sparse\+Solver} (const \hyperlink{class_sparse_solver}{Sparse\+Solver} \&rhs)
+\item 
+virtual \hyperlink{class_sparse_solver_a3caecef282cba18aa863de94135f9617}{$\sim$\+Sparse\+Solver} ()
+\item 
+virtual \hyperlink{class_sparse_solver}{Sparse\+Solver} \& \hyperlink{class_sparse_solver_a1215b429a4ca226cac50b67ca78ec78a}{operator=} (const \hyperlink{class_sparse_solver}{Sparse\+Solver} \&rhs)
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_solver_a875146c92fbf3ea67cfc17233ba391e9}{set\+Matrix\+Data} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} dim, \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} num\+Nonzeros, const \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$const airn, const \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$const acjn, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const avals)=0
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_solver_a9005259bc966a2339b3dbf9a6229b9f6}{factorize} ()=0
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_solver_a9d643b71416b4ac87de8bc1a5ac191be}{solve} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} dim, const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const rhs, \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const sol)=0
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_solver_a917d966b021d7d116780d3cec3a196d8}{reset} ()
+\item 
+virtual \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_sparse_solver_aec58a68072134a812784d6dc92282f4d}{get\+Negative\+Eigenvalues} ()
+\item 
+virtual \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} \hyperlink{class_sparse_solver_a99e865b040662425f112e48cb74aa9ce}{get\+Rank} ()
+\item 
+virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_solver_a0c5a2e2132ccec5732252f1786998406}{get\+Zero\+Pivots} (\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$\&zero\+Pivots)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_solver_a3471628e99d49f5c2ec94573f00d7f9c}{clear} ()
+\item 
+\hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} \hyperlink{class_sparse_solver_a0d39524a52ac941663c6789d00282494}{copy} (const \hyperlink{class_sparse_solver}{Sparse\+Solver} \&rhs)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for linear solvers that are used in a Schur-\/complement implementation in qp\+O\+A\+S\+ES. 
+
+\begin{DoxyAuthor}{Author}
+Andreas Waechter, Dennis Janka 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+3.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2012-\/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sparse_solver_a2110cd4c01cd32d500d0669f400aa62e}\label{class_sparse_solver_a2110cd4c01cd32d500d0669f400aa62e}} 
+\index{Sparse\+Solver@{Sparse\+Solver}!Sparse\+Solver@{Sparse\+Solver}}
+\index{Sparse\+Solver@{Sparse\+Solver}!Sparse\+Solver@{Sparse\+Solver}}
+\subsubsection{\texorpdfstring{Sparse\+Solver()}{SparseSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_afd127fcb3c8f47975e9fa0ec2bacde52}{B\+E\+G\+I\+N\+\_\+\+N\+A\+M\+E\+S\+P\+A\+C\+E\+\_\+\+Q\+P\+O\+A\+S\+ES} Sparse\+Solver\+::\+Sparse\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. \mbox{\Hypertarget{class_sparse_solver_a4e3fe2c55996dac04f32799ab1c9dfe4}\label{class_sparse_solver_a4e3fe2c55996dac04f32799ab1c9dfe4}} 
+\index{Sparse\+Solver@{Sparse\+Solver}!Sparse\+Solver@{Sparse\+Solver}}
+\index{Sparse\+Solver@{Sparse\+Solver}!Sparse\+Solver@{Sparse\+Solver}}
+\subsubsection{\texorpdfstring{Sparse\+Solver()}{SparseSolver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sparse\+Solver\+::\+Sparse\+Solver (\begin{DoxyParamCaption}\item[{const \hyperlink{class_sparse_solver}{Sparse\+Solver} \&}]{rhs }\end{DoxyParamCaption})}
+
+Copy constructor (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sparse_solver_a3caecef282cba18aa863de94135f9617}\label{class_sparse_solver_a3caecef282cba18aa863de94135f9617}} 
+\index{Sparse\+Solver@{Sparse\+Solver}!````~Sparse\+Solver@{$\sim$\+Sparse\+Solver}}
+\index{````~Sparse\+Solver@{$\sim$\+Sparse\+Solver}!Sparse\+Solver@{Sparse\+Solver}}
+\subsubsection{\texorpdfstring{$\sim$\+Sparse\+Solver()}{~SparseSolver()}}
+{\footnotesize\ttfamily Sparse\+Solver\+::$\sim$\+Sparse\+Solver (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Destructor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sparse_solver_a3471628e99d49f5c2ec94573f00d7f9c}\label{class_sparse_solver_a3471628e99d49f5c2ec94573f00d7f9c}} 
+\index{Sparse\+Solver@{Sparse\+Solver}!clear@{clear}}
+\index{clear@{clear}!Sparse\+Solver@{Sparse\+Solver}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Solver\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Frees all allocated memory. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sparse_solver_a0d39524a52ac941663c6789d00282494}\label{class_sparse_solver_a0d39524a52ac941663c6789d00282494}} 
+\index{Sparse\+Solver@{Sparse\+Solver}!copy@{copy}}
+\index{copy@{copy}!Sparse\+Solver@{Sparse\+Solver}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Solver\+::copy (\begin{DoxyParamCaption}\item[{const \hyperlink{class_sparse_solver}{Sparse\+Solver} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Copies all members from given rhs object. \begin{DoxyReturn}{Returns}
+S\+U\+C\+C\+E\+S\+S\+F\+U\+L\+\_\+\+R\+E\+T\+U\+RN 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sparse_solver_a9005259bc966a2339b3dbf9a6229b9f6}\label{class_sparse_solver_a9005259bc966a2339b3dbf9a6229b9f6}} 
+\index{Sparse\+Solver@{Sparse\+Solver}!factorize@{factorize}}
+\index{factorize@{factorize}!Sparse\+Solver@{Sparse\+Solver}}
+\subsubsection{\texorpdfstring{factorize()}{factorize()}}
+{\footnotesize\ttfamily virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Solver\+::factorize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Compute factorization of current matrix. This method must be called before solve. \mbox{\Hypertarget{class_sparse_solver_aec58a68072134a812784d6dc92282f4d}\label{class_sparse_solver_aec58a68072134a812784d6dc92282f4d}} 
+\index{Sparse\+Solver@{Sparse\+Solver}!get\+Negative\+Eigenvalues@{get\+Negative\+Eigenvalues}}
+\index{get\+Negative\+Eigenvalues@{get\+Negative\+Eigenvalues}!Sparse\+Solver@{Sparse\+Solver}}
+\subsubsection{\texorpdfstring{get\+Negative\+Eigenvalues()}{getNegativeEigenvalues()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Sparse\+Solver\+::get\+Negative\+Eigenvalues (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return the number of negative eigenvalues. \mbox{\Hypertarget{class_sparse_solver_a99e865b040662425f112e48cb74aa9ce}\label{class_sparse_solver_a99e865b040662425f112e48cb74aa9ce}} 
+\index{Sparse\+Solver@{Sparse\+Solver}!get\+Rank@{get\+Rank}}
+\index{get\+Rank@{get\+Rank}!Sparse\+Solver@{Sparse\+Solver}}
+\subsubsection{\texorpdfstring{get\+Rank()}{getRank()}}
+{\footnotesize\ttfamily \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} Sparse\+Solver\+::get\+Rank (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Return the rank after a factorization \mbox{\Hypertarget{class_sparse_solver_a0c5a2e2132ccec5732252f1786998406}\label{class_sparse_solver_a0c5a2e2132ccec5732252f1786998406}} 
+\index{Sparse\+Solver@{Sparse\+Solver}!get\+Zero\+Pivots@{get\+Zero\+Pivots}}
+\index{get\+Zero\+Pivots@{get\+Zero\+Pivots}!Sparse\+Solver@{Sparse\+Solver}}
+\subsubsection{\texorpdfstring{get\+Zero\+Pivots()}{getZeroPivots()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Solver\+::get\+Zero\+Pivots (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$\&}]{zero\+Pivots }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns the zero pivots in case the matrix is rank deficient \mbox{\Hypertarget{class_sparse_solver_a1215b429a4ca226cac50b67ca78ec78a}\label{class_sparse_solver_a1215b429a4ca226cac50b67ca78ec78a}} 
+\index{Sparse\+Solver@{Sparse\+Solver}!operator=@{operator=}}
+\index{operator=@{operator=}!Sparse\+Solver@{Sparse\+Solver}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \hyperlink{class_sparse_solver}{Sparse\+Solver} \& Sparse\+Solver\+::operator= (\begin{DoxyParamCaption}\item[{const \hyperlink{class_sparse_solver}{Sparse\+Solver} \&}]{rhs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Assignment operator (deep copy). 
+\begin{DoxyParams}{Parameters}
+{\em rhs} & Rhs object. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sparse_solver_a917d966b021d7d116780d3cec3a196d8}\label{class_sparse_solver_a917d966b021d7d116780d3cec3a196d8}} 
+\index{Sparse\+Solver@{Sparse\+Solver}!reset@{reset}}
+\index{reset@{reset}!Sparse\+Solver@{Sparse\+Solver}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Solver\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Clears all data structures. \mbox{\Hypertarget{class_sparse_solver_a875146c92fbf3ea67cfc17233ba391e9}\label{class_sparse_solver_a875146c92fbf3ea67cfc17233ba391e9}} 
+\index{Sparse\+Solver@{Sparse\+Solver}!set\+Matrix\+Data@{set\+Matrix\+Data}}
+\index{set\+Matrix\+Data@{set\+Matrix\+Data}!Sparse\+Solver@{Sparse\+Solver}}
+\subsubsection{\texorpdfstring{set\+Matrix\+Data()}{setMatrixData()}}
+{\footnotesize\ttfamily virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Solver\+::set\+Matrix\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{dim,  }\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{num\+Nonzeros,  }\item[{const \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$const}]{airn,  }\item[{const \hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t} $\ast$const}]{acjn,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{avals }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set new matrix data. The matrix is to be provided in the Harwell-\/\+Boeing format. Only the lower triangular part should be set. 
+\begin{DoxyParams}{Parameters}
+{\em dim} & Dimension of the linear system. \\
+\hline
+{\em num\+Nonzeros} & Number of nonzeros in the matrix. \\
+\hline
+{\em airn} & Row indices for each matrix entry. \\
+\hline
+{\em acjn} & Column indices for each matrix entry. \\
+\hline
+{\em avals} & Values for each matrix entry. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_sparse_solver_a9d643b71416b4ac87de8bc1a5ac191be}\label{class_sparse_solver_a9d643b71416b4ac87de8bc1a5ac191be}} 
+\index{Sparse\+Solver@{Sparse\+Solver}!solve@{solve}}
+\index{solve@{solve}!Sparse\+Solver@{Sparse\+Solver}}
+\subsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily virtual \hyperlink{_message_handling_8hpp_a81d556f613bfbabd0b1f9488c0fa865e}{return\+Value} Sparse\+Solver\+::solve (\begin{DoxyParamCaption}\item[{\hyperlink{_types_8hpp_ab6fd6105e64ed14a0c9281326f05e623}{int\+\_\+t}}]{dim,  }\item[{const \hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{rhs,  }\item[{\hyperlink{qp_o_a_s_e_s__wrapper_8h_a0d00e2b3dfadee81331bbb39068570c4}{real\+\_\+t} $\ast$const}]{sol }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Solve linear system with most recently set matrix data. 
+\begin{DoxyParams}{Parameters}
+{\em dim} & Dimension of the linear system. \\
+\hline
+{\em rhs} & Values for the right hand side. \\
+\hline
+{\em sol} & Solution of the linear system. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/include/qp\+O\+A\+S\+E\+S/\hyperlink{_sparse_solver_8hpp}{Sparse\+Solver.\+hpp}\item 
+/home/zheng/catkin\+\_\+ws/src/qp\+O\+A\+S\+E\+S-\/3.\+2.\+1/src/\hyperlink{_sparse_solver_8cpp}{Sparse\+Solver.\+cpp}\end{DoxyCompactItemize}

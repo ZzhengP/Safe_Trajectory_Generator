@@ -45,6 +45,7 @@ add_message_files(
 add_service_files(
   FILES
   UI.srv
+  UpdateTrajectoryNextPoint.srv
 )
 
 generate_messages(
@@ -98,6 +99,7 @@ include_directories(include ${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS} ${EIGEN3
 add_library(panda_mpc
             src/panda_simulation.cpp
             src/panda_controller.cpp
+            src/robot_model.cpp
             src/controller.cpp)
 
 target_include_directories(panda_mpc SYSTEM PUBLIC include

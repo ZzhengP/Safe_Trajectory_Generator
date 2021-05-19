@@ -1,0 +1,76 @@
+\hypertarget{classfranka__hw_1_1_franka_state_handle}{}\section{franka\+\_\+hw\+:\+:Franka\+State\+Handle Class Reference}
+\label{classfranka__hw_1_1_franka_state_handle}\index{franka\+\_\+hw\+::\+Franka\+State\+Handle@{franka\+\_\+hw\+::\+Franka\+State\+Handle}}
+
+
+{\ttfamily \#include $<$franka\+\_\+state\+\_\+interface.\+h$>$}
+
+
+
+Inheritance diagram for franka\+\_\+hw\+:\+:Franka\+State\+Handle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classfranka__hw_1_1_franka_state_handle__inherit__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfranka__hw_1_1_franka_state_handle_aa1e678a0ad409591d0ee19b9e45f19c6}{Franka\+State\+Handle} (const std\+::string \&name, franka\+::\+Robot\+State \&robot\+\_\+state)
+\item 
+const std\+::string \& \hyperlink{classfranka__hw_1_1_franka_state_handle_a8b1665ba53cdb85555b0e0ca6de58d0f}{get\+Name} () const noexcept
+\item 
+const franka\+::\+Robot\+State \& \hyperlink{classfranka__hw_1_1_franka_state_handle_a6e0be7a9ae6e86394ea273f9a84c11cb}{get\+Robot\+State} () const noexcept
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handle to read the complete state of a robot. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_state_handle_aa1e678a0ad409591d0ee19b9e45f19c6}\label{classfranka__hw_1_1_franka_state_handle_aa1e678a0ad409591d0ee19b9e45f19c6}} 
+\index{franka\+\_\+hw\+::\+Franka\+State\+Handle@{franka\+\_\+hw\+::\+Franka\+State\+Handle}!Franka\+State\+Handle@{Franka\+State\+Handle}}
+\index{Franka\+State\+Handle@{Franka\+State\+Handle}!franka\+\_\+hw\+::\+Franka\+State\+Handle@{franka\+\_\+hw\+::\+Franka\+State\+Handle}}
+\subsubsection{\texorpdfstring{Franka\+State\+Handle()}{FrankaStateHandle()}}
+{\footnotesize\ttfamily franka\+\_\+hw\+::\+Franka\+State\+Handle\+::\+Franka\+State\+Handle (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{franka\+::\+Robot\+State \&}]{robot\+\_\+state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates an instance of a \hyperlink{classfranka__hw_1_1_franka_state_handle}{Franka\+State\+Handle}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em name} & The name of the state handle. \\
+\hline
+\mbox{\tt in}  & {\em robot\+\_\+state} & A reference to the robot state wrapped by this handle. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_state_handle_a8b1665ba53cdb85555b0e0ca6de58d0f}\label{classfranka__hw_1_1_franka_state_handle_a8b1665ba53cdb85555b0e0ca6de58d0f}} 
+\index{franka\+\_\+hw\+::\+Franka\+State\+Handle@{franka\+\_\+hw\+::\+Franka\+State\+Handle}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!franka\+\_\+hw\+::\+Franka\+State\+Handle@{franka\+\_\+hw\+::\+Franka\+State\+Handle}}
+\subsubsection{\texorpdfstring{get\+Name()}{getName()}}
+{\footnotesize\ttfamily const std\+::string\& franka\+\_\+hw\+::\+Franka\+State\+Handle\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Gets the name of the state handle.
+
+\begin{DoxyReturn}{Returns}
+Name of the state handle. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classfranka__hw_1_1_franka_state_handle_a6e0be7a9ae6e86394ea273f9a84c11cb}\label{classfranka__hw_1_1_franka_state_handle_a6e0be7a9ae6e86394ea273f9a84c11cb}} 
+\index{franka\+\_\+hw\+::\+Franka\+State\+Handle@{franka\+\_\+hw\+::\+Franka\+State\+Handle}!get\+Robot\+State@{get\+Robot\+State}}
+\index{get\+Robot\+State@{get\+Robot\+State}!franka\+\_\+hw\+::\+Franka\+State\+Handle@{franka\+\_\+hw\+::\+Franka\+State\+Handle}}
+\subsubsection{\texorpdfstring{get\+Robot\+State()}{getRobotState()}}
+{\footnotesize\ttfamily const franka\+::\+Robot\+State\& franka\+\_\+hw\+::\+Franka\+State\+Handle\+::get\+Robot\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+Gets the current robot state.
+
+\begin{DoxyReturn}{Returns}
+Current robot state. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/franka\+\_\+ros/franka\+\_\+hw/include/franka\+\_\+hw/franka\+\_\+state\+\_\+interface.\+h\end{DoxyCompactItemize}
