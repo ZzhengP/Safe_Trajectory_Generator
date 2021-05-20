@@ -34,6 +34,10 @@
 #include "ros/time.h"
 #include <geometry_msgs/PoseStamped.h>
 #include <Eigen/Core>
+#include <robot/robot_mpc_model.h>
+
+
+using namespace robot;
 
 class pointSender
 {
@@ -108,17 +112,44 @@ int main(int argc, char** argv )
     ros::NodeHandle node_handle;
     ros::Rate loop_rate(10);
 
+    int N = 1;
+    double dt = 0.05;
+    std::string root_link;
+    std::string tip_link;
 
-    pointSender pointsender(node_handle);
+    node_handle.getParam("/panda_mpc/N_", N);
+    node_handle.getParam("/panda_mpc/dt_", dt);
+    node_handle.getParam("/panda_mpc/root_link_", root_link);
+    node_handle.getParam("/panda_mpc/tip_link_", tip_link);
 
-    while (ros::ok()){
+    Eigen::VectorXd q_init, qd_init;
+    q_init.resize(7), qd_init.resize(7);
+    q_init << 0.0087, -0.1051, 0.0110, -2.279, 0.0018, 2.1754, 0.019;
+    qd_init.setZero();
+//=======================================================
+//   pointSender pointsender(node_handle);
+
+//    while (ros::ok()){
 
 
 
 
-      ros::spinOnce();
-      loop_rate.sleep();
+//      ros::spinOnce();
+//      loop_rate.sleep();
+//    }
+//=======================================================
+
+    std::shared_ptr<robot::RobotMPcModel> robot_mpc_model;
+
+    robot_mpc_model.reset(new robot::RobotMPcModel(node_handle,root_link,tip_link,N,dt,q_init,qd_init));
+
+    if(!robot_mpc_model->InitMPCParameter(node_handle)){
+      ROS_ERROR_STREAM("Failed to initialize Model Predictive Control ");
+    }else {
+      ROS_INFO_STREAM("Success to initialize Model Predictive Control ");
     }
+
+
     return 0;
 
 }

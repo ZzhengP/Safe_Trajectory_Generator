@@ -1,0 +1,30 @@
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_eus
+[ 16%] Built target panda_mpc_gencfg
+[ 16%] Built target std_msgs_generate_messages_eus
+[ 16%] Built target _panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint
+[ 16%] Built target _panda_mpc_generate_messages_check_deps_PandaRunMsg
+[ 16%] Built target sensor_msgs_generate_messages_py
+[ 16%] Built target geometry_msgs_generate_messages_py
+[ 16%] Built target _panda_mpc_generate_messages_check_deps_UI
+[ 35%] Built target panda_mpc
+[ 35%] Built target std_msgs_generate_messages_py
+[ 35%] Built target sensor_msgs_generate_messages_lisp
+[ 35%] Built target geometry_msgs_generate_messages_lisp
+[ 35%] Built target std_msgs_generate_messages_nodejs
+[ 35%] Built target std_msgs_generate_messages_lisp
+[ 35%] Built target sensor_msgs_generate_messages_nodejs
+[ 35%] Built target geometry_msgs_generate_messages_nodejs
+[ 35%] Built target geometry_msgs_generate_messages_cpp
+[ 35%] Built target sensor_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target trajectory_send[0m
+[ 35%] Built target std_msgs_generate_messages_cpp
+[ 48%] Built target panda_mpc_generate_messages_eus
+[ 51%] [32mBuilding CXX object examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o[0m
+[ 67%] Built target panda_mpc_generate_messages_py
+[ 77%] Built target panda_mpc_generate_messages_lisp
+[ 87%] Built target panda_mpc_generate_messages_nodejs
+[ 96%] Built target panda_mpc_generate_messages_cpp
+[ 96%] Built target panda_mpc_generate_messages
+[100%] [32m[1mLinking CXX executable /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/trajectory_send[0m
+[100%] Built target trajectory_send

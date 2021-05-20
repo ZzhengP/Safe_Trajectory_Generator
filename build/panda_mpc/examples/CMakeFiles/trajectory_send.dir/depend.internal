@@ -19,6 +19,8 @@ examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o
  /home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp
  /home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp
  /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h
+ /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h
+ /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h
  /home/zheng/catkin_ws/src/panda_traj/include/panda_traj/panda_traj.hpp
  /home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES.hpp
  /home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES/Bounds.hpp

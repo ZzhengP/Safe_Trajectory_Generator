@@ -22,3 +22,5 @@ panda_mpc:
     torque_max_ : [87.0 , 87.0 , 87.0 , 87.0 , 12.0 , 12.0 , 12.0]
 
     regularisation_weight_ : 1.0e-5
+    N_ : 5
+    dt_ : 0.05

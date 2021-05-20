@@ -285,6 +285,8 @@ eigen_conversions/eigen_msg.h
 -
 panda_traj/panda_traj.hpp
 -
+robot/robot_model.h
+-
 
 /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h
 memory
@@ -348,6 +350,10 @@ kdl/chainjnttojacsolver.hpp
 kdl/jntspaceinertiamatrix.hpp
 -
 
+/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h
+robot/robot_model.h
+-
+
 /home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp
 controller/controller.hpp
 -
@@ -396,6 +402,10 @@ Eigen/Dense
 
 /home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp
 robot/robot_model.h
+-
+
+/home/zheng/catkin_ws/src/panda_mpc/src/robot_mpc_model.cpp
+robot/robot_mpc_model.h
 -
 
 /home/zheng/catkin_ws/src/panda_traj/include/panda_traj/panda_traj.hpp

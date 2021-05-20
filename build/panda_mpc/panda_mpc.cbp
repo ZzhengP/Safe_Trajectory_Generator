@@ -1659,6 +1659,9 @@
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/robot_mpc_model.cpp">
+			<Option target="panda_mpc"/>
+		</Unit>
 		<Unit filename="/usr/src/googletest/googlemock/src/gmock-all.cc">
 			<Option target="gmock_main"/>
 			<Option target="gmock"/>

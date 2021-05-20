@@ -1,0 +1,323 @@
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:[m[K In constructor '[01m[Krobot::robotModel::robotModel(ros::NodeHandle&, const string&, const string&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:47:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KgetParam(const char [14], unsigned int&)[m[K'
+       node_handle.getParam("/panda_mpc/N_", N_[01;31m[K)[m[K;
+                                               [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:10:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1683:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, double&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, double& d) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1683:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kdouble&[m[K' to an rvalue of type '[01m[Kdouble[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:10:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1694:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, float&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, float& f) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1694:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kfloat&[m[K' to an rvalue of type '[01m[Kfloat[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:10:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1705:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, int&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, int& i) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1705:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kint&[m[K' to an rvalue of type '[01m[Kint[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:10:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1716:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, bool&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, bool& b) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1716:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kbool&[m[K' to an rvalue of type '[01m[Kbool[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:10:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1727:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, XmlRpc::XmlRpcValue&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, XmlRpc::XmlRpcValue& v) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1727:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:47:[m[K [01;31m[Kerror: [m[Kconversion from '[01m[Kunsigned int[m[K' to '[01m[KXmlRpc::XmlRpcValue[m[K' is ambiguous
+       node_handle.getParam("/panda_mpc/N_", N_[01;31m[K)[m[K;
+                                               [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/node_handle.h:52:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:10[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h:51:5:[m[K [01;36m[Knote: [m[Kcandidate: XmlRpc::XmlRpcValue::XmlRpcValue(double)
+     [01;36m[KXmlRpcValue[m[K(double value)  : _type(TypeDouble) { _value.asDouble = value; }
+     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h:50:5:[m[K [01;36m[Knote: [m[Kcandidate: XmlRpc::XmlRpcValue::XmlRpcValue(int)
+     [01;36m[KXmlRpcValue[m[K(int value)  : _type(TypeInt) { _value.asInt = value; }
+     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h:49:5:[m[K [01;36m[Knote: [m[Kcandidate: XmlRpc::XmlRpcValue::XmlRpcValue(bool)
+     [01;36m[KXmlRpcValue[m[K(bool value) : _type(TypeBoolean) { _value.asBool = value; }
+     [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:[m[K In constructor '[01m[Krobot::robotModel::robotModel(ros::NodeHandle&, const string&, const string&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:47:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KgetParam(const char [14], unsigned int&)[m[K'
+       node_handle.getParam("/panda_mpc/N_", N_[01;31m[K)[m[K;
+                                               [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1683:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, double&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, double& d) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1683:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kdouble&[m[K' to an rvalue of type '[01m[Kdouble[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1694:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, float&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, float& f) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1694:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kfloat&[m[K' to an rvalue of type '[01m[Kfloat[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1705:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, int&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, int& i) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1705:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kint&[m[K' to an rvalue of type '[01m[Kint[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1716:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, bool&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, bool& b) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1716:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kbool&[m[K' to an rvalue of type '[01m[Kbool[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1727:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, XmlRpc::XmlRpcValue&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, XmlRpc::XmlRpcValue& v) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1727:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:47:[m[K [01;31m[Kerror: [m[Kconversion from '[01m[Kunsigned int[m[K' to '[01m[KXmlRpc::XmlRpcValue[m[K' is ambiguous
+       node_handle.getParam("/panda_mpc/N_", N_[01;31m[K)[m[K;
+                                               [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/node_handle.h:52:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h:51:5:[m[K [01;36m[Knote: [m[Kcandidate: XmlRpc::XmlRpcValue::XmlRpcValue(double)
+     [01;36m[KXmlRpcValue[m[K(double value)  : _type(TypeDouble) { _value.asDouble = value; }
+     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h:50:5:[m[K [01;36m[Knote: [m[Kcandidate: XmlRpc::XmlRpcValue::XmlRpcValue(int)
+     [01;36m[KXmlRpcValue[m[K(int value)  : _type(TypeInt) { _value.asInt = value; }
+     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h:49:5:[m[K [01;36m[Knote: [m[Kcandidate: XmlRpc::XmlRpcValue::XmlRpcValue(bool)
+     [01;36m[KXmlRpcValue[m[K(bool value) : _type(TypeBoolean) { _value.asBool = value; }
+     [01;36m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:11[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:[m[K In constructor '[01m[Krobot::robotModel::robotModel(ros::NodeHandle&, const string&, const string&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:47:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KgetParam(const char [14], unsigned int&)[m[K'
+       node_handle.getParam("/panda_mpc/N_", N_[01;31m[K)[m[K;
+                                               [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:7[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1683:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, double&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, double& d) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1683:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:11[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kdouble&[m[K' to an rvalue of type '[01m[Kdouble[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:7[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1694:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, float&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, float& f) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1694:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:11[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kfloat&[m[K' to an rvalue of type '[01m[Kfloat[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:7[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1705:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, int&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, int& i) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1705:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:11[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kint&[m[K' to an rvalue of type '[01m[Kint[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:7[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1716:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, bool&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, bool& b) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1716:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:11[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kbool&[m[K' to an rvalue of type '[01m[Kbool[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:7[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1727:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, XmlRpc::XmlRpcValue&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, XmlRpc::XmlRpcValue& v) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1727:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:11[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:47:[m[K [01;31m[Kerror: [m[Kconversion from '[01m[Kunsigned int[m[K' to '[01m[KXmlRpc::XmlRpcValue[m[K' is ambiguous
+       node_handle.getParam("/panda_mpc/N_", N_[01;31m[K)[m[K;
+                                               [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/node_handle.h:52:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:7[m[K:
+[01m[K/opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h:51:5:[m[K [01;36m[Knote: [m[Kcandidate: XmlRpc::XmlRpcValue::XmlRpcValue(double)
+     [01;36m[KXmlRpcValue[m[K(double value)  : _type(TypeDouble) { _value.asDouble = value; }
+     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h:50:5:[m[K [01;36m[Knote: [m[Kcandidate: XmlRpc::XmlRpcValue::XmlRpcValue(int)
+     [01;36m[KXmlRpcValue[m[K(int value)  : _type(TypeInt) { _value.asInt = value; }
+     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h:49:5:[m[K [01;36m[Knote: [m[Kcandidate: XmlRpc::XmlRpcValue::XmlRpcValue(bool)
+     [01;36m[KXmlRpcValue[m[K(bool value) : _type(TypeBoolean) { _value.asBool = value; }
+     [01;36m[K^~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/robot_model.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o] Error 1
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:[m[K In constructor '[01m[Krobot::robotModel::robotModel(ros::NodeHandle&, const string&, const string&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:47:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KgetParam(const char [14], unsigned int&)[m[K'
+       node_handle.getParam("/panda_mpc/N_", N_[01;31m[K)[m[K;
+                                               [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1683:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, double&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, double& d) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1683:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kdouble&[m[K' to an rvalue of type '[01m[Kdouble[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1694:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, float&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, float& f) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1694:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kfloat&[m[K' to an rvalue of type '[01m[Kfloat[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1705:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, int&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, int& i) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1705:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kint&[m[K' to an rvalue of type '[01m[Kint[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1716:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, bool&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, bool& b) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1716:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:45:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[Kbool&[m[K' to an rvalue of type '[01m[Kbool[m[K'
+       node_handle.getParam("/panda_mpc/N_", [01;31m[KN_[m[K);
+                                             [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1727:8:[m[K [01;36m[Knote: [m[Kcandidate: bool ros::NodeHandle::getParam(const string&, XmlRpc::XmlRpcValue&) const <near match>
+   bool [01;36m[KgetParam[m[K(const std::string& key, XmlRpc::XmlRpcValue& v) const;
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1727:8:[m[K [01;36m[Knote: [m[K  conversion of argument 2 would be ill-formed:
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:40:47:[m[K [01;31m[Kerror: [m[Kconversion from '[01m[Kunsigned int[m[K' to '[01m[KXmlRpc::XmlRpcValue[m[K' is ambiguous
+       node_handle.getParam("/panda_mpc/N_", N_[01;31m[K)[m[K;
+                                               [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/node_handle.h:52:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h:51:5:[m[K [01;36m[Knote: [m[Kcandidate: XmlRpc::XmlRpcValue::XmlRpcValue(double)
+     [01;36m[KXmlRpcValue[m[K(double value)  : _type(TypeDouble) { _value.asDouble = value; }
+     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h:50:5:[m[K [01;36m[Knote: [m[Kcandidate: XmlRpc::XmlRpcValue::XmlRpcValue(int)
+     [01;36m[KXmlRpcValue[m[K(int value)  : _type(TypeInt) { _value.asInt = value; }
+     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h:49:5:[m[K [01;36m[Knote: [m[Kcandidate: XmlRpc::XmlRpcValue::XmlRpcValue(bool)
+     [01;36m[KXmlRpcValue[m[K(bool value) : _type(TypeBoolean) { _value.asBool = value; }
+     [01;36m[K^~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

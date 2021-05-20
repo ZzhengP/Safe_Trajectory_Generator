@@ -18,6 +18,8 @@ examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catki
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_traj/include/panda_traj/panda_traj.hpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES.hpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES/Bounds.hpp

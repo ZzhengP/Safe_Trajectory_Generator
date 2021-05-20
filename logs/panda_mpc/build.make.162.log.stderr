@@ -1,0 +1,18 @@
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_mpc_model.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:[m[K In constructor '[01m[Krobot::RobotMPcModel::RobotMPcModel()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:10:19:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[Krobot::RobotModel::RobotModel()[m[K'
+   RobotMPcModel() [01;31m[K{[m[K}
+                   [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:3:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_mpc_model.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:35:3:[m[K [01;36m[Knote: [m[Kcandidate: robot::RobotModel::RobotModel(ros::NodeHandle&, const string&, const string&)
+   [01;36m[KRobotModel[m[K(ros::NodeHandle &node_handle, const std::string& root_link, const std::string& tip_link):
+   [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:35:3:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 0 provided
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:31:7:[m[K [01;36m[Knote: [m[Kcandidate: robot::RobotModel::RobotModel(robot::RobotModel&&)
+ class [01;36m[KRobotModel[m[K{
+       [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:31:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/robot_mpc_model.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

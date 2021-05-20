@@ -1,0 +1,11 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:[m[K In function '[01m[Kint main(int, char**)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:142:56:[m[K [01;31m[Kerror: [m[K'[01m[Kd[m[K' was not declared in this scope
+     std::shared_ptr<robot::RobotModel> robot_mpc_model;[01;31m[Kd[m[K
+                                                        [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:142:56:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Kdt[m[K'
+     std::shared_ptr<robot::RobotModel> robot_mpc_model;[01;36m[Kd[m[K
+                                                        [01;36m[K^[m[K
+                                                        [32m[Kdt[m[K
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

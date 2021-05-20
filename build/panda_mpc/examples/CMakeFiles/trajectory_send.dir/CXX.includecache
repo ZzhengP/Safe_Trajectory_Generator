@@ -239,6 +239,8 @@ geometry_msgs/PoseStamped.h
 -
 Eigen/Core
 -
+robot/robot_mpc_model.h
+-
 
 /home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp
 memory
@@ -305,6 +307,8 @@ eigen_conversions/eigen_msg.h
 -
 panda_traj/panda_traj.hpp
 -
+robot/robot_model.h
+-
 
 /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h
 memory
@@ -336,6 +340,40 @@ franka/robot.h
 franka/robot_state.h
 -
 controller/controller.hpp
+-
+
+/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h
+memory
+-
+string
+-
+vector
+-
+ros/node_handle.h
+-
+Eigen/Dense
+-
+trac_ik/trac_ik.hpp
+-
+kdl/chainiksolverpos_nr_jl.hpp
+-
+kdl/chainfksolverpos_recursive.hpp
+-
+kdl/chainfksolvervel_recursive.hpp
+-
+kdl/chain.hpp
+-
+kdl/frames_io.hpp
+-
+kdl/jacobian.hpp
+-
+kdl/chainjnttojacsolver.hpp
+-
+kdl/jntspaceinertiamatrix.hpp
+-
+
+/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h
+robot/robot_model.h
 -
 
 /home/zheng/catkin_ws/src/panda_traj/include/panda_traj/panda_traj.hpp

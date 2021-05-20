@@ -1809,6 +1809,33 @@ src/robot_model.cpp.s:
 	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot_model.cpp.s
 .PHONY : src/robot_model.cpp.s
 
+src/robot_mpc_model.o: src/robot_mpc_model.cpp.o
+
+.PHONY : src/robot_mpc_model.o
+
+# target to build an object file
+src/robot_mpc_model.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot_mpc_model.cpp.o
+.PHONY : src/robot_mpc_model.cpp.o
+
+src/robot_mpc_model.i: src/robot_mpc_model.cpp.i
+
+.PHONY : src/robot_mpc_model.i
+
+# target to preprocess a source file
+src/robot_mpc_model.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot_mpc_model.cpp.i
+.PHONY : src/robot_mpc_model.cpp.i
+
+src/robot_mpc_model.s: src/robot_mpc_model.cpp.s
+
+.PHONY : src/robot_mpc_model.s
+
+# target to generate assembly for a file
+src/robot_mpc_model.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot_mpc_model.cpp.s
+.PHONY : src/robot_mpc_model.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1952,6 +1979,9 @@ help:
 	@echo "... src/robot_model.o"
 	@echo "... src/robot_model.i"
 	@echo "... src/robot_model.s"
+	@echo "... src/robot_mpc_model.o"
+	@echo "... src/robot_mpc_model.i"
+	@echo "... src/robot_mpc_model.s"
 .PHONY : help
 
 

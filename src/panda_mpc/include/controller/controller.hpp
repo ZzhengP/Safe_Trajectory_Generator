@@ -39,6 +39,7 @@
 #include <eigen_conversions/eigen_kdl.h>
 #include <eigen_conversions/eigen_msg.h>
 #include <panda_traj/panda_traj.hpp>
+#include <robot/robot_model.h>
 
 namespace Controller {
 
@@ -121,7 +122,7 @@ private:
    * @param nh
    * @return true if the robot correctly loaded
    */
-  bool load_robot(ros::NodeHandle& nh);
+  bool load_robot(ros::NodeHandle& nh, const Eigen::VectorXd& q_init, const Eigen::VectorXd qd_init);
 
 
   /**
@@ -168,32 +169,7 @@ private:
   ros::ServiceServer updateUI_service, updateTraj_service, updateNextTraj_service_;
 
 
-  /**
-   * @brief Solver for inverse kinematic
-   */
-  std::shared_ptr<TRAC_IK::TRAC_IK> ik_solver_;
-
-
-  /**
-   * @brief solver to compute Jacobian
-   */
-  std::unique_ptr<KDL::ChainJntToJacSolver> chainjacsolver_;
-
-  /**
-   * @brief solver to compute foward kinematic
-   */
-  std::unique_ptr<KDL::ChainFkSolverPos_recursive> fksolver_;
-
-  std::unique_ptr<KDL::ChainFkSolverVel_recursive> fkvelsolver_;
-
-
-  KDL::Chain chain ; /*! Robot kdl chain */
-  KDL::JntArray ll ; /*! Joint lower limit */
-  KDL::JntArray ul ; /*! Joint upper limit */
-
-  KDL::Jacobian J_ ; /*! Jacobian matrix */
-  KDL::JntSpaceInertiaMatrix M_; /*! KDL inertia matrix in joint space */
-
+  std::shared_ptr<robot::RobotModel> robot_model_;
 
   KDL::Frame X_curr_; /*!< @brief KDL current Cartesian pose of the tip_link */
   KDL::Frame X_traj_; /*!< @brief KDL desired Cartesian pose of the tip_link */

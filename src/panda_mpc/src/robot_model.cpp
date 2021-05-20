@@ -4,7 +4,7 @@
 namespace robot{
 
 
-bool robotModel::Init(ros::NodeHandle &node_handle){
+bool RobotModel::Init(ros::NodeHandle &node_handle,  const Eigen::VectorXd &q_init, const Eigen::VectorXd &qd_init){
 
 
   // get robot description
@@ -49,13 +49,24 @@ bool robotModel::Init(ros::NodeHandle &node_handle){
   chainjacsolver_.reset(new KDL::ChainJntToJacSolver(chain_));  // To get the jacobian
 
 
-
+  dof = chain_.getNrOfJoints();
   // INITIALIZE VARIABLES
-  J_.resize(chain_.getNrOfJoints());
-  M_.resize(chain_.getNrOfJoints());
-
+  J_.resize(dof);
+  M_.resize(dof);
+  q_init_.resize(dof);
+  q_init_ = q_init;
+  qd_init_.resize(dof);
+  qd_init_ = qd_init;
+  q_in.q.data = q_init;
+  q_in.qdot.data = qd_init;
+  JntToCart(q_in.q, X_curr_);
+  JntToJac(q_in.q);
+  x_curr_.resize(3);
+  x_curr_[0] = X_curr_.p[0], x_curr_[1] = X_curr_.p[1],  x_curr_[2] = X_curr_.p[2];
   return true;
 }
+
+
 
 }
 
