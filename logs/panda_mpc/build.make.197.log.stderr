@@ -1,0 +1,26 @@
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:38:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp:[m[K In constructor '[01m[Ktask::MPCTask::MPCTask(const int&, const int&, const double&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp:22:107:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[Krobot::MPC_param::MPC_param(const int&, const int&, const double&)[m[K'
+   MPCTask(const int& N, const int& dof, const double& dt ): N_(N), dof_(dof), dt_(dt),mpc_params_(N,dof,dt[01;31m[K)[m[K{
+                                                                                                           [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:37:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:9:8:[m[K [01;36m[Knote: [m[Kcandidate: robot::MPC_param::MPC_param()
+ struct [01;36m[KMPC_param[m[K{
+        [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:9:8:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 3 provided
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:9:8:[m[K [01;36m[Knote: [m[Kcandidate: robot::MPC_param::MPC_param(const robot::MPC_param&)
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:9:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:9:8:[m[K [01;36m[Knote: [m[Kcandidate: robot::MPC_param::MPC_param(robot::MPC_param&&)
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:9:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:38:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp:24:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[Krobot::MPC_param::init()[m[K'
+     mpc_params_.init([01;31m[K)[m[K;
+                      [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:37:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:14:8:[m[K [01;36m[Knote: [m[Kcandidate: void robot::MPC_param::init(const int&, const int&)
+   void [01;36m[Kinit[m[K(const int& N_, const int& dof_){
+        [01;36m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:14:8:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 0 provided
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

@@ -99,8 +99,9 @@ include_directories(include ${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS} ${EIGEN3
 add_library(panda_mpc
             src/panda_simulation.cpp
             src/panda_controller.cpp
-            src/robot_model.cpp
-            src/robot_mpc_model.cpp
+            src/robot/robot_model.cpp
+            src/robot/robot_mpc_model.cpp
+            src/optFormulation/task.cpp
             src/controller.cpp)
 
 target_include_directories(panda_mpc SYSTEM PUBLIC include

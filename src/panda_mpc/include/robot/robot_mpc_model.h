@@ -2,9 +2,71 @@
 #define ROBOT_MPC_MODEL_H
 
 #include <robot/robot_model.h>
-
+#include <iostream>
+#include <memory>
 
 namespace robot {
+
+struct MPC_param{
+
+  //------------------------------------ MPC parameters structure for the use in other class------------------
+
+
+  void init(const int& N_, const int& dof_){
+
+    A_.resize(2*dof_, 2*dof_);
+    A_.setZero();
+
+    B_.resize(2*dof_, dof_);
+    B_.setZero();
+
+    Cq_.resize(dof_,2*dof_);
+    Cq_.setZero();
+
+    Cdq_.resize(dof_,2*dof_);
+    Cdq_.setZero();
+
+    Px_.resize(N_*dof_, 2*dof_);
+    Px_.setZero();
+    Pu_.resize(N_*dof_, N_*dof_);
+    Pu_.setZero();
+
+    Pxdq_.resize(N_*dof_, 2*dof_);
+    Pxdq_.setZero();
+    Pudq_.resize(N_*dof_, N_*dof_);
+    Pudq_.setZero();
+
+    q_horizon_.resize(N_*dof_);
+    qd_horizon_.resize(N_*dof_);
+    x_horizon_.resize(3*N_);
+    J_horizon_.resize(N_*6, N_*dof_);
+    J_horizon_.setZero();
+  }
+
+
+  // One step state-space dynamic model of a linear system:
+  // Xk+1 = A*Xk + B*Uk, with X = (q, qd)
+
+  Eigen::MatrixXd A_; /*! @brief State transition matrix */
+  Eigen::MatrixXd B_; /*! @brief State Input matrix */
+  Eigen::MatrixXd Cq_; /*! @brief joint poisition Selection matrix: q = Cq_*X */
+  Eigen::MatrixXd Cdq_; /*! @brief joint velocity Selection matrix: qd = Cqd_*X */
+
+  Eigen::MatrixXd Px_; /*! @brief augmented linear state matrix for joint position */
+  Eigen::MatrixXd Pu_; /*! @brief augmented linear input matrix for joint position*/
+  Eigen::MatrixXd Pxdq_; /*! @brief augmented linear state matrix for joint velocity*/
+  Eigen::MatrixXd Pudq_; /*! @brief augmented linear input matrix for joint velocity*/
+
+  Eigen::VectorXd q_horizon_; /*! @brief robot joint position stacked for the horizon of prediction  */
+  Eigen::VectorXd qd_horizon_;
+  Eigen::VectorXd x_horizon_; /*! @brief stacked tip_link cartesian position */
+  Eigen::MatrixXd J_horizon_; /*! @brief stacked jacobian */
+
+};
+
+ // ----------------------------------------------------------------------------------------------------------
+
+ // ------------------------------- Model Predictive Control Robot Model --------------------------------------
 
 class RobotMPcModel:public RobotModel
 {
@@ -16,6 +78,30 @@ public:
      ROS_INFO_STREAM("Robot model predictive control constructor");
 
      Init(node_handle,q_init,qd_init);
+
+     mpc_params = std::shared_ptr<MPC_param>(new MPC_param);
+
+     mpc_params->init(N_, dof);
+
+     Eigen::MatrixXd Id;
+     Id.resize(dof, dof);
+     Id.setIdentity();
+     // Initialize state-space dynamic model
+
+     mpc_params->A_.block(0,0,dof,dof).setIdentity();
+     mpc_params->A_.block(0,dof, dof, dof) = Id*dt_;
+     mpc_params->A_.block(dof, dof, dof, dof).setIdentity();
+
+
+     mpc_params->B_.block(0,0, dof, dof)= Id*(dt_*dt_/2);
+     mpc_params->B_.block(dof,0,dof, dof)= Id*dt_;
+
+
+     mpc_params->Cq_.block(0,0,dof,dof).setIdentity();
+
+     mpc_params->Cdq_.block(0,dof,dof,dof).setIdentity();
+
+
   }
 
 
@@ -34,31 +120,96 @@ public:
 
   void computeJacobianHorizon(const Eigen::VectorXd & q_horizon);
 
+  inline Eigen::MatrixXd matPow(int N, const Eigen::MatrixXd& A){
+
+      Eigen::MatrixXd A_pow;
+      A_pow.resize(A.rows(), A.cols());
+      A_pow.setIdentity();
+
+      for (int i(0); i<N; i++){
+
+        A_pow = A_pow*A;
+
+      }
+
+      return A_pow;
+  }
+
+  inline void setPx(){
+    for (int i(0); i<N_;i++)
+      {
+          Eigen::MatrixXd A;
+          A = matPow(i+1,mpc_params->A_);
+          mpc_params->Px_.block(dof*i,0,dof,2*dof) = mpc_params->Cq_*A;
+      }
+  };
+
+  inline void setPu()
+  {
+      for (int i(0); i<N_; i ++)
+      {
+          for (int j(0); j<i+1;j++)
+          {
+              Eigen::MatrixXd A;
+              A = matPow(i-j,mpc_params->A_);
+              mpc_params->Pu_.block(dof*i,dof*j, dof, dof) = mpc_params->Cq_*A*mpc_params->B_;
+          }
+      }
+  }
+
+  inline void setPxDq()
+  {
+      for (int i(0); i<N_;i++)
+      {
+          Eigen::MatrixXd A;
+          A = matPow(i+1,mpc_params->A_);
+          mpc_params->Pxdq_.block(dof*i,0,dof,2*dof) = mpc_params->Cdq_*A;
+      }
+  }
+
+  inline void setPuDq(){
+
+    for (int i(0); i<N_; i ++)
+    {
+        for (int j(0); j<i+1;j++)
+        {
+            Eigen::MatrixXd A;
+            A = matPow(i-j,mpc_params->A_);
+            mpc_params->Pudq_.block(dof*i,dof*j,dof,dof) = mpc_params->Cdq_*A*mpc_params->B_;
+        }
+    }
+  }
   //----------------------------------------------------------------------------------------------
   //                      Get MPC variables
   //----------------------------------------------------------------------------------------------
 
   Eigen::VectorXd getJntHorizon() const {
 
-    return q_horizon_;
+    return mpc_params->q_horizon_;
   }
 
 
   Eigen::VectorXd getJntVelHorizon() const {
 
-    return qd_horizon_;
+    return mpc_params->qd_horizon_;
   }
 
   Eigen::VectorXd getTipPosHorizon() const {
 
-    return x_horizon_;
+    return mpc_params->x_horizon_;
   }
 
   Eigen::MatrixXd getJacobianHorizon() const {
 
-    return J_horizon_;
+    return mpc_params->J_horizon_;
   }
 
+
+  std::shared_ptr<MPC_param> getMPCParams(){
+
+    return mpc_params;
+
+  }
 
 private:
 
@@ -69,18 +220,16 @@ private:
   int N_; /*! @brief lenght of MPC */
   double dt_; /*! @brief sampling time for MPC */
 
-  Eigen::MatrixXd Px_; /*! @brief augmented linear state matrix for joint position */
-  Eigen::MatrixXd Pu_; /*! @brief augmented linear input matrix for joint position*/
-  Eigen::MatrixXd Pxdq_; /*! @brief augmented linear state matrix for joint velocity*/
-  Eigen::MatrixXd Pudq_; /*! @brief augmented linear input matrix for joint velocity*/
 
-  Eigen::VectorXd q_horizon_; /*! @brief robot joint position stacked for the horizon of prediction  */
-  Eigen::VectorXd qd_horizon_;
-  Eigen::VectorXd x_horizon_; /*! @brief stacked tip_link cartesian position */
-  Eigen::MatrixXd J_horizon_; /*! @brief stacked jacobian */
+  /**
+   * @brief This attribut is declared as a shared pointer
+   * because it will be used in task and constraint class
+   */
+  std::shared_ptr<MPC_param> mpc_params ;
 
 
 };
+
 
 }
 

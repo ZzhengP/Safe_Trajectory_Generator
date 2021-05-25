@@ -288,6 +288,20 @@ panda_traj/panda_traj.hpp
 robot/robot_model.h
 -
 
+/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp
+robot/robot_mpc_model.h
+-
+iostream
+-
+Eigen/Core
+-
+ros/ros.h
+-
+memory
+-
+vector
+-
+
 /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h
 memory
 -
@@ -353,9 +367,17 @@ kdl/jntspaceinertiamatrix.hpp
 /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h
 robot/robot_model.h
 -
+iostream
+-
+memory
+-
 
 /home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp
 controller/controller.hpp
+-
+
+/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp
+optFormulation/task.hpp
 -
 
 /home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp
@@ -400,11 +422,11 @@ sensor_msgs/JointState.h
 Eigen/Dense
 -
 
-/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp
+/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_model.cpp
 robot/robot_model.h
 -
 
-/home/zheng/catkin_ws/src/panda_mpc/src/robot_mpc_model.cpp
+/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp
 robot/robot_mpc_model.h
 -
 

@@ -1650,16 +1650,19 @@
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp">
+			<Option target="panda_mpc"/>
+		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/robot_model.cpp">
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_model.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/robot_mpc_model.cpp">
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
 		<Unit filename="/usr/src/googletest/googlemock/src/gmock-all.cc">

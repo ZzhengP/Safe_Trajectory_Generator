@@ -35,6 +35,7 @@
 #include <geometry_msgs/PoseStamped.h>
 #include <Eigen/Core>
 #include <robot/robot_mpc_model.h>
+#include <optFormulation/task.hpp>
 
 
 using namespace robot;
@@ -122,10 +123,22 @@ int main(int argc, char** argv )
     node_handle.getParam("/panda_mpc/root_link_", root_link);
     node_handle.getParam("/panda_mpc/tip_link_", tip_link);
 
-    Eigen::VectorXd q_init, qd_init;
-    q_init.resize(7), qd_init.resize(7);
+    Eigen::VectorXd q_init, qd_init, qdd_init, state;
+    q_init.resize(7), qd_init.resize(7), qdd_init.resize(7);
     q_init << 0.0087, -0.1051, 0.0110, -2.279, 0.0018, 2.1754, 0.019;
     qd_init.setZero();
+    qdd_init.setZero();
+    state.resize(14);
+    state.segment(0,7) = q_init, state.segment(7,7) = qd_init;
+    Eigen::VectorXd q_des_horizon, qd_des_horizon, qdd_des_horizon ;
+    q_des_horizon.resize(7*N), qd_des_horizon.resize(7*N), qdd_des_horizon.resize(7*N);
+    for (size_t i(0); i<N; i++){
+      q_des_horizon.segment(i*7,7) = q_init;
+      qd_des_horizon.segment(i*7,7) = qd_init;
+      qdd_des_horizon.segment(i*7,7) = qdd_init;
+
+
+    }
 //=======================================================
 //   pointSender pointsender(node_handle);
 
@@ -148,6 +161,15 @@ int main(int argc, char** argv )
     }else {
       ROS_INFO_STREAM("Success to initialize Model Predictive Control ");
     }
+
+    std::unique_ptr<optimization::MPCTask> mpc_task;
+    mpc_task.reset(new optimization::MPCTask(N,7,dt,robot_mpc_model->getMPCParams()));
+
+    if(!mpc_task->init(q_init)){
+      return 0;
+    };
+
+    mpc_task->update(state,q_des_horizon,qd_des_horizon, qdd_des_horizon);
 
 
     return 0;

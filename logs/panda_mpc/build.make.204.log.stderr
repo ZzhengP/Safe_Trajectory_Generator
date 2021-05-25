@@ -1,0 +1,20 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_mpc_model.cpp:[m[K In member function '[01m[Kbool robot::RobotMPcModel::InitMPCParameter(ros::NodeHandle&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_mpc_model.cpp:17:16:[m[K [01;31m[Kerror: [m[K'[01m[Kclass std::shared_ptr<robot::MPC_param>[m[K' has no member named '[01m[Kq_horizon_[m[K'
+     mpc_params.[01;31m[Kq_horizon_[m[K.segment(i*dof, dof) = q_init_;
+                [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_mpc_model.cpp:18:16:[m[K [01;31m[Kerror: [m[K'[01m[Kclass std::shared_ptr<robot::MPC_param>[m[K' has no member named '[01m[Kqd_horizon_[m[K'
+     mpc_params.[01;31m[Kqd_horizon_[m[K.segment(i*dof,dof) = qd_init_;
+                [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_mpc_model.cpp:19:16:[m[K [01;31m[Kerror: [m[K'[01m[Kclass std::shared_ptr<robot::MPC_param>[m[K' has no member named '[01m[Kx_horizon_[m[K'
+     mpc_params.[01;31m[Kx_horizon_[m[K.segment(i*3,3) = x_curr_;
+                [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_mpc_model.cpp:20:16:[m[K [01;31m[Kerror: [m[K'[01m[Kclass std::shared_ptr<robot::MPC_param>[m[K' has no member named '[01m[KJ_horizon_[m[K'
+     mpc_params.[01;31m[KJ_horizon_[m[K.block(6*i,dof*i,6,dof) = J_.data;
+                [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_mpc_model.cpp:[m[K In member function '[01m[Kvoid robot::RobotMPcModel::computeJacobianHorizon(const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot_mpc_model.cpp:44:16:[m[K [01;31m[Kerror: [m[K'[01m[Kclass std::shared_ptr<robot::MPC_param>[m[K' has no member named '[01m[KJ_horizon_[m[K'
+     mpc_params.[01;31m[KJ_horizon_[m[K.block(i*6, i*dof, 6, dof) = J_temp.data;
+                [01;31m[K^~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/robot_mpc_model.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

@@ -18,6 +18,7 @@ examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o
  /home/zheng/catkin_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h
  /home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp
  /home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp
+ /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp
  /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h
  /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h
  /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h

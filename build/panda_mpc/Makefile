@@ -1728,6 +1728,33 @@ src/controller.cpp.s:
 	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/controller.cpp.s
 .PHONY : src/controller.cpp.s
 
+src/optFormulation/task.o: src/optFormulation/task.cpp.o
+
+.PHONY : src/optFormulation/task.o
+
+# target to build an object file
+src/optFormulation/task.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o
+.PHONY : src/optFormulation/task.cpp.o
+
+src/optFormulation/task.i: src/optFormulation/task.cpp.i
+
+.PHONY : src/optFormulation/task.i
+
+# target to preprocess a source file
+src/optFormulation/task.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.i
+.PHONY : src/optFormulation/task.cpp.i
+
+src/optFormulation/task.s: src/optFormulation/task.cpp.s
+
+.PHONY : src/optFormulation/task.s
+
+# target to generate assembly for a file
+src/optFormulation/task.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.s
+.PHONY : src/optFormulation/task.cpp.s
+
 src/panda_controller.o: src/panda_controller.cpp.o
 
 .PHONY : src/panda_controller.o
@@ -1782,59 +1809,59 @@ src/panda_simulation.cpp.s:
 	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.s
 .PHONY : src/panda_simulation.cpp.s
 
-src/robot_model.o: src/robot_model.cpp.o
+src/robot/robot_model.o: src/robot/robot_model.cpp.o
 
-.PHONY : src/robot_model.o
-
-# target to build an object file
-src/robot_model.cpp.o:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot_model.cpp.o
-.PHONY : src/robot_model.cpp.o
-
-src/robot_model.i: src/robot_model.cpp.i
-
-.PHONY : src/robot_model.i
-
-# target to preprocess a source file
-src/robot_model.cpp.i:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot_model.cpp.i
-.PHONY : src/robot_model.cpp.i
-
-src/robot_model.s: src/robot_model.cpp.s
-
-.PHONY : src/robot_model.s
-
-# target to generate assembly for a file
-src/robot_model.cpp.s:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot_model.cpp.s
-.PHONY : src/robot_model.cpp.s
-
-src/robot_mpc_model.o: src/robot_mpc_model.cpp.o
-
-.PHONY : src/robot_mpc_model.o
+.PHONY : src/robot/robot_model.o
 
 # target to build an object file
-src/robot_mpc_model.cpp.o:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot_mpc_model.cpp.o
-.PHONY : src/robot_mpc_model.cpp.o
+src/robot/robot_model.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot/robot_model.cpp.o
+.PHONY : src/robot/robot_model.cpp.o
 
-src/robot_mpc_model.i: src/robot_mpc_model.cpp.i
+src/robot/robot_model.i: src/robot/robot_model.cpp.i
 
-.PHONY : src/robot_mpc_model.i
+.PHONY : src/robot/robot_model.i
 
 # target to preprocess a source file
-src/robot_mpc_model.cpp.i:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot_mpc_model.cpp.i
-.PHONY : src/robot_mpc_model.cpp.i
+src/robot/robot_model.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot/robot_model.cpp.i
+.PHONY : src/robot/robot_model.cpp.i
 
-src/robot_mpc_model.s: src/robot_mpc_model.cpp.s
+src/robot/robot_model.s: src/robot/robot_model.cpp.s
 
-.PHONY : src/robot_mpc_model.s
+.PHONY : src/robot/robot_model.s
 
 # target to generate assembly for a file
-src/robot_mpc_model.cpp.s:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot_mpc_model.cpp.s
-.PHONY : src/robot_mpc_model.cpp.s
+src/robot/robot_model.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot/robot_model.cpp.s
+.PHONY : src/robot/robot_model.cpp.s
+
+src/robot/robot_mpc_model.o: src/robot/robot_mpc_model.cpp.o
+
+.PHONY : src/robot/robot_mpc_model.o
+
+# target to build an object file
+src/robot/robot_mpc_model.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot/robot_mpc_model.cpp.o
+.PHONY : src/robot/robot_mpc_model.cpp.o
+
+src/robot/robot_mpc_model.i: src/robot/robot_mpc_model.cpp.i
+
+.PHONY : src/robot/robot_mpc_model.i
+
+# target to preprocess a source file
+src/robot/robot_mpc_model.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot/robot_mpc_model.cpp.i
+.PHONY : src/robot/robot_mpc_model.cpp.i
+
+src/robot/robot_mpc_model.s: src/robot/robot_mpc_model.cpp.s
+
+.PHONY : src/robot/robot_mpc_model.s
+
+# target to generate assembly for a file
+src/robot/robot_mpc_model.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot/robot_mpc_model.cpp.s
+.PHONY : src/robot/robot_mpc_model.cpp.s
 
 # Help Target
 help:
@@ -1970,18 +1997,21 @@ help:
 	@echo "... src/controller.o"
 	@echo "... src/controller.i"
 	@echo "... src/controller.s"
+	@echo "... src/optFormulation/task.o"
+	@echo "... src/optFormulation/task.i"
+	@echo "... src/optFormulation/task.s"
 	@echo "... src/panda_controller.o"
 	@echo "... src/panda_controller.i"
 	@echo "... src/panda_controller.s"
 	@echo "... src/panda_simulation.o"
 	@echo "... src/panda_simulation.i"
 	@echo "... src/panda_simulation.s"
-	@echo "... src/robot_model.o"
-	@echo "... src/robot_model.i"
-	@echo "... src/robot_model.s"
-	@echo "... src/robot_mpc_model.o"
-	@echo "... src/robot_mpc_model.i"
-	@echo "... src/robot_mpc_model.s"
+	@echo "... src/robot/robot_model.o"
+	@echo "... src/robot/robot_model.i"
+	@echo "... src/robot/robot_model.s"
+	@echo "... src/robot/robot_mpc_model.o"
+	@echo "... src/robot/robot_mpc_model.i"
+	@echo "... src/robot/robot_mpc_model.s"
 .PHONY : help
 
 
