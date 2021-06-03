@@ -177,9 +177,57 @@ CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o.provides: CMakeFiles/pand
 CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o.provides.build: CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o
 
 
+CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o: CMakeFiles/panda_mpc.dir/flags.make
+CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o -c /home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp
+
+CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp > CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.i
+
+CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp -o CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.s
+
+CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o.requires:
+
+.PHONY : CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o.requires
+
+CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o.provides: CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o.requires
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o.provides.build
+.PHONY : CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o.provides
+
+CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o.provides.build: CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o
+
+
+CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o: CMakeFiles/panda_mpc.dir/flags.make
+CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o -c /home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp
+
+CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp > CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.i
+
+CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp -o CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.s
+
+CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o.requires:
+
+.PHONY : CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o.requires
+
+CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o.provides: CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o.requires
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o.provides.build
+.PHONY : CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o.provides
+
+CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o.provides.build: CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o
+
+
 CMakeFiles/panda_mpc.dir/src/controller.cpp.o: CMakeFiles/panda_mpc.dir/flags.make
 CMakeFiles/panda_mpc.dir/src/controller.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/panda_mpc.dir/src/controller.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/panda_mpc.dir/src/controller.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/panda_mpc.dir/src/controller.cpp.o -c /home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp
 
 CMakeFiles/panda_mpc.dir/src/controller.cpp.i: cmake_force
@@ -201,6 +249,30 @@ CMakeFiles/panda_mpc.dir/src/controller.cpp.o.provides: CMakeFiles/panda_mpc.dir
 CMakeFiles/panda_mpc.dir/src/controller.cpp.o.provides.build: CMakeFiles/panda_mpc.dir/src/controller.cpp.o
 
 
+CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o: CMakeFiles/panda_mpc.dir/flags.make
+CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/src/qpsolver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o -c /home/zheng/catkin_ws/src/panda_mpc/src/qpsolver.cpp
+
+CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zheng/catkin_ws/src/panda_mpc/src/qpsolver.cpp > CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.i
+
+CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zheng/catkin_ws/src/panda_mpc/src/qpsolver.cpp -o CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.s
+
+CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o.requires:
+
+.PHONY : CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o.requires
+
+CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o.provides: CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o.requires
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o.provides.build
+.PHONY : CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o.provides
+
+CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o.provides.build: CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o
+
+
 # Object files for target panda_mpc
 panda_mpc_OBJECTS = \
 "CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o" \
@@ -208,7 +280,10 @@ panda_mpc_OBJECTS = \
 "CMakeFiles/panda_mpc.dir/src/robot/robot_model.cpp.o" \
 "CMakeFiles/panda_mpc.dir/src/robot/robot_mpc_model.cpp.o" \
 "CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o" \
-"CMakeFiles/panda_mpc.dir/src/controller.cpp.o"
+"CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o" \
+"CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o" \
+"CMakeFiles/panda_mpc.dir/src/controller.cpp.o" \
+"CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o"
 
 # External object files for target panda_mpc
 panda_mpc_EXTERNAL_OBJECTS =
@@ -218,7 +293,10 @@ panda_mpc_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/robot/robot_model.cpp.o
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/robot/robot_mpc_model.cpp.o
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/controller.cpp.o
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/build.make
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libgazebo_ros_api_plugin.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libgazebo_ros_paths_plugin.so
@@ -413,7 +491,7 @@ panda_mpc_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libavutil.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libavutil.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX shared library /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/panda_mpc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -426,7 +504,10 @@ CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/panda_controller
 CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/robot/robot_model.cpp.o.requires
 CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/robot/robot_mpc_model.cpp.o.requires
 CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o.requires
+CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o.requires
+CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o.requires
 CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/controller.cpp.o.requires
+CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o.requires
 
 .PHONY : CMakeFiles/panda_mpc.dir/requires
 

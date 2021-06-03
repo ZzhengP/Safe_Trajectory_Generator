@@ -1,0 +1,279 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:[m[K In function '[01m[Kint main(int, char**)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:197:33:[m[K [01;31m[Kerror: [m[Kno match for '[01m[Koperator-[m[K' (operand types are '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' and '[01m[KKDL::JntArray[m[K')
+     jnt_error = [01;31m[Kstate.head(dof) - q_des[m[K;
+                 [01;31m[K~~~~~~~~~~~~~~~~^~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:125:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:416[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h:45:1:[m[K [01;36m[Knote: [m[Kcandidate: const NegativeReturnType Eigen::MatrixBase<Derived>::operator-() const [with Derived = Eigen::Block<Eigen::Matrix<double, -1, 1>, -1, 1, false>; Eigen::MatrixBase<Derived>::NegativeReturnType = Eigen::CwiseUnaryOp<Eigen::internal::scalar_opposite_op<double>, const Eigen::Block<Eigen::Matrix<double, -1, 1>, -1, 1, false> >; typename Eigen::internal::traits<T>::Scalar = double]
+ [01;36m[Koperator[m[K-() const { return NegativeReturnType(derived()); }
+ [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h:45:1:[m[K [01;36m[Knote: [m[K  candidate expects 0 arguments, 1 provided
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:72:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h:19:1:[m[K [01;36m[Knote: [m[Kcandidate: template<class OtherDerived> const Eigen::CwiseBinaryOp<Eigen::internal::scalar_difference_op<typename Eigen::internal::traits<T>::Scalar, typename Eigen::internal::traits<OtherDerived>::Scalar>, const Derived, const OtherDerived> Eigen::MatrixBase<Derived>::operator-(const Eigen::MatrixBase<OtherDerived>&) const [with OtherDerived = OtherDerived; Derived = Eigen::Block<Eigen::Matrix<double, -1, 1>, -1, 1, false>]
+ [01;36m[KE[m[KIGEN_MAKE_CWISE_BINARY_OP(operator-,difference)
+ [01;36m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h:19:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:197:35:[m[K [01;36m[Knote: [m[K  '[01m[KKDL::JntArray[m[K' is not derived from '[01m[Kconst Eigen::MatrixBase<Derived>[m[K'
+     jnt_error = state.head(dof) - [01;36m[Kq_des[m[K;
+                                   [01;36m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/kdl/chaindynparam.hpp:26:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_traj/include/panda_traj/panda_traj.hpp:28[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:41[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/opt/ros/melodic/include/kdl/articulatedbodyinertia.hpp:106:28:[m[K [01;36m[Knote: [m[Kcandidate: KDL::ArticulatedBodyInertia KDL::operator-(const KDL::ArticulatedBodyInertia&, const KDL::RigidBodyInertia&)
+     ArticulatedBodyInertia [01;36m[Koperator[m[K-(const ArticulatedBodyInertia& Ia,const RigidBodyInertia& Ib);
+                            [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/articulatedbodyinertia.hpp:106:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' to '[01m[Kconst KDL::ArticulatedBodyInertia&[m[K'
+[01m[K/opt/ros/melodic/include/kdl/articulatedbodyinertia.hpp:105:28:[m[K [01;36m[Knote: [m[Kcandidate: KDL::ArticulatedBodyInertia KDL::operator-(const KDL::ArticulatedBodyInertia&, const KDL::ArticulatedBodyInertia&)
+     ArticulatedBodyInertia [01;36m[Koperator[m[K-(const ArticulatedBodyInertia& Ia,const ArticulatedBodyInertia& Ib);
+                            [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/articulatedbodyinertia.hpp:105:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' to '[01m[Kconst KDL::ArticulatedBodyInertia&[m[K'
+In file included from [01m[K/opt/ros/melodic/include/kdl/frameacc.hpp:267:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolver.hpp:27[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/kdl_tl.hpp:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/nlopt_ik.hpp:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/opt/ros/melodic/include/kdl/frameacc.inl:516:10:[m[K [01;36m[Knote: [m[Kcandidate: KDL::TwistAcc KDL::operator-(const KDL::TwistAcc&)
+ TwistAcc [01;36m[Koperator[m[K-(const TwistAcc& arg)
+          [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frameacc.inl:516:10:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/melodic/include/kdl/frameacc.inl:510:10:[m[K [01;36m[Knote: [m[Kcandidate: KDL::TwistAcc KDL::operator-(const KDL::TwistAcc&, const KDL::TwistAcc&)
+ TwistAcc [01;36m[Koperator[m[K-(const TwistAcc& lhs,const TwistAcc& rhs)
+          [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frameacc.inl:510:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' to '[01m[Kconst KDL::TwistAcc&[m[K'
+[01m[K/opt/ros/melodic/include/kdl/frameacc.inl:47:11:[m[K [01;36m[Knote: [m[Kcandidate: KDL::VectorAcc KDL::operator-(const KDL::VectorAcc&)
+ VectorAcc [01;36m[Koperator[m[K - (const VectorAcc& r) {
+           [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frameacc.inl:47:11:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/melodic/include/kdl/frameacc.inl:42:11:[m[K [01;36m[Knote: [m[Kcandidate: KDL::VectorAcc KDL::operator-(const KDL::VectorAcc&, const KDL::Vector&)
+ VectorAcc [01;36m[Koperator[m[K - (const VectorAcc& r1,const Vector& r2) {
+           [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frameacc.inl:42:11:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' to '[01m[Kconst KDL::VectorAcc&[m[K'
+[01m[K/opt/ros/melodic/include/kdl/frameacc.inl:35:11:[m[K [01;36m[Knote: [m[Kcandidate: KDL::VectorAcc KDL::operator-(const KDL::Vector&, const KDL::VectorAcc&)
+ VectorAcc [01;36m[Koperator[m[K - (const Vector& r1,const VectorAcc& r2) {
+           [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frameacc.inl:35:11:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' to '[01m[Kconst KDL::Vector&[m[K'
+[01m[K/opt/ros/melodic/include/kdl/frameacc.inl:28:11:[m[K [01;36m[Knote: [m[Kcandidate: KDL::VectorAcc KDL::operator-(const KDL::VectorAcc&, const KDL::VectorAcc&)
+ VectorAcc [01;36m[Koperator[m[K - (const VectorAcc& r1,const VectorAcc& r2) {
+           [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frameacc.inl:28:11:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' to '[01m[Kconst KDL::VectorAcc&[m[K'
+In file included from [01m[K/opt/ros/melodic/include/kdl/frameacc.hpp:33:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolver.hpp:27[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/kdl_tl.hpp:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/nlopt_ik.hpp:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall2d.h:294:23:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class V, class S> KDL::Rall2d<T, V, S> KDL::operator-(const KDL::Rall2d<T, V, S>&, S)
+ INLINE  Rall2d<T,V,S> [01;36m[Koperator[m[K -(const Rall2d<T,V,S>& v,S s)
+                       [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall2d.h:294:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:197:35:[m[K [01;36m[Knote: [m[K  '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' is not derived from '[01m[Kconst KDL::Rall2d<T, V, S>[m[K'
+     jnt_error = state.head(dof) - [01;36m[Kq_des[m[K;
+                                   [01;36m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/kdl/frameacc.hpp:33:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolver.hpp:27[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/kdl_tl.hpp:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/nlopt_ik.hpp:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall2d.h:288:23:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class V, class S> KDL::Rall2d<T, V, S> KDL::operator-(S, const KDL::Rall2d<T, V, S>&)
+ INLINE  Rall2d<T,V,S> [01;36m[Koperator[m[K -(S s,const Rall2d<T,V,S>& v)
+                       [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall2d.h:288:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:197:35:[m[K [01;36m[Knote: [m[K  '[01m[KKDL::JntArray[m[K' is not derived from '[01m[Kconst KDL::Rall2d<T, V, S>[m[K'
+     jnt_error = state.head(dof) - [01;36m[Kq_des[m[K;
+                                   [01;36m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/kdl/frameacc.hpp:33:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolver.hpp:27[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/kdl_tl.hpp:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/nlopt_ik.hpp:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall2d.h:258:23:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class V, class S> KDL::Rall2d<T, V, S> KDL::operator-(const KDL::Rall2d<T, V, S>&)
+ INLINE  Rall2d<T,V,S> [01;36m[Koperator[m[K -(const Rall2d<T,V,S>& arg)
+                       [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall2d.h:258:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:197:35:[m[K [01;36m[Knote: [m[K  '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' is not derived from '[01m[Kconst KDL::Rall2d<T, V, S>[m[K'
+     jnt_error = state.head(dof) - [01;36m[Kq_des[m[K;
+                                   [01;36m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/kdl/frameacc.hpp:33:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolver.hpp:27[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/kdl_tl.hpp:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/nlopt_ik.hpp:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall2d.h:252:23:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class V, class S> KDL::Rall2d<T, V, S> KDL::operator-(const KDL::Rall2d<T, V, S>&, const KDL::Rall2d<T, V, S>&)
+ INLINE  Rall2d<T,V,S> [01;36m[Koperator[m[K -(const Rall2d<T,V,S>& lhs,const Rall2d<T,V,S>& rhs)
+                       [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall2d.h:252:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:197:35:[m[K [01;36m[Knote: [m[K  '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' is not derived from '[01m[Kconst KDL::Rall2d<T, V, S>[m[K'
+     jnt_error = state.head(dof) - [01;36m[Kq_des[m[K;
+                                   [01;36m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/kdl/framevel.hpp:387:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolver.hpp:26[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/kdl_tl.hpp:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/nlopt_ik.hpp:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/opt/ros/melodic/include/kdl/framevel.inl:460:10:[m[K [01;36m[Knote: [m[Kcandidate: KDL::TwistVel KDL::operator-(const KDL::TwistVel&)
+ TwistVel [01;36m[Koperator[m[K-(const TwistVel& arg)
+          [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/framevel.inl:460:10:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/melodic/include/kdl/framevel.inl:454:10:[m[K [01;36m[Knote: [m[Kcandidate: KDL::TwistVel KDL::operator-(const KDL::TwistVel&, const KDL::TwistVel&)
+ TwistVel [01;36m[Koperator[m[K-(const TwistVel& lhs,const TwistVel& rhs)
+          [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/framevel.inl:454:10:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' to '[01m[Kconst KDL::TwistVel&[m[K'
+[01m[K/opt/ros/melodic/include/kdl/framevel.inl:235:11:[m[K [01;36m[Knote: [m[Kcandidate: KDL::VectorVel KDL::operator-(const KDL::VectorVel&)
+ VectorVel [01;36m[Koperator[m[K - (const VectorVel& r) {
+           [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/framevel.inl:235:11:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/melodic/include/kdl/framevel.inl:222:11:[m[K [01;36m[Knote: [m[Kcandidate: KDL::VectorVel KDL::operator-(const KDL::VectorVel&, const KDL::Vector&)
+ VectorVel [01;36m[Koperator[m[K - (const VectorVel& r1,const Vector& r2) {
+           [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/framevel.inl:222:11:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' to '[01m[Kconst KDL::VectorVel&[m[K'
+[01m[K/opt/ros/melodic/include/kdl/framevel.inl:230:11:[m[K [01;36m[Knote: [m[Kcandidate: KDL::VectorVel KDL::operator-(const KDL::Vector&, const KDL::VectorVel&)
+ VectorVel [01;36m[Koperator[m[K - (const Vector& r1,const VectorVel& r2) {
+           [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/framevel.inl:230:11:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' to '[01m[Kconst KDL::Vector&[m[K'
+[01m[K/opt/ros/melodic/include/kdl/framevel.inl:214:11:[m[K [01;36m[Knote: [m[Kcandidate: KDL::VectorVel KDL::operator-(const KDL::VectorVel&, const KDL::VectorVel&)
+ VectorVel [01;36m[Koperator[m[K - (const VectorVel& r1,const VectorVel& r2) {
+           [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/framevel.inl:214:11:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' to '[01m[Kconst KDL::VectorVel&[m[K'
+In file included from [01m[K/opt/ros/melodic/include/kdl/framevel.hpp:27:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolver.hpp:26[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/kdl_tl.hpp:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/nlopt_ik.hpp:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall1d.h:278:23:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class V, class S> KDL::Rall1d<T, V, S> KDL::operator-(const KDL::Rall1d<T, V, S>&, S)
+ INLINE  Rall1d<T,V,S> [01;36m[Koperator[m[K -(const Rall1d<T,V,S>& v,S s)
+                       [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall1d.h:278:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:197:35:[m[K [01;36m[Knote: [m[K  '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' is not derived from '[01m[Kconst KDL::Rall1d<T, V, S>[m[K'
+     jnt_error = state.head(dof) - [01;36m[Kq_des[m[K;
+                                   [01;36m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/kdl/framevel.hpp:27:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolver.hpp:26[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/kdl_tl.hpp:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/nlopt_ik.hpp:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall1d.h:272:23:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class V, class S> KDL::Rall1d<T, V, S> KDL::operator-(S, const KDL::Rall1d<T, V, S>&)
+ INLINE  Rall1d<T,V,S> [01;36m[Koperator[m[K -(S s,const Rall1d<T,V,S>& v)
+                       [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall1d.h:272:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:197:35:[m[K [01;36m[Knote: [m[K  '[01m[KKDL::JntArray[m[K' is not derived from '[01m[Kconst KDL::Rall1d<T, V, S>[m[K'
+     jnt_error = state.head(dof) - [01;36m[Kq_des[m[K;
+                                   [01;36m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/kdl/framevel.hpp:27:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolver.hpp:26[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/kdl_tl.hpp:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/nlopt_ik.hpp:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall1d.h:242:23:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class V, class S> KDL::Rall1d<T, V, S> KDL::operator-(const KDL::Rall1d<T, V, S>&)
+ INLINE  Rall1d<T,V,S> [01;36m[Koperator[m[K -(const Rall1d<T,V,S>& arg)
+                       [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall1d.h:242:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:197:35:[m[K [01;36m[Knote: [m[K  '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' is not derived from '[01m[Kconst KDL::Rall1d<T, V, S>[m[K'
+     jnt_error = state.head(dof) - [01;36m[Kq_des[m[K;
+                                   [01;36m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/kdl/framevel.hpp:27:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolver.hpp:26[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/kdl_tl.hpp:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/nlopt_ik.hpp:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall1d.h:236:23:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class V, class S> KDL::Rall1d<T, V, S> KDL::operator-(const KDL::Rall1d<T, V, S>&, const KDL::Rall1d<T, V, S>&)
+ INLINE  Rall1d<T,V,S> [01;36m[Koperator[m[K -(const Rall1d<T,V,S>& lhs,const Rall1d<T,V,S>& rhs)
+                       [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/utilities/rall1d.h:236:23:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:197:35:[m[K [01;36m[Knote: [m[K  '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' is not derived from '[01m[Kconst KDL::Rall1d<T, V, S>[m[K'
+     jnt_error = state.head(dof) - [01;36m[Kq_des[m[K;
+                                   [01;36m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/kdl/frames.hpp:1261:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/segment.hpp:26[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chain.hpp:25[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolver.hpp:25[m[K,
+                 from [01m[K/opt/ros/melodic/include/kdl/chainfksolverpos_recursive.hpp:25[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/kdl_tl.hpp:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/nlopt_ik.hpp:34[m[K,
+                 from [01m[K/opt/ros/melodic/include/trac_ik/trac_ik.hpp:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:23[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:808:17:[m[K [01;36m[Knote: [m[Kcandidate: KDL::Vector2 KDL::operator-(const KDL::Vector2&)
+ IMETHOD Vector2 [01;36m[Koperator[m[K-(const Vector2 & arg)
+                 [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:808:17:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:745:17:[m[K [01;36m[Knote: [m[Kcandidate: KDL::Vector2 KDL::operator-(const KDL::Vector2&, const KDL::Vector2&)
+ IMETHOD Vector2 [01;36m[Koperator[m[K -(const Vector2 & lhs,const Vector2& rhs)
+                 [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:745:17:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' to '[01m[Kconst KDL::Vector2&[m[K'
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:269:8:[m[K [01;36m[Knote: [m[Kcandidate: KDL::Wrench KDL::operator-(const KDL::Wrench&)
+ Wrench [01;36m[Koperator[m[K-(const Wrench& arg)
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:269:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:263:8:[m[K [01;36m[Knote: [m[Kcandidate: KDL::Wrench KDL::operator-(const KDL::Wrench&, const KDL::Wrench&)
+ Wrench [01;36m[Koperator[m[K-(const Wrench& lhs,const Wrench& rhs)
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:263:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' to '[01m[Kconst KDL::Wrench&[m[K'
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:372:7:[m[K [01;36m[Knote: [m[Kcandidate: KDL::Twist KDL::operator-(const KDL::Twist&)
+ Twist [01;36m[Koperator[m[K-(const Twist& arg)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:372:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:366:7:[m[K [01;36m[Knote: [m[Kcandidate: KDL::Twist KDL::operator-(const KDL::Twist&, const KDL::Twist&)
+ Twist [01;36m[Koperator[m[K-(const Twist& lhs,const Twist& rhs)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:366:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' to '[01m[Kconst KDL::Twist&[m[K'
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:449:8:[m[K [01;36m[Knote: [m[Kcandidate: KDL::Vector KDL::operator-(const KDL::Vector&)
+ Vector [01;36m[Koperator[m[K-(const Vector & arg)
+        [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:449:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 2 provided
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:66:16:[m[K [01;36m[Knote: [m[Kcandidate: KDL::Vector KDL::operator-(const KDL::Vector&, const KDL::Vector&)
+ IMETHOD Vector [01;36m[Koperator[m[K -(const Vector & lhs,const Vector& rhs)
+                [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames.inl:66:16:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' to '[01m[Kconst KDL::Vector&[m[K'
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

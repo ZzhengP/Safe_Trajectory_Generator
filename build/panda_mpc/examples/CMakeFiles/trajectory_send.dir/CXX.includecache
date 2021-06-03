@@ -239,9 +239,9 @@ geometry_msgs/PoseStamped.h
 -
 Eigen/Core
 -
-robot/robot_mpc_model.h
+planning/traj_generation.hpp
 -
-optFormulation/task.hpp
+robot/robot_mpc_model.h
 -
 
 /home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp
@@ -312,6 +312,20 @@ panda_traj/panda_traj.hpp
 robot/robot_model.h
 -
 
+/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp
+robot/robot_mpc_model.h
+-
+iostream
+-
+Eigen/Core
+-
+ros/ros.h
+-
+memory
+-
+vector
+-
+
 /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp
 robot/robot_mpc_model.h
 -
@@ -324,6 +338,24 @@ ros/ros.h
 memory
 -
 vector
+-
+
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp
+iostream
+-
+memory
+-
+qpOASES.hpp
+-
+Eigen/Core
+-
+ros/node_handle.h
+-
+optFormulation/constraint.hpp
+-
+optFormulation/task.hpp
+-
+robot/robot_mpc_model.h
 -
 
 /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h

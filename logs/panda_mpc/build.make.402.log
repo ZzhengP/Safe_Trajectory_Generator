@@ -1,0 +1,31 @@
+[ 14%] Built target panda_mpc_gencfg
+[35m[1mScanning dependencies of target panda_mpc[0m
+[ 14%] Built target sensor_msgs_generate_messages_eus
+[ 14%] Built target geometry_msgs_generate_messages_eus
+[ 14%] Built target _panda_mpc_generate_messages_check_deps_UI
+[ 14%] Built target _panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint
+[ 14%] Built target std_msgs_generate_messages_eus
+[ 14%] Built target sensor_msgs_generate_messages_py
+[ 14%] Built target _panda_mpc_generate_messages_check_deps_PandaRunMsg
+[ 14%] Built target geometry_msgs_generate_messages_py
+[ 14%] Built target sensor_msgs_generate_messages_lisp
+[ 14%] Built target std_msgs_generate_messages_py
+[ 14%] Built target geometry_msgs_generate_messages_lisp
+[ 14%] Built target std_msgs_generate_messages_lisp
+[ 14%] Built target std_msgs_generate_messages_nodejs
+[ 14%] Built target sensor_msgs_generate_messages_nodejs
+[ 14%] Built target geometry_msgs_generate_messages_nodejs
+[ 14%] Built target geometry_msgs_generate_messages_cpp
+[ 14%] Built target sensor_msgs_generate_messages_cpp
+[ 14%] Built target std_msgs_generate_messages_cpp
+[ 25%] Built target panda_mpc_generate_messages_eus
+[ 40%] Built target panda_mpc_generate_messages_py
+[ 48%] Built target panda_mpc_generate_messages_lisp
+[ 57%] Built target panda_mpc_generate_messages_nodejs
+[ 60%] [32mBuilding CXX object CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o[0m
+[ 68%] Built target panda_mpc_generate_messages_cpp
+[ 68%] Built target panda_mpc_generate_messages
+[ 71%] [32m[1mLinking CXX shared library /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so[0m
+[ 94%] Built target panda_mpc
+[ 97%] [32m[1mLinking CXX executable /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/trajectory_send[0m
+[100%] Built target trajectory_send

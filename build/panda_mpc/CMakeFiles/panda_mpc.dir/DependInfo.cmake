@@ -5,9 +5,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/controller.cpp.o"
+  "/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o"
   "/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o"
   "/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o"
   "/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o"
+  "/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o"
+  "/home/zheng/catkin_ws/src/panda_mpc/src/qpsolver.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o"
   "/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_model.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/robot/robot_model.cpp.o"
   "/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/robot/robot_mpc_model.cpp.o"
   )

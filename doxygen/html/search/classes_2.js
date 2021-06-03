@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['densematrix',['DenseMatrix',['../class_dense_matrix.html',1,'']]],
-  ['dualarmcartesianimpedanceexamplecontroller',['DualArmCartesianImpedanceExampleController',['../classfranka__example__controllers_1_1_dual_arm_cartesian_impedance_example_controller.html',1,'franka_example_controllers']]]
+  ['pandampccontroller',['PandaMPCController',['../classpanda__mpc_1_1_panda_m_p_c_controller.html',1,'panda_mpc']]],
+  ['pandasimulation',['PandaSimulation',['../classgazebo_1_1_panda_simulation.html',1,'gazebo']]],
+  ['pointsender',['pointSender',['../classpoint_sender.html',1,'']]]
 ];

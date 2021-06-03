@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['pandampccontroller',['PandaMPCController',['../classpanda__mpc_1_1_panda_m_p_c_controller.html',1,'panda_mpc']]],
-  ['pandasimulation',['PandaSimulation',['../classgazebo_1_1_panda_simulation.html',1,'gazebo']]]
+  ['dof',['dof',['../classrobot_1_1_robot_model.html#a12e2c01b76bd26b300bd51fc70e69c10',1,'robot::RobotModel']]]
 ];

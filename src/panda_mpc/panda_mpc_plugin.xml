@@ -1,4 +1,4 @@
-<library path="lib/panda_mpc">
+<library path="lib/libpanda_mpc">
     <class name="panda_mpc/PandaMPCController" type="panda_mpc::PandaMPCController" base_class_type="controller_interface::ControllerBase">
         <description>
             A model predictive controller for panda robot

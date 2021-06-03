@@ -1,0 +1,16 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:[m[K In function '[01m[Kint main(int, char**)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:157:81:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[Kplanning::trajGen::trajGen(ros::NodeHandle&, Eigen::VectorXd&, Eigen::VectorXd&)[m[K'
+     trajectory_generation.reset(new planning::trajGen(node_handle,q_init,qd_init[01;31m[K)[m[K);
+                                                                                 [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:37:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:26:3:[m[K [01;36m[Knote: [m[Kcandidate: planning::trajGen::trajGen(ros::NodeHandle*, const VectorXd&, const VectorXd&)
+   [01;36m[KtrajGen[m[K(ros::NodeHandle* node_handle, const Eigen::VectorXd& q_init, const Eigen::VectorXd& qd_init)
+   [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:26:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[Kros::NodeHandle[m[K' to '[01m[Kros::NodeHandle*[m[K'
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:21:7:[m[K [01;36m[Knote: [m[Kcandidate: planning::trajGen::trajGen(planning::trajGen&&)
+ class [01;36m[KtrajGen[m[K
+       [01;36m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:21:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

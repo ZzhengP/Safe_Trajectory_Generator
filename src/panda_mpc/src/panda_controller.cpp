@@ -194,3 +194,4 @@ void PandaMPCController::update(const ros::Time&, const ros::Duration& period) {
 
 PLUGINLIB_EXPORT_CLASS(panda_mpc::PandaMPCController,
 controller_interface::ControllerBase)
+

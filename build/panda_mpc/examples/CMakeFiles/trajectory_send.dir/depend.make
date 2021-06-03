@@ -17,7 +17,9 @@ examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catki
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h

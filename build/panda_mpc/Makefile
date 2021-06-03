@@ -1728,6 +1728,33 @@ src/controller.cpp.s:
 	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/controller.cpp.s
 .PHONY : src/controller.cpp.s
 
+src/optFormulation/constraint.o: src/optFormulation/constraint.cpp.o
+
+.PHONY : src/optFormulation/constraint.o
+
+# target to build an object file
+src/optFormulation/constraint.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o
+.PHONY : src/optFormulation/constraint.cpp.o
+
+src/optFormulation/constraint.i: src/optFormulation/constraint.cpp.i
+
+.PHONY : src/optFormulation/constraint.i
+
+# target to preprocess a source file
+src/optFormulation/constraint.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.i
+.PHONY : src/optFormulation/constraint.cpp.i
+
+src/optFormulation/constraint.s: src/optFormulation/constraint.cpp.s
+
+.PHONY : src/optFormulation/constraint.s
+
+# target to generate assembly for a file
+src/optFormulation/constraint.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.s
+.PHONY : src/optFormulation/constraint.cpp.s
+
 src/optFormulation/task.o: src/optFormulation/task.cpp.o
 
 .PHONY : src/optFormulation/task.o
@@ -1808,6 +1835,60 @@ src/panda_simulation.s: src/panda_simulation.cpp.s
 src/panda_simulation.cpp.s:
 	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.s
 .PHONY : src/panda_simulation.cpp.s
+
+src/planning/traj_generation.o: src/planning/traj_generation.cpp.o
+
+.PHONY : src/planning/traj_generation.o
+
+# target to build an object file
+src/planning/traj_generation.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o
+.PHONY : src/planning/traj_generation.cpp.o
+
+src/planning/traj_generation.i: src/planning/traj_generation.cpp.i
+
+.PHONY : src/planning/traj_generation.i
+
+# target to preprocess a source file
+src/planning/traj_generation.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.i
+.PHONY : src/planning/traj_generation.cpp.i
+
+src/planning/traj_generation.s: src/planning/traj_generation.cpp.s
+
+.PHONY : src/planning/traj_generation.s
+
+# target to generate assembly for a file
+src/planning/traj_generation.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.s
+.PHONY : src/planning/traj_generation.cpp.s
+
+src/qpsolver.o: src/qpsolver.cpp.o
+
+.PHONY : src/qpsolver.o
+
+# target to build an object file
+src/qpsolver.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o
+.PHONY : src/qpsolver.cpp.o
+
+src/qpsolver.i: src/qpsolver.cpp.i
+
+.PHONY : src/qpsolver.i
+
+# target to preprocess a source file
+src/qpsolver.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.i
+.PHONY : src/qpsolver.cpp.i
+
+src/qpsolver.s: src/qpsolver.cpp.s
+
+.PHONY : src/qpsolver.s
+
+# target to generate assembly for a file
+src/qpsolver.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.s
+.PHONY : src/qpsolver.cpp.s
 
 src/robot/robot_model.o: src/robot/robot_model.cpp.o
 
@@ -1997,6 +2078,9 @@ help:
 	@echo "... src/controller.o"
 	@echo "... src/controller.i"
 	@echo "... src/controller.s"
+	@echo "... src/optFormulation/constraint.o"
+	@echo "... src/optFormulation/constraint.i"
+	@echo "... src/optFormulation/constraint.s"
 	@echo "... src/optFormulation/task.o"
 	@echo "... src/optFormulation/task.i"
 	@echo "... src/optFormulation/task.s"
@@ -2006,6 +2090,12 @@ help:
 	@echo "... src/panda_simulation.o"
 	@echo "... src/panda_simulation.i"
 	@echo "... src/panda_simulation.s"
+	@echo "... src/planning/traj_generation.o"
+	@echo "... src/planning/traj_generation.i"
+	@echo "... src/planning/traj_generation.s"
+	@echo "... src/qpsolver.o"
+	@echo "... src/qpsolver.i"
+	@echo "... src/qpsolver.s"
 	@echo "... src/robot/robot_model.o"
 	@echo "... src/robot/robot_model.i"
 	@echo "... src/robot/robot_model.s"

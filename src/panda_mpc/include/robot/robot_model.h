@@ -38,8 +38,6 @@ public:
 
       ROS_INFO_STREAM("Constructing robot augemented state for model predictive control");
 
-
-
   }
 
 
@@ -71,7 +69,12 @@ public:
       chainjacsolver_->JntToJac(q,J);
   }
 
-  void setJntState(Eigen::VectorXd & q, Eigen::VectorXd & qd){
+  void CartToJnt(const KDL::Frame& desire_frame, KDL::JntArray& q_sol){
+    int i;
+    i = ik_solver_->CartToJnt(q_in.q, desire_frame,q_sol);
+  }
+
+  void setJntState( Eigen::VectorXd q, Eigen::VectorXd qd){
 
     q_in.q.data = q;
     q_in.qdot.data = qd;

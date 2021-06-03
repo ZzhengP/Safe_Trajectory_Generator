@@ -1,0 +1,124 @@
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp:6:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:[m[K In constructor '[01m[Krobot::RobotMPcModel::RobotMPcModel(ros::NodeHandle&, const string&, const string&, const int&, const double&, const VectorXd&, const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:108:59:[m[K [01;31m[Kerror: [m[Kno match for '[01m[Koperator=[m[K' (operand types are '[01m[Krobot::MPC_param[m[K' and '[01m[Kstd::shared_ptr<robot::MPC_param>[m[K')
+      mpc_params = std::shared_ptr<MPC_param>(new MPC_param[01;31m[K)[m[K;
+                                                           [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp:6:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:51:14:[m[K [01;36m[Knote: [m[Kcandidate: robot::MPC_param& robot::MPC_param::operator=(const robot::MPC_param&)
+   MPC_param& [01;36m[Koperator[m[K=(const MPC_param& param){
+              [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:51:14:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[Kstd::shared_ptr<robot::MPC_param>[m[K' to '[01m[Kconst robot::MPC_param&[m[K'
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp:6:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:[m[K In member function '[01m[KEigen::VectorXd robot::RobotMPcModel::getJointvelHorizon()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:281:23:[m[K [01;31m[Kerror: [m[K'[01m[Kstruct robot::MPC_param[m[K' has no member named '[01m[Kd_horizon_[m[K'; did you mean '[01m[Kq_horizon_[m[K'?
+     return mpc_params.[01;31m[Kd_horizon_[m[K;
+                       [01;31m[K^~~~~~~~~~[m[K
+                       [32m[Kq_horizon_[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:[m[K In constructor '[01m[Krobot::RobotMPcModel::RobotMPcModel(ros::NodeHandle&, const string&, const string&, const int&, const double&, const VectorXd&, const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:108:59:[m[K [01;31m[Kerror: [m[Kno match for '[01m[Koperator=[m[K' (operand types are '[01m[Krobot::MPC_param[m[K' and '[01m[Kstd::shared_ptr<robot::MPC_param>[m[K')
+      mpc_params = std::shared_ptr<MPC_param>(new MPC_param[01;31m[K)[m[K;
+                                                           [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:51:14:[m[K [01;36m[Knote: [m[Kcandidate: robot::MPC_param& robot::MPC_param::operator=(const robot::MPC_param&)
+   MPC_param& [01;36m[Koperator[m[K=(const MPC_param& param){
+              [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:51:14:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[Kstd::shared_ptr<robot::MPC_param>[m[K' to '[01m[Kconst robot::MPC_param&[m[K'
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:[m[K In member function '[01m[KEigen::VectorXd robot::RobotMPcModel::getJointvelHorizon()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:281:23:[m[K [01;31m[Kerror: [m[K'[01m[Kstruct robot::MPC_param[m[K' has no member named '[01m[Kd_horizon_[m[K'; did you mean '[01m[Kq_horizon_[m[K'?
+     return mpc_params.[01;31m[Kd_horizon_[m[K;
+                       [01;31m[K^~~~~~~~~~[m[K
+                       [32m[Kq_horizon_[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:[m[K In member function '[01m[Kbool robot::RobotMPcModel::InitMPCParameter(ros::NodeHandle&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:15:17:[m[K [01;31m[Kerror: [m[Kno match for '[01m[Koperator==[m[K' (operand types are '[01m[Krobot::MPC_param[m[K' and '[01m[Kstd::nullptr_t[m[K')
+   if([01;31m[Kmpc_params == nullptr[m[K){
+      [01;31m[K~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:21:15:[m[K [01;31m[Kerror: [m[Kbase operand of '[01m[K->[m[K' has non-pointer type '[01m[Krobot::MPC_param[m[K'
+     mpc_params[01;31m[K->[m[Kq_horizon_.segment(i*dof, dof) = q_init_;
+               [01;31m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:22:15:[m[K [01;31m[Kerror: [m[Kbase operand of '[01m[K->[m[K' has non-pointer type '[01m[Krobot::MPC_param[m[K'
+     mpc_params[01;31m[K->[m[Kqd_horizon_.segment(i*dof,dof) = qd_init_;
+               [01;31m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:23:15:[m[K [01;31m[Kerror: [m[Kbase operand of '[01m[K->[m[K' has non-pointer type '[01m[Krobot::MPC_param[m[K'
+     mpc_params[01;31m[K->[m[Kx_horizon_.segment(i*3,3) = x_curr_;
+               [01;31m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:24:15:[m[K [01;31m[Kerror: [m[Kbase operand of '[01m[K->[m[K' has non-pointer type '[01m[Krobot::MPC_param[m[K'
+     mpc_params[01;31m[K->[m[KJ_horizon_.block(6*i,dof*i,6,dof) = J_.data;
+               [01;31m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:[m[K In member function '[01m[Kvoid robot::RobotMPcModel::computeJacobianHorizon(const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:48:15:[m[K [01;31m[Kerror: [m[Kbase operand of '[01m[K->[m[K' has non-pointer type '[01m[Krobot::MPC_param[m[K'
+     mpc_params[01;31m[K->[m[KJ_horizon_.block(i*6, i*dof, 6, dof) = J_temp.data;
+               [01;31m[K^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:6:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:[m[K In constructor '[01m[Krobot::RobotMPcModel::RobotMPcModel(ros::NodeHandle&, const string&, const string&, const int&, const double&, const VectorXd&, const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:108:59:[m[K [01;31m[Kerror: [m[Kno match for '[01m[Koperator=[m[K' (operand types are '[01m[Krobot::MPC_param[m[K' and '[01m[Kstd::shared_ptr<robot::MPC_param>[m[K')
+      mpc_params = std::shared_ptr<MPC_param>(new MPC_param[01;31m[K)[m[K;
+                                                           [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:6:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:51:14:[m[K [01;36m[Knote: [m[Kcandidate: robot::MPC_param& robot::MPC_param::operator=(const robot::MPC_param&)
+   MPC_param& [01;36m[Koperator[m[K=(const MPC_param& param){
+              [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:51:14:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[Kstd::shared_ptr<robot::MPC_param>[m[K' to '[01m[Kconst robot::MPC_param&[m[K'
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:6:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:[m[K In constructor '[01m[Krobot::RobotMPcModel::RobotMPcModel(ros::NodeHandle&, const string&, const string&, const int&, const double&, const VectorXd&, const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:108:59:[m[K [01;31m[Kerror: [m[Kno match for '[01m[Koperator=[m[K' (operand types are '[01m[Krobot::MPC_param[m[K' and '[01m[Kstd::shared_ptr<robot::MPC_param>[m[K')
+      mpc_params = std::shared_ptr<MPC_param>(new MPC_param[01;31m[K)[m[K;
+                                                           [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:6:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:51:14:[m[K [01;36m[Knote: [m[Kcandidate: robot::MPC_param& robot::MPC_param::operator=(const robot::MPC_param&)
+   MPC_param& [01;36m[Koperator[m[K=(const MPC_param& param){
+              [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:51:14:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[Kstd::shared_ptr<robot::MPC_param>[m[K' to '[01m[Kconst robot::MPC_param&[m[K'
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:6:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:[m[K In member function '[01m[KEigen::VectorXd robot::RobotMPcModel::getJointvelHorizon()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:281:23:[m[K [01;31m[Kerror: [m[K'[01m[Kstruct robot::MPC_param[m[K' has no member named '[01m[Kd_horizon_[m[K'; did you mean '[01m[Kq_horizon_[m[K'?
+     return mpc_params.[01;31m[Kd_horizon_[m[K;
+                       [01;31m[K^~~~~~~~~~[m[K
+                       [32m[Kq_horizon_[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:6:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:[m[K In member function '[01m[KEigen::VectorXd robot::RobotMPcModel::getJointvelHorizon()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:281:23:[m[K [01;31m[Kerror: [m[K'[01m[Kstruct robot::MPC_param[m[K' has no member named '[01m[Kd_horizon_[m[K'; did you mean '[01m[Kq_horizon_[m[K'?
+     return mpc_params.[01;31m[Kd_horizon_[m[K;
+                       [01;31m[K^~~~~~~~~~[m[K
+                       [32m[Kq_horizon_[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:[m[K In constructor '[01m[Kplanning::trajGen::trajGen(ros::NodeHandle&, const VectorXd&, const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:57:103:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[Koptimization::MPCConstraint::MPCConstraint(int&, int&, double&, robot::MPC_param)[m[K'
+     mpc_constraint_.reset(new optimization::MPCConstraint(N_,dof_,dt_,robot_mpc_model_->getMPCParams()[01;31m[K)[m[K);
+                                                                                                       [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:12:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:31:3:[m[K [01;36m[Knote: [m[Kcandidate: optimization::MPCConstraint::MPCConstraint(const int&, const int&, const double&, std::shared_ptr<robot::MPC_param>)
+   [01;36m[KMPCConstraint[m[K(const int& N, const int& dof, const double& dt,
+   [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:31:3:[m[K [01;36m[Knote: [m[K  no known conversion for argument 4 from '[01m[Krobot::MPC_param[m[K' to '[01m[Kstd::shared_ptr<robot::MPC_param>[m[K'
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:28:7:[m[K [01;36m[Knote: [m[Kcandidate: optimization::MPCConstraint::MPCConstraint(const optimization::MPCConstraint&)
+ class [01;36m[KMPCConstraint[m[K{
+       [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:28:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:28:7:[m[K [01;36m[Knote: [m[Kcandidate: optimization::MPCConstraint::MPCConstraint(optimization::MPCConstraint&&)
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:28:7:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 4 provided
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K In member function '[01m[KEigen::VectorXd planning::trajGen::update(Eigen::VectorXd, const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:54:50:[m[K [01;31m[Kerror: [m[Kbase operand of '[01m[K->[m[K' has non-pointer type '[01m[Krobot::MPC_param[m[K'
+     J_horizon_ = robot_mpc_model_->getMPCParams()[01;31m[K->[m[KJ_horizon_;
+                                                  [01;31m[K^~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/robot/robot_mpc_model.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o] Error 1
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o] Error 1
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

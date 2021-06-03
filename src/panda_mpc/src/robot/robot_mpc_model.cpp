@@ -12,16 +12,16 @@ bool RobotMPcModel::InitMPCParameter(ros::NodeHandle &node_handle){
   setPxDq();
   setPuDq();
 
-  if(mpc_params == nullptr){
+  if(!mpc_params.initialized){
     ROS_WARN_STREAM("model predictive parameter structure is null !!!");
     return false;
   }
 
   for (unsigned int i(0); i<N_; i++){
-    mpc_params->q_horizon_.segment(i*dof, dof) = q_init_;
-    mpc_params->qd_horizon_.segment(i*dof,dof) = qd_init_;
-    mpc_params->x_horizon_.segment(i*3,3) = x_curr_;
-    mpc_params->J_horizon_.block(6*i,dof*i,6,dof) = J_.data;
+    mpc_params.q_horizon_.segment(i*dof, dof) = q_init_;
+    mpc_params.qd_horizon_.segment(i*dof,dof) = qd_init_;
+    mpc_params.x_horizon_.segment(i*3,3) = x_curr_;
+    mpc_params.J_horizon_.block(6*i,dof*i,6,dof) = J_.data;
   }
 
   return true;
@@ -45,12 +45,19 @@ void RobotMPcModel::computeJacobianHorizon(const Eigen::VectorXd &q_horizon){
 
     JntToJac(q_temp, J_temp);
 
-    mpc_params->J_horizon_.block(i*6, i*dof, 6, dof) = J_temp.data;
+    mpc_params.J_horizon_.block(i*6, i*dof, 6, dof) = J_temp.data;
 
   }
 }
 
+void RobotMPcModel::update(Eigen::VectorXd state, Eigen::VectorXd solution,const Eigen::VectorXd &q_horizon){
 
+  mpc_params.q_horizon_ = mpc_params.Px_*state + mpc_params.Pu_*solution;
+  mpc_params.qd_horizon_ = mpc_params.Pxdq_*state + mpc_params.Pudq_*solution;
+  computeJacobianHorizon(q_horizon);
+
+
+}
 
 
 }

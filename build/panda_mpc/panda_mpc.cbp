@@ -1650,6 +1650,9 @@
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp">
+			<Option target="panda_mpc"/>
+		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
@@ -1657,6 +1660,12 @@
 			<Option target="panda_mpc"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp">
+			<Option target="panda_mpc"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp">
+			<Option target="panda_mpc"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/qpsolver.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_model.cpp">

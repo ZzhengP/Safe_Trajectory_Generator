@@ -1,0 +1,21 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K In member function '[01m[KEigen::VectorXd planning::trajGen::update(Eigen::VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:34:44:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type '[01m[KEigen::VectorXd& {aka Eigen::Matrix<double, -1, 1>&}[m[K' to an rvalue of type '[01m[KEigen::VectorXd {aka Eigen::Matrix<double, -1, 1>}[m[K'
+     robot_mpc_model_->setJntState([01;31m[KS.segment(0,dof_)[m[K, S.segment(dof_,dof_));
+                                   [01;31m[K~~~~~~~~~^~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:438:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:9[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:378:25:[m[K [01;36m[Knote: [m[K  after user-defined conversion: Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Block<Eigen::Matrix<double, -1, 1>, -1, 1, false>; _Scalar = double; int _Rows = -1; int _Cols = 1; int _Options = 0; int _MaxRows = -1; int _MaxCols = 1]
+     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K(const EigenBase<OtherDerived> &other)
+                         [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:4:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:6[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:72:8:[m[K [01;36m[Knote: [m[K  initializing argument 1 of '[01m[Kvoid robot::RobotModel::setJntState(Eigen::VectorXd&, Eigen::VectorXd&)[m[K'
+   void [01;36m[KsetJntState[m[K( Eigen::VectorXd & q, Eigen::VectorXd & qd){
+        [01;36m[K^~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

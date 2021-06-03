@@ -1,0 +1,17 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:[m[K In member function '[01m[Kbool optimization::MPCConstraint::init(const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:9:19:[m[K [01;31m[Kerror: [m[Kno match for '[01m[Koperator==[m[K' (operand types are '[01m[Krobot::MPC_param[m[K' and '[01m[Kstd::nullptr_t[m[K')
+   if ([01;31m[Kmpc_params_ == nullptr[m[K){
+       [01;31m[K~~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:[m[K In member function '[01m[Kbool optimization::MPCConstraint::update(const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:54:19:[m[K [01;31m[Kerror: [m[Kno match for '[01m[Koperator==[m[K' (operand types are '[01m[Krobot::MPC_param[m[K' and '[01m[Kstd::nullptr_t[m[K')
+   if ([01;31m[Kmpc_params_ == nullptr[m[K){
+       [01;31m[K~~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K In member function '[01m[KEigen::VectorXd planning::trajGen::update(Eigen::VectorXd, const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:54:50:[m[K [01;31m[Kerror: [m[Kbase operand of '[01m[K->[m[K' has non-pointer type '[01m[Krobot::MPC_param[m[K'
+     J_horizon_ = robot_mpc_model_->getMPCParams()[01;31m[K->[m[KJ_horizon_;
+                                                  [01;31m[K^~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

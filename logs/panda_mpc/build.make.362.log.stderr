@@ -1,0 +1,44 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:[m[K In member function '[01m[Kbool optimization::MPCTask::init(const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:22:3:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K;[m[K' before '[01m[Ktask[m[K'
+   [01;31m[Ktask[m[K task;
+   [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:23:7:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before '[01m[K.[m[K' token
+   task[01;31m[K.[m[Ktask_name_="q_tracking";
+       [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:24:7:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before '[01m[K.[m[K' token
+   task[01;31m[K.[m[KE_.resize(N_*dof_, N_*dof_);
+       [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:25:7:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before '[01m[K.[m[K' token
+   task[01;31m[K.[m[KE_.setIdentity();
+       [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:26:7:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before '[01m[K.[m[K' token
+   task[01;31m[K.[m[Kf_.resize(N_*dof_);
+       [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:27:7:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before '[01m[K.[m[K' token
+   task[01;31m[K.[m[Kf_.setZero();
+       [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:28:7:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before '[01m[K.[m[K' token
+   task[01;31m[K.[m[Ktask_des_.resize(dof_);
+       [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:29:7:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before '[01m[K.[m[K' token
+   task[01;31m[K.[m[Ktask_des_ = q_init;
+       [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:30:7:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before '[01m[K.[m[K' token
+   task[01;31m[K.[m[Kweight = 1000;
+       [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:32:33:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before '[01m[K)[m[K' token
+   task_container_.push_back(task[01;31m[K)[m[K;
+                                 [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:40:7:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before '[01m[K.[m[K' token
+   task[01;31m[K.[m[Kweight = 0;
+       [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:41:7:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before '[01m[K.[m[K' token
+   task[01;31m[K.[m[Ktask_name_="qdd_tracking";
+       [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:42:33:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before '[01m[K)[m[K' token
+   task_container_.push_back(task[01;31m[K)[m[K;
+                                 [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

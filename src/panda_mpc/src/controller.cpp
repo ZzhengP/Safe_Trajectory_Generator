@@ -95,11 +95,11 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
     trajectory.updateTrajectory(traj_properties_, time_dt);
     if (traj_properties_.move_)
         traj_properties_.move_ = false;
-//    X_traj_ = trajectory.Pos();
-//    Xd_traj_ = trajectory.Vel();
-        X_traj_ = next_pts_;
-        Xd_traj_.vel[0] = 0, Xd_traj_.vel[1] = 0.1, Xd_traj_.vel[2] = 0;
-        Xd_traj_.rot[0] = 0, Xd_traj_.rot[1] = 0, Xd_traj_.rot[2] = 0 ;
+    X_traj_ = trajectory.Pos();
+    Xd_traj_ = trajectory.Vel();
+//        X_traj_ = next_pts_;
+//        Xd_traj_.vel[0] = 0, Xd_traj_.vel[1] = 0.1, Xd_traj_.vel[2] = 0;
+//        Xd_traj_.rot[0] = 0, Xd_traj_.rot[1] = 0, Xd_traj_.rot[2] = 0 ;
     // Proportionnal controller
     X_err_ = diff( X_curr_ , X_traj_ );
     tf::twistKDLToEigen(X_err_,x_err);
@@ -240,7 +240,7 @@ bool Controller::load_robot(ros::NodeHandle& node_handle, const Eigen::VectorXd&
 
     updateUI_service = node_handle.advertiseService("updateUI", &Controller::updateUI, this);
     updateTraj_service = node_handle.advertiseService("updateTrajectory", &Controller::updateTrajectory, this);
-    updateNextTraj_service_ = node_handle.advertiseService("/panda_mpc/next_point", &Controller::updateTrajectoryPoint,this);
+  //  updateNextTraj_service_ = node_handle.advertiseService("/panda_mpc/next_point", &Controller::updateTrajectoryPoint,this);
 
     // Initialize robot model
     robot_model_.reset(new robot::RobotModel(node_handle, root_link_, tip_link_));

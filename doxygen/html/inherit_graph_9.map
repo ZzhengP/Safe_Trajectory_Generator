@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classfranka__hw_1_1_franka_model_handle.html" title="franka_hw::FrankaModelHandle" alt="" coords="5,5,212,32"/>
+<area shape="rect" id="node1" href="$classrobot_1_1_robot_model.html" title="robot::RobotModel" alt="" coords="5,5,135,32"/>
+<area shape="rect" id="node2" href="$classrobot_1_1_robot_m_pc_model.html" title="robot::RobotMPcModel" alt="" coords="183,5,339,32"/>
 </map>

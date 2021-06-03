@@ -1,0 +1,13 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:[m[K In function '[01m[Kint main(int, char**)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:205:99:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[Kstd::unique_ptr<optimization::constraint>::reset(optimization::MPCConstraint*)[m[K'
+     mpc_constraint.reset(new optimization::MPCConstraint(N,dof,dt,robot_mpc_model->getMPCParams())[01;31m[K)[m[K;
+                                                                                                   [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/7/memory:80:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:28[m[K:
+[01m[K/usr/include/c++/7/bits/unique_ptr.h:366:7:[m[K [01;36m[Knote: [m[Kcandidate: void std::unique_ptr<_Tp, _Dp>::reset(std::unique_ptr<_Tp, _Dp>::pointer) [with _Tp = optimization::constraint; _Dp = std::default_delete<optimization::constraint>; std::unique_ptr<_Tp, _Dp>::pointer = optimization::constraint*]
+       [01;36m[Kreset[m[K(pointer __p = pointer()) noexcept
+       [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/7/bits/unique_ptr.h:366:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[Koptimization::MPCConstraint*[m[K' to '[01m[Kstd::unique_ptr<optimization::constraint>::pointer {aka optimization::constraint*}[m[K'
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

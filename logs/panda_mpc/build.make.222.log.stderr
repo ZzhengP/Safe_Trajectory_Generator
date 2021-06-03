@@ -1,0 +1,74 @@
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:438:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+/usr/include/eigen3/Eigen/src/Core/Matrix.h: In instantiation of '[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T0&, const T1&) [with T0 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; T1 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Scalar = double; int _Rows = -1; int _Cols = 1; int _Options = 0; int _MaxRows = -1; int _MaxCols = 1][m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:180:84:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:304:35:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KEigen::Matrix<double, -1, 1>::_init2<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > > >(const __gnu_cxx::__normal_iterator<int*, std::vector<int> >&, const __gnu_cxx::__normal_iterator<int*, std::vector<int> >&)[m[K'
+       [01;31m[KBase::template _init2<T0,T1>(x, y)[m[K;
+       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:734:30:[m[K [01;36m[Knote: [m[Kcandidate: template<class T0, class T1> void Eigen::PlainObjectBase<Derived>::_init2(Eigen::Index, Eigen::Index, typename Eigen::internal::enable_if<(typename Eigen::internal::dense_xpr_base<Derived>::type:: SizeAtCompileTime != 2), T0>::type*) [with T0 = T0; T1 = T1; Derived = Eigen::Matrix<double, -1, 1>]
+     EIGEN_STRONG_INLINE void [01;36m[K_init2[m[K(Index rows, Index cols, typename internal::enable_if<Base::SizeAtCompileTime!=2,T0>::type* = 0)
+                              [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:734:30:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:438:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:304:35:[m[K [01;36m[Knote: [m[K  cannot convert '[01m[Kx[m[K' (type '[01m[Kconst __gnu_cxx::__normal_iterator<int*, std::vector<int> >[m[K') to type '[01m[KEigen::Index {aka long int}[m[K'
+       [01;36m[KBase::template _init2<T0,T1>(x, y)[m[K;
+       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:744:30:[m[K [01;36m[Knote: [m[Kcandidate: template<class T0, class T1> void Eigen::PlainObjectBase<Derived>::_init2(const T0&, const T1&, typename Eigen::internal::enable_if<(typename Eigen::internal::dense_xpr_base<Derived>::type:: SizeAtCompileTime == 2), T0>::type*) [with T0 = T0; T1 = T1; Derived = Eigen::Matrix<double, -1, 1>]
+     EIGEN_STRONG_INLINE void [01;36m[K_init2[m[K(const T0& val0, const T1& val1, typename internal::enable_if<Base::SizeAtCompileTime==2,T0>::type* = 0)
+                              [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:744:30:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h: In substitution of '[01m[Ktemplate<class T0, class T1> void Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::_init2<T0, T1>(const T0&, const T1&, typename Eigen::internal::enable_if<false, T0>::type*) [with T0 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; T1 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >][m[K':
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:304:35:[m[K   required from '[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T0&, const T1&) [with T0 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; T1 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Scalar = double; int _Rows = -1; int _Cols = 1; int _Options = 0; int _MaxRows = -1; int _MaxCols = 1][m[K'
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:180:84:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:744:30:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::enable_if<false, __gnu_cxx::__normal_iterator<int*, std::vector<int> > >[m[K'
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:345:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/Meta.h:162:50:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::enable_if<false, __gnu_cxx::__normal_iterator<int*, std::vector<int> > >[m[K'
+ template<bool Condition, typename T=void> struct [01;36m[Kenable_if[m[K;
+                                                  [01;36m[K^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:437:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+/usr/include/eigen3/Eigen/src/Core/Matrix.h: In instantiation of '[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T0&, const T1&) [with T0 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; T1 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Scalar = double; int _Rows = -1; int _Cols = 1; int _Options = 0; int _MaxRows = -1; int _MaxCols = 1][m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:180:84:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:753:30:[m[K [01;36m[Knote: [m[Kcandidate: template<class T0, class T1> void Eigen::PlainObjectBase<Derived>::_init2(const Index&, const Index&, typename Eigen::internal::enable_if<((((! Eigen::internal::is_same<long int, typename Eigen::internal::traits<T>::Scalar>::value) && Eigen::internal::is_same<T0, long int>::value) && Eigen::internal::is_same<T1, long int>::value) && (typename Eigen::internal::dense_xpr_base<Derived>::type:: SizeAtCompileTime == 2)), T1>::type*) [with T0 = T0; T1 = T1; Derived = Eigen::Matrix<double, -1, 1>]
+     EIGEN_STRONG_INLINE void [01;36m[K_init2[m[K(const Index& val0, const Index& val1,
+                              [01;36m[K^~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:753:30:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h: In substitution of '[01m[Ktemplate<class T0, class T1> void Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::_init2<T0, T1>(const Index&, const Index&, typename Eigen::internal::enable_if<((((! Eigen::internal::is_same<long int, double>::value) && Eigen::internal::is_same<T0, long int>::value) && Eigen::internal::is_same<T1, long int>::value) && (Eigen::MatrixBase<Eigen::Matrix<double, -1, 1> >::SizeAtCompileTime == 2)), T1>::type*) [with T0 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; T1 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >][m[K':
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:304:35:[m[K   required from '[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const T0&, const T1&) [with T0 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; T1 = __gnu_cxx::__normal_iterator<int*, std::vector<int> >; _Scalar = double; int _Rows = -1; int _Cols = 1; int _Options = 0; int _MaxRows = -1; int _MaxCols = 1][m[K'
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:180:84:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:753:30:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type '[01m[Kstruct Eigen::internal::enable_if<false, __gnu_cxx::__normal_iterator<int*, std::vector<int> > >[m[K'
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:345:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/util/Meta.h:162:50:[m[K [01;36m[Knote: [m[Kdeclaration of '[01m[Kstruct Eigen::internal::enable_if<false, __gnu_cxx::__normal_iterator<int*, std::vector<int> > >[m[K'
+ template<bool Condition, typename T=void> struct [01;36m[Kenable_if[m[K;
+                                                  [01;36m[K^~~~~~~~~[m[K
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

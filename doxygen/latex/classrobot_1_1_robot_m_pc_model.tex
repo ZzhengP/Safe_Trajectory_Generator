@@ -1,0 +1,91 @@
+\hypertarget{classrobot_1_1_robot_m_pc_model}{}\section{robot\+:\+:Robot\+M\+Pc\+Model Class Reference}
+\label{classrobot_1_1_robot_m_pc_model}\index{robot\+::\+Robot\+M\+Pc\+Model@{robot\+::\+Robot\+M\+Pc\+Model}}
+
+
+Inheritance diagram for robot\+:\+:Robot\+M\+Pc\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classrobot_1_1_robot_m_pc_model__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for robot\+:\+:Robot\+M\+Pc\+Model\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classrobot_1_1_robot_m_pc_model__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classrobot_1_1_robot_m_pc_model_a22b82cd8b5fe7643f2af1b4a11f9c744}\label{classrobot_1_1_robot_m_pc_model_a22b82cd8b5fe7643f2af1b4a11f9c744}} 
+{\bfseries Robot\+M\+Pc\+Model} (ros\+::\+Node\+Handle \&node\+\_\+handle, const std\+::string \&root\+\_\+link, const std\+::string \&tip\+\_\+link, const int \&N, const double \&dt, const Eigen\+::\+Vector\+Xd \&q\+\_\+init, const Eigen\+::\+Vector\+Xd \&qd\+\_\+init)
+\item 
+bool \hyperlink{classrobot_1_1_robot_m_pc_model_ac8379e021bfb668187bb8f522185f528}{Init\+M\+P\+C\+Parameter} (ros\+::\+Node\+Handle \&node\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Initialize model predictive control neccessary variables. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classrobot_1_1_robot_m_pc_model_a50ae09e4be788615164dfe6773c7b93a}\label{classrobot_1_1_robot_m_pc_model_a50ae09e4be788615164dfe6773c7b93a}} 
+void {\bfseries compute\+Jacobian\+Horizon} (const Eigen\+::\+Vector\+Xd \&q\+\_\+horizon)
+\item 
+\mbox{\Hypertarget{classrobot_1_1_robot_m_pc_model_a7d82488a3f3645431acd32b68eb0a6cf}\label{classrobot_1_1_robot_m_pc_model_a7d82488a3f3645431acd32b68eb0a6cf}} 
+Eigen\+::\+Matrix\+Xd {\bfseries mat\+Pow} (int N, const Eigen\+::\+Matrix\+Xd \&A)
+\item 
+\mbox{\Hypertarget{classrobot_1_1_robot_m_pc_model_aef11efa7a455fea42f2d114d7900f85f}\label{classrobot_1_1_robot_m_pc_model_aef11efa7a455fea42f2d114d7900f85f}} 
+void {\bfseries set\+Px} ()
+\item 
+\mbox{\Hypertarget{classrobot_1_1_robot_m_pc_model_a68f44644cb8ff25cd6f730cf5b61c4a2}\label{classrobot_1_1_robot_m_pc_model_a68f44644cb8ff25cd6f730cf5b61c4a2}} 
+void {\bfseries set\+Pu} ()
+\item 
+\mbox{\Hypertarget{classrobot_1_1_robot_m_pc_model_a2ff10f6466495ebc82dd2a8bfdb485ad}\label{classrobot_1_1_robot_m_pc_model_a2ff10f6466495ebc82dd2a8bfdb485ad}} 
+void {\bfseries set\+Px\+Dq} ()
+\item 
+\mbox{\Hypertarget{classrobot_1_1_robot_m_pc_model_a15b2bb377438216ac141fe60f76ee26b}\label{classrobot_1_1_robot_m_pc_model_a15b2bb377438216ac141fe60f76ee26b}} 
+void {\bfseries set\+Pu\+Dq} ()
+\item 
+\mbox{\Hypertarget{classrobot_1_1_robot_m_pc_model_af5e8ec74e912741c4a0c51d5b06b8e5b}\label{classrobot_1_1_robot_m_pc_model_af5e8ec74e912741c4a0c51d5b06b8e5b}} 
+Eigen\+::\+Vector\+Xd {\bfseries get\+Jnt\+Horizon} () const
+\item 
+\mbox{\Hypertarget{classrobot_1_1_robot_m_pc_model_a1988ea2ad3f980211b70ed941dc12abc}\label{classrobot_1_1_robot_m_pc_model_a1988ea2ad3f980211b70ed941dc12abc}} 
+Eigen\+::\+Vector\+Xd {\bfseries get\+Jnt\+Vel\+Horizon} () const
+\item 
+\mbox{\Hypertarget{classrobot_1_1_robot_m_pc_model_aeaf76924dc1770af2907a307f6884011}\label{classrobot_1_1_robot_m_pc_model_aeaf76924dc1770af2907a307f6884011}} 
+Eigen\+::\+Vector\+Xd {\bfseries get\+Tip\+Pos\+Horizon} () const
+\item 
+\mbox{\Hypertarget{classrobot_1_1_robot_m_pc_model_a1ac879f58cc1181388e1938ed64d8029}\label{classrobot_1_1_robot_m_pc_model_a1ac879f58cc1181388e1938ed64d8029}} 
+Eigen\+::\+Matrix\+Xd {\bfseries get\+Jacobian\+Horizon} () const
+\item 
+\mbox{\Hypertarget{classrobot_1_1_robot_m_pc_model_a373adb05c06bb6cce280dc9aa3980167}\label{classrobot_1_1_robot_m_pc_model_a373adb05c06bb6cce280dc9aa3980167}} 
+std\+::shared\+\_\+ptr$<$ \hyperlink{structrobot_1_1_m_p_c__param}{M\+P\+C\+\_\+param} $>$ {\bfseries get\+M\+P\+C\+Params} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classrobot_1_1_robot_m_pc_model_ac8379e021bfb668187bb8f522185f528}\label{classrobot_1_1_robot_m_pc_model_ac8379e021bfb668187bb8f522185f528}} 
+\index{robot\+::\+Robot\+M\+Pc\+Model@{robot\+::\+Robot\+M\+Pc\+Model}!Init\+M\+P\+C\+Parameter@{Init\+M\+P\+C\+Parameter}}
+\index{Init\+M\+P\+C\+Parameter@{Init\+M\+P\+C\+Parameter}!robot\+::\+Robot\+M\+Pc\+Model@{robot\+::\+Robot\+M\+Pc\+Model}}
+\subsubsection{\texorpdfstring{Init\+M\+P\+C\+Parameter()}{InitMPCParameter()}}
+{\footnotesize\ttfamily bool robot\+::\+Robot\+M\+Pc\+Model\+::\+Init\+M\+P\+C\+Parameter (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{node\+\_\+handle }\end{DoxyParamCaption})}
+
+
+
+Initialize model predictive control neccessary variables. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em node\+\_\+handle} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/panda\+\_\+mpc/include/robot/robot\+\_\+mpc\+\_\+model.\+h\item 
+/home/zheng/catkin\+\_\+ws/src/panda\+\_\+mpc/src/robot/robot\+\_\+mpc\+\_\+model.\+cpp\end{DoxyCompactItemize}

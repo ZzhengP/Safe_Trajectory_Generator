@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['pandampccontroller',['PandaMPCController',['../classpanda__mpc_1_1_panda_m_p_c_controller.html',1,'panda_mpc']]],
-  ['pandasimulation',['PandaSimulation',['../classgazebo_1_1_panda_simulation.html',1,'gazebo']]]
+  ['mpc_5fparam',['MPC_param',['../structrobot_1_1_m_p_c__param.html',1,'robot']]],
+  ['mpcconstraint',['MPCConstraint',['../classoptimization_1_1_m_p_c_constraint.html',1,'optimization']]],
+  ['mpctask',['MPCTask',['../classoptimization_1_1_m_p_c_task.html',1,'optimization']]]
 ];

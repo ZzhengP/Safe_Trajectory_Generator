@@ -288,6 +288,30 @@ panda_traj/panda_traj.hpp
 robot/robot_model.h
 -
 
+/home/zheng/catkin_ws/src/panda_mpc/include/controller/qpsolver.h
+Eigen/Dense
+-
+qpOASES.hpp
+-
+boost/scoped_ptr.hpp
+-
+iostream
+-
+
+/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp
+robot/robot_mpc_model.h
+-
+iostream
+-
+Eigen/Core
+-
+ros/ros.h
+-
+memory
+-
+vector
+-
+
 /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp
 robot/robot_mpc_model.h
 -
@@ -300,6 +324,24 @@ ros/ros.h
 memory
 -
 vector
+-
+
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp
+iostream
+-
+memory
+-
+qpOASES.hpp
+-
+Eigen/Core
+-
+ros/node_handle.h
+-
+optFormulation/constraint.hpp
+-
+optFormulation/task.hpp
+-
+robot/robot_mpc_model.h
 -
 
 /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h
@@ -376,6 +418,10 @@ memory
 controller/controller.hpp
 -
 
+/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp
+optFormulation/constraint.hpp
+-
+
 /home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp
 optFormulation/task.hpp
 -
@@ -420,6 +466,14 @@ ros/time.h
 sensor_msgs/JointState.h
 -
 Eigen/Dense
+-
+
+/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp
+planning/traj_generation.hpp
+-
+
+/home/zheng/catkin_ws/src/panda_mpc/src/qpsolver.cpp
+controller/qpsolver.h
 -
 
 /home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_model.cpp

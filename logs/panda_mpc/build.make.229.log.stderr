@@ -1,0 +1,11 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:[m[K In member function '[01m[Kbool optimization::MPCConstraint::update(const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:59:3:[m[K [01;31m[Kerror: [m[K'[01m[KROS_INFO_STEAM[m[K' was not declared in this scope
+   [01;31m[KROS_INFO_STREA[m[KM("successfully upadte");
+   [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:59:3:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[KROS_INFO_STREAM[m[K'
+   [01;36m[KROS_INFO_STREA[m[KM("successfully upadte");
+   [01;36m[K^~~~~~~~~~~~~~[m[K
+   [32m[KROS_INFO_STREAM[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,52 @@
+\hypertarget{structrobot_1_1_m_p_c__param}{}\section{robot\+:\+:M\+P\+C\+\_\+param Struct Reference}
+\label{structrobot_1_1_m_p_c__param}\index{robot\+::\+M\+P\+C\+\_\+param@{robot\+::\+M\+P\+C\+\_\+param}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structrobot_1_1_m_p_c__param_acc5a892e5a973a13467ff20118063009}\label{structrobot_1_1_m_p_c__param_acc5a892e5a973a13467ff20118063009}} 
+void {\bfseries init} (const int \&N\+\_\+, const int \&dof\+\_\+)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structrobot_1_1_m_p_c__param_af91cc4c415cdf7539612eda872c34aeb}\label{structrobot_1_1_m_p_c__param_af91cc4c415cdf7539612eda872c34aeb}} 
+Eigen\+::\+Matrix\+Xd {\bfseries A\+\_\+}
+\item 
+\mbox{\Hypertarget{structrobot_1_1_m_p_c__param_a43d48b2441a74c96307629784428ee22}\label{structrobot_1_1_m_p_c__param_a43d48b2441a74c96307629784428ee22}} 
+Eigen\+::\+Matrix\+Xd \hyperlink{structrobot_1_1_m_p_c__param_a43d48b2441a74c96307629784428ee22}{B\+\_\+}
+\begin{DoxyCompactList}\small\item\em State transition matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrobot_1_1_m_p_c__param_ab3ab625b08ba98c54dd54d805aeb35b5}\label{structrobot_1_1_m_p_c__param_ab3ab625b08ba98c54dd54d805aeb35b5}} 
+Eigen\+::\+Matrix\+Xd \hyperlink{structrobot_1_1_m_p_c__param_ab3ab625b08ba98c54dd54d805aeb35b5}{Cq\+\_\+}
+\begin{DoxyCompactList}\small\item\em State Input matrix. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrobot_1_1_m_p_c__param_a33628bcfdc4502cc9a7a267ce3a500a7}\label{structrobot_1_1_m_p_c__param_a33628bcfdc4502cc9a7a267ce3a500a7}} 
+Eigen\+::\+Matrix\+Xd \hyperlink{structrobot_1_1_m_p_c__param_a33628bcfdc4502cc9a7a267ce3a500a7}{Cdq\+\_\+}
+\begin{DoxyCompactList}\small\item\em joint poisition Selection matrix\+: q = Cq\+\_\+$\ast$X \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrobot_1_1_m_p_c__param_a30b38fba109124cd94ba8756fede2d5b}\label{structrobot_1_1_m_p_c__param_a30b38fba109124cd94ba8756fede2d5b}} 
+Eigen\+::\+Matrix\+Xd \hyperlink{structrobot_1_1_m_p_c__param_a30b38fba109124cd94ba8756fede2d5b}{Px\+\_\+}
+\begin{DoxyCompactList}\small\item\em joint velocity Selection matrix\+: qd = Cqd\+\_\+$\ast$X \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrobot_1_1_m_p_c__param_a8be71f746cbd0abef5804b600b186a0c}\label{structrobot_1_1_m_p_c__param_a8be71f746cbd0abef5804b600b186a0c}} 
+Eigen\+::\+Matrix\+Xd \hyperlink{structrobot_1_1_m_p_c__param_a8be71f746cbd0abef5804b600b186a0c}{Pu\+\_\+}
+\begin{DoxyCompactList}\small\item\em augmented linear state matrix for joint position \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrobot_1_1_m_p_c__param_a81408273f0e0f8d59c587b1bb93de730}\label{structrobot_1_1_m_p_c__param_a81408273f0e0f8d59c587b1bb93de730}} 
+Eigen\+::\+Matrix\+Xd \hyperlink{structrobot_1_1_m_p_c__param_a81408273f0e0f8d59c587b1bb93de730}{Pxdq\+\_\+}
+\begin{DoxyCompactList}\small\item\em augmented linear input matrix for joint position \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrobot_1_1_m_p_c__param_a752511aecb715b74d5d2e141acd59d78}\label{structrobot_1_1_m_p_c__param_a752511aecb715b74d5d2e141acd59d78}} 
+Eigen\+::\+Matrix\+Xd \hyperlink{structrobot_1_1_m_p_c__param_a752511aecb715b74d5d2e141acd59d78}{Pudq\+\_\+}
+\begin{DoxyCompactList}\small\item\em augmented linear state matrix for joint velocity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrobot_1_1_m_p_c__param_af59504f6a845d78f9752a372087392dd}\label{structrobot_1_1_m_p_c__param_af59504f6a845d78f9752a372087392dd}} 
+Eigen\+::\+Vector\+Xd \hyperlink{structrobot_1_1_m_p_c__param_af59504f6a845d78f9752a372087392dd}{q\+\_\+horizon\+\_\+}
+\begin{DoxyCompactList}\small\item\em augmented linear input matrix for joint velocity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrobot_1_1_m_p_c__param_a3807f25f31e9aac28efe5dbbc397a9e9}\label{structrobot_1_1_m_p_c__param_a3807f25f31e9aac28efe5dbbc397a9e9}} 
+Eigen\+::\+Vector\+Xd \hyperlink{structrobot_1_1_m_p_c__param_a3807f25f31e9aac28efe5dbbc397a9e9}{qd\+\_\+horizon\+\_\+}
+\begin{DoxyCompactList}\small\item\em robot joint position stacked for the horizon of prediction \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structrobot_1_1_m_p_c__param_a06d64ad4a52459d87ea7e790ee0d2274}\label{structrobot_1_1_m_p_c__param_a06d64ad4a52459d87ea7e790ee0d2274}} 
+Eigen\+::\+Vector\+Xd {\bfseries x\+\_\+horizon\+\_\+}
+\item 
+\mbox{\Hypertarget{structrobot_1_1_m_p_c__param_a4739613f4fa8621dc7fa13f2f8955649}\label{structrobot_1_1_m_p_c__param_a4739613f4fa8621dc7fa13f2f8955649}} 
+Eigen\+::\+Matrix\+Xd \hyperlink{structrobot_1_1_m_p_c__param_a4739613f4fa8621dc7fa13f2f8955649}{J\+\_\+horizon\+\_\+}
+\begin{DoxyCompactList}\small\item\em stacked tip\+\_\+link cartesian position \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/zheng/catkin\+\_\+ws/src/panda\+\_\+mpc/include/robot/robot\+\_\+mpc\+\_\+model.\+h\end{DoxyCompactItemize}

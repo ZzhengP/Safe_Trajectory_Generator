@@ -12,7 +12,7 @@ struct MPC_param{
   //------------------------------------ MPC parameters structure for the use in other class------------------
 
 
-  void init(const int& N_, const int& dof_){
+  bool init(const int& N_, const int& dof_){
 
     A_.resize(2*dof_, 2*dof_);
     A_.setZero();
@@ -37,12 +37,35 @@ struct MPC_param{
     Pudq_.setZero();
 
     q_horizon_.resize(N_*dof_);
+    q_horizon_.setZero();
     qd_horizon_.resize(N_*dof_);
+    qd_horizon_.setZero();
     x_horizon_.resize(3*N_);
     J_horizon_.resize(N_*6, N_*dof_);
     J_horizon_.setZero();
+
+    initialized = true;
+    return true;
   }
 
+  MPC_param& operator=(const MPC_param& param){
+
+    A_ = param.A_;
+    B_ = param.B_;
+    Cq_ = param.Cq_;
+    Cdq_ = param.Cdq_;
+    Px_ = param.Px_;
+    Pu_ = param.Pu_;
+    Pxdq_ = param.Pxdq_;
+    Pudq_ = param.Pudq_;
+    q_horizon_ = param.q_horizon_;
+    qd_horizon_ = param.qd_horizon_;
+    x_horizon_ = param.x_horizon_;
+    J_horizon_ = param.J_horizon_;
+    initialized = param.initialized;
+
+    return *this;
+  }
 
   // One step state-space dynamic model of a linear system:
   // Xk+1 = A*Xk + B*Uk, with X = (q, qd)
@@ -62,6 +85,8 @@ struct MPC_param{
   Eigen::VectorXd x_horizon_; /*! @brief stacked tip_link cartesian position */
   Eigen::MatrixXd J_horizon_; /*! @brief stacked jacobian */
 
+  bool initialized=false;
+
 };
 
  // ----------------------------------------------------------------------------------------------------------
@@ -79,27 +104,28 @@ public:
 
      Init(node_handle,q_init,qd_init);
 
-     mpc_params = std::shared_ptr<MPC_param>(new MPC_param);
+     ROS_INFO_STREAM("Robot model init");
 
-     mpc_params->init(N_, dof);
+
+     mpc_params.init(N_, dof);
 
      Eigen::MatrixXd Id;
      Id.resize(dof, dof);
      Id.setIdentity();
      // Initialize state-space dynamic model
 
-     mpc_params->A_.block(0,0,dof,dof).setIdentity();
-     mpc_params->A_.block(0,dof, dof, dof) = Id*dt_;
-     mpc_params->A_.block(dof, dof, dof, dof).setIdentity();
+     mpc_params.A_.block(0,0,dof,dof).setIdentity();
+     mpc_params.A_.block(0,dof, dof, dof) = Id*dt_;
+     mpc_params.A_.block(dof, dof, dof, dof).setIdentity();
 
 
-     mpc_params->B_.block(0,0, dof, dof)= Id*(dt_*dt_/2);
-     mpc_params->B_.block(dof,0,dof, dof)= Id*dt_;
+     mpc_params.B_.block(0,0, dof, dof)= Id*(dt_*dt_/2);
+     mpc_params.B_.block(dof,0,dof, dof)= Id*dt_;
 
 
-     mpc_params->Cq_.block(0,0,dof,dof).setIdentity();
+     mpc_params.Cq_.block(0,0,dof,dof).setIdentity();
 
-     mpc_params->Cdq_.block(0,dof,dof,dof).setIdentity();
+     mpc_params.Cdq_.block(0,dof,dof,dof).setIdentity();
 
 
   }
@@ -120,6 +146,10 @@ public:
 
   void computeJacobianHorizon(const Eigen::VectorXd & q_horizon);
 
+  // Update MPC parameters
+  void update(Eigen::VectorXd state, Eigen::VectorXd solution,const Eigen::VectorXd &q_horizon);
+
+
   inline Eigen::MatrixXd matPow(int N, const Eigen::MatrixXd& A){
 
       Eigen::MatrixXd A_pow;
@@ -139,8 +169,8 @@ public:
     for (int i(0); i<N_;i++)
       {
           Eigen::MatrixXd A;
-          A = matPow(i+1,mpc_params->A_);
-          mpc_params->Px_.block(dof*i,0,dof,2*dof) = mpc_params->Cq_*A;
+          A = matPow(i+1,mpc_params.A_);
+          mpc_params.Px_.block(dof*i,0,dof,2*dof) = mpc_params.Cq_*A;
       }
   };
 
@@ -151,8 +181,8 @@ public:
           for (int j(0); j<i+1;j++)
           {
               Eigen::MatrixXd A;
-              A = matPow(i-j,mpc_params->A_);
-              mpc_params->Pu_.block(dof*i,dof*j, dof, dof) = mpc_params->Cq_*A*mpc_params->B_;
+              A = matPow(i-j,mpc_params.A_);
+              mpc_params.Pu_.block(dof*i,dof*j, dof, dof) = mpc_params.Cq_*A*mpc_params.B_;
           }
       }
   }
@@ -162,8 +192,8 @@ public:
       for (int i(0); i<N_;i++)
       {
           Eigen::MatrixXd A;
-          A = matPow(i+1,mpc_params->A_);
-          mpc_params->Pxdq_.block(dof*i,0,dof,2*dof) = mpc_params->Cdq_*A;
+          A = matPow(i+1,mpc_params.A_);
+          mpc_params.Pxdq_.block(dof*i,0,dof,2*dof) = mpc_params.Cdq_*A;
       }
   }
 
@@ -174,8 +204,8 @@ public:
         for (int j(0); j<i+1;j++)
         {
             Eigen::MatrixXd A;
-            A = matPow(i-j,mpc_params->A_);
-            mpc_params->Pudq_.block(dof*i,dof*j,dof,dof) = mpc_params->Cdq_*A*mpc_params->B_;
+            A = matPow(i-j,mpc_params.A_);
+            mpc_params.Pudq_.block(dof*i,dof*j,dof,dof) = mpc_params.Cdq_*A*mpc_params.B_;
         }
     }
   }
@@ -185,30 +215,62 @@ public:
 
   Eigen::VectorXd getJntHorizon() const {
 
-    return mpc_params->q_horizon_;
+    return mpc_params.q_horizon_;
   }
 
 
   Eigen::VectorXd getJntVelHorizon() const {
 
-    return mpc_params->qd_horizon_;
+    return mpc_params.qd_horizon_;
   }
 
   Eigen::VectorXd getTipPosHorizon() const {
 
-    return mpc_params->x_horizon_;
+    return mpc_params.x_horizon_;
   }
 
   Eigen::MatrixXd getJacobianHorizon() const {
 
-    return mpc_params->J_horizon_;
+    return mpc_params.J_horizon_;
   }
 
 
-  std::shared_ptr<MPC_param> getMPCParams(){
+
+  MPC_param getMPCParams(){
 
     return mpc_params;
+  }
 
+
+  Eigen::MatrixXd getStateA(){
+    return mpc_params.A_;
+  }
+
+  Eigen::MatrixXd getStateB(){
+    return mpc_params.B_;
+  }
+
+  Eigen::MatrixXd getStatePx(){
+    return mpc_params.Px_;
+  }
+
+  Eigen::MatrixXd getStatePu(){
+    return mpc_params.Pu_;
+  }
+  Eigen::MatrixXd getStatePxdq(){
+    return mpc_params.Pxdq_;
+  }
+
+  Eigen::MatrixXd getStatePudq(){
+    return mpc_params.Pudq_;
+  }
+
+  Eigen::VectorXd getJointHorizon(){
+    return mpc_params.q_horizon_;
+  }
+
+  Eigen::VectorXd getJointvelHorizon(){
+    return mpc_params.qd_horizon_;
   }
 
 private:
@@ -225,7 +287,7 @@ private:
    * @brief This attribut is declared as a shared pointer
    * because it will be used in task and constraint class
    */
-  std::shared_ptr<MPC_param> mpc_params ;
+  MPC_param mpc_params ;
 
 
 };

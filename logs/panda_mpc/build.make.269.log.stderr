@@ -1,0 +1,123 @@
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:4:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp:6[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:[m[K In member function '[01m[Kvoid robot::RobotModel::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:78:42:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KKDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K'
+     i = ik_->CartToJnt(desire_frame,q_sol[01;31m[K)[m[K;
+                                          [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:22:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:4[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp:6[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[Kcandidate: virtual int KDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::JntArray&, const KDL::Frame&, KDL::JntArray&)
+     virtual int [01;36m[KCartToJnt[m[K(const KDL::JntArray& q_init, const KDL::Frame& T_base_goal, KDL::JntArray& q_out);
+                 [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:4:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:[m[K In member function '[01m[Kvoid robot::RobotModel::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:78:42:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KKDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K'
+     i = ik_->CartToJnt(desire_frame,q_sol[01;31m[K)[m[K;
+                                          [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:22:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:4[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[Kcandidate: virtual int KDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::JntArray&, const KDL::Frame&, KDL::JntArray&)
+     virtual int [01;36m[KCartToJnt[m[K(const KDL::JntArray& q_init, const KDL::Frame& T_base_goal, KDL::JntArray& q_out);
+                 [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:4:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:6[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:[m[K In member function '[01m[Kvoid robot::RobotModel::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:78:42:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KKDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K'
+     i = ik_->CartToJnt(desire_frame,q_sol[01;31m[K)[m[K;
+                                          [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:22:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:4[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:6[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[Kcandidate: virtual int KDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::JntArray&, const KDL::Frame&, KDL::JntArray&)
+     virtual int [01;36m[KCartToJnt[m[K(const KDL::JntArray& q_init, const KDL::Frame& T_base_goal, KDL::JntArray& q_out);
+                 [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_model.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:[m[K In member function '[01m[Kvoid robot::RobotModel::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:78:42:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KKDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K'
+     i = ik_->CartToJnt(desire_frame,q_sol[01;31m[K)[m[K;
+                                          [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:22:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_model.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[Kcandidate: virtual int KDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::JntArray&, const KDL::Frame&, KDL::JntArray&)
+     virtual int [01;36m[KCartToJnt[m[K(const KDL::JntArray& q_init, const KDL::Frame& T_base_goal, KDL::JntArray& q_out);
+                 [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:4:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:6[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:[m[K In member function '[01m[Kvoid robot::RobotModel::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:78:42:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KKDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K'
+     i = ik_->CartToJnt(desire_frame,q_sol[01;31m[K)[m[K;
+                                          [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:22:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:4[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp:6[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:12[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[Kcandidate: virtual int KDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::JntArray&, const KDL::Frame&, KDL::JntArray&)
+     virtual int [01;36m[KCartToJnt[m[K(const KDL::JntArray& q_init, const KDL::Frame& T_base_goal, KDL::JntArray& q_out);
+                 [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/robot/robot_model.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:11[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:[m[K In member function '[01m[Kvoid robot::RobotModel::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:78:42:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KKDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K'
+     i = ik_->CartToJnt(desire_frame,q_sol[01;31m[K)[m[K;
+                                          [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:22:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:11[m[K:
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[Kcandidate: virtual int KDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::JntArray&, const KDL::Frame&, KDL::JntArray&)
+     virtual int [01;36m[KCartToJnt[m[K(const KDL::JntArray& q_init, const KDL::Frame& T_base_goal, KDL::JntArray& q_out);
+                 [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/robot/robot_mpc_model.cpp.o] Error 1
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o] Error 1
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o] Error 1
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:[m[K In member function '[01m[Kvoid robot::RobotModel::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:78:42:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KKDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K'
+     i = ik_->CartToJnt(desire_frame,q_sol[01;31m[K)[m[K;
+                                          [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:22:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[Kcandidate: virtual int KDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::JntArray&, const KDL::Frame&, KDL::JntArray&)
+     virtual int [01;36m[KCartToJnt[m[K(const KDL::JntArray& q_init, const KDL::Frame& T_base_goal, KDL::JntArray& q_out);
+                 [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o] Error 1
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o] Error 1
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:[m[K In member function '[01m[Kvoid robot::RobotModel::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:78:42:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KKDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::Frame&, KDL::JntArray&)[m[K'
+     i = ik_->CartToJnt(desire_frame,q_sol[01;31m[K)[m[K;
+                                          [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:22:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:42[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[Kcandidate: virtual int KDL::ChainIkSolverPos_LMA::CartToJnt(const KDL::JntArray&, const KDL::Frame&, KDL::JntArray&)
+     virtual int [01;36m[KCartToJnt[m[K(const KDL::JntArray& q_init, const KDL::Frame& T_base_goal, KDL::JntArray& q_out);
+                 [01;36m[K^~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/chainiksolverpos_lma.hpp:126:17:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 2 provided
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

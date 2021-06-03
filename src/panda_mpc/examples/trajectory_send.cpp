@@ -34,11 +34,10 @@
 #include "ros/time.h"
 #include <geometry_msgs/PoseStamped.h>
 #include <Eigen/Core>
+#include <planning/traj_generation.hpp>
 #include <robot/robot_mpc_model.h>
-#include <optFormulation/task.hpp>
 
-
-using namespace robot;
+using namespace planning;
 
 class pointSender
 {
@@ -115,6 +114,8 @@ int main(int argc, char** argv )
 
     int N = 1;
     double dt = 0.05;
+    int dof = 7;
+
     std::string root_link;
     std::string tip_link;
 
@@ -124,21 +125,38 @@ int main(int argc, char** argv )
     node_handle.getParam("/panda_mpc/tip_link_", tip_link);
 
     Eigen::VectorXd q_init, qd_init, qdd_init, state;
-    q_init.resize(7), qd_init.resize(7), qdd_init.resize(7);
+    q_init.resize(dof), qd_init.resize(dof), qdd_init.resize(dof);
     q_init << 0.0087, -0.1051, 0.0110, -2.279, 0.0018, 2.1754, 0.019;
     qd_init.setZero();
     qdd_init.setZero();
     state.resize(14);
-    state.segment(0,7) = q_init, state.segment(7,7) = qd_init;
-    Eigen::VectorXd q_des_horizon, qd_des_horizon, qdd_des_horizon ;
-    q_des_horizon.resize(7*N), qd_des_horizon.resize(7*N), qdd_des_horizon.resize(7*N);
+    state.segment(0,dof) = q_init, state.segment(dof,dof) = qd_init;
+    Eigen::VectorXd q_des_mpc, qd_des_mpc, qdd_des_mpc ;
+    q_des_mpc.resize(dof*N), qd_des_mpc.resize(dof*N), qdd_des_mpc.resize(dof*N);
     for (size_t i(0); i<N; i++){
-      q_des_horizon.segment(i*7,7) = q_init;
-      qd_des_horizon.segment(i*7,7) = qd_init;
-      qdd_des_horizon.segment(i*7,7) = qdd_init;
+      q_des_mpc.segment(i*dof,dof) = q_init;
+      qd_des_mpc.segment(i*dof,dof) = qd_init;
+      qdd_des_mpc.segment(i*dof,dof) = qdd_init;
+
+   }
+
+    Eigen::VectorXd q_horizon, qd_horizon;
+    q_horizon.resize(dof*N);
+    qd_horizon.resize(dof*N);
+    q_horizon = q_des_mpc;
+    qd_horizon = qd_des_mpc;
+
+    Eigen::VectorXd solution, solution_precedent;
+    solution.resize(N*dof);
+    solution_precedent.resize(N*dof);
+    solution.setZero();
+    solution_precedent.setZero();
+    Eigen::MatrixXd A, B;
+    A.resize(2*dof, 2*dof);
+    B.resize(2*dof,dof);
 
 
-    }
+
 //=======================================================
 //   pointSender pointsender(node_handle);
 
@@ -151,26 +169,60 @@ int main(int argc, char** argv )
 //      loop_rate.sleep();
 //    }
 //=======================================================
+    Eigen::VectorXd jnt_error(dof);
+    jnt_error.setConstant(10);
 
-    std::shared_ptr<robot::RobotMPcModel> robot_mpc_model;
+    KDL::Frame x_des;
+    KDL::JntArray q_des;
+    x_des.p[0] = 0.5, x_des.p[1] = 0, x_des.p[2] = 0.5;
+    x_des.M = x_des.M.Identity();
 
-    robot_mpc_model.reset(new robot::RobotMPcModel(node_handle,root_link,tip_link,N,dt,q_init,qd_init));
+    std::shared_ptr<planning::trajGen> trajectory_generation;
+    trajectory_generation.reset(new planning::trajGen(node_handle,q_init,qd_init));
 
-    if(!robot_mpc_model->InitMPCParameter(node_handle)){
-      ROS_ERROR_STREAM("Failed to initialize Model Predictive Control ");
-    }else {
-      ROS_INFO_STREAM("Success to initialize Model Predictive Control ");
+    trajectory_generation->getRobotModel()->CartToJnt(x_des,q_des);
+
+
+    if(!trajectory_generation->init(node_handle)){
+      ROS_ERROR_STREAM("Unable to initialize properly parameters: exit");
+      return 0;
     }
 
-    std::unique_ptr<optimization::MPCTask> mpc_task;
-    mpc_task.reset(new optimization::MPCTask(N,7,dt,robot_mpc_model->getMPCParams()));
+    for (size_t i(0); i < N; i++){
+      q_des_mpc.segment(i*dof, dof) = q_des.data;
+    }
 
-    if(!mpc_task->init(q_init)){
-      return 0;
-    };
+    A = trajectory_generation->getStateA();
+    B = trajectory_generation->getStateB();
 
-    mpc_task->update(state,q_des_horizon,qd_des_horizon, qdd_des_horizon);
 
+    do{
+
+      solution_precedent = solution;
+      solution = trajectory_generation->update(state,q_horizon,qd_horizon,q_des_mpc,qd_des_mpc,solution_precedent);
+
+
+
+
+      state = A*state + B*solution.head(dof);
+
+      q_horizon = trajectory_generation->getJointHorizon();
+      qd_horizon = trajectory_generation->getJointvelHorizon();
+
+
+
+
+      trajectory_generation->getRobotModel()->setJntState(state.head(dof), state.tail(dof));
+
+
+      jnt_error = state.head(dof) - q_des.data;
+     // std::cout << "solution :\n " << solution.transpose() << '\n';
+      std::cout << "current joint :\n "<< state.head(dof).transpose()<<'\n';
+      std::cout << "desired joint :\n "<<q_des.data.transpose() <<'\n';
+      std::cout << " joint error :\n" << jnt_error.norm() << std::endl;
+
+
+    }while(jnt_error.norm() > 0.01);
 
     return 0;
 

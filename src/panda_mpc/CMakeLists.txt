@@ -102,7 +102,10 @@ add_library(panda_mpc
             src/robot/robot_model.cpp
             src/robot/robot_mpc_model.cpp
             src/optFormulation/task.cpp
-            src/controller.cpp)
+            src/optFormulation/constraint.cpp
+            src/planning/traj_generation.cpp
+            src/controller.cpp
+            src/qpsolver.cpp)
 
 target_include_directories(panda_mpc SYSTEM PUBLIC include
                                             ${Franka_INCLUDE_DIRS}
