@@ -40,7 +40,7 @@ template<>
 struct MD5Sum< ::panda_mpc::UpdateTrajectoryNextPoint > {
   static const char* value()
   {
-    return "2134cf5914ee56390a99d4f1731a484b";
+    return "07d2a1fe5433c3b25d4df2bdf8fc4f1d";
   }
 
   static const char* value(const ::panda_mpc::UpdateTrajectoryNextPoint&) { return value(); }

@@ -31,161 +31,82 @@
 #include "ros/ros.h"
 #include <ros/node_handle.h>
 #include <panda_mpc/UpdateTrajectoryNextPoint.h>
+#include <panda_mpc/trajectoryMsg.h>
 #include "ros/time.h"
 #include <geometry_msgs/PoseStamped.h>
 #include <Eigen/Core>
 #include <planning/traj_generation.hpp>
 #include <robot/robot_mpc_model.h>
+#include <sensor_msgs/JointState.h>
 
 using namespace planning;
+
+struct TrajectoryMPC{
+
+  std::vector<Eigen::Matrix<double, 7,1>> joint_position_;
+  std::vector<Eigen::Matrix<double, 7,1>> joint_velocity_;
+  std::vector<Eigen::Matrix<double, 7,1>> joint_acceleration_;
+
+};
 
 class pointSender
 {
 public:
-  pointSender(ros::NodeHandle &node_handle): period_(0.05) {
-    next_point_client = node_handle.serviceClient<panda_mpc::UpdateTrajectoryNextPoint>("/panda_mpc/next_point");
-    EEPositionReader_ = node_handle.subscribe("/panda_mpc/ee_pose", 1, &pointSender::readEndEffectorPos, this);
-    X_traj_ << 0.5, 0 , 0.4;
-    X_final_ << 0.5, 0.3, 0.4;
-    next_point_.linear.x = 0.5,  next_point_.linear.y = 0 ,  next_point_.linear.z = 0.4;
-    next_point_.angular.x = 0, next_point_.angular.y = 3.15149, next_point_.angular.z = 3.15149 ;
-  }
-
-
-  void readEndEffectorPos(const geometry_msgs::PoseStamped::Ptr& ee_pos ){
-
-
-      X_curr_ << ee_pos->pose.position.x, ee_pos->pose.position.y, ee_pos->pose.position.z ;
-
-      std::cout << " End effector current position :\n" << X_curr_ << '\n';
-
-      double error, goal_error;
-      error = (X_curr_ - X_traj_).norm();
-      goal_error = (X_curr_ - X_final_).norm();
-
-      ROS_WARN_STREAM("target error " << goal_error);
-      ROS_WARN_STREAM("trajectory error " << error);
-
-      if (goal_error < 0.05){
-         ROS_INFO("Robot arrives to target position");
-      }else {
-        if (error < 0.02){
-           ROS_INFO("Robot arrives to intermediate position: send next position");
-           double x, y,z;
-           x = X_curr_[0], y = X_curr_[1] + 0.01 , z = X_curr_[2];
-
-           next_point_.linear.x = x,  next_point_.linear.y = y ,  next_point_.linear.z = z;
-           X_traj_ << x, y , z;
-           panda_mpc::UpdateTrajectoryNextPoint next_point_srv;
-           next_point_srv.request.next_point = next_point_;
-           next_point_srv.request.vel = 0.1;
-           next_point_srv.response.success = true;
-
-           next_point_client.call(next_point_srv);
-        }else
-        {
-          X_traj_ << next_point_.linear.x, next_point_.linear.y, next_point_.linear.z;
-          panda_mpc::UpdateTrajectoryNextPoint next_point_srv;
-          next_point_srv.request.next_point = next_point_;
-          next_point_srv.request.vel = 0.1;
-          next_point_srv.response.success = true;
-
-           next_point_client.call(next_point_srv);
-        }
-      }
-  }
-
-private:
-  const double period_;
-  ros::ServiceClient next_point_client ;
-  ros::Subscriber EEPositionReader_;
-  Eigen::Vector3d X_traj_, X_curr_, X_final_ ;
-  geometry_msgs::Twist next_point_;
-
-};
+  pointSender(ros::NodeHandle &node_handle, Eigen::VectorXd q_init, Eigen::VectorXd qd_init):
+              dt{0.001}, node_handle_{node_handle} {
 
 
 
-int main(int argc, char** argv )
-{
-    ros::init(argc,argv, "NextTrajectorySender");
-    ros::NodeHandle node_handle;
-    ros::Rate loop_rate(10);
 
-    int N = 1;
-    double dt = 0.05;
-    int dof = 7;
+    node_handle_.getParam("/panda_mpc/N_", N);
+    node_handle_.getParam("/panda_mpc/dt_", dt);
+    node_handle_.getParam("/panda_mpc/root_link_", root_link);
+    node_handle_.getParam("/panda_mpc/tip_link_", tip_link);
 
-    std::string root_link;
-    std::string tip_link;
-
-    node_handle.getParam("/panda_mpc/N_", N);
-    node_handle.getParam("/panda_mpc/dt_", dt);
-    node_handle.getParam("/panda_mpc/root_link_", root_link);
-    node_handle.getParam("/panda_mpc/tip_link_", tip_link);
-
-    Eigen::VectorXd q_init, qd_init, qdd_init, state;
-    q_init.resize(dof), qd_init.resize(dof), qdd_init.resize(dof);
-    q_init << 0.0087, -0.1051, 0.0110, -2.279, 0.0018, 2.1754, 0.019;
-    qd_init.setZero();
-    qdd_init.setZero();
-    state.resize(14);
-    state.segment(0,dof) = q_init, state.segment(dof,dof) = qd_init;
-    Eigen::VectorXd q_des_mpc, qd_des_mpc, qdd_des_mpc ;
+    dof = 7;
     q_des_mpc.resize(dof*N), qd_des_mpc.resize(dof*N), qdd_des_mpc.resize(dof*N);
+
     for (size_t i(0); i<N; i++){
       q_des_mpc.segment(i*dof,dof) = q_init;
       qd_des_mpc.segment(i*dof,dof) = qd_init;
-      qdd_des_mpc.segment(i*dof,dof) = qdd_init;
+    }
 
-   }
+    qdd_des_mpc.setZero();
 
-    Eigen::VectorXd q_horizon, qd_horizon;
+
     q_horizon.resize(dof*N);
     qd_horizon.resize(dof*N);
     q_horizon = q_des_mpc;
     qd_horizon = qd_des_mpc;
 
-    Eigen::VectorXd solution, solution_precedent;
+    state.resize(14);
+    state.segment(0,dof) = q_init, state.segment(dof,dof) = qd_init;
+
     solution.resize(N*dof);
     solution_precedent.resize(N*dof);
     solution.setZero();
     solution_precedent.setZero();
-    Eigen::MatrixXd A, B;
+
     A.resize(2*dof, 2*dof);
     B.resize(2*dof,dof);
 
-
-
-//=======================================================
-//   pointSender pointsender(node_handle);
-
-//    while (ros::ok()){
-
-
-
-
-//      ros::spinOnce();
-//      loop_rate.sleep();
-//    }
-//=======================================================
-    Eigen::VectorXd jnt_error(dof);
+    jnt_error.resize(3);
     jnt_error.setConstant(10);
 
-    KDL::Frame x_des;
-    KDL::JntArray q_des;
-    x_des.p[0] = 0.5, x_des.p[1] = 0, x_des.p[2] = 0.5;
+
+    x_des.p[0] = 0.5, x_des.p[1] = 0, x_des.p[2] = 0.6;
     x_des.M = x_des.M.Identity();
 
-    std::shared_ptr<planning::trajGen> trajectory_generation;
+    q_des.resize(dof);
+    q.resize(dof);
+    q_in.resize(dof);
+    J.resize(dof);
+    ee_vel.resize(6);
     trajectory_generation.reset(new planning::trajGen(node_handle,q_init,qd_init));
 
     trajectory_generation->getRobotModel()->CartToJnt(x_des,q_des);
-
-
     if(!trajectory_generation->init(node_handle)){
       ROS_ERROR_STREAM("Unable to initialize properly parameters: exit");
-      return 0;
     }
 
     for (size_t i(0); i < N; i++){
@@ -195,34 +116,189 @@ int main(int argc, char** argv )
     A = trajectory_generation->getStateA();
     B = trajectory_generation->getStateB();
 
+    next_point_client = node_handle.serviceClient<panda_mpc::UpdateTrajectoryNextPoint>("/panda_mpc/next_point");
+    robotStateReader_ = node_handle.subscribe("/panda_mpc/joint_states", 1000, &pointSender::update, this);
+    trajectory_publisher_ = node_handle.advertise<panda_mpc::trajectoryMsg>("/trajectory_generation/next_point", 1000);
+    ROS_WARN_STREAM("constructor finished ");
+  }
 
-    do{
+
+
+  void update(const sensor_msgs::JointState::Ptr& joint_state ){
+
+      if(joint_state == nullptr){
+
+        ROS_WARN_STREAM("no joint state information received ");
+        return ;
+      }else {
+
+      }
 
       solution_precedent = solution;
+      for(int i(0); i < dof ; i++){
+
+        state[i] = joint_state->position[i];
+        state[dof+i] = joint_state->velocity[i];
+      }
+
+      trajectory_generation->getRobotModel()->setJntState(state.head(dof), state.tail(dof));
+
+      q_horizon = trajectory_generation->getJointHorizon();
+      qd_horizon = trajectory_generation->getJointvelHorizon();
+
       solution = trajectory_generation->update(state,q_horizon,qd_horizon,q_des_mpc,qd_des_mpc,solution_precedent);
 
-
-
+      std::cout <<" solution :\n " << solution.head(dof).transpose() <<'\n';
+//      std::cout <<" state :\n" << state.head(dof).transpose() <<'\n';
 
       state = A*state + B*solution.head(dof);
+      q.data = state.head(dof);
+
+      q_in.q.data = state.head(dof);
+      q_in.qdot.data = state.tail(dof);
+
+      trajectory_generation->getRobotModel()->JntToCart(q,x_current);
+      trajectory_generation->getRobotModel()->JntToJac(q_in.q,J);
+      ee_vel = J.data*q_in.qdot.data;
+
+      jnt_error[0] = x_current.p[0] - x_des.p[0];
+      jnt_error[1] = x_current.p[1] - x_des.p[1];
+      jnt_error[2] = x_current.p[2] - x_des.p[2];
+
+
+
+       next_point.x = x_current.p[0];
+       next_point.y = x_current.p[1];
+       next_point.z = x_current.p[2];
+
+       next_vel.linear.x = ee_vel[0];
+       next_vel.linear.y = ee_vel[1];
+       next_vel.linear.z = ee_vel[2];
+       next_vel.angular.x = ee_vel[3];
+       next_vel.angular.y = ee_vel[4];
+       next_vel.angular.z = ee_vel[5];
+
+       trajectory_msg_.next_point = next_point;
+       trajectory_msg_.next_vel = next_vel;
+
+       trajectory_publisher_.publish(trajectory_msg_);
+
+  }
+
+
+
+  /**
+   * @brief Test of MPC trajectory planning
+   */
+  void update(){
+
+
+
+    while (jnt_error.norm() > 0.01){
+      solution_precedent = solution;
+
+
+
+      solution = trajectory_generation->update(state,q_horizon,qd_horizon,q_des_mpc,qd_des_mpc,solution_precedent);
+
+//      std::cout <<" solution :\n " << solution.head(dof).transpose() <<'\n';
+//      std::cout <<" state :\n" << state.head(dof).transpose() <<'\n';
+      state = A*state + B*solution.head(dof);
+      q.data = state.head(dof);
+
+      q_in.q.data = state.head(dof);
+      q_in.qdot.data = state.tail(dof);
+      trajectory_generation->getRobotModel()->JntToJac(q_in.q,J);
+      ee_vel = J.data*q_in.qdot.data;
+
+      trajectory_generation->getRobotModel()->JntToCart(q,x_current);
 
       q_horizon = trajectory_generation->getJointHorizon();
       qd_horizon = trajectory_generation->getJointvelHorizon();
 
 
+      jnt_error[0] = x_current.p[0] - x_des.p[0];
+      jnt_error[1] = x_current.p[1] - x_des.p[1];
+      jnt_error[2] = x_current.p[2] - x_des.p[2];
+
+      std::cout << "ee position error : \n" << jnt_error.norm() << '\n';
 
 
       trajectory_generation->getRobotModel()->setJntState(state.head(dof), state.tail(dof));
 
 
-      jnt_error = state.head(dof) - q_des.data;
-     // std::cout << "solution :\n " << solution.transpose() << '\n';
-      std::cout << "current joint :\n "<< state.head(dof).transpose()<<'\n';
-      std::cout << "desired joint :\n "<<q_des.data.transpose() <<'\n';
-      std::cout << " joint error :\n" << jnt_error.norm() << std::endl;
+      if (jnt_error.norm() < 0.01){
+         ROS_INFO("Robot arrives to target position");
+         return ;
+      }
+      }
+   }
+
+private:
+
+  ros::NodeHandle node_handle_;
+  ros::ServiceClient next_point_client ;
+  ros::Publisher trajectory_publisher_;
+  ros::Subscriber robotStateReader_;
+  Eigen::Vector3d X_traj_, X_curr_, X_final_ ;
+  geometry_msgs::Vector3 next_point;
+  geometry_msgs::Twist next_vel;
+  panda_mpc::trajectoryMsg trajectory_msg_;
+
+  TrajectoryMPC trajectory_to_send_;
+
+  std::shared_ptr<planning::trajGen> trajectory_generation;
+
+  int N;
+  double dt;
+  int dof;
+  std::string root_link;
+  std::string tip_link;
+  Eigen::VectorXd state;
+  Eigen::VectorXd q_des_mpc, qd_des_mpc, qdd_des_mpc ;
+  Eigen::VectorXd q_horizon, qd_horizon;
+  Eigen::VectorXd solution, solution_precedent;
+
+  Eigen::MatrixXd A, B;
+  Eigen::VectorXd jnt_error;
+  KDL::Frame x_des, x_current;
+  KDL::JntArray q_des, q;
+  TrajectoryMPC trajectory_to_send;
+  KDL::Jacobian J;
+  KDL::JntArrayVel q_in;
+  Eigen::VectorXd ee_vel;
+};
 
 
-    }while(jnt_error.norm() > 0.01);
+
+int main(int argc, char** argv )
+{
+    ros::init(argc,argv, "NextTrajectorySender");
+    ros::NodeHandle node_handle;
+    ros::Rate loop_rate(50);
+
+
+    int dof = 7;
+    int N = 5;
+
+
+    Eigen::VectorXd q_init, qd_init, qdd_init, state;
+    q_init.resize(dof), qd_init.resize(dof), qdd_init.resize(dof);
+    q_init << 0.0087, -0.1051, 0.0110, -2.279, 0.0018, 2.1754, 0.019;
+    qd_init.setZero();
+    qdd_init.setZero();
+
+
+    pointSender point_send_(node_handle, q_init, qd_init);
+
+    point_send_.update();
+    ros::spin();
+//    while(ros::ok()){
+
+//      ros::spinOnce();
+//      loop_rate.sleep();
+
+//    }
 
     return 0;
 

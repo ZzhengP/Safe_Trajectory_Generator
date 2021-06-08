@@ -9,6 +9,8 @@ Panels:
         - /RobotModel1
         - /Grid1
         - /PoseArray1
+        - /Path2
+        - /Pose1
       Splitter Ratio: 0.5
     Tree Height: 728
   - Class: rviz/Selection
@@ -168,6 +170,44 @@ Visualization Manager:
       Topic: /panda_mpc/Pose_array
       Unreliable: false
       Value: true
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz/Path
+      Color: 25; 255; 0
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic: /panda_mpc/Ros_Path
+      Unreliable: false
+      Value: true
+    - Alpha: 1
+      Axes Length: 1
+      Axes Radius: 0.10000000149011612
+      Class: rviz/Pose
+      Color: 255; 25; 0
+      Enabled: true
+      Head Length: 0.009999999776482582
+      Head Radius: 0.009999999776482582
+      Name: Pose
+      Shaft Length: 0.10000000149011612
+      Shaft Radius: 0.009999999776482582
+      Shape: Arrow
+      Topic: /panda_mpc/ee_pose
+      Unreliable: false
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -196,7 +236,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.7905805110931396
+      Distance: 3.5254058837890625
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -211,10 +251,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.450398325920105
+      Pitch: 0.5553981065750122
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.1404006481170654
+      Yaw: 1.000400185585022
     Saved: ~
 Window Geometry:
   Displays:

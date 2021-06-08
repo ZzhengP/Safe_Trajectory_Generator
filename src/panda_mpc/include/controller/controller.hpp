@@ -18,6 +18,7 @@
 #include <panda_mpc/UI.h>
 #include <panda_mpc/PandaRunMsg.h>
 #include <panda_mpc/UpdateTrajectoryNextPoint.h>
+#include <panda_mpc/trajectoryMsg.h>
 
 #include <qpOASES.hpp>
 #include <trac_ik/trac_ik.hpp>
@@ -40,6 +41,7 @@
 #include <eigen_conversions/eigen_msg.h>
 #include <panda_traj/panda_traj.hpp>
 #include <robot/robot_model.h>
+#include <planning/traj_generation.hpp>
 
 namespace Controller {
 
@@ -56,6 +58,9 @@ public:
    */
   bool Init(ros::NodeHandle& nh, const Eigen::VectorXd &q_init , const Eigen::VectorXd &qd_init );
 
+  bool InitMPCTraj(ros::NodeHandle& nh, const Eigen::VectorXd &q_init , const Eigen::VectorXd &qd_init );
+  bool UpdateMPCTraj();
+
   /**
    * @brief Update for the controller
    * @param q: the current joint position
@@ -65,6 +70,7 @@ public:
    */
 
   Eigen::VectorXd Update(const Eigen::VectorXd &q, const Eigen::VectorXd &dq, const ros::Duration& period);
+
 
 private:
   template <typename T>
@@ -153,8 +159,9 @@ private:
    */
    bool updateTrajectory(panda_traj::UpdateTrajectory::Request &req, panda_traj::UpdateTrajectory::Response &resp);
 
-   bool updateTrajectoryPoint(panda_mpc::UpdateTrajectoryNextPoint::Request &req, panda_mpc::UpdateTrajectoryNextPoint::Response &resp);
+//   void updateTrajectoryPoint(panda_mpc::UpdateTrajectoryNextPoint::Request &req, panda_mpc::UpdateTrajectoryNextPoint::Response &resp);
 
+  void updateTrajectoryPoint(const panda_mpc::trajectoryMsg::ConstPtr& traj_msg);
   // Publishers
   geometry_msgs::Pose X_curr_msg_, X_traj_msg_;
   geometry_msgs::Twist X_err_msg_;
@@ -164,7 +171,7 @@ private:
   realtime_tools::RealtimePublisher<geometry_msgs::PoseStamped> pose_curr_publisher_, pose_des_publisher_;
 
   // Subscribers
-  ros::Subscriber trajectory_point_subscriber_;
+  ros::Subscriber trajectory_msg_subscriber_;
 
   ros::ServiceServer updateUI_service, updateTraj_service, updateNextTraj_service_;
 
@@ -213,6 +220,7 @@ private:
   Eigen::VectorXd qdd_max_; /*!< @brief Maximum joint acceleration limit vector*/
   Eigen::VectorXd q_mean_; /*!< @brief Mean joint position of the robot (for the regularization task*/
 
+
   std::unique_ptr<qpOASES::SQProblem> qpoases_solver_; /*!< @brief QP solver point*/
   int number_of_constraints_; /*!< @brief Number of constraints of the QP problem*/
   int number_of_variables; /*!< @brief Number of optimization variables of the QP problem*/
@@ -221,7 +229,29 @@ private:
   TrajectoryGenerator trajectory; /*!< @brief TrajectoryGenerator object */
   panda_traj::TrajProperties traj_properties_; /*!< @brief Properties of the trajectory */
 
-  KDL::Frame next_pts_;
+  KDL::Frame next_tf_;
+  geometry_msgs::Vector3 next_point_, preview_point_;
+  geometry_msgs::Twist next_vel_;
+
+  panda_mpc::trajectoryMsg trajectory_msg_;
+
+
+  // ---------------------- Generate MPC trajectory ----------------------------
+  std::shared_ptr<planning::trajGen> trajectory_generation;
+  bool init_pos_attend_, execute;
+  int N_;
+  double dt_;
+  Eigen::VectorXd state_;
+  Eigen::VectorXd q_des_mpc_, qd_des_mpc_, qdd_des_mpc_ ;
+  Eigen::VectorXd q_horizon_, qd_horizon_;
+  Eigen::VectorXd solution_, solution_precedent_;
+  Eigen::MatrixXd state_A_, state_B_;
+  KDL::JntArray q_des_, q_;
+  KDL::JntArrayVel q_mpc_;
+  Eigen::VectorXd ee_vel_;
+  KDL::Frame X_des_, X_mpc_;
+  KDL::Jacobian kdl_J;
+  ros::Time begin_time_, end_time_;
 
 };
 

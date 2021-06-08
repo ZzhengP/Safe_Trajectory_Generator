@@ -9,17 +9,11 @@ import struct
 import geometry_msgs.msg
 
 class UpdateTrajectoryNextPointRequest(genpy.Message):
-  _md5sum = "ebedbfa7aeefcaa4b3244deec8feed75"
+  _md5sum = "2685428bccce90adb95a24e6e6228b8f"
   _type = "panda_mpc/UpdateTrajectoryNextPointRequest"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """geometry_msgs/Twist next_point
-float64 vel
-
-================================================================================
-MSG: geometry_msgs/Twist
-# This expresses velocity in free space broken into its linear and angular parts.
-Vector3  linear
-Vector3  angular
+  _full_text = """geometry_msgs/Vector3 next_point
+geometry_msgs/Twist next_vel
 
 ================================================================================
 MSG: geometry_msgs/Vector3
@@ -32,9 +26,15 @@ MSG: geometry_msgs/Vector3
 
 float64 x
 float64 y
-float64 z"""
-  __slots__ = ['next_point','vel']
-  _slot_types = ['geometry_msgs/Twist','float64']
+float64 z
+================================================================================
+MSG: geometry_msgs/Twist
+# This expresses velocity in free space broken into its linear and angular parts.
+Vector3  linear
+Vector3  angular
+"""
+  __slots__ = ['next_point','next_vel']
+  _slot_types = ['geometry_msgs/Vector3','geometry_msgs/Twist']
 
   def __init__(self, *args, **kwds):
     """
@@ -44,7 +44,7 @@ float64 z"""
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       next_point,vel
+       next_point,next_vel
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -54,12 +54,12 @@ float64 z"""
       super(UpdateTrajectoryNextPointRequest, self).__init__(*args, **kwds)
       # message fields cannot be None, assign default values for those that are
       if self.next_point is None:
-        self.next_point = geometry_msgs.msg.Twist()
-      if self.vel is None:
-        self.vel = 0.
+        self.next_point = geometry_msgs.msg.Vector3()
+      if self.next_vel is None:
+        self.next_vel = geometry_msgs.msg.Twist()
     else:
-      self.next_point = geometry_msgs.msg.Twist()
-      self.vel = 0.
+      self.next_point = geometry_msgs.msg.Vector3()
+      self.next_vel = geometry_msgs.msg.Twist()
 
   def _get_types(self):
     """
@@ -74,7 +74,7 @@ float64 z"""
     """
     try:
       _x = self
-      buff.write(_get_struct_7d().pack(_x.next_point.linear.x, _x.next_point.linear.y, _x.next_point.linear.z, _x.next_point.angular.x, _x.next_point.angular.y, _x.next_point.angular.z, _x.vel))
+      buff.write(_get_struct_9d().pack(_x.next_point.x, _x.next_point.y, _x.next_point.z, _x.next_vel.linear.x, _x.next_vel.linear.y, _x.next_vel.linear.z, _x.next_vel.angular.x, _x.next_vel.angular.y, _x.next_vel.angular.z))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -87,12 +87,14 @@ float64 z"""
       codecs.lookup_error("rosmsg").msg_type = self._type
     try:
       if self.next_point is None:
-        self.next_point = geometry_msgs.msg.Twist()
+        self.next_point = geometry_msgs.msg.Vector3()
+      if self.next_vel is None:
+        self.next_vel = geometry_msgs.msg.Twist()
       end = 0
       _x = self
       start = end
-      end += 56
-      (_x.next_point.linear.x, _x.next_point.linear.y, _x.next_point.linear.z, _x.next_point.angular.x, _x.next_point.angular.y, _x.next_point.angular.z, _x.vel,) = _get_struct_7d().unpack(str[start:end])
+      end += 72
+      (_x.next_point.x, _x.next_point.y, _x.next_point.z, _x.next_vel.linear.x, _x.next_vel.linear.y, _x.next_vel.linear.z, _x.next_vel.angular.x, _x.next_vel.angular.y, _x.next_vel.angular.z,) = _get_struct_9d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -106,7 +108,7 @@ float64 z"""
     """
     try:
       _x = self
-      buff.write(_get_struct_7d().pack(_x.next_point.linear.x, _x.next_point.linear.y, _x.next_point.linear.z, _x.next_point.angular.x, _x.next_point.angular.y, _x.next_point.angular.z, _x.vel))
+      buff.write(_get_struct_9d().pack(_x.next_point.x, _x.next_point.y, _x.next_point.z, _x.next_vel.linear.x, _x.next_vel.linear.y, _x.next_vel.linear.z, _x.next_vel.angular.x, _x.next_vel.angular.y, _x.next_vel.angular.z))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -120,12 +122,14 @@ float64 z"""
       codecs.lookup_error("rosmsg").msg_type = self._type
     try:
       if self.next_point is None:
-        self.next_point = geometry_msgs.msg.Twist()
+        self.next_point = geometry_msgs.msg.Vector3()
+      if self.next_vel is None:
+        self.next_vel = geometry_msgs.msg.Twist()
       end = 0
       _x = self
       start = end
-      end += 56
-      (_x.next_point.linear.x, _x.next_point.linear.y, _x.next_point.linear.z, _x.next_point.angular.x, _x.next_point.angular.y, _x.next_point.angular.z, _x.vel,) = _get_struct_7d().unpack(str[start:end])
+      end += 72
+      (_x.next_point.x, _x.next_point.y, _x.next_point.z, _x.next_vel.linear.x, _x.next_vel.linear.y, _x.next_vel.linear.z, _x.next_vel.angular.x, _x.next_vel.angular.y, _x.next_vel.angular.z,) = _get_struct_9d().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -134,12 +138,12 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_7d = None
-def _get_struct_7d():
-    global _struct_7d
-    if _struct_7d is None:
-        _struct_7d = struct.Struct("<7d")
-    return _struct_7d
+_struct_9d = None
+def _get_struct_9d():
+    global _struct_9d
+    if _struct_9d is None:
+        _struct_9d = struct.Struct("<9d")
+    return _struct_9d
 # This Python file uses the following encoding: utf-8
 """autogenerated by genpy from panda_mpc/UpdateTrajectoryNextPointResponse.msg. Do not edit."""
 import codecs
@@ -258,6 +262,6 @@ def _get_struct_B():
     return _struct_B
 class UpdateTrajectoryNextPoint(object):
   _type          = 'panda_mpc/UpdateTrajectoryNextPoint'
-  _md5sum = '2134cf5914ee56390a99d4f1731a484b'
+  _md5sum = '07d2a1fe5433c3b25d4df2bdf8fc4f1d'
   _request_class  = UpdateTrajectoryNextPointRequest
   _response_class = UpdateTrajectoryNextPointResponse

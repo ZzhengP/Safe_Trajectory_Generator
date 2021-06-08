@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg"
+messages_str = "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg;/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryMsg.msg"
 services_str = "/home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv;/home/zheng/catkin_ws/src/panda_mpc/srv/UpdateTrajectoryNextPoint.srv"
 pkg_name = "panda_mpc"
 dependencies_str = "std_msgs;geometry_msgs;sensor_msgs"

@@ -50,7 +50,7 @@ namespace planning {
     if(!mpc_task_->update(S, q_des,qd_des,qdd_des)){
       ROS_INFO_STREAM("failed to update task");
     }else{
-      ROS_INFO_STREAM("success to update task");
+//      ROS_INFO_STREAM("success to update task");
 
     }
     qpoases_solver_.H_ = mpc_task_->getHessien();
@@ -61,7 +61,7 @@ namespace planning {
       ROS_INFO_STREAM("failed to update constraint");
     }
     else{
-          ROS_INFO_STREAM("success to update constraint");
+//          ROS_INFO_STREAM("success to update constraint");
     }
     qpoases_solver_.lb_.setConstant(-10);
     qpoases_solver_.ub_.setConstant(10);

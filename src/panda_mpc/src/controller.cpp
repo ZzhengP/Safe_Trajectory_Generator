@@ -69,18 +69,32 @@ bool Controller::Init(ros::NodeHandle& node_handle,const Eigen::VectorXd& q_init
     std::string csv_file_name = trajectory_file;
     trajectory.Load(csv_file_name);
     trajectory.Build(X_curr_, true);
+    traj_properties_.play_traj_ = true;
 
-    next_pts_.M= X_curr_.M ;
-    next_pts_.p[0] = 0.5, next_pts_.p[1]=0., next_pts_.p[2] = 0.4;
-    ROS_DEBUG_STREAM(" Trajectory computed ");
+    next_tf_.M = X_curr_.M;
+    next_tf_.p[0] = 0.5;
+    next_tf_.p[1] = 0.;
+    next_tf_.p[2] = 0.4;
+    next_point_.x = 0.5;
+    next_point_.y = 0.;
+    next_point_.z = 0.4;
+    preview_point_ = next_point_;
+    x_err.setConstant(1);
+    init_pos_attend_ = false;
+    execute =true;
+    ROS_WARN_STREAM(" Trajectory computed ");
 
+    // ----------------------- Init MPC trajectory attributs -------------------
+    if(!InitMPCTraj(node_handle,q_init,qd_init))
+      return false;
 
     return true;
 }
 
 Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::VectorXd& qd, const ros::Duration& period)
 {
-    double time_dt = period.toSec();
+
+    double  time_dt = period.toSec();
 
     //Get robot current state
     q_in.q.data = q;
@@ -91,16 +105,41 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
     robot_model_->JntToCart(q_in.q, X_curr_);
 
 
+    // -------------------- Update First MPC trajectory ----------------------------
+
+    if(x_err.norm()<0.005){
+      init_pos_attend_ = true;
+        ROS_WARN_STREAM(" x_err :\n " << x_err.norm());
+    }
+
+    if(init_pos_attend_ & execute){
+      UpdateMPCTraj();
+      begin_time_ = ros::Time::now();
+      execute = false;
+    }
+
+    end_time_ = ros::Time::now();
+    ros::Duration duration = end_time_ - begin_time_;
+    if(duration.toSec() > 0.05)
+      execute = true;
+
+
+    // ------------------------------------------------------------------------------
+
+
     //Update the trajectory
-    trajectory.updateTrajectory(traj_properties_, time_dt);
-    if (traj_properties_.move_)
-        traj_properties_.move_ = false;
-    X_traj_ = trajectory.Pos();
-    Xd_traj_ = trajectory.Vel();
-//        X_traj_ = next_pts_;
-//        Xd_traj_.vel[0] = 0, Xd_traj_.vel[1] = 0.1, Xd_traj_.vel[2] = 0;
-//        Xd_traj_.rot[0] = 0, Xd_traj_.rot[1] = 0, Xd_traj_.rot[2] = 0 ;
-    // Proportionnal controller
+//    trajectory.updateTrajectory(traj_properties_, time_dt);
+//   if (traj_properties_.move_)
+//        traj_properties_.move_ = false;
+//    X_traj_ = trajectory.Pos();
+//    Xd_traj_ = trajectory.Vel(); //lucas' codes
+
+//    std::cout <<" X_traj" << X_traj_.p << '\n';
+    preview_point_ = next_point_;
+    X_traj_ = next_tf_;
+    Xd_traj_.vel[0] = next_vel_.linear.x, Xd_traj_.vel[1] = next_vel_.linear.y, Xd_traj_.vel[2] = next_vel_.linear.z;
+ //   Xd_traj_.rot[0] = next_vel_.angular.x, Xd_traj_.rot[1] = next_vel_.angular.y, Xd_traj_.rot[2] = next_vel_.angular.x ;
+//     Proportionnal controller
     X_err_ = diff( X_curr_ , X_traj_ );
     tf::twistKDLToEigen(X_err_,x_err);
     tf::twistKDLToEigen(Xd_traj_,xd_traj_);
@@ -231,6 +270,7 @@ void Controller::load_parameters(){
     getRosParam("/panda_mpc/regularisation_weight_",regularisation_weight_);
     getRosParam("/panda_mpc/root_link_",root_link_);
     getRosParam("/panda_mpc/tip_link_",tip_link_);
+
     ROS_INFO_STREAM ( "------------- Parameters Loaded -------------" );
 }
 
@@ -239,9 +279,9 @@ bool Controller::load_robot(ros::NodeHandle& node_handle, const Eigen::VectorXd&
    ROS_INFO_STREAM ( "------------- Loading robot -------------" );
 
     updateUI_service = node_handle.advertiseService("updateUI", &Controller::updateUI, this);
-    updateTraj_service = node_handle.advertiseService("updateTrajectory", &Controller::updateTrajectory, this);
-  //  updateNextTraj_service_ = node_handle.advertiseService("/panda_mpc/next_point", &Controller::updateTrajectoryPoint,this);
-
+//    updateTraj_service = node_handle.advertiseService("updateTrajectory", &Controller::updateTrajectory, this); // Lucas 's code
+//    updateNextTraj_service_ = node_handle.advertiseService("/panda_mpc/next_point", &Controller::updateTrajectoryPoint,this);
+//    trajectory_msg_subscriber_ = node_handle.subscribe("/trajectory_generation/next_point", 1000, &Controller::updateTrajectoryPoint,this);
     // Initialize robot model
     robot_model_.reset(new robot::RobotModel(node_handle, root_link_, tip_link_));
     robot_model_->Init(node_handle, q_init, qd_init);
@@ -305,6 +345,8 @@ void Controller::do_publishing()
 bool Controller::updateUI(panda_mpc::UI::Request &req, panda_mpc::UI::Response &resp)
 {
     traj_properties_.play_traj_ = req.play_traj;
+//    req.publish_traj = true;
+
     if (req.publish_traj)
         publishTrajectory();
     if (req.build_traj)
@@ -332,24 +374,139 @@ bool Controller::updateTrajectory(panda_traj::UpdateTrajectory::Request& req, pa
 }
 
 // Subscribe to a trajectory generation topic from the next point
-bool Controller::updateTrajectoryPoint(panda_mpc::UpdateTrajectoryNextPoint::Request &req, panda_mpc::UpdateTrajectoryNextPoint::Response &resp)
+void Controller::updateTrajectoryPoint(const panda_mpc::trajectoryMsg::ConstPtr& traj_msg)
 {
 
 
-  next_pts_.p[0] = req.next_point.linear.x;
-  next_pts_.p[1] = req.next_point.linear.y;
-  next_pts_.p[2] = req.next_point.linear.z;
+  if(traj_msg != nullptr){
 
-  ROS_WARN_STREAM("Receiving next point " << next_pts_.p[0]  << " " << next_pts_.p[1] << " "<< next_pts_.p[2] );
+    next_point_ = traj_msg->next_point;
+    next_vel_ = traj_msg->next_vel;
 
- // trajectory.Load(pts, req.vel);
- // trajectory.Build(X_curr_, true);
- // publishTrajectory();
+    next_tf_.p[0] = next_point_.x;
+    next_tf_.p[1] = next_point_.y;
+    next_tf_.p[2] = next_point_.z;
+   }else{
+    next_tf_.p[0] = preview_point_.x;
+    next_tf_.p[1] = preview_point_.y;
+    next_tf_.p[2] = preview_point_.z;
+  }
+
+//  auto error = KDL::diff(next_tf_.p, X_curr_.p);
+//  if(error.Norm() > 0.005){
+//    trajectory.Load(next_tf_, 0.2);
+//    trajectory.Build(X_curr_, true);
+//  }
+//  publishTrajectory();
   std::cout << "Received next point computing traj and publishing" << std::endl;
 
+}
+bool Controller::UpdateMPCTraj(){
 
+  solution_precedent_ = solution_;
+
+  state_.head(dof) =  q_in.q.data;
+  state_.tail(dof) = q_in.qdot.data;
+
+  trajectory_generation->getRobotModel()->setJntState(state_.head(dof), state_.tail(dof));
+
+  q_horizon_ = trajectory_generation->getJointHorizon();
+  qd_horizon_ = trajectory_generation->getJointvelHorizon();
+
+  solution_ = trajectory_generation->update(state_,q_horizon_,qd_horizon_,q_des_mpc_,qd_des_mpc_,solution_precedent_);
+  state_ = state_A_*state_ + state_B_*solution_.head(dof);
+  q_.data = state_.head(dof);
+  q_mpc_.q.data = state_.head(dof);
+  q_mpc_.qdot.data = state_.tail(dof);
+
+  trajectory_generation->getRobotModel()->JntToCart(q_,X_mpc_);
+  trajectory_generation->getRobotModel()->JntToJac(q_mpc_.q,kdl_J);
+  ee_vel_ = kdl_J.data*q_mpc_.qdot.data;
+
+  next_point_.x = X_mpc_.p[0];
+  next_point_.y = X_mpc_.p[1];
+  next_point_.z = X_mpc_.p[2];
+  ROS_WARN_STREAM("mpc next position " <<  next_point_ );
+  next_vel_.linear.x = ee_vel_[0];
+  next_vel_.linear.y = ee_vel_[1];
+  next_vel_.linear.z = ee_vel_[2];
+  next_vel_.angular.x = ee_vel_[3];
+  next_vel_.angular.y = ee_vel_[4];
+  next_vel_.angular.z = ee_vel_[5];
+
+
+  next_tf_.p[0] = next_point_.x;
+  next_tf_.p[1] = next_point_.y;
+  next_tf_.p[2] = next_point_.z;
+
+  return true;
 }
 
+bool Controller::InitMPCTraj(ros::NodeHandle &node_handle, const Eigen::VectorXd &q_init, const Eigen::VectorXd &qd_init)
+{
+
+
+  //--------------------------------------
+  // Initialize MPC trajecotry generator
+  //--------------------------------------
+  node_handle.getParam("/panda_mpc/dt_", dt_);
+  node_handle.getParam("/panda_mpc/N_", N_);
+
+  kdl_J.resize(dof);
+  q_mpc_.resize(dof);
+
+  q_des_mpc_.resize(dof*N_), qd_des_mpc_.resize(dof*N_), qdd_des_mpc_.resize(dof*N_);
+
+  for (size_t i(0); i<N_; i++){
+    q_des_mpc_.segment(i*dof,dof) = q_init;
+    qd_des_mpc_.segment(i*dof,dof) = qd_init;
+  }
+
+  qdd_des_mpc_.setZero();
+  q_horizon_.resize(dof*N_);
+  qd_horizon_.resize(dof*N_);
+  q_horizon_ = q_des_mpc_;
+  qd_horizon_ = qd_des_mpc_;
+
+  state_.resize(2*dof);
+  state_.segment(0,dof) = q_init, state_.segment(dof,dof) = qd_init;
+
+  solution_.resize(N_*dof);
+  solution_precedent_.resize(N_*dof);
+  solution_.setZero();
+  solution_precedent_.setZero();
+
+  state_A_.resize(2*dof, 2*dof);
+  state_B_.resize(2*dof,dof);
+  X_des_.p[0] = 0.4, X_des_.p[1] = 0.4, X_des_.p[2] = 0.3;
+  X_des_.M = X_curr_.M;
+
+  q_des_.resize(dof);
+  ee_vel_.resize(6);
+
+  trajectory_generation.reset(new planning::trajGen(node_handle,q_init,qd_init));
+  trajectory_generation->getRobotModel()->CartToJnt(X_des_,q_des_);
+
+  if(!trajectory_generation->init(node_handle)){
+    ROS_ERROR_STREAM("Unable to initialize properly parameters: exit");
+    return false;
+  }
+
+  for (size_t i(0); i < N_; i++){
+    q_des_mpc_.segment(i*dof, dof) = q_des_.data;
+  }
+
+  state_A_ = trajectory_generation->getStateA();
+  state_B_ = trajectory_generation->getStateB();
+
+
+  ROS_WARN_STREAM("here");
+  return true;
+}
+
+
+
+// End of namespace
 }
 
 

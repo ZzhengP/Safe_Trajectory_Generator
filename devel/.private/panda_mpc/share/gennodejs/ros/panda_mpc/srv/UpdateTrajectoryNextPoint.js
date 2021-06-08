@@ -23,20 +23,20 @@ class UpdateTrajectoryNextPointRequest {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
       this.next_point = null;
-      this.vel = null;
+      this.next_vel = null;
     }
     else {
       if (initObj.hasOwnProperty('next_point')) {
         this.next_point = initObj.next_point
       }
       else {
-        this.next_point = new geometry_msgs.msg.Twist();
+        this.next_point = new geometry_msgs.msg.Vector3();
       }
-      if (initObj.hasOwnProperty('vel')) {
-        this.vel = initObj.vel
+      if (initObj.hasOwnProperty('next_vel')) {
+        this.next_vel = initObj.next_vel
       }
       else {
-        this.vel = 0.0;
+        this.next_vel = new geometry_msgs.msg.Twist();
       }
     }
   }
@@ -44,9 +44,9 @@ class UpdateTrajectoryNextPointRequest {
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type UpdateTrajectoryNextPointRequest
     // Serialize message field [next_point]
-    bufferOffset = geometry_msgs.msg.Twist.serialize(obj.next_point, buffer, bufferOffset);
-    // Serialize message field [vel]
-    bufferOffset = _serializer.float64(obj.vel, buffer, bufferOffset);
+    bufferOffset = geometry_msgs.msg.Vector3.serialize(obj.next_point, buffer, bufferOffset);
+    // Serialize message field [next_vel]
+    bufferOffset = geometry_msgs.msg.Twist.serialize(obj.next_vel, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -55,14 +55,14 @@ class UpdateTrajectoryNextPointRequest {
     let len;
     let data = new UpdateTrajectoryNextPointRequest(null);
     // Deserialize message field [next_point]
-    data.next_point = geometry_msgs.msg.Twist.deserialize(buffer, bufferOffset);
-    // Deserialize message field [vel]
-    data.vel = _deserializer.float64(buffer, bufferOffset);
+    data.next_point = geometry_msgs.msg.Vector3.deserialize(buffer, bufferOffset);
+    // Deserialize message field [next_vel]
+    data.next_vel = geometry_msgs.msg.Twist.deserialize(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 56;
+    return 72;
   }
 
   static datatype() {
@@ -72,20 +72,14 @@ class UpdateTrajectoryNextPointRequest {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'ebedbfa7aeefcaa4b3244deec8feed75';
+    return '2685428bccce90adb95a24e6e6228b8f';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    geometry_msgs/Twist next_point
-    float64 vel
-    
-    ================================================================================
-    MSG: geometry_msgs/Twist
-    # This expresses velocity in free space broken into its linear and angular parts.
-    Vector3  linear
-    Vector3  angular
+    geometry_msgs/Vector3 next_point
+    geometry_msgs/Twist next_vel
     
     ================================================================================
     MSG: geometry_msgs/Vector3
@@ -99,6 +93,12 @@ class UpdateTrajectoryNextPointRequest {
     float64 x
     float64 y
     float64 z
+    ================================================================================
+    MSG: geometry_msgs/Twist
+    # This expresses velocity in free space broken into its linear and angular parts.
+    Vector3  linear
+    Vector3  angular
+    
     `;
   }
 
@@ -109,17 +109,17 @@ class UpdateTrajectoryNextPointRequest {
     }
     const resolved = new UpdateTrajectoryNextPointRequest(null);
     if (msg.next_point !== undefined) {
-      resolved.next_point = geometry_msgs.msg.Twist.Resolve(msg.next_point)
+      resolved.next_point = geometry_msgs.msg.Vector3.Resolve(msg.next_point)
     }
     else {
-      resolved.next_point = new geometry_msgs.msg.Twist()
+      resolved.next_point = new geometry_msgs.msg.Vector3()
     }
 
-    if (msg.vel !== undefined) {
-      resolved.vel = msg.vel;
+    if (msg.next_vel !== undefined) {
+      resolved.next_vel = geometry_msgs.msg.Twist.Resolve(msg.next_vel)
     }
     else {
-      resolved.vel = 0.0
+      resolved.next_vel = new geometry_msgs.msg.Twist()
     }
 
     return resolved;
@@ -201,6 +201,6 @@ class UpdateTrajectoryNextPointResponse {
 module.exports = {
   Request: UpdateTrajectoryNextPointRequest,
   Response: UpdateTrajectoryNextPointResponse,
-  md5sum() { return '2134cf5914ee56390a99d4f1731a484b'; },
+  md5sum() { return '07d2a1fe5433c3b25d4df2bdf8fc4f1d'; },
   datatype() { return 'panda_mpc/UpdateTrajectoryNextPoint'; }
 };

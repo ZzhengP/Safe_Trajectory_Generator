@@ -13,6 +13,7 @@ panda_mpc
 /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UIRequest.h /home/zheng/catkin_ws/devel/include/panda_mpc/UIRequest.h
 /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UIResponse.h /home/zheng/catkin_ws/devel/include/panda_mpc/UIResponse.h
 /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/teleop_gripper_paramConfig.h /home/zheng/catkin_ws/devel/include/panda_mpc/teleop_gripper_paramConfig.h
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryMsg.h /home/zheng/catkin_ws/devel/include/panda_mpc/trajectoryMsg.h
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so /home/zheng/catkin_ws/devel/lib/libpanda_mpc.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/pkgconfig/panda_mpc.pc /home/zheng/catkin_ws/devel/lib/pkgconfig/panda_mpc.pc
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/__init__.py /home/zheng/catkin_ws/devel/lib/python2.7/dist-packages/panda_mpc/__init__.py
@@ -26,6 +27,7 @@ panda_mpc
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/__init__.py /home/zheng/catkin_ws/devel/lib/python2.7/dist-packages/panda_mpc/srv/__init__.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UI.py /home/zheng/catkin_ws/devel/lib/python2.7/dist-packages/panda_mpc/srv/_UI.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_JointTorqueComparison.py /home/zheng/catkin_ws/devel/lib/python2.7/dist-packages/panda_mpc/msg/_JointTorqueComparison.py
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryMsg.py /home/zheng/catkin_ws/devel/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryMsg.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/__init__.py /home/zheng/catkin_ws/devel/lib/python2.7/dist-packages/panda_mpc/msg/__init__.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_PandaRunMsg.py /home/zheng/catkin_ws/devel/lib/python2.7/dist-packages/panda_mpc/msg/_PandaRunMsg.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/trajectory_send /home/zheng/catkin_ws/devel/lib/panda_mpc/trajectory_send
@@ -38,8 +40,10 @@ panda_mpc
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv/_package_UI.lisp /home/zheng/catkin_ws/devel/share/common-lisp/ros/panda_mpc/srv/_package_UI.lisp
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/PandaRunMsg.lisp /home/zheng/catkin_ws/devel/share/common-lisp/ros/panda_mpc/msg/PandaRunMsg.lisp
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/_package_JointTorqueComparison.lisp /home/zheng/catkin_ws/devel/share/common-lisp/ros/panda_mpc/msg/_package_JointTorqueComparison.lisp
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/trajectoryMsg.lisp /home/zheng/catkin_ws/devel/share/common-lisp/ros/panda_mpc/msg/trajectoryMsg.lisp
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/JointTorqueComparison.lisp /home/zheng/catkin_ws/devel/share/common-lisp/ros/panda_mpc/msg/JointTorqueComparison.lisp
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/panda_mpc-msg.asd /home/zheng/catkin_ws/devel/share/common-lisp/ros/panda_mpc/msg/panda_mpc-msg.asd
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/_package_trajectoryMsg.lisp /home/zheng/catkin_ws/devel/share/common-lisp/ros/panda_mpc/msg/_package_trajectoryMsg.lisp
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/_package.lisp /home/zheng/catkin_ws/devel/share/common-lisp/ros/panda_mpc/msg/_package.lisp
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/_package_PandaRunMsg.lisp /home/zheng/catkin_ws/devel/share/common-lisp/ros/panda_mpc/msg/_package_PandaRunMsg.lisp
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/_index.js /home/zheng/catkin_ws/devel/share/gennodejs/ros/panda_mpc/_index.js
@@ -47,11 +51,13 @@ panda_mpc
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/srv/UpdateTrajectoryNextPoint.js /home/zheng/catkin_ws/devel/share/gennodejs/ros/panda_mpc/srv/UpdateTrajectoryNextPoint.js
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/srv/_index.js /home/zheng/catkin_ws/devel/share/gennodejs/ros/panda_mpc/srv/_index.js
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/JointTorqueComparison.js /home/zheng/catkin_ws/devel/share/gennodejs/ros/panda_mpc/msg/JointTorqueComparison.js
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/trajectoryMsg.js /home/zheng/catkin_ws/devel/share/gennodejs/ros/panda_mpc/msg/trajectoryMsg.js
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/_index.js /home/zheng/catkin_ws/devel/share/gennodejs/ros/panda_mpc/msg/_index.js
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/PandaRunMsg.js /home/zheng/catkin_ws/devel/share/gennodejs/ros/panda_mpc/msg/PandaRunMsg.js
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/roseus/ros/panda_mpc/manifest.l /home/zheng/catkin_ws/devel/share/roseus/ros/panda_mpc/manifest.l
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/roseus/ros/panda_mpc/srv/UpdateTrajectoryNextPoint.l /home/zheng/catkin_ws/devel/share/roseus/ros/panda_mpc/srv/UpdateTrajectoryNextPoint.l
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/roseus/ros/panda_mpc/srv/UI.l /home/zheng/catkin_ws/devel/share/roseus/ros/panda_mpc/srv/UI.l
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/roseus/ros/panda_mpc/msg/trajectoryMsg.l /home/zheng/catkin_ws/devel/share/roseus/ros/panda_mpc/msg/trajectoryMsg.l
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/roseus/ros/panda_mpc/msg/JointTorqueComparison.l /home/zheng/catkin_ws/devel/share/roseus/ros/panda_mpc/msg/JointTorqueComparison.l
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/roseus/ros/panda_mpc/msg/PandaRunMsg.l /home/zheng/catkin_ws/devel/share/roseus/ros/panda_mpc/msg/PandaRunMsg.l
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/panda_mpc/cmake/panda_mpcConfig-version.cmake /home/zheng/catkin_ws/devel/share/panda_mpc/cmake/panda_mpcConfig-version.cmake

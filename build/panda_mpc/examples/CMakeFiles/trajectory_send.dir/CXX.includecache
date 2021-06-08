@@ -101,6 +101,8 @@ ros/builtin_message_traits.h
 -
 ros/message_operations.h
 -
+geometry_msgs/Vector3.h
+-
 geometry_msgs/Twist.h
 -
 
@@ -118,6 +120,28 @@ ros/serialization.h
 ros/builtin_message_traits.h
 -
 ros/message_operations.h
+-
+
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryMsg.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+geometry_msgs/Vector3.h
+-
+geometry_msgs/Twist.h
 -
 
 /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/PublishTraj.h
@@ -233,6 +257,8 @@ ros/node_handle.h
 -
 panda_mpc/UpdateTrajectoryNextPoint.h
 -
+panda_mpc/trajectoryMsg.h
+-
 ros/time.h
 /home/zheng/catkin_ws/src/panda_mpc/examples/ros/time.h
 geometry_msgs/PoseStamped.h
@@ -243,8 +269,10 @@ planning/traj_generation.hpp
 -
 robot/robot_mpc_model.h
 -
+sensor_msgs/JointState.h
+-
 
-/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp
+/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp
 memory
 -
 string
@@ -387,7 +415,7 @@ franka/robot.h
 -
 franka/robot_state.h
 -
-controller/controller.hpp
+controller/vel_controller.hpp
 -
 
 /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h

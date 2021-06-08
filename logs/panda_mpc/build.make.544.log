@@ -1,0 +1,44 @@
+[ 12%] Built target panda_mpc_gencfg
+[ 12%] Built target sensor_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target panda_mpc[0m
+[ 12%] Built target geometry_msgs_generate_messages_eus
+[ 12%] Built target _panda_mpc_generate_messages_check_deps_UI
+[ 12%] Built target _panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint
+[ 12%] Built target std_msgs_generate_messages_eus
+[ 12%] Built target geometry_msgs_generate_messages_py
+[ 12%] Built target _panda_mpc_generate_messages_check_deps_PandaRunMsg
+[ 12%] Built target std_msgs_generate_messages_py
+[ 12%] Built target sensor_msgs_generate_messages_py
+[ 12%] Built target _panda_mpc_generate_messages_check_deps_trajectoryMsg
+[ 12%] Built target sensor_msgs_generate_messages_lisp
+[ 12%] Built target geometry_msgs_generate_messages_lisp
+[ 12%] Built target std_msgs_generate_messages_nodejs
+[ 12%] Built target std_msgs_generate_messages_lisp
+[ 12%] Built target sensor_msgs_generate_messages_nodejs
+[ 12%] Built target sensor_msgs_generate_messages_cpp
+[ 12%] Built target geometry_msgs_generate_messages_cpp
+[ 12%] Built target geometry_msgs_generate_messages_nodejs
+[ 12%] Built target std_msgs_generate_messages_cpp
+[ 25%] Built target panda_mpc_generate_messages_eus
+[ 40%] Built target panda_mpc_generate_messages_py
+[ 50%] Built target panda_mpc_generate_messages_nodejs
+[ 60%] Built target panda_mpc_generate_messages_lisp
+[ 62%] [32mBuilding CXX object CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o[0m
+[ 72%] Built target panda_mpc_generate_messages_cpp
+[ 75%] [32mBuilding CXX object CMakeFiles/panda_mpc.dir/src/controller.cpp.o[0m
+[ 75%] Built target panda_mpc_generate_messages
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[KEigen::VectorXd Controller::Controller::Update(const VectorXd&, const VectorXd&, const ros::Duration&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:161:30:[m[K [01;31m[Kerror: [m[K'[01m[Ktime_dt[m[K' was not declared in this scope
+     double horizon_dt = 15 * [01;31m[Ktime_dt[m[K;
+                              [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:161:30:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Ktime_t[m[K'
+     double horizon_dt = 15 * [01;36m[Ktime_dt[m[K;
+                              [01;36m[K^~~~~~~[m[K
+                              [32m[Ktime_t[m[K
+CMakeFiles/panda_mpc.dir/build.make:230: recipe for target 'CMakeFiles/panda_mpc.dir/src/controller.cpp.o' failed
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+CMakeFiles/Makefile2:67: recipe for target 'CMakeFiles/panda_mpc.dir/all' failed
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+Makefile:140: recipe for target 'all' failed
+make: *** [all] Error 2

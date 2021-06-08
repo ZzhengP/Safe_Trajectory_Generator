@@ -40,6 +40,7 @@ link_directories(${GAZEBO_LIBRARY_DIRS})
 add_message_files(
   FILES
   PandaRunMsg.msg
+  trajectoryMsg.msg
 )
 
 add_service_files(

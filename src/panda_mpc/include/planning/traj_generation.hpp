@@ -49,7 +49,7 @@ public:
     q_init_ = q_init;
     qd_init_.resize(dof_);
     qd_init_ = qd_init;
-
+    dt_ = 0.01;
 
     node_handle.getParam("/panda_mpc/N_", N_);
     node_handle.getParam("/panda_mpc/dt_", dt_);

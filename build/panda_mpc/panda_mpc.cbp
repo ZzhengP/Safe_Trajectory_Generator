@@ -877,6 +877,16 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="_panda_mpc_generate_messages_check_deps_trajectoryMsg">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 _panda_mpc_generate_messages_check_deps_trajectoryMsg"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="std_msgs_generate_messages_eus">
 				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
 				<Option type="4"/>

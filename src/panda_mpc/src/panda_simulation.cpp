@@ -112,6 +112,10 @@ namespace gazebo
         if (!node_handle.getParam("/panda_mpc/control_level", control_level)) {
             ROS_ERROR_STREAM("Could not read parameter control_level");
         }
+        if (control_level == "position")
+        {
+            ROS_WARN_STREAM("position controlloed robot");
+        }
         if (control_level == "velocity")
         {
              ROS_WARN_STREAM("velocity controlled robot");
@@ -297,6 +301,7 @@ namespace gazebo
     {
         //ROS_INFO_STREAM("Gazebo world starting update ");
         period = ros::Duration(world_->Physics()->GetMaxStepSize());
+
         brakes_ = false;
         model_->SetEnabled(!brakes_); // Enable the robot when brakes are off
 
@@ -315,6 +320,13 @@ namespace gazebo
         gravity_vector_[0] = g[0];
         gravity_vector_[1] = g[1];
         gravity_vector_[2] = g[2];
+
+        if (control_level == "position"){
+
+          for (int i=0 ; i < ndof_ ; i++){
+            joints_[i]->SetPosition(0, joint_command_[i]);
+          }
+        }
 
         if (control_level == "velocity")
         {

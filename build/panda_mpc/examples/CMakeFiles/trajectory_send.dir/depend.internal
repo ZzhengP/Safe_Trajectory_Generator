@@ -9,6 +9,7 @@ examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPoint.h
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointRequest.h
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointResponse.h
+ /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryMsg.h
  /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/PublishTraj.h
  /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/TrajProperties.h
  /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/UpdateTrajectory.h
@@ -17,7 +18,7 @@ examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o
  /home/zheng/catkin_ws/src/franka_ros/franka_hw/include/franka_hw/franka_model_interface.h
  /home/zheng/catkin_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h
  /home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp
- /home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp
+ /home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp
  /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp
  /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp
  /home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp

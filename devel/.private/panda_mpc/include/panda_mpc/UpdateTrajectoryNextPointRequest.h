@@ -15,6 +15,7 @@
 #include <ros/builtin_message_traits.h>
 #include <ros/message_operations.h>
 
+#include <geometry_msgs/Vector3.h>
 #include <geometry_msgs/Twist.h>
 
 namespace panda_mpc
@@ -26,21 +27,21 @@ struct UpdateTrajectoryNextPointRequest_
 
   UpdateTrajectoryNextPointRequest_()
     : next_point()
-    , vel(0.0)  {
+    , next_vel()  {
     }
   UpdateTrajectoryNextPointRequest_(const ContainerAllocator& _alloc)
     : next_point(_alloc)
-    , vel(0.0)  {
+    , next_vel(_alloc)  {
   (void)_alloc;
     }
 
 
 
-   typedef  ::geometry_msgs::Twist_<ContainerAllocator>  _next_point_type;
+   typedef  ::geometry_msgs::Vector3_<ContainerAllocator>  _next_point_type;
   _next_point_type next_point;
 
-   typedef double _vel_type;
-  _vel_type vel;
+   typedef  ::geometry_msgs::Twist_<ContainerAllocator>  _next_vel_type;
+  _next_vel_type next_vel;
 
 
 
@@ -72,7 +73,7 @@ template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::panda_mpc::UpdateTrajectoryNextPointRequest_<ContainerAllocator1> & lhs, const ::panda_mpc::UpdateTrajectoryNextPointRequest_<ContainerAllocator2> & rhs)
 {
   return lhs.next_point == rhs.next_point &&
-    lhs.vel == rhs.vel;
+    lhs.next_vel == rhs.next_vel;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -129,12 +130,12 @@ struct MD5Sum< ::panda_mpc::UpdateTrajectoryNextPointRequest_<ContainerAllocator
 {
   static const char* value()
   {
-    return "ebedbfa7aeefcaa4b3244deec8feed75";
+    return "2685428bccce90adb95a24e6e6228b8f";
   }
 
   static const char* value(const ::panda_mpc::UpdateTrajectoryNextPointRequest_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0xebedbfa7aeefcaa4ULL;
-  static const uint64_t static_value2 = 0xb3244deec8feed75ULL;
+  static const uint64_t static_value1 = 0x2685428bccce90adULL;
+  static const uint64_t static_value2 = 0xb95a24e6e6228b8fULL;
 };
 
 template<class ContainerAllocator>
@@ -153,14 +154,8 @@ struct Definition< ::panda_mpc::UpdateTrajectoryNextPointRequest_<ContainerAlloc
 {
   static const char* value()
   {
-    return "geometry_msgs/Twist next_point\n"
-"float64 vel\n"
-"\n"
-"================================================================================\n"
-"MSG: geometry_msgs/Twist\n"
-"# This expresses velocity in free space broken into its linear and angular parts.\n"
-"Vector3  linear\n"
-"Vector3  angular\n"
+    return "geometry_msgs/Vector3 next_point\n"
+"geometry_msgs/Twist next_vel\n"
 "\n"
 "================================================================================\n"
 "MSG: geometry_msgs/Vector3\n"
@@ -174,6 +169,11 @@ struct Definition< ::panda_mpc::UpdateTrajectoryNextPointRequest_<ContainerAlloc
 "float64 x\n"
 "float64 y\n"
 "float64 z\n"
+"================================================================================\n"
+"MSG: geometry_msgs/Twist\n"
+"# This expresses velocity in free space broken into its linear and angular parts.\n"
+"Vector3  linear\n"
+"Vector3  angular\n"
 ;
   }
 
@@ -193,7 +193,7 @@ namespace serialization
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
       stream.next(m.next_point);
-      stream.next(m.vel);
+      stream.next(m.next_vel);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -214,9 +214,10 @@ struct Printer< ::panda_mpc::UpdateTrajectoryNextPointRequest_<ContainerAllocato
   {
     s << indent << "next_point: ";
     s << std::endl;
-    Printer< ::geometry_msgs::Twist_<ContainerAllocator> >::stream(s, indent + "  ", v.next_point);
-    s << indent << "vel: ";
-    Printer<double>::stream(s, indent + "  ", v.vel);
+    Printer< ::geometry_msgs::Vector3_<ContainerAllocator> >::stream(s, indent + "  ", v.next_point);
+    s << indent << "next_vel: ";
+    s << std::endl;
+    Printer< ::geometry_msgs::Twist_<ContainerAllocator> >::stream(s, indent + "  ", v.next_vel);
   }
 };
 

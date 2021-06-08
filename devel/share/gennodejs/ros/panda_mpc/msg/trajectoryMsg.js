@@ -1,0 +1,1 @@
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/gennodejs/ros/panda_mpc/msg/trajectoryMsg.js

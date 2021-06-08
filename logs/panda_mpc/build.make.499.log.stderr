@@ -1,0 +1,15 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:371:8:[m[K [01;31m[Kerror: [m[K'[01m[Kcout[m[K' in namespace '[01m[Kstd[m[K' does not name a type
+   std::[01;31m[Kcout[m[K << "Received next point computing traj and publishing" << std::endl;
+        [01;31m[K^~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:9:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/usr/include/c++/7/iostream:61:18:[m[K [01;36m[Knote: [m[K'[01m[Kstd::cout[m[K' declared here
+   extern ostream [01;36m[Kcout[m[K;  /// Linked to standard output
+                  [01;36m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:375:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before '[01m[K}[m[K' token
+ [01;31m[K}[m[K
+ [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

@@ -22,17 +22,17 @@
 
 (defclass panda_mpc::UpdateTrajectoryNextPointRequest
   :super ros::object
-  :slots (_next_point _vel ))
+  :slots (_next_point _next_vel ))
 
 (defmethod panda_mpc::UpdateTrajectoryNextPointRequest
   (:init
    (&key
-    ((:next_point __next_point) (instance geometry_msgs::Twist :init))
-    ((:vel __vel) 0.0)
+    ((:next_point __next_point) (instance geometry_msgs::Vector3 :init))
+    ((:next_vel __next_vel) (instance geometry_msgs::Twist :init))
     )
    (send-super :init)
    (setq _next_point __next_point)
-   (setq _vel (float __vel))
+   (setq _next_vel __next_vel)
    self)
   (:next_point
    (&rest __next_point)
@@ -41,33 +41,37 @@
      (progn
        (if __next_point (setq _next_point (car __next_point)))
        _next_point)))
-  (:vel
-   (&optional __vel)
-   (if __vel (setq _vel __vel)) _vel)
+  (:next_vel
+   (&rest __next_vel)
+   (if (keywordp (car __next_vel))
+       (send* _next_vel __next_vel)
+     (progn
+       (if __next_vel (setq _next_vel (car __next_vel)))
+       _next_vel)))
   (:serialization-length
    ()
    (+
-    ;; geometry_msgs/Twist _next_point
+    ;; geometry_msgs/Vector3 _next_point
     (send _next_point :serialization-length)
-    ;; float64 _vel
-    8
+    ;; geometry_msgs/Twist _next_vel
+    (send _next_vel :serialization-length)
     ))
   (:serialize
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
-     ;; geometry_msgs/Twist _next_point
+     ;; geometry_msgs/Vector3 _next_point
        (send _next_point :serialize s)
-     ;; float64 _vel
-       (sys::poke _vel (send s :buffer) (send s :count) :double) (incf (stream-count s) 8)
+     ;; geometry_msgs/Twist _next_vel
+       (send _next_vel :serialize s)
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
-   ;; geometry_msgs/Twist _next_point
+   ;; geometry_msgs/Vector3 _next_point
      (send _next_point :deserialize buf ptr-) (incf ptr- (send _next_point :serialization-length))
-   ;; float64 _vel
-     (setq _vel (sys::peek buf ptr- :double)) (incf ptr- 8)
+   ;; geometry_msgs/Twist _next_vel
+     (send _next_vel :deserialize buf ptr-) (incf ptr- (send _next_vel :serialization-length))
    ;;
    self)
   )
@@ -113,7 +117,7 @@
   :super ros::object
   :slots ())
 
-(setf (get panda_mpc::UpdateTrajectoryNextPoint :md5sum-) "2134cf5914ee56390a99d4f1731a484b")
+(setf (get panda_mpc::UpdateTrajectoryNextPoint :md5sum-) "07d2a1fe5433c3b25d4df2bdf8fc4f1d")
 (setf (get panda_mpc::UpdateTrajectoryNextPoint :datatype-) "panda_mpc/UpdateTrajectoryNextPoint")
 (setf (get panda_mpc::UpdateTrajectoryNextPoint :request) panda_mpc::UpdateTrajectoryNextPointRequest)
 (setf (get panda_mpc::UpdateTrajectoryNextPoint :response) panda_mpc::UpdateTrajectoryNextPointResponse)
@@ -121,17 +125,11 @@
 (defmethod panda_mpc::UpdateTrajectoryNextPointRequest
   (:response () (instance panda_mpc::UpdateTrajectoryNextPointResponse :init)))
 
-(setf (get panda_mpc::UpdateTrajectoryNextPointRequest :md5sum-) "2134cf5914ee56390a99d4f1731a484b")
+(setf (get panda_mpc::UpdateTrajectoryNextPointRequest :md5sum-) "07d2a1fe5433c3b25d4df2bdf8fc4f1d")
 (setf (get panda_mpc::UpdateTrajectoryNextPointRequest :datatype-) "panda_mpc/UpdateTrajectoryNextPointRequest")
 (setf (get panda_mpc::UpdateTrajectoryNextPointRequest :definition-)
-      "geometry_msgs/Twist next_point
-float64 vel
-
-================================================================================
-MSG: geometry_msgs/Twist
-# This expresses velocity in free space broken into its linear and angular parts.
-Vector3  linear
-Vector3  angular
+      "geometry_msgs/Vector3 next_point
+geometry_msgs/Twist next_vel
 
 ================================================================================
 MSG: geometry_msgs/Vector3
@@ -144,22 +142,22 @@ MSG: geometry_msgs/Vector3
 
 float64 x
 float64 y
+float64 z
+================================================================================
+MSG: geometry_msgs/Twist
+# This expresses velocity in free space broken into its linear and angular parts.
+Vector3  linear
+Vector3  angular
 ---
 bool success
 
 ")
 
-(setf (get panda_mpc::UpdateTrajectoryNextPointResponse :md5sum-) "2134cf5914ee56390a99d4f1731a484b")
+(setf (get panda_mpc::UpdateTrajectoryNextPointResponse :md5sum-) "07d2a1fe5433c3b25d4df2bdf8fc4f1d")
 (setf (get panda_mpc::UpdateTrajectoryNextPointResponse :datatype-) "panda_mpc/UpdateTrajectoryNextPointResponse")
 (setf (get panda_mpc::UpdateTrajectoryNextPointResponse :definition-)
-      "geometry_msgs/Twist next_point
-float64 vel
-
-================================================================================
-MSG: geometry_msgs/Twist
-# This expresses velocity in free space broken into its linear and angular parts.
-Vector3  linear
-Vector3  angular
+      "geometry_msgs/Vector3 next_point
+geometry_msgs/Twist next_vel
 
 ================================================================================
 MSG: geometry_msgs/Vector3
@@ -172,6 +170,12 @@ MSG: geometry_msgs/Vector3
 
 float64 x
 float64 y
+float64 z
+================================================================================
+MSG: geometry_msgs/Twist
+# This expresses velocity in free space broken into its linear and angular parts.
+Vector3  linear
+Vector3  angular
 ---
 bool success
 
@@ -179,6 +183,6 @@ bool success
 
 
 
-(provide :panda_mpc/UpdateTrajectoryNextPoint "2134cf5914ee56390a99d4f1731a484b")
+(provide :panda_mpc/UpdateTrajectoryNextPoint "07d2a1fe5433c3b25d4df2bdf8fc4f1d")
 
 

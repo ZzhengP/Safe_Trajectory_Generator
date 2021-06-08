@@ -1065,6 +1065,19 @@ sensor_msgs_generate_messages_py/fast:
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 #=============================================================================
+# Target rules for targets named _panda_mpc_generate_messages_check_deps_trajectoryMsg
+
+# Build rule for target.
+_panda_mpc_generate_messages_check_deps_trajectoryMsg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _panda_mpc_generate_messages_check_deps_trajectoryMsg
+.PHONY : _panda_mpc_generate_messages_check_deps_trajectoryMsg
+
+# fast build rule for target.
+_panda_mpc_generate_messages_check_deps_trajectoryMsg/fast:
+	$(MAKE) -f CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryMsg.dir/build.make CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryMsg.dir/build
+.PHONY : _panda_mpc_generate_messages_check_deps_trajectoryMsg/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -2026,6 +2039,7 @@ help:
 	@echo "... panda_mpc_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... edit_cache"
+	@echo "... _panda_mpc_generate_messages_check_deps_trajectoryMsg"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... download_extra_data"
 	@echo "... gazebo_msgs_generate_messages_py"

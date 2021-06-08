@@ -27,7 +27,7 @@
 #include <franka/robot.h>
 #include <franka/robot_state.h>
 
-#include <controller/controller.hpp>
+#include <controller/vel_controller.hpp>
 namespace panda_mpc{
 
 

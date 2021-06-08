@@ -129,7 +129,10 @@ file(INSTALL DESTINATION "/home/zheng/catkin_ws/install" TYPE FILE FILES "/home/
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_mpc/msg" TYPE FILE FILES "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/panda_mpc/msg" TYPE FILE FILES
+    "/home/zheng/catkin_ws/src/panda_mpc/msg/PandaRunMsg.msg"
+    "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryMsg.msg"
+    )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
