@@ -1,0 +1,42 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:[m[K In member function '[01m[Kbool planning::plane::update(const std::vector<Eigen::Matrix<double, -1, -1> >&, const std::vector<Eigen::Matrix<double, -1, -1> >&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:116:53:[m[K [01;31m[Kerror: [m[Kno match for '[01m[Koperator=[m[K' (operand types are '[01m[Kstd::vector<Eigen::Matrix<double, -1, -1> >[m[K' and '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, -1> >::ColXpr {aka Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, 1, true>}[m[K')
+          plane_precedent_ = plane_location_[0].col(k[01;31m[K)[m[K;
+                                                     [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/7/vector:69:0[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/math_fwd.hpp:26[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:15[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane.h:5[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/vector.tcc:179:5:[m[K [01;36m[Knote: [m[Kcandidate: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(const std::vector<_Tp, _Alloc>&) [with _Tp = Eigen::Matrix<double, -1, -1>; _Alloc = std::allocator<Eigen::Matrix<double, -1, -1> >]
+     [01;36m[Kvector<_Tp, _Alloc>[m[K::
+     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/vector.tcc:179:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, -1> >::ColXpr {aka Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, 1, true>}[m[K' to '[01m[Kconst std::vector<Eigen::Matrix<double, -1, -1> >&[m[K'
+In file included from [01m[K/usr/include/c++/7/vector:64:0[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/math_fwd.hpp:26[m[K,
+                 from [01m[K/usr/include/boost/math/special_functions/round.hpp:15[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/time.h:58[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:38[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane.h:5[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/stl_vector.h:461:7:[m[K [01;36m[Knote: [m[Kcandidate: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::vector<_Tp, _Alloc>&&) [with _Tp = Eigen::Matrix<double, -1, -1>; _Alloc = std::allocator<Eigen::Matrix<double, -1, -1> >]
+       [01;36m[Koperator[m[K=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_vector.h:461:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, -1> >::ColXpr {aka Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, 1, true>}[m[K' to '[01m[Kstd::vector<Eigen::Matrix<double, -1, -1> >&&[m[K'
+[01m[K/usr/include/c++/7/bits/stl_vector.h:482:7:[m[K [01;36m[Knote: [m[Kcandidate: std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::initializer_list<_Tp>) [with _Tp = Eigen::Matrix<double, -1, -1>; _Alloc = std::allocator<Eigen::Matrix<double, -1, -1> >]
+       [01;36m[Koperator[m[K=(initializer_list<value_type> __l)
+       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/stl_vector.h:482:7:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, -1> >::ColXpr {aka Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, 1, true>}[m[K' to '[01m[Kstd::initializer_list<Eigen::Matrix<double, -1, -1> >[m[K'
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:119:127:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[Kplanning::planeSolver::update(std::vector<Eigen::Matrix<double, -1, -1> >&, Eigen::DenseBase<Eigen::Matrix<double, -1, -1> >::BlockXpr, Eigen::DenseBase<Eigen::Matrix<double, -1, -1> >::BlockXpr)[m[K'
+                               obstacle_vertices_horizon_[0].block(0,k*nbr_of_obstacle_vertices_,3,2*nbr_of_obstacle_vertices_)[01;31m[K)[m[K;
+                                                                                                                               [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane.h:10:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane_solver.h:34:21:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::VectorXd planning::planeSolver::update(Eigen::VectorXd, Eigen::MatrixXd, Eigen::MatrixXd)
+     Eigen::VectorXd [01;36m[Kupdate[m[K(Eigen::VectorXd plane_precedent, Eigen::MatrixXd robotVertice,
+                     [01;36m[K^~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane_solver.h:34:21:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[Kstd::vector<Eigen::Matrix<double, -1, -1> >[m[K' to '[01m[KEigen::VectorXd {aka Eigen::Matrix<double, -1, 1>}[m[K'
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

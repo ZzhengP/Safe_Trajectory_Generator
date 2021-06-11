@@ -1,0 +1,16 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:[m[K In member function '[01m[Kbool planning::plane::update(const std::vector<Eigen::Matrix<double, -1, -1> >&, const std::vector<Eigen::Matrix<double, -1, -1> >&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:111:24:[m[K [01;31m[Kerror: [m[K'[01m[Kclass planning::planeSolver[m[K' has no member named '[01m[KsetCost[m[K'
+          plane_solver_.[01;31m[KsetCost[m[K(plane_precedent_[0].col(k));
+                        [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:112:24:[m[K [01;31m[Kerror: [m[K'[01m[Kclass planning::planeSolver[m[K' has no member named '[01m[KsetCstMatrix[m[K'
+          plane_solver_.[01;31m[KsetCstMatrix[m[K(robot_vertices_horizon_[0].block(0,k,3,2*nbr_of_robot_vertices_),
+                        [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:116:42:[m[K [01;31m[Kerror: [m[K'[01m[Kclass planning::planeSolver[m[K' has no member named '[01m[Ksolve[m[K'
+          is_plane_solved = plane_solver_.[01;31m[Ksolve[m[K();
+                                          [01;31m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:117:52:[m[K [01;31m[Kerror: [m[K'[01m[Kclass planning::planeSolver[m[K' has no member named '[01m[KgetSolution[m[K'
+          plane_location_[0].col(k) = plane_solver_.[01;31m[KgetSolution[m[K();
+                                                    [01;31m[K^~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

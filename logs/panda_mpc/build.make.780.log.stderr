@@ -1,0 +1,33 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:[m[K In member function '[01m[Kvoid planning::planeSolver::updateConstraintMatrix(Eigen::MatrixXd, Eigen::MatrixXd, Eigen::MatrixXd)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:164:17:[m[K [01;31m[Kerror: [m[K'[01m[KrobotPartielVertices[m[K' was not declared in this scope
+     int rcols = [01;31m[KrobotPartielVertices[m[K.cols(), pcols = obsPartielVertices.cols();
+                 [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:164:17:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[KrobotVertice[m[K'
+     int rcols = [01;36m[KrobotPartielVertices[m[K.cols(), pcols = obsPartielVertices.cols();
+                 [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+                 [32m[KrobotVertice[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:166:23:[m[K [01;31m[Kerror: [m[K'[01m[Kpcols[m[K' was not declared in this scope
+     A_.resize(rcols + [01;31m[Kpcols[m[K +3, 5);
+                       [01;31m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:166:23:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Krcols[m[K'
+     A_.resize(rcols + [01;36m[Kpcols[m[K +3, 5);
+                       [01;36m[K^~~~~[m[K
+                       [32m[Krcols[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:191:36:[m[K [01;31m[Kerror: [m[K'[01m[KobsPartielVertices[m[K' was not declared in this scope
+         A_.block(i+rcols,0,1,5) << [01;31m[KobsPartielVertices[m[K.block(0,i,3,1).transpose(), -1, 1;
+                                    [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:191:36:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[KobsVertice[m[K'
+         A_.block(i+rcols,0,1,5) << [01;36m[KobsPartielVertices[m[K.block(0,i,3,1).transpose(), -1, 1;
+                                    [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+                                    [32m[KobsVertice[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:196:39:[m[K [01;31m[Kerror: [m[K'[01m[KdataPlanePrecedent[m[K' was not declared in this scope
+     A_.block(rcols + pcols,0,1,5) <<  [01;31m[KdataPlanePrecedent[m[K(0),dataPlanePrecedent(1), dataPlanePrecedent(2),0,0 ;
+                                       [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:196:39:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Kplane_precedent[m[K'
+     A_.block(rcols + pcols,0,1,5) <<  [01;36m[KdataPlanePrecedent[m[K(0),dataPlanePrecedent(1), dataPlanePrecedent(2),0,0 ;
+                                       [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+                                       [32m[Kplane_precedent[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/plane_solver.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

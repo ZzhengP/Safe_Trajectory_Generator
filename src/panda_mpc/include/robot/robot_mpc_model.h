@@ -147,7 +147,7 @@ public:
   void computeJacobianHorizon(const Eigen::VectorXd & q_horizon);
 
   // Update MPC parameters
-  void update(Eigen::VectorXd state, Eigen::VectorXd solution,const Eigen::VectorXd &q_horizon);
+  void update(Eigen::VectorXd state, Eigen::VectorXd solution);
 
 
   inline Eigen::MatrixXd matPow(int N, const Eigen::MatrixXd& A){

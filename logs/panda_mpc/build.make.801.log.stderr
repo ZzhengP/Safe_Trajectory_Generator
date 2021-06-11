@@ -1,0 +1,19 @@
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o: In function `PlaneSolver::PlaneSolver(int, double)':
+/usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:892: multiple definition of `PlaneSolver::PlaneSolver(int, double)'
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver.cpp.o:/usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:892: first defined here
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o: In function `PlaneSolver::PlaneSolver(int, double)':
+/usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:892: multiple definition of `PlaneSolver::PlaneSolver(int, double)'
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver.cpp.o:/usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:892: first defined here
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o: In function `std::ostream& Eigen::internal::print_matrix<Eigen::Matrix<double, -1, 1, 0, -1, 1> >(std::ostream&, Eigen::Matrix<double, -1, 1, 0, -1, 1> const&, Eigen::IOFormat const&)':
+/usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:218: multiple definition of `PlaneSolver::setCost(Eigen::Matrix<double, -1, 1, 0, -1, 1> const&)'
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver.cpp.o:/usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:218: first defined here
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o: In function `PlaneSolver::setCstMatrix(Eigen::Matrix<double, -1, -1, 0, -1, -1> const&, Eigen::Matrix<double, -1, -1, 0, -1, -1> const&, Eigen::Matrix<double, -1, -1, 0, -1, -1> const&)':
+/usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:1222: multiple definition of `PlaneSolver::setCstMatrix(Eigen::Matrix<double, -1, -1, 0, -1, -1> const&, Eigen::Matrix<double, -1, -1, 0, -1, -1> const&, Eigen::Matrix<double, -1, -1, 0, -1, -1> const&)'
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver.cpp.o:/usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:1222: first defined here
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o: In function `PlaneSolver::solve()':
+/usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:175: multiple definition of `PlaneSolver::solve()'
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver.cpp.o:/usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:175: first defined here
+collect2: error: ld returned 1 exit status
+make[2]: *** [/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

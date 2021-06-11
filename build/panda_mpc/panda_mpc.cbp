@@ -5,7 +5,7 @@
 		<Option title="panda_mpc"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\src\;CMake Files\..\..\..\..\..\usr\src\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googlemock\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\cmake\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\gazebo\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\simbody\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\sdformat\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-math4\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-cmake0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-cmake0\cmake0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-transport4\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-msgs1\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-common1\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-fuel_tools1\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\jsoncpp\;CMake Files\..\..\..\..\..\usr\share\;CMake Files\..\..\..\..\..\usr\share\OGRE\;CMake Files\..\..\..\..\..\usr\share\OGRE\cmake\;CMake Files\..\..\..\..\..\usr\share\OGRE\cmake\modules\;CMake Files\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\opt\ros\melodic\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\em\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\cpp_common\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\cpp_common\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_runtime\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_runtime\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_serialization\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_traits\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rostime\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rostime\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\xmlrpcpp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospy\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospy\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_ros\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_ros\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roslib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roslib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospack\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospack\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_srvs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_srvs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_filters\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_filters\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\sensor_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_ros\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_ros\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genmsg\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genmsg\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gencpp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gencpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geneus\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geneus\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genlisp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genlisp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gennodejs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gennodejs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genpy\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genpy\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_generation\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_generation\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_py\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_py\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\dynamic_reconfigure\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\dynamic_reconfigure\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\trajectory_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\trajectory_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\eigen_conversions\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\eigen_conversions\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\nav_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\nav_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\trac_ik_lib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\trac_ik_lib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_parser\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_parser\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\urdf\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\urdf\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\pluginlib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\pluginlib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\class_loader\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\class_loader\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole_bridge\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole_bridge\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\controller_interface\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\controller_interface\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\hardware_interface\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\hardware_interface\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\combined_robot_hw\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\combined_robot_hw\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\joint_limits_interface\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\joint_limits_interface\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\control_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\control_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf_conversions\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf_conversions\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_conversions\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_conversions\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\realtime_tools\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\realtime_tools\cmake\;CMake Files\..\..\..\libfranka\;CMake Files\..\..\..\libfranka\build\;CMake Files\..\..\build\;CMake Files\..\..\build\panda_mpc\;CMake Files\..\..\build\panda_mpc\catkin\;CMake Files\..\..\build\panda_mpc\catkin\catkin_generated\;CMake Files\..\..\build\panda_mpc\catkin\catkin_generated\version\;CMake Files\..\..\build\panda_mpc\catkin_generated\;CMake Files\..\..\build\panda_mpc\catkin_generated\installspace\;CMake Files\..\..\build\panda_mpc\cmake\;CMake Files\..\..\devel\;CMake Files\..\..\devel\share\;CMake Files\..\..\devel\share\qpOASES\;CMake Files\..\..\devel\share\qpOASES\cmake\;CMake Files\..\..\devel\share\panda_traj\;CMake Files\..\..\devel\share\panda_traj\cmake\;CMake Files\..\..\devel\share\franka_hw\;CMake Files\..\..\devel\share\franka_hw\cmake\;CMake Files\..\..\devel\share\franka_msgs\;CMake Files\..\..\devel\share\franka_msgs\cmake\;CMake Files\..\..\devel\share\franka_gripper\;CMake Files\..\..\devel\share\franka_gripper\cmake\;CMake Files\..\..\devel\.private\;CMake Files\..\..\devel\.private\panda_mpc\;CMake Files\..\..\devel\.private\panda_mpc\share\;CMake Files\..\..\devel\.private\panda_mpc\share\panda_mpc\;CMake Files\..\..\devel\.private\panda_mpc\share\panda_mpc\cmake\;CMake Files\examples\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\src\;CMake Files\..\..\..\..\..\usr\src\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googlemock\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\;CMake Files\..\..\..\..\..\usr\src\googletest\googletest\cmake\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\usr\lib\cmake\eigen3\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\gazebo\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\simbody\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\sdformat\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-math4\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-cmake0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-cmake0\cmake0\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-transport4\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-msgs1\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-common1\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\ignition-fuel_tools1\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\jsoncpp\;CMake Files\..\..\..\..\..\usr\share\;CMake Files\..\..\..\..\..\usr\share\OGRE\;CMake Files\..\..\..\..\..\usr\share\OGRE\cmake\;CMake Files\..\..\..\..\..\usr\share\OGRE\cmake\modules\;CMake Files\..\..\..\..\..\opt\;CMake Files\..\..\..\..\..\opt\ros\;CMake Files\..\..\..\..\..\opt\ros\melodic\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\platform\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\test\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\tools\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\templates\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\catkin\cmake\em\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\cpp_common\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\cpp_common\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_runtime\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_runtime\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_serialization\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_serialization\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_traits\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roscpp_traits\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rostime\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rostime\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\xmlrpcpp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\xmlrpcpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospy\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospy\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_ros\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_ros\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roslib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\roslib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospack\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rospack\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geometry_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_srvs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\std_srvs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_filters\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_filters\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\sensor_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\sensor_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_ros\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_ros\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\actionlib_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genmsg\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genmsg\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gencpp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gencpp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geneus\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\geneus\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genlisp\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genlisp\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gennodejs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gennodejs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genpy\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\genpy\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosgraph\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_generation\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\message_generation\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_py\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf2_py\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\dynamic_reconfigure\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\dynamic_reconfigure\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\gazebo_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\trajectory_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\trajectory_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\eigen_conversions\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\eigen_conversions\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\nav_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\nav_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\trac_ik_lib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\trac_ik_lib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_parser\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_parser\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\urdf\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\urdf\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\pluginlib\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\pluginlib\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\class_loader\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\class_loader\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole_bridge\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rosconsole_bridge\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\controller_interface\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\controller_interface\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\hardware_interface\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\hardware_interface\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\combined_robot_hw\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\combined_robot_hw\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\joint_limits_interface\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\joint_limits_interface\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\control_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\control_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf_conversions\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\tf_conversions\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_conversions\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\kdl_conversions\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\realtime_tools\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\realtime_tools\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rviz_visual_tools\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\rviz_visual_tools\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\graph_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\graph_msgs\cmake\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\visualization_msgs\;CMake Files\..\..\..\..\..\opt\ros\melodic\share\visualization_msgs\cmake\;CMake Files\..\..\..\libfranka\;CMake Files\..\..\..\libfranka\build\;CMake Files\..\..\build\;CMake Files\..\..\build\panda_mpc\;CMake Files\..\..\build\panda_mpc\catkin\;CMake Files\..\..\build\panda_mpc\catkin\catkin_generated\;CMake Files\..\..\build\panda_mpc\catkin\catkin_generated\version\;CMake Files\..\..\build\panda_mpc\catkin_generated\;CMake Files\..\..\build\panda_mpc\catkin_generated\installspace\;CMake Files\..\..\build\panda_mpc\cmake\;CMake Files\..\..\devel\;CMake Files\..\..\devel\share\;CMake Files\..\..\devel\share\qpOASES\;CMake Files\..\..\devel\share\qpOASES\cmake\;CMake Files\..\..\devel\share\panda_traj\;CMake Files\..\..\devel\share\panda_traj\cmake\;CMake Files\..\..\devel\share\franka_hw\;CMake Files\..\..\devel\share\franka_hw\cmake\;CMake Files\..\..\devel\share\franka_msgs\;CMake Files\..\..\devel\share\franka_msgs\cmake\;CMake Files\..\..\devel\share\franka_gripper\;CMake Files\..\..\devel\share\franka_gripper\cmake\;CMake Files\..\..\devel\.private\;CMake Files\..\..\devel\.private\panda_mpc\;CMake Files\..\..\devel\.private\panda_mpc\share\;CMake Files\..\..\devel\.private\panda_mpc\share\panda_mpc\;CMake Files\..\..\devel\.private\panda_mpc\share\panda_mpc\cmake\;CMake Files\examples\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
@@ -83,12 +83,12 @@
 					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
 					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/zheng/libfranka/include"/>
+					<Add directory="/usr/include/OGRE"/>
 					<Add directory="/usr/include/gazebo-9"/>
 					<Add directory="/usr/include/bullet"/>
 					<Add directory="/usr/include/simbody"/>
 					<Add directory="/usr/include/sdformat-6.0"/>
 					<Add directory="/usr/include/ignition/math4"/>
-					<Add directory="/usr/include/OGRE"/>
 					<Add directory="/usr/include/OGRE/Terrain"/>
 					<Add directory="/usr/include/OGRE/Paging"/>
 					<Add directory="/usr/include/ignition/transport4"/>
@@ -138,12 +138,12 @@
 					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
 					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/zheng/libfranka/include"/>
+					<Add directory="/usr/include/OGRE"/>
 					<Add directory="/usr/include/gazebo-9"/>
 					<Add directory="/usr/include/bullet"/>
 					<Add directory="/usr/include/simbody"/>
 					<Add directory="/usr/include/sdformat-6.0"/>
 					<Add directory="/usr/include/ignition/math4"/>
-					<Add directory="/usr/include/OGRE"/>
 					<Add directory="/usr/include/OGRE/Terrain"/>
 					<Add directory="/usr/include/OGRE/Paging"/>
 					<Add directory="/usr/include/ignition/transport4"/>
@@ -242,6 +242,56 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 panda_mpc_generate_messages"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="visualization_msgs_generate_messages_py">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 visualization_msgs_generate_messages_py"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="visualization_msgs_generate_messages_nodejs">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 visualization_msgs_generate_messages_nodejs"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="visualization_msgs_generate_messages_eus">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 visualization_msgs_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="graph_msgs_generate_messages_nodejs">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 graph_msgs_generate_messages_nodejs"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="graph_msgs_generate_messages_cpp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 graph_msgs_generate_messages_cpp"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
@@ -577,6 +627,16 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="graph_msgs_generate_messages_lisp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 graph_msgs_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="geometry_msgs_generate_messages_nodejs">
 				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
 				<Option type="4"/>
@@ -712,6 +772,16 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 rosgraph_msgs_generate_messages_cpp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="graph_msgs_generate_messages_eus">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 graph_msgs_generate_messages_eus"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
@@ -887,6 +957,16 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="visualization_msgs_generate_messages_lisp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 visualization_msgs_generate_messages_lisp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="std_msgs_generate_messages_eus">
 				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
 				<Option type="4"/>
@@ -962,6 +1042,16 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 actionlib_generate_messages_eus"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="graph_msgs_generate_messages_py">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 graph_msgs_generate_messages_py"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1082,6 +1172,16 @@
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 tf2_msgs_generate_messages_cpp"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="visualization_msgs_generate_messages_cpp">
+				<Option working_dir="/home/zheng/catkin_ws/build/panda_mpc"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 visualization_msgs_generate_messages_cpp"/>
 					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/Makefile&quot;  VERBOSE=1 clean"/>
@@ -1543,6 +1643,116 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="test_plane_solver">
+				<Option output="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/test_plane_solver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;panda_mpc&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add option="-DLIBBULLET_VERSION=2.87"/>
+					<Add option="-DLIBBULLET_VERSION_GT_282"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/zheng/libfranka/include"/>
+					<Add directory="/usr/include/OGRE"/>
+					<Add directory="/usr/include/gazebo-9"/>
+					<Add directory="/usr/include/bullet"/>
+					<Add directory="/usr/include/simbody"/>
+					<Add directory="/usr/include/sdformat-6.0"/>
+					<Add directory="/usr/include/ignition/math4"/>
+					<Add directory="/usr/include/OGRE/Terrain"/>
+					<Add directory="/usr/include/OGRE/Paging"/>
+					<Add directory="/usr/include/ignition/transport4"/>
+					<Add directory="/usr/include/ignition/msgs1"/>
+					<Add directory="/usr/include/ignition/common1"/>
+					<Add directory="/usr/include/ignition/fuel_tools1"/>
+					<Add directory="/usr/include/uuid"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 test_plane_solver"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_plane_solver/fast">
+				<Option output="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/test_plane_solver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;panda_mpc&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add option="-DLIBBULLET_VERSION=2.87"/>
+					<Add option="-DLIBBULLET_VERSION_GT_282"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/zheng/libfranka/include"/>
+					<Add directory="/usr/include/OGRE"/>
+					<Add directory="/usr/include/gazebo-9"/>
+					<Add directory="/usr/include/bullet"/>
+					<Add directory="/usr/include/simbody"/>
+					<Add directory="/usr/include/sdformat-6.0"/>
+					<Add directory="/usr/include/ignition/math4"/>
+					<Add directory="/usr/include/OGRE/Terrain"/>
+					<Add directory="/usr/include/OGRE/Paging"/>
+					<Add directory="/usr/include/ignition/transport4"/>
+					<Add directory="/usr/include/ignition/msgs1"/>
+					<Add directory="/usr/include/ignition/common1"/>
+					<Add directory="/usr/include/ignition/fuel_tools1"/>
+					<Add directory="/usr/include/uuid"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 test_plane_solver/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="trajectory_send">
 				<Option output="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/trajectory_send" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc"/>
@@ -1569,12 +1779,12 @@
 					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
 					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/zheng/libfranka/include"/>
+					<Add directory="/usr/include/OGRE"/>
 					<Add directory="/usr/include/gazebo-9"/>
 					<Add directory="/usr/include/bullet"/>
 					<Add directory="/usr/include/simbody"/>
 					<Add directory="/usr/include/sdformat-6.0"/>
 					<Add directory="/usr/include/ignition/math4"/>
-					<Add directory="/usr/include/OGRE"/>
 					<Add directory="/usr/include/OGRE/Terrain"/>
 					<Add directory="/usr/include/OGRE/Paging"/>
 					<Add directory="/usr/include/ignition/transport4"/>
@@ -1624,12 +1834,12 @@
 					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
 					<Add directory="/usr/include/eigen3"/>
 					<Add directory="/home/zheng/libfranka/include"/>
+					<Add directory="/usr/include/OGRE"/>
 					<Add directory="/usr/include/gazebo-9"/>
 					<Add directory="/usr/include/bullet"/>
 					<Add directory="/usr/include/simbody"/>
 					<Add directory="/usr/include/sdformat-6.0"/>
 					<Add directory="/usr/include/ignition/math4"/>
-					<Add directory="/usr/include/OGRE"/>
 					<Add directory="/usr/include/OGRE/Terrain"/>
 					<Add directory="/usr/include/OGRE/Paging"/>
 					<Add directory="/usr/include/ignition/transport4"/>
@@ -1654,6 +1864,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/examples/test_plane_solver.cpp">
+			<Option target="test_plane_solver"/>
+		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp">
 			<Option target="trajectory_send"/>
 		</Unit>
@@ -1670,6 +1883,15 @@
 			<Option target="panda_mpc"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp">
+			<Option target="panda_mpc"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp">
+			<Option target="panda_mpc"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp">
+			<Option target="panda_mpc"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/planning/qpstructure.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp">
@@ -2493,6 +2715,30 @@
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/realtime_tools/cmake/realtime_toolsConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\realtime_tools\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/rviz_visual_tools/cmake/rviz_visual_toolsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\rviz_visual_tools\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/rviz_visual_tools/cmake/rviz_visual_toolsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\rviz_visual_tools\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/graph_msgs/cmake/graph_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\graph_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/graph_msgs/cmake/graph_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\graph_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/graph_msgs/cmake/graph_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\graph_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/visualization_msgs/cmake/visualization_msgs-msg-extras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\visualization_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/visualization_msgs/cmake/visualization_msgsConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\visualization_msgs\cmake\"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../../../opt/ros/melodic/share/visualization_msgs/cmake/visualization_msgsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\opt\ros\melodic\share\visualization_msgs\cmake\"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/../../../libfranka/build/FrankaConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\libfranka\build\"/>

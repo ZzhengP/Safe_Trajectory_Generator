@@ -1,0 +1,23 @@
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:15:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane_computation.h:46:15:[m[K [01;31m[Kerror: [m[K'[01m[KqpSolver[m[K' in namespace '[01m[Kplanning[m[K' does not name a type
+     planning::[01;31m[KqpSolver[m[K plane_solver_; /*!< @brief optimisation solver for separating planes location */
+               [01;31m[K^~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:15:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:44[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane_computation.h:46:15:[m[K [01;31m[Kerror: [m[K'[01m[KqpSolver[m[K' in namespace '[01m[Kplanning[m[K' does not name a type
+     planning::[01;31m[KqpSolver[m[K plane_solver_; /*!< @brief optimisation solver for separating planes location */
+               [01;31m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:15:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:44[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane_computation.h:46:15:[m[K [01;31m[Kerror: [m[K'[01m[KqpSolver[m[K' in namespace '[01m[Kplanning[m[K' does not name a type
+     planning::[01;31m[KqpSolver[m[K plane_solver_; /*!< @brief optimisation solver for separating planes location */
+               [01;31m[K^~~~~~~~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

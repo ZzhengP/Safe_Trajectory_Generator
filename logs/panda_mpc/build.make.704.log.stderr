@@ -1,0 +1,7 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/test_plane_solver.cpp:[m[K In function '[01m[Kint main(int, char**)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/test_plane_solver.cpp:82:1:[m[K [01;31m[Kerror: [m[K'[01m[Kqdqsd[m[K' was not declared in this scope
+ [01;31m[Kqdqsd[m[K
+ [01;31m[K^~~~~[m[K
+make[2]: *** [examples/CMakeFiles/test_plane_solver.dir/test_plane_solver.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/test_plane_solver.dir/all] Error 2
+make: *** [all] Error 2

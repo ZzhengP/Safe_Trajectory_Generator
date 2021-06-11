@@ -68,6 +68,29 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -101,17 +124,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -122,18 +134,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+examples/CMakeFiles/test_plane_solver.dir/rule:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/test_plane_solver.dir/rule
+.PHONY : examples/CMakeFiles/test_plane_solver.dir/rule
+
+# Convenience name for target.
+test_plane_solver: examples/CMakeFiles/test_plane_solver.dir/rule
+
+.PHONY : test_plane_solver
+
+# fast build rule for target.
+test_plane_solver/fast:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/test_plane_solver.dir/build.make examples/CMakeFiles/test_plane_solver.dir/build
+.PHONY : test_plane_solver/fast
+
+# Convenience name for target.
 examples/CMakeFiles/trajectory_send.dir/rule:
 	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/trajectory_send.dir/rule
 .PHONY : examples/CMakeFiles/trajectory_send.dir/rule
@@ -181,6 +196,33 @@ trajectory_send: examples/CMakeFiles/trajectory_send.dir/rule
 trajectory_send/fast:
 	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/trajectory_send.dir/build.make examples/CMakeFiles/trajectory_send.dir/build
 .PHONY : trajectory_send/fast
+
+test_plane_solver.o: test_plane_solver.cpp.o
+
+.PHONY : test_plane_solver.o
+
+# target to build an object file
+test_plane_solver.cpp.o:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/test_plane_solver.dir/build.make examples/CMakeFiles/test_plane_solver.dir/test_plane_solver.cpp.o
+.PHONY : test_plane_solver.cpp.o
+
+test_plane_solver.i: test_plane_solver.cpp.i
+
+.PHONY : test_plane_solver.i
+
+# target to preprocess a source file
+test_plane_solver.cpp.i:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/test_plane_solver.dir/build.make examples/CMakeFiles/test_plane_solver.dir/test_plane_solver.cpp.i
+.PHONY : test_plane_solver.cpp.i
+
+test_plane_solver.s: test_plane_solver.cpp.s
+
+.PHONY : test_plane_solver.s
+
+# target to generate assembly for a file
+test_plane_solver.cpp.s:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/test_plane_solver.dir/build.make examples/CMakeFiles/test_plane_solver.dir/test_plane_solver.cpp.s
+.PHONY : test_plane_solver.cpp.s
 
 trajectory_send.o: trajectory_send.cpp.o
 
@@ -216,13 +258,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install"
+	@echo "... test_plane_solver"
+	@echo "... edit_cache"
+	@echo "... trajectory_send"
 	@echo "... install/local"
 	@echo "... test"
-	@echo "... trajectory_send"
 	@echo "... list_install_components"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... install"
+	@echo "... test_plane_solver.o"
+	@echo "... test_plane_solver.i"
+	@echo "... test_plane_solver.s"
 	@echo "... trajectory_send.o"
 	@echo "... trajectory_send.i"
 	@echo "... trajectory_send.s"

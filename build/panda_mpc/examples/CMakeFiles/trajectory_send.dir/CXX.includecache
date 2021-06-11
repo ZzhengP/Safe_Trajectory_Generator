@@ -368,6 +368,16 @@ memory
 vector
 -
 
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h
+qpOASES.hpp
+-
+Eigen/Core
+-
+memory
+-
+iostream
+-
+
 /home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp
 iostream
 -
@@ -384,6 +394,8 @@ optFormulation/constraint.hpp
 optFormulation/task.hpp
 -
 robot/robot_mpc_model.h
+-
+planning/qpstructure.h
 -
 
 /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h

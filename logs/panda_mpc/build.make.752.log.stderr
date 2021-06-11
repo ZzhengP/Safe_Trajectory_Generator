@@ -1,0 +1,46 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:77:8:[m[K [01;31m[Kerror: [m[K'[01m[KplaneSolver[m[K' has not been declared
+   void [01;31m[KplaneSolver[m[K::updateCostFunction(Eigen::VectorXd plane_precedent){
+        [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:[m[K In function '[01m[Kvoid updateCostFunction(Eigen::VectorXd)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:116:8:[m[K [01;31m[Kerror: [m[K'[01m[KH_[m[K' was not declared in this scope
+        [01;31m[KH_[m[K = H1 + H2 + 0.5*H3;
+        [01;31m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:116:8:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[KH4[m[K'
+        [01;36m[KH_[m[K = H1 + H2 + 0.5*H3;
+        [01;36m[K^~[m[K
+        [32m[KH4[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:117:8:[m[K [01;31m[Kerror: [m[K'[01m[Kg_[m[K' was not declared in this scope
+        [01;31m[Kg_[m[K = g1 + g2 + 0.5*g3;
+        [01;31m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:117:8:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Kg4[m[K'
+        [01;36m[Kg_[m[K = g1 + g2 + 0.5*g3;
+        [01;36m[K^~[m[K
+        [32m[Kg4[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:[m[K At global scope:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:148:8:[m[K [01;31m[Kerror: [m[K'[01m[KplaneSolver[m[K' has not been declared
+   void [01;31m[KplaneSolver[m[K::updateConstraintMatrix(Eigen::VectorXd plane_precedent, Eigen::MatrixXd robotVertice
+        [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:[m[K In function '[01m[Kvoid updateConstraintMatrix(Eigen::VectorXd, Eigen::MatrixXd, Eigen::MatrixXd)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:159:5:[m[K [01;31m[Kerror: [m[K'[01m[KA_[m[K' was not declared in this scope
+     [01;31m[KA_[m[K.resize(rcols + pcols +3, 5);
+     [01;31m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:178:6:[m[K [01;31m[Kerror: [m[K'[01m[KlbA_[m[K' was not declared in this scope
+      [01;31m[KlbA_[m[K.resize(rcols+pcols+3);
+      [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:179:6:[m[K [01;31m[Kerror: [m[K'[01m[KubA_[m[K' was not declared in this scope
+      [01;31m[KubA_[m[K.resize(rcols+pcols+3);
+      [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:201:5:[m[K [01;31m[Kerror: [m[K'[01m[Kdsafe_[m[K' was not declared in this scope
+     [01;31m[Kdsafe_[m[K = 0.1 ;
+     [01;31m[K^~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:201:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Kdsyr2_[m[K'
+     [01;36m[Kdsafe_[m[K = 0.1 ;
+     [01;36m[K^~~~~~[m[K
+     [32m[Kdsyr2_[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:[m[K At global scope:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver.cpp:259:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before '[01m[K}[m[K' token
+ [01;31m[K}[m[K
+ [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/plane_solver.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

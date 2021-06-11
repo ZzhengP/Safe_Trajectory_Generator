@@ -40,7 +40,7 @@ public:
   bool init(const Eigen::VectorXd &q_min, const Eigen::VectorXd &q_max,
             const Eigen::VectorXd &qd_min, const Eigen::VectorXd &qd_max);
 
-  bool update(const Eigen::VectorXd &state);
+  bool update(const Eigen::VectorXd &state, Eigen::VectorXd q_des);
 
   void setMPCParams(const robot::MPC_param& param){
 
@@ -49,7 +49,7 @@ public:
 
   inline void printConstraint(const constraint& constraint){
 
-      std::cout << "-------------------- adding task --------------------- " << '\n';
+      std::cout << "-------------------- adding constraint --------------------- " << '\n';
       std::cout << "name : " << constraint.constraint_name_ << '\n';
       std::cout << "task matrix size: \n" << std::endl;
       std::cout << " A:  " << constraint.A_.rows() << " X " << constraint.A_.cols() << '\n';
@@ -97,7 +97,7 @@ private:
 
   robot::MPC_param mpc_params_; /*!< @brief model predictive parameters to define mpc task */
 
-  bool updateConstraintContainer(const Eigen::VectorXd& state);
+  bool updateConstraintContainer(const Eigen::VectorXd& state, Eigen::VectorXd q_des);
 
   // ------------------------------------------------------------------------------------------------------------------------
   //                    Quadratic Programming parameters: Cost Function

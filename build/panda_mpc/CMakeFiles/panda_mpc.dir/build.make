@@ -225,9 +225,81 @@ CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o.provides: CMakeFiles
 CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o.provides.build: CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o
 
 
+CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o: CMakeFiles/panda_mpc.dir/flags.make
+CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o -c /home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp
+
+CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp > CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.i
+
+CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp -o CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.s
+
+CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o.requires:
+
+.PHONY : CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o.requires
+
+CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o.provides: CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o.requires
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o.provides.build
+.PHONY : CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o.provides
+
+CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o.provides.build: CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o
+
+
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o: CMakeFiles/panda_mpc.dir/flags.make
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o -c /home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp
+
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp > CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.i
+
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp -o CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.s
+
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o.requires:
+
+.PHONY : CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o.requires
+
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o.provides: CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o.requires
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o.provides.build
+.PHONY : CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o.provides
+
+CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o.provides.build: CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o
+
+
+CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o: CMakeFiles/panda_mpc.dir/flags.make
+CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/src/planning/qpstructure.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o -c /home/zheng/catkin_ws/src/panda_mpc/src/planning/qpstructure.cpp
+
+CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zheng/catkin_ws/src/panda_mpc/src/planning/qpstructure.cpp > CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.i
+
+CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zheng/catkin_ws/src/panda_mpc/src/planning/qpstructure.cpp -o CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.s
+
+CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o.requires:
+
+.PHONY : CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o.requires
+
+CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o.provides: CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o.requires
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o.provides.build
+.PHONY : CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o.provides
+
+CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o.provides.build: CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o
+
+
 CMakeFiles/panda_mpc.dir/src/controller.cpp.o: CMakeFiles/panda_mpc.dir/flags.make
 CMakeFiles/panda_mpc.dir/src/controller.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/panda_mpc.dir/src/controller.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/panda_mpc.dir/src/controller.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/panda_mpc.dir/src/controller.cpp.o -c /home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp
 
 CMakeFiles/panda_mpc.dir/src/controller.cpp.i: cmake_force
@@ -251,7 +323,7 @@ CMakeFiles/panda_mpc.dir/src/controller.cpp.o.provides.build: CMakeFiles/panda_m
 
 CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o: CMakeFiles/panda_mpc.dir/flags.make
 CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/src/qpsolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o -c /home/zheng/catkin_ws/src/panda_mpc/src/qpsolver.cpp
 
 CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.i: cmake_force
@@ -282,6 +354,9 @@ panda_mpc_OBJECTS = \
 "CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o" \
 "CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o" \
 "CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o" \
+"CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o" \
+"CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o" \
+"CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o" \
 "CMakeFiles/panda_mpc.dir/src/controller.cpp.o" \
 "CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o"
 
@@ -295,13 +370,15 @@ panda_mpc_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/controller.cpp.o
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/build.make
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libgazebo_ros_api_plugin.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libgazebo_ros_paths_plugin.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/qpOASES/lib/libqpOASES.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libeigen_conversions.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/panda_traj/lib/libpanda_traj.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtrac_ik.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libkdl_parser.so
@@ -318,14 +395,6 @@ panda_mpc_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librosconsole_bridge.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/franka_gripper/lib/libfranka_gripper.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/libfranka/build/libfranka.so.0.8.0
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf_conversions.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libkdl_conversions.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf2_ros.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libactionlib.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libmessage_filters.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf2.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libclass_loader.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/libPocoFoundation.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libdl.so
@@ -335,15 +404,28 @@ panda_mpc_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librealtime_tools.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librviz_visual_tools.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librviz_visual_tools_gui.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librviz_visual_tools_remote_control.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librviz_visual_tools_imarker_simple.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libeigen_conversions.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf_conversions.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libkdl_conversions.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf2_ros.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libactionlib.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libmessage_filters.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libroscpp.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf2.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librosconsole.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libxmlrpcpp.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librostime.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libcpp_common.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
@@ -404,7 +486,6 @@ panda_mpc_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libignition-common1.so.1.0.1
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libignition-fuel_tools1.so.1.0.0
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/qpOASES/lib/libqpOASES.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libeigen_conversions.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/panda_traj/lib/libpanda_traj.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtrac_ik.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libkdl_parser.so
@@ -421,14 +502,6 @@ panda_mpc_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librosconsole_bridge.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/catkin_ws/devel/.private/franka_gripper/lib/libfranka_gripper.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /home/zheng/libfranka/build/libfranka.so.0.8.0
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf_conversions.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libkdl_conversions.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf2_ros.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libactionlib.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libmessage_filters.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf2.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libclass_loader.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/libPocoFoundation.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libdl.so
@@ -438,15 +511,28 @@ panda_mpc_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librealtime_tools.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librviz_visual_tools.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librviz_visual_tools_gui.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librviz_visual_tools_remote_control.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librviz_visual_tools_imarker_simple.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libeigen_conversions.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf_conversions.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libkdl_conversions.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf2_ros.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libactionlib.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libmessage_filters.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libroscpp.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libtf2.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librosconsole.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libxmlrpcpp.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/librostime.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /opt/ros/melodic/lib/libcpp_common.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
@@ -491,7 +577,7 @@ panda_mpc_EXTERNAL_OBJECTS =
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libavutil.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: /usr/lib/x86_64-linux-gnu/libavutil.so
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: CMakeFiles/panda_mpc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX shared library /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/panda_mpc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -506,6 +592,9 @@ CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/robot/robot_mpc_
 CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o.requires
 CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o.requires
 CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o.requires
+CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o.requires
+CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o.requires
+CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o.requires
 CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/controller.cpp.o.requires
 CMakeFiles/panda_mpc.dir/requires: CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o.requires
 

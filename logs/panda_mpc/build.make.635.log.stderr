@@ -1,0 +1,31 @@
+CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o: In function `Eigen::MapBase<Eigen::Block<Eigen::Matrix<double, -1, 1, 0, -1, 1> const, -1, 1, false>, 0>::MapBase(double const*, long, long)':
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:28: multiple definition of `qpSolver::configureQP(int, int, qpOASES::Options)'
+CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o:/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:28: first defined here
+CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o: In function `qpSolver::configureQP(int, int)':
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:53: multiple definition of `qpSolver::configureQP(int, int)'
+CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o:/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:53: first defined here
+CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o: In function `qpSolver::solve()':
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:69: multiple definition of `qpSolver::solve()'
+CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o:/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:69: first defined here
+CMakeFiles/panda_mpc.dir/src/planning/plane_computation.cpp.o: In function `Eigen::MapBase<Eigen::Block<Eigen::Matrix<double, -1, 1, 0, -1, 1>, -1, 1, false>, 0>::MapBase(double*, long, long)':
+/usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:905: multiple definition of `qpSolver::configureQP(int, int, qpOASES::Options)'
+CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o:/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:28: first defined here
+CMakeFiles/panda_mpc.dir/src/planning/plane_computation.cpp.o: In function `qpSolver::configureQP(int, int)':
+/usr/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:1177: multiple definition of `qpSolver::configureQP(int, int)'
+CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o:/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:53: first defined here
+CMakeFiles/panda_mpc.dir/src/planning/plane_computation.cpp.o: In function `qpSolver::solve()':
+/usr/include/eigen3/Eigen/src/Core/util/BlasUtil.h:218: multiple definition of `qpSolver::solve()'
+CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o:/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:69: first defined here
+CMakeFiles/panda_mpc.dir/src/controller.cpp.o: In function `qpSolver::configureQP(int, int, qpOASES::Options)':
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:28: multiple definition of `qpSolver::configureQP(int, int, qpOASES::Options)'
+CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o:/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:28: first defined here
+CMakeFiles/panda_mpc.dir/src/controller.cpp.o: In function `qpSolver::configureQP(int, int)':
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:53: multiple definition of `qpSolver::configureQP(int, int)'
+CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o:/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:53: first defined here
+CMakeFiles/panda_mpc.dir/src/controller.cpp.o: In function `qpSolver::solve()':
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:69: multiple definition of `qpSolver::solve()'
+CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o:/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:69: first defined here
+collect2: error: ld returned 1 exit status
+make[2]: *** [/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

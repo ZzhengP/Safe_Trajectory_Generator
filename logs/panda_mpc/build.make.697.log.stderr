@@ -1,0 +1,7 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:[m[K In member function '[01m[Kbool planning::plane::update(const std::vector<Eigen::Matrix<double, -1, -1> >&, const std::vector<Eigen::Matrix<double, -1, -1> >&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:110:89:[m[K [01;31m[Kerror: [m[K'[01m[Ki[m[K' was not declared in this scope
+       std::cout <<" obstacle vertices horizon size : \n " << obstacle_vertices_horizon_[[01;31m[Ki[m[K0.rows() << " , " << obstacle_vertices_horizon_[i].cols() <<'\n';
+                                                                                         [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

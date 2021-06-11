@@ -1,0 +1,20 @@
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane.h:41:3:[m[K [01;31m[Kerror: [m[K'[01m[KPlaneSolver[m[K' does not name a type; did you mean '[01m[KplaneSolver[m[K'?
+   [01;31m[KPlaneSolver[m[K plane_solver_;
+   [01;31m[K^~~~~~~~~~~[m[K
+   [32m[KplaneSolver[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:[m[K In constructor '[01m[Kplanning::plane::plane(ros::NodeHandle&, int, int, double)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:6:3:[m[K [01;31m[Kerror: [m[Kclass '[01m[Kplanning::plane[m[K' does not have any field named '[01m[Kplane_solver_[m[K'
+   [01;31m[Kplane_solver_[m[K{nbrCst,dsafe}
+   [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:[m[K In member function '[01m[Kbool planning::plane::update(const std::vector<Eigen::Matrix<double, -1, -1> >&, const std::vector<Eigen::Matrix<double, -1, -1> >&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:111:10:[m[K [01;31m[Kerror: [m[K'[01m[Kplane_solver_[m[K' was not declared in this scope
+          [01;31m[Kplane_solver_[m[K.setCost(plane_precedent_[0].col(k));
+          [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:111:10:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[KplaneSolver[m[K'
+          [01;36m[Kplane_solver_[m[K.setCost(plane_precedent_[0].col(k));
+          [01;36m[K^~~~~~~~~~~~~[m[K
+          [32m[KplaneSolver[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

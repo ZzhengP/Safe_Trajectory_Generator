@@ -1,0 +1,11 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[Kbool Controller::Controller::UpdateMPCTraj(bool)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:214:9:[m[K [01;31m[Kerror: [m[K'[01m[Kerror_task[m[K' was not declared in this scope
+     if ([01;31m[Kerror_task[m[K.norm()<0.05){
+         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:214:9:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Kerror_t[m[K'
+     if ([01;36m[Kerror_task[m[K.norm()<0.05){
+         [01;36m[K^~~~~~~~~~[m[K
+         [32m[Kerror_t[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

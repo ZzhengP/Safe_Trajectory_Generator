@@ -1,0 +1,12 @@
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane.h:12:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/test_plane_solver.cpp:5[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane_solver_old.h:12:7:[m[K [01;31m[Kerror: [m[Kredefinition of '[01m[Kclass PlaneSolver[m[K'
+ class [01;31m[KPlaneSolver[m[K
+       [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/test_plane_solver.cpp:4:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane_solver.h:12:7:[m[K [01;36m[Knote: [m[Kprevious definition of '[01m[Kclass PlaneSolver[m[K'
+ class [01;36m[KPlaneSolver[m[K
+       [01;36m[K^~~~~~~~~~~[m[K
+make[2]: *** [examples/CMakeFiles/test_plane_solver.dir/test_plane_solver.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/test_plane_solver.dir/all] Error 2
+make: *** [all] Error 2

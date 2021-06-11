@@ -285,6 +285,71 @@ panda_mpc_generate_messages/fast:
 .PHONY : panda_mpc_generate_messages/fast
 
 #=============================================================================
+# Target rules for targets named visualization_msgs_generate_messages_py
+
+# Build rule for target.
+visualization_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_py
+.PHONY : visualization_msgs_generate_messages_py
+
+# fast build rule for target.
+visualization_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/visualization_msgs_generate_messages_py.dir/build.make CMakeFiles/visualization_msgs_generate_messages_py.dir/build
+.PHONY : visualization_msgs_generate_messages_py/fast
+
+#=============================================================================
+# Target rules for targets named visualization_msgs_generate_messages_nodejs
+
+# Build rule for target.
+visualization_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_nodejs
+.PHONY : visualization_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+visualization_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
+.PHONY : visualization_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named visualization_msgs_generate_messages_eus
+
+# Build rule for target.
+visualization_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_eus
+.PHONY : visualization_msgs_generate_messages_eus
+
+# fast build rule for target.
+visualization_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/visualization_msgs_generate_messages_eus.dir/build.make CMakeFiles/visualization_msgs_generate_messages_eus.dir/build
+.PHONY : visualization_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named graph_msgs_generate_messages_nodejs
+
+# Build rule for target.
+graph_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 graph_msgs_generate_messages_nodejs
+.PHONY : graph_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+graph_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f CMakeFiles/graph_msgs_generate_messages_nodejs.dir/build.make CMakeFiles/graph_msgs_generate_messages_nodejs.dir/build
+.PHONY : graph_msgs_generate_messages_nodejs/fast
+
+#=============================================================================
+# Target rules for targets named graph_msgs_generate_messages_cpp
+
+# Build rule for target.
+graph_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 graph_msgs_generate_messages_cpp
+.PHONY : graph_msgs_generate_messages_cpp
+
+# fast build rule for target.
+graph_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/graph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/graph_msgs_generate_messages_cpp.dir/build
+.PHONY : graph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
 # Target rules for targets named control_msgs_generate_messages_py
 
 # Build rule for target.
@@ -688,6 +753,19 @@ actionlib_generate_messages_cpp/fast:
 .PHONY : actionlib_generate_messages_cpp/fast
 
 #=============================================================================
+# Target rules for targets named graph_msgs_generate_messages_lisp
+
+# Build rule for target.
+graph_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 graph_msgs_generate_messages_lisp
+.PHONY : graph_msgs_generate_messages_lisp
+
+# fast build rule for target.
+graph_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/graph_msgs_generate_messages_lisp.dir/build.make CMakeFiles/graph_msgs_generate_messages_lisp.dir/build
+.PHONY : graph_msgs_generate_messages_lisp/fast
+
+#=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -868,6 +946,19 @@ rosgraph_msgs_generate_messages_cpp: cmake_check_build_system
 rosgraph_msgs_generate_messages_cpp/fast:
 	$(MAKE) -f CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
 .PHONY : rosgraph_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named graph_msgs_generate_messages_eus
+
+# Build rule for target.
+graph_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 graph_msgs_generate_messages_eus
+.PHONY : graph_msgs_generate_messages_eus
+
+# fast build rule for target.
+graph_msgs_generate_messages_eus/fast:
+	$(MAKE) -f CMakeFiles/graph_msgs_generate_messages_eus.dir/build.make CMakeFiles/graph_msgs_generate_messages_eus.dir/build
+.PHONY : graph_msgs_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named doxygen
@@ -1078,6 +1169,19 @@ _panda_mpc_generate_messages_check_deps_trajectoryMsg/fast:
 .PHONY : _panda_mpc_generate_messages_check_deps_trajectoryMsg/fast
 
 #=============================================================================
+# Target rules for targets named visualization_msgs_generate_messages_lisp
+
+# Build rule for target.
+visualization_msgs_generate_messages_lisp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_lisp
+.PHONY : visualization_msgs_generate_messages_lisp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_lisp/fast:
+	$(MAKE) -f CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build.make CMakeFiles/visualization_msgs_generate_messages_lisp.dir/build
+.PHONY : visualization_msgs_generate_messages_lisp/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -1180,6 +1284,19 @@ actionlib_generate_messages_eus: cmake_check_build_system
 actionlib_generate_messages_eus/fast:
 	$(MAKE) -f CMakeFiles/actionlib_generate_messages_eus.dir/build.make CMakeFiles/actionlib_generate_messages_eus.dir/build
 .PHONY : actionlib_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named graph_msgs_generate_messages_py
+
+# Build rule for target.
+graph_msgs_generate_messages_py: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 graph_msgs_generate_messages_py
+.PHONY : graph_msgs_generate_messages_py
+
+# fast build rule for target.
+graph_msgs_generate_messages_py/fast:
+	$(MAKE) -f CMakeFiles/graph_msgs_generate_messages_py.dir/build.make CMakeFiles/graph_msgs_generate_messages_py.dir/build
+.PHONY : graph_msgs_generate_messages_py/fast
 
 #=============================================================================
 # Target rules for targets named tf_generate_messages_cpp
@@ -1336,6 +1453,19 @@ tf2_msgs_generate_messages_cpp: cmake_check_build_system
 tf2_msgs_generate_messages_cpp/fast:
 	$(MAKE) -f CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
 .PHONY : tf2_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named visualization_msgs_generate_messages_cpp
+
+# Build rule for target.
+visualization_msgs_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 visualization_msgs_generate_messages_cpp
+.PHONY : visualization_msgs_generate_messages_cpp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_cpp/fast:
+	$(MAKE) -f CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
+.PHONY : visualization_msgs_generate_messages_cpp/fast
 
 #=============================================================================
 # Target rules for targets named nav_msgs_generate_messages_eus
@@ -1702,6 +1832,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named test_plane_solver
+
+# Build rule for target.
+test_plane_solver: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_plane_solver
+.PHONY : test_plane_solver
+
+# fast build rule for target.
+test_plane_solver/fast:
+	$(MAKE) -f examples/CMakeFiles/test_plane_solver.dir/build.make examples/CMakeFiles/test_plane_solver.dir/build
+.PHONY : test_plane_solver/fast
+
+#=============================================================================
 # Target rules for targets named trajectory_send
 
 # Build rule for target.
@@ -1849,6 +1992,87 @@ src/panda_simulation.cpp.s:
 	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.s
 .PHONY : src/panda_simulation.cpp.s
 
+src/planning/plane.o: src/planning/plane.cpp.o
+
+.PHONY : src/planning/plane.o
+
+# target to build an object file
+src/planning/plane.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o
+.PHONY : src/planning/plane.cpp.o
+
+src/planning/plane.i: src/planning/plane.cpp.i
+
+.PHONY : src/planning/plane.i
+
+# target to preprocess a source file
+src/planning/plane.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.i
+.PHONY : src/planning/plane.cpp.i
+
+src/planning/plane.s: src/planning/plane.cpp.s
+
+.PHONY : src/planning/plane.s
+
+# target to generate assembly for a file
+src/planning/plane.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.s
+.PHONY : src/planning/plane.cpp.s
+
+src/planning/plane_solver_old.o: src/planning/plane_solver_old.cpp.o
+
+.PHONY : src/planning/plane_solver_old.o
+
+# target to build an object file
+src/planning/plane_solver_old.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o
+.PHONY : src/planning/plane_solver_old.cpp.o
+
+src/planning/plane_solver_old.i: src/planning/plane_solver_old.cpp.i
+
+.PHONY : src/planning/plane_solver_old.i
+
+# target to preprocess a source file
+src/planning/plane_solver_old.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.i
+.PHONY : src/planning/plane_solver_old.cpp.i
+
+src/planning/plane_solver_old.s: src/planning/plane_solver_old.cpp.s
+
+.PHONY : src/planning/plane_solver_old.s
+
+# target to generate assembly for a file
+src/planning/plane_solver_old.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.s
+.PHONY : src/planning/plane_solver_old.cpp.s
+
+src/planning/qpstructure.o: src/planning/qpstructure.cpp.o
+
+.PHONY : src/planning/qpstructure.o
+
+# target to build an object file
+src/planning/qpstructure.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o
+.PHONY : src/planning/qpstructure.cpp.o
+
+src/planning/qpstructure.i: src/planning/qpstructure.cpp.i
+
+.PHONY : src/planning/qpstructure.i
+
+# target to preprocess a source file
+src/planning/qpstructure.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.i
+.PHONY : src/planning/qpstructure.cpp.i
+
+src/planning/qpstructure.s: src/planning/qpstructure.cpp.s
+
+.PHONY : src/planning/qpstructure.s
+
+# target to generate assembly for a file
+src/planning/qpstructure.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.s
+.PHONY : src/planning/qpstructure.cpp.s
+
 src/planning/traj_generation.o: src/planning/traj_generation.cpp.o
 
 .PHONY : src/planning/traj_generation.o
@@ -1976,6 +2200,11 @@ help:
 	@echo "... panda_mpc_generate_messages_nodejs"
 	@echo "... _panda_mpc_generate_messages_check_deps_UI"
 	@echo "... panda_mpc_generate_messages"
+	@echo "... visualization_msgs_generate_messages_py"
+	@echo "... visualization_msgs_generate_messages_nodejs"
+	@echo "... visualization_msgs_generate_messages_eus"
+	@echo "... graph_msgs_generate_messages_nodejs"
+	@echo "... graph_msgs_generate_messages_cpp"
 	@echo "... control_msgs_generate_messages_py"
 	@echo "... control_msgs_generate_messages_lisp"
 	@echo "... control_msgs_generate_messages_eus"
@@ -2009,6 +2238,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_nodejs"
 	@echo "... rebuild_cache"
 	@echo "... actionlib_generate_messages_cpp"
+	@echo "... graph_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... tests"
 	@echo "... tf_generate_messages_lisp"
@@ -2023,6 +2253,7 @@ help:
 	@echo "... roscpp_generate_messages_py"
 	@echo "... trajectory_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_cpp"
+	@echo "... graph_msgs_generate_messages_eus"
 	@echo "... doxygen"
 	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... tf_generate_messages_eus"
@@ -2040,6 +2271,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_py"
 	@echo "... edit_cache"
 	@echo "... _panda_mpc_generate_messages_check_deps_trajectoryMsg"
+	@echo "... visualization_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... download_extra_data"
 	@echo "... gazebo_msgs_generate_messages_py"
@@ -2048,6 +2280,7 @@ help:
 	@echo "... sensor_msgs_generate_messages_cpp"
 	@echo "... sensor_msgs_generate_messages_eus"
 	@echo "... actionlib_generate_messages_eus"
+	@echo "... graph_msgs_generate_messages_py"
 	@echo "... tf_generate_messages_cpp"
 	@echo "... actionlib_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_eus"
@@ -2060,6 +2293,7 @@ help:
 	@echo "... franka_gripper_generate_messages_eus"
 	@echo "... actionlib_msgs_generate_messages_py"
 	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... visualization_msgs_generate_messages_cpp"
 	@echo "... nav_msgs_generate_messages_eus"
 	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... panda_traj_generate_messages_cpp"
@@ -2088,6 +2322,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... test_plane_solver"
 	@echo "... trajectory_send"
 	@echo "... src/controller.o"
 	@echo "... src/controller.i"
@@ -2104,6 +2339,15 @@ help:
 	@echo "... src/panda_simulation.o"
 	@echo "... src/panda_simulation.i"
 	@echo "... src/panda_simulation.s"
+	@echo "... src/planning/plane.o"
+	@echo "... src/planning/plane.i"
+	@echo "... src/planning/plane.s"
+	@echo "... src/planning/plane_solver_old.o"
+	@echo "... src/planning/plane_solver_old.i"
+	@echo "... src/planning/plane_solver_old.s"
+	@echo "... src/planning/qpstructure.o"
+	@echo "... src/planning/qpstructure.i"
+	@echo "... src/planning/qpstructure.s"
 	@echo "... src/planning/traj_generation.o"
 	@echo "... src/planning/traj_generation.i"
 	@echo "... src/planning/traj_generation.s"

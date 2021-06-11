@@ -50,11 +50,11 @@ void RobotMPcModel::computeJacobianHorizon(const Eigen::VectorXd &q_horizon){
   }
 }
 
-void RobotMPcModel::update(Eigen::VectorXd state, Eigen::VectorXd solution,const Eigen::VectorXd &q_horizon){
+void RobotMPcModel::update(Eigen::VectorXd state, Eigen::VectorXd solution){
 
   mpc_params.q_horizon_ = mpc_params.Px_*state + mpc_params.Pu_*solution;
   mpc_params.qd_horizon_ = mpc_params.Pxdq_*state + mpc_params.Pudq_*solution;
-  computeJacobianHorizon(q_horizon);
+  computeJacobianHorizon(mpc_params.q_horizon_);
 
 
 }

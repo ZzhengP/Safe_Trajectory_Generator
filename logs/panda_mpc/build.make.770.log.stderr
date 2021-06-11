@@ -1,0 +1,59 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:[m[K In member function '[01m[Kbool planning::plane::update(const std::vector<Eigen::Matrix<double, -1, -1> >&, const std::vector<Eigen::Matrix<double, -1, -1> >&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:116:70:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KEigen::Matrix<double, -1, -1>::block(int, int&, int, int, Eigen::DenseBase<Eigen::Matrix<double, -1, -1> >::BlockXpr, Eigen::DenseBase<Eigen::Matrix<double, -1, -1> >::BlockXpr)[m[K'
+                                     plane_location_[0].block(0,k,5,1)[01;31m[K)[m[K;
+                                                                      [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:573:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane.h:6[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:64:17:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::DenseBase<Derived>::BlockXpr Eigen::DenseBase<Derived>::block(Eigen::Index, Eigen::Index, Eigen::Index, Eigen::Index) [with Derived = Eigen::Matrix<double, -1, -1>; Eigen::DenseBase<Derived>::BlockXpr = Eigen::Block<Eigen::Matrix<double, -1, -1>, -1, -1, false>; Eigen::Index = long int]
+ inline BlockXpr [01;36m[Kblock[m[K(Index startRow, Index startCol, Index blockRows, Index blockCols)
+                 [01;36m[K^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:64:17:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 6 provided
+[01m[K/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:71:28:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::DenseBase<Derived>::ConstBlockXpr Eigen::DenseBase<Derived>::block(Eigen::Index, Eigen::Index, Eigen::Index, Eigen::Index) const [with Derived = Eigen::Matrix<double, -1, -1>; Eigen::DenseBase<Derived>::ConstBlockXpr = const Eigen::Block<const Eigen::Matrix<double, -1, -1>, -1, -1, false>; Eigen::Index = long int]
+ inline const ConstBlockXpr [01;36m[Kblock[m[K(Index startRow, Index startCol, Index blockRows, Index blockCols) const
+                            [01;36m[K^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:71:28:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 6 provided
+[01m[K/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:780:50:[m[K [01;36m[Knote: [m[Kcandidate: template<int NRows, int NCols> typename Eigen::DenseBase<Derived>::FixedBlockXpr<Rows, Cols>::Type Eigen::DenseBase<Derived>::block(Eigen::Index, Eigen::Index) [with int NRows = NRows; int NCols = NCols; Derived = Eigen::Matrix<double, -1, -1>]
+ inline typename FixedBlockXpr<NRows,NCols>::Type [01;36m[Kblock[m[K(Index startRow, Index startCol)
+                                                  [01;36m[K^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:780:50:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:116:70:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 6 provided
+                                     plane_location_[0].block(0,k,5,1)[01;36m[K)[m[K;
+                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:573:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane.h:6[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:788:61:[m[K [01;36m[Knote: [m[Kcandidate: template<int NRows, int NCols> const typename Eigen::DenseBase<Derived>::ConstFixedBlockXpr<Rows, Cols>::Type Eigen::DenseBase<Derived>::block(Eigen::Index, Eigen::Index) const [with int NRows = NRows; int NCols = NCols; Derived = Eigen::Matrix<double, -1, -1>]
+ inline const typename ConstFixedBlockXpr<NRows,NCols>::Type [01;36m[Kblock[m[K(Index startRow, Index startCol) const
+                                                             [01;36m[K^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:788:61:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:116:70:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 6 provided
+                                     plane_location_[0].block(0,k,5,1)[01;36m[K)[m[K;
+                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:573:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane.h:6[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:815:50:[m[K [01;36m[Knote: [m[Kcandidate: template<int NRows, int NCols> typename Eigen::DenseBase<Derived>::FixedBlockXpr<Rows, Cols>::Type Eigen::DenseBase<Derived>::block(Eigen::Index, Eigen::Index, Eigen::Index, Eigen::Index) [with int NRows = NRows; int NCols = NCols; Derived = Eigen::Matrix<double, -1, -1>]
+ inline typename FixedBlockXpr<NRows,NCols>::Type [01;36m[Kblock[m[K(Index startRow, Index startCol,
+                                                  [01;36m[K^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:815:50:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:116:70:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 6 provided
+                                     plane_location_[0].block(0,k,5,1)[01;36m[K)[m[K;
+                                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:573:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Core:415[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane.h:6[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:823:61:[m[K [01;36m[Knote: [m[Kcandidate: template<int NRows, int NCols> const typename Eigen::DenseBase<Derived>::ConstFixedBlockXpr<Rows, Cols>::Type Eigen::DenseBase<Derived>::block(Eigen::Index, Eigen::Index, Eigen::Index, Eigen::Index) const [with int NRows = NRows; int NCols = NCols; Derived = Eigen::Matrix<double, -1, -1>]
+ inline const typename ConstFixedBlockXpr<NRows,NCols>::Type [01;36m[Kblock[m[K(Index startRow, Index startCol,
+                                                             [01;36m[K^~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:823:61:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:116:70:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 6 provided
+                                     plane_location_[0].block(0,k,5,1)[01;36m[K)[m[K;
+                                                                      [01;36m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

@@ -20,6 +20,7 @@ examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catki
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h

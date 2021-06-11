@@ -42,6 +42,8 @@
 #include <panda_traj/panda_traj.hpp>
 #include <robot/robot_model.h>
 #include <planning/traj_generation.hpp>
+#include <planning/plane.h>
+
 
 namespace Controller {
 
@@ -237,22 +239,24 @@ private:
 
 
   // ---------------------- Generate MPC trajectory ----------------------------
-  std::shared_ptr<planning::trajGen> trajectory_generation;
-  bool init_pos_attend_, execute;
-  int N_;
-  double dt_;
-  Eigen::VectorXd state_;
-  Eigen::VectorXd q_des_mpc_, qd_des_mpc_, qdd_des_mpc_ ;
-  Eigen::VectorXd q_horizon_, qd_horizon_;
-  Eigen::VectorXd solution_, solution_precedent_;
-  Eigen::MatrixXd state_A_, state_B_;
-  KDL::JntArray q_des_, q_;
-  KDL::JntArrayVel q_mpc_;
-  Eigen::VectorXd ee_vel_;
-  KDL::Frame X_des_, X_mpc_;
-  KDL::Jacobian kdl_J;
-  ros::Time begin_time_, end_time_;
+  std::shared_ptr<planning::trajGen> trajectory_generation; /*!< @brief MPC trajectory generation module */
+  std::shared_ptr<planning::plane> plane_generation; /*!< @brief Computes separating plane */
 
+  bool init_pos_attend_, execute, sub_goal_attend_, wait; /*!< @brief flag used to control task transition */
+  int N_; /*!< @brief MPC horizon */
+  double dt_; /*!<  @brief MPC sampling time */
+  Eigen::VectorXd state_; /*!<  @brief state-space model state */
+  Eigen::VectorXd q_des_mpc_, qd_des_mpc_, qdd_des_mpc_ ; /*!<  @brief desired joint parameters in horizon */
+  Eigen::VectorXd q_horizon_, qd_horizon_; /*!<  @brief joint position and velocity in horizon */
+  Eigen::VectorXd solution_, solution_precedent_; /*!<  @brief MPC optimization solution */
+  Eigen::MatrixXd state_A_, state_B_; /*!<  @brief transition and input matrix */
+  KDL::JntArray q_des_, q_; /*!< @brief desired joint position and current joint position */
+  KDL::JntArrayVel q_mpc_; /*!< @brief combine joint position and velocity together */
+  Eigen::VectorXd ee_vel_; /*!< @brief end-effector cartesian velocity  */
+  KDL::Frame Goal_A_frame_, Goal_B_frame_ , X_mpc_; /*!< @brief goal frame and predicted MPC frame  */
+  KDL::Jacobian kdl_J; /*!< @brief KDL Jacobian */
+  ros::Time begin_time_, end_time_, wait_begin_, wait_end_;
+  KDL::JntArray q_goal_A_, q_goal_B_;
 };
 
 }

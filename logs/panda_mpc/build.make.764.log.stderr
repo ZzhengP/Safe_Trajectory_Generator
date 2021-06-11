@@ -1,0 +1,150 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:5:1:[m[K [01;31m[Kerror: [m[K'[01m[KPlaneSolver[m[K' does not name a type
+ [01;31m[KPlaneSolver[m[K::PlaneSolver(int nbrCst, double dsafe):nC_(nbrCst), dsafe_(dsafe)
+ [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:33:6:[m[K [01;31m[Kerror: [m[K'[01m[KPlaneSolver[m[K' has not been declared
+ void [01;31m[KPlaneSolver[m[K::setCost(const Eigen::VectorXd& f){
+      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:33:33:[m[K [01;31m[Kerror: [m[K'[01m[KEigen[m[K' does not name a type; did you mean '[01m[Ksigned[m[K'?
+ void PlaneSolver::setCost(const [01;31m[KEigen[m[K::VectorXd& f){
+                                 [01;31m[K^~~~~[m[K
+                                 [32m[Ksigned[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:33:48:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before '[01m[K&[m[K' token
+ void PlaneSolver::setCost(const Eigen::VectorXd[01;31m[K&[m[K f){
+                                                [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:33:48:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K)[m[K' before '[01m[K&[m[K' token
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:33:50:[m[K [01;31m[Kerror: [m[Kexpected initializer before '[01m[Kf[m[K'
+ void PlaneSolver::setCost(const Eigen::VectorXd& [01;31m[Kf[m[K){
+                                                  [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:78:6:[m[K [01;31m[Kerror: [m[K'[01m[KPlaneSolver[m[K' has not been declared
+ void [01;31m[KPlaneSolver[m[K::setCstMatrix(const Eigen::MatrixXd &robotPartielVertices,
+      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:78:38:[m[K [01;31m[Kerror: [m[K'[01m[KEigen[m[K' does not name a type; did you mean '[01m[Ksigned[m[K'?
+ void PlaneSolver::setCstMatrix(const [01;31m[KEigen[m[K::MatrixXd &robotPartielVertices,
+                                      [01;31m[K^~~~~[m[K
+                                      [32m[Ksigned[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:78:54:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before '[01m[K&[m[K' token
+ void PlaneSolver::setCstMatrix(const Eigen::MatrixXd [01;31m[K&[m[KrobotPartielVertices,
+                                                      [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:78:54:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K)[m[K' before '[01m[K&[m[K' token
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:78:55:[m[K [01;31m[Kerror: [m[Kexpected initializer before '[01m[KrobotPartielVertices[m[K'
+ void PlaneSolver::setCstMatrix(const Eigen::MatrixXd &[01;31m[KrobotPartielVertices[m[K,
+                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:144:6:[m[K [01;31m[Kerror: [m[K'[01m[KPlaneSolver[m[K' has not been declared
+ bool [01;31m[KPlaneSolver[m[K::solve(){
+      [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:[m[K In function '[01m[Kbool solve()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:145:5:[m[K [01;31m[Kerror: [m[K'[01m[KqpOASES[m[K' has not been declared
+     [01;31m[KqpOASES[m[K::returnValue ret;
+     [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:146:5:[m[K [01;31m[Kerror: [m[K'[01m[KqpOASES[m[K' has not been declared
+     [01;31m[KqpOASES[m[K::PrintLevel printlevel;
+     [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:147:5:[m[K [01;31m[Kerror: [m[K'[01m[Kprintlevel[m[K' was not declared in this scope
+     [01;31m[Kprintlevel[m[K = qpOASES::PL_HIGH;
+     [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:147:18:[m[K [01;31m[Kerror: [m[K'[01m[KqpOASES[m[K' has not been declared
+     printlevel = [01;31m[KqpOASES[m[K::PL_HIGH;
+                  [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:148:5:[m[K [01;31m[Kerror: [m[K'[01m[KqpOASES[m[K' has not been declared
+     [01;31m[KqpOASES[m[K::int_t nWSR = 100000;
+     [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:153:14:[m[K [01;31m[Kerror: [m[K'[01m[KlbA_[m[K' was not declared in this scope
+     cstNbr = [01;31m[KlbA_[m[K.size();
+              [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:155:5:[m[K [01;31m[Kerror: [m[K'[01m[KqpOASES[m[K' has not been declared
+     [01;31m[KqpOASES[m[K::QProblem example( 5,cstNbr);
+     [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:156:5:[m[K [01;31m[Kerror: [m[K'[01m[KqpOASES[m[K' has not been declared
+     [01;31m[KqpOASES[m[K::Options options_;
+     [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:157:5:[m[K [01;31m[Kerror: [m[K'[01m[Koptions_[m[K' was not declared in this scope
+     [01;31m[Koptions_[m[K.numRefinementSteps = 10;
+     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:159:5:[m[K [01;31m[Kerror: [m[K'[01m[Kexample[m[K' was not declared in this scope
+     [01;31m[Kexample[m[K.setPrintLevel(qpOASES::PL_HIGH);
+     [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:159:27:[m[K [01;31m[Kerror: [m[K'[01m[KqpOASES[m[K' has not been declared
+     example.setPrintLevel([01;31m[KqpOASES[m[K::PL_HIGH);
+                           [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:162:5:[m[K [01;31m[Kerror: [m[K'[01m[Kret[m[K' was not declared in this scope
+     [01;31m[Kret[m[K = example.init( H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(), nWSR );
+     [01;31m[K^~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:162:25:[m[K [01;31m[Kerror: [m[K'[01m[KH_[m[K' was not declared in this scope
+     ret = example.init( [01;31m[KH_[m[K.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(), nWSR );
+                         [01;31m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:162:35:[m[K [01;31m[Kerror: [m[K'[01m[Kg_[m[K' was not declared in this scope
+     ret = example.init( H_.data(),[01;31m[Kg_[m[K.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(), nWSR );
+                                   [01;31m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:162:45:[m[K [01;31m[Kerror: [m[K'[01m[KA_[m[K' was not declared in this scope
+     ret = example.init( H_.data(),g_.data(),[01;31m[KA_[m[K.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(), nWSR );
+                                             [01;31m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:162:55:[m[K [01;31m[Kerror: [m[K'[01m[Klb_[m[K' was not declared in this scope
+     ret = example.init( H_.data(),g_.data(),A_.data(),[01;31m[Klb_[m[K.data(),ub_.data(),lbA_.data(),ubA_.data(), nWSR );
+                                                       [01;31m[K^~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:162:66:[m[K [01;31m[Kerror: [m[K'[01m[Kub_[m[K' was not declared in this scope
+     ret = example.init( H_.data(),g_.data(),A_.data(),lb_.data(),[01;31m[Kub_[m[K.data(),lbA_.data(),ubA_.data(), nWSR );
+                                                                  [01;31m[K^~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:162:89:[m[K [01;31m[Kerror: [m[K'[01m[KubA_[m[K' was not declared in this scope
+     ret = example.init( H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),[01;31m[KubA_[m[K.data(), nWSR );
+                                                                                         [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:162:102:[m[K [01;31m[Kerror: [m[K'[01m[KnWSR[m[K' was not declared in this scope
+     ret = example.init( H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(), [01;31m[KnWSR[m[K );
+                                                                                                      [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:163:31:[m[K [01;31m[Kerror: [m[K'[01m[Kdata_optimal_solution_[m[K' was not declared in this scope
+     example.getPrimalSolution([01;31m[Kdata_optimal_solution_[m[K.data());
+                               [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:192:21:[m[K [01;31m[Kerror: [m[K'[01m[KqpOASES[m[K' has not been declared
+           if(ret == [01;31m[KqpOASES[m[K::SUCCESSFUL_RETURN){
+                     [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:196:16:[m[K [01;31m[Kerror: [m[K'[01m[Kmyfile[m[K' was not declared in this scope
+                [01;31m[Kmyfile[m[K << "data_optimal_solution_ \n " << data_optimal_solution_<< '\n';
+                [01;31m[K^~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:199:20:[m[K [01;31m[Kerror: [m[K'[01m[Kcout[m[K' is not a member of '[01m[Kstd[m[K'
+               std::[01;31m[Kcout[m[K <<"Plane optimization failed :\n " <<  std::endl;
+                    [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:199:69:[m[K [01;31m[Kerror: [m[K'[01m[Kendl[m[K' is not a member of '[01m[Kstd[m[K'
+               std::cout <<"Plane optimization failed :\n " <<  std::[01;31m[Kendl[m[K;
+                                                                     [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:200:20:[m[K [01;31m[Kerror: [m[K'[01m[Kcout[m[K' is not a member of '[01m[Kstd[m[K'
+               std::[01;31m[Kcout[m[K <<"return value is :  " <<  ret  << '\n';
+                    [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:201:20:[m[K [01;31m[Kerror: [m[K'[01m[Kcout[m[K' is not a member of '[01m[Kstd[m[K'
+               std::[01;31m[Kcout[m[K <<"qpProblem status is : " << qpPlane_->getStatus()<<'\n';
+                    [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:201:55:[m[K [01;31m[Kerror: [m[K'[01m[KqpPlane_[m[K' was not declared in this scope
+               std::cout <<"qpProblem status is : " << [01;31m[KqpPlane_[m[K->getStatus()<<'\n';
+                                                       [01;31m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:202:20:[m[K [01;31m[Kerror: [m[K'[01m[Kcout[m[K' is not a member of '[01m[Kstd[m[K'
+               std::[01;31m[Kcout[m[K <<"qpProblem obj is : " << qpPlane_->getObjVal()<<'\n';
+                    [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:203:20:[m[K [01;31m[Kerror: [m[K'[01m[Kcout[m[K' is not a member of '[01m[Kstd[m[K'
+               std::[01;31m[Kcout[m[K <<"qpProblem cst number is : " << qpPlane_->getNC()<<'\n';
+                    [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:204:20:[m[K [01;31m[Kerror: [m[K'[01m[Kcout[m[K' is not a member of '[01m[Kstd[m[K'
+               std::[01;31m[Kcout[m[K <<"qpProblem variable number is : " << qpPlane_->getNV()<<'\n';
+                    [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:205:20:[m[K [01;31m[Kerror: [m[K'[01m[Kcout[m[K' is not a member of '[01m[Kstd[m[K'
+               std::[01;31m[Kcout[m[K <<"qpProblem is initialized ? " << qpPlane_->isInitialised()<<'\n';
+                    [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:206:20:[m[K [01;31m[Kerror: [m[K'[01m[Kcout[m[K' is not a member of '[01m[Kstd[m[K'
+               std::[01;31m[Kcout[m[K <<"qpProblem is solved ? " << qpPlane_->isSolved()<<'\n';
+                    [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:207:20:[m[K [01;31m[Kerror: [m[K'[01m[Kcout[m[K' is not a member of '[01m[Kstd[m[K'
+               std::[01;31m[Kcout[m[K <<"qpProblem is infeasible ? " << qpPlane_->isInfeasible()<<'\n';
+                    [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:208:20:[m[K [01;31m[Kerror: [m[K'[01m[Kcout[m[K' is not a member of '[01m[Kstd[m[K'
+               std::[01;31m[Kcout[m[K <<"qpProblem is Unbounded ? " << qpPlane_->isUnbounded()<<'\n';
+                    [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:209:20:[m[K [01;31m[Kerror: [m[K'[01m[Kcout[m[K' is not a member of '[01m[Kstd[m[K'
+               std::[01;31m[Kcout[m[K <<" print level : " << qpPlane_->getPrintLevel() << std::endl;
+                    [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:209:82:[m[K [01;31m[Kerror: [m[K'[01m[Kendl[m[K' is not a member of '[01m[Kstd[m[K'
+               std::cout <<" print level : " << qpPlane_->getPrintLevel() << std::[01;31m[Kendl[m[K;
+                                                                                  [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:211:15:[m[K [01;31m[Kerror: [m[K'[01m[Kmyfile[m[K' was not declared in this scope
+               [01;31m[Kmyfile[m[K << "data_optimal_solution_ \n " << data_optimal_solution_ << '\n';
+               [01;31m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

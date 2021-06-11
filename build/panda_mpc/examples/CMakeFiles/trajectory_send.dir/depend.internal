@@ -21,6 +21,7 @@ examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o
  /home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp
  /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp
  /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp
+ /home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h
  /home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp
  /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h
  /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h

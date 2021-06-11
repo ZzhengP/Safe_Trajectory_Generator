@@ -32,6 +32,18 @@ bool MPCConstraint::init(const Eigen::VectorXd &q_min, const Eigen::VectorXd &q_
   constraint_container_.push_back(constraint);
   constraint_nbr_+= constraint.constraint_size_;
 
+  // 3. End joint position constraint
+  constraint.constraint_name_ = "end_joint_position";
+  constraint.lbA_.resize(dof_);
+  constraint.lbA_.setConstant(-1000);
+  constraint.ubA_.resize(dof_);
+  constraint.ubA_.setConstant(1000);
+  constraint.A_.resize(dof_,N_*dof_);
+  constraint.A_.setZero();
+  constraint.constraint_size_ = dof_ ;
+  constraint_container_.push_back(constraint);
+  constraint_nbr_+=constraint.constraint_size_;
+
   // Resize the total number of constraints size
   lbA_.resize(constraint_nbr_);
   ubA_.resize(constraint_nbr_);
@@ -49,7 +61,7 @@ bool MPCConstraint::init(const Eigen::VectorXd &q_min, const Eigen::VectorXd &q_
   return true;
 }
 
-bool MPCConstraint::update(const Eigen::VectorXd &state)
+bool MPCConstraint::update(const Eigen::VectorXd &state, Eigen::VectorXd q_des)
 {
   if (!mpc_params_.initialized){
 
@@ -57,7 +69,7 @@ bool MPCConstraint::update(const Eigen::VectorXd &state)
       return false;
   }
 
-  if(!updateConstraintContainer(state)){
+  if(!updateConstraintContainer(state, q_des)){
     ROS_ERROR_STREAM("Cannot update the vector list of constraint, pls verify that all task is well defined.");
     return false;
   }
@@ -77,7 +89,7 @@ bool MPCConstraint::update(const Eigen::VectorXd &state)
 
 
 
-bool MPCConstraint::updateConstraintContainer(const Eigen::VectorXd &state){
+bool MPCConstraint::updateConstraintContainer(const Eigen::VectorXd &state, Eigen::VectorXd q_des){
 
     // 1. Joint position constraint update
   if (constraint_container_[0].constraint_name_ == "joint_position_limit"){
@@ -99,7 +111,29 @@ bool MPCConstraint::updateConstraintContainer(const Eigen::VectorXd &state){
       return false;
   }
 
+  // 3. end joint position constraint update
+//  Eigen::MatrixXd Pu, Px;
+//  Pu.resize(N_*dof_, N_*dof_);
+//  Pu = mpc_params_.Pu_;
+
+//  Px.resize(N_*dof_, 2*dof_);
+//  Px = mpc_params_.Px_;
+  Eigen::VectorXd e;
+  e.resize(dof_), e.setConstant(1);
+  if (constraint_container_[2].constraint_name_ == "end_joint_position"){
+      constraint_container_[2].A_ = mpc_params_.Pu_.block((N_-1)*dof_,0,dof_,N_*dof_);
+      constraint_container_[2].lbA_ = q_des - mpc_params_.Px_.block((N_-1)*dof_,0,dof_,2*dof_) * state - e;
+      constraint_container_[2].ubA_ = q_des - mpc_params_.Px_.block((N_-1)*dof_,0,dof_,2*dof_) * state + e;
+  }else {
+      ROS_WARN_STREAM("Cannot end joint position constraint, order error in the vector list of task");
+      return false;
+  }
+
   return true;
 }
 
 }
+
+
+
+

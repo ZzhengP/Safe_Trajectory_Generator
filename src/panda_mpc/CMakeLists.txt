@@ -29,6 +29,7 @@ find_package(catkin REQUIRED COMPONENTS
         message_generation
         pluginlib
         realtime_tools
+        rviz_visual_tools
 )
 
 find_package(Eigen3 REQUIRED)
@@ -81,6 +82,7 @@ catkin_package(
             pluginlib
             realtime_tools
             roscpp
+            rviz_visual_tools
         DEPENDS Franka
 )
 
@@ -105,6 +107,9 @@ add_library(panda_mpc
             src/optFormulation/task.cpp
             src/optFormulation/constraint.cpp
             src/planning/traj_generation.cpp
+            src/planning/plane.cpp
+            src/planning/plane_solver_old.cpp
+            src/planning/qpstructure.cpp
             src/controller.cpp
             src/qpsolver.cpp)
 

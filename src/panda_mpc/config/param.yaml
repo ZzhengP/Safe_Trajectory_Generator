@@ -16,11 +16,16 @@ panda_mpc:
     root_link_ : "panda_link0"
     tip_link_ : "panda_link8"
     q_mean_ : [0.01 , 0.0, 0.01, -1.501, 0.0, 1.5, 0.0]
-    qd_min_ : [-1.0 , -1.0 , -1.0 , -1.0 , -1.0 , -1.0 , -1.0]
-    qd_max_ : [1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0 , 1.0]
+    qd_min_ : [-2.0 , -2.0 , -2.0 , -2.0 , -1.0 , -1.0 , -1.0]
+    qd_max_ : [2.0 , 2.0 , 2.0 , 2.0 , 1.0 , 1.0 , 1.0]
     qdd_max_ : [15 , 7.5 , 10 , 12.5 , 15 , 20 , 20]
     torque_max_ : [87.0 , 87.0 , 87.0 , 87.0 , 12.0 , 12.0 , 12.0]
-
+    init_pos_attend_ : false
     regularisation_weight_ : 1.0e-5
-    N_ : 5
+    N_ : 12
     dt_ : 0.05
+    dsafe_ : 0.2
+    robot_member_ : 1
+    robot_vertices_ : 1
+    obstacle_member_: 1
+    obstacle_vertices_ : 8

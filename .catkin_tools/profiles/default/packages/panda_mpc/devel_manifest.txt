@@ -30,6 +30,7 @@ panda_mpc
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryMsg.py /home/zheng/catkin_ws/devel/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryMsg.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/__init__.py /home/zheng/catkin_ws/devel/lib/python2.7/dist-packages/panda_mpc/msg/__init__.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_PandaRunMsg.py /home/zheng/catkin_ws/devel/lib/python2.7/dist-packages/panda_mpc/msg/_PandaRunMsg.py
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/test_plane_solver /home/zheng/catkin_ws/devel/lib/panda_mpc/test_plane_solver
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/trajectory_send /home/zheng/catkin_ws/devel/lib/panda_mpc/trajectory_send
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/qptest /home/zheng/catkin_ws/devel/lib/panda_mpc/qptest
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv/UI.lisp /home/zheng/catkin_ws/devel/share/common-lisp/ros/panda_mpc/srv/UI.lisp

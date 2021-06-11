@@ -27,13 +27,13 @@ bool MPCTask::init(const Eigen::VectorXd & q_init){
   task.f_.setZero();
   task.task_des_.resize(dof_);
   task.task_des_ = q_init;
-  task.weight = 1000;
+  task.weight = 10000;
   // Add joint position tracking task
   task_container_.push_back(task);
 
   // Add joint velocity tracking task
   task.task_name_="qd_tracking";
-  task.weight = 0.01;
+  task.weight = 0.0;
   task_container_.push_back(task);
 
   // Add joint acceleration tracking task
@@ -86,7 +86,7 @@ bool MPCTask::updateTaskContainer(const Eigen::VectorXd& S, const Eigen::VectorX
 
   if(task_container_[0].task_name_=="q_tracking"){
      task_container_[0].task_des_ = q_des.head(dof_);
-     task_container_[0].weight = 10000;
+     task_container_[0].weight = 1000;
      task_container_[0].E_ = mpc_params_.Pu_;
      task_container_[0].f_ = mpc_params_.Px_*S - q_des;
 
@@ -97,7 +97,7 @@ bool MPCTask::updateTaskContainer(const Eigen::VectorXd& S, const Eigen::VectorX
 
   // 2. joint velocity tracking update
   if(task_container_[1].task_name_=="qd_tracking"){
-     task_container_[1].weight = 1;
+     task_container_[1].weight = 0;
      task_container_[1].E_ = mpc_params_.Pudq_;
      task_container_[1].f_ = mpc_params_.Pxdq_*S - qd_des;
    }else {
@@ -108,7 +108,7 @@ bool MPCTask::updateTaskContainer(const Eigen::VectorXd& S, const Eigen::VectorX
   // 3. joint acceleration tracking update
   if(task_container_[2].task_name_=="qdd_tracking"){
      task_container_[2].task_des_ = qdd_des.head(dof_);
-     task_container_[2].weight = 0.1;
+     task_container_[2].weight = 1;
      task_container_[2].E_.setIdentity();
      task_container_[2].f_.setZero();
    }else {
