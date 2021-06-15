@@ -34,34 +34,47 @@ void qpSolver::configureQP(int num_variable, int num_constraint){
   // Set default options;
   qpOASES::Options options;
   options.setToFast();
+  options.enableFlippingBounds = qpOASES::BT_FALSE;
   options.enableRegularisation = qpOASES::BT_FALSE;
   options.enableEqualities = qpOASES::BT_TRUE;
-  options.printLevel = qpOASES::PL_NONE;
+  options.printLevel = qpOASES::PL_HIGH;
+  options.numRefinementSteps = 100;
 
   configureQP(num_variable, num_constraint, options);
 }
 
 
-void qpSolver::solve(){
+bool qpSolver::solve(){
 
   qp_solver_->setOptions(options_);
   nWSR_ = 1000000;
-  if(!qp_solver_->isInitialised()){
+//  if(!qp_solver_->isInitialised()){
     //Initialise the problem, once it has found a solution, we can hotstart
     ret_ = qp_solver_->init(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(),nWSR_);
-  }else
-  {
-    ret_ = qp_solver_->hotstart(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(),nWSR_);
-  }
+//  }else
+//  {
+//    ret_ = qp_solver_->hotstart(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(),nWSR_);
+//  }
 
   // Zeros acceleration if no solution found
   optimal_solution_.setZero();
 
   if(ret_ == qpOASES::SUCCESSFUL_RETURN){
     qp_solver_->getPrimalSolution(optimal_solution_.data());
+    return true;
   }else{
     std::cout << " print ret " << ": " << ret_<<'\n';
     std::cout << "QPOasese failed! sending zeros solution " << std::endl;
+//    std::cout <<"qpProblem status is : " << qp_solver_->getStatus()<<'\n';
+//    std::cout <<"qpProblem obj is : " << qp_solver_->getObjVal()<<'\n';
+//    std::cout <<"qpProblem cst number is : " << qp_solver_->getNC()<<'\n';
+//    std::cout <<"qpProblem variable number is : " << qp_solver_->getNV()<<'\n';
+//    std::cout <<"qpProblem is initialized ? " << qp_solver_->isInitialised()<<'\n';
+//    std::cout <<"qpProblem is solved ? " << qp_solver_->isSolved()<<'\n';
+//    std::cout <<"qpProblem is infeasible ? " << qp_solver_->isInfeasible()<<'\n';
+//    std::cout <<"qpProblem is Unbounded ? " << qp_solver_->isUnbounded()<<'\n';
+//    std::cout <<" print level : " << qp_solver_->getPrintLevel() << std::endl;
+    return false;
   }
 }
 
@@ -102,5 +115,6 @@ void qpSolver::solvePlane(){
   }else{
     std::cout << " print ret " << ": " << ret_<<'\n';
     std::cout << "QPOasese failed! cannot find a plane " << std::endl;
+
   }
 }

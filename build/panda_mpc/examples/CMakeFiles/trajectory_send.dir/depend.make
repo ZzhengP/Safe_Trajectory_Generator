@@ -20,6 +20,8 @@ examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catki
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/planning/plane.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/planning/plane_solver_old.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h
@@ -71,7 +73,10 @@ examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/controller_interface/multi_interface_controller.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/eigen_conversions/eigen_kdl.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/eigen_conversions/eigen_msg.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/eigen_stl_containers/eigen_stl_vector_container.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/geometry_msgs/Point.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/geometry_msgs/Point32.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/geometry_msgs/Polygon.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/geometry_msgs/Pose.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/geometry_msgs/PoseArray.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/geometry_msgs/PoseStamped.h
@@ -80,6 +85,8 @@ examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/geometry_msgs/Twist.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/geometry_msgs/Vector3.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/geometry_msgs/Wrench.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/graph_msgs/Edges.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/graph_msgs/GeometryGraph.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/hardware_interface/controller_info.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/hardware_interface/hardware_interface.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/hardware_interface/interface_resources.h
@@ -202,7 +209,12 @@ examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/ros/wall_timer.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/ros/wall_timer_options.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/rosconsole/macros_generated.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/rviz_visual_tools/deprecation.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/rviz_visual_tools/remote_control.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/rviz_visual_tools/rviz_visual_tools.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/sensor_msgs/JointState.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/sensor_msgs/Joy.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/std_msgs/ColorRGBA.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/std_msgs/Float64MultiArray.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/std_msgs/Header.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/std_msgs/MultiArrayDimension.h
@@ -210,6 +222,10 @@ examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/trac_ik/kdl_tl.hpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/trac_ik/nlopt_ik.hpp
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/trac_ik/trac_ik.hpp
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/trajectory_msgs/JointTrajectory.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/trajectory_msgs/JointTrajectoryPoint.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/visualization_msgs/Marker.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/visualization_msgs/MarkerArray.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcDecl.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /usr/include/eigen3/Eigen/Cholesky

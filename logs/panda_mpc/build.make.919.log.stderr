@@ -1,0 +1,12 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:[m[K In constructor '[01m[KpointSender::pointSender(ros::NodeHandle&, Eigen::VectorXd, Eigen::VectorXd)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:108:48:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[Kplanning::trajGen::init(ros::NodeHandle&)[m[K'
+     if(!trajectory_generation->init(node_handle[01;31m[K)[m[K){
+                                                [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:38:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:99:8:[m[K [01;36m[Knote: [m[Kcandidate: bool planning::trajGen::init(ros::NodeHandle&, KDL::Frame)
+   bool [01;36m[Kinit[m[K(ros::NodeHandle& node_handle, KDL::Frame init_frame);
+        [01;36m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:99:8:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

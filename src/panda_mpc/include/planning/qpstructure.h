@@ -11,7 +11,7 @@ struct qpSolver{
 
   void configureQP(int num_variable, int num_constraint);
   void configureQP(int num_variable, int num_constraint, qpOASES::Options options);
-  void solve();
+  bool solve();
   void solvePlane();
   // --------------------------- QP solver --------------------------------------
   std::shared_ptr<qpOASES::SQProblem> qp_solver_;

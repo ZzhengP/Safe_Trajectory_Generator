@@ -1,0 +1,86 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[Kbool Controller::Controller::UpdateMPCTraj()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:258:41:[m[K [01;31m[Kerror: [m[Kno match for '[01m[Koperator=[m[K' (operand types are '[01m[KEigen::DenseBase<Eigen::Matrix<double, -1, 1> >::SegmentReturnType {aka Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>}[m[K' and '[01m[KEigen::DenseCoeffsBase<Eigen::Matrix<double, -1, 1>, 1>::Scalar {aka double}[m[K')
+   state_.tail(dof) = qd_horizon_(dof,dof[01;31m[K)[m[K;
+                                         [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:72:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Block.h:161:5:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::BlockImpl<XprType, BlockRows, BlockCols, InnerPanel, Eigen::Dense>& Eigen::BlockImpl<XprType, BlockRows, BlockCols, InnerPanel, Eigen::Dense>::operator=(const Eigen::BlockImpl<XprType, BlockRows, BlockCols, InnerPanel, Eigen::Dense>&) [with XprType = Eigen::Matrix<double, -1, 1>; int BlockRows = -1; int BlockCols = 1; bool InnerPanel = false]
+     [01;36m[KE[m[KIGEN_INHERIT_ASSIGNMENT_OPERATORS(BlockImpl)
+     [01;36m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Block.h:161:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseCoeffsBase<Eigen::Matrix<double, -1, 1>, 1>::Scalar {aka double}[m[K' to '[01m[Kconst Eigen::BlockImpl<Eigen::Matrix<double, -1, 1>, -1, 1, false, Eigen::Dense>&[m[K'
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:449:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MapBase.h:284:14:[m[K [01;36m[Knote: [m[Kcandidate: Derived& Eigen::MapBase<Derived, 1>::operator=(const Eigen::MapBase<Derived, 1>&) [with Derived = Eigen::Block<Eigen::Matrix<double, -1, 1>, -1, 1, false>]
+     Derived& [01;36m[Koperator[m[K=(const MapBase& other)
+              [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/MapBase.h:284:14:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseCoeffsBase<Eigen::Matrix<double, -1, 1>, 1>::Scalar {aka double}[m[K' to '[01m[Kconst Eigen::MapBase<Eigen::Block<Eigen::Matrix<double, -1, 1>, -1, 1, false>, 1>&[m[K'
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:154:14:[m[K [01;36m[Knote: [m[Kcandidate: template<class OtherDerived> Derived& Eigen::MatrixBase<Derived>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; Derived = Eigen::Block<Eigen::Matrix<double, -1, 1>, -1, 1, false>]
+     Derived& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& other);
+              [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:154:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:258:41:[m[K [01;36m[Knote: [m[K  mismatched types '[01m[Kconst Eigen::ReturnByValue<Derived>[m[K' and '[01m[KEigen::DenseCoeffsBase<Eigen::Matrix<double, -1, 1>, 1>::Scalar {aka double}[m[K'
+   state_.tail(dof) = qd_horizon_(dof,dof[01;36m[K)[m[K;
+                                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:416:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:150:14:[m[K [01;36m[Knote: [m[Kcandidate: template<class OtherDerived> Derived& Eigen::MatrixBase<Derived>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = OtherDerived; Derived = Eigen::Block<Eigen::Matrix<double, -1, 1>, -1, 1, false>]
+     Derived& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived>& other);
+              [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/MatrixBase.h:150:14:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:258:41:[m[K [01;36m[Knote: [m[K  mismatched types '[01m[Kconst Eigen::EigenBase<Derived>[m[K' and '[01m[KEigen::DenseCoeffsBase<Eigen::Matrix<double, -1, 1>, 1>::Scalar {aka double}[m[K'
+   state_.tail(dof) = qd_horizon_(dof,dof[01;36m[K)[m[K;
+                                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:425:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Assign.h:64:30:[m[K [01;36m[Knote: [m[Kcandidate: template<class OtherDerived> Derived& Eigen::MatrixBase<Derived>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = OtherDerived; Derived = Eigen::Block<Eigen::Matrix<double, -1, 1>, -1, 1, false>]
+ EIGEN_STRONG_INLINE Derived& [01;36m[KMatrixBase<Derived>[m[K::operator=(const DenseBase<OtherDerived>& other)
+                              [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Assign.h:64:30:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:258:41:[m[K [01;36m[Knote: [m[K  mismatched types '[01m[Kconst Eigen::DenseBase<Derived>[m[K' and '[01m[KEigen::DenseCoeffsBase<Eigen::Matrix<double, -1, 1>, 1>::Scalar {aka double}[m[K'
+   state_.tail(dof) = qd_horizon_(dof,dof[01;36m[K)[m[K;
+                                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:425:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Assign.h:55:30:[m[K [01;36m[Knote: [m[Kcandidate: Derived& Eigen::MatrixBase<Derived>::operator=(const Eigen::MatrixBase<Derived>&) [with Derived = Eigen::Block<Eigen::Matrix<double, -1, 1>, -1, 1, false>]
+ EIGEN_STRONG_INLINE Derived& [01;36m[KMatrixBase<Derived>[m[K::operator=(const MatrixBase& other)
+                              [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Assign.h:55:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseCoeffsBase<Eigen::Matrix<double, -1, 1>, 1>::Scalar {aka double}[m[K' to '[01m[Kconst Eigen::MatrixBase<Eigen::Block<Eigen::Matrix<double, -1, 1>, -1, 1, false> >&[m[K'
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:72:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Block.h:341:5:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::internal::BlockImpl_dense<XprType, BlockRows, BlockCols, InnerPanel, true>& Eigen::internal::BlockImpl_dense<XprType, BlockRows, BlockCols, InnerPanel, true>::operator=(const Eigen::internal::BlockImpl_dense<XprType, BlockRows, BlockCols, InnerPanel, true>&) [with XprType = Eigen::Matrix<double, -1, 1>; int BlockRows = -1; int BlockCols = 1; bool InnerPanel = false]
+     [01;36m[KE[m[KIGEN_INHERIT_ASSIGNMENT_OPERATORS(BlockImpl_dense)
+     [01;36m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Block.h:341:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseCoeffsBase<Eigen::Matrix<double, -1, 1>, 1>::Scalar {aka double}[m[K' to '[01m[Kconst Eigen::internal::BlockImpl_dense<Eigen::Matrix<double, -1, 1>, -1, 1, false, true>&[m[K'
+[01m[K/usr/include/eigen3/Eigen/src/Core/Block.h:111:5:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::Block<XprType, BlockRows, BlockCols, InnerPanel>& Eigen::Block<XprType, BlockRows, BlockCols, InnerPanel>::operator=(const Eigen::Block<XprType, BlockRows, BlockCols, InnerPanel>&) [with XprType = Eigen::Matrix<double, -1, 1>; int BlockRows = -1; int BlockCols = 1; bool InnerPanel = false]
+     [01;36m[KE[m[KIGEN_INHERIT_ASSIGNMENT_OPERATORS(Block)
+     [01;36m[K^[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Block.h:111:5:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseCoeffsBase<Eigen::Matrix<double, -1, 1>, 1>::Scalar {aka double}[m[K' to '[01m[Kconst Eigen::Block<Eigen::Matrix<double, -1, 1>, -1, 1, false>&[m[K'
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:453:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/VectorBlock.h:56:47:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>& Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>::operator=(const Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>&)
+ template<typename VectorType, int Size> class [01;36m[KVectorBlock[m[K
+                                               [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/VectorBlock.h:56:47:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseCoeffsBase<Eigen::Matrix<double, -1, 1>, 1>::Scalar {aka double}[m[K' to '[01m[Kconst Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>&[m[K'
+[01m[K/usr/include/eigen3/Eigen/src/Core/VectorBlock.h:56:47:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>& Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>::operator=(Eigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>&&)
+[01m[K/usr/include/eigen3/Eigen/src/Core/VectorBlock.h:56:47:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::DenseCoeffsBase<Eigen::Matrix<double, -1, 1>, 1>::Scalar {aka double}[m[K' to '[01m[KEigen::VectorBlock<Eigen::Matrix<double, -1, 1>, -1>&&[m[K'
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,9 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:118:78:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K-Wmultichar[m[K]
+     std::cout << "robotVerticesAugmented_ " << robotVerticesAugmented_[0] << [01;35m[K'\n '[m[K;
+                                                                              [01;35m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:119:68:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K-Wmultichar[m[K]
+     std::cout << "q_horizon_precedent_ " << q_horizon_precedent_<< [01;35m[K'\n '[m[K;
+                                                                    [01;35m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:120:48:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K-Wmultichar[m[K]
+     std::cout << "J_horizon_ " << J_horizon_<< [01;35m[K'\n '[m[K;
+                                                [01;35m[K^~~~~[m[K

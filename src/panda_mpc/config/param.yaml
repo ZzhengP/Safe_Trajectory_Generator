@@ -22,10 +22,10 @@ panda_mpc:
     torque_max_ : [87.0 , 87.0 , 87.0 , 87.0 , 12.0 , 12.0 , 12.0]
     init_pos_attend_ : false
     regularisation_weight_ : 1.0e-5
-    N_ : 12
+    N_ : 2
     dt_ : 0.05
-    dsafe_ : 0.2
+    dsafe_ : 0.1
     robot_member_ : 1
     robot_vertices_ : 1
     obstacle_member_: 1
-    obstacle_vertices_ : 8
+    obstacle_vertices_ : 1

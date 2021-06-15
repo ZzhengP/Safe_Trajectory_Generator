@@ -1,0 +1,11 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[Kbool Controller::Controller::UpdateMPCTraj()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:324:22:[m[K [01;31m[Kerror: [m[K'[01m[Kcolor_plane_[m[K' was not declared in this scope
+                      [01;31m[Kcolor_plane_[m[K
+                      [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:324:22:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Kroot_link_[m[K'
+                      [01;36m[Kcolor_plane_[m[K
+                      [01;36m[K^~~~~~~~~~~~[m[K
+                      [32m[Kroot_link_[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

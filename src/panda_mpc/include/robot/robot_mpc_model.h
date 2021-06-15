@@ -146,6 +146,8 @@ public:
 
   void computeJacobianHorizon(const Eigen::VectorXd & q_horizon);
 
+  Eigen::MatrixXd computeTipPositionHorizon(const Eigen::VectorXd & q_horizon,
+                                            int robot_vertices);
   // Update MPC parameters
   void update(Eigen::VectorXd state, Eigen::VectorXd solution);
 
@@ -272,6 +274,7 @@ public:
   Eigen::VectorXd getJointvelHorizon(){
     return mpc_params.qd_horizon_;
   }
+
 
 private:
 

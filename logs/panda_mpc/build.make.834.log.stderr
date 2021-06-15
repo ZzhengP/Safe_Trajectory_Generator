@@ -1,0 +1,14 @@
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:347:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h:11[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h:4[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:1[m[K:
+/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h: In instantiation of '[01m[KEigen::DenseBase<Derived>::SegmentReturnType Eigen::DenseBase<Derived>::segment(Eigen::Index, Eigen::Index) [with Derived = Eigen::Matrix<double, -1, -1>; Eigen::DenseBase<Derived>::SegmentReturnType = Eigen::VectorBlock<Eigen::Matrix<double, -1, -1>, -1>; Eigen::Index = long int][m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_mpc_model.cpp:67:43:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/plugins/BlockMethods.h:890:3:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: YOU_TRIED_CALLING_A_VECTOR_METHOD_ON_A_MATRIX
+   [01;31m[KE[m[KIGEN_STATIC_ASSERT_VECTOR_ONLY(Derived)
+   [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/robot/robot_mpc_model.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

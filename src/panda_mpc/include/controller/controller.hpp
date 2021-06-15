@@ -42,9 +42,7 @@
 #include <panda_traj/panda_traj.hpp>
 #include <robot/robot_model.h>
 #include <planning/traj_generation.hpp>
-#include <planning/plane.h>
-
-
+#include <rviz_visual_tools/rviz_visual_tools.h>
 namespace Controller {
 
 class Controller{
@@ -240,7 +238,6 @@ private:
 
   // ---------------------- Generate MPC trajectory ----------------------------
   std::shared_ptr<planning::trajGen> trajectory_generation; /*!< @brief MPC trajectory generation module */
-  std::shared_ptr<planning::plane> plane_generation; /*!< @brief Computes separating plane */
 
   bool init_pos_attend_, execute, sub_goal_attend_, wait; /*!< @brief flag used to control task transition */
   int N_; /*!< @brief MPC horizon */
@@ -255,8 +252,10 @@ private:
   Eigen::VectorXd ee_vel_; /*!< @brief end-effector cartesian velocity  */
   KDL::Frame Goal_A_frame_, Goal_B_frame_ , X_mpc_; /*!< @brief goal frame and predicted MPC frame  */
   KDL::Jacobian kdl_J; /*!< @brief KDL Jacobian */
-  ros::Time begin_time_, end_time_, wait_begin_, wait_end_;
-  KDL::JntArray q_goal_A_, q_goal_B_;
+  ros::Time begin_time_, end_time_, wait_begin_, wait_end_;  /*!< @brief duration which control robot plannification module  */
+  KDL::JntArray q_goal_A_, q_goal_B_;  /*!< @brief two different goals  */
+
+
 };
 
 }

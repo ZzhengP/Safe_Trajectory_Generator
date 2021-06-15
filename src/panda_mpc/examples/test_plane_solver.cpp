@@ -47,8 +47,9 @@ int main(int argc, char** argv){
   std::vector<Eigen::MatrixXd> obsVerticesAugmented;
 
   obsVertices.resize(3*nbr_of_obstacle,nbr_of_obstacle_vertices);
-  obsVertices = ComputeObstacleVertices(obsCentre,obsSize);
-//  obsVertices << obsCentre;
+//  obsVertices = ComputeObstacleVertices(obsCentre,obsSize);
+  obsVertices << obsCentre;
+
 
   obsVerticesAugmented.resize(nbr_of_obstacle);
   for (int j(0); j < nbr_of_obstacle; j++){

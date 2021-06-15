@@ -3,14 +3,11 @@
 namespace planning {
 
 plane::plane(ros::NodeHandle& node_handle, int N, int nbrCst, double dsafe):N_{N},nbrCst_{nbrCst},dsafe_{dsafe},
-  plane_solver_{nbrCst,dsafe}
+  plane_solver_{nbrCst,dsafe},rviz_planes_publisher_{"panda_link0","/separating_plane"},rviz_obstacle_publisher_{"panda_link0","/obstacle"}
 {
 
  ROS_WARN_STREAM("Plane Constructor");
   //
- rviz_planes_publisher_.reset(new rviz_visual_tools::RvizVisualTools("panda_link0", "/separating_plane"));
- node_handle.getParam("/panda_mpc/N_", N_);
- node_handle.getParam("/panda_mpc/dsafe_", dsafe_);
  node_handle.getParam("/panda_mpc/robot_member_", nbr_of_robotPart_);
  node_handle.getParam("/panda_mpc/obstacle_member_", nbr_of_obsPart_);
  node_handle.getParam("/panda_mpc/robot_vertices_", nbr_of_robot_vertices_);
@@ -22,7 +19,6 @@ plane::plane(ros::NodeHandle& node_handle, int N, int nbrCst, double dsafe):N_{N
 
 
 
-  obs_center_ << 0.6, 0, 0.1;
   obstacle_vertices_.resize(nbr_of_obsPart_);
 
 
@@ -71,10 +67,10 @@ bool plane::init(const std::vector<Eigen::MatrixXd> &robot_vertices_horizon,
     N_==1 ? plane_location_[i].resize(5,N_):plane_location_[i].resize(5,N_-1);
     N_==1 ? plane_precedent_[i].resize(5,N_):plane_precedent_[i].resize(5,N_-1);
     for (int j(0); j<N_-1; j++){
-      plane_location_[i].block(0,j,5,1) << 1,
-                                           0,
-                                           0,
-                                           0.8,
+      plane_location_[i].block(0,j,5,1) << 0,
+                                           1,
+                                           0.1,
+                                           0.,
                                            0;
 
     }
@@ -90,7 +86,16 @@ bool plane::init(const std::vector<Eigen::MatrixXd> &robot_vertices_horizon,
 bool plane::update(const std::vector<Eigen::MatrixXd> &robot_vertices_horizon,
                    const std::vector<Eigen::MatrixXd> &obstacle_vertices_horizon){
 
-   rviz_planes_publisher_->deleteAllMarkers();
+//   rviz_planes_publisher_.deleteAllMarkers();
+//   rviz_obstacle_publisher_.deleteAllMarkers();
+
+   obs_center_ << 0.4, -0.2, 0.1;
+   rviz_visual_tools::colors color = rviz_visual_tools::BLUE;
+//   rviz_obstacle_publisher_.publishSphere(obs_center_,
+//                                           color,
+//                                           0.1);
+//   rviz_obstacle_publisher_.trigger();
+
 
    bool is_plane_solved = false;
   // Update robot vertices data
@@ -109,7 +114,6 @@ bool plane::update(const std::vector<Eigen::MatrixXd> &robot_vertices_horizon,
       plane_solution.resize(5);
       for (int k(0); k < N_-1 ; k++){
 
-         ROS_WARN_STREAM("here");
          plane_precedent_[0].block(0,k,5,1)= plane_location_[0].block(0,k,5,1);
 //         plane_solution  =  plane_solver_.update(plane_precedent_[0].block(0,k,5,1), robot_vertices_horizon_[0].block(0,k,3,2*nbr_of_robot_vertices_),
 //                           obstacle_vertices_horizon_[0].block(0,k*nbr_of_obstacle_vertices_,3,2*nbr_of_obstacle_vertices_));
@@ -118,20 +122,23 @@ bool plane::update(const std::vector<Eigen::MatrixXd> &robot_vertices_horizon,
                                     obstacle_vertices_horizon_[0].block(0,k*nbr_of_obstacle_vertices_,3,2*nbr_of_obstacle_vertices_),
                                     plane_location_[0].block(0,k,5,1));
 
-         is_plane_solved = plane_solver_.solve();
-         if (!is_plane_solved)
+          is_plane_solved = plane_solver_.solve();
+
+            plane_location_[0].block(0,k,5,1) = plane_solver_.getSolution();
+            plane_location_[0].block(0,k,3,1) = plane_location_[0].block(0,k,3,1)/plane_location_[0].block(0,k,3,1).norm();
+            plane_location_[0](3,k) = plane_location_[0](3,k)*plane_location_[0].block(0,k,3,1).norm();
+
+
+         if (!is_plane_solved){
            ROS_WARN_STREAM("plane solution failed");
-         plane_location_[0].block(0,k,5,1) = plane_solver_.getSolution();
+
+         }else{
+//           plane_location_[0].block(0,k,5,1) = plane_solver_.getSolution();
+         }
       }
     }
   }
 
-  publishABCDPlane(plane_location_[0](0,0),
-                   plane_location_[0](1,0),
-                   plane_location_[0](2,0),
-                   -plane_location_[0](3,0),
-                   color_plane_
-                   );
 
   return true;
 }
@@ -200,25 +207,25 @@ std::pair<int,int> closestPoint(Eigen::MatrixXd robotVertices, Eigen::MatrixXd o
   return indexClosestPts;
 }
 
-bool plane::publishABCDPlane(double A, double B, double C, double D, rviz_visual_tools::colors color,
-                      double x_width, double y_width ){
+//bool plane::publishABCDPlane(double A, double B, double C, double D, rviz_visual_tools::colors color,
+//                      double x_width, double y_width ){
 
-    Eigen::Vector3d n(A,B,C);
-    double distance = D/n.norm();
-    Eigen::Vector3d center = -distance*n.normalized();
+//    Eigen::Vector3d n(A,B,C);
+//    double distance = D/n.norm();
+//    Eigen::Vector3d center = -distance*n.normalized();
 
-    Eigen::Isometry3d pose;
-    pose.translation() = center;
+//    Eigen::Isometry3d pose;
+//    pose.translation() = center;
 
-    Eigen::Vector3d z_0 = Eigen::Vector3d::UnitZ();
-    Eigen::Quaterniond q= Eigen::Quaterniond::FromTwoVectors(z_0,n);
-    pose.linear() = q.toRotationMatrix();
+//    Eigen::Vector3d z_0 = Eigen::Vector3d::UnitZ();
+//    Eigen::Quaterniond q= Eigen::Quaterniond::FromTwoVectors(z_0,n);
+//    pose.linear() = q.toRotationMatrix();
 
-    double height = 0.001;
+//    double height = 0.001;
 
-    rviz_planes_publisher_->publishCuboid(pose, x_width,y_width,height,color);
+//    rviz_planes_publisher_.publishCuboid(pose, x_width,y_width,height,color);
 
-    rviz_planes_publisher_->trigger();
-    return true;
-}
+//    rviz_planes_publisher_.trigger();
+//    return true;
+//}
 }

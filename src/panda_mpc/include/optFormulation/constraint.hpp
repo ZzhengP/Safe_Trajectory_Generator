@@ -38,9 +38,43 @@ public:
   }
 
   bool init(const Eigen::VectorXd &q_min, const Eigen::VectorXd &q_max,
-            const Eigen::VectorXd &qd_min, const Eigen::VectorXd &qd_max);
+            const Eigen::VectorXd &qd_min, const Eigen::VectorXd &qd_max,
+            double dsafe);
 
-  bool update(const Eigen::VectorXd &state, Eigen::VectorXd q_des);
+  bool update(const Eigen::VectorXd &state, Eigen::VectorXd q_des,
+              const std::vector<Eigen::MatrixXd>& robotVerticesAugmented,
+              const std::vector<Eigen::MatrixXd>& plane,
+              const Eigen::MatrixXd & JacobianHorizon, const Eigen::VectorXd& qHorizonPrecedent);
+
+
+  bool avoidanceTest(const Eigen::VectorXd &state,
+                                    Eigen::MatrixXd robotVerticesAugmented,
+                                    Eigen::MatrixXd plane,
+                                    Eigen::MatrixXd Jacobian,
+                                    Eigen::VectorXd qHorizonPrecedent,
+                                    int index);
+
+  bool computeUpperBoundAndConstraint(const Eigen::VectorXd& state,
+                                      const std::vector<Eigen::MatrixXd>& robotVerticesAugmented,
+                                      const std::vector<Eigen::MatrixXd>& plane,
+                                      const Eigen::MatrixXd & JacobianHorizon,
+                                      const Eigen::VectorXd& qHorizonPrecedent,
+                                      int index);
+
+  bool addConstraint(const constraint& new_constraint){
+
+    constraint_container_.push_back(new_constraint);
+    constraint_nbr_ += new_constraint.constraint_size_;
+    lbA_.resize(constraint_nbr_);
+    ubA_.resize(constraint_nbr_);
+    A_.resize(constraint_nbr_, dof_*N_);
+
+    lbA_.setConstant(-10000);
+    ubA_.setConstant(10000);
+    A_.setIdentity();
+    return true;
+  }
+
 
   void setMPCParams(const robot::MPC_param& param){
 
@@ -90,6 +124,7 @@ private:
   int N_;
   int dof_;
   double dt_;
+  double dsafe_;
   Eigen::VectorXd q_min_mpc_;
   Eigen::VectorXd q_max_mpc_;
   Eigen::VectorXd qd_min_mpc_;
@@ -97,7 +132,11 @@ private:
 
   robot::MPC_param mpc_params_; /*!< @brief model predictive parameters to define mpc task */
 
-  bool updateConstraintContainer(const Eigen::VectorXd& state, Eigen::VectorXd q_des);
+  bool updateConstraintContainer(const Eigen::VectorXd& state, Eigen::VectorXd q_des,
+                                 const std::vector<Eigen::MatrixXd>& robotVerticesAugmented,
+                                 const std::vector<Eigen::MatrixXd>& plane,
+                                 const Eigen::MatrixXd & JacobianHorizon, const Eigen::VectorXd& qHorizonPrecedent);
+
 
   // ------------------------------------------------------------------------------------------------------------------------
   //                    Quadratic Programming parameters: Cost Function

@@ -105,7 +105,7 @@ public:
     trajectory_generation.reset(new planning::trajGen(node_handle,q_init,qd_init));
 
     trajectory_generation->getRobotModel()->CartToJnt(x_des,q_des);
-    if(!trajectory_generation->init(node_handle)){
+    if(!trajectory_generation->init(node_handle,x_des)){
       ROS_ERROR_STREAM("Unable to initialize properly parameters: exit");
     }
 
@@ -146,7 +146,8 @@ public:
       q_horizon = trajectory_generation->getJointHorizon();
       qd_horizon = trajectory_generation->getJointvelHorizon();
 
-      solution = trajectory_generation->update(state,q_horizon,qd_horizon,q_des_mpc,qd_des_mpc,solution_precedent);
+
+      solution = trajectory_generation->update(state,q_horizon,qd_horizon,q_des_mpc,qd_des_mpc,solution_precedent,J.data);
 
       std::cout <<" solution :\n " << solution.head(dof).transpose() <<'\n';
 //      std::cout <<" state :\n" << state.head(dof).transpose() <<'\n';
@@ -199,7 +200,7 @@ public:
 
 
 
-      solution = trajectory_generation->update(state,q_horizon,qd_horizon,q_des_mpc,qd_des_mpc,solution_precedent);
+      solution = trajectory_generation->update(state,q_horizon,qd_horizon,q_des_mpc,qd_des_mpc,solution_precedent, J.data);
 
 //      std::cout <<" solution :\n " << solution.head(dof).transpose() <<'\n';
 //      std::cout <<" state :\n" << state.head(dof).transpose() <<'\n';

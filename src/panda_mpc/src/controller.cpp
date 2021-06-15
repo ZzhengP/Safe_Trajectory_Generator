@@ -72,12 +72,12 @@ bool Controller::Init(ros::NodeHandle& node_handle,const Eigen::VectorXd& q_init
     traj_properties_.play_traj_ = true;
 
     next_tf_.M = X_curr_.M;
-    next_tf_.p[0] = 0.5;
-    next_tf_.p[1] = 0.;
-    next_tf_.p[2] = 0.4;
-    next_point_.x = 0.5;
-    next_point_.y = 0.;
-    next_point_.z = 0.4;
+    next_tf_.p[0] = 0.4;
+    next_tf_.p[1] = 0.4;
+    next_tf_.p[2] = 0.1;
+    next_point_.x = 0.4;
+    next_point_.y = 0.4;
+    next_point_.z = 0.1;
     preview_point_ = next_point_;
     x_err.setConstant(1);
     init_pos_attend_ = false;
@@ -89,6 +89,11 @@ bool Controller::Init(ros::NodeHandle& node_handle,const Eigen::VectorXd& q_init
     // ----------------------- Init MPC trajectory attributs -------------------
     if(!InitMPCTraj(node_handle,q_init,qd_init))
       return false;
+
+    // -------------------------------------------------------------------------
+
+
+
 
     return true;
 }
@@ -136,6 +141,7 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
       execute = false;
     }
 
+
     // Control the frequency of planning, MPC trajectory generation is called each delta t time;
     end_time_ = ros::Time::now();
     wait_end_ = ros::Time::now();
@@ -144,7 +150,7 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
       execute = true;
 
     ros::Duration duration_wait = end_time_ - begin_time_;
-    if(duration_wait.toSec() > 1.5) // Change This parameter influences robot's behaviors;
+    if(duration_wait.toSec() > 1) // Change This parameter influences robot's behaviors;
       wait = false;
 
     // ------------------------------------------------------------------------------
@@ -242,9 +248,13 @@ bool Controller::UpdateMPCTraj(){
   q_horizon_ = trajectory_generation->getJointHorizon();
   qd_horizon_ = trajectory_generation->getJointvelHorizon();
 
-  solution_ = trajectory_generation->update(state_,q_horizon_,qd_horizon_,q_des_mpc_,qd_des_mpc_,solution_precedent_);
+  solution_ = trajectory_generation->update(state_,q_horizon_,qd_horizon_,q_des_mpc_,qd_des_mpc_,solution_precedent_,J);
 
   state_ = state_A_*state_ + state_B_*solution_.head(dof);
+
+
+
+
   q_.data = state_.head(dof);
   q_mpc_.q.data = state_.head(dof);
   q_mpc_.qdot.data = state_.tail(dof);
@@ -268,6 +278,7 @@ bool Controller::UpdateMPCTraj(){
   next_tf_.p[0] = next_point_.x;
   next_tf_.p[1] = next_point_.y;
   next_tf_.p[2] = next_point_.z;
+  next_tf_.M = X_mpc_.M;
 
   return true;
 }
@@ -309,10 +320,10 @@ bool Controller::InitMPCTraj(ros::NodeHandle &node_handle, const Eigen::VectorXd
   state_A_.resize(2*dof, 2*dof);
   state_B_.resize(2*dof,dof);
 
-  Goal_A_frame_.p[0] = 0.4, Goal_A_frame_.p[1] = 0.4, Goal_A_frame_.p[2] = 0.3;
+  Goal_A_frame_.p[0] = 0.4, Goal_A_frame_.p[1] = 0.4, Goal_A_frame_.p[2] = 0.2;
   Goal_A_frame_.M = X_curr_.M;
 
-  Goal_B_frame_.p[0] = 0.4, Goal_B_frame_.p[1] = -0.4, Goal_B_frame_.p[2] = 0.3;
+  Goal_B_frame_.p[0] = 0.4, Goal_B_frame_.p[1] = -0.4, Goal_B_frame_.p[2] = 0.2;
   Goal_B_frame_.M = X_curr_.M;
 
   q_des_.resize(dof);
@@ -325,7 +336,7 @@ bool Controller::InitMPCTraj(ros::NodeHandle &node_handle, const Eigen::VectorXd
   trajectory_generation->getRobotModel()->CartToJnt(Goal_A_frame_,q_goal_A_);
   trajectory_generation->getRobotModel()->CartToJnt(Goal_B_frame_,q_goal_B_);
 
-  if(!trajectory_generation->init(node_handle)){
+  if(!trajectory_generation->init(node_handle,next_tf_)){
     ROS_ERROR_STREAM("Unable to initialize properly parameters: exit");
     return false;
   }
@@ -406,6 +417,8 @@ void Controller::load_parameters(){
     getRosParam("/panda_mpc/regularisation_weight_",regularisation_weight_);
     getRosParam("/panda_mpc/root_link_",root_link_);
     getRosParam("/panda_mpc/tip_link_",tip_link_);
+
+
 
     ROS_INFO_STREAM ( "------------- Parameters Loaded -------------" );
 }
@@ -537,6 +550,8 @@ void Controller::updateTrajectoryPoint(const panda_mpc::trajectoryMsg::ConstPtr&
   std::cout << "Received next point computing traj and publishing" << std::endl;
 
 }
+
+
 // End of namespace
 }
 

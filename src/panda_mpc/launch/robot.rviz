@@ -8,9 +8,11 @@ Panels:
         - /Status1
         - /RobotModel1
         - /Grid1
+        - /Path1
         - /PoseArray1
         - /Path2
         - /Pose1
+        - /Marker2
       Splitter Ratio: 0.5
     Tree Height: 728
   - Class: rviz/Selection
@@ -151,8 +153,8 @@ Visualization Manager:
       Radius: 0.029999999329447746
       Shaft Diameter: 0.10000000149011612
       Shaft Length: 0.10000000149011612
-      Topic: /panda_mpc/Ros_Path
-      Unreliable: false
+      Topic: /mpc_path
+      Unreliable: true
       Value: true
     - Alpha: 1
       Arrow Length: 0.10000000149011612
@@ -190,7 +192,7 @@ Visualization Manager:
       Radius: 0.029999999329447746
       Shaft Diameter: 0.10000000149011612
       Shaft Length: 0.10000000149011612
-      Topic: /panda_mpc/Ros_Path
+      Topic: /mpc_path
       Unreliable: false
       Value: true
     - Alpha: 1
@@ -208,12 +210,28 @@ Visualization Manager:
       Topic: /panda_mpc/ee_pose
       Unreliable: false
       Value: true
-    - Class: rviz/MarkerArray
+    - Class: rviz/Marker
       Enabled: true
       Marker Topic: /separating_plane
-      Name: MarkerArray
+      Name: Marker
       Namespaces:
-        Cuboid: true
+        {}
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /obstacle_shape
+      Name: Marker
+      Namespaces:
+        {}
+      Queue Size: 100
+      Value: true
+    - Class: rviz/Marker
+      Enabled: true
+      Marker Topic: /table_plane
+      Name: Marker
+      Namespaces:
+        {}
       Queue Size: 100
       Value: true
   Enabled: true
@@ -244,25 +262,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.5254058837890625
+      Distance: 4.545431613922119
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.22649407386779785
-        Y: -0.14162486791610718
-        Z: 0.45929962396621704
+        X: -0.08182145655155182
+        Y: -0.28061869740486145
+        Z: 0.6618097424507141
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5553981065750122
+      Pitch: 0.3703979253768921
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 1.000400185585022
+      Yaw: 1.0503995418548584
     Saved: ~
 Window Geometry:
   Displays:

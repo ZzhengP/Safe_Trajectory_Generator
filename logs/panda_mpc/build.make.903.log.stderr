@@ -1,0 +1,11 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:[m[K In member function '[01m[Kbool planning::plane::publishABCDPlane(double, double, double, double, rviz_visual_tools::colors, double, double)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:231:27:[m[K [01;31m[Kerror: [m[Kbase operand of '[01m[K->[m[K' has non-pointer type '[01m[Krviz_visual_tools::RvizVisualTools[m[K'
+     rviz_planes_publisher_[01;31m[K->[m[KpublishCuboid(pose, x_width,y_width,height,color);
+                           [01;31m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:233:27:[m[K [01;31m[Kerror: [m[Kbase operand of '[01m[K->[m[K' has non-pointer type '[01m[Krviz_visual_tools::RvizVisualTools[m[K'
+     rviz_planes_publisher_[01;31m[K->[m[Ktrigger();
+                           [01;31m[K^~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

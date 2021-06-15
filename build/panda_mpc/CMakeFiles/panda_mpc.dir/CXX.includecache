@@ -315,6 +315,8 @@ robot/robot_model.h
 -
 planning/traj_generation.hpp
 -
+rviz_visual_tools/rviz_visual_tools.h
+-
 
 /home/zheng/catkin_ws/src/panda_mpc/include/controller/qpsolver.h
 Eigen/Dense
@@ -480,6 +482,14 @@ optFormulation/task.hpp
 robot/robot_mpc_model.h
 -
 planning/qpstructure.h
+-
+planning/plane.h
+-
+visualization_msgs/Marker.h
+-
+nav_msgs/Path.h
+-
+geometry_msgs/PoseStamped.h
 -
 
 /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h

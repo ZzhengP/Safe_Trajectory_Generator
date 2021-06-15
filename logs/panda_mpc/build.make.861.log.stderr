@@ -1,0 +1,16 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:[m[K In member function '[01m[Kbool PlaneSolver::solve()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:147:91:[m[K [01;31m[Kerror: [m[Kinvalid conversion from '[01m[KEigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar* {aka double*}[m[K' to '[01m[KqpOASES::int_t {aka int}[m[K' [[01;31m[K-fpermissive[m[K]
+       ret = example.hotstart(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),[01;31m[KlbA_.data()[m[K,ubA_.data(), nWSR );
+                                                                                  [01;31m[K~~~~~~~~~^~[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES.hpp:67:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/plane_solver_old.h:5[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:2[m[K:
+[01m[K/home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES/QProblem.hpp:273:15:[m[K [01;36m[Knote: [m[K  initializing argument 6 of '[01m[KqpOASES::returnValue qpOASES::QProblem::hotstart(const real_t*, const real_t*, const real_t*, const real_t*, const real_t*, qpOASES::int_t&, qpOASES::real_t*, const qpOASES::Bounds*, const qpOASES::Constraints*)[m[K'
+   returnValue [01;36m[Khotstart[m[K( const real_t* const g_new,      /**< Gradient of neighbouring QP to be solved. */
+               [01;36m[K^~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp:147:91:[m[K [01;31m[Kerror: [m[Kcannot bind rvalue '[01m[K(qpOASES::int_t)((PlaneSolver*)this)->PlaneSolver::lbA_.Eigen::Matrix<double, -1, 1>::<anonymous>.Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::data()[m[K' to '[01m[KqpOASES::int_t& {aka int&}[m[K'
+       ret = example.hotstart(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),[01;31m[KlbA_.data()[m[K,ubA_.data(), nWSR );
+                                                                                  [01;31m[K~~~~~~~~~^~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

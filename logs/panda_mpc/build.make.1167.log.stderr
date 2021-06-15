@@ -1,0 +1,12 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:[m[K In member function '[01m[Kvoid pointSender::update()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:203:114:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[Kplanning::trajGen::update(Eigen::VectorXd&, Eigen::VectorXd&, Eigen::VectorXd&, Eigen::VectorXd&, Eigen::VectorXd&, Eigen::VectorXd&)[m[K'
+       solution = trajectory_generation->update(state,q_horizon,qd_horizon,q_des_mpc,qd_des_mpc,solution_precedent[01;31m[K)[m[K;
+                                                                                                                  [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:38:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:105:19:[m[K [01;36m[Knote: [m[Kcandidate: Eigen::VectorXd planning::trajGen::update(Eigen::VectorXd, const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&, Eigen::MatrixXd)
+   Eigen::VectorXd [01;36m[Kupdate[m[K(Eigen::VectorXd S, const Eigen::VectorXd &q_horizon, const Eigen::VectorXd & qd_horizon,
+                   [01;36m[K^~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:105:19:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 6 provided
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

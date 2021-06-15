@@ -1,0 +1,10 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:[m[K In member function '[01m[Kbool planning::plane::update(const std::vector<Eigen::Matrix<double, -1, -1> >&, const std::vector<Eigen::Matrix<double, -1, -1> >&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:129:104:[m[K [01;31m[Kerror: [m[Krequest for member '[01m[Knorm[m[K' in '[01m[K((Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 1>*)((Eigen::DenseBase<Eigen::Matrix<double, -1, -1> >*)(&((planning::plane*)this)->planning::plane::plane_location_.std::vector<Eigen::Matrix<double, -1, -1> >::operator[](0))))->Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 1>::operator()(3, ((Eigen::Index)k))[m[K', which is of non-class type '[01m[KEigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 1>::Scalar {aka double}[m[K'
+          plane_location_[0].block(0,k,3,1) = plane_location_[0].block(0,k,3,1)/plane_location_[0](3,k).[01;31m[Knorm[m[K();
+                                                                                                        [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp:130:84:[m[K [01;31m[Kerror: [m[Krequest for member '[01m[Knorm[m[K' in '[01m[K((Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 1>*)((Eigen::DenseBase<Eigen::Matrix<double, -1, -1> >*)(&((planning::plane*)this)->planning::plane::plane_location_.std::vector<Eigen::Matrix<double, -1, -1> >::operator[](0))))->Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 1>::operator()(3, ((Eigen::Index)k))[m[K', which is of non-class type '[01m[KEigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 1>::Scalar {aka double}[m[K'
+          plane_location_[0](3,k) = plane_location_[0](3,k)*plane_location_[0](3,k).[01;31m[Knorm[m[K();
+                                                                                    [01;31m[K^~~~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

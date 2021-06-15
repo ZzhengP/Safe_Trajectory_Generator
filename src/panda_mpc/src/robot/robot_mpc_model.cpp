@@ -50,6 +50,29 @@ void RobotMPcModel::computeJacobianHorizon(const Eigen::VectorXd &q_horizon){
   }
 }
 
+Eigen::MatrixXd RobotMPcModel::computeTipPositionHorizon(const Eigen::VectorXd &q_horizon,
+                                                         int robot_vertices){
+
+    Eigen::MatrixXd robotVerticesAugmented;
+    robotVerticesAugmented.resize(3, N_*robot_vertices);
+
+    KDL::JntArray q_in;
+    KDL::Frame p_out;
+
+    q_in.resize(dof);
+
+    for (int i(0); i<N_ ;i++){
+      q_in.data = q_horizon.segment(dof*i,dof);
+      JntToCart(q_in, p_out);
+      robotVerticesAugmented.block(0,i,3,1) << p_out.p[0], p_out.p[1], p_out.p[2];
+      mpc_params.x_horizon_.segment(3*i,3) << p_out.p[0], p_out.p[1], p_out.p[2];
+
+    }
+
+
+    return robotVerticesAugmented;
+}
+
 void RobotMPcModel::update(Eigen::VectorXd state, Eigen::VectorXd solution){
 
   mpc_params.q_horizon_ = mpc_params.Px_*state + mpc_params.Pu_*solution;

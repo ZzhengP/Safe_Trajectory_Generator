@@ -13,6 +13,10 @@
 #include <optFormulation/task.hpp>
 #include <robot/robot_mpc_model.h>
 #include <planning/qpstructure.h>
+#include <planning/plane.h>
+#include <visualization_msgs/Marker.h>
+#include <nav_msgs/Path.h>
+#include <geometry_msgs/PoseStamped.h>
 
 namespace planning {
 
@@ -47,6 +51,8 @@ public:
     }else {
       ROS_INFO_STREAM("Success to initialize robot Model Predictive Control parameters ");
     }
+
+    q_horizon_precedent_.resize(N_*6);
 
     J_horizon_.resize(N_*6, N_*dof_);
 
@@ -83,8 +89,8 @@ public:
     }
 
     // Passive safety constraint
-      qd_min_mpc_.tail(dof_).setZero();
-      qd_max_mpc_.tail(dof_).setZero();
+//      qd_min_mpc_.tail(dof_).setConstant(-1);
+//      qd_max_mpc_.tail(dof_).setConstant(+1);
 
   }
 
@@ -94,10 +100,11 @@ public:
    * @param node_handle
    * @return
    */
-  bool init(ros::NodeHandle& node_handle);
+  bool init(ros::NodeHandle& node_handle, KDL::Frame init_frame);
 
   Eigen::VectorXd update(Eigen::VectorXd S, const Eigen::VectorXd &q_horizon, const Eigen::VectorXd & qd_horizon,
-                         const Eigen::VectorXd & q_des,const Eigen::VectorXd& qd_des, const Eigen::VectorXd & solution_precedent);
+                         const Eigen::VectorXd & q_des,const Eigen::VectorXd& qd_des, const Eigen::VectorXd & solution_precedent,
+                         Eigen::MatrixXd J);
 
   void setQPdata();
 
@@ -140,7 +147,10 @@ public:
     return robot_mpc_model_->getJointvelHorizon();
   }
 
-
+  Eigen::MatrixXd computeTipPositionHorizon(const Eigen::VectorXd &q_horizon,
+                                            int robot_vertices){
+     return robot_mpc_model_->computeTipPositionHorizon(q_horizon,robot_vertices);
+  }
 private:
 
   int N_;
@@ -152,10 +162,12 @@ private:
   Eigen::VectorXd q_init_;
   Eigen::VectorXd qd_init_;
 
+  ros::Publisher path_pub_ ;
 
   // --------------------------- Robot MPC model parameters ----------------------
   std::shared_ptr<robot::RobotMPcModel> robot_mpc_model_;
-  Eigen::MatrixXd J_horizon_;
+  Eigen::VectorXd q_horizon_precedent_;
+  Eigen::MatrixXd J_horizon_, J_;
   robot::MPC_param mpc_param_;
   // --------------------------- Robot MPC task parameters ----------------------
   std::unique_ptr<optimization::MPCTask> mpc_task_;
@@ -170,6 +182,30 @@ private:
   qpSolver qpoases_solver_;
   int nV_;
   int nbrCst_;
+
+  // --------------------------- Plane ---------------------------------------------
+  double dsafe_ ;
+  int robot_member_ ; /*!< @brief number of robot member to be take into account */
+  int robot_vertices_ ; /*!< @brief number of robot vertices for one member */
+  int obstacle_member_ ; /*!< @brief number of obstacle member to be take into account */
+  int obstacle_vertices_ ; /*!< @brief number of obstacle vertices for one member */
+
+  std::unique_ptr<planning::plane> plane_generation; /*!< @brief Computes separating plane */
+  ros::Publisher plane_table_pub_, plane_shape_pub_, obstacle_shape_pub_;
+  Eigen::MatrixXd robotVertices_;
+  std::vector<Eigen::MatrixXd> robotVerticesAugmented_;
+
+  Eigen::MatrixXd obsVertices_;
+  std::vector<Eigen::MatrixXd> obsVerticesAugmented_;
+
+   std::vector<Eigen::MatrixXd> plane_location_, table_plane_location_;
+  // Plane private function
+  bool publishABCDPlane(double A, double B, double C, double D,
+                        double x_width = 2.0, double y_width=2.0 );
+
+  bool publishObstacle(Eigen::Vector3d obstacle_center);
+
+  bool publishPath();
 
 };
 

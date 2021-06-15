@@ -1,0 +1,12 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[Kbool Controller::Controller::UpdateMPCTraj()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:324:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KController::Controller::publishABCDPlane(Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 1>::Scalar&, Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 1>::Scalar&, Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 1>::Scalar&, Eigen::DenseCoeffsBase<Eigen::Matrix<double, -1, -1>, 1>::Scalar, rviz_visual_tools::colors&)[m[K'
+                      [01;31m[K)[m[K;
+                      [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:275:8:[m[K [01;36m[Knote: [m[Kcandidate: bool Controller::Controller::publishABCDPlane(double, double, double, double, rviz_visual_tools::colors, double, double)
+   bool [01;36m[KpublishABCDPlane[m[K(double A, double B, double C, double D, rviz_visual_tools::colors color,
+        [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:275:8:[m[K [01;36m[Knote: [m[K  candidate expects 7 arguments, 5 provided
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

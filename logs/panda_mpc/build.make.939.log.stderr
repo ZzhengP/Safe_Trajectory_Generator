@@ -1,0 +1,9 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:131:78:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K-Wmultichar[m[K]
+   std::cout << "robotVerticesAugmented_ :\n" << robotVerticesAugmented[0] << [01;35m[K'\n '[m[K;
+                                                                              [01;35m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:132:67:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K-Wmultichar[m[K]
+   std::cout << "q_horizon_precedent_ :\n " << qHorizonPrecedent<< [01;35m[K'\n '[m[K;
+                                                                   [01;35m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:133:70:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K-Wmultichar[m[K]
+   std::cout << "J_horizon_ :\n " << JacobianHorizon.block(0,0,6,7)<< [01;35m[K'\n '[m[K;
+                                                                      [01;35m[K^~~~~[m[K

@@ -36,7 +36,13 @@ public:
   bool update(const std::vector<Eigen::MatrixXd>& robot_vertices_horizon,
               const std::vector<Eigen::MatrixXd>& obstacle_vertices_horizon);
 
+  Eigen::MatrixXd GetFirstPlane() const {
+      return plane_location_[0];
+  }
 
+   std::vector<Eigen::MatrixXd> GetPlane() const{
+    return plane_location_;
+  }
 private:
 
   PlaneSolver plane_solver_;
@@ -60,7 +66,7 @@ private:
 
   Eigen::Vector3d obs_center_;
   // Plane visualization
-  rviz_visual_tools::RvizVisualToolsPtr rviz_planes_publisher_;
+  rviz_visual_tools::RvizVisualTools rviz_planes_publisher_,rviz_obstacle_publisher_;
   rviz_visual_tools::colors color_plane_ = rviz_visual_tools::TRANSLUCENT_DARK;
 
   bool publishABCDPlane(double A, double B, double C, double D, rviz_visual_tools::colors color = rviz_visual_tools::TRANSLUCENT,
