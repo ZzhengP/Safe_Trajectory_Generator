@@ -160,8 +160,8 @@ namespace planning {
     else{
 //          ROS_INFO_STREAM("success to update constraint");
     }
-    qpoases_solver_.lb_.setConstant(-10);
-    qpoases_solver_.ub_.setConstant(10);
+    qpoases_solver_.lb_.setConstant(-12);
+    qpoases_solver_.ub_.setConstant(12);
     qpoases_solver_.lbA_ = mpc_constraint_->getLBA();
     qpoases_solver_.ubA_ = mpc_constraint_->getUBA();
     qpoases_solver_.A_ = mpc_constraint_->getConstraintA();

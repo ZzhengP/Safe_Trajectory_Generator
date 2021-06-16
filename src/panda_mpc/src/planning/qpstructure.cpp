@@ -36,7 +36,7 @@ void qpSolver::configureQP(int num_variable, int num_constraint){
   options.setToFast();
   options.enableFlippingBounds = qpOASES::BT_FALSE;
   options.enableRegularisation = qpOASES::BT_FALSE;
-  options.enableEqualities = qpOASES::BT_TRUE;
+  options.enableEqualities = qpOASES::BT_FALSE;
   options.printLevel = qpOASES::PL_HIGH;
   options.numRefinementSteps = 100;
 
@@ -48,13 +48,13 @@ bool qpSolver::solve(){
 
   qp_solver_->setOptions(options_);
   nWSR_ = 1000000;
-//  if(!qp_solver_->isInitialised()){
-    //Initialise the problem, once it has found a solution, we can hotstart
+  if(!qp_solver_->isInitialised()){
+//    Initialise the problem, once it has found a solution, we can hotstart
     ret_ = qp_solver_->init(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(),nWSR_);
-//  }else
-//  {
-//    ret_ = qp_solver_->hotstart(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(),nWSR_);
-//  }
+  }else
+  {
+    ret_ = qp_solver_->hotstart(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(),nWSR_);
+  }
 
   // Zeros acceleration if no solution found
   optimal_solution_.setZero();
@@ -63,7 +63,7 @@ bool qpSolver::solve(){
     qp_solver_->getPrimalSolution(optimal_solution_.data());
     return true;
   }else{
-    std::cout << " print ret " << ": " << ret_<<'\n';
+    std::cout << " print ret " << ": " << qpOASES::returnValue(ret_)<<'\n';
     std::cout << "QPOasese failed! sending zeros solution " << std::endl;
 //    std::cout <<"qpProblem status is : " << qp_solver_->getStatus()<<'\n';
 //    std::cout <<"qpProblem obj is : " << qp_solver_->getObjVal()<<'\n';

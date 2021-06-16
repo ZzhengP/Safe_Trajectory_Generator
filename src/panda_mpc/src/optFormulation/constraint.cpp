@@ -165,7 +165,7 @@ bool MPCConstraint::avoidanceTest(const Eigen::VectorXd &state,
                                   Eigen::VectorXd qHorizonPrecedent,
                                   int index){
 
-    double dsafe_table = 0.1;
+    double dsafe_table = 0.05;
     // Resize the size of constraint according to the number of different m obstacle plane
     int m = plane.size();
 
@@ -225,7 +225,7 @@ bool MPCConstraint::computeUpperBoundAndConstraint(const Eigen::VectorXd &state,
                                                    const Eigen::VectorXd &qHorizonPrecedent,
                                                    int index){
 
-    double dsafe_table = 0.05;
+    double dsafe_table = 0.1;
     // Resize the size of constraint according to the number of different m obstacle plane
     int m = plane.size();
     if (m!=1){

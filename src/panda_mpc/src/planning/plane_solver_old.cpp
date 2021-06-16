@@ -4,9 +4,9 @@
 PlaneSolver::PlaneSolver(int nbrCst, double dsafe):nC_(nbrCst), dsafe_(dsafe)
 {
     nV_ = 5; // wo cao, wo ri le  !!!!!
-//    options_.enableFlippingBounds = qpOASES::BT_FALSE;
-//    options_.enableRegularisation = qpOASES::BT_FALSE; // since we specify the type of Hessian matrix, we do not need automatic regularisation
-//    options_.enableEqualities = qpOASES::BT_TRUE; //
+    options_.enableFlippingBounds = qpOASES::BT_FALSE;
+    options_.enableRegularisation = qpOASES::BT_FALSE; // since we specify the type of Hessian matrix, we do not need automatic regularisation
+    options_.enableEqualities = qpOASES::BT_TRUE; //
     options_.numRefinementSteps = 10;
     data_optimal_solution_.resize(nV_);
 
@@ -83,7 +83,7 @@ void PlaneSolver::setCstMatrix(const Eigen::MatrixXd &robotPartielVertices,
 
    lbA_.resize(rcols+pcols+1);
    ubA_.resize(rcols+pcols+1);
-
+   lbA_.setZero();
 
   for (int j(0); j < rcols ; j ++ ){
       A_.block(j,0,1,5) << -robotPartielVertices.block(0,j,3,1).transpose() , 1, 1;
@@ -100,7 +100,7 @@ void PlaneSolver::setCstMatrix(const Eigen::MatrixXd &robotPartielVertices,
 
   // Additional non vertical constraint
 
-  dsafe_ = 0.1 ;
+  dsafe_ = 0.15;
   lbA_.setConstant(dsafe_);
   lbA_(rcols + pcols) = 0.95;
 
@@ -141,14 +141,14 @@ bool PlaneSolver::solve(){
     example.setOptions(options_);
     example.setPrintLevel(qpOASES::PL_HIGH);
 
-//    if(!example.isInitialised()){
+    if(!example.isInitialised()){
       ret = example.init( H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(), nWSR );
 
-//    }else {
+    }else {
 
-//      ret = example.hotstart(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(), nWSR );
+      ret = example.hotstart(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(), nWSR );
 
-//    }
+    }
     example.getPrimalSolution(data_optimal_solution_.data());
 //
 

@@ -71,8 +71,8 @@ public:
 
     q_min_ = robot_mpc_model_->getJntll().data;
     q_max_ = robot_mpc_model_->getJntul().data;
-    qd_min_.setConstant(-4);
-    qd_max_.setConstant(4);
+    qd_min_.setConstant(-2);
+    qd_max_.setConstant(2);
     node_handle.getParam("/panda_mpc/qd_min_", qd_min_ros_);
     node_handle.getParam("/panda_mpc/qd_max_", qd_max_ros_);
 
@@ -89,8 +89,8 @@ public:
     }
 
     // Passive safety constraint
-//      qd_min_mpc_.tail(dof_).setConstant(-1);
-//      qd_max_mpc_.tail(dof_).setConstant(+1);
+      qd_min_mpc_.tail(dof_).setConstant(0);
+      qd_max_mpc_.tail(dof_).setConstant(0);
 
   }
 

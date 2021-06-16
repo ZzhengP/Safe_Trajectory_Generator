@@ -150,7 +150,7 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
       execute = true;
 
     ros::Duration duration_wait = end_time_ - begin_time_;
-    if(duration_wait.toSec() > 1) // Change This parameter influences robot's behaviors;
+    if(duration_wait.toSec() > 0.2) // Change This parameter influences robot's behaviors;
       wait = false;
 
     // ------------------------------------------------------------------------------
@@ -158,7 +158,7 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
     preview_point_ = next_point_;
     X_traj_ = next_tf_;
     Xd_traj_.vel[0] = next_vel_.linear.x, Xd_traj_.vel[1] = next_vel_.linear.y, Xd_traj_.vel[2] = next_vel_.linear.z;
-//    Xd_traj_.rot[0] = next_vel_.angular.x, Xd_traj_.rot[1] = next_vel_.angular.y, Xd_traj_.rot[2] = next_vel_.angular.z ;
+    Xd_traj_.rot[0] = next_vel_.angular.x, Xd_traj_.rot[1] = next_vel_.angular.y, Xd_traj_.rot[2] = next_vel_.angular.z ;
 //     Proportionnal controller
     X_err_ = diff( X_curr_ , X_traj_ );
     tf::twistKDLToEigen(X_err_,x_err);

@@ -27,7 +27,7 @@ bool MPCTask::init(const Eigen::VectorXd & q_init){
   task.f_.setZero();
   task.task_des_.resize(dof_);
   task.task_des_ = q_init;
-  task.weight = 1000;
+  task.weight = 10000;
   // Add joint position tracking task
   task_container_.push_back(task);
 

@@ -1,0 +1,29 @@
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  0%] Built target geometry_msgs_generate_messages_eus
+[ 11%] Built target panda_mpc_gencfg
+[ 11%] Built target _panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint
+[ 11%] Built target std_msgs_generate_messages_eus
+[ 11%] Built target _panda_mpc_generate_messages_check_deps_PandaRunMsg
+[ 11%] Built target _panda_mpc_generate_messages_check_deps_UI
+[ 11%] Built target geometry_msgs_generate_messages_py
+[ 11%] Built target sensor_msgs_generate_messages_lisp
+[ 11%] Built target std_msgs_generate_messages_py
+[ 11%] Built target sensor_msgs_generate_messages_py
+[ 11%] Built target geometry_msgs_generate_messages_lisp
+[ 11%] Built target std_msgs_generate_messages_lisp
+[ 11%] Built target _panda_mpc_generate_messages_check_deps_trajectoryMsg
+[ 40%] Built target panda_mpc
+[ 40%] Built target sensor_msgs_generate_messages_nodejs
+[ 40%] Built target std_msgs_generate_messages_nodejs
+[ 40%] Built target geometry_msgs_generate_messages_nodejs
+[ 40%] Built target sensor_msgs_generate_messages_cpp
+[ 40%] Built target geometry_msgs_generate_messages_cpp
+[ 40%] Built target std_msgs_generate_messages_cpp
+[ 44%] Built target test_plane_solver
+[ 55%] Built target panda_mpc_generate_messages_eus
+[ 68%] Built target panda_mpc_generate_messages_py
+[ 73%] Built target trajectory_send
+[ 82%] Built target panda_mpc_generate_messages_nodejs
+[ 91%] Built target panda_mpc_generate_messages_lisp
+[100%] Built target panda_mpc_generate_messages_cpp
+[100%] Built target panda_mpc_generate_messages
