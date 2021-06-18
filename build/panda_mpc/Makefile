@@ -1857,32 +1857,59 @@ trajectory_send/fast:
 	$(MAKE) -f examples/CMakeFiles/trajectory_send.dir/build.make examples/CMakeFiles/trajectory_send.dir/build
 .PHONY : trajectory_send/fast
 
-src/controller.o: src/controller.cpp.o
+src/controller/controller.o: src/controller/controller.cpp.o
 
-.PHONY : src/controller.o
+.PHONY : src/controller/controller.o
 
 # target to build an object file
-src/controller.cpp.o:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/controller.cpp.o
-.PHONY : src/controller.cpp.o
+src/controller/controller.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o
+.PHONY : src/controller/controller.cpp.o
 
-src/controller.i: src/controller.cpp.i
+src/controller/controller.i: src/controller/controller.cpp.i
 
-.PHONY : src/controller.i
+.PHONY : src/controller/controller.i
 
 # target to preprocess a source file
-src/controller.cpp.i:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/controller.cpp.i
-.PHONY : src/controller.cpp.i
+src/controller/controller.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.i
+.PHONY : src/controller/controller.cpp.i
 
-src/controller.s: src/controller.cpp.s
+src/controller/controller.s: src/controller/controller.cpp.s
 
-.PHONY : src/controller.s
+.PHONY : src/controller/controller.s
 
 # target to generate assembly for a file
-src/controller.cpp.s:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/controller.cpp.s
-.PHONY : src/controller.cpp.s
+src/controller/controller.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.s
+.PHONY : src/controller/controller.cpp.s
+
+src/controller/joint_velocity_example_controller.o: src/controller/joint_velocity_example_controller.cpp.o
+
+.PHONY : src/controller/joint_velocity_example_controller.o
+
+# target to build an object file
+src/controller/joint_velocity_example_controller.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/controller/joint_velocity_example_controller.cpp.o
+.PHONY : src/controller/joint_velocity_example_controller.cpp.o
+
+src/controller/joint_velocity_example_controller.i: src/controller/joint_velocity_example_controller.cpp.i
+
+.PHONY : src/controller/joint_velocity_example_controller.i
+
+# target to preprocess a source file
+src/controller/joint_velocity_example_controller.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/controller/joint_velocity_example_controller.cpp.i
+.PHONY : src/controller/joint_velocity_example_controller.cpp.i
+
+src/controller/joint_velocity_example_controller.s: src/controller/joint_velocity_example_controller.cpp.s
+
+.PHONY : src/controller/joint_velocity_example_controller.s
+
+# target to generate assembly for a file
+src/controller/joint_velocity_example_controller.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/controller/joint_velocity_example_controller.cpp.s
+.PHONY : src/controller/joint_velocity_example_controller.cpp.s
 
 src/optFormulation/constraint.o: src/optFormulation/constraint.cpp.o
 
@@ -1911,6 +1938,33 @@ src/optFormulation/constraint.cpp.s:
 	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.s
 .PHONY : src/optFormulation/constraint.cpp.s
 
+src/optFormulation/qpsolver.o: src/optFormulation/qpsolver.cpp.o
+
+.PHONY : src/optFormulation/qpsolver.o
+
+# target to build an object file
+src/optFormulation/qpsolver.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/optFormulation/qpsolver.cpp.o
+.PHONY : src/optFormulation/qpsolver.cpp.o
+
+src/optFormulation/qpsolver.i: src/optFormulation/qpsolver.cpp.i
+
+.PHONY : src/optFormulation/qpsolver.i
+
+# target to preprocess a source file
+src/optFormulation/qpsolver.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/optFormulation/qpsolver.cpp.i
+.PHONY : src/optFormulation/qpsolver.cpp.i
+
+src/optFormulation/qpsolver.s: src/optFormulation/qpsolver.cpp.s
+
+.PHONY : src/optFormulation/qpsolver.s
+
+# target to generate assembly for a file
+src/optFormulation/qpsolver.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/optFormulation/qpsolver.cpp.s
+.PHONY : src/optFormulation/qpsolver.cpp.s
+
 src/optFormulation/task.o: src/optFormulation/task.cpp.o
 
 .PHONY : src/optFormulation/task.o
@@ -1937,33 +1991,6 @@ src/optFormulation/task.s: src/optFormulation/task.cpp.s
 src/optFormulation/task.cpp.s:
 	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.s
 .PHONY : src/optFormulation/task.cpp.s
-
-src/panda_controller.o: src/panda_controller.cpp.o
-
-.PHONY : src/panda_controller.o
-
-# target to build an object file
-src/panda_controller.cpp.o:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o
-.PHONY : src/panda_controller.cpp.o
-
-src/panda_controller.i: src/panda_controller.cpp.i
-
-.PHONY : src/panda_controller.i
-
-# target to preprocess a source file
-src/panda_controller.cpp.i:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.i
-.PHONY : src/panda_controller.cpp.i
-
-src/panda_controller.s: src/panda_controller.cpp.s
-
-.PHONY : src/panda_controller.s
-
-# target to generate assembly for a file
-src/panda_controller.cpp.s:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.s
-.PHONY : src/panda_controller.cpp.s
 
 src/panda_simulation.o: src/panda_simulation.cpp.o
 
@@ -2100,32 +2127,32 @@ src/planning/traj_generation.cpp.s:
 	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.s
 .PHONY : src/planning/traj_generation.cpp.s
 
-src/qpsolver.o: src/qpsolver.cpp.o
+src/robot/panda_mpc.o: src/robot/panda_mpc.cpp.o
 
-.PHONY : src/qpsolver.o
+.PHONY : src/robot/panda_mpc.o
 
 # target to build an object file
-src/qpsolver.cpp.o:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.o
-.PHONY : src/qpsolver.cpp.o
+src/robot/panda_mpc.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.o
+.PHONY : src/robot/panda_mpc.cpp.o
 
-src/qpsolver.i: src/qpsolver.cpp.i
+src/robot/panda_mpc.i: src/robot/panda_mpc.cpp.i
 
-.PHONY : src/qpsolver.i
+.PHONY : src/robot/panda_mpc.i
 
 # target to preprocess a source file
-src/qpsolver.cpp.i:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.i
-.PHONY : src/qpsolver.cpp.i
+src/robot/panda_mpc.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.i
+.PHONY : src/robot/panda_mpc.cpp.i
 
-src/qpsolver.s: src/qpsolver.cpp.s
+src/robot/panda_mpc.s: src/robot/panda_mpc.cpp.s
 
-.PHONY : src/qpsolver.s
+.PHONY : src/robot/panda_mpc.s
 
 # target to generate assembly for a file
-src/qpsolver.cpp.s:
-	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/qpsolver.cpp.s
-.PHONY : src/qpsolver.cpp.s
+src/robot/panda_mpc.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.s
+.PHONY : src/robot/panda_mpc.cpp.s
 
 src/robot/robot_model.o: src/robot/robot_model.cpp.o
 
@@ -2324,18 +2351,21 @@ help:
 	@echo "... gtest"
 	@echo "... test_plane_solver"
 	@echo "... trajectory_send"
-	@echo "... src/controller.o"
-	@echo "... src/controller.i"
-	@echo "... src/controller.s"
+	@echo "... src/controller/controller.o"
+	@echo "... src/controller/controller.i"
+	@echo "... src/controller/controller.s"
+	@echo "... src/controller/joint_velocity_example_controller.o"
+	@echo "... src/controller/joint_velocity_example_controller.i"
+	@echo "... src/controller/joint_velocity_example_controller.s"
 	@echo "... src/optFormulation/constraint.o"
 	@echo "... src/optFormulation/constraint.i"
 	@echo "... src/optFormulation/constraint.s"
+	@echo "... src/optFormulation/qpsolver.o"
+	@echo "... src/optFormulation/qpsolver.i"
+	@echo "... src/optFormulation/qpsolver.s"
 	@echo "... src/optFormulation/task.o"
 	@echo "... src/optFormulation/task.i"
 	@echo "... src/optFormulation/task.s"
-	@echo "... src/panda_controller.o"
-	@echo "... src/panda_controller.i"
-	@echo "... src/panda_controller.s"
 	@echo "... src/panda_simulation.o"
 	@echo "... src/panda_simulation.i"
 	@echo "... src/panda_simulation.s"
@@ -2351,9 +2381,9 @@ help:
 	@echo "... src/planning/traj_generation.o"
 	@echo "... src/planning/traj_generation.i"
 	@echo "... src/planning/traj_generation.s"
-	@echo "... src/qpsolver.o"
-	@echo "... src/qpsolver.i"
-	@echo "... src/qpsolver.s"
+	@echo "... src/robot/panda_mpc.o"
+	@echo "... src/robot/panda_mpc.i"
+	@echo "... src/robot/panda_mpc.s"
 	@echo "... src/robot/robot_model.o"
 	@echo "... src/robot/robot_model.i"
 	@echo "... src/robot/robot_model.s"

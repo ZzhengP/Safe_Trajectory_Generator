@@ -1,3 +1,26 @@
+joint_velocity_example_controller:
+    type: panda_mpc/JointVelocityExampleController
+    joint_names:
+        - panda_joint1
+        - panda_joint2
+        - panda_joint3
+        - panda_joint4
+        - panda_joint5
+        - panda_joint6
+        - panda_joint7
+
+
+panda_controller:
+    type: panda_mpc/JointVelocityExampleController
+    joint_names:
+        - panda_joint1
+        - panda_joint2
+        - panda_joint3
+        - panda_joint4
+        - panda_joint5
+        - panda_joint6
+        - panda_joint7
+
 panda_mpc:
     type: panda_mpc/PandaMPCController
     arm_id: panda
@@ -16,13 +39,13 @@ panda_mpc:
     root_link_ : "panda_link0"
     tip_link_ : "panda_link8"
     q_mean_ : [0.01 , 0.0, 0.01, -1.501, 0.0, 1.5, 0.0]
-    qd_min_ : [-2.0 , -2.0 , -2.0 , -2.0 , -1.0 , -1.0 , -1.0]
-    qd_max_ : [2.0 , 2.0 , 2.0 , 2.0 , 1.0 , 1.0 , 1.0]
-    qdd_max_ : [15 , 7.5 , 10 , 12.5 , 15 , 20 , 20]
-    torque_max_ : [87.0 , 87.0 , 87.0 , 87.0 , 12.0 , 12.0 , 12.0]
-    init_pos_attend_ : false
+    qd_min_ : [-0.5 , -0.5 , -0.5 , -1.0 , -1.0 , -1.0 , -1.0]
+    qd_max_ : [0.5 , 0.5 , 0.5 , 1.0 , 1.0 , 1.0 , 1.0]
+    qdd_max_ : [10 , 7.5 , 8 , 7.5 , 10 , 10 , 10]
+    torque_max_ : [67.0 , 67.0 , 67.0 , 67.0 , 12.0 , 12.0 , 12.0]
+    init_pos_attend_ : true
     regularisation_weight_ : 1.0e-5
-    N_ : 10
+    N_ : 4
     dt_ : 0.04
     dsafe_ : 0.1
     robot_member_ : 1

@@ -1,0 +1,22 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/qpstructure.cpp:[m[K In member function '[01m[Kbool qpSolver::solve()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/qpstructure.cpp:55:119:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KqpOASES::QProblem::init(Eigen::PlainObjectBase<Eigen::Matrix<double, -1, -1, 1> >::Scalar*, Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar*, Eigen::PlainObjectBase<Eigen::Matrix<double, -1, -1, 1> >::Scalar*, Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar*, Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar*, Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar*, Eigen::PlainObjectBase<Eigen::Matrix<double, -1, 1> >::Scalar*, qpOASES::int_t&, qpOASES::real_t&)[m[K'
+     ret_ = qp_solver_->init(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(),nWSR_,cpu_time[01;31m[K)[m[K;
+                                                                                                                       [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES.hpp:67:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h:4[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/qpstructure.cpp:2[m[K:
+[01m[K/home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES/QProblem.hpp:123:15:[m[K [01;36m[Knote: [m[Kcandidate: qpOASES::returnValue qpOASES::QProblem::init(qpOASES::SymmetricMatrix*, const real_t*, qpOASES::Matrix*, const real_t*, const real_t*, const real_t*, const real_t*, qpOASES::int_t&, qpOASES::real_t*, const real_t*, const real_t*, const qpOASES::Bounds*, const qpOASES::Constraints*, const real_t*)
+   returnValue [01;36m[Kinit[m[K( SymmetricMatrix *_H,       /**< Hessian matrix (a shallow copy is made). */
+               [01;36m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES/QProblem.hpp:123:15:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::PlainObjectBase<Eigen::Matrix<double, -1, -1, 1> >::Scalar* {aka double*}[m[K' to '[01m[KqpOASES::SymmetricMatrix*[m[K'
+[01m[K/home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES/QProblem.hpp:174:15:[m[K [01;36m[Knote: [m[Kcandidate: qpOASES::returnValue qpOASES::QProblem::init(const real_t*, const real_t*, const real_t*, const real_t*, const real_t*, const real_t*, const real_t*, qpOASES::int_t&, qpOASES::real_t*, const real_t*, const real_t*, const qpOASES::Bounds*, const qpOASES::Constraints*, const real_t*)
+   returnValue [01;36m[Kinit[m[K( const real_t* const _H,       /**< Hessian matrix (a shallow copy is made). \n
+               [01;36m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES/QProblem.hpp:174:15:[m[K [01;36m[Knote: [m[K  no known conversion for argument 9 from '[01m[KqpOASES::real_t {aka double}[m[K' to '[01m[KqpOASES::real_t* {aka double*}[m[K'
+[01m[K/home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES/QProblem.hpp:226:15:[m[K [01;36m[Knote: [m[Kcandidate: qpOASES::returnValue qpOASES::QProblem::init(const char*, const char*, const char*, const char*, const char*, const char*, const char*, qpOASES::int_t&, qpOASES::real_t*, const real_t*, const real_t*, const qpOASES::Bounds*, const qpOASES::Constraints*, const char*)
+   returnValue [01;36m[Kinit[m[K( const char* const H_file,      /**< Name of file where Hessian matrix is stored. \n
+               [01;36m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES/QProblem.hpp:226:15:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KEigen::PlainObjectBase<Eigen::Matrix<double, -1, -1, 1> >::Scalar* {aka double*}[m[K' to '[01m[Kconst char*[m[K'
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

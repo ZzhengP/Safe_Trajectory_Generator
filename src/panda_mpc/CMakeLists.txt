@@ -101,17 +101,18 @@ include_directories(include ${Boost_INCLUDE_DIR} ${catkin_INCLUDE_DIRS} ${EIGEN3
 
 add_library(panda_mpc
             src/panda_simulation.cpp
-            src/panda_controller.cpp
+            src/robot/panda_mpc.cpp
             src/robot/robot_model.cpp
             src/robot/robot_mpc_model.cpp
             src/optFormulation/task.cpp
             src/optFormulation/constraint.cpp
+            src/optFormulation/qpsolver.cpp
             src/planning/traj_generation.cpp
             src/planning/plane.cpp
             src/planning/plane_solver_old.cpp
             src/planning/qpstructure.cpp
-            src/controller.cpp
-            src/qpsolver.cpp)
+            src/controller/controller.cpp
+            src/controller/joint_velocity_example_controller.cpp)
 
 target_include_directories(panda_mpc SYSTEM PUBLIC include
                                             ${Franka_INCLUDE_DIRS}

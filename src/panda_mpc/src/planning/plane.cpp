@@ -68,8 +68,8 @@ bool plane::init(const std::vector<Eigen::MatrixXd> &robot_vertices_horizon,
     N_==1 ? plane_precedent_[i].resize(5,N_):plane_precedent_[i].resize(5,N_-1);
     for (int j(0); j<N_-1; j++){
       plane_location_[i].block(0,j,5,1) << 0,
-                                           1,
-                                           0.1,
+                                           -1,
+                                           0.2,
                                            0.,
                                            0;
 
@@ -89,7 +89,6 @@ bool plane::update(const std::vector<Eigen::MatrixXd> &robot_vertices_horizon,
 //   rviz_planes_publisher_.deleteAllMarkers();
 //   rviz_obstacle_publisher_.deleteAllMarkers();
 
-   obs_center_ << 0.4, -0.2, 0.1;
    rviz_visual_tools::colors color = rviz_visual_tools::BLUE;
 //   rviz_obstacle_publisher_.publishSphere(obs_center_,
 //                                           color,

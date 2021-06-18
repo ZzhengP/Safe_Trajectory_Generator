@@ -89,8 +89,8 @@ public:
     }
 
     // Passive safety constraint
-      qd_min_mpc_.tail(dof_).setConstant(0);
-      qd_max_mpc_.tail(dof_).setConstant(0);
+      qd_min_mpc_.tail(dof_).setConstant(-0.2);
+      qd_max_mpc_.tail(dof_).setConstant(0.2);
 
   }
 

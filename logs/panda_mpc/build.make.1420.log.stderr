@@ -1,0 +1,30 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:323:27:[m[K [01;31m[Kerror: [m[K'[01m[Kbool Controller::Controller::updateUI[m[K' is not a static data member of '[01m[Kclass Controller::Controller[m[K'
+ bool Controller::updateUI([01;31m[Kvelocity_qp[m[K::UI::Request &req, velocity_qp::UI::Response &resp)
+                           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:323:27:[m[K [01;31m[Kerror: [m[K'[01m[Kvelocity_qp[m[K' has not been declared
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:323:53:[m[K [01;31m[Kerror: [m[K'[01m[Kreq[m[K' was not declared in this scope
+ bool Controller::updateUI(velocity_qp::UI::Request &[01;31m[Kreq[m[K, velocity_qp::UI::Response &resp)
+                                                     [01;31m[K^~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:[m[K In member function '[01m[Kvirtual void panda_mpc::PandaMPCController::update(const ros::Time&, const ros::Duration&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:165:25:[m[K [01;31m[Kerror: [m[K'[01m[Kclass Controller::Controller[m[K' has no member named '[01m[KUpdate[m[K'; did you mean '[01m[Kupdate[m[K'?
+     joint_command_ = qp.[01;31m[KUpdate[m[K(q_,qd_,period);
+                         [01;31m[K^~~~~~[m[K
+                         [32m[Kupdate[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:323:58:[m[K [01;31m[Kerror: [m[K'[01m[Kvelocity_qp[m[K' has not been declared
+ bool Controller::updateUI(velocity_qp::UI::Request &req, [01;31m[Kvelocity_qp[m[K::UI::Response &resp)
+                                                          [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:323:85:[m[K [01;31m[Kerror: [m[K'[01m[Kresp[m[K' was not declared in this scope
+ bool Controller::updateUI(velocity_qp::UI::Request &req, velocity_qp::UI::Response &[01;31m[Kresp[m[K)
+                                                                                     [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:323:85:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Kread[m[K'
+ bool Controller::updateUI(velocity_qp::UI::Request &req, velocity_qp::UI::Response &[01;36m[Kresp[m[K)
+                                                                                     [01;36m[K^~~~[m[K
+                                                                                     [32m[Kread[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:323:89:[m[K [01;31m[Kerror: [m[Kexpression list treated as compound expression in initializer [[01;31m[K-fpermissive[m[K]
+ bool Controller::updateUI(velocity_qp::UI::Request &req, velocity_qp::UI::Response &resp[01;31m[K)[m[K
+                                                                                         [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

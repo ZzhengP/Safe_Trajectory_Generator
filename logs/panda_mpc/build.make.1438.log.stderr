@@ -1,0 +1,41 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[KEigen::VectorXd Controller::Controller::Update(const VectorXd&, const VectorXd&, const ros::Duration&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:232:31:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ bool Controller::UpdateMPCTraj[01;31m[K([m[K){
+                               [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:286:29:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ bool Controller::InitMPCTraj[01;31m[K([m[Kros::NodeHandle &node_handle, const Eigen::VectorXd &q_init, const Eigen::VectorXd &qd_init)
+                             [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:357:33:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ void Controller::BuildTrajectory[01;31m[K([m[KKDL::Frame X_curr_){
+                                 [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:362:35:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ void Controller::publishTrajectory[01;31m[K([m[K)
+                                   [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:394:33:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ void Controller::init_publishers[01;31m[K([m[Kros::NodeHandle& node_handle){
+                                 [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:403:33:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ void Controller::load_parameters[01;31m[K([m[K){
+                                 [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:426:28:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ bool Controller::load_robot[01;31m[K([m[Kros::NodeHandle& node_handle, const Eigen::VectorXd& q_init, const Eigen::VectorXd qd_init)
+                            [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:452:31:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ void Controller::do_publishing[01;31m[K([m[K)
+                               [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:494:26:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ bool Controller::updateUI[01;31m[K([m[Kpanda_mpc::UI::Request &req, panda_mpc::UI::Response &resp)
+                          [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:515:34:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ bool Controller::updateTrajectory[01;31m[K([m[Kpanda_traj::UpdateTrajectory::Request& req, panda_traj::UpdateTrajectory::Response& resp){
+                                  [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:526:39:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ void Controller::updateTrajectoryPoint[01;31m[K([m[Kconst panda_mpc::trajectoryMsg::ConstPtr& traj_msg)
+                                       [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K At global scope:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:556:1:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K}[m[K' at end of input
+ [01;31m[K}[m[K
+ [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

@@ -1870,16 +1870,19 @@
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp">
 			<Option target="trajectory_send"/>
 		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp">
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp">
+			<Option target="panda_mpc"/>
+		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/controller/joint_velocity_example_controller.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp">
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/qpsolver.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp">
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp">
@@ -1897,7 +1900,7 @@
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
-		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/qpsolver.cpp">
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/robot/panda_mpc.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/robot/robot_model.cpp">

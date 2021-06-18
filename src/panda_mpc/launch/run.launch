@@ -18,7 +18,9 @@
             <arg name="robot_ip" value ="$(arg robot_ip)"/>
             <arg name="load_gripper" value="$(arg load_gripper)" />
         </include>
+        <!--node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="joint_velocity_example_controller" /-->
         <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="panda_mpc" />
+
     </group>
 
 

@@ -27,7 +27,7 @@
 
 #include <memory>
 #include <qpOASES.hpp>
-#include "robot/panda_controller.h"
+#include "robot/panda_mpc.h"
 #include "ros/ros.h"
 #include <ros/node_handle.h>
 #include <panda_mpc/UpdateTrajectoryNextPoint.h>

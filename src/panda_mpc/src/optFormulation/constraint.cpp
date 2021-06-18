@@ -225,7 +225,7 @@ bool MPCConstraint::computeUpperBoundAndConstraint(const Eigen::VectorXd &state,
                                                    const Eigen::VectorXd &qHorizonPrecedent,
                                                    int index){
 
-    double dsafe_table = 0.1;
+    double dsafe_table = 0.05;
     // Resize the size of constraint according to the number of different m obstacle plane
     int m = plane.size();
     if (m!=1){
@@ -278,14 +278,18 @@ bool MPCConstraint::computeUpperBoundAndConstraint(const Eigen::VectorXd &state,
 
         bLarge.segment(2*k,2) << plane[0](3,k) - dsafe_table, plane[0](3,k) - dsafe_table;
 
-        n_jacobian.block(2*k, dof_*k, 2, 2*dof_) <<  plane_temp.transpose()*JacobianHorizon.block(0,0,3,dof_), 0,0,0 ,0,0,0,0,
-                                                     0,0,0 ,0,0,0,0, plane_temp.transpose()*JacobianHorizon.block(0,0,3,dof_);
+
 
         ar.segment(2*k,2) << plane[0].block(0,k,3,1).transpose()*robotVerticesAugmented[0].block(0,k,3,1),
                              plane[0].block(0,k,3,1).transpose()*robotVerticesAugmented[0].block(0,k+1,3,1);
 
-        aJq.segment(2*k,2) << plane_temp.transpose()*JacobianHorizon.block(0,0,3,7)*qHorizonPrecedent.segment(dof_*k,dof_),
+
+
+          n_jacobian.block(2*k, dof_*k, 2, 2*dof_) <<  plane_temp.transpose()*JacobianHorizon.block(0,0,3,dof_), 0,0,0 ,0,0,0,0,
+                                                     0,0,0 ,0,0,0,0, plane_temp.transpose()*JacobianHorizon.block(0,0,3,dof_);
+          aJq.segment(2*k,2) << plane_temp.transpose()*JacobianHorizon.block(0,0,3,7)*qHorizonPrecedent.segment(dof_*k,dof_),
                               plane_temp.transpose()*JacobianHorizon.block(0,0,3,7)*qHorizonPrecedent.segment(dof_*(k+1),dof_);
+
 
       }
 

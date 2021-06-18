@@ -33,11 +33,11 @@ bool MPCTask::init(const Eigen::VectorXd & q_init){
 
   // Add joint velocity tracking task
   task.task_name_="qd_tracking";
-  task.weight = 0.0;
+  task.weight = 1;
   task_container_.push_back(task);
 
   // Add joint acceleration tracking task
-  task.weight = 1;
+  task.weight = 10;
   task.task_name_="qdd_tracking";
   task_container_.push_back(task);
 
@@ -96,9 +96,8 @@ bool MPCTask::updateTaskContainer(const Eigen::VectorXd& S, const Eigen::VectorX
 
   // 2. joint velocity tracking update
   if(task_container_[1].task_name_=="qd_tracking"){
-     task_container_[1].weight = 0;
      task_container_[1].E_ = mpc_params_.Pudq_;
-     task_container_[1].f_ = mpc_params_.Pxdq_*S - qd_des;
+     task_container_[1].f_ = mpc_params_.Pxdq_*S ;
    }else {
      ROS_WARN_STREAM("Cannot update joint velocity tracking task, order error in the vector list of task");
      return false;

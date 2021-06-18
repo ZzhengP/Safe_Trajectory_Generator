@@ -1,0 +1,32 @@
+In file included from [01m[K/opt/ros/melodic/include/class_loader/class_loader.hpp:47:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/pluginlib/class_list_macros.hpp:40[m[K,
+                 from [01m[K/opt/ros/melodic/include/pluginlib/class_list_macros.h:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/joint_velocity_controller.cpp:10[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/joint_velocity_controller.cpp:100:24:[m[K [01;31m[Kerror: [m[K'[01m[Kfranka_example_controllers[m[K' does not name a type
+ PLUGINLIB_EXPORT_CLASS([01;31m[Kf[m[Kranka_example_controllers::JointVelocityExampleController,
+                        [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/joint_velocity_controller.cpp:[m[K In constructor '[01m[K{anonymous}::ProxyExec0::ProxyExec0()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/joint_velocity_controller.cpp:100:1:[m[K [01;31m[Kerror: [m[K'[01m[K_derived[m[K' was not declared in this scope
+ [01;31m[KP[m[KLUGINLIB_EXPORT_CLASS(franka_example_controllers::JointVelocityExampleController,
+ [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/joint_velocity_controller.cpp:100:1:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KregisterPlugin<<expression error>, {anonymous}::ProxyExec0::_base>(const char [59], const char [37])[m[K'
+ [01;31m[KP[m[KLUGINLIB_EXPORT_CLASS(franka_example_controllers::JointVelocityExampleController,
+ [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/class_loader/class_loader.hpp:46:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/pluginlib/class_list_macros.hpp:40[m[K,
+                 from [01m[K/opt/ros/melodic/include/pluginlib/class_list_macros.h:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/joint_velocity_controller.cpp:10[m[K:
+[01m[K/opt/ros/melodic/include/class_loader/class_loader_core.hpp:172:6:[m[K [01;36m[Knote: [m[Kcandidate: template<class Derived, class Base> void class_loader::impl::registerPlugin(const string&, const string&)
+ void [01;36m[KregisterPlugin[m[K(const std::string & class_name, const std::string & base_class_name)
+      [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/class_loader/class_loader_core.hpp:172:6:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+In file included from [01m[K/opt/ros/melodic/include/class_loader/class_loader.hpp:47:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/pluginlib/class_list_macros.hpp:40[m[K,
+                 from [01m[K/opt/ros/melodic/include/pluginlib/class_list_macros.h:35[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/joint_velocity_controller.cpp:10[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/joint_velocity_controller.cpp:100:1:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+ [01;31m[KP[m[KLUGINLIB_EXPORT_CLASS(franka_example_controllers::JointVelocityExampleController,
+ [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller/joint_velocity_controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

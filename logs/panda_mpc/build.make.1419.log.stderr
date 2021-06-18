@@ -1,0 +1,184 @@
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:150:19:[m[K [01;31m[Kerror: [m[K'[01m[Kvelocity_qp[m[K' has not been declared
+     bool updateUI([01;31m[Kvelocity_qp[m[K::UI::Request& req, velocity_qp::UI::Response& resp);
+                   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:150:43:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K,[m[K' or '[01m[K...[m[K' before '[01m[K&[m[K' token
+     bool updateUI(velocity_qp::UI::Request[01;31m[K&[m[K req, velocity_qp::UI::Response& resp);
+                                           [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:164:39:[m[K [01;31m[Kerror: [m[K'[01m[Kvelocity_qp[m[K' was not declared in this scope
+     realtime_tools::RealtimePublisher<[01;31m[Kvelocity_qp[m[K::PandaRunMsg> panda_rundata_publisher;
+                                       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:164:63:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+     realtime_tools::RealtimePublisher<velocity_qp::PandaRunMsg[01;31m[K>[m[K panda_rundata_publisher;
+                                                               [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_controller.h:30:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:11[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:150:19:[m[K [01;31m[Kerror: [m[K'[01m[Kvelocity_qp[m[K' has not been declared
+     bool updateUI([01;31m[Kvelocity_qp[m[K::UI::Request& req, velocity_qp::UI::Response& resp);
+                   [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:150:43:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K,[m[K' or '[01m[K...[m[K' before '[01m[K&[m[K' token
+     bool updateUI(velocity_qp::UI::Request[01;31m[K&[m[K req, velocity_qp::UI::Response& resp);
+                                           [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:164:39:[m[K [01;31m[Kerror: [m[K'[01m[Kvelocity_qp[m[K' was not declared in this scope
+     realtime_tools::RealtimePublisher<[01;31m[Kvelocity_qp[m[K::PandaRunMsg> panda_rundata_publisher;
+                                       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:164:63:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+     realtime_tools::RealtimePublisher<velocity_qp::PandaRunMsg[01;31m[K>[m[K panda_rundata_publisher;
+                                                               [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[Kvoid Controller::Controller::init_publishers(ros::NodeHandle&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:205:29:[m[K [01;31m[Kerror: [m[Krequest for member '[01m[Kinit[m[K' in '[01m[K((Controller::Controller*)this)->Controller::Controller::panda_rundata_publisher[m[K', which is of non-class type '[01m[Kint[m[K'
+     panda_rundata_publisher.[01;31m[Kinit[m[K(node_handle, "panda_rundata", 1);
+                             [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[Kbool Controller::Controller::load_robot(ros::NodeHandle&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:230:92:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[Kros::NodeHandle::advertiseService(const char [9], bool (Controller::Controller::*)(int), Controller::Controller*)[m[K'
+     updateUI_service = node_handle.advertiseService("updateUI", &Controller::updateUI, this[01;31m[K)[m[K;
+                                                                                            [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:9[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:879:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (T::*)(MReq&, MRes&), T*)
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, bool(T::*srv_func)(MReq &, MRes &), T *obj)
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:879:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:230:92:[m[K [01;36m[Knote: [m[K  mismatched types '[01m[KMReq&[m[K' and '[01m[Kint[m[K'
+     updateUI_service = node_handle.advertiseService("updateUI", &Controller::updateUI, this[01;36m[K)[m[K;
+                                                                                            [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:9[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:924:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (T::*)(ros::ServiceEvent<MReq, MRes>&), T*)
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, bool(T::*srv_func)(ServiceEvent<MReq, MRes>&), T *obj)
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:924:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:230:92:[m[K [01;36m[Knote: [m[K  mismatched types '[01m[Kros::ServiceEvent<MReq, MRes>&[m[K' and '[01m[Kint[m[K'
+     updateUI_service = node_handle.advertiseService("updateUI", &Controller::updateUI, this[01;36m[K)[m[K;
+                                                                                            [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:9[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:970:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (T::*)(MReq&, MRes&), const boost::shared_ptr<X>&)
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, bool(T::*srv_func)(MReq &, MRes &), const boost::shared_ptr<T>& obj)
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:970:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:230:92:[m[K [01;36m[Knote: [m[K  mismatched types '[01m[KMReq&[m[K' and '[01m[Kint[m[K'
+     updateUI_service = node_handle.advertiseService("updateUI", &Controller::updateUI, this[01;36m[K)[m[K;
+                                                                                            [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:9[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1017:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class T, class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (T::*)(ros::ServiceEvent<MReq, MRes>&), const boost::shared_ptr<X>&)
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, bool(T::*srv_func)(ServiceEvent<MReq, MRes>&), const boost::shared_ptr<T>& obj)
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1017:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:230:92:[m[K [01;36m[Knote: [m[K  mismatched types '[01m[Kros::ServiceEvent<MReq, MRes>&[m[K' and '[01m[Kint[m[K'
+     updateUI_service = node_handle.advertiseService("updateUI", &Controller::updateUI, this[01;36m[K)[m[K;
+                                                                                            [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:9[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1061:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (*)(MReq&, MRes&))
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, bool(*srv_func)(MReq&, MRes&))
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1061:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:230:92:[m[K [01;36m[Knote: [m[K  mismatched types '[01m[Kbool (*)(MReq&, MRes&)[m[K' and '[01m[Kbool (Controller::Controller::*)(int)[m[K'
+     updateUI_service = node_handle.advertiseService("updateUI", &Controller::updateUI, this[01;36m[K)[m[K;
+                                                                                            [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:9[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1104:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, bool (*)(ros::ServiceEvent<MReq, MRes>&))
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, bool(*srv_func)(ServiceEvent<MReq, MRes>&))
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1104:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:230:92:[m[K [01;36m[Knote: [m[K  mismatched types '[01m[Kbool (*)(ros::ServiceEvent<MReq, MRes>&)[m[K' and '[01m[Kbool (Controller::Controller::*)(int)[m[K'
+     updateUI_service = node_handle.advertiseService("updateUI", &Controller::updateUI, this[01;36m[K)[m[K;
+                                                                                            [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:9[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1145:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class MReq, class MRes> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, const boost::function<bool(MReq&, MRes&)>&, const VoidConstPtr&)
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, const boost::function<bool(MReq&, MRes&)>& callback,
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1145:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:230:92:[m[K [01;36m[Knote: [m[K  mismatched types '[01m[Kconst boost::function<bool(MReq&, MRes&)>[m[K' and '[01m[Kbool (Controller::Controller::*)(int)[m[K'
+     updateUI_service = node_handle.advertiseService("updateUI", &Controller::updateUI, this[01;36m[K)[m[K;
+                                                                                            [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:9[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1190:17:[m[K [01;36m[Knote: [m[Kcandidate: template<class S> ros::ServiceServer ros::NodeHandle::advertiseService(const string&, const boost::function<bool(S&)>&, const VoidConstPtr&)
+   ServiceServer [01;36m[KadvertiseService[m[K(const std::string& service, const boost::function<bool(S&)>& callback,
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1190:17:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:230:92:[m[K [01;36m[Knote: [m[K  mismatched types '[01m[Kconst boost::function<bool(S&)>[m[K' and '[01m[Kbool (Controller::Controller::*)(int)[m[K'
+     updateUI_service = node_handle.advertiseService("updateUI", &Controller::updateUI, this[01;36m[K)[m[K;
+                                                                                            [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/vel_controller.hpp:9[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:1[m[K:
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1222:17:[m[K [01;36m[Knote: [m[Kcandidate: ros::ServiceServer ros::NodeHandle::advertiseService(ros::AdvertiseServiceOptions&)
+   ServiceServer [01;36m[KadvertiseService[m[K(AdvertiseServiceOptions& ops);
+                 [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/ros/node_handle.h:1222:17:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K In member function '[01m[Kvoid Controller::Controller::do_publishing()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:289:33:[m[K [01;31m[Kerror: [m[Krequest for member '[01m[Ktrylock[m[K' in '[01m[K((Controller::Controller*)this)->Controller::Controller::panda_rundata_publisher[m[K', which is of non-class type '[01m[Kint[m[K'
+     if (panda_rundata_publisher.[01;31m[Ktrylock[m[K())
+                                 [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:291:33:[m[K [01;31m[Kerror: [m[Krequest for member '[01m[Kmsg_[m[K' in '[01m[K((Controller::Controller*)this)->Controller::Controller::panda_rundata_publisher[m[K', which is of non-class type '[01m[Kint[m[K'
+         panda_rundata_publisher.[01;31m[Kmsg_[m[K.header.stamp = ros::Time::now();
+                                 [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:292:33:[m[K [01;31m[Kerror: [m[Krequest for member '[01m[Kmsg_[m[K' in '[01m[K((Controller::Controller*)this)->Controller::Controller::panda_rundata_publisher[m[K', which is of non-class type '[01m[Kint[m[K'
+         panda_rundata_publisher.[01;31m[Kmsg_[m[K.header.frame_id = root_link_;
+                                 [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:293:33:[m[K [01;31m[Kerror: [m[Krequest for member '[01m[Kmsg_[m[K' in '[01m[K((Controller::Controller*)this)->Controller::Controller::panda_rundata_publisher[m[K', which is of non-class type '[01m[Kint[m[K'
+         panda_rundata_publisher.[01;31m[Kmsg_[m[K.X_err = X_err_msg_;
+                                 [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:294:33:[m[K [01;31m[Kerror: [m[Krequest for member '[01m[Kmsg_[m[K' in '[01m[K((Controller::Controller*)this)->Controller::Controller::panda_rundata_publisher[m[K', which is of non-class type '[01m[Kint[m[K'
+         panda_rundata_publisher.[01;31m[Kmsg_[m[K.play_traj_ = traj_properties_.play_traj_;
+                                 [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:295:33:[m[K [01;31m[Kerror: [m[Krequest for member '[01m[Kmsg_[m[K' in '[01m[K((Controller::Controller*)this)->Controller::Controller::panda_rundata_publisher[m[K', which is of non-class type '[01m[Kint[m[K'
+         panda_rundata_publisher.[01;31m[Kmsg_[m[K.tune_gains_ = traj_properties_.gain_tunning_ ;
+                                 [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:296:33:[m[K [01;31m[Kerror: [m[Krequest for member '[01m[KunlockAndPublish[m[K' in '[01m[K((Controller::Controller*)this)->Controller::Controller::panda_rundata_publisher[m[K', which is of non-class type '[01m[Kint[m[K'
+         panda_rundata_publisher.[01;31m[KunlockAndPublish[m[K();
+                                 [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:[m[K At global scope:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:323:27:[m[K [01;31m[Kerror: [m[K'[01m[Kbool Controller::Controller::updateUI[m[K' is not a static data member of '[01m[Kclass Controller::Controller[m[K'
+ bool Controller::updateUI([01;31m[Kvelocity_qp[m[K::UI::Request &req, velocity_qp::UI::Response &resp)
+                           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:323:27:[m[K [01;31m[Kerror: [m[K'[01m[Kvelocity_qp[m[K' has not been declared
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:323:53:[m[K [01;31m[Kerror: [m[K'[01m[Kreq[m[K' was not declared in this scope
+ bool Controller::updateUI(velocity_qp::UI::Request &[01;31m[Kreq[m[K, velocity_qp::UI::Response &resp)
+                                                     [01;31m[K^~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:323:58:[m[K [01;31m[Kerror: [m[K'[01m[Kvelocity_qp[m[K' has not been declared
+ bool Controller::updateUI(velocity_qp::UI::Request &req, [01;31m[Kvelocity_qp[m[K::UI::Response &resp)
+                                                          [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:323:85:[m[K [01;31m[Kerror: [m[K'[01m[Kresp[m[K' was not declared in this scope
+ bool Controller::updateUI(velocity_qp::UI::Request &req, velocity_qp::UI::Response &[01;31m[Kresp[m[K)
+                                                                                     [01;31m[K^~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:323:85:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Kread[m[K'
+ bool Controller::updateUI(velocity_qp::UI::Request &req, velocity_qp::UI::Response &[01;36m[Kresp[m[K)
+                                                                                     [01;36m[K^~~~[m[K
+                                                                                     [32m[Kread[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller.cpp:323:89:[m[K [01;31m[Kerror: [m[Kexpression list treated as compound expression in initializer [[01;31m[K-fpermissive[m[K]
+ bool Controller::updateUI(velocity_qp::UI::Request &req, velocity_qp::UI::Response &resp[01;31m[K)[m[K
+                                                                                         [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:[m[K In member function '[01m[Kvirtual void panda_mpc::PandaMPCController::update(const ros::Time&, const ros::Duration&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_controller.cpp:165:25:[m[K [01;31m[Kerror: [m[K'[01m[Kclass Controller::Controller[m[K' has no member named '[01m[KUpdate[m[K'; did you mean '[01m[Kupdate[m[K'?
+     joint_command_ = qp.[01;31m[KUpdate[m[K(q_,qd_,period);
+                         [01;31m[K^~~~~~[m[K
+                         [32m[Kupdate[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_controller.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

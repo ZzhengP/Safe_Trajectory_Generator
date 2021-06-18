@@ -1,0 +1,12 @@
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: undefined reference to `Controller::Controller::Update(Eigen::Matrix<double, -1, 1, 0, -1, 1> const&, Eigen::Matrix<double, -1, 1, 0, -1, 1> const&, ros::Duration const&)'
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: undefined reference to `Controller::Controller::Init(ros::NodeHandle&, Eigen::Matrix<double, -1, 1, 0, -1, 1> const&, Eigen::Matrix<double, -1, 1, 0, -1, 1> const&)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/test_plane_solver] Error 1
+make[1]: *** [examples/CMakeFiles/test_plane_solver.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: undefined reference to `Controller::Controller::Update(Eigen::Matrix<double, -1, 1, 0, -1, 1> const&, Eigen::Matrix<double, -1, 1, 0, -1, 1> const&, ros::Duration const&)'
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so: undefined reference to `Controller::Controller::Init(ros::NodeHandle&, Eigen::Matrix<double, -1, 1, 0, -1, 1> const&, Eigen::Matrix<double, -1, 1, 0, -1, 1> const&)'
+collect2: error: ld returned 1 exit status
+make[2]: *** [/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/trajectory_send] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

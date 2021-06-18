@@ -59,9 +59,8 @@ void PlaneSolver::setCost(const Eigen::VectorXd& f){
 
 
     // For non linear
-    H_ = 0.001*H1 + H2 + 0.1*H3;
-    g_ = 0.001*g1 + g2 + 0.1*g3;
-
+    H_ = 0.1*H1 + H2 + 0.1*H3;
+    g_ = 0.1*g1 + g2 + 0.1*g3;
 }
 
 
@@ -100,7 +99,7 @@ void PlaneSolver::setCstMatrix(const Eigen::MatrixXd &robotPartielVertices,
 
   // Additional non vertical constraint
 
-  dsafe_ = 0.15;
+  dsafe_ = 0.1;
   lbA_.setConstant(dsafe_);
   lbA_(rcols + pcols) = 0.95;
 

@@ -4,4 +4,10 @@
             A model predictive controller for panda robot
         </description>
     </class>
+
+<class name="panda_mpc/JointVelocityExampleController" type="panda_mpc::JointVelocityExampleController" base_class_type="controller_interface::ControllerBase">
+    <description>
+        A model predictive controller for panda robot
+    </description>
+</class>
 </library>

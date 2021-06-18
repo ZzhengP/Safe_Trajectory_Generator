@@ -35,13 +35,13 @@ namespace planning {
     new_constraint.ubA_.setConstant(10000);
     new_constraint.A_.resize(2*(N_-1), N_*dof_);
     new_constraint.constraint_size_ = 2*(N_-1);
-    mpc_constraint_->addConstraint(new_constraint);
+//    mpc_constraint_->addConstraint(new_constraint);
     // ------------------------- QP Solver -------------------------
     // qp_oases solver init
     nV_ = N_*dof_;
     nbrCst_ = mpc_constraint_->getConstraintNumber();
 
-    qpoases_solver_.configureQP(nV_,nbrCst_);
+    qpoases_solver_.configureQPMPC(nV_,nbrCst_);
     std::cout << "qp solver number of constraint : " << nbrCst_ << '\n';
     ros::param::get("/panda_mpc/robot_member_", robot_member_);
     ros::param::get("/panda_mpc/robot_vertices_", robot_vertices_);
@@ -137,19 +137,13 @@ namespace planning {
     plane_location_ = plane_generation->GetPlane();
 
 
-    mpc_constraint_->computeUpperBoundAndConstraint(S,
-                                   robotVerticesAugmented_,
-                                   plane_location_,
-                                   J_horizon_,
-                                   q_horizon,
-                                   3);
+//    mpc_constraint_->computeUpperBoundAndConstraint(S,
+//                                   robotVerticesAugmented_,
+//                                   plane_location_,
+//                                   J,
+//                                   q_horizon,
+//                                   3);
 
-//    mpc_constraint_->avoidanceTest(S,
-//                                   robotVerticesAugmented_[0],
-//                                   plane_location_[0].col(0),
-//                                   J.block(0,0,3,7),
-//                                   q_horizon.tail(2*dof_),
-//                                    3);
     // Update constraint
     if(!mpc_constraint_->update(S, q_des.segment(0,dof_),
                                 robotVerticesAugmented_,
@@ -166,7 +160,7 @@ namespace planning {
     qpoases_solver_.ubA_ = mpc_constraint_->getUBA();
     qpoases_solver_.A_ = mpc_constraint_->getConstraintA();
 
-    is_solved = qpoases_solver_.solve();
+    is_solved = qpoases_solver_.solveMPC();
 
 
 

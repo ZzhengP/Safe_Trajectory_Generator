@@ -11,11 +11,18 @@ struct qpSolver{
 
   void configureQP(int num_variable, int num_constraint);
   void configureQP(int num_variable, int num_constraint, qpOASES::Options options);
+
+  void configureQPMPC(int num_variable, int num_constraint);
+  void configureQPMPC(int num_variable, int num_constraint, qpOASES::Options options);
+
   bool solve();
+  bool solveMPC();
   void solvePlane();
   // --------------------------- QP solver --------------------------------------
   std::shared_ptr<qpOASES::SQProblem> qp_solver_;
   std::shared_ptr<qpOASES::QProblemB> qp_no_bound_;
+  std::shared_ptr<qpOASES::QProblem> qp_solver_mpc_;
+
   qpOASES::Options options_;
   Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> H_;
   Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> A_;
