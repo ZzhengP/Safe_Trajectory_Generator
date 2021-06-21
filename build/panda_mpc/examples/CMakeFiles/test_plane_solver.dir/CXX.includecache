@@ -39,6 +39,16 @@ planning/plane_solver_old.h
 -
 
 /home/zheng/catkin_ws/src/panda_mpc/include/planning/plane_solver.h
+qpOASES.hpp
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/qpOASES.hpp
+Eigen/Dense
+-
+Eigen/Core
+-
+iostream
+-
+ros/ros.h
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/ros/ros.h
 
 /home/zheng/catkin_ws/src/panda_mpc/include/planning/plane_solver_old.h
 qpOASES.hpp

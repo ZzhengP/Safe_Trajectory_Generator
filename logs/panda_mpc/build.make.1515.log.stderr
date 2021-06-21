@@ -1,0 +1,43 @@
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:347:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:9[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:1[m[K:
+/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h: In instantiation of '[01m[Kvoid Eigen::PlainObjectBase<Derived>::resize(Eigen::Index) [with Derived = Eigen::Matrix<double, -1, -1>; Eigen::Index = long int][m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:97:34:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:311:7:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: YOU_TRIED_CALLING_A_VECTOR_METHOD_ON_A_MATRIX
+       [01;31m[KE[m[KIGEN_STATIC_ASSERT_VECTOR_ONLY(PlainObjectBase)
+       [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:347:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:1[m[K:
+/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h: In instantiation of '[01m[Kvoid Eigen::PlainObjectBase<Derived>::resize(Eigen::Index) [with Derived = Eigen::Matrix<double, -1, -1>; Eigen::Index = long int][m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:97:34:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:311:7:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: YOU_TRIED_CALLING_A_VECTOR_METHOD_ON_A_MATRIX
+       [01;31m[KE[m[KIGEN_STATIC_ASSERT_VECTOR_ONLY(PlainObjectBase)
+       [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:347:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_mpc.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/panda_mpc.cpp:11[m[K:
+/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h: In instantiation of '[01m[Kvoid Eigen::PlainObjectBase<Derived>::resize(Eigen::Index) [with Derived = Eigen::Matrix<double, -1, -1>; Eigen::Index = long int][m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:97:34:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:311:7:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: YOU_TRIED_CALLING_A_VECTOR_METHOD_ON_A_MATRIX
+       [01;31m[KE[m[KIGEN_STATIC_ASSERT_VECTOR_ONLY(PlainObjectBase)
+       [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o] Error 1
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:347:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h: In instantiation of '[01m[Kvoid Eigen::PlainObjectBase<Derived>::resize(Eigen::Index) [with Derived = Eigen::Matrix<double, -1, -1>; Eigen::Index = long int][m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:97:34:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:311:7:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: YOU_TRIED_CALLING_A_VECTOR_METHOD_ON_A_MATRIX
+       [01;31m[KE[m[KIGEN_STATIC_ASSERT_VECTOR_ONLY(PlainObjectBase)
+       [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o] Error 1
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

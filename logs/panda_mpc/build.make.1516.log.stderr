@@ -1,0 +1,17 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:[m[K In member function '[01m[Kstd::shared_ptr<KDL::Trajectory_Composite> pointSender::generateTrajectory(KDL::Frame, KDL::Frame)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:241:69:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[Kplanning::trajGen::generateTrajectory(KDL::Frame&, KDL::Frame&)[m[K'
+     trajectory_generation->generateTrajectory(start_frame, end_frame[01;31m[K)[m[K;
+                                                                     [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:44:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_mpc.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:162:8:[m[K [01;36m[Knote: [m[Kcandidate: bool planning::trajGen::generateTrajectory(std::vector<Eigen::Matrix<double, -1, 1> >, std::vector<Eigen::Matrix<double, -1, 1> >)
+   bool [01;36m[KgenerateTrajectory[m[K(std::vector<Eigen::VectorXd> start_traj, std::vector<Eigen::VectorXd> end_traj);
+        [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:162:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KKDL::Frame[m[K' to '[01m[Kstd::vector<Eigen::Matrix<double, -1, 1> >[m[K'
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:245:48:[m[K [01;31m[Kerror: [m[Kcould not convert '[01m[Kplanning::trajGen::getTrajectory() const()[m[K' from '[01m[Kstd::vector<Eigen::Matrix<double, -1, -1> >[m[K' to '[01m[Kstd::shared_ptr<KDL::Trajectory_Composite>[m[K'
+     return [01;31m[Ktrajectory_generation->getTrajectory()[m[K;
+            [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,15 @@
+In file included from [01m[K/opt/ros/melodic/include/ros/assert.h:35:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:36[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/publisher.h:32[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/node_handle.h:32[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_mpc.h:16[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:[m[K In member function '[01m[Kvoid pointSender::septicTimeScalingTest(KDL::JntArrayAcc, KDL::JntArrayAcc)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:253:35:[m[K [01;31m[Kerror: [m[K'[01m[Ki[m[K' was not declared in this scope
+       ROS_WARN_STREAM("Joint " << [01;31m[Kj[m[K << "interpolation");
+                                   [01;31m[K^[m[K
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,6 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:182:82:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K-Wmultichar[m[K]
+     std::cout <<" qp soft lbA_ size : \n" << qpoases_soft_solver_.lbA_.rows() << [01;35m[K' X '[m[K << qpoases_soft_solver_.lbA_.cols() << '\n';
+                                                                                  [01;35m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:183:85:[m[K [01;35m[Kwarning: [m[Kmulti-character character constant [[01;35m[K-Wmultichar[m[K]
+     std::cout <<" constraint lbA_ size : \n" << mpc_constraint_->getLBA().rows() << [01;35m[K' X '[m[K << mpc_constraint_->getLBA().cols() << '\n';
+                                                                                     [01;35m[K^~~~~[m[K

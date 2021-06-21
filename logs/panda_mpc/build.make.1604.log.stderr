@@ -1,0 +1,8 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K In member function '[01m[Kvoid planning::trajGen::computeSoftMPC(const MatrixXd&, const MatrixXd&, Eigen::VectorXd, Eigen::VectorXd, Eigen::VectorXd)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:393:86:[m[K [01;31m[Kerror: [m[K'[01m[Kstruct qpSolver[m[K' has no member named '[01m[KH[m[K'; did you mean '[01m[KH_[m[K'?
+     std::cout <<" H size : " << g.size() <<H.rows() << " x " << H.cols()<< '\n';
+                                                                                      [01;31m[K^[m[K
+                                                                                      [32m[KH_[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

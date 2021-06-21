@@ -99,7 +99,7 @@ void PlaneSolver::setCstMatrix(const Eigen::MatrixXd &robotPartielVertices,
 
   // Additional non vertical constraint
 
-  dsafe_ = 0.1;
+  dsafe_ = 0.15;
   lbA_.setConstant(dsafe_);
   lbA_(rcols + pcols) = 0.95;
 

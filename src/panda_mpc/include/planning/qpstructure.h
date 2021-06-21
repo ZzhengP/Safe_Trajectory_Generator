@@ -15,13 +15,18 @@ struct qpSolver{
   void configureQPMPC(int num_variable, int num_constraint);
   void configureQPMPC(int num_variable, int num_constraint, qpOASES::Options options);
 
+  void configureSoftQPMPC(int num_variable, int num_constraint);
+  void configureSoftQPMPC(int num_variable, int num_constraint, qpOASES::Options options);
+
   bool solve();
   bool solveMPC();
+  bool solveSoftMPC();
   void solvePlane();
   // --------------------------- QP solver --------------------------------------
   std::shared_ptr<qpOASES::SQProblem> qp_solver_;
   std::shared_ptr<qpOASES::QProblemB> qp_no_bound_;
   std::shared_ptr<qpOASES::QProblem> qp_solver_mpc_;
+  std::shared_ptr<qpOASES::SQProblem> qp_soft_solver_mpc_;
 
   qpOASES::Options options_;
   Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> H_;
@@ -33,6 +38,11 @@ struct qpSolver{
   qpOASES::returnValue ret_;
 
 
+  Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> soft_H_;
+  Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> soft_A_;
+  Eigen::VectorXd soft_g_, soft_lb_, soft_ub_, soft_lbA_, soft_ubA_,  soft_optimal_solution_;
+  int soft_nV_;
+  int soft_nbrCst_;
 };
 
 

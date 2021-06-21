@@ -235,6 +235,35 @@ public:
       }
    }
 
+
+  void cartToJoint(KDL::Frame kdl_frame, KDL::JntArray & jnt){
+    trajectory_generation->getRobotModel()->CartToJnt(kdl_frame, jnt);
+  }
+
+  void septicTimeScalingTest(KDL::JntArrayAcc jnt_start, KDL::JntArrayAcc jnt_end){
+    Eigen::Vector3d single_jnt_start, single_jnt_end;
+
+
+    Eigen::Vector3d intermediate_jnt;
+
+    int index = 0.04/0.001;
+    intermediate_jnt.setZero();
+    for (int j(0); j<3; j++){
+
+      ROS_WARN_STREAM("Joint " << j << " interpolation");
+      single_jnt_start << jnt_start.q.data(j), jnt_start.qdot.data(j), jnt_start.qdotdot.data(j);
+      single_jnt_end << jnt_end.q.data(j), jnt_end.qdot.data(j), jnt_end.qdotdot.data(j);
+    for (int i(1); i< index+1; i++){
+      intermediate_jnt = trajectory_generation->septicTimeScaling(single_jnt_start, single_jnt_end, 0.001*i*25);
+      std::cout << "Intermediate joint information :\n "<< intermediate_jnt.transpose() << ", index : " << 0.001*i*25 << '\n';
+
+    }
+    std::cout << "joint start :\n" << single_jnt_start.transpose()<< '\n';
+    std::cout << "joint end :\n" << single_jnt_end.transpose()<< '\n';
+
+  }
+
+  }
 private:
 
   ros::NodeHandle node_handle_;
@@ -268,6 +297,7 @@ private:
   KDL::Jacobian J;
   KDL::JntArrayVel q_in;
   Eigen::VectorXd ee_vel;
+
 };
 
 
@@ -292,14 +322,28 @@ int main(int argc, char** argv )
 
     pointSender point_send_(node_handle, q_init, qd_init);
 
-    point_send_.update();
-    ros::spin();
-//    while(ros::ok()){
+    KDL::Frame start_fram(KDL::Vector(0.5,0.4,0.25)), end_frame(KDL::Vector(0.5,0.3,0.2));
+    start_fram.M.Identity();
+    end_frame.M = start_fram.M;
 
-//      ros::spinOnce();
-//      loop_rate.sleep();
+    KDL::JntArrayAcc jnt_start, jnt_end;
+    jnt_start.resize(7), jnt_end.resize(7);
+    jnt_start.qdot.data.setConstant(1);
+    jnt_start.qdotdot.data.setConstant(10);
+    jnt_end.qdot.data.setConstant(1);
+    jnt_end.qdotdot.data.setConstant(10);
 
-//    }
+    point_send_.cartToJoint(start_fram, jnt_start.q);
+    point_send_.cartToJoint(end_frame, jnt_end.q);
+
+
+
+    ROS_WARN_STREAM("MPC trajectory generated ");
+
+
+
+
+      point_send_.septicTimeScalingTest(jnt_start, jnt_end);
 
     return 0;
 

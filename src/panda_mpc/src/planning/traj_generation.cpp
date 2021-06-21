@@ -34,14 +34,16 @@ namespace planning {
     new_constraint.ubA_.resize(2*(N_-1));
     new_constraint.ubA_.setConstant(10000);
     new_constraint.A_.resize(2*(N_-1), N_*dof_);
+    new_constraint.A_.resize(2*(N_-1), N_*dof_);
     new_constraint.constraint_size_ = 2*(N_-1);
-//    mpc_constraint_->addConstraint(new_constraint);
+    mpc_constraint_->addConstraint(new_constraint);
     // ------------------------- QP Solver -------------------------
     // qp_oases solver init
     nV_ = N_*dof_;
     nbrCst_ = mpc_constraint_->getConstraintNumber();
 
     qpoases_solver_.configureQPMPC(nV_,nbrCst_);
+    qpoases_soft_solver_.configureSoftQPMPC(nV_+1 , nbrCst_);
     std::cout << "qp solver number of constraint : " << nbrCst_ << '\n';
     ros::param::get("/panda_mpc/robot_member_", robot_member_);
     ros::param::get("/panda_mpc/robot_vertices_", robot_vertices_);
@@ -131,18 +133,23 @@ namespace planning {
 //      ROS_INFO_STREAM("success to update task");
 
     }
+
     qpoases_solver_.H_ = mpc_task_->getHessien();
     qpoases_solver_.g_ = mpc_task_->getGradient();
+
+
 
     plane_location_ = plane_generation->GetPlane();
 
 
-//    mpc_constraint_->computeUpperBoundAndConstraint(S,
-//                                   robotVerticesAugmented_,
-//                                   plane_location_,
-//                                   J,
-//                                   q_horizon,
-//                                   3);
+    mpc_constraint_->computeUpperBoundAndConstraint(S,
+                                   robotVerticesAugmented_,
+                                   plane_location_,
+                                   J,
+                                   q_horizon,
+                                   3);
+
+
 
     // Update constraint
     if(!mpc_constraint_->update(S, q_des.segment(0,dof_),
@@ -160,9 +167,19 @@ namespace planning {
     qpoases_solver_.ubA_ = mpc_constraint_->getUBA();
     qpoases_solver_.A_ = mpc_constraint_->getConstraintA();
 
+
+
+
+    computeSoftMPC(mpc_task_->getHessien(),
+                   mpc_constraint_->getConstraintA(),
+                   mpc_task_->getGradient(),
+                   mpc_constraint_->getLBA(),
+                   mpc_constraint_->getUBA());
+
     is_solved = qpoases_solver_.solveMPC();
 
 
+    bool is_soft_solved = qpoases_soft_solver_.solveSoftMPC();
 
     // ------------------- Update Plane -----------
     // update robot vertices horizon for plane generation
@@ -183,11 +200,26 @@ namespace planning {
 
     publishObstacle(obstacle_center);
     publishPath();
-    if (is_solved){
-      return qpoases_solver_.optimal_solution_;
+
+    if(!is_solved && is_soft_solved)
+      ROS_WARN_STREAM("hard constraint qp failed, but soft constraint qp successifuly solved");
+
+    if (is_soft_solved){
+
+      return qpoases_soft_solver_.soft_optimal_solution_.segment(0,nV_);
     }else{
-      return qpoases_solver_.optimal_solution_.setZero();
+      qpoases_soft_solver_.soft_optimal_solution_.setZero();
+      return qpoases_soft_solver_.soft_optimal_solution_.segment(0,nV_);
     }
+
+//    if (is_solved){
+//      return qpoases_solver_.optimal_solution_;
+//    }else{
+//      return qpoases_solver_.optimal_solution_.setZero();
+//    }
+
+
+    // end
   }
 
 
@@ -335,6 +367,73 @@ namespace planning {
 
 
       path_pub_.publish(path);
+  }
+
+
+  Eigen::Vector3d trajGen::septicTimeScaling(Eigen::Vector3d jnt_start, Eigen::Vector3d jnt_end, double t){
+
+      Eigen::VectorXd b;
+      b.resize(8);
+
+      b <<jnt_start(0), jnt_start(1), jnt_start(2), 0, jnt_end(0), jnt_end(1), jnt_end(2), 0;
+
+      septic_interpolation_coef_ = septicMatrix_.inverse()*b;
+
+      Eigen::Vector3d intermediate_jnt;
+
+      intermediate_jnt.setZero();
+      jntPosSpeticTimeScaling(intermediate_jnt, t);
+      return intermediate_jnt;
+  }
+
+  Eigen::Vector3d trajGen::quinticTimeScaling(Eigen::Vector3d jnt_start, Eigen::Vector3d jnt_end, double t){
+
+      Eigen::VectorXd b;
+      b.resize(6);
+
+      b <<jnt_start(0), jnt_start(1), jnt_start(2), jnt_end(0), jnt_end(1), jnt_end(2);
+
+      quintic_interpolation_coef_ = quinticMatrix_.inverse()*b;
+
+      Eigen::Vector3d intermediate_jnt;
+
+      intermediate_jnt.setZero();
+      jntPosQuinticTimeScaling(intermediate_jnt, t);
+      return intermediate_jnt;
+  }
+  void trajGen::computeSoftMPC(const Eigen::MatrixXd& H, const Eigen::MatrixXd & A, Eigen::VectorXd g,
+                               Eigen::VectorXd lbA, Eigen::VectorXd ubA){
+
+
+    int row = H.rows();
+    int col = H.cols();
+
+
+    qpoases_soft_solver_.soft_H_.setZero();
+    qpoases_soft_solver_.soft_H_.block(0,0,row,col) = H;
+    qpoases_soft_solver_.soft_H_(row,col) = 10000;
+
+
+    qpoases_soft_solver_.soft_g_.setZero();
+    qpoases_soft_solver_.soft_g_.segment(0, row) = g;
+    qpoases_soft_solver_.soft_g_(row) = 0;
+
+    qpoases_soft_solver_.soft_lb_.setConstant(-12);
+    qpoases_soft_solver_.soft_lb_(row) = -0.15;
+
+    qpoases_soft_solver_.soft_ub_.setConstant(12);
+    qpoases_soft_solver_.soft_ub_(row) = 0.15;
+
+    int nbrCst = lbA.size();
+    qpoases_soft_solver_.soft_lbA_ = lbA;
+    qpoases_soft_solver_.soft_ubA_ = ubA;
+
+
+    qpoases_soft_solver_.soft_A_.setZero();
+    qpoases_soft_solver_.soft_A_.block(0,0,nbrCst,col) = A;
+    qpoases_soft_solver_.soft_A_.block(nbrCst-6,row,6,1).setConstant(-1);
+
+
   }
 
   enum  	returnValue {

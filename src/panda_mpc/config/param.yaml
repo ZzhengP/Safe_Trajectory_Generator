@@ -46,7 +46,7 @@ panda_mpc:
     init_pos_attend_ : true
     regularisation_weight_ : 1.0e-5
     N_ : 4
-    dt_ : 0.04
+    dt_ : 0.05
     dsafe_ : 0.1
     robot_member_ : 1
     robot_vertices_ : 1

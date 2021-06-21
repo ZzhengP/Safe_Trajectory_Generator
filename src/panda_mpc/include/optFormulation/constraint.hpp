@@ -47,12 +47,6 @@ public:
               const Eigen::MatrixXd & JacobianHorizon, const Eigen::VectorXd& qHorizonPrecedent);
 
 
-  bool avoidanceTest(const Eigen::VectorXd &state,
-                                    Eigen::MatrixXd robotVerticesAugmented,
-                                    Eigen::MatrixXd plane,
-                                    Eigen::MatrixXd Jacobian,
-                                    Eigen::VectorXd qHorizonPrecedent,
-                                    int index);
 
   bool computeUpperBoundAndConstraint(const Eigen::VectorXd& state,
                                       const std::vector<Eigen::MatrixXd>& robotVerticesAugmented,
@@ -60,6 +54,9 @@ public:
                                       const Eigen::MatrixXd & JacobianHorizon,
                                       const Eigen::VectorXd& qHorizonPrecedent,
                                       int index);
+
+
+
 
   bool addConstraint(const constraint& new_constraint){
 
@@ -131,6 +128,7 @@ private:
   Eigen::VectorXd qd_max_mpc_;
 
   robot::MPC_param mpc_params_; /*!< @brief model predictive parameters to define mpc task */
+
 
   bool updateConstraintContainer(const Eigen::VectorXd& state, Eigen::VectorXd q_des,
                                  const std::vector<Eigen::MatrixXd>& robotVerticesAugmented,

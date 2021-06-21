@@ -1,0 +1,7 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K In member function '[01m[KEigen::VectorXd planning::trajGen::update(Eigen::VectorXd, const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&, Eigen::MatrixXd)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:186:84:[m[K [01;31m[Kerror: [m[K'[01m[Ks[m[K' was not declared in this scope
+     std::cout <<" constraint lbA_ size : \n" << mpc_constraint_->getLBA().rows() <<[01;31m[Ks[m[K '\n';
+                                                                                    [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

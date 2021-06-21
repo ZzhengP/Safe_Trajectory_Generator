@@ -105,6 +105,7 @@ bool MPCConstraint::update(const Eigen::VectorXd &state, Eigen::VectorXd q_des,c
 
 
 
+
 bool MPCConstraint::updateConstraintContainer(const Eigen::VectorXd &state, Eigen::VectorXd q_des,
                                               const std::vector<Eigen::MatrixXd>& robotVerticesAugmented,
                                               const std::vector<Eigen::MatrixXd>& plane,
@@ -158,65 +159,6 @@ bool MPCConstraint::updateConstraintContainer(const Eigen::VectorXd &state, Eige
 }
 
 
-bool MPCConstraint::avoidanceTest(const Eigen::VectorXd &state,
-                                  Eigen::MatrixXd robotVerticesAugmented,
-                                  Eigen::MatrixXd plane,
-                                  Eigen::MatrixXd J,
-                                  Eigen::VectorXd qHorizonPrecedent,
-                                  int index){
-
-    double dsafe_table = 0.05;
-    // Resize the size of constraint according to the number of different m obstacle plane
-    int m = plane.size();
-
-
-    constraint_container_[index].lbA_.resize(2);
-    constraint_container_[index].lbA_.setConstant(-1000);
-    constraint_container_[index].ubA_.resize(2);
-    constraint_container_[index].ubA_.setConstant(0);
-    constraint_container_[index].A_.resize(2, dof_*N_);
-
-    Eigen::VectorXd bLarge;
-    bLarge.resize(2);
-    bLarge.setZero();
-
-    Eigen::MatrixXd n_jacobian;
-    n_jacobian.resize(2,N_*dof_);
-    n_jacobian.setZero();
-    // ================= nJk*qk <= bk - dsafe - ak.rk + ak.Jk.qk ===================================
-    // Because we pointing the plane to obstacle
-    Eigen::VectorXd ar, aJq;
-    ar.resize(2);
-    aJq.resize(2);
-
-    ar.setZero();
-    aJq.setZero();
-
-    // =====
-    ROS_WARN_STREAM("plane :\n "<< plane);
-
-    Eigen::Vector3d plane_temp;
-    plane_temp << plane(0), plane(1), plane(2);
-    n_jacobian.block(0,0,1,dof_) = plane_temp.transpose()*J;
-    n_jacobian.block(1,dof_,1,dof_) = plane_temp.transpose()*J;
-
-    constraint_container_[index].A_ = n_jacobian*mpc_params_.Pu_;
-
-    bLarge.setConstant(plane(3) - 0.1);
-    ROS_WARN_STREAM("robot vertices :\n "<< robotVerticesAugmented);
-
-    ar(0) = plane_temp.transpose()*robotVerticesAugmented.col(0);
-    ar(1) = plane_temp.transpose()*robotVerticesAugmented.col(1);
-
-    aJq(0) =plane_temp.transpose()*J * qHorizonPrecedent.head(dof_);
-    aJq(1) =plane_temp.transpose()*J * qHorizonPrecedent.tail(dof_);
-
-    constraint_container_[index].ubA_= bLarge - ar + aJq  - n_jacobian*mpc_params_.Px_*state;
-
-
-
-    return true;
-}
 
 bool MPCConstraint::computeUpperBoundAndConstraint(const Eigen::VectorXd &state,
                                                    const std::vector<Eigen::MatrixXd> &robotVerticesAugmented,
@@ -225,7 +167,7 @@ bool MPCConstraint::computeUpperBoundAndConstraint(const Eigen::VectorXd &state,
                                                    const Eigen::VectorXd &qHorizonPrecedent,
                                                    int index){
 
-    double dsafe_table = 0.05;
+    double dsafe_table = 0.2;
     // Resize the size of constraint according to the number of different m obstacle plane
     int m = plane.size();
     if (m!=1){
@@ -300,6 +242,7 @@ bool MPCConstraint::computeUpperBoundAndConstraint(const Eigen::VectorXd &state,
 
     return true;
 }
+
 
 }
 

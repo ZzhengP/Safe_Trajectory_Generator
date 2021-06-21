@@ -179,6 +179,8 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
     H_ +=  2.0 *  J.transpose() * J;
     g_ += -2.0 *  J.transpose() * xd_des_;
 
+    H_ += regularisation_weight_ * Eigen::MatrixXd::Identity(7,7);
+    g_ += - regularisation_weight_ * joint_velocity_out_;
     double horizon_dt = 15 * time_dt;
 
     ub_ = qd_max_;
