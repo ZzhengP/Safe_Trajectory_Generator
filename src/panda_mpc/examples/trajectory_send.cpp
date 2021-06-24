@@ -240,30 +240,16 @@ public:
     trajectory_generation->getRobotModel()->CartToJnt(kdl_frame, jnt);
   }
 
-  void septicTimeScalingTest(KDL::JntArrayAcc jnt_start, KDL::JntArrayAcc jnt_end){
-    Eigen::Vector3d single_jnt_start, single_jnt_end;
+
+  Eigen::MatrixXd computeInterpolation(std::vector<KDL::JntArrayAcc> joints, int i){
 
 
-    Eigen::Vector3d intermediate_jnt;
 
-    int index = 0.04/0.001;
-    intermediate_jnt.setZero();
-    for (int j(0); j<3; j++){
+    trajectory_generation->computeCubicInterpolation(joints,i);
 
-      ROS_WARN_STREAM("Joint " << j << " interpolation");
-      single_jnt_start << jnt_start.q.data(j), jnt_start.qdot.data(j), jnt_start.qdotdot.data(j);
-      single_jnt_end << jnt_end.q.data(j), jnt_end.qdot.data(j), jnt_end.qdotdot.data(j);
-    for (int i(1); i< index+1; i++){
-      intermediate_jnt = trajectory_generation->septicTimeScaling(single_jnt_start, single_jnt_end, 0.001*i*25);
-      std::cout << "Intermediate joint information :\n "<< intermediate_jnt.transpose() << ", index : " << 0.001*i*25 << '\n';
-
-    }
-    std::cout << "joint start :\n" << single_jnt_start.transpose()<< '\n';
-    std::cout << "joint end :\n" << single_jnt_end.transpose()<< '\n';
-
+    return trajectory_generation->getCubicCoefficientMatrix();
   }
 
-  }
 private:
 
   ros::NodeHandle node_handle_;
@@ -310,7 +296,7 @@ int main(int argc, char** argv )
 
 
     int dof = 7;
-    int N = 5;
+    int N = 4;
 
 
     Eigen::VectorXd q_init, qd_init, qdd_init, state;
@@ -322,28 +308,59 @@ int main(int argc, char** argv )
 
     pointSender point_send_(node_handle, q_init, qd_init);
 
-    KDL::Frame start_fram(KDL::Vector(0.5,0.4,0.25)), end_frame(KDL::Vector(0.5,0.3,0.2));
+    KDL::Frame start_fram, end_frame;
+    start_fram.p[0] = 0.5, start_fram.p[1] = 0.4, start_fram.p[2] = 0.25;
+    end_frame.p[0] = 0.5, end_frame.p[1] = 0., end_frame.p[2] = 0.2;
+
+
     start_fram.M.Identity();
     end_frame.M = start_fram.M;
 
-    KDL::JntArrayAcc jnt_start, jnt_end;
-    jnt_start.resize(7), jnt_end.resize(7);
-    jnt_start.qdot.data.setConstant(1);
-    jnt_start.qdotdot.data.setConstant(10);
-    jnt_end.qdot.data.setConstant(1);
-    jnt_end.qdotdot.data.setConstant(10);
+    KDL::Frame frame1,  frame2,  frame3;
+    frame1.p[0] = 0.6, frame1.p[1] = 0.4, frame1.p[2] = 0.25;
+    frame2.p[0] = 0.6, frame2.p[1] = 0.3, frame2.p[2] = 0.25;
+    frame3.p[0] = 0.5, frame3.p[1] = 0.3, frame3.p[2] = 0.25;
 
-    point_send_.cartToJoint(start_fram, jnt_start.q);
-    point_send_.cartToJoint(end_frame, jnt_end.q);
+    frame1.M = start_fram.M;
+    frame2.M = start_fram.M;
+    frame3.M = start_fram.M;
+
+    std::vector<KDL::Frame> frames;
+    frames.resize(N+1);
+    frames[0]= start_fram;
+    frames[1] = frame1;
+    frames[2] = frame2;
+    frames[3] = frame3;
+    frames[4] = end_frame;
+
+    std::vector<KDL::JntArrayAcc> local_joints;
+
+    local_joints.resize(N+1);
+    for (int i(0); i < N+1; i++){
+      std::cout <<" i " << i << '\n';
+      local_joints[i].resize(7);
+      local_joints[i].q.data = q_init;
+      local_joints[i].qdot.data.setConstant(1);
+      local_joints[i].qdotdot.data.setConstant(10);
+
+      point_send_.cartToJoint(frames[i], local_joints[i].q);
+    }
+
+    Eigen::MatrixXd cubicCoefficient;
+
+    cubicCoefficient.resize(N,4);
+
+    for (int i(0) ; i<7; i++){
+    cubicCoefficient = point_send_.computeInterpolation(local_joints,i);
 
 
-
+    std::cout << "cubicCoefficient \n" <<  cubicCoefficient << '\n' ;
+    }
     ROS_WARN_STREAM("MPC trajectory generated ");
 
 
 
 
-      point_send_.septicTimeScalingTest(jnt_start, jnt_end);
 
     return 0;
 

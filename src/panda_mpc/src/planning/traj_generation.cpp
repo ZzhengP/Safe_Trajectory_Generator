@@ -43,7 +43,7 @@ namespace planning {
     nbrCst_ = mpc_constraint_->getConstraintNumber();
 
     qpoases_solver_.configureQPMPC(nV_,nbrCst_);
-    qpoases_soft_solver_.configureSoftQPMPC(nV_+1 , nbrCst_);
+    qpoases_soft_solver_.configureSoftQPMPC(nV_ +1 , nbrCst_);
     std::cout << "qp solver number of constraint : " << nbrCst_ << '\n';
     ros::param::get("/panda_mpc/robot_member_", robot_member_);
     ros::param::get("/panda_mpc/robot_vertices_", robot_vertices_);
@@ -58,7 +58,7 @@ namespace planning {
 
     Eigen::Vector3d obstacle_center;
 
-    obstacle_center << 0.5, -0.0, 0.15;
+    obstacle_center << 0.55, -0.0, 0.15;
 
 
     obsVertices_.resize(3,obstacle_vertices_);
@@ -120,7 +120,7 @@ namespace planning {
     qdd_des.setZero();
 
     q_horizon_precedent_ = robot_mpc_model_->getJntHorizon();
-    // update robot model
+    // update robot model (update joint horizon)
     robot_mpc_model_->setJntState(S.segment(0,dof_), S.segment(dof_,dof_));
     robot_mpc_model_->update(S,solution_precedent);
 
@@ -145,7 +145,7 @@ namespace planning {
     mpc_constraint_->computeUpperBoundAndConstraint(S,
                                    robotVerticesAugmented_,
                                    plane_location_,
-                                   J,
+                                   J_horizon_,
                                    q_horizon,
                                    3);
 
@@ -370,37 +370,7 @@ namespace planning {
   }
 
 
-  Eigen::Vector3d trajGen::septicTimeScaling(Eigen::Vector3d jnt_start, Eigen::Vector3d jnt_end, double t){
 
-      Eigen::VectorXd b;
-      b.resize(8);
-
-      b <<jnt_start(0), jnt_start(1), jnt_start(2), 0, jnt_end(0), jnt_end(1), jnt_end(2), 0;
-
-      septic_interpolation_coef_ = septicMatrix_.inverse()*b;
-
-      Eigen::Vector3d intermediate_jnt;
-
-      intermediate_jnt.setZero();
-      jntPosSpeticTimeScaling(intermediate_jnt, t);
-      return intermediate_jnt;
-  }
-
-  Eigen::Vector3d trajGen::quinticTimeScaling(Eigen::Vector3d jnt_start, Eigen::Vector3d jnt_end, double t){
-
-      Eigen::VectorXd b;
-      b.resize(6);
-
-      b <<jnt_start(0), jnt_start(1), jnt_start(2), jnt_end(0), jnt_end(1), jnt_end(2);
-
-      quintic_interpolation_coef_ = quinticMatrix_.inverse()*b;
-
-      Eigen::Vector3d intermediate_jnt;
-
-      intermediate_jnt.setZero();
-      jntPosQuinticTimeScaling(intermediate_jnt, t);
-      return intermediate_jnt;
-  }
   void trajGen::computeSoftMPC(const Eigen::MatrixXd& H, const Eigen::MatrixXd & A, Eigen::VectorXd g,
                                Eigen::VectorXd lbA, Eigen::VectorXd ubA){
 
@@ -411,7 +381,7 @@ namespace planning {
 
     qpoases_soft_solver_.soft_H_.setZero();
     qpoases_soft_solver_.soft_H_.block(0,0,row,col) = H;
-    qpoases_soft_solver_.soft_H_(row,col) = 10000;
+    qpoases_soft_solver_.soft_H_(row,col) = 1;
 
 
     qpoases_soft_solver_.soft_g_.setZero();
@@ -419,7 +389,7 @@ namespace planning {
     qpoases_soft_solver_.soft_g_(row) = 0;
 
     qpoases_soft_solver_.soft_lb_.setConstant(-12);
-    qpoases_soft_solver_.soft_lb_(row) = -0.15;
+    qpoases_soft_solver_.soft_lb_(row) = 0;
 
     qpoases_soft_solver_.soft_ub_.setConstant(12);
     qpoases_soft_solver_.soft_ub_(row) = 0.15;

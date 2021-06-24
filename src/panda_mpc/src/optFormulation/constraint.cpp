@@ -232,6 +232,10 @@ bool MPCConstraint::computeUpperBoundAndConstraint(const Eigen::VectorXd &state,
           aJq.segment(2*k,2) << plane_temp.transpose()*JacobianHorizon.block(0,0,3,7)*qHorizonPrecedent.segment(dof_*k,dof_),
                               plane_temp.transpose()*JacobianHorizon.block(0,0,3,7)*qHorizonPrecedent.segment(dof_*(k+1),dof_);
 
+//        n_jacobian.block(2*k, dof_*k, 2, 2*dof_) <<  plane_temp.transpose()*JacobianHorizon.block(6*k,7*k,3,dof_), 0,0,0 ,0,0,0,0,
+//                                                   0,0,0 ,0,0,0,0, plane_temp.transpose()*JacobianHorizon.block(6*(k+1),7*(k+1),3,dof_);
+//        aJq.segment(2*k,2) << plane_temp.transpose()*JacobianHorizon.block(6*k,7*k,3,7)*qHorizonPrecedent.segment(dof_*k,dof_),
+//                            plane_temp.transpose()*JacobianHorizon.block(6*(k+1),7*(k+1),3,7)*qHorizonPrecedent.segment(dof_*(k+1),dof_);
 
       }
 

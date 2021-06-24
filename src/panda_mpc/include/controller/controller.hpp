@@ -243,21 +243,25 @@ private:
 
   bool init_pos_attend_, execute, sub_goal_attend_, wait; /*!< @brief flag used to control task transition */
   int N_; /*!< @brief MPC horizon */
+  int traj_index_;
   double dt_; /*!<  @brief MPC sampling time */
   Eigen::VectorXd state_; /*!<  @brief state-space model state */
   Eigen::VectorXd q_des_mpc_, qd_des_mpc_, qdd_des_mpc_ ; /*!<  @brief desired joint parameters in horizon */
   Eigen::VectorXd q_horizon_, qd_horizon_; /*!<  @brief joint position and velocity in horizon */
   Eigen::VectorXd solution_, solution_precedent_; /*!<  @brief MPC optimization solution */
   Eigen::MatrixXd state_A_, state_B_; /*!<  @brief transition and input matrix */
-  KDL::JntArray q_des_, q_; /*!< @brief desired joint position and current joint position */
-  KDL::JntArrayVel q_mpc_; /*!< @brief combine joint position and velocity together */
+  KDL::JntArray q_des_; /*!< @brief desired joint position and current joint position */
+  KDL::JntArrayVel q_;
+  KDL::JntArrayAcc q_mpc_; /*!< @brief combine joint position and velocity together */
+
   Eigen::VectorXd ee_vel_; /*!< @brief end-effector cartesian velocity  */
   KDL::Frame Goal_A_frame_, Goal_B_frame_ , X_mpc_; /*!< @brief goal frame and predicted MPC frame  */
   KDL::Jacobian kdl_J; /*!< @brief KDL Jacobian */
   ros::Time begin_time_, end_time_, wait_begin_, wait_end_;  /*!< @brief duration which control robot plannification module  */
   KDL::JntArray q_goal_A_, q_goal_B_;  /*!< @brief two different goals  */
 
-
+  Eigen::VectorXd jnt_err;
+  Eigen::Matrix<double,7,1> jnt_des_;
 };
 
 }

@@ -12,8 +12,8 @@ PlaneSolver::PlaneSolver(int nbrCst, double dsafe):nC_(nbrCst), dsafe_(dsafe)
 
     lb_.resize(nV_);
     ub_.resize(nV_);
-    lb_ << -1, -1, -1, 0.0, 0;
-    ub_ << 1, 1, 0, 10, 0.5;
+    lb_ << -1, -1, -0.8, 0.0, -0.5;
+    ub_ << 1, 1, 0.8, 10, 0.5;
 
 
     E_.resize(5,5);
@@ -59,8 +59,8 @@ void PlaneSolver::setCost(const Eigen::VectorXd& f){
 
 
     // For non linear
-    H_ = 0.1*H1 + H2 + 0.1*H3;
-    g_ = 0.1*g1 + g2 + 0.1*g3;
+    H_ = 0.001*H1 + H2 + 0.1*H3;
+    g_ = 0.001*g1 + g2 + 0.1*g3;
 }
 
 
@@ -70,7 +70,6 @@ void PlaneSolver::setCstMatrix(const Eigen::MatrixXd &robotPartielVertices,
 
   int rcols = robotPartielVertices.cols(), pcols = obsPartielVertices.cols();
    A_.resize(rcols + pcols +1, 5);
-
   //  Additional non vertical plane:
   A_.setZero();
   //  min -d + alpha*d² + ||(ak,bk) - (ak,bk)^p||²
@@ -82,6 +81,8 @@ void PlaneSolver::setCstMatrix(const Eigen::MatrixXd &robotPartielVertices,
 
    lbA_.resize(rcols+pcols+1);
    ubA_.resize(rcols+pcols+1);
+
+
    lbA_.setZero();
 
   for (int j(0); j < rcols ; j ++ ){
@@ -94,21 +95,22 @@ void PlaneSolver::setCstMatrix(const Eigen::MatrixXd &robotPartielVertices,
 
 
   A_.block(rcols + pcols,0,1,5) << dataPlanePrecedent(0),dataPlanePrecedent(1),dataPlanePrecedent(2),0,0 ;
+
+
   // Additional projection constraint to keep plane with an angle
 
 
   // Additional non vertical constraint
 
-  dsafe_ = 0.15;
+  dsafe_ = 0.1;
   lbA_.setConstant(dsafe_);
   lbA_(rcols + pcols) = 0.95;
-
 
   ubA_.setConstant(10000000);
   ubA_(0) = 1;
   ubA_(1) = 1;
-  // ubA_(rcols + pcols +1) = 1;
   ubA_(rcols + pcols) = 1;
+
 
 }
 

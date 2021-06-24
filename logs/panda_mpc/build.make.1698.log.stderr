@@ -1,0 +1,7 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:[m[K In member function '[01m[Kvoid pointSender::septicTimeScalingTest(KDL::JntArrayAcc, KDL::JntArrayAcc)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:257:49:[m[K [01;31m[Kerror: [m[K'[01m[Kusing element_type = class planning::trajGen {aka class planning::trajGen}[m[K' has no member named '[01m[KsepticTimeScaling[m[K'
+       intermediate_jnt = trajectory_generation->[01;31m[KsepticTimeScaling[m[K(single_jnt_start, single_jnt_end, 0.001*i*25);
+                                                 [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

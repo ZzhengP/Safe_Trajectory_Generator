@@ -14,6 +14,7 @@
 #include <robot/robot_mpc_model.h>
 #include <planning/qpstructure.h>
 #include <planning/plane.h>
+#include <planning/cubic_spline.h>
 #include <visualization_msgs/Marker.h>
 #include <nav_msgs/Path.h>
 #include <geometry_msgs/PoseStamped.h>
@@ -26,7 +27,7 @@ class trajGen
 
 public:
 
-  trajGen(ros::NodeHandle& node_handle, const Eigen::VectorXd& q_init, const Eigen::VectorXd& qd_init){
+  trajGen(ros::NodeHandle& node_handle, const Eigen::VectorXd& q_init, const Eigen::VectorXd& qd_init) {
 
      // Trajectory generation constructor
     dof_ = q_init.size() ;
@@ -89,39 +90,15 @@ public:
     }
 
     // Passive safety constraint
-      qd_min_mpc_.tail(dof_).setConstant(-0.2);
-      qd_max_mpc_.tail(dof_).setConstant(0.2);
+      qd_min_mpc_.tail(dof_).setConstant(-0.05);
+      qd_max_mpc_.tail(dof_).setConstant(0.05);
 
     // Build local MPC trajectory
 
-
-      septicMatrix_.resize(8,8);
-      septicMatrix_.row(0) << 1, 0, 0, 0, 0, 0, 0, 0;
-      septicMatrix_.row(1) << 0, 1, 0, 0, 0, 0, 0, 0;
-      septicMatrix_.row(2) << 0, 0, 2, 0, 0, 0, 0, 0;
-      septicMatrix_.row(3) << 0, 0, 0, 6, 0, 0, 0, 0;
-      septicMatrix_.row(4) << 1, 1, 1, 1, 1, 1, 1, 1;
-      septicMatrix_.row(5) << 0, 1, 2, 3, 4, 5, 6, 7;
-      septicMatrix_.row(6) << 0, 0, 2, 6, 12, 20, 30, 42;
-      septicMatrix_.row(7) << 0, 0, 0, 6, 24, 60, 120, 210;
-      septic_interpolation_coef_.resize(8);
-
-      quinticMatrix_.resize(6,6);
-      quinticMatrix_.row(0) << 1, 0, 0, 0, 0, 0;
-      quinticMatrix_.row(1) << 0, 1, 0, 0, 0, 0;
-      quinticMatrix_.row(2) << 0, 0, 2, 0, 0, 0;
-      quinticMatrix_.row(3) << 1, 1, 1 , 1, 1, 1;
-      quinticMatrix_.row(4) << 0, 1, 2, 3, 4, 5;
-      quinticMatrix_.row(5) << 0, 0, 2, 6, 12, 20;
-      quintic_interpolation_coef_.resize(6);
-
+   cubic_spline_.reset(new cubicSpline::cubicSpline(N_,dt_));
 
   }
 
-  void printMatrix(){
-
-    std::cout << septicMatrix_ << '\n';
-  }
 
   /**
    * @brief Parameters and sub-modules initializers
@@ -183,67 +160,15 @@ public:
   }
 
 
+  bool computeCubicInterpolation(std::vector<KDL::JntArrayAcc> joints, int i){
 
-  /**
-   * @brief septicTimeScaling: An seven degree of polynomial interpolation for joint point to point trajectory generation
-   * this function should be call for each different joint
-   * @param jnt_start: start joint (position, velocity, acceleration)
-   * @param jnt_end: end joint( position, velocity, acceleration)
-   * @param t: sampling time
-   * @return intermediate joint (position, velocity, acceleration)
-   */
-  Eigen::Vector3d septicTimeScaling(Eigen::Vector3d jnt_start, Eigen::Vector3d jnt_end, double t);
 
-  Eigen::Vector3d quinticTimeScaling(Eigen::Vector3d jnt_start, Eigen::Vector3d jnt_end, double t);
-
-  void jntPosSpeticTimeScaling(Eigen::Vector3d & intermediate_jnt, double t){
-
-      intermediate_jnt(0) = septic_interpolation_coef_(0) +
-                            septic_interpolation_coef_(1)*t +
-                            septic_interpolation_coef_(2)*pow(t,2) +
-                            septic_interpolation_coef_(3)*pow(t,3) +
-                            septic_interpolation_coef_(4)*pow(t,4) +
-                            septic_interpolation_coef_(5)*pow(t,5) +
-                            septic_interpolation_coef_(6)*pow(t,6) +
-                            septic_interpolation_coef_(7)*pow(t,7);
-
-      intermediate_jnt(1) = septic_interpolation_coef_(1) +
-                            2*septic_interpolation_coef_(2)*t +
-                            3*septic_interpolation_coef_(3)*pow(t,2) +
-                            4*septic_interpolation_coef_(4)*pow(t,3) +
-                            5*septic_interpolation_coef_(5)*pow(t,4) +
-                            6*septic_interpolation_coef_(6)*pow(t,5) +
-                            7*septic_interpolation_coef_(7)*pow(t,6);
-
-      intermediate_jnt(2) = 2*septic_interpolation_coef_(2) +
-                            6*septic_interpolation_coef_(3)*t +
-                            12*septic_interpolation_coef_(4)*pow(t,2) +
-                            20*septic_interpolation_coef_(5)*pow(t,3) +
-                            30*septic_interpolation_coef_(6)*pow(t,4) +
-                            42*septic_interpolation_coef_(7)*pow(t,5);
+    return cubic_spline_->JntSpaceCubicInterpolation(joints, i);
 
   }
 
-  void jntPosQuinticTimeScaling(Eigen::Vector3d & intermediate_jnt, double t){
-
-      intermediate_jnt(0) = quintic_interpolation_coef_(0) +
-                            quintic_interpolation_coef_(1)*t +
-                            quintic_interpolation_coef_(2)*pow(t,2) +
-                            quintic_interpolation_coef_(3)*pow(t,3) +
-                            quintic_interpolation_coef_(4)*pow(t,4) +
-                            quintic_interpolation_coef_(5)*pow(t,5);
-
-      intermediate_jnt(1) = quintic_interpolation_coef_(1) +
-                            2*quintic_interpolation_coef_(2)*t +
-                            3*quintic_interpolation_coef_(3)*pow(t,2) +
-                            4*quintic_interpolation_coef_(4)*pow(t,3) +
-                            5*quintic_interpolation_coef_(5)*pow(t,4);
-
-      intermediate_jnt(2) = 2*quintic_interpolation_coef_(2) +
-                            6*quintic_interpolation_coef_(3)*t +
-                            12*quintic_interpolation_coef_(4)*pow(t,2) +
-                            20*septic_interpolation_coef_(5)*pow(t,3);
-
+  Eigen::MatrixXd getCubicCoefficientMatrix(){
+    return cubic_spline_->getCoefficientMatrix();
   }
 private:
 
@@ -305,9 +230,7 @@ private:
 
   // --------------------------------- MPC trajectory smoothing -------------------------
 
-  Eigen::MatrixXd septicMatrix_ , quinticMatrix_;
-  Eigen::VectorXd septic_interpolation_coef_, quintic_interpolation_coef_;
-
+  std::unique_ptr<cubicSpline::cubicSpline> cubic_spline_;
 };
 
 }

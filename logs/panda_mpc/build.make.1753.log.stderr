@@ -1,0 +1,59 @@
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:1:0[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:[m[K In member function '[01m[Kbool planning::trajGen::computeCubicInterpolation(std::vector<KDL::JntArrayVel>, int)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:166:63:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KcubicSpline::cubicSpline::JntSpaceCubicInterpolation(std::vector<KDL::JntArrayVel>&, int&)[m[K'
+     return cubic_spline_->JntSpaceCubicInterpolation(joints, i[01;31m[K)[m[K;
+                                                               [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:17:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/cubic_spline.h:29:8:[m[K [01;36m[Knote: [m[Kcandidate: bool cubicSpline::cubicSpline::JntSpaceCubicInterpolation(const std::vector<KDL::JntArrayAcc>&, int)
+   bool [01;36m[KJntSpaceCubicInterpolation[m[K(const std::vector<KDL::JntArrayAcc> & jnt_points, int i );
+        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/cubic_spline.h:29:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[Kstd::vector<KDL::JntArrayVel>[m[K' to '[01m[Kconst std::vector<KDL::JntArrayAcc>&[m[K'
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:44:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:[m[K In member function '[01m[Kbool planning::trajGen::computeCubicInterpolation(std::vector<KDL::JntArrayVel>, int)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:166:63:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KcubicSpline::cubicSpline::JntSpaceCubicInterpolation(std::vector<KDL::JntArrayVel>&, int&)[m[K'
+     return cubic_spline_->JntSpaceCubicInterpolation(joints, i[01;31m[K)[m[K;
+                                                               [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:17:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:44[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:1[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/cubic_spline.h:29:8:[m[K [01;36m[Knote: [m[Kcandidate: bool cubicSpline::cubicSpline::JntSpaceCubicInterpolation(const std::vector<KDL::JntArrayAcc>&, int)
+   bool [01;36m[KJntSpaceCubicInterpolation[m[K(const std::vector<KDL::JntArrayAcc> & jnt_points, int i );
+        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/cubic_spline.h:29:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[Kstd::vector<KDL::JntArrayVel>[m[K' to '[01m[Kconst std::vector<KDL::JntArrayAcc>&[m[K'
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:44:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_mpc.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/panda_mpc.cpp:11[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:[m[K In member function '[01m[Kbool planning::trajGen::computeCubicInterpolation(std::vector<KDL::JntArrayVel>, int)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:166:63:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KcubicSpline::cubicSpline::JntSpaceCubicInterpolation(std::vector<KDL::JntArrayVel>&, int&)[m[K'
+     return cubic_spline_->JntSpaceCubicInterpolation(joints, i[01;31m[K)[m[K;
+                                                               [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:17:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:44[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_mpc.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/robot/panda_mpc.cpp:11[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/cubic_spline.h:29:8:[m[K [01;36m[Knote: [m[Kcandidate: bool cubicSpline::cubicSpline::JntSpaceCubicInterpolation(const std::vector<KDL::JntArrayAcc>&, int)
+   bool [01;36m[KJntSpaceCubicInterpolation[m[K(const std::vector<KDL::JntArrayAcc> & jnt_points, int i );
+        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/cubic_spline.h:29:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[Kstd::vector<KDL::JntArrayVel>[m[K' to '[01m[Kconst std::vector<KDL::JntArrayAcc>&[m[K'
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o] Error 1
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:44:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:[m[K In member function '[01m[Kbool planning::trajGen::computeCubicInterpolation(std::vector<KDL::JntArrayVel>, int)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:166:63:[m[K [01;31m[Kerror: [m[Kno matching function for call to '[01m[KcubicSpline::cubicSpline::JntSpaceCubicInterpolation(std::vector<KDL::JntArrayVel>&, int&)[m[K'
+     return cubic_spline_->JntSpaceCubicInterpolation(joints, i[01;31m[K)[m[K;
+                                                               [01;31m[K^[m[K
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:17:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:44[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp:9[m[K:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/cubic_spline.h:29:8:[m[K [01;36m[Knote: [m[Kcandidate: bool cubicSpline::cubicSpline::JntSpaceCubicInterpolation(const std::vector<KDL::JntArrayAcc>&, int)
+   bool [01;36m[KJntSpaceCubicInterpolation[m[K(const std::vector<KDL::JntArrayAcc> & jnt_points, int i );
+        [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/cubic_spline.h:29:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[Kstd::vector<KDL::JntArrayVel>[m[K' to '[01m[Kconst std::vector<KDL::JntArrayAcc>&[m[K'
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o] Error 1
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

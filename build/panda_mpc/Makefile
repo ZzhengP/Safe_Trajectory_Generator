@@ -2019,6 +2019,33 @@ src/panda_simulation.cpp.s:
 	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.s
 .PHONY : src/panda_simulation.cpp.s
 
+src/planning/cubic_spline.o: src/planning/cubic_spline.cpp.o
+
+.PHONY : src/planning/cubic_spline.o
+
+# target to build an object file
+src/planning/cubic_spline.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/cubic_spline.cpp.o
+.PHONY : src/planning/cubic_spline.cpp.o
+
+src/planning/cubic_spline.i: src/planning/cubic_spline.cpp.i
+
+.PHONY : src/planning/cubic_spline.i
+
+# target to preprocess a source file
+src/planning/cubic_spline.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/cubic_spline.cpp.i
+.PHONY : src/planning/cubic_spline.cpp.i
+
+src/planning/cubic_spline.s: src/planning/cubic_spline.cpp.s
+
+.PHONY : src/planning/cubic_spline.s
+
+# target to generate assembly for a file
+src/planning/cubic_spline.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/cubic_spline.cpp.s
+.PHONY : src/planning/cubic_spline.cpp.s
+
 src/planning/plane.o: src/planning/plane.cpp.o
 
 .PHONY : src/planning/plane.o
@@ -2369,6 +2396,9 @@ help:
 	@echo "... src/panda_simulation.o"
 	@echo "... src/panda_simulation.i"
 	@echo "... src/panda_simulation.s"
+	@echo "... src/planning/cubic_spline.o"
+	@echo "... src/planning/cubic_spline.i"
+	@echo "... src/planning/cubic_spline.s"
 	@echo "... src/planning/plane.o"
 	@echo "... src/planning/plane.i"
 	@echo "... src/planning/plane.s"

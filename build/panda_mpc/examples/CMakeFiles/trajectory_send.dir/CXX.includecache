@@ -374,6 +374,18 @@ memory
 vector
 -
 
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/cubic_spline.h
+Eigen/Core
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/Eigen/Core
+Eigen/Dense
+-
+ros/ros.h
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/ros/ros.h
+kdl/jntarrayvel.hpp
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/kdl/jntarrayvel.hpp
+kdl/jntarrayacc.hpp
+/home/zheng/catkin_ws/src/panda_mpc/include/planning/kdl/jntarrayacc.hpp
+
 /home/zheng/catkin_ws/src/panda_mpc/include/planning/plane.h
 iostream
 -
@@ -434,6 +446,8 @@ robot/robot_mpc_model.h
 planning/qpstructure.h
 -
 planning/plane.h
+-
+planning/cubic_spline.h
 -
 visualization_msgs/Marker.h
 -

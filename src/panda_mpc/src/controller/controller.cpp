@@ -38,7 +38,6 @@ bool Controller::Init(ros::NodeHandle& node_handle,const Eigen::VectorXd& q_init
     lbA_.resize(number_of_constraints_);
     ubA_.resize(number_of_constraints_);
     joint_velocity_out_.resize(dof);
-
     //--------------------------------------
     // QPOASES
     //--------------------------------------
@@ -84,6 +83,7 @@ bool Controller::Init(ros::NodeHandle& node_handle,const Eigen::VectorXd& q_init
     sub_goal_attend_ = false;
     wait = false;
     execute =true;
+    traj_index_ = 0;
     ROS_WARN_STREAM(" Trajectory computed ");
 
     // ----------------------- Init MPC trajectory attributs -------------------
@@ -145,25 +145,30 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
     end_time_ = ros::Time::now();
     wait_end_ = ros::Time::now();
     ros::Duration duration = end_time_ - begin_time_;
-    if(duration.toSec() > dt_) // Change This parameter influences robot's behaviors;
+    if(duration.toSec() > 0.04) // Change This parameter influences robot's behaviors;
       execute = true;
 
     ros::Duration duration_wait = end_time_ - begin_time_;
-    if(duration_wait.toSec() > 1) // Change This parameter influences robot's behaviors;
+    if(duration_wait.toSec() > 0.1) // Change This parameter influences robot's behaviors;
       wait = false;
 
     // ------------------------------------------------------------------------------
+    traj_index_++;
+    q_mpc_.qdot.data = q_.qdot.data + q_mpc_.qdotdot.data * traj_index_ * time_dt;
+    q_mpc_.q.data = q_.q.data + q_.qdot.data  * traj_index_ * time_dt + 0.5*q_mpc_.qdotdot.data*pow(traj_index_ * time_dt,2);
 
-    preview_point_ = next_point_;
-    X_traj_ = next_tf_;
-    Xd_traj_.vel[0] = next_vel_.linear.x, Xd_traj_.vel[1] = next_vel_.linear.y, Xd_traj_.vel[2] = next_vel_.linear.z;
-    Xd_traj_.rot[0] = next_vel_.angular.x, Xd_traj_.rot[1] = next_vel_.angular.y, Xd_traj_.rot[2] = next_vel_.angular.z ;
-//     Proportionnal controller
-    X_err_ = diff( X_curr_ , X_traj_ );
-    tf::twistKDLToEigen(X_err_,x_err);
-    tf::twistKDLToEigen(Xd_traj_,xd_traj_);
-    xd_des_ = p_gains_.cwiseProduct(x_err) + xd_traj_;
 
+//    X_traj_ = next_tf_;
+//    Xd_traj_.vel[0] = ee_vel_[0], Xd_traj_.vel[1] = ee_vel_[1], Xd_traj_.vel[2] = ee_vel_[2];
+//    Xd_traj_.rot[0] = 0, Xd_traj_.rot[1] = 0, Xd_traj_.rot[2] = 0 ;
+////     Proportionnal controller
+//    X_err_ = diff( X_curr_ , X_traj_ );
+//    tf::twistKDLToEigen(X_err_,x_err);
+//    tf::twistKDLToEigen(Xd_traj_,xd_traj_);
+//    xd_des_ = p_gains_.cwiseProduct(x_err) + xd_traj_;
+
+     jnt_err =  q_mpc_.q.data - q_in.q.data ;
+     jnt_des_ = 5*jnt_err + q_mpc_.qdot.data;
 
     // Formulate QP problem such that
     // joint_velocity_out_ = argmin 1/2 qd^T H_ qd + qd^T g_
@@ -176,11 +181,12 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
     H_ =  2.0 * regularisation_weight_ * Eigen::MatrixXd::Identity(7,7);
     g_ = -2.0 * regularisation_weight_ * p_gains_qd_.cwiseProduct((q_mean_ - q));
 
-    H_ +=  2.0 *  J.transpose() * J;
-    g_ += -2.0 *  J.transpose() * xd_des_;
+//    H_ +=  2.0 *  J.transpose() * J;
+//    g_ += -2.0 *  J.transpose() * xd_des_;
 
-    H_ += regularisation_weight_ * Eigen::MatrixXd::Identity(7,7);
-    g_ += - regularisation_weight_ * joint_velocity_out_;
+    H_ += Eigen::MatrixXd::Identity(7,7);
+    g_ += - jnt_des_;
+
     double horizon_dt = 15 * time_dt;
 
     ub_ = qd_max_;
@@ -234,7 +240,7 @@ bool Controller::UpdateMPCTraj(){
 
 
 
-
+  traj_index_ = 0;
   for (size_t i(0); i < N_; i++){
     q_des_mpc_.segment(i*dof, dof) = q_des_.data;
   }
@@ -254,32 +260,33 @@ bool Controller::UpdateMPCTraj(){
   state_ = state_A_*state_ + state_B_*solution_.head(dof);
 
 
+  q_.q = q_in.q;
+  q_.qdot = q_in.qdot;
 
-
-  q_.data = state_.head(dof);
-  q_mpc_.q.data = state_.head(dof);
+  q_mpc_.q.data =  state_.head(dof);
   q_mpc_.qdot.data = state_.tail(dof);
+  q_mpc_.qdotdot.data = solution_.head(dof);
 
-  trajectory_generation->getRobotModel()->JntToCart(q_,X_mpc_);
-  trajectory_generation->getRobotModel()->JntToJac(q_mpc_.q,kdl_J);
-  ee_vel_ = kdl_J.data*q_mpc_.qdot.data;
+//  trajectory_generation->getRobotModel()->JntToCart(q_,X_mpc_);
+//  trajectory_generation->getRobotModel()->JntToJac(q_mpc_.q,kdl_J);
+//  ee_vel_ = kdl_J.data*q_mpc_.qdot.data;
 
-  next_point_.x = X_mpc_.p[0];
-  next_point_.y = X_mpc_.p[1];
-  next_point_.z = X_mpc_.p[2];
+//  next_point_.x = X_mpc_.p[0];
+//  next_point_.y = X_mpc_.p[1];
+//  next_point_.z = X_mpc_.p[2];
 
-  next_vel_.linear.x = ee_vel_[0];
-  next_vel_.linear.y = ee_vel_[1];
-  next_vel_.linear.z = ee_vel_[2];
-  next_vel_.angular.x = 0;
-  next_vel_.angular.y = 0;
-  next_vel_.angular.z = 0;
+//  next_vel_.linear.x = ee_vel_[0];
+//  next_vel_.linear.y = ee_vel_[1];
+//  next_vel_.linear.z = ee_vel_[2];
+//  next_vel_.angular.x = 0;
+//  next_vel_.angular.y = 0;
+//  next_vel_.angular.z = 0;
 
 
-  next_tf_.p[0] = next_point_.x;
-  next_tf_.p[1] = next_point_.y;
-  next_tf_.p[2] = next_point_.z;
-  next_tf_.M = X_mpc_.M;
+//  next_tf_.p[0] = next_point_.x;
+//  next_tf_.p[1] = next_point_.y;
+//  next_tf_.p[2] = next_point_.z;
+//  next_tf_.M = X_mpc_.M;
 
   return true;
 }
@@ -304,7 +311,9 @@ bool Controller::InitMPCTraj(ros::NodeHandle &node_handle, const Eigen::VectorXd
     q_des_mpc_.segment(i*dof,dof) = q_init;
     qd_des_mpc_.segment(i*dof,dof) = qd_init;
   }
-
+  q_mpc_.q.data = q_init;
+  q_mpc_.qdot.data = qd_init;
+  q_mpc_.qdotdot.data.setZero();
   qdd_des_mpc_.setZero();
   q_horizon_.resize(dof*N_);
   qd_horizon_.resize(dof*N_);
@@ -322,10 +331,10 @@ bool Controller::InitMPCTraj(ros::NodeHandle &node_handle, const Eigen::VectorXd
   state_A_.resize(2*dof, 2*dof);
   state_B_.resize(2*dof,dof);
 
-  Goal_A_frame_.p[0] = 0.4, Goal_A_frame_.p[1] = 0.4, Goal_A_frame_.p[2] = 0.2;
+  Goal_A_frame_.p[0] = 0.5, Goal_A_frame_.p[1] = 0.4, Goal_A_frame_.p[2] = 0.2;
   Goal_A_frame_.M = X_curr_.M;
 
-  Goal_B_frame_.p[0] = 0.4, Goal_B_frame_.p[1] = -0.4, Goal_B_frame_.p[2] = 0.2;
+  Goal_B_frame_.p[0] = 0.5, Goal_B_frame_.p[1] = -0.4, Goal_B_frame_.p[2] = 0.2;
   Goal_B_frame_.M = X_curr_.M;
 
   q_des_.resize(dof);
@@ -350,7 +359,7 @@ bool Controller::InitMPCTraj(ros::NodeHandle &node_handle, const Eigen::VectorXd
   state_A_ = trajectory_generation->getStateA();
   state_B_ = trajectory_generation->getStateB();
 
-
+  jnt_err.resize(dof);
   return true;
 }
 

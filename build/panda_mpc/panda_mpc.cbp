@@ -1888,6 +1888,9 @@
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/planning/cubic_spline.cpp">
+			<Option target="panda_mpc"/>
+		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp">
 			<Option target="panda_mpc"/>
 		</Unit>
