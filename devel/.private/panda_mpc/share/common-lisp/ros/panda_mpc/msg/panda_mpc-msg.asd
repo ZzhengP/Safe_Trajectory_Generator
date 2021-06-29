@@ -11,6 +11,8 @@
     (:file "_package_JointTorqueComparison" :depends-on ("_package"))
     (:file "PandaRunMsg" :depends-on ("_package_PandaRunMsg"))
     (:file "_package_PandaRunMsg" :depends-on ("_package"))
+    (:file "trajectoryAcceleration" :depends-on ("_package_trajectoryAcceleration"))
+    (:file "_package_trajectoryAcceleration" :depends-on ("_package"))
     (:file "trajectoryMsg" :depends-on ("_package_trajectoryMsg"))
     (:file "_package_trajectoryMsg" :depends-on ("_package"))
   ))

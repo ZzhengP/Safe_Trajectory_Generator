@@ -38,335 +38,242 @@
 #include <planning/traj_generation.hpp>
 #include <robot/robot_mpc_model.h>
 #include <sensor_msgs/JointState.h>
+#include <robot/robot_model.h>
+#include <visualization_msgs/Marker.h>
+#include <panda_mpc/trajectoryAcceleration.h>
 
 using namespace planning;
 
-struct TrajectoryMPC{
+class TrajectSenderNode{
 
-  std::vector<Eigen::Matrix<double, 7,1>> joint_position_;
-  std::vector<Eigen::Matrix<double, 7,1>> joint_velocity_;
-  std::vector<Eigen::Matrix<double, 7,1>> joint_acceleration_;
-
-};
-
-class pointSender
-{
 public:
-  pointSender(ros::NodeHandle &node_handle, Eigen::VectorXd q_init, Eigen::VectorXd qd_init):
-              dt{0.001}, node_handle_{node_handle} {
+  TrajectSenderNode(ros::NodeHandle & node_handle, Eigen::VectorXd q_init, Eigen::VectorXd qdot_init){
 
+    //=========================== Constructor ====================================
+    goal_A_ << 0.391342, 0.843433, 0.49249, -1.51971, -0.468614, 2.24382,   1.03971;
 
+    goal_B_ << -0.391342,0.843433, -0.49249, -1.51971,0.468614, 2.24382, -1.03971;
 
+    init_pos_attend_ = true;
+    wait = false;
+    execute =true;
 
-    node_handle_.getParam("/panda_mpc/N_", N);
-    node_handle_.getParam("/panda_mpc/dt_", dt);
-    node_handle_.getParam("/panda_mpc/root_link_", root_link);
-    node_handle_.getParam("/panda_mpc/tip_link_", tip_link);
+    dt_controller_ = 0.001;
 
-    dof = 7;
-    q_des_mpc.resize(dof*N), qd_des_mpc.resize(dof*N), qdd_des_mpc.resize(dof*N);
+    q_in.resize(q_init.size());
+    q_des_.resize(q_init.size());
+    //====================== Robot Model
+    node_handle.getParam("/panda_mpc/root_link_",root_link);
+    node_handle.getParam("/panda_mpc/tip_link_",tip_link);
 
-    for (size_t i(0); i<N; i++){
-      q_des_mpc.segment(i*dof,dof) = q_init;
-      qd_des_mpc.segment(i*dof,dof) = qd_init;
+    robot_model_.reset(new robot::RobotModel(node_handle, root_link, tip_link));
+    robot_model_->Init(node_handle, q_init, qdot_init);
+    dof = robot_model_->getNrOfJoints();
+
+    robot_model_->JntToCart(q_in.q, X_curr_);
+    Goal_A_frame_.p[0] = 0.5, Goal_A_frame_.p[1] = 0.5, Goal_A_frame_.p[2] = 0.2;
+    Goal_A_frame_.M = X_curr_.M;
+
+    Goal_B_frame_.p[0] = 0.5, Goal_B_frame_.p[1] = -0.5, Goal_B_frame_.p[2] = 0.2;
+    Goal_B_frame_.M = X_curr_.M;
+    // ===================== Trajectory
+    trajectory_generation.reset(new planning::trajGen(node_handle,q_init,qdot_init));
+
+    if(!trajectory_generation->init(node_handle,Goal_A_frame_)){
+      ROS_ERROR_STREAM("unable to initialize properly parameters: exit");
     }
-
-    qdd_des_mpc.setZero();
-
-
-    q_horizon.resize(dof*N);
-    qd_horizon.resize(dof*N);
-    q_horizon = q_des_mpc;
-    qd_horizon = qd_des_mpc;
-
-    state.resize(14);
-    state.segment(0,dof) = q_init, state.segment(dof,dof) = qd_init;
-
-    solution.resize(N*dof);
-    solution_precedent.resize(N*dof);
-    solution.setZero();
-    solution_precedent.setZero();
-
-    A.resize(2*dof, 2*dof);
-    B.resize(2*dof,dof);
-
-    jnt_error.resize(3);
-    jnt_error.setConstant(10);
+    N_ = trajectory_generation->getPredictionNumber();
 
 
-    x_des.p[0] = 0.5, x_des.p[1] = 0, x_des.p[2] = 0.6;
-    x_des.M = x_des.M.Identity();
+    q_des_mpc_.resize(N_*dof);
+    qd_des_mpc_.resize(N_*dof);
+    qdd_des_mpc_.resize(N_*dof);
+    solution_.resize(N_*dof);
+    solution_.setZero();
+    solution_precedent_.resize(N_*dof);
+    solution_precedent_.setZero();
 
-    q_des.resize(dof);
-    q.resize(dof);
-    q_in.resize(dof);
-    J.resize(dof);
-    ee_vel.resize(6);
-    trajectory_generation.reset(new planning::trajGen(node_handle,q_init,qd_init));
+    state_.resize(2*dof);
+    state_.segment(0,dof) = q_init, state_.segment(dof,dof) = qdot_init;
 
-    trajectory_generation->getRobotModel()->CartToJnt(x_des,q_des);
-    if(!trajectory_generation->init(node_handle,x_des)){
-      ROS_ERROR_STREAM("Unable to initialize properly parameters: exit");
-    }
+    state_A_.resize(2*dof, 2*dof);
+    state_B_.resize(2*dof,dof);
 
-    for (size_t i(0); i < N; i++){
-      q_des_mpc.segment(i*dof, dof) = q_des.data;
-    }
+    q_horizon_.resize(dof*N_);
+    qd_horizon_.resize(dof*N_);
 
-    A = trajectory_generation->getStateA();
-    B = trajectory_generation->getStateB();
+    state_A_ = trajectory_generation->getStateA();
+    state_B_ = trajectory_generation->getStateB();
 
-    next_point_client = node_handle.serviceClient<panda_mpc::UpdateTrajectoryNextPoint>("/panda_mpc/next_point");
-    robotStateReader_ = node_handle.subscribe("/panda_mpc/joint_states", 1000, &pointSender::update, this);
-    trajectory_publisher_ = node_handle.advertise<panda_mpc::trajectoryMsg>("/trajectory_generation/next_point", 1000);
-    ROS_WARN_STREAM("constructor finished ");
+    jointState_subscriber = node_handle.subscribe("/panda_mpc/joint_states",1,&TrajectSenderNode::jointStateCallBack,this);
+    tip_pos_pub = node_handle.advertise<visualization_msgs::Marker>("/tip_position",1);
+    solution_pub = node_handle.advertise<panda_mpc::trajectoryAcceleration>("/mpc_solution",1);
   }
 
+  void jointStateCallBack(const sensor_msgs::JointStatePtr& joint_state );
 
-
-  void update(const sensor_msgs::JointState::Ptr& joint_state ){
-
-      if(joint_state == nullptr){
-
-        ROS_WARN_STREAM("no joint state information received ");
-        return ;
-      }else {
-
-      }
-
-      solution_precedent = solution;
-      for(int i(0); i < dof ; i++){
-
-        state[i] = joint_state->position[i];
-        state[dof+i] = joint_state->velocity[i];
-      }
-
-      trajectory_generation->getRobotModel()->setJntState(state.head(dof), state.tail(dof));
-
-      q_horizon = trajectory_generation->getJointHorizon();
-      qd_horizon = trajectory_generation->getJointvelHorizon();
-
-
-      solution = trajectory_generation->update(state,q_horizon,qd_horizon,q_des_mpc,qd_des_mpc,solution_precedent,J.data);
-
-      std::cout <<" solution :\n " << solution.head(dof).transpose() <<'\n';
-//      std::cout <<" state :\n" << state.head(dof).transpose() <<'\n';
-
-      state = A*state + B*solution.head(dof);
-      q.data = state.head(dof);
-
-      q_in.q.data = state.head(dof);
-      q_in.qdot.data = state.tail(dof);
-
-      trajectory_generation->getRobotModel()->JntToCart(q,x_current);
-      trajectory_generation->getRobotModel()->JntToJac(q_in.q,J);
-      ee_vel = J.data*q_in.qdot.data;
-
-      jnt_error[0] = x_current.p[0] - x_des.p[0];
-      jnt_error[1] = x_current.p[1] - x_des.p[1];
-      jnt_error[2] = x_current.p[2] - x_des.p[2];
-
-
-
-       next_point.x = x_current.p[0];
-       next_point.y = x_current.p[1];
-       next_point.z = x_current.p[2];
-
-       next_vel.linear.x = ee_vel[0];
-       next_vel.linear.y = ee_vel[1];
-       next_vel.linear.z = ee_vel[2];
-       next_vel.angular.x = ee_vel[3];
-       next_vel.angular.y = ee_vel[4];
-       next_vel.angular.z = ee_vel[5];
-
-       trajectory_msg_.next_point = next_point;
-       trajectory_msg_.next_vel = next_vel;
-
-       trajectory_publisher_.publish(trajectory_msg_);
-
-  }
-
-
-
-  /**
-   * @brief Test of MPC trajectory planning
-   */
-  void update(){
-
-
-
-    while (jnt_error.norm() > 0.01){
-      solution_precedent = solution;
-
-
-
-      solution = trajectory_generation->update(state,q_horizon,qd_horizon,q_des_mpc,qd_des_mpc,solution_precedent, J.data);
-
-//      std::cout <<" solution :\n " << solution.head(dof).transpose() <<'\n';
-//      std::cout <<" state :\n" << state.head(dof).transpose() <<'\n';
-      state = A*state + B*solution.head(dof);
-      q.data = state.head(dof);
-
-      q_in.q.data = state.head(dof);
-      q_in.qdot.data = state.tail(dof);
-      trajectory_generation->getRobotModel()->JntToJac(q_in.q,J);
-      ee_vel = J.data*q_in.qdot.data;
-
-      trajectory_generation->getRobotModel()->JntToCart(q,x_current);
-
-      q_horizon = trajectory_generation->getJointHorizon();
-      qd_horizon = trajectory_generation->getJointvelHorizon();
-
-
-      jnt_error[0] = x_current.p[0] - x_des.p[0];
-      jnt_error[1] = x_current.p[1] - x_des.p[1];
-      jnt_error[2] = x_current.p[2] - x_des.p[2];
-
-      std::cout << "ee position error : \n" << jnt_error.norm() << '\n';
-
-
-      trajectory_generation->getRobotModel()->setJntState(state.head(dof), state.tail(dof));
-
-
-      if (jnt_error.norm() < 0.01){
-         ROS_INFO("Robot arrives to target position");
-         return ;
-      }
-      }
-   }
-
-
-  void cartToJoint(KDL::Frame kdl_frame, KDL::JntArray & jnt){
-    trajectory_generation->getRobotModel()->CartToJnt(kdl_frame, jnt);
-  }
-
-
-  Eigen::MatrixXd computeInterpolation(std::vector<KDL::JntArrayAcc> joints, int i){
-
-
-
-    trajectory_generation->computeCubicInterpolation(joints,i);
-
-    return trajectory_generation->getCubicCoefficientMatrix();
-  }
+  bool UpdateMPCTraj();
 
 private:
 
-  ros::NodeHandle node_handle_;
-  ros::ServiceClient next_point_client ;
-  ros::Publisher trajectory_publisher_;
-  ros::Subscriber robotStateReader_;
-  Eigen::Vector3d X_traj_, X_curr_, X_final_ ;
-  geometry_msgs::Vector3 next_point;
-  geometry_msgs::Twist next_vel;
-  panda_mpc::trajectoryMsg trajectory_msg_;
+  ros::Subscriber jointState_subscriber;
+  ros::Publisher tip_pos_pub;
+  ros::Publisher solution_pub;
+  Eigen::Matrix<double,7,1> goal_A_;
+  Eigen::Matrix<double,7,1> goal_B_;
+  bool init_pos_attend_, execute, wait;
+  ros::Time begin_time_, end_time_, wait_begin_, wait_end_;  /*!< @brief duration which control robot plannification module  */
 
-  TrajectoryMPC trajectory_to_send_;
-
-  std::shared_ptr<planning::trajGen> trajectory_generation;
-
-  int N;
-  double dt;
+  KDL::Frame X_curr_;
+  std::string root_link, tip_link;
+  double dt_controller_;
+  double dt_mpc_;
   int dof;
-  std::string root_link;
-  std::string tip_link;
-  Eigen::VectorXd state;
-  Eigen::VectorXd q_des_mpc, qd_des_mpc, qdd_des_mpc ;
-  Eigen::VectorXd q_horizon, qd_horizon;
-  Eigen::VectorXd solution, solution_precedent;
-
-  Eigen::MatrixXd A, B;
-  Eigen::VectorXd jnt_error;
-  KDL::Frame x_des, x_current;
-  KDL::JntArray q_des, q;
-  TrajectoryMPC trajectory_to_send;
-  KDL::Jacobian J;
+  int N_;
+  std::shared_ptr<planning::trajGen> trajectory_generation;
   KDL::JntArrayVel q_in;
-  Eigen::VectorXd ee_vel;
+  KDL::JntArray q_des_; /*!< @brief desired joint position and current joint position */
+  Eigen::VectorXd q_des_mpc_, qd_des_mpc_, qdd_des_mpc_ ; /*!<  @brief desired joint parameters in horizon */
 
+  std::shared_ptr<robot::RobotModel> robot_model_;
+
+  KDL::Frame Goal_A_frame_, Goal_B_frame_ , X_mpc_; /*!< @brief goal frame and predicted MPC frame  */
+  Eigen::VectorXd solution_, solution_precedent_; /*!<  @brief MPC optimization solution */
+  Eigen::MatrixXd state_A_, state_B_;
+  Eigen::VectorXd state_; /*!<  @brief state-space model state */
+  Eigen::VectorXd q_horizon_, qd_horizon_; /*!<  @brief joint position and velocity in horizon */
+  Eigen::Matrix<double,6,7> J;
+
+  int traj_index_;
 };
-
-
 
 int main(int argc, char** argv )
 {
     ros::init(argc,argv, "NextTrajectorySender");
     ros::NodeHandle node_handle;
-    ros::Rate loop_rate(50);
+    ros::Rate loop_rate(25);
 
+    Eigen::Matrix<double, 7, 1> q_in, qdot_in;
+    q_in << 0.391342, 0.843433, 0.49249, -1.51971, -0.468614, 2.24382,   1.03971;
+    qdot_in.setZero();
 
-    int dof = 7;
-    int N = 4;
+    TrajectSenderNode trajec_sender(node_handle,q_in,qdot_in);
 
+    while(ros::ok()){
 
-    Eigen::VectorXd q_init, qd_init, qdd_init, state;
-    q_init.resize(dof), qd_init.resize(dof), qdd_init.resize(dof);
-    q_init << 0.0087, -0.1051, 0.0110, -2.279, 0.0018, 2.1754, 0.019;
-    qd_init.setZero();
-    qdd_init.setZero();
-
-
-    pointSender point_send_(node_handle, q_init, qd_init);
-
-    KDL::Frame start_fram, end_frame;
-    start_fram.p[0] = 0.5, start_fram.p[1] = 0.4, start_fram.p[2] = 0.25;
-    end_frame.p[0] = 0.5, end_frame.p[1] = 0., end_frame.p[2] = 0.2;
-
-
-    start_fram.M.Identity();
-    end_frame.M = start_fram.M;
-
-    KDL::Frame frame1,  frame2,  frame3;
-    frame1.p[0] = 0.6, frame1.p[1] = 0.4, frame1.p[2] = 0.25;
-    frame2.p[0] = 0.6, frame2.p[1] = 0.3, frame2.p[2] = 0.25;
-    frame3.p[0] = 0.5, frame3.p[1] = 0.3, frame3.p[2] = 0.25;
-
-    frame1.M = start_fram.M;
-    frame2.M = start_fram.M;
-    frame3.M = start_fram.M;
-
-    std::vector<KDL::Frame> frames;
-    frames.resize(N+1);
-    frames[0]= start_fram;
-    frames[1] = frame1;
-    frames[2] = frame2;
-    frames[3] = frame3;
-    frames[4] = end_frame;
-
-    std::vector<KDL::JntArrayAcc> local_joints;
-
-    local_joints.resize(N+1);
-    for (int i(0); i < N+1; i++){
-      std::cout <<" i " << i << '\n';
-      local_joints[i].resize(7);
-      local_joints[i].q.data = q_init;
-      local_joints[i].qdot.data.setConstant(1);
-      local_joints[i].qdotdot.data.setConstant(10);
-
-      point_send_.cartToJoint(frames[i], local_joints[i].q);
+      ros::spinOnce();
+      loop_rate.sleep();
     }
-
-    Eigen::MatrixXd cubicCoefficient;
-
-    cubicCoefficient.resize(N,4);
-
-    for (int i(0) ; i<7; i++){
-    cubicCoefficient = point_send_.computeInterpolation(local_joints,i);
-
-
-    std::cout << "cubicCoefficient \n" <<  cubicCoefficient << '\n' ;
-    }
-    ROS_WARN_STREAM("MPC trajectory generated ");
-
-
-
-
 
     return 0;
 
 }
 
+void TrajectSenderNode::jointStateCallBack(const sensor_msgs::JointStatePtr& joint_state){
 
+  ROS_WARN_STREAM("Calling joint state call back");
+  for (int i(0); i < dof; i++){
+
+    q_in.q.data[i] = joint_state->position[i];
+    q_in.qdot.data[i] = joint_state->velocity[i];
+  }
+
+//  std::cout << "sensor msgs time seq :\n" << joint_state->header.seq << '\n';
+//  std::cout << "sensor msgs time stamp :\n" << joint_state->header.stamp << '\n';
+
+  // Update the model
+  robot_model_->JntToJac(q_in.q);
+  robot_model_->JntToCart(q_in.q, X_curr_);
+
+
+  // -------------------- Update First MPC trajectory ----------------------------
+
+  Eigen::Vector3d error_task_A, error_task_B;
+
+  error_task_A << X_curr_.p[0] - Goal_A_frame_.p[0], X_curr_.p[1] - Goal_A_frame_.p[1], X_curr_.p[2] - Goal_A_frame_.p[2];
+  error_task_B << X_curr_.p[0] - Goal_B_frame_.p[0], X_curr_.p[1] - Goal_B_frame_.p[1], X_curr_.p[2] - Goal_B_frame_.p[2];
+
+//  if(init_pos_attend_ & execute & !wait){
+
+    if(error_task_A.norm()<0.005){
+      q_des_.data = goal_B_;
+      wait = true;
+      wait_begin_ = ros::Time::now();
+    }
+
+    if(error_task_B.norm()<0.005){
+      q_des_.data = goal_A_;
+      wait = true;
+      wait_begin_ = ros::Time::now();
+    }
+
+
+
+    UpdateMPCTraj();
+    begin_time_ = ros::Time::now();
+    execute = false;
+//  }
+}
+
+bool TrajectSenderNode::UpdateMPCTraj(){
+
+  traj_index_ = 0;
+
+  for (size_t i(0); i < N_; i++){
+    q_des_mpc_.segment(i*dof, dof) = q_des_.data;
+  }
+
+  solution_precedent_ = solution_;
+
+  state_.head(dof) =  q_in.q.data;
+  state_.tail(dof) = q_in.qdot.data;
+
+  trajectory_generation->getRobotModel()->setJntState(state_.head(dof), state_.tail(dof));
+
+  solution_ = trajectory_generation->update(state_,q_horizon_,qd_horizon_,q_des_mpc_,qd_des_mpc_,solution_precedent_,J);
+  q_horizon_ = trajectory_generation->getJointHorizon();
+  qd_horizon_ = trajectory_generation->getJointvelHorizon();
+  J = robot_model_->getJacobian().data;
+
+//  state_ = state_A_*state_ + state_B_*solution_.head(dof);
+
+  Eigen::Vector3d tip_pos;
+
+  tip_pos << X_curr_.p[0], X_curr_.p[1], X_curr_.p[2];
+  uint32_t shape = visualization_msgs::Marker::SPHERE;
+
+  visualization_msgs::Marker marker;
+  marker.header.frame_id = "/panda_link0";
+  marker.header.stamp = ros::Time::now();
+  marker.ns = "obstacle_shape";
+  marker.id = 1;
+  marker.type = shape;
+  marker.action = visualization_msgs::Marker::ADD;
+  marker.pose.position.x = tip_pos[0];
+  marker.pose.position.y = tip_pos[1];
+  marker.pose.position.z = tip_pos[2];
+  marker.scale.x = 0.1;
+  marker.scale.y = 0.1;
+  marker.scale.z = 0.1;
+  marker.color.r = 0.0f;
+  marker.color.g = 0.0f;
+  marker.color.b = 1.0f;
+  marker.color.a = 0.5;
+  marker.lifetime = ros::Duration();
+  tip_pos_pub.publish(marker);
+  ROS_WARN_STREAM("state :\n" << state_.head(dof));
+
+  panda_mpc::trajectoryAcceleration next_acceleration;
+  next_acceleration.jntAcc.resize(dof*N_);
+
+  next_acceleration.header.stamp = ros::Time::now();
+  for (int i(0); i<dof*N_;i++){
+  next_acceleration.jntAcc.at(i) = solution_[i];
+  }
+
+  solution_pub.publish(next_acceleration);
+  return true;
+}
 /*
  *	end of file
  */

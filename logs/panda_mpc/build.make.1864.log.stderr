@@ -1,0 +1,6 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/tf_broadcast.cpp:12:8:[m[K [01;31m[Kerror: [m[K'[01m[KNodehandle[m[K' in namespace '[01m[Kros[m[K' does not name a type
+   ros::[01;31m[KNodehandle[m[K nh_;
+        [01;31m[K^~~~~~~~~~[m[K
+make[2]: *** [examples/CMakeFiles/tf_broadcast.dir/tf_broadcast.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/tf_broadcast.dir/all] Error 2
+make: *** [all] Error 2

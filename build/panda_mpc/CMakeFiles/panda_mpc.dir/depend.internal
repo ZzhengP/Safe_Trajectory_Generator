@@ -9,6 +9,7 @@ CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPoint.h
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointRequest.h
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointResponse.h
+ /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryAcceleration.h
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryMsg.h
  /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/PublishTraj.h
  /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/TrajProperties.h
@@ -1441,6 +1442,7 @@ CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPoint.h
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointRequest.h
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointResponse.h
+ /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryAcceleration.h
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryMsg.h
  /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/PublishTraj.h
  /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/TrajProperties.h
@@ -4004,6 +4006,7 @@ CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.o
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPoint.h
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointRequest.h
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointResponse.h
+ /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryAcceleration.h
  /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryMsg.h
  /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/PublishTraj.h
  /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/TrajProperties.h

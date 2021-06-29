@@ -32,7 +32,6 @@ bool cubicSpline::JntSpaceCubicInterpolation(const std::vector<KDL::JntArrayAcc>
 
   for (int k(0); k < N_; k++){
 
-//    std::cout <<" k " << k << '\n';
     coefficient_matrix_(k,0) = jnt_points[k].qdotdot(i); // The k-th via-point position of joint i
     coefficient_matrix_(k,1) = jerk(k);
     coefficient_matrix_(k,2) =(1/dt_) * (3*(jnt_points[k+1].qdotdot(i) - jnt_points[k].qdotdot(i))/dt_ - 2*jerk(k) - jerk(k+1));

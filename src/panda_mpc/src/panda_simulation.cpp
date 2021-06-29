@@ -12,6 +12,7 @@
 #include <ros/time.h>
 #include <sensor_msgs/JointState.h>
 #include <Eigen/Dense>
+#include <planning/traj_generation.hpp>
 
 namespace gazebo
 {
@@ -408,6 +409,10 @@ namespace gazebo
                 }
             }
 
+
+
+
+        //-----------------------------------------------------------------------------------------------
         public: Eigen::VectorXd q, qd, joint_command_;
                 std::vector<std::string> jn;
                 std::vector<double> jp;
@@ -441,7 +446,13 @@ namespace gazebo
                 ros::Publisher joint_states_pub_;
                 sensor_msgs::JointState joint_states_;
         // Pointer to the update event connection
-        private: event::ConnectionPtr updateConnection;
+
+
+        private:
+                event::ConnectionPtr updateConnection;
+
+
+
     };
 
     // Register this plugin with the simulator

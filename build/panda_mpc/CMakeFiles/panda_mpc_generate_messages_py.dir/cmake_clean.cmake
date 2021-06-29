@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/panda_mpc_generate_messages_py"
   "/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_PandaRunMsg.py"
   "/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryMsg.py"
+  "/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryAcceleration.py"
   "/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UI.py"
   "/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UpdateTrajectoryNextPoint.py"
   "/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/__init__.py"

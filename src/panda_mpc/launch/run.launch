@@ -7,6 +7,9 @@
     <arg name="gazebo_plugin" default="panda_mpc" /> <!-- set to gazebo_ros_control if robot cannot load in rviz -->
     <rosparam command="load" file = "$(find panda_mpc)/config/param.yaml"/>
 
+    <node name="tf_camera_robot" pkg="panda_mpc" type="tf_broadcast"/>
+
+
     <!-- Include Gazebo parameters (these are arguments you can pass this launch file, for example paused:=true -->
     <arg name="paused" default="false"/>
     <arg name="use_sim_time" default="true"/>
@@ -17,8 +20,7 @@
         <include file="$(find franka_control)/launch/franka_control.launch">
             <arg name="robot_ip" value ="$(arg robot_ip)"/>
             <arg name="load_gripper" value="$(arg load_gripper)" />
-        </include>
-        <!--node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="joint_velocity_example_controller" /-->
+        </include>        <!--node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="joint_velocity_example_controller" /-->
         <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="panda_mpc" />
 
     </group>

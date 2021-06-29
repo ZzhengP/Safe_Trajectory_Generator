@@ -122,6 +122,24 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryAcceleration.h
+string
+-
+vector
+-
+map
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+std_msgs/Header.h
+-
+
 /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryMsg.h
 string
 -
@@ -275,6 +293,8 @@ panda_mpc/UpdateTrajectoryNextPoint.h
 -
 panda_mpc/trajectoryMsg.h
 -
+panda_mpc/trajectoryAcceleration.h
+-
 qpOASES.hpp
 -
 trac_ik/trac_ik.hpp
@@ -316,6 +336,8 @@ robot/robot_model.h
 planning/traj_generation.hpp
 -
 rviz_visual_tools/rviz_visual_tools.h
+-
+planning/cubic_spline.h
 -
 
 /home/zheng/catkin_ws/src/panda_mpc/include/controller/joint_velocity_example_controller.h
@@ -580,6 +602,8 @@ ros/time.h
 sensor_msgs/JointState.h
 -
 Eigen/Dense
+-
+planning/traj_generation.hpp
 -
 
 /home/zheng/catkin_ws/src/panda_mpc/src/planning/cubic_spline.cpp

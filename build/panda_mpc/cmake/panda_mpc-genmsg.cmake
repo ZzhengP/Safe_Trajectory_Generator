@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "panda_mpc: 2 messages, 2 services")
+message(STATUS "panda_mpc: 3 messages, 2 services")
 
 set(MSG_I_FLAGS "-Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg;-Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg;-Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg")
 
@@ -37,6 +37,11 @@ add_custom_target(_panda_mpc_generate_messages_check_deps_${_filename}
   COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "panda_mpc" "/home/zheng/catkin_ws/src/panda_mpc/srv/UpdateTrajectoryNextPoint.srv" "geometry_msgs/Twist:geometry_msgs/Vector3"
 )
 
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg" NAME_WE)
+add_custom_target(_panda_mpc_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "panda_mpc" "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg" "std_msgs/Header"
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
@@ -53,6 +58,12 @@ _generate_msg_cpp(panda_mpc
   "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryMsg.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/panda_mpc
+)
+_generate_msg_cpp(panda_mpc
+  "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/panda_mpc
 )
 
@@ -90,6 +101,8 @@ get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/trajec
 add_dependencies(panda_mpc_generate_messages_cpp _panda_mpc_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/srv/UpdateTrajectoryNextPoint.srv" NAME_WE)
 add_dependencies(panda_mpc_generate_messages_cpp _panda_mpc_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg" NAME_WE)
+add_dependencies(panda_mpc_generate_messages_cpp _panda_mpc_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(panda_mpc_gencpp)
@@ -110,6 +123,12 @@ _generate_msg_eus(panda_mpc
   "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryMsg.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/panda_mpc
+)
+_generate_msg_eus(panda_mpc
+  "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/panda_mpc
 )
 
@@ -147,6 +166,8 @@ get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/trajec
 add_dependencies(panda_mpc_generate_messages_eus _panda_mpc_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/srv/UpdateTrajectoryNextPoint.srv" NAME_WE)
 add_dependencies(panda_mpc_generate_messages_eus _panda_mpc_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg" NAME_WE)
+add_dependencies(panda_mpc_generate_messages_eus _panda_mpc_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(panda_mpc_geneus)
@@ -167,6 +188,12 @@ _generate_msg_lisp(panda_mpc
   "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryMsg.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/panda_mpc
+)
+_generate_msg_lisp(panda_mpc
+  "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/panda_mpc
 )
 
@@ -204,6 +231,8 @@ get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/trajec
 add_dependencies(panda_mpc_generate_messages_lisp _panda_mpc_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/srv/UpdateTrajectoryNextPoint.srv" NAME_WE)
 add_dependencies(panda_mpc_generate_messages_lisp _panda_mpc_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg" NAME_WE)
+add_dependencies(panda_mpc_generate_messages_lisp _panda_mpc_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(panda_mpc_genlisp)
@@ -224,6 +253,12 @@ _generate_msg_nodejs(panda_mpc
   "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryMsg.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/panda_mpc
+)
+_generate_msg_nodejs(panda_mpc
+  "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/panda_mpc
 )
 
@@ -261,6 +296,8 @@ get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/trajec
 add_dependencies(panda_mpc_generate_messages_nodejs _panda_mpc_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/srv/UpdateTrajectoryNextPoint.srv" NAME_WE)
 add_dependencies(panda_mpc_generate_messages_nodejs _panda_mpc_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg" NAME_WE)
+add_dependencies(panda_mpc_generate_messages_nodejs _panda_mpc_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(panda_mpc_gennodejs)
@@ -281,6 +318,12 @@ _generate_msg_py(panda_mpc
   "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryMsg.msg"
   "${MSG_I_FLAGS}"
   "/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/melodic/share/geometry_msgs/cmake/../msg/Twist.msg;/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/panda_mpc
+)
+_generate_msg_py(panda_mpc
+  "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg"
+  "${MSG_I_FLAGS}"
+  "/opt/ros/melodic/share/std_msgs/cmake/../msg/Header.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/panda_mpc
 )
 
@@ -317,6 +360,8 @@ add_dependencies(panda_mpc_generate_messages_py _panda_mpc_generate_messages_che
 get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryMsg.msg" NAME_WE)
 add_dependencies(panda_mpc_generate_messages_py _panda_mpc_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/srv/UpdateTrajectoryNextPoint.srv" NAME_WE)
+add_dependencies(panda_mpc_generate_messages_py _panda_mpc_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg" NAME_WE)
 add_dependencies(panda_mpc_generate_messages_py _panda_mpc_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

@@ -55,6 +55,7 @@ include CMakeFiles/panda_mpc_generate_messages_py.dir/progress.make
 
 CMakeFiles/panda_mpc_generate_messages_py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_PandaRunMsg.py
 CMakeFiles/panda_mpc_generate_messages_py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryMsg.py
+CMakeFiles/panda_mpc_generate_messages_py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryAcceleration.py
 CMakeFiles/panda_mpc_generate_messages_py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UI.py
 CMakeFiles/panda_mpc_generate_messages_py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UpdateTrajectoryNextPoint.py
 CMakeFiles/panda_mpc_generate_messages_py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/__init__.py
@@ -78,39 +79,48 @@ CMakeFiles/panda_mpc_generate_messages_py: /home/zheng/catkin_ws/devel/.private/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG panda_mpc/trajectoryMsg"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryMsg.msg -Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -p panda_mpc -o /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg
 
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryAcceleration.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryAcceleration.py: /home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryAcceleration.py: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG panda_mpc/trajectoryAcceleration"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg -Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -p panda_mpc -o /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg
+
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UI.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UI.py: /home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UI.py: /opt/ros/melodic/share/geometry_msgs/msg/Twist.msg
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UI.py: /opt/ros/melodic/share/geometry_msgs/msg/Vector3.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python code from SRV panda_mpc/UI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV panda_mpc/UI"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv -Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -p panda_mpc -o /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv
 
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UpdateTrajectoryNextPoint.py: /opt/ros/melodic/lib/genpy/gensrv_py.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UpdateTrajectoryNextPoint.py: /home/zheng/catkin_ws/src/panda_mpc/srv/UpdateTrajectoryNextPoint.srv
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UpdateTrajectoryNextPoint.py: /opt/ros/melodic/share/geometry_msgs/msg/Twist.msg
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UpdateTrajectoryNextPoint.py: /opt/ros/melodic/share/geometry_msgs/msg/Vector3.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python code from SRV panda_mpc/UpdateTrajectoryNextPoint"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python code from SRV panda_mpc/UpdateTrajectoryNextPoint"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/gensrv_py.py /home/zheng/catkin_ws/src/panda_mpc/srv/UpdateTrajectoryNextPoint.srv -Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -p panda_mpc -o /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv
 
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/__init__.py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_PandaRunMsg.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/__init__.py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryMsg.py
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/__init__.py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryAcceleration.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/__init__.py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UI.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/__init__.py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UpdateTrajectoryNextPoint.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python msg __init__.py for panda_mpc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python msg __init__.py for panda_mpc"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg --initpy
 
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/__init__.py: /opt/ros/melodic/lib/genpy/genmsg_py.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/__init__.py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_PandaRunMsg.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/__init__.py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryMsg.py
+/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/__init__.py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryAcceleration.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/__init__.py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UI.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/__init__.py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UpdateTrajectoryNextPoint.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python srv __init__.py for panda_mpc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python srv __init__.py for panda_mpc"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv --initpy
 
 panda_mpc_generate_messages_py: CMakeFiles/panda_mpc_generate_messages_py
 panda_mpc_generate_messages_py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_PandaRunMsg.py
 panda_mpc_generate_messages_py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryMsg.py
+panda_mpc_generate_messages_py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/_trajectoryAcceleration.py
 panda_mpc_generate_messages_py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UI.py
 panda_mpc_generate_messages_py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/srv/_UpdateTrajectoryNextPoint.py
 panda_mpc_generate_messages_py: /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/python2.7/dist-packages/panda_mpc/msg/__init__.py

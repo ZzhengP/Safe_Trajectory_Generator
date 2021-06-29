@@ -246,6 +246,19 @@ panda_mpc_geneus/fast:
 .PHONY : panda_mpc_geneus/fast
 
 #=============================================================================
+# Target rules for targets named _panda_mpc_generate_messages_check_deps_trajectoryAcceleration
+
+# Build rule for target.
+_panda_mpc_generate_messages_check_deps_trajectoryAcceleration: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 _panda_mpc_generate_messages_check_deps_trajectoryAcceleration
+.PHONY : _panda_mpc_generate_messages_check_deps_trajectoryAcceleration
+
+# fast build rule for target.
+_panda_mpc_generate_messages_check_deps_trajectoryAcceleration/fast:
+	$(MAKE) -f CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/build.make CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/build
+.PHONY : _panda_mpc_generate_messages_check_deps_trajectoryAcceleration/fast
+
+#=============================================================================
 # Target rules for targets named panda_mpc_generate_messages_nodejs
 
 # Build rule for target.
@@ -1857,6 +1870,19 @@ trajectory_send/fast:
 	$(MAKE) -f examples/CMakeFiles/trajectory_send.dir/build.make examples/CMakeFiles/trajectory_send.dir/build
 .PHONY : trajectory_send/fast
 
+#=============================================================================
+# Target rules for targets named tf_broadcast
+
+# Build rule for target.
+tf_broadcast: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 tf_broadcast
+.PHONY : tf_broadcast
+
+# fast build rule for target.
+tf_broadcast/fast:
+	$(MAKE) -f examples/CMakeFiles/tf_broadcast.dir/build.make examples/CMakeFiles/tf_broadcast.dir/build
+.PHONY : tf_broadcast/fast
+
 src/controller/controller.o: src/controller/controller.cpp.o
 
 .PHONY : src/controller/controller.o
@@ -2251,6 +2277,7 @@ help:
 	@echo "... panda_mpc_generate_messages_py"
 	@echo "... panda_mpc_generate_messages_lisp"
 	@echo "... panda_mpc_geneus"
+	@echo "... _panda_mpc_generate_messages_check_deps_trajectoryAcceleration"
 	@echo "... panda_mpc_generate_messages_nodejs"
 	@echo "... _panda_mpc_generate_messages_check_deps_UI"
 	@echo "... panda_mpc_generate_messages"
@@ -2378,6 +2405,7 @@ help:
 	@echo "... gtest"
 	@echo "... test_plane_solver"
 	@echo "... trajectory_send"
+	@echo "... tf_broadcast"
 	@echo "... src/controller/controller.o"
 	@echo "... src/controller/controller.i"
 	@echo "... src/controller/controller.s"

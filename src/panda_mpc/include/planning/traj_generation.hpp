@@ -90,8 +90,8 @@ public:
     }
 
     // Passive safety constraint
-      qd_min_mpc_.tail(dof_).setConstant(-0.05);
-      qd_max_mpc_.tail(dof_).setConstant(0.05);
+//      qd_min_mpc_.tail(dof_).setConstant(-0.05);
+//      qd_max_mpc_.tail(dof_).setConstant(0.05);
 
     // Build local MPC trajectory
 
@@ -170,6 +170,10 @@ public:
   Eigen::MatrixXd getCubicCoefficientMatrix(){
     return cubic_spline_->getCoefficientMatrix();
   }
+
+  int getPredictionNumber(){
+    return N_;
+  }
 private:
 
   int N_;
@@ -216,6 +220,7 @@ private:
   Eigen::MatrixXd robotVertices_;
   std::vector<Eigen::MatrixXd> robotVerticesAugmented_;
 
+  double obs_vel_;
   Eigen::MatrixXd obsVertices_;
   std::vector<Eigen::MatrixXd> obsVerticesAugmented_;
 

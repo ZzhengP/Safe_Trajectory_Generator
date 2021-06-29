@@ -8,6 +8,7 @@
 /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc_generate_messages_py.dir
 /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc_generate_messages_lisp.dir
 /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc_geneus.dir
+/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir
 /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc_generate_messages_nodejs.dir
 /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/_panda_mpc_generate_messages_check_deps_UI.dir
 /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc_generate_messages.dir
@@ -156,10 +157,11 @@
 /home/zheng/catkin_ws/build/panda_mpc/gtest/googlemock/gtest/CMakeFiles/rebuild_cache.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/install/strip.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/install.dir
+/home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/list_install_components.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/test_plane_solver.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/edit_cache.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/trajectory_send.dir
+/home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/tf_broadcast.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/install/local.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/test.dir
-/home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/list_install_components.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/rebuild_cache.dir

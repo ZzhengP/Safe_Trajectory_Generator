@@ -8,6 +8,7 @@ examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catki
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPoint.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointRequest.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointResponse.h
+examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryAcceleration.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryMsg.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/PublishTraj.h
 examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/TrajProperties.h

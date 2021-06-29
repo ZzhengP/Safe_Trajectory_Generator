@@ -145,7 +145,7 @@ CMakeFiles/panda_mpc_genpy.dir/all: CMakeFiles/panda_mpc_generate_messages_py.di
 
 # Build rule for subdir invocation for target.
 CMakeFiles/panda_mpc_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/panda_mpc_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 0
 .PHONY : CMakeFiles/panda_mpc_genpy.dir/rule
@@ -169,6 +169,7 @@ clean: CMakeFiles/panda_mpc_genpy.dir/clean
 # Target rules for target CMakeFiles/panda_mpc_generate_messages_py.dir
 
 # All Build rule for target.
+CMakeFiles/panda_mpc_generate_messages_py.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/all
 CMakeFiles/panda_mpc_generate_messages_py.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_UI.dir/all
 CMakeFiles/panda_mpc_generate_messages_py.dir/all: CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 CMakeFiles/panda_mpc_generate_messages_py.dir/all: CMakeFiles/std_msgs_generate_messages_py.dir/all
@@ -178,12 +179,12 @@ CMakeFiles/panda_mpc_generate_messages_py.dir/all: CMakeFiles/sensor_msgs_genera
 CMakeFiles/panda_mpc_generate_messages_py.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryMsg.dir/all
 	$(MAKE) -f CMakeFiles/panda_mpc_generate_messages_py.dir/build.make CMakeFiles/panda_mpc_generate_messages_py.dir/depend
 	$(MAKE) -f CMakeFiles/panda_mpc_generate_messages_py.dir/build.make CMakeFiles/panda_mpc_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=49,50,51,52,53,54 "Built target panda_mpc_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=53,54,55,56,57,58,59 "Built target panda_mpc_generate_messages_py"
 .PHONY : CMakeFiles/panda_mpc_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/panda_mpc_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/panda_mpc_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 0
 .PHONY : CMakeFiles/panda_mpc_generate_messages_py.dir/rule
@@ -207,6 +208,7 @@ clean: CMakeFiles/panda_mpc_generate_messages_py.dir/clean
 # Target rules for target CMakeFiles/panda_mpc_generate_messages_lisp.dir
 
 # All Build rule for target.
+CMakeFiles/panda_mpc_generate_messages_lisp.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/all
 CMakeFiles/panda_mpc_generate_messages_lisp.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_UI.dir/all
 CMakeFiles/panda_mpc_generate_messages_lisp.dir/all: CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
 CMakeFiles/panda_mpc_generate_messages_lisp.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint.dir/all
@@ -216,12 +218,12 @@ CMakeFiles/panda_mpc_generate_messages_lisp.dir/all: CMakeFiles/_panda_mpc_gener
 CMakeFiles/panda_mpc_generate_messages_lisp.dir/all: CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 	$(MAKE) -f CMakeFiles/panda_mpc_generate_messages_lisp.dir/build.make CMakeFiles/panda_mpc_generate_messages_lisp.dir/depend
 	$(MAKE) -f CMakeFiles/panda_mpc_generate_messages_lisp.dir/build.make CMakeFiles/panda_mpc_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=41,42,43,44 "Built target panda_mpc_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=43,44,45,46,47 "Built target panda_mpc_generate_messages_lisp"
 .PHONY : CMakeFiles/panda_mpc_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/panda_mpc_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/panda_mpc_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 0
 .PHONY : CMakeFiles/panda_mpc_generate_messages_lisp.dir/rule
@@ -253,7 +255,7 @@ CMakeFiles/panda_mpc_geneus.dir/all: CMakeFiles/panda_mpc_generate_messages_eus.
 
 # Build rule for subdir invocation for target.
 CMakeFiles/panda_mpc_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/panda_mpc_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 0
 .PHONY : CMakeFiles/panda_mpc_geneus.dir/rule
@@ -274,9 +276,42 @@ clean: CMakeFiles/panda_mpc_geneus.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir
+
+# All Build rule for target.
+CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/all:
+	$(MAKE) -f CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/build.make CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/depend
+	$(MAKE) -f CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/build.make CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num= "Built target _panda_mpc_generate_messages_check_deps_trajectoryAcceleration"
+.PHONY : CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 0
+.PHONY : CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/rule
+
+# Convenience name for target.
+_panda_mpc_generate_messages_check_deps_trajectoryAcceleration: CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/rule
+
+.PHONY : _panda_mpc_generate_messages_check_deps_trajectoryAcceleration
+
+# clean rule for target.
+CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/clean:
+	$(MAKE) -f CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/build.make CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/clean
+.PHONY : CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/panda_mpc_generate_messages_nodejs.dir
 
 # All Build rule for target.
+CMakeFiles/panda_mpc_generate_messages_nodejs.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/all
 CMakeFiles/panda_mpc_generate_messages_nodejs.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_UI.dir/all
 CMakeFiles/panda_mpc_generate_messages_nodejs.dir/all: CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 CMakeFiles/panda_mpc_generate_messages_nodejs.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint.dir/all
@@ -286,12 +321,12 @@ CMakeFiles/panda_mpc_generate_messages_nodejs.dir/all: CMakeFiles/_panda_mpc_gen
 CMakeFiles/panda_mpc_generate_messages_nodejs.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryMsg.dir/all
 	$(MAKE) -f CMakeFiles/panda_mpc_generate_messages_nodejs.dir/build.make CMakeFiles/panda_mpc_generate_messages_nodejs.dir/depend
 	$(MAKE) -f CMakeFiles/panda_mpc_generate_messages_nodejs.dir/build.make CMakeFiles/panda_mpc_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=45,46,47,48 "Built target panda_mpc_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=48,49,50,51,52 "Built target panda_mpc_generate_messages_nodejs"
 .PHONY : CMakeFiles/panda_mpc_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/panda_mpc_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/panda_mpc_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 0
 .PHONY : CMakeFiles/panda_mpc_generate_messages_nodejs.dir/rule
@@ -364,7 +399,7 @@ all: CMakeFiles/panda_mpc_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/panda_mpc_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 28
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/panda_mpc_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 0
 .PHONY : CMakeFiles/panda_mpc_generate_messages.dir/rule
@@ -1676,7 +1711,7 @@ CMakeFiles/panda_mpc_gennodejs.dir/all: CMakeFiles/panda_mpc_generate_messages_n
 
 # Build rule for subdir invocation for target.
 CMakeFiles/panda_mpc_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/panda_mpc_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 0
 .PHONY : CMakeFiles/panda_mpc_gennodejs.dir/rule
@@ -2284,7 +2319,7 @@ CMakeFiles/panda_mpc_genlisp.dir/all: CMakeFiles/panda_mpc_generate_messages_lis
 
 # Build rule for subdir invocation for target.
 CMakeFiles/panda_mpc_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/panda_mpc_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 0
 .PHONY : CMakeFiles/panda_mpc_genlisp.dir/rule
@@ -2348,7 +2383,7 @@ CMakeFiles/panda_mpc_gencpp.dir/all: CMakeFiles/panda_mpc_generate_messages_cpp.
 
 # Build rule for subdir invocation for target.
 CMakeFiles/panda_mpc_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/panda_mpc_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 0
 .PHONY : CMakeFiles/panda_mpc_gencpp.dir/rule
@@ -2468,6 +2503,7 @@ clean: CMakeFiles/tf_generate_messages_py.dir/clean
 # Target rules for target CMakeFiles/panda_mpc_generate_messages_cpp.dir
 
 # All Build rule for target.
+CMakeFiles/panda_mpc_generate_messages_cpp.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/all
 CMakeFiles/panda_mpc_generate_messages_cpp.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_UI.dir/all
 CMakeFiles/panda_mpc_generate_messages_cpp.dir/all: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
 CMakeFiles/panda_mpc_generate_messages_cpp.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint.dir/all
@@ -2477,12 +2513,12 @@ CMakeFiles/panda_mpc_generate_messages_cpp.dir/all: CMakeFiles/_panda_mpc_genera
 CMakeFiles/panda_mpc_generate_messages_cpp.dir/all: CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f CMakeFiles/panda_mpc_generate_messages_cpp.dir/build.make CMakeFiles/panda_mpc_generate_messages_cpp.dir/depend
 	$(MAKE) -f CMakeFiles/panda_mpc_generate_messages_cpp.dir/build.make CMakeFiles/panda_mpc_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=32,33,34,35 "Built target panda_mpc_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=32,33,34,35,36 "Built target panda_mpc_generate_messages_cpp"
 .PHONY : CMakeFiles/panda_mpc_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/panda_mpc_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/panda_mpc_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 0
 .PHONY : CMakeFiles/panda_mpc_generate_messages_cpp.dir/rule
@@ -3978,6 +4014,7 @@ clean: CMakeFiles/trajectory_msgs_generate_messages_cpp.dir/clean
 # Target rules for target CMakeFiles/panda_mpc_generate_messages_eus.dir
 
 # All Build rule for target.
+CMakeFiles/panda_mpc_generate_messages_eus.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/all
 CMakeFiles/panda_mpc_generate_messages_eus.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_UI.dir/all
 CMakeFiles/panda_mpc_generate_messages_eus.dir/all: CMakeFiles/_panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint.dir/all
 CMakeFiles/panda_mpc_generate_messages_eus.dir/all: CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
@@ -3987,12 +4024,12 @@ CMakeFiles/panda_mpc_generate_messages_eus.dir/all: CMakeFiles/std_msgs_generate
 CMakeFiles/panda_mpc_generate_messages_eus.dir/all: CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 	$(MAKE) -f CMakeFiles/panda_mpc_generate_messages_eus.dir/build.make CMakeFiles/panda_mpc_generate_messages_eus.dir/depend
 	$(MAKE) -f CMakeFiles/panda_mpc_generate_messages_eus.dir/build.make CMakeFiles/panda_mpc_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=36,37,38,39,40 "Built target panda_mpc_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=37,38,39,40,41,42 "Built target panda_mpc_generate_messages_eus"
 .PHONY : CMakeFiles/panda_mpc_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/panda_mpc_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/panda_mpc_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 0
 .PHONY : CMakeFiles/panda_mpc_generate_messages_eus.dir/rule
@@ -4267,12 +4304,14 @@ clean: gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
 # Convenience name for "all" pass in the directory.
 examples/all: examples/CMakeFiles/test_plane_solver.dir/all
 examples/all: examples/CMakeFiles/trajectory_send.dir/all
+examples/all: examples/CMakeFiles/tf_broadcast.dir/all
 
 .PHONY : examples/all
 
 # Convenience name for "clean" pass in the directory.
 examples/clean: examples/CMakeFiles/test_plane_solver.dir/clean
 examples/clean: examples/CMakeFiles/trajectory_send.dir/clean
+examples/clean: examples/CMakeFiles/tf_broadcast.dir/clean
 
 .PHONY : examples/clean
 
@@ -4288,7 +4327,7 @@ examples/preinstall:
 examples/CMakeFiles/test_plane_solver.dir/all: CMakeFiles/panda_mpc.dir/all
 	$(MAKE) -f examples/CMakeFiles/test_plane_solver.dir/build.make examples/CMakeFiles/test_plane_solver.dir/depend
 	$(MAKE) -f examples/CMakeFiles/test_plane_solver.dir/build.make examples/CMakeFiles/test_plane_solver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=55,56 "Built target test_plane_solver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=60,61 "Built target test_plane_solver"
 .PHONY : examples/CMakeFiles/test_plane_solver.dir/all
 
 # Include target in all.
@@ -4325,7 +4364,7 @@ clean: examples/CMakeFiles/test_plane_solver.dir/clean
 examples/CMakeFiles/trajectory_send.dir/all: CMakeFiles/panda_mpc.dir/all
 	$(MAKE) -f examples/CMakeFiles/trajectory_send.dir/build.make examples/CMakeFiles/trajectory_send.dir/depend
 	$(MAKE) -f examples/CMakeFiles/trajectory_send.dir/build.make examples/CMakeFiles/trajectory_send.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=57,58 "Built target trajectory_send"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=64,65 "Built target trajectory_send"
 .PHONY : examples/CMakeFiles/trajectory_send.dir/all
 
 # Include target in all.
@@ -4352,6 +4391,43 @@ examples/CMakeFiles/trajectory_send.dir/clean:
 
 # clean rule for target.
 clean: examples/CMakeFiles/trajectory_send.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target examples/CMakeFiles/tf_broadcast.dir
+
+# All Build rule for target.
+examples/CMakeFiles/tf_broadcast.dir/all: CMakeFiles/panda_mpc.dir/all
+	$(MAKE) -f examples/CMakeFiles/tf_broadcast.dir/build.make examples/CMakeFiles/tf_broadcast.dir/depend
+	$(MAKE) -f examples/CMakeFiles/tf_broadcast.dir/build.make examples/CMakeFiles/tf_broadcast.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=62,63 "Built target tf_broadcast"
+.PHONY : examples/CMakeFiles/tf_broadcast.dir/all
+
+# Include target in all.
+all: examples/CMakeFiles/tf_broadcast.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+examples/CMakeFiles/tf_broadcast.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 17
+	$(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/tf_broadcast.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles 0
+.PHONY : examples/CMakeFiles/tf_broadcast.dir/rule
+
+# Convenience name for target.
+tf_broadcast: examples/CMakeFiles/tf_broadcast.dir/rule
+
+.PHONY : tf_broadcast
+
+# clean rule for target.
+examples/CMakeFiles/tf_broadcast.dir/clean:
+	$(MAKE) -f examples/CMakeFiles/tf_broadcast.dir/build.make examples/CMakeFiles/tf_broadcast.dir/clean
+.PHONY : examples/CMakeFiles/tf_broadcast.dir/clean
+
+# clean rule for target.
+clean: examples/CMakeFiles/tf_broadcast.dir/clean
 
 .PHONY : clean
 

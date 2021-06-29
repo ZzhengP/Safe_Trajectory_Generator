@@ -1,0 +1,7 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:[m[K In constructor '[01m[KTrajectSenderNode::TrajectSenderNode(ros::NodeHandle&, Eigen::VectorXd, Eigen::VectorXd)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:82:14:[m[K [01;31m[Kerror: [m[Kreturning a value from a constructor
+       return [01;31m[Kfalse[m[K;
+              [01;31m[K^~~~~[m[K
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

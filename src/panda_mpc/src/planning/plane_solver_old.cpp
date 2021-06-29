@@ -12,8 +12,8 @@ PlaneSolver::PlaneSolver(int nbrCst, double dsafe):nC_(nbrCst), dsafe_(dsafe)
 
     lb_.resize(nV_);
     ub_.resize(nV_);
-    lb_ << -1, -1, -0.8, 0.0, -0.5;
-    ub_ << 1, 1, 0.8, 10, 0.5;
+    lb_ << -1, -1, -0.9, 0.15, -0.5;
+    ub_ << 1, 1, -0.5, 10, 0.5;
 
 
     E_.resize(5,5);
@@ -59,8 +59,8 @@ void PlaneSolver::setCost(const Eigen::VectorXd& f){
 
 
     // For non linear
-    H_ = 0.001*H1 + H2 + 0.1*H3;
-    g_ = 0.001*g1 + g2 + 0.1*g3;
+    H_ = 0.1*H1 + H2 + 0.1*H3;
+    g_ = 0.1*g1 + g2 + 0.1*g3;
 }
 
 
@@ -85,11 +85,12 @@ void PlaneSolver::setCstMatrix(const Eigen::MatrixXd &robotPartielVertices,
 
    lbA_.setZero();
 
+
   for (int j(0); j < rcols ; j ++ ){
       A_.block(j,0,1,5) << -robotPartielVertices.block(0,j,3,1).transpose() , 1, 1;
   }
   for (int i(0); i < pcols; i++ ){
-      A_.block(i+rcols,0,1,5) << obsPartielVertices.block(0,i,3,1).transpose(), -1, 1;
+      A_.block(i+rcols,0,1,5) << obsPartielVertices.block(0,i,3,1).transpose(), -1, 0;
   }
 
 
@@ -104,7 +105,7 @@ void PlaneSolver::setCstMatrix(const Eigen::MatrixXd &robotPartielVertices,
 
   dsafe_ = 0.1;
   lbA_.setConstant(dsafe_);
-  lbA_(rcols + pcols) = 0.95;
+  lbA_(rcols + pcols) = 0.99;
 
   ubA_.setConstant(10000000);
   ubA_(0) = 1;

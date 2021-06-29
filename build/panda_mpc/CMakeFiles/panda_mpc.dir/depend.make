@@ -8,6 +8,7 @@ CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o: /home/zheng/catkin_ws/
 CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPoint.h
 CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointRequest.h
 CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointResponse.h
+CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryAcceleration.h
 CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryMsg.h
 CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/PublishTraj.h
 CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/TrajProperties.h
@@ -1440,6 +1441,7 @@ CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o: /home/zheng/catkin_ws/devel
 CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPoint.h
 CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointRequest.h
 CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointResponse.h
+CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryAcceleration.h
 CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryMsg.h
 CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/PublishTraj.h
 CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/TrajProperties.h
@@ -4003,6 +4005,7 @@ CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.o: /home/zheng/catkin_ws/devel/
 CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPoint.h
 CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointRequest.h
 CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/UpdateTrajectoryNextPointResponse.h
+CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryAcceleration.h
 CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_mpc/include/panda_mpc/trajectoryMsg.h
 CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/PublishTraj.h
 CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.o: /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/TrajProperties.h

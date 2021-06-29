@@ -1,0 +1,12 @@
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:347:0[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:17[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:1[m[K:
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of '[01m[KEigen::DenseCoeffsBase<Derived, 1>::Scalar& Eigen::DenseCoeffsBase<Derived, 1>::operator[](Eigen::Index) [with Derived = Eigen::Matrix<double, -1, -1>; Eigen::DenseCoeffsBase<Derived, 1>::Scalar = double; Eigen::Index = long int][m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:139:66:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:406:7:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: THE_BRACKET_OPERATOR_IS_ONLY_FOR_VECTORS__USE_THE_PARENTHESIS_OPERATOR_INSTEAD
+       [01;31m[KE[m[KIGEN_STATIC_ASSERT(Derived::IsVectorAtCompileTime,
+       [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

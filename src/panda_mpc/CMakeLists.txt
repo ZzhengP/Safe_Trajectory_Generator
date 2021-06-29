@@ -42,6 +42,7 @@ add_message_files(
   FILES
   PandaRunMsg.msg
   trajectoryMsg.msg
+  trajectoryAcceleration.msg
 )
 
 add_service_files(

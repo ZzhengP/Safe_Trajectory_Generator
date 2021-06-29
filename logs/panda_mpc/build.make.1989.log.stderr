@@ -1,0 +1,11 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:[m[K In member function '[01m[Kbool optimization::MPCConstraint::computeUpperBoundAndConstraint(const VectorXd&, const std::vector<Eigen::Matrix<double, -1, -1> >&, const std::vector<Eigen::Matrix<double, -1, -1> >&, const MatrixXd&, const VectorXd&, int)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:228:50:[m[K [01;31m[Kerror: [m[K'[01m[Kdsafe_table[m[K' was not declared in this scope
+         bLarge.segment(2*k,2) << plane[0](3,k) - [01;31m[Kdsafe_table[m[K, plane[0](3,k) - dsafe_table;
+                                                  [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/constraint.cpp:228:50:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Kdsafe_[m[K'
+         bLarge.segment(2*k,2) << plane[0](3,k) - [01;36m[Kdsafe_table[m[K, plane[0](3,k) - dsafe_table;
+                                                  [01;36m[K^~~~~~~~~~~[m[K
+                                                  [32m[Kdsafe_[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/optFormulation/constraint.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

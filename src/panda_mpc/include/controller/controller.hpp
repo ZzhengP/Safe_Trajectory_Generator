@@ -19,6 +19,7 @@
 #include <panda_mpc/PandaRunMsg.h>
 #include <panda_mpc/UpdateTrajectoryNextPoint.h>
 #include <panda_mpc/trajectoryMsg.h>
+#include <panda_mpc/trajectoryAcceleration.h>
 
 #include <qpOASES.hpp>
 #include <trac_ik/trac_ik.hpp>
@@ -43,7 +44,7 @@
 #include <robot/robot_model.h>
 #include <planning/traj_generation.hpp>
 #include <rviz_visual_tools/rviz_visual_tools.h>
-
+#include <planning/cubic_spline.h>
 
 namespace Controller {
 
@@ -133,37 +134,19 @@ private:
   bool load_robot(ros::NodeHandle& nh, const Eigen::VectorXd& q_init, const Eigen::VectorXd qd_init);
 
 
-  /**
-   * @brief do_publishing: publishs values and messages
-   */
-  void do_publishing();
-
-  /**
-  * \fn void BuildTrajectory
-  * \brief Build the trajectory
-  * \param KDL::Frame X_curr_ the current pose of the robot
-  */
-  void BuildTrajectory(KDL::Frame X_curr_);
-
 
   /**
    * @brief Publish the trajectory
    */
    void publishTrajectory();
 
-   /**
-   * @brief ros service to interact with the robot
-   */
-   bool updateUI(panda_mpc::UI::Request& req, panda_mpc::UI::Response& resp);
-
-   /**
-   * @brief ros service to update the trajectory
-   */
-   bool updateTrajectory(panda_traj::UpdateTrajectory::Request &req, panda_traj::UpdateTrajectory::Response &resp);
-
 //   void updateTrajectoryPoint(panda_mpc::UpdateTrajectoryNextPoint::Request &req, panda_mpc::UpdateTrajectoryNextPoint::Response &resp);
 
-  void updateTrajectoryPoint(const panda_mpc::trajectoryMsg::ConstPtr& traj_msg);
+  void updateTrajectoryPoint(const panda_mpc::trajectoryAcceleration::ConstPtr& traj_acc);
+
+
+  void computeInterpolationCoefficient();
+
   // Publishers
   geometry_msgs::Pose X_curr_msg_, X_traj_msg_;
   geometry_msgs::Twist X_err_msg_;
@@ -246,22 +229,24 @@ private:
   int traj_index_;
   double dt_; /*!<  @brief MPC sampling time */
   Eigen::VectorXd state_; /*!<  @brief state-space model state */
-  Eigen::VectorXd q_des_mpc_, qd_des_mpc_, qdd_des_mpc_ ; /*!<  @brief desired joint parameters in horizon */
   Eigen::VectorXd q_horizon_, qd_horizon_; /*!<  @brief joint position and velocity in horizon */
   Eigen::VectorXd solution_, solution_precedent_; /*!<  @brief MPC optimization solution */
-  Eigen::MatrixXd state_A_, state_B_; /*!<  @brief transition and input matrix */
   KDL::JntArray q_des_; /*!< @brief desired joint position and current joint position */
   KDL::JntArrayVel q_;
   KDL::JntArrayAcc q_mpc_; /*!< @brief combine joint position and velocity together */
 
   Eigen::VectorXd ee_vel_; /*!< @brief end-effector cartesian velocity  */
   KDL::Frame Goal_A_frame_, Goal_B_frame_ , X_mpc_; /*!< @brief goal frame and predicted MPC frame  */
-  KDL::Jacobian kdl_J; /*!< @brief KDL Jacobian */
-  ros::Time begin_time_, end_time_, wait_begin_, wait_end_;  /*!< @brief duration which control robot plannification module  */
   KDL::JntArray q_goal_A_, q_goal_B_;  /*!< @brief two different goals  */
 
   Eigen::VectorXd jnt_err;
   Eigen::Matrix<double,7,1> jnt_des_;
+
+  std::unique_ptr<cubicSpline::cubicSpline> cubic_spline_;
+
+  std::vector<Eigen::MatrixXd> joints_coefficient_matrix_;/*!< @brief a vector of joint coefficient_matrix */
+
+  std::vector<KDL::JntArrayAcc> joints_array;
 };
 
 }

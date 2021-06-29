@@ -55,6 +55,7 @@ include CMakeFiles/panda_mpc_generate_messages_lisp.dir/progress.make
 
 CMakeFiles/panda_mpc_generate_messages_lisp: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/PandaRunMsg.lisp
 CMakeFiles/panda_mpc_generate_messages_lisp: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/trajectoryMsg.lisp
+CMakeFiles/panda_mpc_generate_messages_lisp: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/trajectoryAcceleration.lisp
 CMakeFiles/panda_mpc_generate_messages_lisp: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv/UI.lisp
 CMakeFiles/panda_mpc_generate_messages_lisp: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv/UpdateTrajectoryNextPoint.lisp
 
@@ -76,23 +77,30 @@ CMakeFiles/panda_mpc_generate_messages_lisp: /home/zheng/catkin_ws/devel/.privat
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Lisp code from panda_mpc/trajectoryMsg.msg"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryMsg.msg -Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -p panda_mpc -o /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg
 
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/trajectoryAcceleration.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/trajectoryAcceleration.lisp: /home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg
+/home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/trajectoryAcceleration.lisp: /opt/ros/melodic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from panda_mpc/trajectoryAcceleration.msg"
+	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/zheng/catkin_ws/src/panda_mpc/msg/trajectoryAcceleration.msg -Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -p panda_mpc -o /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg
+
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv/UI.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv/UI.lisp: /home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv/UI.lisp: /opt/ros/melodic/share/geometry_msgs/msg/Twist.msg
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv/UI.lisp: /opt/ros/melodic/share/geometry_msgs/msg/Vector3.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Lisp code from panda_mpc/UI.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from panda_mpc/UI.srv"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/zheng/catkin_ws/src/panda_mpc/srv/UI.srv -Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -p panda_mpc -o /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv
 
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv/UpdateTrajectoryNextPoint.lisp: /opt/ros/melodic/lib/genlisp/gen_lisp.py
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv/UpdateTrajectoryNextPoint.lisp: /home/zheng/catkin_ws/src/panda_mpc/srv/UpdateTrajectoryNextPoint.srv
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv/UpdateTrajectoryNextPoint.lisp: /opt/ros/melodic/share/geometry_msgs/msg/Twist.msg
 /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv/UpdateTrajectoryNextPoint.lisp: /opt/ros/melodic/share/geometry_msgs/msg/Vector3.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Lisp code from panda_mpc/UpdateTrajectoryNextPoint.srv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Lisp code from panda_mpc/UpdateTrajectoryNextPoint.srv"
 	catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genlisp/cmake/../../../lib/genlisp/gen_lisp.py /home/zheng/catkin_ws/src/panda_mpc/srv/UpdateTrajectoryNextPoint.srv -Ipanda_mpc:/home/zheng/catkin_ws/src/panda_mpc/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/melodic/share/sensor_msgs/cmake/../msg -p panda_mpc -o /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv
 
 panda_mpc_generate_messages_lisp: CMakeFiles/panda_mpc_generate_messages_lisp
 panda_mpc_generate_messages_lisp: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/PandaRunMsg.lisp
 panda_mpc_generate_messages_lisp: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/trajectoryMsg.lisp
+panda_mpc_generate_messages_lisp: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/msg/trajectoryAcceleration.lisp
 panda_mpc_generate_messages_lisp: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv/UI.lisp
 panda_mpc_generate_messages_lisp: /home/zheng/catkin_ws/devel/.private/panda_mpc/share/common-lisp/ros/panda_mpc/srv/UpdateTrajectoryNextPoint.lisp
 panda_mpc_generate_messages_lisp: CMakeFiles/panda_mpc_generate_messages_lisp.dir/build.make

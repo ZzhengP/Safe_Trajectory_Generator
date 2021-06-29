@@ -58,7 +58,8 @@ namespace planning {
 
     Eigen::Vector3d obstacle_center;
 
-    obstacle_center << 0.55, -0.0, 0.15;
+    obs_vel_ = 0.002;
+    obstacle_center << 1.45, -0.1, 0.14;
 
 
     obsVertices_.resize(3,obstacle_vertices_);
@@ -186,6 +187,28 @@ namespace planning {
 
     robotVerticesAugmented_[0]= computeTipPositionHorizon(q_horizon,robot_vertices_);
 
+
+    if(obsVertices_(0,0) <= 0.5)
+      obs_vel_ = -0.01;
+
+    if (obsVertices_(0,0) >= 1.5)
+      obs_vel_ = 0.01;
+
+//    obs_vel_ = 0.0;
+    obsVertices_ << obsVertices_(0,0) , obsVertices_(1,0), obsVertices_(2,0);
+
+    double obstacle_x;
+    obstacle_x = obsVertices_(0,0);
+    for (int i(0); i<N_; i++){
+
+           obsVertices_(0,0) = obstacle_x - i*obs_vel_;
+           if (obsVertices_(0,0) >= 0.5){
+             obsVerticesAugmented_[0].block(0,i*obstacle_vertices_,3,obstacle_vertices_) << obsVertices_(0,0), obsVertices_(1,0), obsVertices_(2,0);
+           }else {
+             obsVerticesAugmented_[0].block(0,i*obstacle_vertices_,3,obstacle_vertices_) << 0.5, obsVertices_(1,0), obsVertices_(2,0);
+
+           }
+    }
     plane_generation->update(robotVerticesAugmented_,
                              obsVerticesAugmented_);
 

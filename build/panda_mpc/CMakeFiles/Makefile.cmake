@@ -417,6 +417,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/panda_mpc_generate_messages_py.dir/DependInfo.cmake"
   "CMakeFiles/panda_mpc_generate_messages_lisp.dir/DependInfo.cmake"
   "CMakeFiles/panda_mpc_geneus.dir/DependInfo.cmake"
+  "CMakeFiles/_panda_mpc_generate_messages_check_deps_trajectoryAcceleration.dir/DependInfo.cmake"
   "CMakeFiles/panda_mpc_generate_messages_nodejs.dir/DependInfo.cmake"
   "CMakeFiles/_panda_mpc_generate_messages_check_deps_UI.dir/DependInfo.cmake"
   "CMakeFiles/panda_mpc_generate_messages.dir/DependInfo.cmake"
@@ -541,4 +542,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "gtest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "examples/CMakeFiles/test_plane_solver.dir/DependInfo.cmake"
   "examples/CMakeFiles/trajectory_send.dir/DependInfo.cmake"
+  "examples/CMakeFiles/tf_broadcast.dir/DependInfo.cmake"
   )
