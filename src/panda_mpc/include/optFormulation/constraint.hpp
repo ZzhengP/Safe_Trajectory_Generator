@@ -56,7 +56,11 @@ public:
                                       int index);
 
 
+  bool resetJntVelLimit(const Eigen::VectorXd& qd_min, const Eigen::VectorXd& qd_max){
 
+    qd_min_mpc_ = qd_min;
+    qd_max_mpc_ = qd_max;
+  }
 
   bool addConstraint(const constraint& new_constraint){
 

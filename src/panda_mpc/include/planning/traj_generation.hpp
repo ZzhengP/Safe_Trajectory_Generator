@@ -72,8 +72,8 @@ public:
 
     q_min_ = robot_mpc_model_->getJntll().data;
     q_max_ = robot_mpc_model_->getJntul().data;
-    qd_min_.setConstant(-2);
-    qd_max_.setConstant(2);
+    qd_min_.setConstant(-1.5);
+    qd_max_.setConstant(1.5);
     node_handle.getParam("/panda_mpc/qd_min_", qd_min_ros_);
     node_handle.getParam("/panda_mpc/qd_max_", qd_max_ros_);
 
@@ -82,6 +82,8 @@ public:
     qd_min_mpc_.resize(dof_*N_);
     qd_max_mpc_.resize(dof_*N_);
 
+    d_limit_ = 0.1 ;
+    d_full_ = 1;
     for (size_t i(0); i<N_; i++){
       q_min_mpc_.segment(i*dof_,dof_) = q_min_;
       q_max_mpc_.segment(i*dof_,dof_) = q_max_;
@@ -90,8 +92,8 @@ public:
     }
 
     // Passive safety constraint
-//      qd_min_mpc_.tail(dof_).setConstant(-0.05);
-//      qd_max_mpc_.tail(dof_).setConstant(0.05);
+      qd_min_mpc_.tail(dof_).setConstant(-0.1);
+      qd_max_mpc_.tail(dof_).setConstant(0.1);
 
     // Build local MPC trajectory
 
@@ -210,6 +212,8 @@ private:
   qpSolver qpoases_soft_solver_;
   // --------------------------- Plane ---------------------------------------------
   double dsafe_ ;
+  double d_limit_, d_full_;
+
   int robot_member_ ; /*!< @brief number of robot member to be take into account */
   int robot_vertices_ ; /*!< @brief number of robot vertices for one member */
   int obstacle_member_ ; /*!< @brief number of obstacle member to be take into account */

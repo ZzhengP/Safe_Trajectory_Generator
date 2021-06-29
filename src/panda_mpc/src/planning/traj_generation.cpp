@@ -59,7 +59,7 @@ namespace planning {
     Eigen::Vector3d obstacle_center;
 
     obs_vel_ = 0.002;
-    obstacle_center << 1.45, -0.1, 0.14;
+    obstacle_center << 1.55, -0.1, 0.14;
 
 
     obsVertices_.resize(3,obstacle_vertices_);
@@ -140,9 +140,33 @@ namespace planning {
 
 
 
+    // Extract distance
     plane_location_ = plane_generation->GetPlane();
 
+    // redefine joint velocity limits:
+    double percentage;
+    double p_init = 0.5;
+    for (int i(0); i< N_-1 ; i++){
 
+      double d = plane_location_[0](3,i);
+      if (d > d_full_){
+        percentage = 1;
+      }else if (d < d_limit_)
+      {
+        percentage = p_init;
+      }else {
+        percentage = ((1 - p_init)/(d_full_-d_limit_))*(d - d_limit_) + p_init;
+      }
+
+
+      qd_min_mpc_.segment(i*dof_,dof_) = percentage*qd_min_;
+      qd_max_mpc_.segment(i*dof_,dof_) = percentage*qd_max_;
+    }
+
+    qd_min_mpc_.tail(dof_) = percentage*qd_min_;
+    qd_max_mpc_.tail(dof_) = percentage*qd_max_;
+
+    mpc_constraint_->resetJntVelLimit(qd_min_mpc_,qd_max_mpc_);
     mpc_constraint_->computeUpperBoundAndConstraint(S,
                                    robotVerticesAugmented_,
                                    plane_location_,
@@ -189,10 +213,10 @@ namespace planning {
 
 
     if(obsVertices_(0,0) <= 0.5)
-      obs_vel_ = -0.01;
+      obs_vel_ = -0.005;
 
     if (obsVertices_(0,0) >= 1.5)
-      obs_vel_ = 0.01;
+      obs_vel_ = 0.005;
 
 //    obs_vel_ = 0.0;
     obsVertices_ << obsVertices_(0,0) , obsVertices_(1,0), obsVertices_(2,0);
@@ -235,14 +259,6 @@ namespace planning {
       return qpoases_soft_solver_.soft_optimal_solution_.segment(0,nV_);
     }
 
-//    if (is_solved){
-//      return qpoases_solver_.optimal_solution_;
-//    }else{
-//      return qpoases_solver_.optimal_solution_.setZero();
-//    }
-
-
-    // end
   }
 
 
