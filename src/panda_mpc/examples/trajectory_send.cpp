@@ -69,7 +69,7 @@ public:
     robot_model_.reset(new robot::RobotModel(node_handle, root_link, tip_link));
     robot_model_->Init(node_handle, q_init, qdot_init);
     dof = robot_model_->getNrOfJoints();
-
+    q_in.q.data << 0.391342, 0.843433, 0.49249, -1.51971, -0.468614, 2.24382,   1.03971;
     robot_model_->JntToCart(q_in.q, X_curr_);
     Goal_A_frame_.p[0] = 0.5, Goal_A_frame_.p[1] = 0.5, Goal_A_frame_.p[2] = 0.2;
     Goal_A_frame_.M = X_curr_.M;
@@ -105,7 +105,11 @@ public:
     state_A_ = trajectory_generation->getStateA();
     state_B_ = trajectory_generation->getStateB();
 
-    jointState_subscriber = node_handle.subscribe("/panda_mpc/joint_states",1,&TrajectSenderNode::jointStateCallBack,this);
+    q_des_.data = goal_B_;
+
+
+//    jointState_subscriber = node_handle.subscribe("/panda_mpc/joint_states",1,&TrajectSenderNode::jointStateCallBack,this);
+    jointState_subscriber = node_handle.subscribe("/franka_state_controller/joint_states",1,&TrajectSenderNode::jointStateCallBack,this);
     tip_pos_pub = node_handle.advertise<visualization_msgs::Marker>("/tip_position",1);
     solution_pub = node_handle.advertise<panda_mpc::trajectoryAcceleration>("/mpc_solution",1);
   }
@@ -144,14 +148,13 @@ private:
   Eigen::VectorXd q_horizon_, qd_horizon_; /*!<  @brief joint position and velocity in horizon */
   Eigen::Matrix<double,6,7> J;
 
-  int traj_index_;
 };
 
 int main(int argc, char** argv )
 {
     ros::init(argc,argv, "NextTrajectorySender");
     ros::NodeHandle node_handle;
-    ros::Rate loop_rate(25);
+    ros::Rate loop_rate(20);
 
     Eigen::Matrix<double, 7, 1> q_in, qdot_in;
     q_in << 0.391342, 0.843433, 0.49249, -1.51971, -0.468614, 2.24382,   1.03971;
@@ -171,9 +174,7 @@ int main(int argc, char** argv )
 
 void TrajectSenderNode::jointStateCallBack(const sensor_msgs::JointStatePtr& joint_state){
 
-  ROS_WARN_STREAM("Calling joint state call back");
   for (int i(0); i < dof; i++){
-
     q_in.q.data[i] = joint_state->position[i];
     q_in.qdot.data[i] = joint_state->velocity[i];
   }
@@ -193,15 +194,18 @@ void TrajectSenderNode::jointStateCallBack(const sensor_msgs::JointStatePtr& joi
   error_task_A << X_curr_.p[0] - Goal_A_frame_.p[0], X_curr_.p[1] - Goal_A_frame_.p[1], X_curr_.p[2] - Goal_A_frame_.p[2];
   error_task_B << X_curr_.p[0] - Goal_B_frame_.p[0], X_curr_.p[1] - Goal_B_frame_.p[1], X_curr_.p[2] - Goal_B_frame_.p[2];
 
+
+
+
 //  if(init_pos_attend_ & execute & !wait){
 
-    if(error_task_A.norm()<0.005){
+    if(error_task_A.norm()<0.001){
       q_des_.data = goal_B_;
       wait = true;
       wait_begin_ = ros::Time::now();
     }
 
-    if(error_task_B.norm()<0.005){
+    if(error_task_B.norm()<0.001){
       q_des_.data = goal_A_;
       wait = true;
       wait_begin_ = ros::Time::now();
@@ -212,17 +216,15 @@ void TrajectSenderNode::jointStateCallBack(const sensor_msgs::JointStatePtr& joi
     UpdateMPCTraj();
     begin_time_ = ros::Time::now();
     execute = false;
-//  }
-}
+  }
+//}
 
 bool TrajectSenderNode::UpdateMPCTraj(){
 
-  traj_index_ = 0;
 
   for (size_t i(0); i < N_; i++){
     q_des_mpc_.segment(i*dof, dof) = q_des_.data;
   }
-
   solution_precedent_ = solution_;
 
   state_.head(dof) =  q_in.q.data;
@@ -261,14 +263,17 @@ bool TrajectSenderNode::UpdateMPCTraj(){
   marker.color.a = 0.5;
   marker.lifetime = ros::Duration();
   tip_pos_pub.publish(marker);
-  ROS_WARN_STREAM("state :\n" << state_.head(dof));
 
   panda_mpc::trajectoryAcceleration next_acceleration;
-  next_acceleration.jntAcc.resize(dof*N_);
+  next_acceleration.jntAcc.resize(3*dof);
+
 
   next_acceleration.header.stamp = ros::Time::now();
-  for (int i(0); i<dof*N_;i++){
+  for (int i(0); i<dof;i++){
   next_acceleration.jntAcc.at(i) = solution_[i];
+  next_acceleration.jntAcc.at(i+dof) = state_(i);
+  next_acceleration.jntAcc.at(i+2*dof) = state_(i+dof);
+
   }
 
   solution_pub.publish(next_acceleration);

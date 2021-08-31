@@ -4,7 +4,7 @@ panda:
   joint_state_controller:
     type: joint_state_controller/JointStateController
 
-    publish_rate: 100
+    publish_rate: 1000
 
   # Position Controllers ---------------------------------------
   panda_joint1_position_controller:

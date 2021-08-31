@@ -1,0 +1,51 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:[m[K In constructor '[01m[KTrajectSenderNode::TrajectSenderNode(ros::NodeHandle&, Eigen::VectorXd, Eigen::VectorXd)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:72:12:[m[K [01;31m[Kerror: [m[Kno match for '[01m[Koperator<<[m[K' (operand types are '[01m[KKDL::JntArray[m[K' and '[01m[Kdouble[m[K')
+     [01;31m[Kq_in.q << 0.391342[m[K, 0.843433, 0.49249, -1.51971, -0.468614, 2.24382,   1.03971;
+     [01;31m[K~~~~~~~^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/melodic/include/ros/node_handle.h:52:0[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/controller_base.h:35[m[K,
+                 from [01m[K/opt/ros/melodic/include/controller_interface/multi_interface_controller.h:33[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_mpc.h:16[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h:207:29:[m[K [01;36m[Knote: [m[Kcandidate: std::ostream& operator<<(std::ostream&, const XmlRpc::XmlRpcValue&)
+ XMLRPCPP_DECL std::ostream& [01;36m[Koperator[m[K<<(std::ostream& os, const XmlRpc::XmlRpcValue& v);
+                             [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/xmlrpcpp/XmlRpcValue.h:207:29:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KKDL::JntArray[m[K' to '[01m[Kstd::ostream& {aka std::basic_ostream<char>&}[m[K'
+In file included from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp:30:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_mpc.h:30[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:30[m[K:
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:98:19:[m[K [01;36m[Knote: [m[Kcandidate: std::ostream& KDL::operator<<(std::ostream&, const KDL::Frame2&)
+     std::ostream& [01;36m[Koperator[m[K << (std::ostream& os,const Frame2& T);
+                   [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:98:19:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KKDL::JntArray[m[K' to '[01m[Kstd::ostream& {aka std::basic_ostream<char>&}[m[K'
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:97:19:[m[K [01;36m[Knote: [m[Kcandidate: std::ostream& KDL::operator<<(std::ostream&, const KDL::Rotation2&)
+     std::ostream& [01;36m[Koperator[m[K << (std::ostream& os,const Rotation2& R);
+                   [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:97:19:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KKDL::JntArray[m[K' to '[01m[Kstd::ostream& {aka std::basic_ostream<char>&}[m[K'
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:96:19:[m[K [01;36m[Knote: [m[Kcandidate: std::ostream& KDL::operator<<(std::ostream&, const KDL::Vector2&)
+     std::ostream& [01;36m[Koperator[m[K << (std::ostream& os,const Vector2& v);
+                   [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:96:19:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KKDL::JntArray[m[K' to '[01m[Kstd::ostream& {aka std::basic_ostream<char>&}[m[K'
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:95:19:[m[K [01;36m[Knote: [m[Kcandidate: std::ostream& KDL::operator<<(std::ostream&, const KDL::Wrench&)
+     std::ostream& [01;36m[Koperator[m[K << (std::ostream& os,const Wrench& T);
+                   [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:95:19:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KKDL::JntArray[m[K' to '[01m[Kstd::ostream& {aka std::basic_ostream<char>&}[m[K'
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:94:19:[m[K [01;36m[Knote: [m[Kcandidate: std::ostream& KDL::operator<<(std::ostream&, const KDL::Twist&)
+     std::ostream& [01;36m[Koperator[m[K << (std::ostream& os,const Twist& T);
+                   [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:94:19:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KKDL::JntArray[m[K' to '[01m[Kstd::ostream& {aka std::basic_ostream<char>&}[m[K'
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:93:19:[m[K [01;36m[Knote: [m[Kcandidate: std::ostream& KDL::operator<<(std::ostream&, const KDL::Frame&)
+     std::ostream& [01;36m[Koperator[m[K << (std::ostream& os,const Frame& T);
+                   [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:93:19:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KKDL::JntArray[m[K' to '[01m[Kstd::ostream& {aka std::basic_ostream<char>&}[m[K'
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:92:19:[m[K [01;36m[Knote: [m[Kcandidate: std::ostream& KDL::operator<<(std::ostream&, const KDL::Rotation&)
+     std::ostream& [01;36m[Koperator[m[K << (std::ostream& os,const Rotation& R);
+                   [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:92:19:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KKDL::JntArray[m[K' to '[01m[Kstd::ostream& {aka std::basic_ostream<char>&}[m[K'
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:91:19:[m[K [01;36m[Knote: [m[Kcandidate: std::ostream& KDL::operator<<(std::ostream&, const KDL::Vector&)
+     std::ostream& [01;36m[Koperator[m[K << (std::ostream& os,const Vector& v);
+                   [01;36m[K^~~~~~~~[m[K
+[01m[K/opt/ros/melodic/include/kdl/frames_io.hpp:91:19:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from '[01m[KKDL::JntArray[m[K' to '[01m[Kstd::ostream& {aka std::basic_ostream<char>&}[m[K'
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

@@ -1,0 +1,8 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:[m[K In member function '[01m[Kvoid Controller::Controller::updateTrajectoryPoint(const ConstPtr&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:392:42:[m[K [01;31m[Kerror: [m[K'[01m[Kconst struct panda_mpc::trajectoryAcceleration_<std::allocator<void> >[m[K' has no member named '[01m[KjntAcc[m[K'
+       q_mpc_.qdotdot.data[i] = traj_acc->[01;31m[KjntAcc[m[K.at(i);
+                                          [01;31m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

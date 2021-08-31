@@ -76,7 +76,7 @@ bool PandaMPCController::init(hardware_interface::RobotHW* robot_hardware, ros::
       position_joint_interface_ = robot_hardware->get<hardware_interface::PositionJointInterface>();
       if (position_joint_interface_ == nullptr) {
           ROS_ERROR(
-              "JointVelocityExampleController: Error getting velocity joint interface from hardware!");
+              "JointpositionExampleController: Error getting position joint interface from hardware!");
               return false;
       }
        position_joint_handles_.resize(7);
@@ -90,24 +90,6 @@ bool PandaMPCController::init(hardware_interface::RobotHW* robot_hardware, ros::
           }
       }
     }
-    else if ( control_level == "torque")
-    {
-        auto* effort_joint_interface = robot_hardware->get<hardware_interface::EffortJointInterface>();
-        if (effort_joint_interface == nullptr) {
-            ROS_ERROR_STREAM(
-                "CartesianImpedanceExampleController: Error getting effort joint interface from hardware");
-            return false;
-        }
-        for (size_t i = 0; i < 7; ++i) {
-            try {
-            joint_handles_.push_back(effort_joint_interface->getHandle(joint_names[i]));
-            } catch (const hardware_interface::HardwareInterfaceException& ex) {
-            ROS_ERROR_STREAM(
-                "CartesianImpedanceExampleController: Exception getting joint handles: " << ex.what());
-            return false;
-            }
-        }
-    }
     else
     {
         ROS_ERROR_STREAM("control_level must be either velocitiy or torque");
@@ -118,6 +100,7 @@ bool PandaMPCController::init(hardware_interface::RobotHW* robot_hardware, ros::
 
     q_init.resize(7);
     qd_init.resize(7);
+    initial_joint_pos_.resize(7);
 
     franka::RobotState robot_state = state_handle_->getRobotState();
     //Get robot current state
@@ -125,6 +108,21 @@ bool PandaMPCController::init(hardware_interface::RobotHW* robot_hardware, ros::
     {
         q_init(i) = robot_state.q[i];
         qd_init(i) = robot_state.dq[i];
+    }
+
+    if (control_level == "velocity")
+    {
+        for (size_t i = 0; i < 7; ++i)
+        {
+            initial_joint_pos_(i) = velocity_joint_handles_[i].getPosition();
+        }
+    }
+    else if (control_level == "position"){
+      for (size_t i = 0; i < 7; ++i)
+      {
+
+           initial_joint_pos_(i) = position_joint_handles_[i].getPosition();
+       }
     }
 
     qp.Init(node_handle, q_init, qd_init);
@@ -136,6 +134,7 @@ bool PandaMPCController::init(hardware_interface::RobotHW* robot_hardware, ros::
 void PandaMPCController::starting(const ros::Time&)
 {
     ROS_WARN_STREAM("Starting QP Controller on the real Panda");
+    elapsed_time_ = ros::Duration(0.);
 }
 
 
@@ -144,6 +143,9 @@ void PandaMPCController::update(const ros::Time&, const ros::Duration& period) {
     //--------------------------------------
     // ROBOT STATE
     //--------------------------------------
+
+
+
     // get state variables
     franka::RobotState robot_state = state_handle_->getRobotState();
 
@@ -159,31 +161,23 @@ void PandaMPCController::update(const ros::Time&, const ros::Duration& period) {
 
     Eigen::VectorXd joint_command_;
     joint_command_.resize(7);
-    // joint_command_ = qp.update(q_,qd_,period);
     Eigen::VectorXd gravity_comp;
     gravity_comp.resize(7);
     joint_command_ = qp.Update(q_,qd_,period);
-
 
     if (control_level == "velocity")
     {
         for (size_t i = 0; i < 7; ++i)
         {
-            velocity_joint_handles_[i].setCommand(joint_command_(i));
+           velocity_joint_handles_[i].setCommand(joint_command_(i));
         }
     }
     else if (control_level == "position"){
       for (size_t i = 0; i < 7; ++i)
       {
-          position_joint_handles_[i].setCommand(joint_command_(i));
-      }
-    }
-    else if (control_level == "torque")
-    {
-        for (size_t i = 0; i < 7; ++i)
-        {
-            joint_handles_[i].setCommand(joint_command_(i));
-        }
+           position_joint_handles_[i].setCommand(position_joint_handles_[i].getPosition() + 0.01*(joint_command_(i) -position_joint_handles_[i].getPosition()) );
+
+       }
     }
 
 }

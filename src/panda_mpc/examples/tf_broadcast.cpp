@@ -22,7 +22,7 @@ public:
 
 CameraWorldTf::CameraWorldTf(ros::NodeHandle& n): nh_(n){
 
-  tf_listener_ = nh_.subscribe("tf",10,&CameraWorldTf::tfCallBack,this);
+  tf_listener_ = nh_.subscribe("tf",1,&CameraWorldTf::tfCallBack,this);
 }
 
 void CameraWorldTf::tfCallBack(const tf2_msgs::TFMessage &tf_msgs){
@@ -31,13 +31,13 @@ void CameraWorldTf::tfCallBack(const tf2_msgs::TFMessage &tf_msgs){
   geometry_msgs::TransformStamped transformStamped;
   transformStamped.header.stamp = ros::Time::now();
   transformStamped.header.frame_id = "panda_link0";
-  transformStamped.child_frame_id = "camera_rgb_optical_frame";
+  transformStamped.child_frame_id = "camera_link";
   transformStamped.transform.translation.x = 0.4;
-  transformStamped.transform.translation.y = 1.;
-  transformStamped.transform.translation.z = 0.4;
+  transformStamped.transform.translation.y = -2.;
+  transformStamped.transform.translation.z = 1.05;
 
   tf2::Quaternion q;
-  q.setRPY(-1.8,0 , -2.61);
+  q.setRPY(0, M_PI/20 + M_PI/40 , M_PI/2 - M_PI/30);
   transformStamped.transform.rotation.x = q.x();
   transformStamped.transform.rotation.y = q.y();
   transformStamped.transform.rotation.z = q.z();

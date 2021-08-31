@@ -1,0 +1,47 @@
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  9%] Built target panda_mpc_gencfg
+[  9%] Built target sensor_msgs_generate_messages_eus
+[35m[1mScanning dependencies of target panda_mpc[0m
+[  9%] Built target _panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint
+[  9%] Built target std_msgs_generate_messages_eus
+[  9%] Built target _panda_mpc_generate_messages_check_deps_trajectoryAcceleration
+[  9%] Built target geometry_msgs_generate_messages_py
+[  9%] Built target _panda_mpc_generate_messages_check_deps_UI
+[  9%] Built target _panda_mpc_generate_messages_check_deps_PandaRunMsg
+[  9%] Built target _panda_mpc_generate_messages_check_deps_trajectoryMsg
+[  9%] Built target sensor_msgs_generate_messages_py
+[  9%] Built target std_msgs_generate_messages_py
+[  9%] Built target sensor_msgs_generate_messages_lisp
+[  9%] Built target std_msgs_generate_messages_lisp
+[  9%] Built target geometry_msgs_generate_messages_lisp
+[  9%] Built target std_msgs_generate_messages_nodejs
+[  9%] Built target sensor_msgs_generate_messages_nodejs
+[ 20%] Built target panda_mpc_generate_messages_eus
+[ 20%] Built target geometry_msgs_generate_messages_cpp
+[ 20%] Built target sensor_msgs_generate_messages_cpp
+[ 20%] Built target std_msgs_generate_messages_cpp
+[ 20%] Built target geometry_msgs_generate_messages_nodejs
+[ 33%] Built target panda_mpc_generate_messages_py
+[ 42%] Built target panda_mpc_generate_messages_lisp
+[ 51%] Built target panda_mpc_generate_messages_cpp
+[ 61%] Built target panda_mpc_generate_messages_nodejs
+[ 61%] Built target panda_mpc_generate_messages
+[ 62%] [32mBuilding CXX object CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o[0m
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:347:0[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp:9[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:1[m[K:
+/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h: In instantiation of '[01m[KEigen::DenseCoeffsBase<Derived, 1>::Scalar& Eigen::DenseCoeffsBase<Derived, 1>::operator[](Eigen::Index) [with Derived = Eigen::Matrix<double, -1, -1>; Eigen::DenseCoeffsBase<Derived, 1>::Scalar = double; Eigen::Index = long int][m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:161:52:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:406:7:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: THE_BRACKET_OPERATOR_IS_ONLY_FOR_VECTORS__USE_THE_PARENTHESIS_OPERATOR_INSTEAD
+       [01;31m[KE[m[KIGEN_STATIC_ASSERT(Derived::IsVectorAtCompileTime,
+       [01;31m[K^[m[K
+CMakeFiles/panda_mpc.dir/build.make:230: recipe for target 'CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o' failed
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+CMakeFiles/Makefile2:67: recipe for target 'CMakeFiles/panda_mpc.dir/all' failed
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+Makefile:140: recipe for target 'all' failed
+make: *** [all] Error 2

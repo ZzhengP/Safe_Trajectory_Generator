@@ -35,7 +35,6 @@ class PandaMPCController : public controller_interface::MultiInterfaceController
                                                 franka_hw::FrankaModelInterface,
                                                 hardware_interface::PositionJointInterface,
                                                 hardware_interface::VelocityJointInterface,
-                                                hardware_interface::EffortJointInterface,
                                                 franka_hw::FrankaStateInterface> {
 
 public:
@@ -59,6 +58,7 @@ private:
 
     Controller::Controller qp;
 
+
     std::unique_ptr<franka_hw::FrankaStateHandle> state_handle_;
     std::unique_ptr<franka_hw::FrankaModelHandle> model_handle_;
 
@@ -68,6 +68,10 @@ private:
     std::vector<hardware_interface::JointHandle> position_joint_handles_;
     std::vector<hardware_interface::JointHandle> joint_handles_;
     std::string control_level;
+
+    Eigen::VectorXd initial_joint_pos_;
+
+    ros::Duration elapsed_time_ ;
 };
 
 

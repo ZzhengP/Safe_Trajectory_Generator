@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <launch>
     <arg name="robot_ip" default="172.16.0.2" />
-    <arg name="load_gripper" default="false" />
+    <arg name="load_gripper" default="true" />
     <arg name="sim" default="true" />
     <param name="sim" value="$(arg sim)" />
     <arg name="gazebo_plugin" default="panda_mpc" /> <!-- set to gazebo_ros_control if robot cannot load in rviz -->
@@ -20,7 +20,8 @@
         <include file="$(find franka_control)/launch/franka_control.launch">
             <arg name="robot_ip" value ="$(arg robot_ip)"/>
             <arg name="load_gripper" value="$(arg load_gripper)" />
-        </include>        <!--node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="joint_velocity_example_controller" /-->
+        </include>
+        <!--node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="joint_velocity_example_controller" /-->
         <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen" args="panda_mpc" />
 
     </group>

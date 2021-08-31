@@ -459,6 +459,8 @@ Eigen/Core
 -
 ros/node_handle.h
 -
+visualization_msgs/MarkerArray.h
+-
 optFormulation/constraint.hpp
 -
 optFormulation/task.hpp

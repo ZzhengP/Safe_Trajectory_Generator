@@ -8,6 +8,7 @@
 #include <qpOASES.hpp>
 #include <Eigen/Core>
 #include <ros/node_handle.h>
+#include <visualization_msgs/MarkerArray.h>
 
 #include <optFormulation/constraint.hpp>
 #include <optFormulation/task.hpp>
@@ -42,6 +43,7 @@ public:
     node_handle.getParam("/panda_mpc/root_link_", root_link_);
     node_handle.getParam("/panda_mpc/tip_link_", tip_link_);
 
+    human_vertices_subscriber_ = node_handle.subscribe("/clusters_centroid",1,&trajGen::humanVerticesCallback,this);
 
     // Model
     robot_mpc_model_.reset(new robot::RobotMPcModel(node_handle, root_link_, tip_link_,
@@ -72,18 +74,23 @@ public:
 
     q_min_ = robot_mpc_model_->getJntll().data;
     q_max_ = robot_mpc_model_->getJntul().data;
-    qd_min_.setConstant(-1.5);
-    qd_max_.setConstant(1.5);
+    int reduce_vel = 0.4;
+    qd_min_.setConstant(-0.7);
+    qd_max_.setConstant(0.7);
     node_handle.getParam("/panda_mpc/qd_min_", qd_min_ros_);
     node_handle.getParam("/panda_mpc/qd_max_", qd_max_ros_);
+    ros::param::get("/panda_mpc/robot_member_", robot_member_);
+    ros::param::get("/panda_mpc/robot_vertices_", robot_vertices_);
+    ros::param::get("/panda_mpc/obstacle_member_", obstacle_member_);
+    ros::param::get("/panda_mpc/obstacle_vertices_", obstacle_vertices_);
 
     q_min_mpc_.resize(dof_*N_);
     q_max_mpc_.resize(dof_*N_);
     qd_min_mpc_.resize(dof_*N_);
     qd_max_mpc_.resize(dof_*N_);
 
-    d_limit_ = 0.1 ;
-    d_full_ = 1;
+    d_limit_ = 0.2 ;
+    d_full_ = 1.5;
     for (size_t i(0); i<N_; i++){
       q_min_mpc_.segment(i*dof_,dof_) = q_min_;
       q_max_mpc_.segment(i*dof_,dof_) = q_max_;
@@ -92,12 +99,26 @@ public:
     }
 
     // Passive safety constraint
-      qd_min_mpc_.tail(dof_).setConstant(-0.1);
-      qd_max_mpc_.tail(dof_).setConstant(0.1);
+      qd_min_mpc_.tail(dof_).setConstant(-0.05);
+      qd_max_mpc_.tail(dof_).setConstant(0.05);
 
     // Build local MPC trajectory
 
    cubic_spline_.reset(new cubicSpline::cubicSpline(N_,dt_));
+
+
+   // ****** Human vertices ---------
+   humanVertices_.resize(3, 1);
+   humanVerticesAugmented_.resize(1);
+   for (std::size_t(j); j < 1; j++){
+     humanVerticesAugmented_[j].resize(3,1*N_);
+     for (int i(0); i<N_; i++){
+          humanVerticesAugmented_[j].block(0,i*1,3,1) << 2, 0, 0;
+     }
+
+   }
+
+   human_vertices_subscriber_ = node_handle.subscribe("/clusters_centroid",1,&trajGen::humanVerticesCallback,this);
 
   }
 
@@ -116,6 +137,28 @@ public:
   void computeSoftMPC(const Eigen::MatrixXd &H, const Eigen::MatrixXd &A,
                       Eigen::VectorXd g,
                       Eigen::VectorXd lbA, Eigen::VectorXd ubA);
+
+
+  void humanVerticesCallback(visualization_msgs::MarkerArray::Ptr human_position){
+
+    if(human_position->markers.size() == 0){
+      ROS_WARN_STREAM("There is no person in robot's workspace, robot can go safely");
+      for (int i(0); i<N_; i++){
+            obsVerticesAugmented_[0].block(0,i*obstacle_vertices_,3,obstacle_vertices_) << 2.5, -0.1, 0.14;
+        }
+    }else {
+
+//      humanVertices_.block(0,0,3,1) << human_position->markers[0].pose.position.x,
+//                                       human_position->markers[0].pose.position.y,
+//                                       human_position->markers[0].pose.position.z;
+      obsVertices_ << human_position->markers[0].pose.position.x ,
+                      human_position->markers[0].pose.position.y,
+                      human_position->markers[0].pose.position.z ;
+      for (int i(0); i<N_; i++){
+            obsVerticesAugmented_[0].block(0,i*obstacle_vertices_,3,obstacle_vertices_) << obsVertices_(0,0), obsVertices_(1,0), obsVertices_(2,0);
+        }
+    }
+  }
 
   std::shared_ptr<robot::RobotModel> getRobotModel() {
     return robot_mpc_model_;
@@ -237,6 +280,11 @@ private:
 
   bool publishPath();
 
+  // --------------------------- Human position from perception node ---------------------
+  Eigen::MatrixXd humanVertices_; // First, consider only 1 vertice
+  std::vector<Eigen::MatrixXd> humanVerticesAugmented_;
+
+  ros::Subscriber human_vertices_subscriber_;
   // --------------------------------- MPC trajectory smoothing -------------------------
 
   std::unique_ptr<cubicSpline::cubicSpline> cubic_spline_;

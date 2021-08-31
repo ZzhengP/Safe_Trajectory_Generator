@@ -15,6 +15,7 @@ class trajectoryAcceleration(genpy.Message):
   _full_text = """Header header
 float32[] jntAcc
 
+
 ================================================================================
 MSG: std_msgs/Header
 # Standard metadata for higher-level stamped data types.

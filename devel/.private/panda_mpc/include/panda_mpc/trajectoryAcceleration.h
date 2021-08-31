@@ -156,6 +156,7 @@ struct Definition< ::panda_mpc::trajectoryAcceleration_<ContainerAllocator> >
     return "Header header\n"
 "float32[] jntAcc\n"
 "\n"
+"\n"
 "================================================================================\n"
 "MSG: std_msgs/Header\n"
 "# Standard metadata for higher-level stamped data types.\n"

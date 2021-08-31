@@ -81,6 +81,7 @@ class trajectoryAcceleration {
     Header header
     float32[] jntAcc
     
+    
     ================================================================================
     MSG: std_msgs/Header
     # Standard metadata for higher-level stamped data types.

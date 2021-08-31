@@ -1,0 +1,11 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:[m[K In member function '[01m[Kbool TrajectSenderNode::UpdateMPCTraj()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:277:44:[m[K [01;31m[Kerror: [m[K'[01m[Kj[m[K' was not declared in this scope
+         next_acceleration.jntPosCurrent.at([01;31m[Kj[m[K) = state_(i);
+                                            [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/trajectory_send.cpp:277:44:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Kjn[m[K'
+         next_acceleration.jntPosCurrent.at([01;36m[Kj[m[K) = state_(i);
+                                            [01;36m[K^[m[K
+                                            [32m[Kjn[m[K
+make[2]: *** [examples/CMakeFiles/trajectory_send.dir/trajectory_send.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/trajectory_send.dir/all] Error 2
+make: *** [all] Error 2

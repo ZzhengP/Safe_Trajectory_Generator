@@ -175,6 +175,7 @@ private:
   Eigen::VectorXd d_gains_; /*!< @brief Integral gains of the PID controller */
   Eigen::VectorXd p_gains_qd_; /*!< @brief Proportional gains of the regularisation controller */
   Eigen::VectorXd joint_velocity_out_; /*!< @brief Results of the QP optimization */
+  Eigen::VectorXd joint_velocity_out_precedent_ ;
 
   Eigen::Matrix<double,6,1> xd_des_; /*!< @brief Desired robot twist of the robot tip_link */
   Eigen::Matrix<double,6,1> x_curr_; /*!< @brief Current robot pose of the robot tip_link */

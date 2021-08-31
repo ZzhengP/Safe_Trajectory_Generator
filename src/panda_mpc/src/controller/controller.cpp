@@ -38,6 +38,7 @@ bool Controller::Init(ros::NodeHandle& node_handle,const Eigen::VectorXd& q_init
     lbA_.resize(number_of_constraints_);
     ubA_.resize(number_of_constraints_);
     joint_velocity_out_.resize(dof);
+    joint_velocity_out_precedent_.resize(dof);
     //--------------------------------------
     // QPOASES
     //--------------------------------------
@@ -70,14 +71,7 @@ bool Controller::Init(ros::NodeHandle& node_handle,const Eigen::VectorXd& q_init
     trajectory.Build(X_curr_, true);
     traj_properties_.play_traj_ = true;
 
-    next_tf_.M = X_curr_.M;
-    next_tf_.p[0] = 0.4;
-    next_tf_.p[1] = 0.4;
-    next_tf_.p[2] = 0.25;
-    next_point_.x = 0.4;
-    next_point_.y = 0.4;
-    next_point_.z = 0.25;
-    preview_point_ = next_point_;
+
     x_err.setConstant(1);
     init_pos_attend_ = false;
     sub_goal_attend_ = false;
@@ -116,7 +110,7 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
 {
 
     double  time_dt = period.toSec();
-
+    time_dt = 0.05;
     //Get robot current state
     q_in.q.data = q;
     q_in.qdot.data = qd;
@@ -132,23 +126,19 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
 
     // ------------------------------------------------------------------------------
     traj_index_++;
-    if (traj_index_ >50)
-      traj_index_ = 50;
 
-//    for(int i(0); i<dof; i++){
-//      q_mpc_.qdotdot.data[i] =  joints_coefficient_matrix_[i](0,0) +  joints_coefficient_matrix_[i](0,1) * (traj_index_*time_dt)
-//                              + joints_coefficient_matrix_[i](0,2)*pow(traj_index_ * time_dt,2) + joints_coefficient_matrix_[i](0,3)*pow(traj_index_ * time_dt,3);
-//    }
 
-    q_mpc_.qdot.data = q_.qdot.data + q_mpc_.qdotdot.data * traj_index_ * time_dt;
-    q_mpc_.q.data = q_.q.data + q_.qdot.data  * traj_index_ * time_dt + 0.5*q_mpc_.qdotdot.data*pow(traj_index_ * time_dt,2);
+//    q_mpc_.qdot.data = q_.qdot.data + q_mpc_.qdotdot.data * traj_index_ * time_dt;
+//    q_mpc_.q.data = q_.q.data + q_.qdot.data  * traj_index_ * time_dt + 0.5*q_mpc_.qdotdot.data*pow(traj_index_ * time_dt,2);
 
+      q_mpc_.qdot.data = q_.qdot.data + q_mpc_.qdotdot.data  * time_dt;
+      q_mpc_.q.data = q_.q.data + q_.qdot.data * time_dt + 0.5*q_mpc_.qdotdot.data*pow( time_dt,2);
 
 //    Proportionnal controller
 
 
      jnt_err =  q_mpc_.q.data - q_in.q.data ;
-     jnt_des_ = 5*jnt_err + q_mpc_.qdot.data;
+     jnt_des_ = jnt_err + q_mpc_.qdot.data;
 
     // Formulate QP problem such that
     // joint_velocity_out_ = argmin 1/2 qd^T H_ qd + qd^T g_
@@ -158,11 +148,11 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
     J = robot_model_->getJacobian().data;
     M = robot_model_->getJntInertial().data;
 
-    H_ =  2.0 * regularisation_weight_ * Eigen::MatrixXd::Identity(7,7);
-    g_ = -2.0 * regularisation_weight_ * p_gains_qd_.cwiseProduct((q_mean_ - q));
+ //   H_ =  2.0 * regularisation_weight_ * Eigen::MatrixXd::Identity(7,7);
+ //   g_ = -2.0 * regularisation_weight_ * p_gains_qd_.cwiseProduct((q_mean_ - q));
 
-//    H_ +=  2.0 *  J.transpose() * J;
-//    g_ += -2.0 *  J.transpose() * xd_des_;
+    H_ =  0.1 * regularisation_weight_ * Eigen::MatrixXd::Identity(7,7);
+    g_ = -0.1 * regularisation_weight_ * joint_velocity_out_precedent_;
 
     H_ += Eigen::MatrixXd::Identity(7,7);
     g_ += - jnt_des_;
@@ -208,6 +198,7 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
     else
         ROS_WARN_STREAM("QPOases failed! Sending zero velocity");
 
+    joint_velocity_out_precedent_ = joint_velocity_out_;
 
     return joint_velocity_out_;
 }
@@ -267,13 +258,10 @@ bool Controller::InitMPCTraj(ros::NodeHandle &node_handle, const Eigen::VectorXd
   ROS_WARN_STREAM("q_goal A : " << q_goal_A_.data);
   ROS_WARN_STREAM("q_goal B : " << q_goal_B_.data);
 
-  if(!trajectory_generation->init(node_handle,next_tf_)){
-    ROS_ERROR_STREAM("Unable to initialize properly parameters: exit");
-    return false;
-  }
-
 
   jnt_err.resize(dof);
+
+  delete trajectory_generation.get();
   return true;
 }
 
@@ -371,37 +359,24 @@ bool Controller::load_robot(ros::NodeHandle& node_handle, const Eigen::VectorXd&
 void Controller::updateTrajectoryPoint(const panda_mpc::trajectoryAcceleration::ConstPtr& traj_acc)
 {
 
-  ROS_WARN_STREAM("receive computed MPC solution");
+//  ROS_WARN_STREAM("receive computed MPC solution");
 
 //  joints_array[0].qdotdot.data = joints_array[1].qdotdot.data ;
  if(traj_acc != nullptr){
-//  for (int i(0); i<N_ ; i++){
-//    for (int j(0); j<dof; j++){
-//      joints_array[i+1].qdotdot.data[j] = traj_acc->jntAcc.at(i*N_ + j);
-//    }
-//  }
-
-//  for (int j(0); j < dof;j++){
-
-//    cubic_spline_->JntSpaceCubicInterpolation(joints_array, j);
-//    joints_coefficient_matrix_[j] = cubic_spline_->getCoefficientMatrix();
-//  }
 
 
-    for (int i(0); i<dof ; i++)
+
+    for (int i(0); i<dof ; i++){
       q_mpc_.qdotdot.data[i] = traj_acc->jntAcc.at(i);
+      q_.q.data[i] = traj_acc->jntAcc.at(i+dof);
+      q_.qdot.data[i] = traj_acc->jntAcc.at(i+2*dof);
 
+    }
      traj_index_ = 0;
-     q_ = q_in;
+//     q_ = q_in;
 
   }
-//  auto error = KDL::diff(next_tf_.p, X_curr_.p);
-//  if(error.Norm() > 0.005){
-//    trajectory.Load(next_tf_, 0.2);
-//    trajectory.Build(X_curr_, true);
-//  }
-//  publishTrajectory();
-  std::cout << "Received next point computing traj and publishing" << std::endl;
+
 
 }
 
