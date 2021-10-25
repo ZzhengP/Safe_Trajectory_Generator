@@ -1,0 +1,8 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/motion_generator.cpp:3:10:[m[K [01;31m[Kfatal error: [m[Kmotion_generator.h: No such file or directory
+ #include [01;31m[K"motion_generator.h"[m[K
+          [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/motion_generator.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

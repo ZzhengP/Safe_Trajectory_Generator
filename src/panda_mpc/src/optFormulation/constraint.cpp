@@ -167,13 +167,13 @@ bool MPCConstraint::computeUpperBoundAndConstraint(const Eigen::VectorXd &state,
                                                    const Eigen::VectorXd &qHorizonPrecedent,
                                                    int index){
 
-   double dsafe=0.;
+   double dsafe=0.1;
 
-   if (index == 2){
-     dsafe = 0.05;
-   }else {
-      dsafe = 0.2;
-    }
+//   if (index == 2){
+//     dsafe = 0.2;
+//   }else {
+//      dsafe = 0.2;
+//    }
 
     // Resize the size of constraint according to the number of different m obstacle plane
     int m = plane.size();

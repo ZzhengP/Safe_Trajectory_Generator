@@ -36,14 +36,14 @@ public:
     q_init_ = q_init;
     qd_init_.resize(dof_);
     qd_init_ = qd_init;
-    dt_ = 0.04;
+    dt_ = 0.05;
 
     node_handle.getParam("/panda_mpc/N_", N_);
     node_handle.getParam("/panda_mpc/dt_", dt_);
     node_handle.getParam("/panda_mpc/root_link_", root_link_);
     node_handle.getParam("/panda_mpc/tip_link_", tip_link_);
 
-    human_vertices_subscriber_ = node_handle.subscribe("/clusters_centroid",1,&trajGen::humanVerticesCallback,this);
+    human_vertices_subscriber_ = node_handle.subscribe("/hand_centroid_marker",1,&trajGen::humanVerticesCallback,this);
 
     // Model
     robot_mpc_model_.reset(new robot::RobotMPcModel(node_handle, root_link_, tip_link_,
@@ -99,8 +99,8 @@ public:
     }
 
     // Passive safety constraint
-      qd_min_mpc_.tail(dof_).setConstant(-0.05);
-      qd_max_mpc_.tail(dof_).setConstant(0.05);
+//      qd_min_mpc_.tail(dof_).setConstant(-0.05);
+//      qd_max_mpc_.tail(dof_).setConstant(0.05);
 
     // Build local MPC trajectory
 
@@ -118,7 +118,7 @@ public:
 
    }
 
-   human_vertices_subscriber_ = node_handle.subscribe("/clusters_centroid",1,&trajGen::humanVerticesCallback,this);
+//   human_vertices_subscriber_ = node_handle.subscribe("/clusters_centroid",1,&trajGen::humanVerticesCallback,this);
 
   }
 
@@ -139,21 +139,22 @@ public:
                       Eigen::VectorXd lbA, Eigen::VectorXd ubA);
 
 
-  void humanVerticesCallback(visualization_msgs::MarkerArray::Ptr human_position){
+  void humanVerticesCallback(visualization_msgs::Marker::Ptr human_position){
+    ROS_WARN_STREAM("humanVerticesCallback");
 
-    if(human_position->markers.size() == 0){
+    if(human_position == nullptr){
       ROS_WARN_STREAM("There is no person in robot's workspace, robot can go safely");
       for (int i(0); i<N_; i++){
-            obsVerticesAugmented_[0].block(0,i*obstacle_vertices_,3,obstacle_vertices_) << 2.5, -0.1, 0.14;
+            obsVerticesAugmented_[0].block(0,i*obstacle_vertices_,3,obstacle_vertices_) << 1.5, -0.1, 0.14;
         }
     }else {
 
 //      humanVertices_.block(0,0,3,1) << human_position->markers[0].pose.position.x,
 //                                       human_position->markers[0].pose.position.y,
 //                                       human_position->markers[0].pose.position.z;
-      obsVertices_ << human_position->markers[0].pose.position.x ,
-                      human_position->markers[0].pose.position.y,
-                      human_position->markers[0].pose.position.z ;
+      obsVertices_ << human_position->pose.position.x ,
+                      human_position->pose.position.y,
+                      human_position->pose.position.z ;
       for (int i(0); i<N_; i++){
             obsVerticesAugmented_[0].block(0,i*obstacle_vertices_,3,obstacle_vertices_) << obsVertices_(0,0), obsVertices_(1,0), obsVertices_(2,0);
         }

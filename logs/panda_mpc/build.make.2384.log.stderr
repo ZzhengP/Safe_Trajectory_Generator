@@ -1,0 +1,27 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:[m[K In member function '[01m[KEigen::VectorXd Controller::Controller::Update(const VectorXd&, const VectorXd&, const ros::Duration&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:215:29:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ bool Controller::InitMPCTraj[01;31m[K([m[Kros::NodeHandle &node_handle, const Eigen::VectorXd &q_init, const Eigen::VectorXd &qd_init)
+                             [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:277:35:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ void Controller::publishTrajectory[01;31m[K([m[K)
+                                   [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:309:33:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ void Controller::init_publishers[01;31m[K([m[Kros::NodeHandle& node_handle){
+                                 [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:318:33:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ void Controller::load_parameters[01;31m[K([m[K){
+                                 [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:341:28:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ bool Controller::load_robot[01;31m[K([m[Kros::NodeHandle& node_handle, const Eigen::VectorXd& q_init, const Eigen::VectorXd qd_init)
+                            [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:365:39:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+ void Controller::updateTrajectoryPoint[01;31m[K([m[Kconst panda_mpc::trajectoryAcceleration::ConstPtr& traj_acc)
+                                       [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:[m[K At global scope:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:391:1:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K}[m[K' at end of input
+ [01;31m[K}[m[K
+ [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

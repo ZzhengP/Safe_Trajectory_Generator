@@ -48,7 +48,7 @@ panda_mpc:
     regularisation_weight_ : 1.0e-5
     N_ : 4
     dt_ : 0.05
-    dsafe_ : 0.1
+    dsafe_ : 0.2
     robot_member_ : 1
     robot_vertices_ : 1
     obstacle_member_: 1

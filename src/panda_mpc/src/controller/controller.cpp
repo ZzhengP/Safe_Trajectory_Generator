@@ -86,7 +86,6 @@ bool Controller::Init(ros::NodeHandle& node_handle,const Eigen::VectorXd& q_init
 
     // -------------------------------------------------------------------------
 
-    cubic_spline_.reset(new cubicSpline::cubicSpline(N_,dt_));
 
     joints_coefficient_matrix_.resize(dof);
 
@@ -110,7 +109,7 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
 {
 
     double  time_dt = period.toSec();
-    time_dt = 0.05;
+    //time_dt = 0.05;
     //Get robot current state
     q_in.q.data = q;
     q_in.qdot.data = qd;
@@ -126,20 +125,22 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
 
     // ------------------------------------------------------------------------------
     traj_index_++;
+    if(traj_index_ > 50){
+      traj_index_ = 50;
+    }
 
 
-//    q_mpc_.qdot.data = q_.qdot.data + q_mpc_.qdotdot.data * traj_index_ * time_dt;
-//    q_mpc_.q.data = q_.q.data + q_.qdot.data  * traj_index_ * time_dt + 0.5*q_mpc_.qdotdot.data*pow(traj_index_ * time_dt,2);
-
-      q_mpc_.qdot.data = q_.qdot.data + q_mpc_.qdotdot.data  * time_dt;
-      q_mpc_.q.data = q_.q.data + q_.qdot.data * time_dt + 0.5*q_mpc_.qdotdot.data*pow( time_dt,2);
+      q_mpc_.qdot.data = q_.qdot.data + q_mpc_.qdotdot.data  * 0.05;
+      q_mpc_.q.data = q_.q.data + q_.qdot.data * time_dt + 0.5*q_mpc_.qdotdot.data*pow(0.05,2);
 
 //    Proportionnal controller
 
+     q_mpc_.q.data[6] = 0;
+     q_mpc_.qdot.data[6] = 0;
 
      jnt_err =  q_mpc_.q.data - q_in.q.data ;
      jnt_des_ = jnt_err + q_mpc_.qdot.data;
-
+//     jnt_des_ = jnt_err;
     // Formulate QP problem such that
     // joint_velocity_out_ = argmin 1/2 qd^T H_ qd + qd^T g_
     //                         s.t     lbA_ < A_ qd << ubA_
@@ -148,11 +149,15 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
     J = robot_model_->getJacobian().data;
     M = robot_model_->getJntInertial().data;
 
- //   H_ =  2.0 * regularisation_weight_ * Eigen::MatrixXd::Identity(7,7);
- //   g_ = -2.0 * regularisation_weight_ * p_gains_qd_.cwiseProduct((q_mean_ - q));
+    H_ =  2.0 * regularisation_weight_ * Eigen::MatrixXd::Identity(7,7);
+    g_ = -2.0 * regularisation_weight_ * p_gains_qd_.cwiseProduct((q_mean_ - q));
 
-    H_ =  0.1 * regularisation_weight_ * Eigen::MatrixXd::Identity(7,7);
-    g_ = -0.1 * regularisation_weight_ * joint_velocity_out_precedent_;
+//    H_ +=   1* regularisation_weight_ * Eigen::MatrixXd::Identity(7,7);
+//    g_ += - 1 * regularisation_weight_ * joint_velocity_out_precedent_;
+
+//    H_ +=   10* regularisation_weight_ * Eigen::MatrixXd::Identity(7,7)*time_dt;
+//    g_ += - 10 * regularisation_weight_ * q_in.q.data;
+
 
     H_ += Eigen::MatrixXd::Identity(7,7);
     g_ += - jnt_des_;
@@ -373,7 +378,7 @@ void Controller::updateTrajectoryPoint(const panda_mpc::trajectoryAcceleration::
 
     }
      traj_index_ = 0;
-//     q_ = q_in;
+   //  q_ = q_in;
 
   }
 

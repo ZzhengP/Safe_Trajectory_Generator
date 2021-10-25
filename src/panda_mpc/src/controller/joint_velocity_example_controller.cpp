@@ -9,7 +9,7 @@
 #include <hardware_interface/joint_command_interface.h>
 #include <pluginlib/class_list_macros.h>
 #include <ros/ros.h>
-
+#include "planning/motion_generator.h"
 namespace panda_mpc {
 
 bool JointVelocityExampleController::init(hardware_interface::RobotHW* robot_hardware,
@@ -73,7 +73,7 @@ void JointVelocityExampleController::starting(const ros::Time& /* time */) {
 }
 
 void JointVelocityExampleController::update(const ros::Time& /* time */,
-                                            const ros::Duration& period) {
+                                             const ros::Duration& period) {
   elapsed_time_ += period;
 
   ros::Duration time_max(8.0);

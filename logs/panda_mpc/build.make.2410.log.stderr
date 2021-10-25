@@ -1,0 +1,70 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K In member function '[01m[KEigen::VectorXd planning::trajGen::update(Eigen::VectorXd, const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&, Eigen::MatrixXd)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:253:22:[m[K [01;31m[Kerror: [m[K'[01m[Kis_soft_solved[m[K' was not declared in this scope
+     if(!is_solved && [01;31m[Kis_soft_solved[m[K)
+                      [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:253:22:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Kis_solved[m[K'
+     if(!is_solved && [01;36m[Kis_soft_solved[m[K)
+                      [01;36m[K^~~~~~~~~~~~~~[m[K
+                      [32m[Kis_solved[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:256:9:[m[K [01;31m[Kerror: [m[K'[01m[Kis_soft_solved[m[K' was not declared in this scope
+     if ([01;31m[Kis_soft_solved[m[K){
+         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:256:9:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Kis_solved[m[K'
+     if ([01;36m[Kis_soft_solved[m[K){
+         [01;36m[K^~~~~~~~~~~~~~[m[K
+         [32m[Kis_solved[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K At global scope:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:269:8:[m[K [01;31m[Kerror: [m[K'[01m[KtrajGen[m[K' has not been declared
+   bool [01;31m[KtrajGen[m[K::publishABCDPlane(double A, double B, double C, double D,
+        [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K In function '[01m[Kbool publishABCDPlane(double, double, double, double, double, double)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:320:6:[m[K [01;31m[Kerror: [m[K'[01m[Kplane_shape_pub_[m[K' was not declared in this scope
+      [01;31m[Kplane_shape_pub_[m[K.publish(marker);
+      [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:352:5:[m[K [01;31m[Kerror: [m[K'[01m[Kplane_table_pub_[m[K' was not declared in this scope
+     [01;31m[Kplane_table_pub_[m[K.publish(table);
+     [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K At global scope:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:359:8:[m[K [01;31m[Kerror: [m[K'[01m[KtrajGen[m[K' has not been declared
+   bool [01;31m[KtrajGen[m[K::publishObstacle(Eigen::Vector3d obstacle_center){
+        [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K In function '[01m[Kbool publishObstacle(Eigen::Vector3d)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:381:5:[m[K [01;31m[Kerror: [m[K'[01m[Kobstacle_shape_pub_[m[K' was not declared in this scope
+     [01;31m[Kobstacle_shape_pub_[m[K.publish(marker);
+     [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:381:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Kobstacle_center[m[K'
+     [01;36m[Kobstacle_shape_pub_[m[K.publish(marker);
+     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+     [32m[Kobstacle_center[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K At global scope:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:386:8:[m[K [01;31m[Kerror: [m[K'[01m[KtrajGen[m[K' has not been declared
+   bool [01;31m[KtrajGen[m[K::publishPath(){
+        [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K In function '[01m[Kbool publishPath()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:391:7:[m[K [01;31m[Kerror: [m[K'[01m[Kmpc_param_[m[K' was not declared in this scope
+       [01;31m[Kmpc_param_[m[K = robot_mpc_model_->getMPCParams();
+       [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:391:20:[m[K [01;31m[Kerror: [m[K'[01m[Krobot_mpc_model_[m[K' was not declared in this scope
+       mpc_param_ = [01;31m[Krobot_mpc_model_[m[K->getMPCParams();
+                    [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:394:26:[m[K [01;31m[Kerror: [m[K'[01m[KN_[m[K' was not declared in this scope
+       x_horizon.resize(3*[01;31m[KN_[m[K);
+                          [01;31m[K^~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:410:7:[m[K [01;31m[Kerror: [m[K'[01m[Kpath_pub_[m[K' was not declared in this scope
+       [01;31m[Kpath_pub_[m[K.publish(path);
+       [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K At global scope:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:415:8:[m[K [01;31m[Kerror: [m[K'[01m[KtrajGen[m[K' has not been declared
+   void [01;31m[KtrajGen[m[K::computeSoftMPC(const Eigen::MatrixXd& H, const Eigen::MatrixXd & A, Eigen::VectorXd g,
+        [01;31m[K^~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K In function '[01m[Kvoid computeSoftMPC(const MatrixXd&, const MatrixXd&, Eigen::VectorXd, Eigen::VectorXd, Eigen::VectorXd)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:423:5:[m[K [01;31m[Kerror: [m[K'[01m[Kqpoases_soft_solver_[m[K' was not declared in this scope
+     [01;31m[Kqpoases_soft_solver_[m[K.soft_H_.setZero();
+     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K At global scope:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:492:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before '[01m[K}[m[K' token
+ [01;31m[K}[m[K
+ [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

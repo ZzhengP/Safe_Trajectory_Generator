@@ -113,6 +113,7 @@ add_library(panda_mpc
             src/planning/plane_solver_old.cpp
             src/planning/qpstructure.cpp
             src/planning/cubic_spline.cpp
+            src/planning/motion_generator.cpp
             src/controller/controller.cpp
             src/controller/joint_velocity_example_controller.cpp)
 

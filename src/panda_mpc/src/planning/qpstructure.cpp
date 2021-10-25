@@ -214,6 +214,18 @@ bool qpSolver::solveSoftMPC(){
 
   if(ret_ == qpOASES::SUCCESSFUL_RETURN){
     qp_soft_solver_mpc_->getPrimalSolution(soft_optimal_solution_.data());
+    ROS_WARN_STREAM("QPOasese soft MPC sucess");
+
+    std::cout <<"qpProblem status is : " << qp_soft_solver_mpc_->getStatus()<<'\n';
+    std::cout <<"qpProblem obj is : " << qp_soft_solver_mpc_->getObjVal()<<'\n';
+    std::cout << "qpProblem hessiantype: " << qp_soft_solver_mpc_->getHessianType()<<'\n';
+    std::cout <<"qpProblem cst number is : " << qp_soft_solver_mpc_->getNC()<<'\n';
+    std::cout <<"qpProblem variable number is : " << qp_soft_solver_mpc_->getNV()<<'\n';
+    std::cout <<"qpProblem is initialized ? " << qp_soft_solver_mpc_->isInitialised()<<'\n';
+    std::cout <<"qpProblem is solved ? " << qp_soft_solver_mpc_->isSolved()<<'\n';
+    std::cout <<"qpProblem is infeasible ? " << qp_soft_solver_mpc_->isInfeasible()<<'\n';
+    std::cout <<"qpProblem is Unbounded ? " << qp_soft_solver_mpc_->isUnbounded()<<'\n';
+    std::cout <<" print level : " << qp_soft_solver_mpc_->getPrintLevel() << std::endl;
     return true;
   }else{
     std::cout << " print ret " << ": " << qpOASES::returnValue(ret_)<<'\n';

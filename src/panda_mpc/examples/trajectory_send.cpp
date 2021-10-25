@@ -87,6 +87,7 @@ public:
 
     q_des_mpc_.resize(N_*dof);
     qd_des_mpc_.resize(N_*dof);
+    qd_des_mpc_.setZero();
     qdd_des_mpc_.resize(N_*dof);
     solution_.resize(N_*dof);
     solution_.setZero();
@@ -107,7 +108,7 @@ public:
 
     q_des_.data = goal_B_;
 
-
+    // Comment this line if using real robot
 //    jointState_subscriber = node_handle.subscribe("/panda_mpc/joint_states",1,&TrajectSenderNode::jointStateCallBack,this);
     jointState_subscriber = node_handle.subscribe("/franka_state_controller/joint_states",1,&TrajectSenderNode::jointStateCallBack,this);
     tip_pos_pub = node_handle.advertise<visualization_msgs::Marker>("/tip_position",1);
@@ -117,6 +118,10 @@ public:
   void jointStateCallBack(const sensor_msgs::JointStatePtr& joint_state );
 
   bool UpdateMPCTraj();
+
+  bool getWaitParam(){
+    return wait;
+  }
 
 private:
 
@@ -154,18 +159,21 @@ int main(int argc, char** argv )
 {
     ros::init(argc,argv, "NextTrajectorySender");
     ros::NodeHandle node_handle;
-    ros::Rate loop_rate(20);
+    double dt;
+    node_handle.getParam("/panda_mpc/dt_", dt);
+
+    int rate = 100;
+    ros::Rate loop_rate(rate);
 
     Eigen::Matrix<double, 7, 1> q_in, qdot_in;
     q_in << 0.391342, 0.843433, 0.49249, -1.51971, -0.468614, 2.24382,   1.03971;
     qdot_in.setZero();
 
     TrajectSenderNode trajec_sender(node_handle,q_in,qdot_in);
-
     while(ros::ok()){
+        ros::spinOnce();
+        loop_rate.sleep();
 
-      ros::spinOnce();
-      loop_rate.sleep();
     }
 
     return 0;
@@ -179,8 +187,6 @@ void TrajectSenderNode::jointStateCallBack(const sensor_msgs::JointStatePtr& joi
     q_in.qdot.data[i] = joint_state->velocity[i];
   }
 
-//  std::cout << "sensor msgs time seq :\n" << joint_state->header.seq << '\n';
-//  std::cout << "sensor msgs time stamp :\n" << joint_state->header.stamp << '\n';
 
   // Update the model
   robot_model_->JntToJac(q_in.q);
@@ -197,27 +203,25 @@ void TrajectSenderNode::jointStateCallBack(const sensor_msgs::JointStatePtr& joi
 
 
 
-//  if(init_pos_attend_ & execute & !wait){
+
 
     if(error_task_A.norm()<0.001){
       q_des_.data = goal_B_;
-      wait = true;
-      wait_begin_ = ros::Time::now();
+//      ros::Duration(1).sleep();
     }
 
     if(error_task_B.norm()<0.001){
       q_des_.data = goal_A_;
-      wait = true;
-      wait_begin_ = ros::Time::now();
+     // ros::Duration(1).sleep();
+
+   //   wait = true;
     }
 
 
-
     UpdateMPCTraj();
-    begin_time_ = ros::Time::now();
-    execute = false;
-  }
-//}
+
+
+}
 
 bool TrajectSenderNode::UpdateMPCTraj(){
 
@@ -231,7 +235,7 @@ bool TrajectSenderNode::UpdateMPCTraj(){
   state_.tail(dof) = q_in.qdot.data;
 
   trajectory_generation->getRobotModel()->setJntState(state_.head(dof), state_.tail(dof));
-
+  qd_des_mpc_.setZero();
   solution_ = trajectory_generation->update(state_,q_horizon_,qd_horizon_,q_des_mpc_,qd_des_mpc_,solution_precedent_,J);
   q_horizon_ = trajectory_generation->getJointHorizon();
   qd_horizon_ = trajectory_generation->getJointvelHorizon();
@@ -270,9 +274,10 @@ bool TrajectSenderNode::UpdateMPCTraj(){
 
   next_acceleration.header.stamp = ros::Time::now();
   for (int i(0); i<dof;i++){
-  next_acceleration.jntAcc.at(i) = solution_[i];
-  next_acceleration.jntAcc.at(i+dof) = state_(i);
-  next_acceleration.jntAcc.at(i+2*dof) = state_(i+dof);
+
+    next_acceleration.jntAcc.at(i) = solution_[i];
+    next_acceleration.jntAcc.at(i+dof) = state_(i);
+    next_acceleration.jntAcc.at(i+2*dof) = state_(i+dof);
 
   }
 

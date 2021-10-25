@@ -2072,6 +2072,33 @@ src/planning/cubic_spline.cpp.s:
 	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/cubic_spline.cpp.s
 .PHONY : src/planning/cubic_spline.cpp.s
 
+src/planning/motion_generator.o: src/planning/motion_generator.cpp.o
+
+.PHONY : src/planning/motion_generator.o
+
+# target to build an object file
+src/planning/motion_generator.cpp.o:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/motion_generator.cpp.o
+.PHONY : src/planning/motion_generator.cpp.o
+
+src/planning/motion_generator.i: src/planning/motion_generator.cpp.i
+
+.PHONY : src/planning/motion_generator.i
+
+# target to preprocess a source file
+src/planning/motion_generator.cpp.i:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/motion_generator.cpp.i
+.PHONY : src/planning/motion_generator.cpp.i
+
+src/planning/motion_generator.s: src/planning/motion_generator.cpp.s
+
+.PHONY : src/planning/motion_generator.s
+
+# target to generate assembly for a file
+src/planning/motion_generator.cpp.s:
+	$(MAKE) -f CMakeFiles/panda_mpc.dir/build.make CMakeFiles/panda_mpc.dir/src/planning/motion_generator.cpp.s
+.PHONY : src/planning/motion_generator.cpp.s
+
 src/planning/plane.o: src/planning/plane.cpp.o
 
 .PHONY : src/planning/plane.o
@@ -2427,6 +2454,9 @@ help:
 	@echo "... src/planning/cubic_spline.o"
 	@echo "... src/planning/cubic_spline.i"
 	@echo "... src/planning/cubic_spline.s"
+	@echo "... src/planning/motion_generator.o"
+	@echo "... src/planning/motion_generator.i"
+	@echo "... src/planning/motion_generator.s"
 	@echo "... src/planning/plane.o"
 	@echo "... src/planning/plane.i"
 	@echo "... src/planning/plane.s"

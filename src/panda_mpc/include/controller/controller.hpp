@@ -145,7 +145,21 @@ private:
   void updateTrajectoryPoint(const panda_mpc::trajectoryAcceleration::ConstPtr& traj_acc);
 
 
-  void computeInterpolationCoefficient();
+  void cubic_interpolation(double &qt, double &dqt, double q_i, double q_f, double dq_i, double dq_f, double t){
+
+      double tf = dt_;
+
+      double a0 = q_i;
+      double a1 = dq_i;
+      double a2 = 3*(q_f - q_i)/(tf*tf) - (2*dq_i + dq_f)/tf;
+      double a3 = -2*(q_f - q_i)/(tf*tf*tf) + (dq_i + dq_f)/(tf*tf);
+
+      // Compute q and dq  at time t
+      qt = a0 + a1*t + a2*t*t + a3*t*t*t;
+      dqt = a1 + a2*t + a3*t*t;
+
+  }
+
 
   // Publishers
   geometry_msgs::Pose X_curr_msg_, X_traj_msg_;
@@ -243,11 +257,12 @@ private:
   Eigen::VectorXd jnt_err;
   Eigen::Matrix<double,7,1> jnt_des_;
 
-  std::unique_ptr<cubicSpline::cubicSpline> cubic_spline_;
 
   std::vector<Eigen::MatrixXd> joints_coefficient_matrix_;/*!< @brief a vector of joint coefficient_matrix */
 
   std::vector<KDL::JntArrayAcc> joints_array;
+  KDL::JntArrayAcc q_mpc_f_;
+
 };
 
 }

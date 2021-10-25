@@ -56,7 +56,7 @@ namespace planning {
     Eigen::Vector3d obstacle_center;
 
     obs_vel_ = 0.002;
-    obstacle_center << 2.5, -0.1, 0.14;
+    obstacle_center << 1.5, -0.1, 0.14;
 
 
     obsVertices_.resize(3,obstacle_vertices_);
@@ -136,7 +136,6 @@ namespace planning {
     ee_pos_eigen << ee_pos.p.x(), ee_pos.p.y(), ee_pos.p.z();
 
     J_horizon_ = robot_mpc_model_->getMPCParams().J_horizon_;
-
     // Update robot desired task
     if(!mpc_task_->update(S, q_des,qd_des,qdd_des)){
       ROS_INFO_STREAM("failed to update task");
@@ -156,27 +155,27 @@ namespace planning {
     // redefine joint velocity limits:
     double percentage;
     double p_init = 0.7;
-//    for (int i(0); i< N_-1 ; i++){
+    for (int i(0); i< N_-1 ; i++){
 
-//    double d = abs(ee_pos_eigen(0) - obsVertices_(0));
+    double d = abs(ee_pos_eigen(0) - obsVertices_(0));
 
-//      if (d > 1.5){
-//        percentage = 1;
-//      }else if (d < 0.7)
-//      {
-//        percentage = p_init;
-//      }else {
-//        percentage = ((1 - p_init)/(d_full_-d_limit_))*(d - d_limit_) + p_init;
-//      }
-
-
-//      qd_min_mpc_.segment(i*dof_,dof_) = percentage*qd_min_;
-//      qd_max_mpc_.segment(i*dof_,dof_) = percentage*qd_max_;
-//    }
+      if (d > 1.5){
+        percentage = 1;
+      }else if (d < 0.7)
+      {
+        percentage = p_init;
+      }else {
+        percentage = ((1 - p_init)/(d_full_-d_limit_))*(d - d_limit_) + p_init;
+      }
 
 
-    qd_min_mpc_.tail(dof_).setConstant(-0.1);
-    qd_max_mpc_.tail(dof_).setConstant(0.1);
+      qd_min_mpc_.segment(i*dof_,dof_) = percentage*qd_min_;
+      qd_max_mpc_.segment(i*dof_,dof_) = percentage*qd_max_;
+    }
+
+
+//    qd_min_mpc_.tail(dof_).setConstant(-0.1);
+//    qd_max_mpc_.tail(dof_).setConstant(0.1);
 
     mpc_constraint_->resetJntVelLimit(qd_min_mpc_,qd_max_mpc_);
     mpc_constraint_->computeUpperBoundAndConstraint(S,
@@ -233,18 +232,7 @@ namespace planning {
     obs_vel_ = 0.0;
   //  obsVertices_ << obsVertices_(0,0) , obsVertices_(1,0), obsVertices_(2,0);
 
-    double obstacle_x;
-    obstacle_x = obsVertices_(0,0);
-//    for (int i(0); i<N_; i++){
 
-////           obsVertices_(0,0) = obstacle_x - i*obs_vel_;
-//           if (obsVertices_(0,0) >= 0.5){
-//             obsVerticesAugmented_[0].block(0,i*obstacle_vertices_,3,obstacle_vertices_) << obsVertices_(0,0), obsVertices_(1,0), obsVertices_(2,0);
-//           }else {
-//             obsVerticesAugmented_[0].block(0,i*obstacle_vertices_,3,obstacle_vertices_) << 1., 0., .5;
-
-//           }
-//    }
     plane_generation->update(robotVerticesAugmented_,
                              obsVerticesAugmented_);
 
@@ -444,7 +432,7 @@ namespace planning {
     qpoases_soft_solver_.soft_lb_(row) = 0;
 
     qpoases_soft_solver_.soft_ub_.setConstant(12);
-    qpoases_soft_solver_.soft_ub_(row) = 0.15;
+    qpoases_soft_solver_.soft_ub_(row) = 0.05;
 
     int nbrCst = lbA.size();
     qpoases_soft_solver_.soft_lbA_ = lbA;

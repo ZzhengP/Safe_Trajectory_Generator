@@ -32,8 +32,8 @@ void CameraWorldTf::tfCallBack(const tf2_msgs::TFMessage &tf_msgs){
   transformStamped.header.stamp = ros::Time::now();
   transformStamped.header.frame_id = "panda_link0";
   transformStamped.child_frame_id = "camera_link";
-  transformStamped.transform.translation.x = 0.4;
-  transformStamped.transform.translation.y = -2.;
+  transformStamped.transform.translation.x = 0.5;
+  transformStamped.transform.translation.y = -2.1;
   transformStamped.transform.translation.z = 1.05;
 
   tf2::Quaternion q;

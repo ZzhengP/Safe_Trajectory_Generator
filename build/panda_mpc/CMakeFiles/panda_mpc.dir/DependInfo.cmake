@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zheng/catkin_ws/src/panda_mpc/src/optFormulation/task.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o"
   "/home/zheng/catkin_ws/src/panda_mpc/src/panda_simulation.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/panda_simulation.cpp.o"
   "/home/zheng/catkin_ws/src/panda_mpc/src/planning/cubic_spline.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/planning/cubic_spline.cpp.o"
+  "/home/zheng/catkin_ws/src/panda_mpc/src/planning/motion_generator.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/planning/motion_generator.cpp.o"
   "/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/planning/plane.cpp.o"
   "/home/zheng/catkin_ws/src/panda_mpc/src/planning/plane_solver_old.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o"
   "/home/zheng/catkin_ws/src/panda_mpc/src/planning/qpstructure.cpp" "/home/zheng/catkin_ws/build/panda_mpc/CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o"

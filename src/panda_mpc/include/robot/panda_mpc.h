@@ -70,7 +70,9 @@ private:
     std::string control_level;
 
     Eigen::VectorXd initial_joint_pos_;
-
+    Eigen::VectorXd joint_command_precedent_;
+    Eigen::VectorXd joint_command_dx_preview_;
+    Eigen::VectorXd joint_command_dx;
     ros::Duration elapsed_time_ ;
 };
 

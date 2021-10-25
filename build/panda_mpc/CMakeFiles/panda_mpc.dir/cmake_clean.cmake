@@ -11,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/panda_mpc.dir/src/planning/plane_solver_old.cpp.o"
   "CMakeFiles/panda_mpc.dir/src/planning/qpstructure.cpp.o"
   "CMakeFiles/panda_mpc.dir/src/planning/cubic_spline.cpp.o"
+  "CMakeFiles/panda_mpc.dir/src/planning/motion_generator.cpp.o"
   "CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o"
   "CMakeFiles/panda_mpc.dir/src/controller/joint_velocity_example_controller.cpp.o"
   "/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.pdb"

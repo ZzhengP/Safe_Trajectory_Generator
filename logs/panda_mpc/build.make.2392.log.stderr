@@ -1,0 +1,8 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:[m[K In member function '[01m[Kbool Controller::Controller::InitMPCTraj(ros::NodeHandle&, const VectorXd&, const VectorXd&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp:237:6:[m[K [01;31m[Kerror: [m[K'[01m[Kclass KDL::JntArrayVel[m[K' has no member named '[01m[Kqdotdot[m[K'; did you mean '[01m[Kqdot[m[K'?
+   q_.[01;31m[Kqdotdot[m[K.data.setZero();
+      [01;31m[K^~~~~~~[m[K
+      [32m[Kqdot[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

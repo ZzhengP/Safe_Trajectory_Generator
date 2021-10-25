@@ -127,7 +127,12 @@ bool PandaMPCController::init(hardware_interface::RobotHW* robot_hardware, ros::
 
     qp.Init(node_handle, q_init, qd_init);
 
-
+    joint_command_precedent_.resize(7);
+    joint_command_precedent_.setZero();
+    joint_command_dx_preview_.resize(7);
+    joint_command_dx_preview_.setZero();
+    joint_command_dx.resize(7);
+    joint_command_dx.setZero();
     return true;
 }
 
@@ -165,11 +170,21 @@ void PandaMPCController::update(const ros::Time&, const ros::Duration& period) {
     gravity_comp.resize(7);
     joint_command_ = qp.Update(q_,qd_,period);
 
+
+
+
+
     if (control_level == "velocity")
     {
         for (size_t i = 0; i < 7; ++i)
         {
-           velocity_joint_handles_[i].setCommand(joint_command_(i));
+
+          double alpha = 0.9;
+
+          double x_hat = alpha*joint_command_(i) + (1-alpha)*joint_command_precedent_(i);
+          joint_command_precedent_(i) = x_hat;
+           velocity_joint_handles_[i].setCommand(x_hat);
+
         }
     }
     else if (control_level == "position"){
