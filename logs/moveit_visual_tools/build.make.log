@@ -1,0 +1,98 @@
+[  0%] Built target graph_msgs_generate_messages_cpp
+[35m[1mScanning dependencies of target moveit_visual_tools[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/moveit_visual_tools.dir/src/moveit_visual_tools.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/moveit_visual_tools.dir/src/imarker_robot_state.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/moveit_visual_tools.dir/src/imarker_end_effector.cpp.o[0m
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:[m[K In member function ‘[01m[Kbool moveit_visual_tools::MoveItVisualTools::loadEEMarker(const moveit::core::JointModelGroup*, const std::vector<double>&)[m[K’:
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:273:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = class moveit::core::RobotState {aka class moveit::core::RobotState}[m[K’ has no member named ‘[01m[KsetJointGroupActivePositions[m[K’; did you mean ‘[01m[KsetJointGroupPositions[m[K’?
+     shared_robot_state_->[01;31m[KsetJointGroupActivePositions[m[K(ee_jmg, ee_joint_pos);
+                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+                          [32m[KsetJointGroupPositions[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:[m[K In member function ‘[01m[Kbool moveit_visual_tools::MoveItVisualTools::publishCollisionBlock(const Pose&, const string&, double, const rviz_visual_tools::colors&)[m[K’:
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:650:25:[m[K [01;31m[Kerror: [m[K‘[01m[KsolidPrimitiveDimCount[m[K’ is not a member of ‘[01m[Kgeometric_shapes[m[K’
+       geometric_shapes::[01;31m[KsolidPrimitiveDimCount[m[K<shape_msgs::SolidPrimitive::BOX>());
+                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:650:25:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KSolidPrimitiveDimCount[m[K’
+       geometric_shapes::[01;36m[KsolidPrimitiveDimCount[m[K<shape_msgs::SolidPrimitive::BOX>());
+                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+                         [32m[KSolidPrimitiveDimCount[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:650:81:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+       geometric_shapes::solidPrimitiveDimCount<shape_msgs::SolidPrimitive::BOX>([01;31m[K)[m[K);
+                                                                                 [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:[m[K In member function ‘[01m[Kbool moveit_visual_tools::MoveItVisualTools::publishCollisionCuboid(const Point&, const Point&, const string&, const rviz_visual_tools::colors&)[m[K’:
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:687:25:[m[K [01;31m[Kerror: [m[K‘[01m[KsolidPrimitiveDimCount[m[K’ is not a member of ‘[01m[Kgeometric_shapes[m[K’
+       geometric_shapes::[01;31m[KsolidPrimitiveDimCount[m[K<shape_msgs::SolidPrimitive::BOX>());
+                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:687:25:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KSolidPrimitiveDimCount[m[K’
+       geometric_shapes::[01;36m[KsolidPrimitiveDimCount[m[K<shape_msgs::SolidPrimitive::BOX>());
+                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+                         [32m[KSolidPrimitiveDimCount[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:687:81:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+       geometric_shapes::solidPrimitiveDimCount<shape_msgs::SolidPrimitive::BOX>([01;31m[K)[m[K);
+                                                                                 [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:[m[K In member function ‘[01m[Kbool moveit_visual_tools::MoveItVisualTools::publishCollisionCuboid(const Pose&, double, double, double, const string&, const rviz_visual_tools::colors&)[m[K’:
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:729:25:[m[K [01;31m[Kerror: [m[K‘[01m[KsolidPrimitiveDimCount[m[K’ is not a member of ‘[01m[Kgeometric_shapes[m[K’
+       geometric_shapes::[01;31m[KsolidPrimitiveDimCount[m[K<shape_msgs::SolidPrimitive::BOX>());
+                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:729:25:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KSolidPrimitiveDimCount[m[K’
+       geometric_shapes::[01;36m[KsolidPrimitiveDimCount[m[K<shape_msgs::SolidPrimitive::BOX>());
+                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+                         [32m[KSolidPrimitiveDimCount[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:729:81:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+       geometric_shapes::solidPrimitiveDimCount<shape_msgs::SolidPrimitive::BOX>([01;31m[K)[m[K);
+                                                                                 [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:[m[K In member function ‘[01m[Kbool moveit_visual_tools::MoveItVisualTools::publishCollisionCylinder(const Pose&, const string&, double, double, const rviz_visual_tools::colors&)[m[K’:
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:809:25:[m[K [01;31m[Kerror: [m[K‘[01m[KsolidPrimitiveDimCount[m[K’ is not a member of ‘[01m[Kgeometric_shapes[m[K’
+       geometric_shapes::[01;31m[KsolidPrimitiveDimCount[m[K<shape_msgs::SolidPrimitive::CYLINDER>());
+                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:809:25:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KSolidPrimitiveDimCount[m[K’
+       geometric_shapes::[01;36m[KsolidPrimitiveDimCount[m[K<shape_msgs::SolidPrimitive::CYLINDER>());
+                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+                         [32m[KSolidPrimitiveDimCount[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:809:86:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+       geometric_shapes::solidPrimitiveDimCount<shape_msgs::SolidPrimitive::CYLINDER>([01;31m[K)[m[K);
+                                                                                      [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:[m[K In member function ‘[01m[Kbool moveit_visual_tools::MoveItVisualTools::publishCollisionGraph(const GeometryGraph&, const string&, double, const rviz_visual_tools::colors&)[m[K’:
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:921:54:[m[K [01;31m[Kerror: [m[K‘[01m[KsolidPrimitiveDimCount[m[K’ is not a member of ‘[01m[Kgeometric_shapes[m[K’
+         cylinder.dimensions.resize(geometric_shapes::[01;31m[KsolidPrimitiveDimCount[m[K<shape_msgs::SolidPrimitive::CYLINDER>());
+                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:921:54:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KSolidPrimitiveDimCount[m[K’
+         cylinder.dimensions.resize(geometric_shapes::[01;36m[KsolidPrimitiveDimCount[m[K<shape_msgs::SolidPrimitive::CYLINDER>());
+                                                      [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+                                                      [32m[KSolidPrimitiveDimCount[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:921:115:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+         cylinder.dimensions.resize(geometric_shapes::solidPrimitiveDimCount<shape_msgs::SolidPrimitive::CYLINDER>([01;31m[K)[m[K);
+                                                                                                                   [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:[m[K In member function ‘[01m[Kvoid moveit_visual_tools::MoveItVisualTools::getCollisionWallMsg(double, double, double, double, double, double, const string&, moveit_msgs::CollisionObject&)[m[K’:
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:946:25:[m[K [01;31m[Kerror: [m[K‘[01m[KsolidPrimitiveDimCount[m[K’ is not a member of ‘[01m[Kgeometric_shapes[m[K’
+       geometric_shapes::[01;31m[KsolidPrimitiveDimCount[m[K<shape_msgs::SolidPrimitive::BOX>());
+                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:946:25:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KSolidPrimitiveDimCount[m[K’
+       geometric_shapes::[01;36m[KsolidPrimitiveDimCount[m[K<shape_msgs::SolidPrimitive::BOX>());
+                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+                         [32m[KSolidPrimitiveDimCount[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:946:81:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+       geometric_shapes::solidPrimitiveDimCount<shape_msgs::SolidPrimitive::BOX>([01;31m[K)[m[K);
+                                                                                 [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:[m[K In member function ‘[01m[Kbool moveit_visual_tools::MoveItVisualTools::publishCollisionTable(double, double, double, double, double, double, double, const string&, const rviz_visual_tools::colors&)[m[K’:
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:1018:25:[m[K [01;31m[Kerror: [m[K‘[01m[KsolidPrimitiveDimCount[m[K’ is not a member of ‘[01m[Kgeometric_shapes[m[K’
+       geometric_shapes::[01;31m[KsolidPrimitiveDimCount[m[K<shape_msgs::SolidPrimitive::BOX>());
+                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:1018:25:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[KSolidPrimitiveDimCount[m[K’
+       geometric_shapes::[01;36m[KsolidPrimitiveDimCount[m[K<shape_msgs::SolidPrimitive::BOX>());
+                         [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+                         [32m[KSolidPrimitiveDimCount[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:1018:81:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+       geometric_shapes::solidPrimitiveDimCount<shape_msgs::SolidPrimitive::BOX>([01;31m[K)[m[K);
+                                                                                 [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:[m[K In member function ‘[01m[Kbool moveit_visual_tools::MoveItVisualTools::hideRobot()[m[K’:
+[01m[K/home/zheng/catkin_ws/src/moveit_visual_tools/src/moveit_visual_tools.cpp:1549:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::DisplayRobotState {aka struct moveit_msgs::DisplayRobotState_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Khide[m[K’
+   display_robot_state_msg.[01;31m[Khide[m[K = true;
+                           [01;31m[K^~~~[m[K
+CMakeFiles/moveit_visual_tools.dir/build.make:62: recipe for target 'CMakeFiles/moveit_visual_tools.dir/src/moveit_visual_tools.cpp.o' failed
+make[2]: *** [CMakeFiles/moveit_visual_tools.dir/src/moveit_visual_tools.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+CMakeFiles/Makefile2:1187: recipe for target 'CMakeFiles/moveit_visual_tools.dir/all' failed
+make[1]: *** [CMakeFiles/moveit_visual_tools.dir/all] Error 2
+Makefile:140: recipe for target 'all' failed
+make: *** [all] Error 2

@@ -61,15 +61,16 @@ bool Controller::Init(ros::NodeHandle& node_handle,const Eigen::VectorXd& q_init
     q_in.q.data = q_init;
     q_in.qdot.data = qd_init;
     robot_model_->JntToCart(q_in.q, X_curr_);
-    //--------------------------------------
-    // BUILD TRAJECTORY
-    //--------------------------------------
-    std::string panda_traj_path = ros::package::getPath("panda_traj");
-    std::string trajectory_file = panda_traj_path+"/trajectories/go_to_point.csv";
-    std::string csv_file_name = trajectory_file;
-    trajectory.Load(csv_file_name);
-    trajectory.Build(X_curr_, true);
-    traj_properties_.play_traj_ = true;
+//    //--------------------------------------
+//    // BUILD TRAJECTORY
+//    //--------------------------------------
+//    std::string panda_traj_path = ros::package::getPath("panda_traj");
+//    std::string trajectory_file = panda_traj_path+"/trajectories/go_to_point.csv";
+//    std::string csv_file_name = trajectory_file;
+//    trajectory.Load(csv_file_name);
+//    trajectory.Build(X_curr_, true);
+//    rot_init_ = X_curr_.M;
+//    traj_properties_.play_traj_ = true;
 
 
     x_err.setConstant(1);
@@ -144,7 +145,7 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
     // Formulate QP problem such that
     // joint_velocity_out_ = argmin 1/2 qd^T H_ qd + qd^T g_
     //                         s.t     lbA_ < A_ qd << ubA_
-    //                                     lb_ < qd < ub_
+    //                                     lb_ < qd < ub_s
 
     J = robot_model_->getJacobian().data;
     M = robot_model_->getJntInertial().data;
@@ -152,8 +153,8 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
     H_ =  2.0 * regularisation_weight_ * Eigen::MatrixXd::Identity(7,7);
     g_ = -2.0 * regularisation_weight_ * p_gains_qd_.cwiseProduct((q_mean_ - q));
 
-//    H_ +=   1* regularisation_weight_ * Eigen::MatrixXd::Identity(7,7);
-//    g_ += - 1 * regularisation_weight_ * joint_velocity_out_precedent_;
+//    H_ =   1* regularisation_weight_ * Eigen::MatrixXd::Identity(7,7);
+//    g_ = - 1 * regularisation_weight_ * joint_velocity_out_precedent_;
 
 //    H_ +=   10* regularisation_weight_ * Eigen::MatrixXd::Identity(7,7)*time_dt;
 //    g_ += - 10 * regularisation_weight_ * q_in.q.data;
@@ -162,10 +163,10 @@ Eigen::VectorXd Controller::Update(const Eigen::VectorXd& q, const Eigen::Vector
     H_ += Eigen::MatrixXd::Identity(7,7);
     g_ += - jnt_des_;
 
-    double horizon_dt = 15 * time_dt;
+    double horizon_dt = 5 * time_dt;
 
-    ub_ = qd_max_;
-    lb_ = qd_min_;
+    ub_ = qd_max_*0.8;
+    lb_ = qd_min_*0.8;
 
     A_.block(0,0,7,7) = horizon_dt * Eigen::MatrixXd::Identity(7,7);
     ubA_.segment(0,7) = robot_model_->getJntul().data - q;
@@ -238,10 +239,10 @@ bool Controller::InitMPCTraj(ros::NodeHandle &node_handle, const Eigen::VectorXd
   solution_precedent_.setZero();
 
 
-  Goal_A_frame_.p[0] = 0.5, Goal_A_frame_.p[1] = 0.5, Goal_A_frame_.p[2] = 0.2;
+  Goal_A_frame_.p[0] = 0.5, Goal_A_frame_.p[1] = 0.5, Goal_A_frame_.p[2] = 0.25;
   Goal_A_frame_.M = X_curr_.M;
 
-  Goal_B_frame_.p[0] = 0.5, Goal_B_frame_.p[1] = -0.5, Goal_B_frame_.p[2] = 0.2;
+  Goal_B_frame_.p[0] = 0.5, Goal_B_frame_.p[1] = -0.5, Goal_B_frame_.p[2] = 0.25;
   Goal_B_frame_.M = X_curr_.M;
 
   q_des_.resize(dof);
@@ -250,10 +251,9 @@ bool Controller::InitMPCTraj(ros::NodeHandle &node_handle, const Eigen::VectorXd
   ee_vel_.resize(6);
 
 
-  trajectory_generation.reset(new planning::trajGen(node_handle,q_init,qd_init));
-  trajectory_generation->getRobotModel()->CartToJnt(Goal_A_frame_,q_des_);
-  trajectory_generation->getRobotModel()->CartToJnt(Goal_A_frame_,q_goal_A_);
-  trajectory_generation->getRobotModel()->CartToJnt(Goal_B_frame_,q_goal_B_);
+  robot_model_->CartToJnt(Goal_A_frame_,q_des_);
+  robot_model_->CartToJnt(Goal_A_frame_,q_goal_A_);
+  robot_model_->CartToJnt(Goal_B_frame_,q_goal_B_);
 
   q_mpc_.q.data = q_goal_A_.data;
 
@@ -266,7 +266,6 @@ bool Controller::InitMPCTraj(ros::NodeHandle &node_handle, const Eigen::VectorXd
 
   jnt_err.resize(dof);
 
-  delete trajectory_generation.get();
   return true;
 }
 
@@ -366,10 +365,8 @@ void Controller::updateTrajectoryPoint(const panda_mpc::trajectoryAcceleration::
 
 //  ROS_WARN_STREAM("receive computed MPC solution");
 
-//  joints_array[0].qdotdot.data = joints_array[1].qdotdot.data ;
+  joints_array[0].qdotdot.data = joints_array[1].qdotdot.data ;
  if(traj_acc != nullptr){
-
-
 
     for (int i(0); i<dof ; i++){
       q_mpc_.qdotdot.data[i] = traj_acc->jntAcc.at(i);
@@ -381,7 +378,28 @@ void Controller::updateTrajectoryPoint(const panda_mpc::trajectoryAcceleration::
    //  q_ = q_in;
 
   }
+//  if(traj_acc != nullptr){
 
+//     KDL::Frame desired_Frame;
+//     KDL::JntArray jnt;
+//     jnt.resize(dof);
+//     desired_Frame.p[0] = traj_acc->jntAcc.at(0);
+//     desired_Frame.p[1] = traj_acc->jntAcc.at(1);
+//     desired_Frame.p[2] = traj_acc->jntAcc.at(2);
+//     desired_Frame.M =rot_init_;
+//     trajectory_generation->getRobotModel()->CartToJnt(desired_Frame, jnt);
+
+//     for (int i(0); i<dof ; i++){
+//       q_mpc_.qdotdot.data[i] = 0;
+//       q_mpc_.q.data[i] = jnt.data[i];
+//       q_.q.data[i] = jnt.data[i];
+//       q_.qdot.data[i] = 0;
+
+//     }
+//      traj_index_ = 0;
+//    //  q_ = q_in;
+
+//   }
 
 }
 

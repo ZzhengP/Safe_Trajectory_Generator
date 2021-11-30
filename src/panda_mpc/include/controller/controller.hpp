@@ -42,7 +42,6 @@
 #include <eigen_conversions/eigen_msg.h>
 #include <panda_traj/panda_traj.hpp>
 #include <robot/robot_model.h>
-#include <planning/traj_generation.hpp>
 #include <rviz_visual_tools/rviz_visual_tools.h>
 #include <planning/cubic_spline.h>
 
@@ -237,7 +236,6 @@ private:
 
 
   // ---------------------- Generate MPC trajectory ----------------------------
-  std::shared_ptr<planning::trajGen> trajectory_generation; /*!< @brief MPC trajectory generation module */
 
   bool init_pos_attend_, execute, sub_goal_attend_, wait; /*!< @brief flag used to control task transition */
   int N_; /*!< @brief MPC horizon */
@@ -262,7 +260,7 @@ private:
 
   std::vector<KDL::JntArrayAcc> joints_array;
   KDL::JntArrayAcc q_mpc_f_;
-
+  KDL::Rotation rot_init_;
 };
 
 }

@@ -167,8 +167,8 @@ bool MPCConstraint::computeUpperBoundAndConstraint(const Eigen::VectorXd &state,
                                                    const Eigen::VectorXd &qHorizonPrecedent,
                                                    int index){
 
-   double dsafe=0.1;
-
+//   double dsafe=0.3;
+     double dsafe = dsafe_;
 //   if (index == 2){
 //     dsafe = 0.2;
 //   }else {
@@ -225,7 +225,7 @@ bool MPCConstraint::computeUpperBoundAndConstraint(const Eigen::VectorXd &state,
 
         plane_temp << plane[0](0,k), plane[0](1,k), plane[0](2,k);
 
-        bLarge.segment(2*k,2) << plane[0](3,k) - dsafe, plane[0](3,k) - dsafe;
+        bLarge.segment(2*k,2) << plane[0](3,k) - dsafe/2, plane[0](3,k) - dsafe/2;
 
 
 

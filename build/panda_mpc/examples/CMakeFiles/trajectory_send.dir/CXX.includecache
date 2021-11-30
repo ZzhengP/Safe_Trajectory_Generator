@@ -281,6 +281,8 @@ ros/time.h
 /home/zheng/catkin_ws/src/panda_mpc/examples/ros/time.h
 geometry_msgs/PoseStamped.h
 -
+nav_msgs/Path.h
+-
 Eigen/Core
 -
 planning/traj_generation.hpp
@@ -366,8 +368,6 @@ eigen_conversions/eigen_msg.h
 panda_traj/panda_traj.hpp
 -
 robot/robot_model.h
--
-planning/traj_generation.hpp
 -
 rviz_visual_tools/rviz_visual_tools.h
 -

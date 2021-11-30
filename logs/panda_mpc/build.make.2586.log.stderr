@@ -1,0 +1,8 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kframes.hpp: No such file or directory
+ #include [01;31m[K<frames.hpp>[m[K
+          [01;31m[K^~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [examples/CMakeFiles/build_trajectory.dir/build_trajectory.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/build_trajectory.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

@@ -27,7 +27,7 @@ panda:
     type: effort_controllers/JointPositionController
     joint: panda_joint5
     pid: {p: 100.0, i: 0.0, d: 10}
-  panda_joint6_position_controller:
+  panda_joint6_position_controller:d
     type: effort_controllers/JointPositionController
     joint: panda_joint6
     pid: {p: 100.0, i: 0.0, d: 10}

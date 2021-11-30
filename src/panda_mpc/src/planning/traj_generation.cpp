@@ -47,7 +47,6 @@ namespace planning {
     std::cout << "qp solver number of constraint : " << nbrCst_ << '\n';
 
 
-    path_pub_ = node_handle.advertise<nav_msgs::Path>("/mpc_path",1);
     // ---------------- Initialize plane generation module ----------------------
     plane_table_pub_ = node_handle.advertise<visualization_msgs::Marker>("/table_plane", 1);
     plane_shape_pub_ = node_handle.advertise<visualization_msgs::Marker>("/separating_plane", 1);
@@ -55,7 +54,6 @@ namespace planning {
 
     Eigen::Vector3d obstacle_center;
 
-    obs_vel_ = 0.002;
     obstacle_center << 1.5, -0.1, 0.14;
 
 
@@ -96,7 +94,7 @@ namespace planning {
 
     for (int i(0); i< N_-1 ; i++){
 
-      table_plane_location_[0].block(0,i,5,1) << 0, 0, -1, 0., 0;
+      table_plane_location_[0].block(0,i,5,1) << 0, 0, -1, 0.1, 0;
 
     }
 
@@ -148,6 +146,22 @@ namespace planning {
     qpoases_solver_.g_ = mpc_task_->getGradient();
 
 
+    // ------------------- Update Plane -----------
+    // update robot vertices horizon for plane generation
+
+    robotVerticesAugmented_[0]= computeTipPositionHorizon(q_horizon,robot_vertices_);
+
+    for (int i(0); i<N_; i++){
+      robotVerticesAugmented_[0](2,i)= robotVerticesAugmented_[0](2,i) - 0.1;
+    }
+
+    plane_generation->update(robotVerticesAugmented_,
+                             obsVerticesAugmented_);
+
+    publishABCDPlane(plane_generation->GetFirstPlane()(0,0),
+                       plane_generation->GetFirstPlane()(1,0),
+                       plane_generation->GetFirstPlane()(2,0),
+                       -plane_generation->GetFirstPlane()(3,0));
 
     // Extract distance
     plane_location_ = plane_generation->GetPlane();
@@ -157,25 +171,25 @@ namespace planning {
     double p_init = 0.7;
     for (int i(0); i< N_-1 ; i++){
 
-    double d = abs(ee_pos_eigen(0) - obsVertices_(0));
+    Eigen::Vector3d d_vec;
+    d_vec =ee_pos_eigen - obsVertices_;
+    double d = d_vec.norm();
 
-      if (d > 1.5){
+      if (d > d_full_){
         percentage = 1;
-      }else if (d < 0.7)
+      }else if (d < d_limit_)
       {
         percentage = p_init;
       }else {
-        percentage = ((1 - p_init)/(d_full_-d_limit_))*(d - d_limit_) + p_init;
+        percentage = ((1 - p_init)/(d_full_-d_limit_))*(d - d_limit_) + p_init ;
       }
-
 
       qd_min_mpc_.segment(i*dof_,dof_) = percentage*qd_min_;
       qd_max_mpc_.segment(i*dof_,dof_) = percentage*qd_max_;
     }
 
-
-//    qd_min_mpc_.tail(dof_).setConstant(-0.1);
-//    qd_max_mpc_.tail(dof_).setConstant(0.1);
+    qd_min_mpc_.tail(dof_).setConstant(-0.001);
+    qd_max_mpc_.tail(dof_).setConstant(0.001);
 
     mpc_constraint_->resetJntVelLimit(qd_min_mpc_,qd_max_mpc_);
     mpc_constraint_->computeUpperBoundAndConstraint(S,
@@ -191,14 +205,14 @@ namespace planning {
     if(!mpc_constraint_->update(S, q_des.segment(0,dof_),
                                 robotVerticesAugmented_,
                                 table_plane_location_,
-                                J_horizon_, q_horizon_precedent_)){
+                                J_horizon_, q_horizon)){
       ROS_INFO_STREAM("failed to update constraint");
     }
     else{
 //          ROS_INFO_STREAM("success to update constraint");
     }
-    qpoases_solver_.lb_.setConstant(-8);
-    qpoases_solver_.ub_.setConstant(8);
+    qpoases_solver_.lb_.setConstant(-15);
+    qpoases_solver_.ub_.setConstant(15);
     qpoases_solver_.lbA_ = mpc_constraint_->getLBA();
     qpoases_solver_.ubA_ = mpc_constraint_->getUBA();
     qpoases_solver_.A_ = mpc_constraint_->getConstraintA();
@@ -217,29 +231,7 @@ namespace planning {
 
     bool is_soft_solved = qpoases_soft_solver_.solveSoftMPC();
 
-    // ------------------- Update Plane -----------
-    // update robot vertices horizon for plane generation
 
-    robotVerticesAugmented_[0]= computeTipPositionHorizon(q_horizon,robot_vertices_);
-
-
-    if(obsVertices_(0,0) <= 0.5)
-      obs_vel_ = -0.005;
-
-    if (obsVertices_(0,0) >= 1.5)
-      obs_vel_ = 0.005;
-
-    obs_vel_ = 0.0;
-  //  obsVertices_ << obsVertices_(0,0) , obsVertices_(1,0), obsVertices_(2,0);
-
-
-    plane_generation->update(robotVerticesAugmented_,
-                             obsVerticesAugmented_);
-
-    publishABCDPlane(plane_generation->GetFirstPlane()(0,0),
-                       plane_generation->GetFirstPlane()(1,0),
-                       plane_generation->GetFirstPlane()(2,0),
-                       -plane_generation->GetFirstPlane()(3,0));
 
 
     Eigen::Vector3d obstacle_center;
@@ -247,7 +239,6 @@ namespace planning {
 
 
     publishObstacle(obstacle_center);
-    publishPath();
 
     if(!is_solved && is_soft_solved)
       ROS_WARN_STREAM("hard constraint qp failed, but soft constraint qp successifuly solved");
@@ -263,7 +254,123 @@ namespace planning {
   }
 
 
+  Eigen::VectorXd trajGen::updateWithAlternatingSolver(Eigen::VectorXd S, const Eigen::VectorXd &q_horizon, const Eigen::VectorXd & qd_horizon,
+                                              const Eigen::VectorXd & q_des,const Eigen::VectorXd& qd_des, const Eigen::VectorXd & solution_precedent,
+                                              Eigen::MatrixXd J){
+        bool is_soft_solved = false;
+        Eigen::VectorXd solution_precedent_hat = solution_precedent;
 
+        mpc_param_ = robot_mpc_model_->getMPCParams();
+        Eigen::VectorXd qdd_des(N_*dof_);
+        qdd_des.setZero();
+
+        Eigen::VectorXd S_hat;
+        S_hat.resize(S.size());
+
+        S_hat = S;
+
+        Eigen::VectorXd q_horizon_hat;
+        q_horizon_hat.resize(q_horizon.size());
+        q_horizon_hat = q_horizon;
+        for( int i(0); i < 5 ; i++){ // Alternating 5 times
+
+            // update robot model (update joint horizon)
+            robot_mpc_model_->update(S_hat,solution_precedent_hat);
+            q_horizon_hat = robot_mpc_model_->getJointHorizon();
+            robot_mpc_model_->setJntState(S_hat.segment(0,dof_), S_hat.segment(dof_,dof_));
+
+            KDL::JntArray jnt_pos;
+            jnt_pos.resize(dof_);
+            jnt_pos.data = S.head(dof_);
+
+            KDL::Frame ee_pos;
+            robot_mpc_model_->JntToCart(jnt_pos, ee_pos);
+
+            Eigen::Vector3d ee_pos_eigen;
+            ee_pos_eigen << ee_pos.p.x(), ee_pos.p.y(), ee_pos.p.z();
+
+            J_horizon_ = robot_mpc_model_->getMPCParams().J_horizon_; // Update robot desired task
+            if(!mpc_task_->update(S_hat, q_des,qd_des,qdd_des)){
+               ROS_INFO_STREAM("failed to update task");
+              }
+            qpoases_solver_.H_ = mpc_task_->getHessien();
+            qpoases_solver_.g_ = mpc_task_->getGradient();
+
+            // ------------------- Update Plane -----------
+            // update robot vertices horizon for plane generation
+
+            robotVerticesAugmented_[0]= computeTipPositionHorizon(q_horizon_hat,robot_vertices_);
+
+
+            plane_generation->update(robotVerticesAugmented_,
+                                 obsVerticesAugmented_);
+
+            publishABCDPlane(plane_generation->GetFirstPlane()(0,0),
+                             plane_generation->GetFirstPlane()(1,0),
+                             plane_generation->GetFirstPlane()(2,0),
+                             -plane_generation->GetFirstPlane()(3,0));
+
+            // Extract distance
+            plane_location_ = plane_generation->GetPlane();
+
+
+            mpc_constraint_->resetJntVelLimit(qd_min_mpc_,qd_max_mpc_);
+            mpc_constraint_->computeUpperBoundAndConstraint(S_hat,
+                                               robotVerticesAugmented_,
+                                               plane_location_,
+                                               J_horizon_,
+                                               q_horizon_hat,
+                                               3);
+
+
+
+             // Update constraint
+             if(!mpc_constraint_->update(S_hat, q_des.segment(0,dof_),
+                                            robotVerticesAugmented_,
+                                            table_plane_location_,
+                                            J_horizon_, q_horizon)){
+                  ROS_INFO_STREAM("failed to update constraint");
+             }
+
+             qpoases_solver_.lb_.setConstant(-15);
+             qpoases_solver_.ub_.setConstant(15);
+             qpoases_solver_.lbA_ = mpc_constraint_->getLBA();
+             qpoases_solver_.ubA_ = mpc_constraint_->getUBA();
+             qpoases_solver_.A_ = mpc_constraint_->getConstraintA();
+
+
+
+
+             computeSoftMPC(mpc_task_->getHessien(),
+                               mpc_constraint_->getConstraintA(),
+                               mpc_task_->getGradient(),
+                               mpc_constraint_->getLBA(),
+                               mpc_constraint_->getUBA());
+
+
+             is_soft_solved = qpoases_soft_solver_.solveSoftMPC();
+
+
+             if (is_soft_solved){
+
+                 solution_precedent_hat = qpoases_soft_solver_.soft_optimal_solution_.segment(0,nV_);
+
+                }else{
+                  qpoases_soft_solver_.soft_optimal_solution_.setZero();
+                  solution_precedent_hat = qpoases_soft_solver_.soft_optimal_solution_.segment(0,nV_);
+
+
+                }
+        }
+
+        if (is_soft_solved){
+
+          return qpoases_soft_solver_.soft_optimal_solution_.segment(0,nV_);
+        }else{
+          qpoases_soft_solver_.soft_optimal_solution_.setZero();
+          return qpoases_soft_solver_.soft_optimal_solution_.segment(0,nV_);
+        }
+  }
 
   bool trajGen::publishABCDPlane(double A, double B, double C, double D,
                         double x_width, double y_width ){
@@ -331,10 +438,24 @@ namespace planning {
          // Set the marker action.  Options are ADD, DELETE, and new in ROS Indigo: 3 (DELETEALL)
      table.action = visualization_msgs::Marker::ADD;
 
+     Eigen::Vector3d table_n(table_plane_location_[0](0,0),table_plane_location_[0](1,0),table_plane_location_[0](2,0));
+     double table_distance = table_plane_location_[0](3,0)/table_n.norm();
+     Eigen::Vector3d table_center = -table_distance*table_n.normalized();
+
+     Eigen::Isometry3d table_pose;
+     table_pose.translation() = table_center;
+
+     Eigen::Vector3d table_z_0 = Eigen::Vector3d::UnitZ();
+     Eigen::Quaterniond table_q= Eigen::Quaterniond::FromTwoVectors(table_z_0,table_n);
+     table_pose.linear() = table_q.toRotationMatrix();
          // Set the pose of the marker.  This is a full 6DOF pose relative to the frame/time specified in the header
-    table.pose.position.x = 0;
-    table.pose.position.y = 0;
-    table.pose.position.z = 0.0;
+    table.pose.position.x = table_center[0];
+    table.pose.position.y = table_center[1];
+    table.pose.position.z = table_center[2];
+    table.pose.orientation.x = table_q.x();
+    table.pose.orientation.y = table_q.y();
+    table.pose.orientation.z = table_q.z();
+    table.pose.orientation.w = table_q.w();
 
          // Set the scale of the marker -- 1x1x1 here means 1m on a side
     table.scale.x = x_width;
@@ -382,32 +503,6 @@ namespace planning {
     return true;
   }
 
-  bool trajGen::publishPath(){
-
-      nav_msgs::Path path;
-      path.header.stamp = ros::Time::now();
-      path.header.frame_id=  "/panda_link0";
-      mpc_param_ = robot_mpc_model_->getMPCParams();
-
-      Eigen::VectorXd x_horizon;
-      x_horizon.resize(3*N_);
-      x_horizon = mpc_param_.x_horizon_;
-
-      for (int i(0); i < N_; i++){
-
-          geometry_msgs::PoseStamped this_pose_stamped;
-          this_pose_stamped.pose.position.x = x_horizon(3*i);
-          this_pose_stamped.pose.position.y = x_horizon(3*i+1);
-          this_pose_stamped.pose.position.z = x_horizon(3*i+2);
-          this_pose_stamped.header.stamp=ros::Time::now();
-          this_pose_stamped.header.frame_id= "/panda_link0";
-
-          path.poses.push_back(this_pose_stamped);
-      }
-
-
-      path_pub_.publish(path);
-  }
 
 
 
@@ -428,11 +523,11 @@ namespace planning {
     qpoases_soft_solver_.soft_g_.segment(0, row) = g;
     qpoases_soft_solver_.soft_g_(row) = 0;
 
-    qpoases_soft_solver_.soft_lb_.setConstant(-12);
-    qpoases_soft_solver_.soft_lb_(row) = 0;
+    qpoases_soft_solver_.soft_lb_.setConstant(-10);
+    qpoases_soft_solver_.soft_lb_(row) = -0.02;
 
-    qpoases_soft_solver_.soft_ub_.setConstant(12);
-    qpoases_soft_solver_.soft_ub_(row) = 0.05;
+    qpoases_soft_solver_.soft_ub_.setConstant(10);
+    qpoases_soft_solver_.soft_ub_(row) = 0.02;
 
     int nbrCst = lbA.size();
     qpoases_soft_solver_.soft_lbA_ = lbA;

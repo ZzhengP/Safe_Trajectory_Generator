@@ -179,7 +179,7 @@ void PandaMPCController::update(const ros::Time&, const ros::Duration& period) {
         for (size_t i = 0; i < 7; ++i)
         {
 
-          double alpha = 0.9;
+          double alpha = 0.8;
 
           double x_hat = alpha*joint_command_(i) + (1-alpha)*joint_command_precedent_(i);
           joint_command_precedent_(i) = x_hat;

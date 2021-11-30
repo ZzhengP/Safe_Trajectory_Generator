@@ -1,0 +1,7 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp:[m[K In member function '[01m[Kvoid TrajectoryBuilder::publishTraj()[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp:91:22:[m[K [01;31m[Kerror: [m[K'[01m[Ktraject_[m[K' was not declared in this scope
+       desired_pose = [01;31m[Ktraject_[m[K->Pos(t);
+                      [01;31m[K^~~~~~~~[m[K
+make[2]: *** [examples/CMakeFiles/build_trajectory.dir/build_trajectory.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/build_trajectory.dir/all] Error 2
+make: *** [all] Error 2

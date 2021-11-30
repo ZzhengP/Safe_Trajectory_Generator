@@ -90,6 +90,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -124,17 +135,6 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/zheng/catkin_ws/build/panda_mpc && $(CMAKE_COMMAND) -E cmake_progress_start /home/zheng/catkin_ws/build/panda_mpc/CMakeFiles /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/progress.marks
@@ -168,21 +168,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-examples/CMakeFiles/test_plane_solver.dir/rule:
-	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/test_plane_solver.dir/rule
-.PHONY : examples/CMakeFiles/test_plane_solver.dir/rule
-
-# Convenience name for target.
-test_plane_solver: examples/CMakeFiles/test_plane_solver.dir/rule
-
-.PHONY : test_plane_solver
-
-# fast build rule for target.
-test_plane_solver/fast:
-	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/test_plane_solver.dir/build.make examples/CMakeFiles/test_plane_solver.dir/build
-.PHONY : test_plane_solver/fast
-
-# Convenience name for target.
 examples/CMakeFiles/trajectory_send.dir/rule:
 	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/trajectory_send.dir/rule
 .PHONY : examples/CMakeFiles/trajectory_send.dir/rule
@@ -211,6 +196,63 @@ tf_broadcast: examples/CMakeFiles/tf_broadcast.dir/rule
 tf_broadcast/fast:
 	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/tf_broadcast.dir/build.make examples/CMakeFiles/tf_broadcast.dir/build
 .PHONY : tf_broadcast/fast
+
+# Convenience name for target.
+examples/CMakeFiles/test_plane_solver.dir/rule:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/test_plane_solver.dir/rule
+.PHONY : examples/CMakeFiles/test_plane_solver.dir/rule
+
+# Convenience name for target.
+test_plane_solver: examples/CMakeFiles/test_plane_solver.dir/rule
+
+.PHONY : test_plane_solver
+
+# fast build rule for target.
+test_plane_solver/fast:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/test_plane_solver.dir/build.make examples/CMakeFiles/test_plane_solver.dir/build
+.PHONY : test_plane_solver/fast
+
+# Convenience name for target.
+examples/CMakeFiles/build_trajectory.dir/rule:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f CMakeFiles/Makefile2 examples/CMakeFiles/build_trajectory.dir/rule
+.PHONY : examples/CMakeFiles/build_trajectory.dir/rule
+
+# Convenience name for target.
+build_trajectory: examples/CMakeFiles/build_trajectory.dir/rule
+
+.PHONY : build_trajectory
+
+# fast build rule for target.
+build_trajectory/fast:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/build_trajectory.dir/build.make examples/CMakeFiles/build_trajectory.dir/build
+.PHONY : build_trajectory/fast
+
+build_trajectory.o: build_trajectory.cpp.o
+
+.PHONY : build_trajectory.o
+
+# target to build an object file
+build_trajectory.cpp.o:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/build_trajectory.dir/build.make examples/CMakeFiles/build_trajectory.dir/build_trajectory.cpp.o
+.PHONY : build_trajectory.cpp.o
+
+build_trajectory.i: build_trajectory.cpp.i
+
+.PHONY : build_trajectory.i
+
+# target to preprocess a source file
+build_trajectory.cpp.i:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/build_trajectory.dir/build.make examples/CMakeFiles/build_trajectory.dir/build_trajectory.cpp.i
+.PHONY : build_trajectory.cpp.i
+
+build_trajectory.s: build_trajectory.cpp.s
+
+.PHONY : build_trajectory.s
+
+# target to generate assembly for a file
+build_trajectory.cpp.s:
+	cd /home/zheng/catkin_ws/build/panda_mpc && $(MAKE) -f examples/CMakeFiles/build_trajectory.dir/build.make examples/CMakeFiles/build_trajectory.dir/build_trajectory.cpp.s
+.PHONY : build_trajectory.cpp.s
 
 test_plane_solver.o: test_plane_solver.cpp.o
 
@@ -302,13 +344,17 @@ help:
 	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... test_plane_solver"
+	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... trajectory_send"
 	@echo "... tf_broadcast"
 	@echo "... install/local"
 	@echo "... test"
-	@echo "... rebuild_cache"
+	@echo "... test_plane_solver"
+	@echo "... build_trajectory"
+	@echo "... build_trajectory.o"
+	@echo "... build_trajectory.i"
+	@echo "... build_trajectory.s"
 	@echo "... test_plane_solver.o"
 	@echo "... test_plane_solver.i"
 	@echo "... test_plane_solver.s"

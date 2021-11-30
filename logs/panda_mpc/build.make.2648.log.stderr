@@ -1,0 +1,22 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp:[m[K In member function '[01m[Kvoid TrajectoryBuilder::trajBuilderCallback(const Path&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp:51:38:[m[K [01;31m[Kerror: [m[K'[01m[Kframe[m[K' was not declared in this scope
+       path_line = new KDL::Path_Line([01;31m[Kframe[m[K, new_frame, new KDL::RotationalInterpolation_SingleAxis(), eqradius);
+                                      [01;31m[K^~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp:51:38:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Kfree[m[K'
+       path_line = new KDL::Path_Line([01;36m[Kframe[m[K, new_frame, new KDL::RotationalInterpolation_SingleAxis(), eqradius);
+                                      [01;36m[K^~~~~[m[K
+                                      [32m[Kfree[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp:51:45:[m[K [01;31m[Kerror: [m[K'[01m[Knew_frame[m[K' was not declared in this scope
+       path_line = new KDL::Path_Line(frame, [01;31m[Knew_frame[m[K, new KDL::RotationalInterpolation_SingleAxis(), eqradius);
+                                             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp:51:45:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[Knewlocale[m[K'
+       path_line = new KDL::Path_Line(frame, [01;36m[Knew_frame[m[K, new KDL::RotationalInterpolation_SingleAxis(), eqradius);
+                                             [01;36m[K^~~~~~~~~[m[K
+                                             [32m[Knewlocale[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp:51:103:[m[K [01;31m[Kerror: [m[K'[01m[Keqradius[m[K' was not declared in this scope
+       path_line = new KDL::Path_Line(frame, new_frame, new KDL::RotationalInterpolation_SingleAxis(), [01;31m[Keqradius[m[K);
+                                                                                                       [01;31m[K^~~~~~~~[m[K
+make[2]: *** [examples/CMakeFiles/build_trajectory.dir/build_trajectory.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/build_trajectory.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+make: *** [all] Error 2

@@ -1,0 +1,39 @@
+[  0%] Built target geometry_msgs_generate_messages_eus
+[  0%] Built target sensor_msgs_generate_messages_eus
+[  8%] Built target panda_mpc_gencfg
+[35m[1mScanning dependencies of target panda_mpc[0m
+[  8%] Built target _panda_mpc_generate_messages_check_deps_trajectoryAcceleration
+[  8%] Built target _panda_mpc_generate_messages_check_deps_PandaRunMsg
+[  8%] Built target _panda_mpc_generate_messages_check_deps_UpdateTrajectoryNextPoint
+[  8%] Built target std_msgs_generate_messages_eus
+[  8%] Built target geometry_msgs_generate_messages_py
+[  8%] Built target _panda_mpc_generate_messages_check_deps_UI
+[  8%] Built target _panda_mpc_generate_messages_check_deps_trajectoryMsg
+[  8%] Built target sensor_msgs_generate_messages_py
+[  8%] Built target std_msgs_generate_messages_py
+[  8%] Built target sensor_msgs_generate_messages_lisp
+[  8%] Built target geometry_msgs_generate_messages_lisp
+[  8%] Built target std_msgs_generate_messages_lisp
+[  8%] Built target std_msgs_generate_messages_nodejs
+[  8%] Built target geometry_msgs_generate_messages_nodejs
+[  8%] Built target sensor_msgs_generate_messages_cpp
+[  8%] Built target sensor_msgs_generate_messages_nodejs
+[  8%] Built target std_msgs_generate_messages_cpp
+[  8%] Built target geometry_msgs_generate_messages_cpp
+[ 19%] Built target panda_mpc_generate_messages_eus
+[ 40%] Built target panda_mpc_generate_messages_lisp
+[ 40%] Built target panda_mpc_generate_messages_py
+[ 49%] Built target panda_mpc_generate_messages_nodejs
+[ 57%] Built target panda_mpc_generate_messages_cpp
+[ 57%] Built target panda_mpc_generate_messages
+[ 59%] [32mBuilding CXX object CMakeFiles/panda_mpc.dir/src/optFormulation/task.cpp.o[0m
+[ 61%] [32m[1mLinking CXX shared library /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/libpanda_mpc.so[0m
+[ 85%] Built target panda_mpc
+[ 87%] [32m[1mLinking CXX executable /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/tf_broadcast[0m
+[ 91%] [32m[1mLinking CXX executable /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/trajectory_send[0m
+[ 91%] [32m[1mLinking CXX executable /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/build_trajectory[0m
+[ 92%] [32m[1mLinking CXX executable /home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/test_plane_solver[0m
+[ 94%] Built target tf_broadcast
+[ 96%] Built target build_trajectory
+[ 98%] Built target test_plane_solver
+[100%] Built target trajectory_send

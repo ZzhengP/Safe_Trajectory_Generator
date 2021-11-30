@@ -1,5 +1,0 @@
-<map id="SymSparseMat" name="SymSparseMat">
-<area shape="rect" id="node2" href="$class_symmetric_matrix.html" title="Abstract base class for interfacing matrix&#45;vector operations tailored to symmetric matrices..." alt="" coords="5,80,127,107"/>
-<area shape="rect" id="node3" href="$class_matrix.html" title="Abstract base class for interfacing tailored matrix&#45;vector operations. " alt="" coords="103,5,162,32"/>
-<area shape="rect" id="node4" href="$class_sparse_matrix.html" title="Interfaces matrix&#45;vector operations tailored to general sparse matrices. " alt="" coords="151,80,250,107"/>
-</map>

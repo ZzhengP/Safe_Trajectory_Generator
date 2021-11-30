@@ -33,7 +33,7 @@ bool MPCTask::init(const Eigen::VectorXd & q_init){
 
   // Add joint velocity tracking task
   task.task_name_="qd_tracking";
-  task.weight = 0.01;
+  task.weight = 0.1;
   task_container_.push_back(task);
 
   // Add joint acceleration tracking task

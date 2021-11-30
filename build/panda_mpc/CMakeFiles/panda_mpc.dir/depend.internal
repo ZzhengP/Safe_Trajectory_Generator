@@ -17,15 +17,8 @@ CMakeFiles/panda_mpc.dir/src/controller/controller.cpp.o
  /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/UpdateTrajectoryRequest.h
  /home/zheng/catkin_ws/devel/.private/panda_traj/include/panda_traj/UpdateTrajectoryResponse.h
  /home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp
- /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp
- /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp
  /home/zheng/catkin_ws/src/panda_mpc/include/planning/cubic_spline.h
- /home/zheng/catkin_ws/src/panda_mpc/include/planning/plane.h
- /home/zheng/catkin_ws/src/panda_mpc/include/planning/plane_solver_old.h
- /home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h
- /home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp
  /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h
- /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h
  /home/zheng/catkin_ws/src/panda_mpc/src/controller/controller.cpp
  /home/zheng/catkin_ws/src/panda_traj/include/panda_traj/panda_traj.hpp
  /home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES.hpp
@@ -4313,16 +4306,9 @@ CMakeFiles/panda_mpc.dir/src/robot/panda_mpc.cpp.o
  /home/zheng/catkin_ws/src/franka_ros/franka_hw/include/franka_hw/franka_model_interface.h
  /home/zheng/catkin_ws/src/franka_ros/franka_hw/include/franka_hw/franka_state_interface.h
  /home/zheng/catkin_ws/src/panda_mpc/include/controller/controller.hpp
- /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/constraint.hpp
- /home/zheng/catkin_ws/src/panda_mpc/include/optFormulation/task.hpp
  /home/zheng/catkin_ws/src/panda_mpc/include/planning/cubic_spline.h
- /home/zheng/catkin_ws/src/panda_mpc/include/planning/plane.h
- /home/zheng/catkin_ws/src/panda_mpc/include/planning/plane_solver_old.h
- /home/zheng/catkin_ws/src/panda_mpc/include/planning/qpstructure.h
- /home/zheng/catkin_ws/src/panda_mpc/include/planning/traj_generation.hpp
  /home/zheng/catkin_ws/src/panda_mpc/include/robot/panda_mpc.h
  /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_model.h
- /home/zheng/catkin_ws/src/panda_mpc/include/robot/robot_mpc_model.h
  /home/zheng/catkin_ws/src/panda_mpc/src/robot/panda_mpc.cpp
  /home/zheng/catkin_ws/src/panda_traj/include/panda_traj/panda_traj.hpp
  /home/zheng/catkin_ws/src/qpOASES-3.2.1/include/qpOASES.hpp

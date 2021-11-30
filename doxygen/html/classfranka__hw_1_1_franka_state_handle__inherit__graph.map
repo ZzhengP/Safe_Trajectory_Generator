@@ -1,4 +1,0 @@
-<map id="franka_hw::FrankaStateHandle" name="franka_hw::FrankaStateHandle">
-<area shape="rect" id="node2" href="$classfranka__hw_1_1_franka_cartesian_pose_handle.html" title="franka_hw::FrankaCartesian\lPoseHandle" alt="" coords="5,80,192,121"/>
-<area shape="rect" id="node3" href="$classfranka__hw_1_1_franka_cartesian_velocity_handle.html" title="franka_hw::FrankaCartesian\lVelocityHandle" alt="" coords="216,80,403,121"/>
-</map>

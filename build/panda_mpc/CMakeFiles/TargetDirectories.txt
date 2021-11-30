@@ -158,10 +158,11 @@
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/install/strip.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/install.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/list_install_components.dir
-/home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/test_plane_solver.dir
+/home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/rebuild_cache.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/edit_cache.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/trajectory_send.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/tf_broadcast.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/install/local.dir
 /home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/test.dir
-/home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/rebuild_cache.dir
+/home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/test_plane_solver.dir
+/home/zheng/catkin_ws/build/panda_mpc/examples/CMakeFiles/build_trajectory.dir

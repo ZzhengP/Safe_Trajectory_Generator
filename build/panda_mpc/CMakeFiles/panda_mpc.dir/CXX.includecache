@@ -333,8 +333,6 @@ panda_traj/panda_traj.hpp
 -
 robot/robot_model.h
 -
-planning/traj_generation.hpp
--
 rviz_visual_tools/rviz_visual_tools.h
 -
 planning/cubic_spline.h

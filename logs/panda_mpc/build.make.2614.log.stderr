@@ -1,0 +1,14 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp:115:1:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K}[m[K' at end of input
+ [01;31m[K}[m[K
+ [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp:[m[K In constructor '[01m[KTrajectoryBuilder::TrajectoryBuilder(ros::NodeHandle&)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp:19:5:[m[K [01;31m[Kerror: [m[K'[01m[Kpath_sub_[m[K' was not declared in this scope
+     [01;31m[Kpath_sub_[m[K = node_handle.subscribe("/mpc_path",1, &TrajectoryBuilder::trajBuilderCallback, this);
+     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp:[m[K At global scope:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp:115:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+ [01;31m[K}[m[K
+ [01;31m[K^[m[K
+make[2]: *** [examples/CMakeFiles/build_trajectory.dir/build_trajectory.cpp.o] Error 1
+make[1]: *** [examples/CMakeFiles/build_trajectory.dir/all] Error 2
+make: *** [all] Error 2

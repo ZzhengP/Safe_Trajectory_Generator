@@ -127,7 +127,6 @@ bool plane::update(const std::vector<Eigen::MatrixXd> &robot_vertices_horizon,
             plane_location_[0].block(0,k,3,1) = plane_location_[0].block(0,k,3,1)/plane_location_[0].block(0,k,3,1).norm();
             plane_location_[0](3,k) = plane_location_[0](3,k)*plane_location_[0].block(0,k,3,1).norm();
 
-
          if (!is_plane_solved){
            ROS_WARN_STREAM("plane solution failed");
 

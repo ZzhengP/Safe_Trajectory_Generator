@@ -42,7 +42,7 @@
         <!--remap from="/panda_mpc/joint_states" to="/joint_states"/-->
         <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
             <remap from="/joint_states" to="/panda_mpc/joint_states"/> <!-- be careful about the joint's name: rviz for robot_model use /joint_states, bout in panda_simulation the node publish /panda_mpc/joint_states -->
-            <rosparam param="publish_frequency">100</rosparam>
+            <rosparam param="publish_frequency">1000</rosparam>
         </node>
 
         <rosparam param="init_joint_positions">

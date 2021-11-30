@@ -1845,19 +1845,6 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
-# Target rules for targets named test_plane_solver
-
-# Build rule for target.
-test_plane_solver: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_plane_solver
-.PHONY : test_plane_solver
-
-# fast build rule for target.
-test_plane_solver/fast:
-	$(MAKE) -f examples/CMakeFiles/test_plane_solver.dir/build.make examples/CMakeFiles/test_plane_solver.dir/build
-.PHONY : test_plane_solver/fast
-
-#=============================================================================
 # Target rules for targets named trajectory_send
 
 # Build rule for target.
@@ -1882,6 +1869,32 @@ tf_broadcast: cmake_check_build_system
 tf_broadcast/fast:
 	$(MAKE) -f examples/CMakeFiles/tf_broadcast.dir/build.make examples/CMakeFiles/tf_broadcast.dir/build
 .PHONY : tf_broadcast/fast
+
+#=============================================================================
+# Target rules for targets named test_plane_solver
+
+# Build rule for target.
+test_plane_solver: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_plane_solver
+.PHONY : test_plane_solver
+
+# fast build rule for target.
+test_plane_solver/fast:
+	$(MAKE) -f examples/CMakeFiles/test_plane_solver.dir/build.make examples/CMakeFiles/test_plane_solver.dir/build
+.PHONY : test_plane_solver/fast
+
+#=============================================================================
+# Target rules for targets named build_trajectory
+
+# Build rule for target.
+build_trajectory: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 build_trajectory
+.PHONY : build_trajectory
+
+# fast build rule for target.
+build_trajectory/fast:
+	$(MAKE) -f examples/CMakeFiles/build_trajectory.dir/build.make examples/CMakeFiles/build_trajectory.dir/build
+.PHONY : build_trajectory/fast
 
 src/controller/controller.o: src/controller/controller.cpp.o
 
@@ -2430,9 +2443,10 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... test_plane_solver"
 	@echo "... trajectory_send"
 	@echo "... tf_broadcast"
+	@echo "... test_plane_solver"
+	@echo "... build_trajectory"
 	@echo "... src/controller/controller.o"
 	@echo "... src/controller/controller.i"
 	@echo "... src/controller/controller.s"

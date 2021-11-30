@@ -540,7 +540,8 @@ set(CMAKE_DEPEND_INFO_FILES
   "gtest/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
   "gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   "gtest/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "examples/CMakeFiles/test_plane_solver.dir/DependInfo.cmake"
   "examples/CMakeFiles/trajectory_send.dir/DependInfo.cmake"
   "examples/CMakeFiles/tf_broadcast.dir/DependInfo.cmake"
+  "examples/CMakeFiles/test_plane_solver.dir/DependInfo.cmake"
+  "examples/CMakeFiles/build_trajectory.dir/DependInfo.cmake"
   )

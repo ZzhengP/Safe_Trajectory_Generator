@@ -8,3 +8,6 @@ target_link_libraries(test_plane_solver PRIVATE ${catkin_LIBRARIES} ${qpOASES_LI
 
 add_executable(tf_broadcast tf_broadcast.cpp)
 target_link_libraries(tf_broadcast PRIVATE ${catkin_LIBRARIES} panda_mpc)
+
+add_executable(build_trajectory build_trajectory.cpp)
+target_link_libraries(build_trajectory PRIVATE ${catkin_LIBRARIES} ${qpOASES_LIBRARIES} panda_mpc)

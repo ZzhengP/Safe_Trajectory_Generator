@@ -1,0 +1,20 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K In member function '[01m[KEigen::VectorXd planning::trajGen::update(Eigen::VectorXd, const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&, Eigen::MatrixXd)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:257:55:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+   Eigen::VectorXd trajGen::updateWithAlternatingSolver[01;31m[K([m[KEigen::VectorXd S, const Eigen::VectorXd &q_horizon, const Eigen::VectorXd & qd_horizon,
+                                                       [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:375:33:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+   bool trajGen::publishABCDPlane[01;31m[K([m[Kdouble A, double B, double C, double D,
+                                 [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:479:32:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+   bool trajGen::publishObstacle[01;31m[K([m[KEigen::Vector3d obstacle_center){
+                                [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:509:31:[m[K [01;31m[Kerror: [m[Kqualified-id in declaration before '[01m[K([m[K' token
+   void trajGen::computeSoftMPC[01;31m[K([m[Kconst Eigen::MatrixXd& H, const Eigen::MatrixXd & A, Eigen::VectorXd g,
+                               [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K At global scope:
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:586:1:[m[K [01;31m[Kerror: [m[Kexpected '[01m[K}[m[K' at end of input
+ [01;31m[K}[m[K
+ [01;31m[K^[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

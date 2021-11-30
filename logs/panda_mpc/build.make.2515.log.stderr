@@ -1,0 +1,14 @@
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:177:34:[m[K [01;31m[Kerror: [m[Kmacro "ROS_WARN_STREAM" passed 2 arguments, but takes just 1
+     ROS_WARN_STREAM("distance", d[01;31m[K)[m[K;
+                                  [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:[m[K In member function '[01m[KEigen::VectorXd planning::trajGen::update(Eigen::VectorXd, const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&, const VectorXd&, Eigen::MatrixXd)[m[K':
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:177:5:[m[K [01;31m[Kerror: [m[K'[01m[KROS_WARN_STREAM[m[K' was not declared in this scope
+     [01;31m[KROS_WARN_STREAM[m[K("distance", d);
+     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/panda_mpc/src/planning/traj_generation.cpp:177:5:[m[K [01;36m[Knote: [m[Ksuggested alternative: '[01m[K_SC_XOPEN_STREAMS[m[K'
+     [01;36m[KROS_WARN_STREAM[m[K("distance", d);
+     [01;36m[K^~~~~~~~~~~~~~~[m[K
+     [32m[K_SC_XOPEN_STREAMS[m[K
+make[2]: *** [CMakeFiles/panda_mpc.dir/src/planning/traj_generation.cpp.o] Error 1
+make[1]: *** [CMakeFiles/panda_mpc.dir/all] Error 2
+make: *** [all] Error 2

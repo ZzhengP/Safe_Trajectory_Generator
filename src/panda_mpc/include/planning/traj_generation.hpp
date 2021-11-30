@@ -43,8 +43,8 @@ public:
     node_handle.getParam("/panda_mpc/root_link_", root_link_);
     node_handle.getParam("/panda_mpc/tip_link_", tip_link_);
 
-    human_vertices_subscriber_ = node_handle.subscribe("/hand_centroid_marker",1,&trajGen::humanVerticesCallback,this);
-
+//    human_vertices_subscriber_ = node_handle.subscribe("/hand_centroid_marker",1,&trajGen::humanVerticesCallback,this);
+    gru_vertices_subscrier_ = node_handle.subscribe("/hand_markerarray",1,&trajGen::gruVerticesCallback,this);
     // Model
     robot_mpc_model_.reset(new robot::RobotMPcModel(node_handle, root_link_, tip_link_,
                                                     N_,dt_,q_init,qd_init));
@@ -75,8 +75,8 @@ public:
     q_min_ = robot_mpc_model_->getJntll().data;
     q_max_ = robot_mpc_model_->getJntul().data;
     int reduce_vel = 0.4;
-    qd_min_.setConstant(-0.7);
-    qd_max_.setConstant(0.7);
+    qd_min_.setConstant(-1.2);
+    qd_max_.setConstant(1.2);
     node_handle.getParam("/panda_mpc/qd_min_", qd_min_ros_);
     node_handle.getParam("/panda_mpc/qd_max_", qd_max_ros_);
     ros::param::get("/panda_mpc/robot_member_", robot_member_);
@@ -89,7 +89,7 @@ public:
     qd_min_mpc_.resize(dof_*N_);
     qd_max_mpc_.resize(dof_*N_);
 
-    d_limit_ = 0.2 ;
+    d_limit_ = 0.4   ;
     d_full_ = 1.5;
     for (size_t i(0); i<N_; i++){
       q_min_mpc_.segment(i*dof_,dof_) = q_min_;
@@ -99,8 +99,8 @@ public:
     }
 
     // Passive safety constraint
-//      qd_min_mpc_.tail(dof_).setConstant(-0.05);
-//      qd_max_mpc_.tail(dof_).setConstant(0.05);
+      qd_min_mpc_.tail(dof_).setConstant(-0.05);
+      qd_max_mpc_.tail(dof_).setConstant(0.05);
 
     // Build local MPC trajectory
 
@@ -130,9 +130,38 @@ public:
    */
   bool init(ros::NodeHandle& node_handle, KDL::Frame init_frame);
 
+  /**
+   * @brief Update MPC solution by solving first the plane QP, then using theses planes to solve locally collision free
+   *        trajectory QP optimization problem
+   * @param S
+   * @param q_horizon
+   * @param qd_horizon
+   * @param q_des
+   * @param qd_des
+   * @param solution_precedent
+   * @param J
+   * @return
+   */
   Eigen::VectorXd update(Eigen::VectorXd S, const Eigen::VectorXd &q_horizon, const Eigen::VectorXd & qd_horizon,
                          const Eigen::VectorXd & q_des,const Eigen::VectorXd& qd_des, const Eigen::VectorXd & solution_precedent,
                          Eigen::MatrixXd J);
+
+
+  /**
+   * @brief updateWithAlternatingSolver: the non-linear optimization problem is divided into two QPs, one method to get better
+   *        result is to alternating the solution of two QPs while converge.
+   * @param S
+   * @param q_horizon
+   * @param qd_horizon
+   * @param q_des
+   * @param qd_des
+   * @param solution_precedent
+   * @param J
+   * @return
+   */
+  Eigen::VectorXd updateWithAlternatingSolver(Eigen::VectorXd S, const Eigen::VectorXd &q_horizon, const Eigen::VectorXd & qd_horizon,
+                                              const Eigen::VectorXd & q_des,const Eigen::VectorXd& qd_des, const Eigen::VectorXd & solution_precedent,
+                                              Eigen::MatrixXd J);
 
   void computeSoftMPC(const Eigen::MatrixXd &H, const Eigen::MatrixXd &A,
                       Eigen::VectorXd g,
@@ -140,7 +169,6 @@ public:
 
 
   void humanVerticesCallback(visualization_msgs::Marker::Ptr human_position){
-    ROS_WARN_STREAM("humanVerticesCallback");
 
     if(human_position == nullptr){
       ROS_WARN_STREAM("There is no person in robot's workspace, robot can go safely");
@@ -161,6 +189,30 @@ public:
     }
   }
 
+  void gruVerticesCallback(const visualization_msgs::MarkerArray::Ptr& gru_pos_array){
+
+    if(gru_pos_array == nullptr){
+      ROS_WARN_STREAM("There is no person in robot's workspace, robot can go safely");
+      for (int i(0); i<N_; i++){
+            obsVerticesAugmented_[0].block(0,i*obstacle_vertices_,3,obstacle_vertices_) << 1.5, -0.1, 0.14;
+        }
+    }else {
+
+
+      obsVertices_ << gru_pos_array->markers[0].pose.position.x ,
+                      gru_pos_array->markers[0].pose.position.y,
+                      gru_pos_array->markers[0].pose.position.z ;
+
+      for (int i(0); i<N_-1; i++){
+            obsVerticesAugmented_[0].block(0,i*obstacle_vertices_,3,obstacle_vertices_) << gru_pos_array->markers[i].pose.position.x,
+                                                                                           gru_pos_array->markers[i].pose.position.y,
+                                                                                           gru_pos_array->markers[i].pose.position.z;
+        }
+       obsVerticesAugmented_[0].block(0,(N_-1)*obstacle_vertices_,3,obstacle_vertices_) <<gru_pos_array->markers[4].pose.position.x,
+                                                                                          gru_pos_array->markers[4].pose.position.y,
+                                                                                          gru_pos_array->markers[4].pose.position.z;
+    }
+  }
   std::shared_ptr<robot::RobotModel> getRobotModel() {
     return robot_mpc_model_;
   }
@@ -231,7 +283,6 @@ private:
   Eigen::VectorXd q_init_;
   Eigen::VectorXd qd_init_;
 
-  ros::Publisher path_pub_ ;
 
   // --------------------------- Robot MPC model parameters ----------------------
   std::shared_ptr<robot::RobotMPcModel> robot_mpc_model_;
@@ -279,13 +330,11 @@ private:
 
   bool publishObstacle(Eigen::Vector3d obstacle_center);
 
-  bool publishPath();
-
   // --------------------------- Human position from perception node ---------------------
   Eigen::MatrixXd humanVertices_; // First, consider only 1 vertice
   std::vector<Eigen::MatrixXd> humanVerticesAugmented_;
 
-  ros::Subscriber human_vertices_subscriber_;
+  ros::Subscriber human_vertices_subscriber_, gru_vertices_subscrier_;
   // --------------------------------- MPC trajectory smoothing -------------------------
 
   std::unique_ptr<cubicSpline::cubicSpline> cubic_spline_;

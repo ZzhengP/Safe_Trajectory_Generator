@@ -1653,116 +1653,6 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/gtest/googlemock/gtest/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="test_plane_solver">
-				<Option output="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/test_plane_solver" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;panda_mpc&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add option="-DLIBBULLET_VERSION=2.87"/>
-					<Add option="-DLIBBULLET_VERSION_GT_282"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_mpc/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/panda_mpc/include"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_traj/include"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/panda_traj/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/home/zheng/libfranka/include"/>
-					<Add directory="/usr/include/OGRE"/>
-					<Add directory="/usr/include/gazebo-9"/>
-					<Add directory="/usr/include/bullet"/>
-					<Add directory="/usr/include/simbody"/>
-					<Add directory="/usr/include/sdformat-6.0"/>
-					<Add directory="/usr/include/ignition/math4"/>
-					<Add directory="/usr/include/OGRE/Terrain"/>
-					<Add directory="/usr/include/OGRE/Paging"/>
-					<Add directory="/usr/include/ignition/transport4"/>
-					<Add directory="/usr/include/ignition/msgs1"/>
-					<Add directory="/usr/include/ignition/common1"/>
-					<Add directory="/usr/include/ignition/fuel_tools1"/>
-					<Add directory="/usr/include/uuid"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 test_plane_solver"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="test_plane_solver/fast">
-				<Option output="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/test_plane_solver" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
-					<Add option="-DROS_PACKAGE_NAME=&quot;panda_mpc&quot;"/>
-					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
-					<Add option="-DLIBBULLET_VERSION=2.87"/>
-					<Add option="-DLIBBULLET_VERSION_GT_282"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_mpc/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/panda_mpc/include"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_traj/include"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
-					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/panda_traj/include"/>
-					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
-					<Add directory="/opt/ros/melodic/include"/>
-					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
-					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
-					<Add directory="/usr/include/eigen3"/>
-					<Add directory="/home/zheng/libfranka/include"/>
-					<Add directory="/usr/include/OGRE"/>
-					<Add directory="/usr/include/gazebo-9"/>
-					<Add directory="/usr/include/bullet"/>
-					<Add directory="/usr/include/simbody"/>
-					<Add directory="/usr/include/sdformat-6.0"/>
-					<Add directory="/usr/include/ignition/math4"/>
-					<Add directory="/usr/include/OGRE/Terrain"/>
-					<Add directory="/usr/include/OGRE/Paging"/>
-					<Add directory="/usr/include/ignition/transport4"/>
-					<Add directory="/usr/include/ignition/msgs1"/>
-					<Add directory="/usr/include/ignition/common1"/>
-					<Add directory="/usr/include/ignition/fuel_tools1"/>
-					<Add directory="/usr/include/uuid"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include/c++/7"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
-					<Add directory="/usr/include/c++/7/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 test_plane_solver/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="trajectory_send">
 				<Option output="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/trajectory_send" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc"/>
@@ -1983,7 +1873,230 @@
 					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="test_plane_solver">
+				<Option output="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/test_plane_solver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;panda_mpc&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add option="-DLIBBULLET_VERSION=2.87"/>
+					<Add option="-DLIBBULLET_VERSION_GT_282"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/zheng/libfranka/include"/>
+					<Add directory="/usr/include/OGRE"/>
+					<Add directory="/usr/include/gazebo-9"/>
+					<Add directory="/usr/include/bullet"/>
+					<Add directory="/usr/include/simbody"/>
+					<Add directory="/usr/include/sdformat-6.0"/>
+					<Add directory="/usr/include/ignition/math4"/>
+					<Add directory="/usr/include/OGRE/Terrain"/>
+					<Add directory="/usr/include/OGRE/Paging"/>
+					<Add directory="/usr/include/ignition/transport4"/>
+					<Add directory="/usr/include/ignition/msgs1"/>
+					<Add directory="/usr/include/ignition/common1"/>
+					<Add directory="/usr/include/ignition/fuel_tools1"/>
+					<Add directory="/usr/include/uuid"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 test_plane_solver"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test_plane_solver/fast">
+				<Option output="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/test_plane_solver" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;panda_mpc&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add option="-DLIBBULLET_VERSION=2.87"/>
+					<Add option="-DLIBBULLET_VERSION_GT_282"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/zheng/libfranka/include"/>
+					<Add directory="/usr/include/OGRE"/>
+					<Add directory="/usr/include/gazebo-9"/>
+					<Add directory="/usr/include/bullet"/>
+					<Add directory="/usr/include/simbody"/>
+					<Add directory="/usr/include/sdformat-6.0"/>
+					<Add directory="/usr/include/ignition/math4"/>
+					<Add directory="/usr/include/OGRE/Terrain"/>
+					<Add directory="/usr/include/OGRE/Paging"/>
+					<Add directory="/usr/include/ignition/transport4"/>
+					<Add directory="/usr/include/ignition/msgs1"/>
+					<Add directory="/usr/include/ignition/common1"/>
+					<Add directory="/usr/include/ignition/fuel_tools1"/>
+					<Add directory="/usr/include/uuid"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 test_plane_solver/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="build_trajectory">
+				<Option output="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/build_trajectory" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;panda_mpc&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add option="-DLIBBULLET_VERSION=2.87"/>
+					<Add option="-DLIBBULLET_VERSION_GT_282"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/zheng/libfranka/include"/>
+					<Add directory="/usr/include/OGRE"/>
+					<Add directory="/usr/include/gazebo-9"/>
+					<Add directory="/usr/include/bullet"/>
+					<Add directory="/usr/include/simbody"/>
+					<Add directory="/usr/include/sdformat-6.0"/>
+					<Add directory="/usr/include/ignition/math4"/>
+					<Add directory="/usr/include/OGRE/Terrain"/>
+					<Add directory="/usr/include/OGRE/Paging"/>
+					<Add directory="/usr/include/ignition/transport4"/>
+					<Add directory="/usr/include/ignition/msgs1"/>
+					<Add directory="/usr/include/ignition/common1"/>
+					<Add directory="/usr/include/ignition/fuel_tools1"/>
+					<Add directory="/usr/include/uuid"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 build_trajectory"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="build_trajectory/fast">
+				<Option output="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc/build_trajectory" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/zheng/catkin_ws/devel/.private/panda_mpc/lib/panda_mpc"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DROS_BUILD_SHARED_LIBS=1"/>
+					<Add option="-DROS_PACKAGE_NAME=&quot;panda_mpc&quot;"/>
+					<Add option="-DROSCONSOLE_BACKEND_LOG4CXX"/>
+					<Add option="-DLIBBULLET_VERSION=2.87"/>
+					<Add option="-DLIBBULLET_VERSION_GT_282"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_mpc/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_msgs/include"/>
+					<Add directory="/home/zheng/catkin_ws/devel/.private/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_gripper/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/franka_ros/franka_hw/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/panda_traj/include"/>
+					<Add directory="/home/zheng/catkin_ws/src/qpOASES-3.2.1/include"/>
+					<Add directory="/opt/ros/melodic/include"/>
+					<Add directory="/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"/>
+					<Add directory="/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"/>
+					<Add directory="/usr/include/eigen3"/>
+					<Add directory="/home/zheng/libfranka/include"/>
+					<Add directory="/usr/include/OGRE"/>
+					<Add directory="/usr/include/gazebo-9"/>
+					<Add directory="/usr/include/bullet"/>
+					<Add directory="/usr/include/simbody"/>
+					<Add directory="/usr/include/sdformat-6.0"/>
+					<Add directory="/usr/include/ignition/math4"/>
+					<Add directory="/usr/include/OGRE/Terrain"/>
+					<Add directory="/usr/include/OGRE/Paging"/>
+					<Add directory="/usr/include/ignition/transport4"/>
+					<Add directory="/usr/include/ignition/msgs1"/>
+					<Add directory="/usr/include/ignition/common1"/>
+					<Add directory="/usr/include/ignition/fuel_tools1"/>
+					<Add directory="/usr/include/uuid"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 build_trajectory/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/zheng/catkin_ws/build/panda_mpc/examples/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
+		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/examples/build_trajectory.cpp">
+			<Option target="build_trajectory"/>
+		</Unit>
 		<Unit filename="/home/zheng/catkin_ws/src/panda_mpc/examples/test_plane_solver.cpp">
 			<Option target="test_plane_solver"/>
 		</Unit>

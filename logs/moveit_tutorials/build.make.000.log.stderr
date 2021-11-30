@@ -1,0 +1,224 @@
+/usr/bin/ld: warning: libmoveit_planning_scene_monitor.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_model.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_transforms.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_state.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_trajectory.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_collision_detection.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_planning_scene.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_planning_scene_monitor.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_model.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_transforms.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_state.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_trajectory.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_collision_detection.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_planning_scene.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_planning_scene_monitor.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_model.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_transforms.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_state.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_trajectory.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_collision_detection.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_planning_scene.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:[m[K In function ‘[01m[Kvoid spawnCollisionObjects(moveit::planning_interface::PlanningSceneInterface&)[m[K’:
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:119:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_names[m[K’
+   box.[01;31m[Ksubframe_names[m[K.resize(5);
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:120:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K.resize(5);
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:122:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_names[m[K’
+   box.[01;31m[Ksubframe_names[m[K[0] = "bottom";
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:123:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[0].position.y = -.05;
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:124:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[0].position.z = 0.0 + z_offset_box;
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:128:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[0].orientation = tf2::toMsg(orientation);
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:131:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_names[m[K’
+   box.[01;31m[Ksubframe_names[m[K[1] = "top";
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:132:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[1].position.y = .05;
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:133:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[1].position.z = 0.0 + z_offset_box;
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:135:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[1].orientation = tf2::toMsg(orientation);
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:137:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_names[m[K’
+   box.[01;31m[Ksubframe_names[m[K[2] = "corner_1";
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:138:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[2].position.x = -.025;
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:139:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[2].position.y = -.05;
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:140:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[2].position.z = -.01 + z_offset_box;
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:142:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[2].orientation = tf2::toMsg(orientation);
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:144:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_names[m[K’
+   box.[01;31m[Ksubframe_names[m[K[3] = "corner_2";
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:145:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[3].position.x = .025;
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:146:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[3].position.y = -.05;
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:147:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[3].position.z = -.01 + z_offset_box;
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:149:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[3].orientation = tf2::toMsg(orientation);
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:151:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_names[m[K’
+   box.[01;31m[Ksubframe_names[m[K[4] = "side";
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:152:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[4].position.x = .0;
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:153:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[4].position.y = .0;
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:154:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[4].position.z = -.01 + z_offset_box;
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:156:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   box.[01;31m[Ksubframe_poses[m[K[4].orientation = tf2::toMsg(orientation);
+       [01;31m[K^~~~~~~~~~~~~~[m[K
+       [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:174:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   cylinder.[01;31m[Ksubframe_poses[m[K.resize(1);
+            [01;31m[K^~~~~~~~~~~~~~[m[K
+            [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:175:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_names[m[K’
+   cylinder.[01;31m[Ksubframe_names[m[K.resize(1);
+            [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:176:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_names[m[K’
+   cylinder.[01;31m[Ksubframe_names[m[K[0] = "tip";
+            [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:177:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   cylinder.[01;31m[Ksubframe_poses[m[K[0].position.x = 0.03;
+            [01;31m[K^~~~~~~~~~~~~~[m[K
+            [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:178:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   cylinder.[01;31m[Ksubframe_poses[m[K[0].position.y = 0.0;
+            [01;31m[K^~~~~~~~~~~~~~[m[K
+            [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:179:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   cylinder.[01;31m[Ksubframe_poses[m[K[0].position.z = 0.0 + z_offset_cylinder;
+            [01;31m[K^~~~~~~~~~~~~~[m[K
+            [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/subframes/src/subframes_tutorial.cpp:181:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_msgs::CollisionObject {aka struct moveit_msgs::CollisionObject_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Ksubframe_poses[m[K’; did you mean ‘[01m[Kplane_poses[m[K’?
+   cylinder.[01;31m[Ksubframe_poses[m[K[0].orientation = tf2::toMsg(orientation);
+            [01;31m[K^~~~~~~~~~~~~~[m[K
+            [32m[Kplane_poses[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/trajopt_planner/src/trajopt_example.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/trajopt_planner/src/trajopt_example.cpp:186:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanning_interface::MotionPlanRequest {aka struct moveit_msgs::MotionPlanRequest_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kreference_trajectories[m[K’
+   req.[01;31m[Kreference_trajectories[m[K.resize(1);
+       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/trajopt_planner/src/trajopt_example.cpp:187:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanning_interface::MotionPlanRequest {aka struct moveit_msgs::MotionPlanRequest_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kreference_trajectories[m[K’
+   req.[01;31m[Kreference_trajectories[m[K[0].joint_trajectory.resize(1);
+       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/trajopt_planner/src/trajopt_example.cpp:189:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanning_interface::MotionPlanRequest {aka struct moveit_msgs::MotionPlanRequest_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kreference_trajectories[m[K’
+   req.[01;31m[Kreference_trajectories[m[K[0].joint_trajectory[0].points.resize(N_STEPS + 1);
+       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/trajopt_planner/src/trajopt_example.cpp:190:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanning_interface::MotionPlanRequest {aka struct moveit_msgs::MotionPlanRequest_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kreference_trajectories[m[K’
+   req.[01;31m[Kreference_trajectories[m[K[0].joint_trajectory[0].joint_names = joint_names;
+       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/trajopt_planner/src/trajopt_example.cpp:191:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanning_interface::MotionPlanRequest {aka struct moveit_msgs::MotionPlanRequest_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kreference_trajectories[m[K’
+   req.[01;31m[Kreference_trajectories[m[K[0].joint_trajectory[0].points[0].positions = current_joint_values;
+       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/trajopt_planner/src/trajopt_example.cpp:203:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanning_interface::MotionPlanRequest {aka struct moveit_msgs::MotionPlanRequest_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kreference_trajectories[m[K’
+     req.[01;31m[Kreference_trajectories[m[K[0].joint_trajectory[0].joint_names = joint_names;
+         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/trajopt_planner/src/trajopt_example.cpp:204:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kplanning_interface::MotionPlanRequest {aka struct moveit_msgs::MotionPlanRequest_<std::allocator<void> >}[m[K’ has no member named ‘[01m[Kreference_trajectories[m[K’
+     req.[01;31m[Kreference_trajectories[m[K[0].joint_trajectory[0].points[step_index].positions = joint_values;
+         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/bullet_collision_checker/src/bullet_collision_checker_tutorial.cpp:44:10:[m[K [01;31m[Kfatal error: [m[Kmoveit/collision_detection_bullet/collision_env_bullet.h: No such file or directory
+ #include [01;31m[K<moveit/collision_detection_bullet/collision_env_bullet.h>[m[K
+          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [doc/bullet_collision_checker/CMakeFiles/bullet_collision_checker_tutorial.dir/src/bullet_collision_checker_tutorial.cpp.o] Error 1
+make[1]: *** [doc/bullet_collision_checker/CMakeFiles/bullet_collision_checker_tutorial.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/moveit_cpp/src/moveit_cpp_tutorial.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/moveit_cpp/src/moveit_cpp_tutorial.cpp:34:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoveit_cpp[m[K’ was not declared in this scope
+   auto moveit_cpp_ptr = std::make_shared<[01;31m[Kmoveit_cpp[m[K::MoveItCpp>(nh);
+                                          [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/moveit_cpp/src/moveit_cpp_tutorial.cpp:34:42:[m[K [01;36m[Knote: [m[Ksuggested alternative: ‘[01m[Kmoveit_cpp_ptr[m[K’
+   auto moveit_cpp_ptr = std::make_shared<[01;36m[Kmoveit_cpp[m[K::MoveItCpp>(nh);
+                                          [01;36m[K^~~~~~~~~~[m[K
+                                          [32m[Kmoveit_cpp_ptr[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/moveit_cpp/src/moveit_cpp_tutorial.cpp:34:30:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+   auto moveit_cpp_ptr = std::[01;31m[Kmake_shared<moveit_cpp::MoveItCpp>[m[K(nh);
+                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/moveit_cpp/src/moveit_cpp_tutorial.cpp:34:67:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kmake_shared<<expression error> >(ros::NodeHandle&)[m[K’
+   auto moveit_cpp_ptr = std::make_shared<moveit_cpp::MoveItCpp>(nh[01;31m[K)[m[K;
+                                                                   [01;31m[K^[m[K
+In file included from [01m[K/usr/include/c++/7/memory:81:0[m[K,
+                 from [01m[K/usr/include/boost/config/no_tr1/memory.hpp:21[m[K,
+                 from [01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:23[m[K,
+                 from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/forwards.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/common.h:37[m[K,
+                 from [01m[K/opt/ros/melodic/include/ros/ros.h:43[m[K,
+                 from [01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/moveit_cpp/src/moveit_cpp_tutorial.cpp:1[m[K:
+[01m[K/usr/include/c++/7/bits/shared_ptr.h:703:5:[m[K [01;36m[Knote: [m[Kcandidate: template<class _Tp, class ... _Args> std::shared_ptr<_Tp> std::make_shared(_Args&& ...)
+     [01;36m[Kmake_shared[m[K(_Args&&... __args)
+     [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/7/bits/shared_ptr.h:703:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/moveit_cpp/src/moveit_cpp_tutorial.cpp:34:67:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   auto moveit_cpp_ptr = std::make_shared<moveit_cpp::MoveItCpp>(nh[01;31m[K)[m[K;
+                                                                   [01;31m[K^[m[K
+[01m[K/home/zheng/catkin_ws/src/moveit_tutorials/doc/moveit_cpp/src/moveit_cpp_tutorial.cpp:37:35:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+   auto planning_components = std::[01;31m[Kmake_shared<moveit_cpp::PlanningComponent>[m[K(PLANNING_GROUP, moveit_cpp_ptr);
+                                   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+/usr/bin/ld: warning: libmoveit_planning_scene_monitor.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_model.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_transforms.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_state.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_trajectory.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_collision_detection.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_planning_scene.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+make[2]: *** [doc/trajopt_planner/CMakeFiles/trajopt_example.dir/src/trajopt_example.cpp.o] Error 1
+make[1]: *** [doc/trajopt_planner/CMakeFiles/trajopt_example.dir/all] Error 2
+make[2]: *** [doc/moveit_cpp/CMakeFiles/moveit_cpp_tutorial.dir/src/moveit_cpp_tutorial.cpp.o] Error 1
+make[1]: *** [doc/moveit_cpp/CMakeFiles/moveit_cpp_tutorial.dir/all] Error 2
+make[2]: *** [doc/subframes/CMakeFiles/subframes_tutorial.dir/src/subframes_tutorial.cpp.o] Error 1
+make[1]: *** [doc/subframes/CMakeFiles/subframes_tutorial.dir/all] Error 2
+/usr/bin/ld: warning: libmoveit_planning_scene_monitor.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_model.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_transforms.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_state.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_robot_trajectory.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_collision_detection.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+/usr/bin/ld: warning: libmoveit_planning_scene.so.1.0.8, needed by /opt/ros/melodic/lib/libmoveit_visual_tools.so, not found (try using -rpath or -rpath-link)
+make: *** [all] Error 2

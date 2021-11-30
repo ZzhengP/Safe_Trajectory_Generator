@@ -127,8 +127,9 @@ bool qpSolver::solveMPC(){
 
   qp_solver_mpc_->setOptions(options_);
   nWSR_ = 1000000;
+
 //    Initialise the problem, once it has found a solution, we can hotstart
-  ret_ = qp_solver_mpc_->init(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(),nWSR_);
+    ret_ = qp_solver_mpc_->init(H_.data(),g_.data(),A_.data(),lb_.data(),ub_.data(),lbA_.data(),ubA_.data(),nWSR_);
 
 
   // Zeros acceleration if no solution found
@@ -201,31 +202,26 @@ bool qpSolver::solveSoftMPC(){
   qp_soft_solver_mpc_->setOptions(options_);
   nWSR_ = 1000000;
 //    Initialise the problem, once it has found a solution, we can hotstart
-
-  if(!qp_soft_solver_mpc_->isInitialised()){
+  static bool qpoases_initialized = false;
+  if(!qpoases_initialized){
 //    Initialise the problem, once it has found a solution, we can hotstart
     ret_ = qp_soft_solver_mpc_->init(soft_H_.data(),soft_g_.data(),soft_A_.data(),soft_lb_.data(),soft_ub_.data(),soft_lbA_.data(),soft_ubA_.data(),nWSR_);
+
+    // Keep init if it didn't work
+    if(ret_ == qpOASES::SUCCESSFUL_RETURN)
+    qpoases_initialized = true;
   }else
   {
     ret_ = qp_soft_solver_mpc_->hotstart(soft_H_.data(),soft_g_.data(),soft_A_.data(),soft_lb_.data(),soft_ub_.data(),soft_lbA_.data(),soft_ubA_.data(),nWSR_);
+  if(ret_ != qpOASES::SUCCESSFUL_RETURN)
+      qpoases_initialized = false;
   }
   // Zeros acceleration if no solution found
   soft_optimal_solution_.setZero();
 
   if(ret_ == qpOASES::SUCCESSFUL_RETURN){
     qp_soft_solver_mpc_->getPrimalSolution(soft_optimal_solution_.data());
-    ROS_WARN_STREAM("QPOasese soft MPC sucess");
 
-    std::cout <<"qpProblem status is : " << qp_soft_solver_mpc_->getStatus()<<'\n';
-    std::cout <<"qpProblem obj is : " << qp_soft_solver_mpc_->getObjVal()<<'\n';
-    std::cout << "qpProblem hessiantype: " << qp_soft_solver_mpc_->getHessianType()<<'\n';
-    std::cout <<"qpProblem cst number is : " << qp_soft_solver_mpc_->getNC()<<'\n';
-    std::cout <<"qpProblem variable number is : " << qp_soft_solver_mpc_->getNV()<<'\n';
-    std::cout <<"qpProblem is initialized ? " << qp_soft_solver_mpc_->isInitialised()<<'\n';
-    std::cout <<"qpProblem is solved ? " << qp_soft_solver_mpc_->isSolved()<<'\n';
-    std::cout <<"qpProblem is infeasible ? " << qp_soft_solver_mpc_->isInfeasible()<<'\n';
-    std::cout <<"qpProblem is Unbounded ? " << qp_soft_solver_mpc_->isUnbounded()<<'\n';
-    std::cout <<" print level : " << qp_soft_solver_mpc_->getPrintLevel() << std::endl;
     return true;
   }else{
     std::cout << " print ret " << ": " << qpOASES::returnValue(ret_)<<'\n';
